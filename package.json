@@ -5,11 +5,11 @@
   "scripts": {
     "build": "node scripts/build.js",
     "clean": "rimraf dist",
-    "dev:build:watch": "nodemon scripts/build.js --ignore ./src/**/*.*"
+    "development:build:watch": "nodemon scripts/build.js --ignore ./src/**/*.*"
   },
   "devDependencies": {
     "@babel/types": "^7.20.2",
-    "@htmlplus/element": "^0.5.2",
+    "@htmlplus/element": "latest",
     "change-case": "^4.1.2",
     "fast-glob": "^3.2.12",
     "nodemon": "^2.0.20",
