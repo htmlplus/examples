@@ -1,4 +1,5 @@
-import compiler, { extract, parse, read } from '@htmlplus/element/compiler/index.js';
+import { compiler } from '@htmlplus/element/compiler/index.js';
+import { extract, parse, read } from '@htmlplus/element/compiler/index.js';
 import { paramCase, pascalCase } from 'change-case';
 import glob from 'fast-glob';
 import path from 'path';
@@ -15,6 +16,10 @@ import {
   vue
 } from './plugins/index.js';
 
+const destination = (context, key) => {
+  return path.join('dist', key, path.basename(path.dirname(path.dirname(context.filePath))), context.directoryName);
+};
+
 const { start, next, finish } = compiler(
   read(),
   prepare(),
@@ -30,7 +35,7 @@ const { start, next, finish } = compiler(
       return name;
     },
     destination(context) {
-      return path.join(context.directoryPath, 'angular');
+      return destination(context, 'angular');
     },
     eventNameConvertor(name) {
       return '(' + paramCase(name).replace('on-', '') + ')';
@@ -44,7 +49,7 @@ const { start, next, finish } = compiler(
       return name;
     },
     destination(context) {
-      return path.join(context.directoryPath, 'javascript');
+      return destination(context, 'javascript');
     }
   }),
   react({
@@ -58,7 +63,7 @@ const { start, next, finish } = compiler(
       return name.replace('plus-', '').split('-').map(pascalCase).join('.');
     },
     destination(context) {
-      return path.join(context.directoryPath, 'react');
+      return destination(context, 'react');
     },
     eventNameConvertor(name) {
       return name.replace('onPlus', 'on');
@@ -69,7 +74,7 @@ const { start, next, finish } = compiler(
       return `@htmlplus/core/${name.split('-').slice(1).join('-')}.js`;
     },
     destination(context) {
-      return path.join(context.directoryPath, 'react@experimental');
+      return destination(context, 'react@experimental');
     },
     eventNameConvertor(name) {
       if (name.indexOf('Plus') == -1) return name;
@@ -84,7 +89,7 @@ const { start, next, finish } = compiler(
       return name;
     },
     destination(context) {
-      return path.join(context.directoryPath, 'svelte');
+      return destination(context, 'svelte');
     },
     eventNameConvertor(name) {
       return paramCase(name).replace('-', ':');
@@ -98,7 +103,7 @@ const { start, next, finish } = compiler(
       return name;
     },
     destination(context) {
-      return path.join(context.directoryPath, 'vue');
+      return destination(context, 'vue');
     },
     eventNameConvertor(name) {
       return paramCase(name).replace('on-', '@');
@@ -106,7 +111,7 @@ const { start, next, finish } = compiler(
   }),
   preview(),
   document({
-    destination: 'src/db.json'
+    destination: 'dist/db.json'
   })
 );
 
