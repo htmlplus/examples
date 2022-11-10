@@ -1,6 +1,9 @@
 {
   "name": "@htmlplus/examples",
   "version": "0.0.0",
+  "license": "MIT",
+  "author": "Masood Abdolian <m.abdolian@gmail.com>",
+  "description": "Collection of examples for @htmlplus/core.",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.js",
