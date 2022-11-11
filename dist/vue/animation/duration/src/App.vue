@@ -3,7 +3,7 @@
     name="fade-in"
     duration="2500"
     iterations="Infinity"
-    play
+    run
   ></plus-animation>
 </template>
 

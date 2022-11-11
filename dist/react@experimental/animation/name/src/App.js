@@ -8,14 +8,14 @@ const AnimationName = () => {
         <plus-animation
           name="fade-in"
           iterations="Infinity"
-          play
+          run
         ></plus-animation>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="auto">
         <plus-animation
           name="fade-out"
           iterations="Infinity"
-          play
+          run
         ></plus-animation>
       </plus-grid-item>
     </plus-grid>
