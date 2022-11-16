@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid justify-content="evenly" gutter="md">
@@ -17,21 +16,19 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-card {
-  height: 12rem;
-  width: 12rem;
-  margin: auto;
-}
-plus-card.pink {
-  --plus-card-background-color: #ef9a9a;
-}
-plus-card.yellow {
-  --plus-card-background-color: #fff59d;
-}
-plus-card.blue {
-  --plus-card-background-color: #80cbc4;
-}
-
+  plus-card {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+  }
+  plus-card.pink {
+    --plus-card-background-color: #ef9a9a;
+  }
+  plus-card.yellow {
+    --plus-card-background-color: #fff59d;
+  }
+  plus-card.blue {
+    --plus-card-background-color: #80cbc4;
+  }
 </style>

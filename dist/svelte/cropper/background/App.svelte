@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/cropper.js';
-
+  import '@htmlplus/core/cropper.js';
 </script>
 
 <plus-cropper
@@ -8,5 +7,3 @@ import '@htmlplus/core/cropper.js';
   view="none"
   src="/assets/images/panda.jpg"
 ></plus-cropper>
-
-

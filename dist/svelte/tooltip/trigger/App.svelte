@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-import '@htmlplus/core/tooltip.js';
-
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/tooltip.js';
 </script>
 
 <plus-grid justify-content="evenly">
@@ -25,5 +24,3 @@ import '@htmlplus/core/tooltip.js';
     </button>
   </plus-grid-item>
 </plus-grid>
-
-

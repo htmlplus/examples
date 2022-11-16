@@ -1,16 +1,15 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/card-body.js';
-import '@htmlplus/core/click-outside.js';
-let inside = 0;
-let outside = 0;
-function onClick() {
-  inside = inside + 1;
-}
-function onClickOutside() {
-  outside = outside + 1;
-}
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/click-outside.js';
+  let inside = 0;
+  let outside = 0;
+  function onClick() {
+    inside = inside + 1;
+  }
+  function onClickOutside() {
+    outside = outside + 1;
+  }
 </script>
 
 <plus-click-outside
@@ -26,12 +25,10 @@ function onClickOutside() {
   </plus-card>
 </plus-click-outside>
 
-
 <style>
-plus-click-outside {
-  margin: auto;
-  display: block;
-  max-width: 20rem;
-}
-
+  plus-click-outside {
+    margin: auto;
+    display: block;
+    max-width: 20rem;
+  }
 </style>

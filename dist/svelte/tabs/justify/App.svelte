@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/tabs.js';
-import '@htmlplus/core/tabs-bar.js';
-import '@htmlplus/core/tabs-tab.js';
-
+  import '@htmlplus/core/tabs.js';
+  import '@htmlplus/core/tabs-bar.js';
+  import '@htmlplus/core/tabs-tab.js';
 </script>
 
 <plus-tabs>
@@ -28,5 +27,3 @@ import '@htmlplus/core/tabs-tab.js';
     <plus-tabs-tab> Tab 3 </plus-tabs-tab>
   </plus-tabs-bar>
 </plus-tabs>
-
-

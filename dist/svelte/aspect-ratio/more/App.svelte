@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/aspect-ratio.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid>
@@ -41,31 +40,29 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-.box {
-  color: white;
-  padding: 0.75rem;
-  margin: 0.25rem;
-}
-.ratio-one {
-  width: 40.625%;
-  float: right;
-}
-.one {
-  background: #08dfc8;
-}
-.two {
-  background: #ff5449;
-}
-.three {
-  background: #5f9ee9;
-}
-.four {
-  background: #ffc903;
-}
-.five {
-  background: #9073c1;
-}
-
+  .box {
+    color: white;
+    padding: 0.75rem;
+    margin: 0.25rem;
+  }
+  .ratio-one {
+    width: 40.625%;
+    float: right;
+  }
+  .one {
+    background: #08dfc8;
+  }
+  .two {
+    background: #ff5449;
+  }
+  .three {
+    background: #5f9ee9;
+  }
+  .four {
+    background: #ffc903;
+  }
+  .five {
+    background: #9073c1;
+  }
 </style>

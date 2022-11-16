@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <div class="container">
@@ -19,16 +18,14 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid>
 </div>
 
-
 <style>
-.container {
-  padding: 2rem 0;
-  background-color: #eeeeee;
-}
-plus-card {
-  height: 8rem;
-  width: 8rem;
-  margin: auto;
-}
-
+  .container {
+    padding: 2rem 0;
+    background-color: #eeeeee;
+  }
+  plus-card {
+    height: 8rem;
+    width: 8rem;
+    margin: auto;
+  }
 </style>

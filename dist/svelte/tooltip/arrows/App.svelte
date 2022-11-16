@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/tooltip.js';
-
+  import '@htmlplus/core/tooltip.js';
 </script>
 
 <button class="btn" xs="12" sm="4">
@@ -27,5 +26,3 @@ import '@htmlplus/core/tooltip.js';
   Narrow
   <plus-tooltip placement="top" arrow="narrow">Tooltip</plus-tooltip>
 </button>
-
-

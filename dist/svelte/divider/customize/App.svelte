@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/divider.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/divider.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid align-items="center" justify-content="evenly">
@@ -25,12 +24,10 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-divider {
-  --plus-divider-color: #5f9ee9;
-  --plus-divider-width: 3px;
-  margin: 2rem 0;
-}
-
+  plus-divider {
+    --plus-divider-color: #5f9ee9;
+    --plus-divider-width: 3px;
+    margin: 2rem 0;
+  }
 </style>

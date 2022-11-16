@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/portal.js';
-
+  import '@htmlplus/core/portal.js';
 </script>
 
 <div id="target"></div>
@@ -15,13 +14,11 @@ import '@htmlplus/core/portal.js';
   </plus-portal>
 </div>
 
-
 <style>
-#target {
-  color: blue;
-}
-#source {
-  color: red;
-}
-
+  #target {
+    color: blue;
+  }
+  #source {
+    color: red;
+  }
 </style>

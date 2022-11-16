@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-import '@htmlplus/core/spinner.js';
-
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/spinner.js';
 </script>
 
 <plus-grid justify-content="evenly">
@@ -23,22 +22,20 @@ import '@htmlplus/core/spinner.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-.spinner-1 {
-  --plus-spinner-color: #08dfc8;
-}
-.spinner-2 {
-  --plus-spinner-color: #ff5449;
-}
-.spinner-3 {
-  --plus-spinner-color: #5f9ee9;
-}
-.spinner-4 {
-  --plus-spinner-color: #ffc903;
-}
-.spinner-5 {
-  --plus-spinner-color: #9073c1;
-}
-
+  .spinner-1 {
+    --plus-spinner-color: #08dfc8;
+  }
+  .spinner-2 {
+    --plus-spinner-color: #ff5449;
+  }
+  .spinner-3 {
+    --plus-spinner-color: #5f9ee9;
+  }
+  .spinner-4 {
+    --plus-spinner-color: #ffc903;
+  }
+  .spinner-5 {
+    --plus-spinner-color: #9073c1;
+  }
 </style>

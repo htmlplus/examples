@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/cropper.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/cropper.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid gutter="md">
@@ -31,10 +30,8 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-cropper[shape='rectangle'] {
-  height: 100%;
-}
-
+  plus-cropper[shape='rectangle'] {
+    height: 100%;
+  }
 </style>

@@ -12,6 +12,15 @@ import path from 'path';
 
 import { format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
 
+const IGNORES = [
+  'ArrayExpression',
+  // 'ArrowFunctionExpression',
+  // 'CallExpression',
+  'JSXElement',
+  'JSXFragment',
+  'ObjectExpression'
+];
+
 export const svelte = (options) => {
   const name = 'svelte';
   const next = (context) => {
@@ -31,26 +40,55 @@ export const svelte = (options) => {
       script: {
         ClassDeclaration(path) {
           const { body } = path.node;
+
           path.traverse(visitors.script);
+
           if (!body.body.length) return path.remove();
+
           path.replaceWithMultiple(body.body);
         },
         ClassMethod: {
           enter(path) {
             const { body, key, params } = path.node;
+
             if (key.name == context.classRender.key.name) return;
+
             path.replaceWith(t.functionDeclaration(key, params, body));
           },
           exit(path) {
             const { key } = path.node;
+
             if (key.name != context.classRender.key.name) return;
+
             path.remove();
           }
         },
+        JSXAttribute(path) {
+          const { name, value } = path.node;
+
+          if (!value) return;
+
+          if (value.type != 'JSXExpressionContainer') return;
+
+          if (!IGNORES.includes(value.expression.type)) return;
+
+          let parent = path.parentPath;
+
+          while (parent && parent.node.type != 'ClassDeclaration') {
+            parent = parent.parentPath;
+          }
+
+          const property = t.classProperty(t.identifier(name.name), value.expression);
+
+          parent.node.body.body.push(property);
+        },
         ClassProperty(path) {
           const { key, value } = path.node;
+
           const variable = t.variableDeclaration('let', [t.variableDeclarator(key, value)]);
+
           const isProperty = context.classProperties.some((property) => property.key.name == key.name);
+
           if (isProperty) {
             path.replaceWith(t.exportNamedDeclaration(variable));
           } else {
@@ -59,7 +97,9 @@ export const svelte = (options) => {
         },
         MemberExpression(path) {
           const { object, property } = path.node;
+
           if (object.type != 'ThisExpression') return;
+
           path.replaceWith(property);
         },
         Program(path) {
@@ -93,25 +133,28 @@ export const svelte = (options) => {
 
           path.replaceWithMultiple(children);
         },
-        JSXAttribute(path) {
-          const { name, value } = path.node;
+        JSXAttribute: {
+          exit(path) {
+            const { name, value } = path.node;
 
-          if (!value) return;
+            if (!value) return;
 
-          if (isEvent(name.name)) {
-            name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            if (isEvent(name.name)) {
+              name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            }
+
+            if (value.type != 'JSXExpressionContainer') return;
+
+            let newValue;
+
+            if (IGNORES.includes(value.expression.type)) {
+              newValue = name.name;
+            } else {
+              newValue = print(value.expression);
+            }
+
+            path.node.value = t.stringLiteral(`{${newValue}}`);
           }
-
-          if (value.type !== 'JSXExpressionContainer') return;
-
-          // TODO
-          const code = print(value.expression);
-
-          // TODO
-          const newValue = code.replace(/this\.|;/, '');
-
-          // TODO
-          path.node.value = t.stringLiteral(`{${newValue}}`);
         },
         JSXElement(path) {
           const { openingElement, closingElement } = path.node;
@@ -129,11 +172,14 @@ export const svelte = (options) => {
           closingElement.name.name = newName;
         },
         JSXExpressionContainer(path) {
+          if (path.parentPath.type == 'JSXAttribute') return;
           path.replaceWithSourceString(`[[[${print(path.node.expression)}]]]`);
         },
         MemberExpression(path) {
           const { object, property } = path.node;
+
           if (object.type != 'ThisExpression') return;
+
           path.replaceWith(property);
         }
       }
@@ -185,7 +231,7 @@ export const svelte = (options) => {
 
     renderTemplate(patterns, destination, config)(model);
 
-    // formatFile(path.join(destination, 'App.svelte'), { parser: 'TODO' });
+    formatFile(path.join(destination, 'App.svelte'), { parser: 'html' });
 
     return {
       script,

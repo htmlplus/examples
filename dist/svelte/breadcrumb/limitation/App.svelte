@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/breadcrumb.js';
-
+  import '@htmlplus/core/breadcrumb.js';
 </script>
 
 <div class="container">
@@ -40,22 +39,20 @@ import '@htmlplus/core/breadcrumb.js';
   </plus-breadcrumb>
 </div>
 
-
 <style>
-.container {
-  text-align: center;
-  margin: 0.75em;
-}
-plus-breadcrumb {
-  display: inline-block;
-  color: #707070;
-}
-plus-breadcrumb a {
-  color: inherit;
-  text-decoration: none;
-}
-plus-breadcrumb a:hover {
-  text-decoration: underline;
-}
-
+  .container {
+    text-align: center;
+    margin: 0.75em;
+  }
+  plus-breadcrumb {
+    display: inline-block;
+    color: #707070;
+  }
+  plus-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+  plus-breadcrumb a:hover {
+    text-decoration: underline;
+  }
 </style>

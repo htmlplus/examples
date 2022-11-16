@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/animation.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/animation.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid justify-content="evenly" gutter="md">
@@ -14,13 +13,11 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-animation {
-  background: lightgray;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
-
+  plus-animation {
+    background: lightgray;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
 </style>

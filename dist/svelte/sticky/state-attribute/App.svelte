@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/sticky.js';
-
+  import '@htmlplus/core/sticky.js';
 </script>
 
 <div class="container">
@@ -123,22 +122,20 @@ import '@htmlplus/core/sticky.js';
   </p>
 </div>
 
-
 <style>
-.container {
-  height: 20rem;
-  overflow: auto;
-}
-.container p {
-  margin: 0;
-  padding: 1rem;
-  text-align: justify;
-}
-plus-sticky[state='normal'] {
-  background-color: gold;
-}
-plus-sticky[state='sticky'] {
-  background-color: greenyellow;
-}
-
+  .container {
+    height: 20rem;
+    overflow: auto;
+  }
+  .container p {
+    margin: 0;
+    padding: 1rem;
+    text-align: justify;
+  }
+  plus-sticky[state='normal'] {
+    background-color: gold;
+  }
+  plus-sticky[state='sticky'] {
+    background-color: greenyellow;
+  }
 </style>

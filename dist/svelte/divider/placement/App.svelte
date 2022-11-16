@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/divider.js';
-
+  import '@htmlplus/core/divider.js';
 </script>
 
 <plus-divider placement="center">Center</plus-divider>
@@ -8,5 +7,3 @@ import '@htmlplus/core/divider.js';
 <plus-divider placement="start">Start</plus-divider>
 <br />
 <plus-divider placement="end">End</plus-divider>
-
-

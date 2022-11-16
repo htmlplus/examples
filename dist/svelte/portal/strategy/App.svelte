@@ -1,7 +1,6 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/portal.js';
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/portal.js';
 </script>
 
 <plus-portal target="#before" strategy="before">
@@ -44,20 +43,18 @@ import '@htmlplus/core/portal.js';
   </p>
 </plus-card>
 
-
 <style>
-.title {
-  color: deeppink;
-  margin: 0;
-  font-weight: normal;
-  font-size: 1em;
-  margin: 1em 0;
-}
-plus-card {
-  padding: 1em;
-}
-plus-card p {
-  margin: 0;
-}
-
+  .title {
+    color: deeppink;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 1em 0;
+  }
+  plus-card {
+    padding: 1em;
+  }
+  plus-card p {
+    margin: 0;
+  }
 </style>

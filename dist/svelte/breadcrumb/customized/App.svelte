@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/breadcrumb.js';
-
+  import '@htmlplus/core/breadcrumb.js';
 </script>
 
 <plus-breadcrumb max="{2}">
@@ -15,30 +14,28 @@ import '@htmlplus/core/breadcrumb.js';
   <a href="#">Breadcrumb</a>
 </plus-breadcrumb>
 
-
 <style>
-plus-breadcrumb {
-  --plus-breadcrumb-gutter-x: 0.75em;
-  --plus-breadcrumb-gutter-y: 0.75em;
-  background-color: #dcdcdc;
-  border-radius: 0.25em;
-  display: block;
-  padding: 0.75em;
-}
-plus-breadcrumb a {
-  text-decoration: none;
-  color: black;
-}
-plus-breadcrumb::part(expander) {
-  background-color: transparent;
-  color: black;
-  height: 1em;
-  width: 1em;
-}
-plus-breadcrumb::part(separator) {
-  color: black;
-  height: 0.75em;
-  width: 0.75em;
-}
-
+  plus-breadcrumb {
+    --plus-breadcrumb-gutter-x: 0.75em;
+    --plus-breadcrumb-gutter-y: 0.75em;
+    background-color: #dcdcdc;
+    border-radius: 0.25em;
+    display: block;
+    padding: 0.75em;
+  }
+  plus-breadcrumb a {
+    text-decoration: none;
+    color: black;
+  }
+  plus-breadcrumb::part(expander) {
+    background-color: transparent;
+    color: black;
+    height: 1em;
+    width: 1em;
+  }
+  plus-breadcrumb::part(separator) {
+    color: black;
+    height: 0.75em;
+    width: 0.75em;
+  }
 </style>

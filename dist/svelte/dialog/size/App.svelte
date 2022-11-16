@@ -1,21 +1,20 @@
 <script>
-import '@htmlplus/core/dialog.js';
-import '@htmlplus/core/dialog-body.js';
-import '@htmlplus/core/dialog-content.js';
-import '@htmlplus/core/dialog-footer.js';
-import '@htmlplus/core/dialog-header.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-let open = false;
-let size = 'md';
-function hide() {
-  open = false;
-}
-function show(size) {
-  size = size;
-  open = true;
-}
-
+  import '@htmlplus/core/dialog.js';
+  import '@htmlplus/core/dialog-body.js';
+  import '@htmlplus/core/dialog-content.js';
+  import '@htmlplus/core/dialog-footer.js';
+  import '@htmlplus/core/dialog-header.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
+  let open = false;
+  let size = 'md';
+  function hide() {
+    open = false;
+  }
+  function show(size) {
+    size = size;
+    open = true;
+  }
 </script>
 
 <plus-grid justify-content="center" gutter="md">
@@ -49,10 +48,8 @@ function show(size) {
   </plus-dialog-content>
 </plus-dialog>
 
-
 <style>
-plus-grid-item {
-  text-align: center;
-}
-
+  plus-grid-item {
+    text-align: center;
+  }
 </style>

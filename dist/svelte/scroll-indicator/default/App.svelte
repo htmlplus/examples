@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/scroll-indicator.js';
-
+  import '@htmlplus/core/scroll-indicator.js';
 </script>
 
 <div class="container">
@@ -131,20 +130,18 @@ import '@htmlplus/core/scroll-indicator.js';
   </div>
 </div>
 
-
 <style>
-.container {
-  position: relative;
-}
+  .container {
+    position: relative;
+  }
 
-.scrollable {
-  height: 20em;
-  overflow-y: auto;
-}
+  .scrollable {
+    height: 20em;
+    overflow-y: auto;
+  }
 
-plus-scroll-indicator {
-  position: absolute;
-  top: 0;
-}
-
+  plus-scroll-indicator {
+    position: absolute;
+    top: 0;
+  }
 </style>

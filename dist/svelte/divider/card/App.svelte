@@ -1,7 +1,6 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/divider.js';
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/divider.js';
 </script>
 
 <plus-card elevation="10">
@@ -16,11 +15,9 @@ import '@htmlplus/core/divider.js';
   Item 5
 </plus-card>
 
-
 <style>
-plus-card {
-  padding: 0 1rem;
-  line-height: 3rem;
-}
-
+  plus-card {
+    padding: 0 1rem;
+    line-height: 3rem;
+  }
 </style>

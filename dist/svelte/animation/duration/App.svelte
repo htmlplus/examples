@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/animation.js';
-
+  import '@htmlplus/core/animation.js';
 </script>
 
 <plus-animation
@@ -10,13 +9,11 @@ import '@htmlplus/core/animation.js';
   run
 ></plus-animation>
 
-
 <style>
-plus-animation {
-  background: lightgray;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
-
+  plus-animation {
+    background: lightgray;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
 </style>

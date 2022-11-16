@@ -1,11 +1,10 @@
 <script>
-import '@htmlplus/core/dialog.js';
-import '@htmlplus/core/dialog-body.js';
-import '@htmlplus/core/dialog-content.js';
-import '@htmlplus/core/dialog-footer.js';
-import '@htmlplus/core/dialog-header.js';
-import '@htmlplus/core/dialog-toggler.js';
-
+  import '@htmlplus/core/dialog.js';
+  import '@htmlplus/core/dialog-body.js';
+  import '@htmlplus/core/dialog-content.js';
+  import '@htmlplus/core/dialog-footer.js';
+  import '@htmlplus/core/dialog-header.js';
+  import '@htmlplus/core/dialog-toggler.js';
 </script>
 
 <div class="center">
@@ -26,10 +25,8 @@ import '@htmlplus/core/dialog-toggler.js';
   </plus-dialog-content>
 </plus-dialog>
 
-
 <style>
-.center {
-  text-align: center;
-}
-
+  .center {
+    text-align: center;
+  }
 </style>

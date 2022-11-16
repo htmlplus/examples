@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/tooltip.js';
-
+  import '@htmlplus/core/tooltip.js';
 </script>
 
 <div class="center">
@@ -10,10 +9,8 @@ import '@htmlplus/core/tooltip.js';
   </button>
 </div>
 
-
 <style>
-.center {
-  text-align: center;
-}
-
+  .center {
+    text-align: center;
+  }
 </style>

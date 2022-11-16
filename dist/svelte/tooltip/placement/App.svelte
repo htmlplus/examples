@@ -1,8 +1,7 @@
 <script>
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-import '@htmlplus/core/tooltip.js';
-
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/tooltip.js';
 </script>
 
 <plus-grid gutter="md">
@@ -80,12 +79,10 @@ import '@htmlplus/core/tooltip.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-button {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-}
-
+  button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+  }
 </style>

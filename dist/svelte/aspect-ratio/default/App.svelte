@@ -1,7 +1,6 @@
 <script>
-import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/card.js';
-
+  import '@htmlplus/core/aspect-ratio.js';
+  import '@htmlplus/core/card.js';
 </script>
 
 <plus-aspect-ratio value="16/9">
@@ -10,11 +9,9 @@ import '@htmlplus/core/card.js';
   </plus-card>
 </plus-aspect-ratio>
 
-
 <style>
-plus-card {
-  --plus-card-background-color: #c5cae9;
-  padding: 1rem;
-}
-
+  plus-card {
+    --plus-card-background-color: #c5cae9;
+    padding: 1rem;
+  }
 </style>

@@ -1,7 +1,6 @@
 <script>
-import '@htmlplus/core/counter.js';
-let play = false;
-
+  import '@htmlplus/core/counter.js';
+  let play = false;
 </script>
 
 <div class="center">
@@ -14,13 +13,11 @@ let play = false;
   <button on:click="{() => play = true}">Start</button>
 </div>
 
-
 <style>
-.center {
-  text-align: center;
-}
-button {
-  margin: 1rem 0.5rem;
-}
-
+  .center {
+    text-align: center;
+  }
+  button {
+    margin: 1rem 0.5rem;
+  }
 </style>

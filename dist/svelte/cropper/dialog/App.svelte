@@ -1,16 +1,15 @@
 <script>
-import '@htmlplus/core/cropper.js';
-import '@htmlplus/core/dialog.js';
-import '@htmlplus/core/dialog-body.js';
-import '@htmlplus/core/dialog-content.js';
-import '@htmlplus/core/dialog-footer.js';
-import '@htmlplus/core/dialog-header.js';
-import '@htmlplus/core/dialog-toggler.js';
-let disabled = true;
-function change(disabled) {
-  disabled = disabled;
-}
-
+  import '@htmlplus/core/cropper.js';
+  import '@htmlplus/core/dialog.js';
+  import '@htmlplus/core/dialog-body.js';
+  import '@htmlplus/core/dialog-content.js';
+  import '@htmlplus/core/dialog-footer.js';
+  import '@htmlplus/core/dialog-header.js';
+  import '@htmlplus/core/dialog-toggler.js';
+  let disabled = true;
+  function change(disabled) {
+    disabled = disabled;
+  }
 </script>
 
 <div class="center">
@@ -36,10 +35,8 @@ function change(disabled) {
   </plus-dialog-content>
 </plus-dialog>
 
-
 <style>
-.center {
-  text-align: center;
-}
-
+  .center {
+    text-align: center;
+  }
 </style>

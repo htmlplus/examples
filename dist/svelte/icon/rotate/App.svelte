@@ -1,6 +1,5 @@
 <script>
-import '@htmlplus/core/icon.js';
-
+  import '@htmlplus/core/icon.js';
 </script>
 
 <div class="center">
@@ -10,13 +9,11 @@ import '@htmlplus/core/icon.js';
   <plus-icon rotate="270">home</plus-icon>
 </div>
 
-
 <style>
-.center {
-  text-align: center;
-}
-plus-icon {
-  margin: 0 1rem;
-}
-
+  .center {
+    text-align: center;
+  }
+  plus-icon {
+    margin: 0 1rem;
+  }
 </style>

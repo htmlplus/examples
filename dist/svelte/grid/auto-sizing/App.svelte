@@ -1,7 +1,6 @@
 <script>
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid>
@@ -27,14 +26,12 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-grid div {
-  color: #00bcd4;
-  border: 1px solid #ffffff;
-  background-color: #e0f7fa;
-  padding: 0.5em;
-  text-align: center;
-}
-
+  plus-grid div {
+    color: #00bcd4;
+    border: 1px solid #ffffff;
+    background-color: #e0f7fa;
+    padding: 0.5em;
+    text-align: center;
+  }
 </style>

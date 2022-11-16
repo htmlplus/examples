@@ -1,10 +1,9 @@
 <script>
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/drawer.js';
-import '@htmlplus/core/drawer-toggler.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
-
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/drawer.js';
+  import '@htmlplus/core/drawer-toggler.js';
+  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/grid-item.js';
 </script>
 
 <plus-grid>
@@ -22,16 +21,14 @@ import '@htmlplus/core/grid-item.js';
   </plus-grid-item>
 </plus-grid>
 
-
 <style>
-plus-card {
-  --plus-card-background-color: #e0e0e0;
-  padding: 10rem 0;
-  text-align: center;
-}
-plus-drawer plus-card {
-  --plus-card-background-color: #aacaff;
-  margin-right: 0.5rem;
-}
-
+  plus-card {
+    --plus-card-background-color: #e0e0e0;
+    padding: 10rem 0;
+    text-align: center;
+  }
+  plus-drawer plus-card {
+    --plus-card-background-color: #aacaff;
+    margin-right: 0.5rem;
+  }
 </style>

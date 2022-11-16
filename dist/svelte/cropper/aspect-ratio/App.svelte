@@ -1,8 +1,5 @@
 <script>
-import '@htmlplus/core/cropper.js';
-
+  import '@htmlplus/core/cropper.js';
 </script>
 
 <plus-cropper aspect-ratio="3/4" src="/assets/images/panda.jpg"></plus-cropper>
-
-
