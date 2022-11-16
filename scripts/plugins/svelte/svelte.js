@@ -70,17 +70,33 @@ export const svelte = (options) => {
 
           if (value.type != 'JSXExpressionContainer') return;
 
-          if (!IGNORES.includes(value.expression.type)) return;
-
           let parent = path.parentPath;
 
           while (parent && parent.node.type != 'ClassDeclaration') {
             parent = parent.parentPath;
           }
 
-          const property = t.classProperty(t.identifier(name.name), value.expression);
+          if (name.name == 'ref') {
+            const property = t.classProperty(
+              // TODO: calc a unique key
+              t.identifier('ref')
+            );
 
-          parent.node.body.body.push(property);
+            const mount = t.callExpression(t.identifier('onMount'), [
+              t.arrowFunctionExpression(
+                [],
+                t.callExpression(value.expression, [
+                  // TODO: calc a unique key
+                  t.identifier('ref')
+                ])
+              )
+            ]);
+
+            parent.node.body.body.push(property, mount);
+          } else if (IGNORES.includes(value.expression.type)) {
+            const property = t.classProperty(t.identifier(name.name), value.expression);
+            parent.node.body.body.push(property);
+          }
         },
         ClassProperty(path) {
           const { key, value } = path.node;
@@ -147,10 +163,15 @@ export const svelte = (options) => {
 
             let newValue;
 
-            if (IGNORES.includes(value.expression.type)) {
-              newValue = name.name;
+            if (name.name == 'ref') {
+              name.name = 'bind:this';
+              newValue = 'ref'; // TODO: calc a unique key
             } else {
-              newValue = print(value.expression);
+              if (IGNORES.includes(value.expression.type)) {
+                newValue = name.name;
+              } else {
+                newValue = print(value.expression);
+              }
             }
 
             path.node.value = t.stringLiteral(`{${newValue}}`);
