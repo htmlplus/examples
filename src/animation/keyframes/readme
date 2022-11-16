@@ -19,22 +19,23 @@ import { Element } from "@htmlplus/element";
 
 @Element()
 class AnimationKeyframes {
+  keyframes=[
+    {
+      transform: "scale(0) rotate(0deg) translate(-50%, -50%)",
+      opacity: "1",
+    },
+    {
+      transform: "scale(7) rotate(960deg) translate(-50%, -50%)",
+      opacity: "0",
+    },
+  ];
   render() {
     return (
       <div class="root">
         <plus-animation
           duration="5000"
           iterations="Infinity"
-          keyframes={[
-            {
-              transform: "scale(0) rotate(0deg) translate(-50%, -50%)",
-              opacity: "1",
-            },
-            {
-              transform: "scale(7) rotate(960deg) translate(-50%, -50%)",
-              opacity: "0",
-            },
-          ]}
+          keyframes={this.keyframes}
           run
         ></plus-animation>
       </div>
@@ -66,6 +67,6 @@ setTimeout(() => {
       opacity: "0",
     },
   ];
-  el.run = true;
+  element.run = true;
 }, 1000);
 ```
