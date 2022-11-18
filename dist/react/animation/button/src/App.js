@@ -1,4 +1,5 @@
 import { Animation } from '@htmlplus/react';
+import '@htmlplus/core/animation/names/attention-seekers/tada.js';
 const AnimationButton = () => {
   return (
     <div className="center">

@@ -9,6 +9,7 @@ plus-animation {
 
 ```tsx [script]
 import { Element } from '@htmlplus/element';
+import '@htmlplus/core/animation/names/attention-seekers/tada.js';
 
 @Element()
 class AnimationButton {
@@ -33,6 +34,8 @@ class AnimationButton {
 ```
 
 ```js [javascript:script]
+import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';
+
 button1.addEventListener('click', () => {
   animation1.run = true;
 });
