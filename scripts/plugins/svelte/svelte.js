@@ -73,22 +73,21 @@ export const svelte = (options) => {
           const classDeclaration = findClassDeclaration(path);
 
           if (name.name == 'ref') {
-            const property = t.classProperty(
-              // TODO: calc a unique key
-              t.identifier('ref')
-            );
-
-            const mount = t.callExpression(t.identifier('onMount'), [
-              t.arrowFunctionExpression(
-                [],
-                t.callExpression(value.expression, [
-                  // TODO: calc a unique key
-                  t.identifier('ref')
-                ])
-              )
-            ]);
-
-            classDeclaration.node.body.body.push(property, mount);
+            // TODO
+            // const property = t.classProperty(
+            //   // TODO: calc a unique key
+            //   t.identifier('ref')
+            // );
+            // const mount = t.callExpression(t.identifier('onMount'), [
+            //   t.arrowFunctionExpression(
+            //     [],
+            //     t.callExpression(value.expression, [
+            //       // TODO: calc a unique key
+            //       t.identifier('ref')
+            //     ])
+            //   )
+            // ]);
+            // classDeclaration.node.body.body.push(property, mount);
           } else if (IGNORES.includes(value.expression.type)) {
             const property = t.classProperty(t.identifier(name.name), value.expression);
             classDeclaration.node.body.body.push(property);
@@ -160,8 +159,9 @@ export const svelte = (options) => {
             let newValue;
 
             if (name.name == 'ref') {
-              name.name = 'bind:this';
-              newValue = 'ref'; // TODO: calc a unique key
+              // TODO
+              // name.name = 'bind:this';
+              // newValue = 'ref'; // TODO: calc a unique key
             } else if (IGNORES.includes(value.expression.type)) {
               newValue = name.name;
             } else {

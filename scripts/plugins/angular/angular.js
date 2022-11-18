@@ -12,6 +12,15 @@ import path from 'path';
 
 import { format, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
 
+const IGNORES = [
+  'ArrayExpression',
+  // 'ArrowFunctionExpression',
+  // 'CallExpression',
+  'JSXElement',
+  'JSXFragment',
+  'ObjectExpression'
+];
+
 export const angular = (options) => {
   const name = 'angular';
   const next = (context) => {
@@ -68,6 +77,22 @@ export const angular = (options) => {
         Decorator(path) {
           path.remove();
         },
+        JSXAttribute(path) {
+          const { name, value } = path.node;
+
+          if (!value) return;
+
+          if (value.type != 'JSXExpressionContainer') return;
+
+          const classDeclaration = findClassDeclaration(path);
+
+          if (name.name == 'ref') {
+            // TODO
+          } else if (IGNORES.includes(value.expression.type)) {
+            const property = t.classProperty(t.identifier(name.name), value.expression);
+            classDeclaration.node.body.body.push(property);
+          }
+        },
         Program(path) {
           JSON.parse(JSON.stringify(context.customElementNames))
             .reverse()
@@ -100,29 +125,35 @@ export const angular = (options) => {
 
           path.replaceWithMultiple(children);
         },
-        JSXAttribute(path) {
-          const { name, value } = path.node;
+        JSXAttribute: {
+          exit(path) {
+            const { name, value } = path.node;
 
-          if (!value) return;
+            if (!value) return;
 
-          const event = isEvent(name.name);
+            if (isEvent(name.name)) {
+              name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            }
 
-          if (isEvent(name.name)) {
-            name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            if (value.type != 'JSXExpressionContainer') return;
+
+            let newValue;
+
+            if (name.name == 'ref') {
+              // TODO
+              // // TODO: calc a unique key
+              // path.replaceWith(t.jsxAttribute(t.jsxIdentifier('#ref'), null));
+              return;
+            } else if (IGNORES.includes(value.expression.type)) {
+              newValue = name.name;
+            } else {
+              newValue = print(value.expression);
+            }
+
+            path.node.value = t.stringLiteral(`${newValue}`);
+
+            if (!isEvent(name.name)) name.name = `[${name.name}]`;
           }
-
-          if (value.type != 'JSXExpressionContainer') return;
-
-          // TODO
-          const code = print(value.expression.body || value.expression);
-
-          // TODO
-          const newValue = code.replace(/this\.|;/, '').replace('event', '$event');
-
-          // TODO
-          path.node.value = t.stringLiteral(newValue);
-
-          if (!event) name.name = `[${name.name}]`;
         },
         JSXElement(path) {
           const { openingElement, closingElement } = path.node;
@@ -140,6 +171,7 @@ export const angular = (options) => {
           closingElement.name.name = newName;
         },
         JSXExpressionContainer(path) {
+          if (path.parentPath.type == 'JSXAttribute') return;
           path.replaceWithSourceString(`[[[${print(path.node.expression)}]]]`);
         },
         MemberExpression(path) {
