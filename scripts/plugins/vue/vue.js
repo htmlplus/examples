@@ -10,7 +10,16 @@ import {
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+import { findClassDeclaration, format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+
+const IGNORES = [
+  'ArrayExpression',
+  // 'ArrowFunctionExpression',
+  // 'CallExpression',
+  'JSXElement',
+  'JSXFragment',
+  'ObjectExpression'
+];
 
 export const vue = (options) => {
   const name = 'vue';
@@ -69,7 +78,24 @@ export const vue = (options) => {
             );
           }
 
-          if (!isProperty && !isState) path.remove();
+          // TODO
+          // if (!isProperty && !isState) path.remove();
+        },
+        JSXAttribute(path) {
+          const { name, value } = path.node;
+
+          if (!value) return;
+
+          if (value.type != 'JSXExpressionContainer') return;
+
+          const classDeclaration = findClassDeclaration(path);
+
+          if (name.name == 'ref') {
+            // TODO
+          } else if (IGNORES.includes(value.expression.type)) {
+            const property = t.classProperty(t.identifier(name.name), value.expression);
+            classDeclaration.node.body.body.push(property);
+          }
         },
         MemberExpression(path) {
           const { object, property } = path.node;
@@ -117,27 +143,33 @@ export const vue = (options) => {
 
           path.replaceWithMultiple(children);
         },
-        JSXAttribute(path) {
-          const { name, value } = path.node;
+        JSXAttribute: {
+          exit(path) {
+            const { name, value } = path.node;
 
-          if (!value) return;
+            if (!value) return;
 
-          if (isEvent(name.name)) {
-            name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            if (isEvent(name.name)) {
+              name.name = options?.eventNameConvertor?.(name.name) || name.name;
+            }
+
+            if (value.type != 'JSXExpressionContainer') return;
+
+            let newValue;
+
+            if (name.name == 'ref') {
+              // TODO
+            } else if (IGNORES.includes(value.expression.type)) {
+              newValue = name.name;
+            } else {
+              // TODO
+              newValue = print(value.expression.body || value.expression).replace('event', '$event');
+            }
+
+            path.node.value = t.stringLiteral(newValue);
+
+            if (!name.name.match(/@|:/)) name.name = `:${name.name}`;
           }
-
-          if (value.type !== 'JSXExpressionContainer') return;
-
-          // TODO
-          const code = print(value.expression.body || value.expression);
-
-          // TODO
-          const newValue = code.replace(/this\.|;/, '').replace('event', '$event');
-
-          // TODO
-          path.node.value = t.stringLiteral(newValue);
-
-          if (!name.name.match(/@|:/)) name.name = `:${name.name}`;
         },
         JSXElement(path) {
           const { openingElement, closingElement } = path.node;
@@ -155,6 +187,7 @@ export const vue = (options) => {
           closingElement.name.name = newName;
         },
         JSXExpressionContainer(path) {
+          if (path.parentPath.type == 'JSXAttribute') return;
           path.replaceWithSourceString(`[[[${print(path.node.expression)}]]]`);
         },
         MemberExpression(path) {

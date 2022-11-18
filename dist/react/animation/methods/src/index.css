@@ -1,0 +1,12 @@
+button {
+  margin: 0 0.5rem;
+}
+plus-animation {
+  background: lightgray;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.center {
+  text-align: center;
+}

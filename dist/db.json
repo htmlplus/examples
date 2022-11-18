@@ -132,6 +132,138 @@
     }
   },
   {
+    "key": "keyframes",
+    "category": "angular",
+    "component": "animation",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n}\n",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
+      "template": "<div class=\"root\">\n  <plus-animation\n    duration=\"5000\"\n    iterations=\"Infinity\"\n    [keyframes]=\"keyframes\"\n    run\n  ></plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "javascript",
+    "component": "animation",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n\nsetTimeout(() => {\r\n  element1.keyframes = [\r\n    {\r\n      transform: \"scale(0) rotate(0deg) translate(-50%, -50%)\",\r\n      opacity: \"1\",\r\n    },\r\n    {\r\n      transform: \"scale(7) rotate(960deg) translate(-50%, -50%)\",\r\n      opacity: \"0\",\r\n    },\r\n  ];\r\n  element1.run = true;\r\n}, 1000);",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
+      "template": "<div class=\"root\">\r\n  <plus-animation\r\n    duration=\"5000\"\r\n    id=\"element1\"\r\n    iterations=\"Infinity\"\r\n    run\r\n  ></plus-animation>\r\n</div>"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "react",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationKeyframes = () => {\n  let keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n  return (\n    <div className=\"root\">\n      <Animation\n        duration=\"5000\"\n        iterations=\"Infinity\"\n        keyframes={keyframes}\n        run\n      ></Animation>\n    </div>\n  );\n};\nexport default AnimationKeyframes;\n",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "react@experimental",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nconst AnimationKeyframes = () => {\n  let keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n  return (\n    <div className=\"root\">\n      <plus-animation\n        duration=\"5000\"\n        iterations=\"Infinity\"\n        keyframes={keyframes}\n        run\n      ></plus-animation>\n    </div>\n  );\n};\nexport default AnimationKeyframes;\n",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "svelte",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nlet keyframes = [\n  {\n    transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n    opacity: '1'\n  },\n  {\n    transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n    opacity: '0'\n  }\n];\n",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
+      "template": "<div class=\"root\">\n  <plus-animation\n    duration=\"5000\"\n    iterations=\"Infinity\"\n    keyframes=\"{keyframes}\"\n    run\n  ></plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "vue",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nkeyframes = [\n  {\n    transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n    opacity: '1'\n  },\n  {\n    transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n    opacity: '0'\n  }\n];\n",
+      "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
+      "template": "<div class=\"root\">\n  <plus-animation\n    duration=\"5000\"\n    iterations=\"Infinity\"\n    :keyframes=\"keyframes\"\n    run\n  ></plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "keyframes",
+    "category": "preview",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationKeyframes = () => {\n  let keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n  return (\n    <div className=\"root\">\n      <Animation\n        duration=\"5000\"\n        iterations=\"Infinity\"\n        keyframes={keyframes}\n        run\n      ></Animation>\n    </div>\n  );\n};\n\nconst AnimationKeyframesExample = () => {\n  return (\n    <div className=\"ex-animation-keyframes\">\n      <AnimationKeyframes />\n      <style>{`.ex-animation-keyframes .root {  padding: 5rem 0;  position: relative;}.ex-animation-keyframes plus-animation {  position: absolute;  top: 50%;  left: 50%;  width: 1rem;  height: 1rem;  border: solid 1px red;  transform-origin: top left;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationKeyframesExample;"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "angular",
+    "component": "animation",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button (click)=\"window.element2.cancel()\">Cancel</button>\n  <button (click)=\"window.element2.finish()\">Finish</button>\n  <button (click)=\"window.element2.pause()\">Pause</button>\n  <button (click)=\"window.element2.play()\">Play</button>\n</div>\n"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "javascript",
+    "component": "animation",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
+      "template": "<div class=\"center\">\r\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\r\n  <br />\r\n  <button onclick=\"element2.cancel()\">Cancel</button>\r\n  <button onclick=\"element2.finish()\">Finish</button>\r\n  <button onclick=\"element2.pause()\">Pause</button>\r\n  <button onclick=\"element2.play()\">Play</button>\r\n</div>"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "react",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\nexport default AnimationMethods;\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "react@experimental",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation\n        id=\"element2\"\n        iterations=\"3\"\n        name=\"fade-out\"\n      ></plus-animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\nexport default AnimationMethods;\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "svelte",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button on:click=\"{() => window.element2.cancel()}\">Cancel</button>\n  <button on:click=\"{() => window.element2.finish()}\">Finish</button>\n  <button on:click=\"{() => window.element2.pause()}\">Pause</button>\n  <button on:click=\"{() => window.element2.play()}\">Play</button>\n</div>\n"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "vue",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button @click=\"window.element2.cancel()\">Cancel</button>\n  <button @click=\"window.element2.finish()\">Finish</button>\n  <button @click=\"window.element2.pause()\">Pause</button>\n  <button @click=\"window.element2.play()\">Play</button>\n</div>\n"
+    }
+  },
+  {
+    "key": "methods",
+    "category": "preview",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}.ex-animation-methods .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;"
+    }
+  },
+  {
     "key": "name",
     "category": "description",
     "component": "animation",

@@ -19,7 +19,7 @@ import { Element } from "@htmlplus/element";
 
 @Element()
 class AnimationKeyframes {
-  keyframes=[
+  keyframes = [
     {
       transform: "scale(0) rotate(0deg) translate(-50%, -50%)",
       opacity: "1",
@@ -47,8 +47,8 @@ class AnimationKeyframes {
 ```html [javascript:template]
 <div class="root">
   <plus-animation
-    id="element"
     duration="5000"
+    id="element1"
     iterations="Infinity"
     run
   ></plus-animation>
@@ -57,7 +57,7 @@ class AnimationKeyframes {
 
 ```js [javascript:script]
 setTimeout(() => {
-  element.keyframes = [
+  element1.keyframes = [
     {
       transform: "scale(0) rotate(0deg) translate(-50%, -50%)",
       opacity: "1",
@@ -67,6 +67,6 @@ setTimeout(() => {
       opacity: "0",
     },
   ];
-  element.run = true;
+  element1.run = true;
 }, 1000);
 ```

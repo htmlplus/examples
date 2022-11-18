@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation | Methods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      button {
+        margin: 0 0.5rem;
+      }
+      plus-animation {
+        background: lightgray;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <plus-animation
+        id="element2"
+        iterations="3"
+        name="fade-out"
+      ></plus-animation>
+      <br />
+      <button onclick="element2.cancel()">Cancel</button>
+      <button onclick="element2.finish()">Finish</button>
+      <button onclick="element2.pause()">Pause</button>
+      <button onclick="element2.play()">Play</button>
+    </div>
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/animation.js';
+    </script>
+  </body>
+</html>

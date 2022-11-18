@@ -131,7 +131,9 @@ export const angular = (options) => {
 
             if (!value) return;
 
-            if (isEvent(name.name)) {
+            const event = isEvent(name.name);
+
+            if (event) {
               name.name = options?.eventNameConvertor?.(name.name) || name.name;
             }
 
@@ -141,18 +143,18 @@ export const angular = (options) => {
 
             if (name.name == 'ref') {
               // TODO
-              // // TODO: calc a unique key
               // path.replaceWith(t.jsxAttribute(t.jsxIdentifier('#ref'), null));
               return;
             } else if (IGNORES.includes(value.expression.type)) {
               newValue = name.name;
             } else {
-              newValue = print(value.expression);
+              // TODO
+              newValue = print(value.expression.body || value.expression).replace('event', '$event');
             }
 
-            path.node.value = t.stringLiteral(`${newValue}`);
+            path.node.value = t.stringLiteral(newValue);
 
-            if (!isEvent(name.name)) name.name = `[${name.name}]`;
+            if (!event) name.name = `[${name.name}]`;
           }
         },
         JSXElement(path) {

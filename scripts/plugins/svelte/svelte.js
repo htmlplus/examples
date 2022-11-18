@@ -63,6 +63,19 @@ export const svelte = (options) => {
             path.remove();
           }
         },
+        ClassProperty(path) {
+          const { key, value } = path.node;
+
+          const variable = t.variableDeclaration('let', [t.variableDeclarator(key, value)]);
+
+          const isProperty = context.classProperties.some((property) => property.key.name == key.name);
+
+          if (isProperty) {
+            path.replaceWith(t.exportNamedDeclaration(variable));
+          } else {
+            path.replaceWith(variable);
+          }
+        },
         JSXAttribute(path) {
           const { name, value } = path.node;
 
@@ -91,19 +104,6 @@ export const svelte = (options) => {
           } else if (IGNORES.includes(value.expression.type)) {
             const property = t.classProperty(t.identifier(name.name), value.expression);
             classDeclaration.node.body.body.push(property);
-          }
-        },
-        ClassProperty(path) {
-          const { key, value } = path.node;
-
-          const variable = t.variableDeclaration('let', [t.variableDeclarator(key, value)]);
-
-          const isProperty = context.classProperties.some((property) => property.key.name == key.name);
-
-          if (isProperty) {
-            path.replaceWith(t.exportNamedDeclaration(variable));
-          } else {
-            path.replaceWith(variable);
           }
         },
         MemberExpression(path) {
