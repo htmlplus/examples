@@ -10,7 +10,7 @@ import {
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+import { findClassDeclaration, format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
 
 const IGNORES = [
   'ArrayExpression',
@@ -70,11 +70,7 @@ export const svelte = (options) => {
 
           if (value.type != 'JSXExpressionContainer') return;
 
-          let parent = path.parentPath;
-
-          while (parent && parent.node.type != 'ClassDeclaration') {
-            parent = parent.parentPath;
-          }
+          const classDeclaration = findClassDeclaration(path);
 
           if (name.name == 'ref') {
             const property = t.classProperty(
@@ -92,10 +88,10 @@ export const svelte = (options) => {
               )
             ]);
 
-            parent.node.body.body.push(property, mount);
+            classDeclaration.node.body.body.push(property, mount);
           } else if (IGNORES.includes(value.expression.type)) {
             const property = t.classProperty(t.identifier(name.name), value.expression);
-            parent.node.body.body.push(property);
+            classDeclaration.node.body.body.push(property);
           }
         },
         ClassProperty(path) {

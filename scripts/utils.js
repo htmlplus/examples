@@ -3,6 +3,14 @@ import { capitalCase } from 'change-case';
 import fs from 'fs';
 import prettier from 'prettier';
 
+export const findClassDeclaration = (path) => {
+  let parent = path.parentPath;
+  while (parent && parent.node.type != 'ClassDeclaration') {
+    parent = parent.parentPath;
+  }
+  return parent;
+};
+
 export const format = (source, options = {}) => {
   return prettier.format(
     source,
