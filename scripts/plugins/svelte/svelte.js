@@ -162,12 +162,10 @@ export const svelte = (options) => {
             if (name.name == 'ref') {
               name.name = 'bind:this';
               newValue = 'ref'; // TODO: calc a unique key
+            } else if (IGNORES.includes(value.expression.type)) {
+              newValue = name.name;
             } else {
-              if (IGNORES.includes(value.expression.type)) {
-                newValue = name.name;
-              } else {
-                newValue = print(value.expression);
-              }
+              newValue = print(value.expression);
             }
 
             path.node.value = t.stringLiteral(`{${newValue}}`);
