@@ -3,10 +3,10 @@ const AnimationName = () => {
   return (
     <Grid justifyContent="evenly" gutter="md">
       <Grid.Item xs="12" sm="auto">
-        <Animation name="fade-in" iterations="Infinity" run></Animation>
+        <Animation iterations="Infinity" name="fade-in" run></Animation>
       </Grid.Item>
       <Grid.Item xs="12" sm="auto">
-        <Animation name="fade-out" iterations="Infinity" run></Animation>
+        <Animation iterations="Infinity" name="fade-out" run></Animation>
       </Grid.Item>
     </Grid>
   );

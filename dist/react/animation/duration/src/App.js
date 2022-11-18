@@ -2,9 +2,9 @@ import { Animation } from '@htmlplus/react';
 const AnimationDuration = () => {
   return (
     <Animation
-      name="fade-in"
       duration="2500"
       iterations="Infinity"
+      name="fade-in"
       run
     ></Animation>
   );

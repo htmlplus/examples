@@ -8,5 +8,5 @@ plus-animation {
 ```
 
 ```html [template]
-<plus-animation name="fade-in" duration="2500" iterations="Infinity" run></plus-animation>
+<plus-animation duration="2500" iterations="Infinity" name="fade-in" run></plus-animation>
 ```

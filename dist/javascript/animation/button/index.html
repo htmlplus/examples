@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation | Button</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .center {
+        text-align: center;
+      }
+      plus-animation {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <plus-animation id="animation1" name="tada">
+        <button id="button1">Click Me</button>
+      </plus-animation>
+    </div>
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/animation.js';
+
+      button1.addEventListener('click', () => {
+        animation1.run = true;
+      });
+    </script>
+  </body>
+</html>

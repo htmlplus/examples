@@ -2,7 +2,7 @@
   import '@htmlplus/core/animation.js';
 </script>
 
-<plus-animation name="fade-in" iterations="Infinity" run></plus-animation>
+<plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
 
 <style>
   plus-animation {

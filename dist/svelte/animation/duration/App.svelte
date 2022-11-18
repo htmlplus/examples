@@ -3,9 +3,9 @@
 </script>
 
 <plus-animation
-  name="fade-in"
   duration="2500"
   iterations="Infinity"
+  name="fade-in"
   run
 ></plus-animation>
 
