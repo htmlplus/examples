@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'path';
+  import { ref } from 'vue';
   import '@htmlplus/core/cropper.js';
   import '@htmlplus/core/dialog.js';
   import '@htmlplus/core/dialog-body.js';

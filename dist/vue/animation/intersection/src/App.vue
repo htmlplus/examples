@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'path';
+  import { ref } from 'vue';
   import '@htmlplus/core/animation.js';
   import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';

@@ -115,7 +115,7 @@ export const vue = (options) => {
             .reverse()
             .forEach((name) => addDependency(path, options?.componentRefrence(name)));
 
-          if (context.classStates.length) addDependency(path, 'path', 'ref', 'ref');
+          if (context.classStates.length) addDependency(path, 'vue', 'ref', 'ref');
         }
       },
       template: {

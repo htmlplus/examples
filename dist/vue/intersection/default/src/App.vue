@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-  import { ref } from 'path';
+  import { ref } from 'vue';
   import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
   import '@htmlplus/core/intersection.js';
