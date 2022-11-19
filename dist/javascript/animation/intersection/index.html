@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation | Intersection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      plus-animation {
+        background: lightgray;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+      }
+      plus-intersection {
+        text-align: center;
+        margin: 1000px auto;
+      }
+      .container {
+        position: relative;
+        height: 20rem;
+        overflow: auto;
+        background-color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <plus-intersection id="intersection2">
+        <plus-animation id="animation2" name="heart-beat"></plus-animation>
+      </plus-intersection>
+    </div>
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/animation.js';
+      import 'https://unpkg.com/@htmlplus/core/intersection.js';
+
+      import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
+
+      intersection2.addEventListener('plus-change', (event) => {
+        animation2.run = event.detail.isIntersecting;
+      });
+    </script>
+  </body>
+</html>

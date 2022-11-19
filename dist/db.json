@@ -264,6 +264,72 @@
     }
   },
   {
+    "key": "intersection",
+    "category": "angular",
+    "component": "animation",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  run = false;\n  onChange(event) {\n    this.run = event.detail.isIntersecting;\n  }\n}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onChange($event)\">\n    <plus-animation name=\"heart-beat\" [run]=\"run\"></plus-animation>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "javascript",
+    "component": "animation",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\r\n\r\nintersection2.addEventListener('plus-change', (event) => {\r\n  animation2.run = event.detail.isIntersecting;\r\n});",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection2\">\r\n    <plus-animation id=\"animation2\" name=\"heart-beat\"></plus-animation>\r\n  </plus-intersection>\r\n</div>"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "react",
+    "component": "animation",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Animation, Intersection } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst AnimationIntersection = () => {\n  const [run, setRun] = useState(false);\n  const onChange = (event) => {\n    setRun(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Animation name=\"heart-beat\" run={run}></Animation>\n      </Intersection>\n    </div>\n  );\n};\nexport default AnimationIntersection;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "react@experimental",
+    "component": "animation",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst AnimationIntersection = () => {\n  const [run, setRun] = useState(false);\n  const onChange = (event) => {\n    setRun(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-animation name=\"heart-beat\" run={run}></plus-animation>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default AnimationIntersection;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "svelte",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nlet run = false;\nfunction onChange(event) {\n  run = event.detail.isIntersecting;\n}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection on:plus-change=\"{event => onChange(event)}\">\n    <plus-animation name=\"heart-beat\" run=\"{run}\"></plus-animation>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "vue",
+    "component": "animation",
+    "detail": {
+      "script": "import { ref } from 'path';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst run = ref(false);\nfunction onChange(event) {\n  run.value = event.detail.isIntersecting;\n}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onChange($event)\">\n    <plus-animation name=\"heart-beat\" :run=\"run\"></plus-animation>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "preview",
+    "component": "animation",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Animation, Intersection } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst AnimationIntersection = () => {\n  const [run, setRun] = useState(false);\n  const onChange = (event) => {\n    setRun(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Animation name=\"heart-beat\" run={run}></Animation>\n      </Intersection>\n    </div>\n  );\n};\n\nconst AnimationIntersectionExample = () => {\n  return (\n    <div className=\"ex-animation-intersection dock\">\n      <AnimationIntersection />\n      <style>{`.ex-animation-intersection plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}.ex-animation-intersection plus-intersection {  text-align: center;  margin: 1000px auto;}.ex-animation-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationIntersectionExample;"
+    }
+  },
+  {
     "key": "keyframes",
     "category": "angular",
     "component": "animation",

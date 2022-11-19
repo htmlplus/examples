@@ -1,0 +1,16 @@
+plus-animation {
+  background: lightgray;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+plus-intersection {
+  text-align: center;
+  margin: 1000px auto;
+}
+.container {
+  position: relative;
+  height: 20rem;
+  overflow: auto;
+  background-color: #eeeeee;
+}
