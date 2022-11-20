@@ -9,13 +9,29 @@ plus-animation {
 }
 ```
 
-```html [template]
-<plus-grid justify-content="evenly" gutter="md">
-  <plus-grid-item xs="12" sm="auto">
-    <plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
-  </plus-grid-item>
-  <plus-grid-item xs="12" sm="auto">
-    <plus-animation iterations="Infinity" name="fade-out" run></plus-animation>
-  </plus-grid-item>
-</plus-grid>
+```tsx [script]
+import { Element } from '@htmlplus/element';
+import '@htmlplus/core/animation/names/flippers/flip-in-x.js';
+import '@htmlplus/core/animation/names/flippers/flip-in-y.js';
+
+@Element()
+class AnimationName {
+  render() {
+    return (
+      <plus-grid justify-content="evenly" gutter="md">
+        <plus-grid-item xs="12" sm="auto">
+          <plus-animation iterations="Infinity" name="flip-in-x" run></plus-animation>
+        </plus-grid-item>
+        <plus-grid-item xs="12" sm="auto">
+          <plus-animation iterations="Infinity" name="flip-in-y" run></plus-animation>
+        </plus-grid-item>
+      </plus-grid>
+    );
+  }
+}
+```
+
+```js [javascript:script]
+import 'https://unpkg.com/@htmlplus/core/animation/names/flippers/flip-in-x.js';
+import 'https://unpkg.com/@htmlplus/core/animation/names/flippers/flip-in-y.js';
 ```
