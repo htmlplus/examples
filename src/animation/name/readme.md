@@ -1,4 +1,4 @@
-To see all animations click [here](/component/animation/names).
+To see all names click [here](/component/animation/names).
 
 ```css [style]
 plus-animation {
