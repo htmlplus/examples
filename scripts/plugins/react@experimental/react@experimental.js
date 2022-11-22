@@ -16,9 +16,7 @@ import { format, formatFile, getSnippet, getTitle, isEvent } from '../../utils.j
 export const reactExperimental = (options) => {
   const name = 'react@experimental';
   const next = (context) => {
-    const config = {
-      cwd: __dirname(import.meta.url)
-    };
+    const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
 
@@ -111,6 +109,14 @@ export const reactExperimental = (options) => {
       }
     };
 
+    const config = (() => {
+      const content = getSnippet(context, 'config')?.content;
+
+      if (!content) patterns.push('!templates/src/config.js.*');
+
+      return content;
+    })();
+
     const script = (() => {
       const ast = t.cloneNode(context.fileAST, true);
 
@@ -136,12 +142,13 @@ export const reactExperimental = (options) => {
     if (!style) patterns.push('!templates/src/index.css.*');
 
     const model = {
+      config,
       script,
       style,
       title
     };
 
-    renderTemplate(patterns, destination, config)(model);
+    renderTemplate(patterns, destination, { cwd })(model);
 
     formatFile(path.join(destination, 'src', 'App.js'), { parser: 'babel' });
 

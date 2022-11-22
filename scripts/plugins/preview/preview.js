@@ -3,7 +3,6 @@ import { scoped } from '../../utils.js';
 export const preview = () => {
   const name = 'preview';
   const next = (context) => {
-
     const classNamePrefix =
       'ex-' +
       context.filePath
@@ -18,7 +17,9 @@ export const preview = () => {
 
     script.split('export default ')[0];
 
-    const dock = context.outputs?.find((output) => output.name == 'prepare')?.output?.some((snippet) => snippet.options?.dock);
+    const dock = context.outputs
+      ?.find((output) => output.name == 'prepare')
+      ?.output?.some((snippet) => snippet.options?.dock);
 
     script = [
       script.split('export default ')[0].trim(),

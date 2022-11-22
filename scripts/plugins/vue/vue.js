@@ -24,9 +24,7 @@ const IGNORES = [
 export const vue = (options) => {
   const name = 'vue';
   const next = (context) => {
-    const config = {
-      cwd: __dirname(import.meta.url)
-    };
+    const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
 
@@ -198,6 +196,14 @@ export const vue = (options) => {
       }
     };
 
+    const config = (() => {
+      const content = getSnippet(context, 'config')?.content;
+
+      if (!content) patterns.push('!templates/src/config.js.*');
+
+      return content;
+    })();
+
     const script = (() => {
       const ast = t.cloneNode(context.fileAST, true);
 
@@ -236,13 +242,14 @@ export const vue = (options) => {
     })();
 
     const model = {
+      config,
       script,
       style,
       template,
       title
     };
 
-    renderTemplate(patterns, destination, config)(model);
+    renderTemplate(patterns, destination, { cwd })(model);
 
     formatFile(path.join(destination, 'src', 'App.vue'), { parser: 'vue' });
 

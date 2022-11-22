@@ -24,9 +24,7 @@ const IGNORES = [
 export const svelte = (options) => {
   const name = 'svelte';
   const next = (context) => {
-    const config = {
-      cwd: __dirname(import.meta.url)
-    };
+    const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
 
@@ -200,6 +198,14 @@ export const svelte = (options) => {
       }
     };
 
+    const config = (() => {
+      const content = getSnippet(context, 'config')?.content;
+
+      if (!content) patterns.push('!templates/config.js.*');
+
+      return content;
+    })();
+
     const script = (() => {
       const ast = t.cloneNode(context.fileAST, true);
 
@@ -238,13 +244,14 @@ export const svelte = (options) => {
     })();
 
     const model = {
+      config,
       script,
       style,
       template,
       title
     };
 
-    renderTemplate(patterns, destination, config)(model);
+    renderTemplate(patterns, destination, { cwd })(model);
 
     formatFile(path.join(destination, 'App.svelte'), { parser: 'html' });
 

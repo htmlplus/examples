@@ -12,6 +12,12 @@
   </head>
   <body>
     {{{template}}}
+    {{#if config}}
+    <script type="module">
+      {{{config}}}
+    </script>
+    
+    {{/if}}
     {{#if script}}
     <script type="module">
       {{{script}}}

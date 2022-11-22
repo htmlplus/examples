@@ -13,8 +13,7 @@ plus-animation {
 }
 ```
 
-```tsx [script]
-import { Element } from '@htmlplus/element';
+```js [config]
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -31,6 +30,10 @@ setConfig({
     }
   }
 });
+```
+
+```tsx [script]
+import { Element } from '@htmlplus/element';
 
 @Element()
 class AnimationRegisterACustomName {
@@ -46,23 +49,4 @@ class AnimationRegisterACustomName {
     );
   }
 }
-```
-
-```js [javascript:script]
-import { setConfig } from 'https://unpkg.com/@htmlplus/core/config.js';
-
-setConfig({
-  component: {
-    'plus-animation': {
-      asset: {
-        name: {
-          'custom-pulse': [
-            { offset: 0, opacity: '0.6', transform: 'scale(1.0)' },
-            { offset: 1, opacity: '0.0', transform: 'scale(1.5)' }
-          ]
-        }
-      }
-    }
-  }
-});
 ```

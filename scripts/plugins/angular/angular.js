@@ -24,9 +24,7 @@ const IGNORES = [
 export const angular = (options) => {
   const name = 'angular';
   const next = (context) => {
-    const config = {
-      cwd: __dirname(import.meta.url)
-    };
+    const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
 
@@ -184,6 +182,14 @@ export const angular = (options) => {
       }
     };
 
+    const config = (() => {
+      const content = getSnippet(context, 'config')?.content;
+
+      if (!content) patterns.push('!templates/src/config.ts.*');
+
+      return content;
+    })();
+
     const script = (() => {
       const ast = t.cloneNode(context.fileAST, true);
 
@@ -222,13 +228,14 @@ export const angular = (options) => {
     })();
 
     const model = {
+      config,
       script,
       style,
       template,
       title
     };
 
-    renderTemplate(patterns, destination, config)(model);
+    renderTemplate(patterns, destination, { cwd })(model);
 
     return {
       script,

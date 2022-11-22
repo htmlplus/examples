@@ -1,5 +1,9 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+{{#if config}}
+import './config'; 
+
+{{/if}}
 import { AppModule } from './app/app.module'; 
 
 platformBrowserDynamic()

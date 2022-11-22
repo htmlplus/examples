@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.js';
+{{#if config}}
+import './config.js'; 
+{{/if}}
 {{#if style}}
 import './index.css';
 {{/if}}

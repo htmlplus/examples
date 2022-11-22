@@ -23,9 +23,7 @@ const getValue = (path) => {
 export const javascript = (options) => {
   const name = 'javascript';
   const next = (context) => {
-    const config = {
-      cwd: __dirname(import.meta.url)
-    };
+    const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
 
@@ -117,6 +115,10 @@ export const javascript = (options) => {
       }
     };
 
+    const config = (() => {
+      return getSnippet(context, 'config')?.content;
+    })();
+
     const script = (() => {
       let content = getSnippet(context, 'javascript:script')?.content || '';
 
@@ -170,13 +172,14 @@ export const javascript = (options) => {
     })();
 
     const model = {
+      config,
       script,
       style,
       template,
       title
     };
 
-    renderTemplate(patterns, destination, config)(model);
+    renderTemplate(patterns, destination, { cwd })(model);
 
     formatFile(path.join(destination, 'index.html'), { parser: 'html', embeddedLanguageFormatting: 'auto' });
 
