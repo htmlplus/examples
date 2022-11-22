@@ -238,6 +238,7 @@ export const angular = (options) => {
     renderTemplate(patterns, destination, { cwd })(model);
 
     return {
+      config,
       script,
       style,
       template

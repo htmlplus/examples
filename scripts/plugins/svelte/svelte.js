@@ -256,6 +256,7 @@ export const svelte = (options) => {
     formatFile(path.join(destination, 'App.svelte'), { parser: 'html' });
 
     return {
+      config,
       script,
       style,
       template

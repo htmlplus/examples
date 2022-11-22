@@ -174,6 +174,7 @@ export const react = (options) => {
     formatFile(path.join(destination, 'src', 'App.js'), { parser: 'babel' });
 
     return {
+      config,
       script,
       style
     };

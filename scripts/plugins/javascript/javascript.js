@@ -184,6 +184,7 @@ export const javascript = (options) => {
     formatFile(path.join(destination, 'index.html'), { parser: 'html', embeddedLanguageFormatting: 'auto' });
 
     return {
+      config,
       script,
       style,
       template
