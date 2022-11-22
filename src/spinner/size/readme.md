@@ -1,5 +1,3 @@
-Examples of Spinners with different sizes.
-
 ```html [template]
 <plus-grid align-items="center" justify-content="evenly">
   <plus-grid-item>

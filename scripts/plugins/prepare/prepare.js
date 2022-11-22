@@ -7,12 +7,6 @@ export const prepare = () => {
 
     const snippets = [];
 
-    snippets.push({
-      key: 'readme',
-      type: undefined,
-      context: context.fileContent?.replace(regex, '')?.trim()
-    });
-
     context.fileContent?.match(regex)?.forEach((snippet) => {
       try {
         const lines = snippet.split('\n');

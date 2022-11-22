@@ -1,5 +1,3 @@
-This is also used for lazy loading.
-
 ```css [style]
 .container {
   position: relative;

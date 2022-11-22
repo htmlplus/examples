@@ -1,5 +1,3 @@
-Examples of Spinners with different types.
-
 ```html [template]
 <plus-grid justify-content="evenly">
   <plus-grid-item>

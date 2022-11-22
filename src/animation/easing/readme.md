@@ -1,5 +1,3 @@
-To see all easings click [here](https://github.com/htmlplus/core/blob/main/src/components/animation/animation.constants.ts).
-
 ```css [style]
 plus-animation {
   background: lightgray;

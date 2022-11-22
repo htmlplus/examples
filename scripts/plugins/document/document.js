@@ -8,17 +8,7 @@ export const document = (options) => {
     for (const context of global.contexts) {
       const [component, example] = context.directoryPath.split(/[\/|\\]/g).slice(-2);
       for (const output of context.outputs) {
-        if (output.name == 'prepare') {
-          const description = output.output.find((x) => x.key == 'readme')?.context;
-          if (!description) continue;
-          outputs.push({
-            key: example,
-            category: 'description',
-            component,
-            detail: description
-          });
-          continue;
-        }
+        if (output.name == 'prepare') continue;
         outputs.push({
           key: example,
           category: output.name,

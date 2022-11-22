@@ -1,5 +1,3 @@
-By default, the card component has border-radius. The tile property neutralizes border-radius.
-
 ```css [style]
 .container {
   padding: 2rem 0;

@@ -1,5 +1,3 @@
-To see all names click [here](/component/animation/names).
-
 ```css [style]
 plus-animation {
   background: lightgray;

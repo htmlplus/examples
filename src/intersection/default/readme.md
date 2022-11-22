@@ -1,6 +1,3 @@
-The intersection component observes the viewport and updates the status when the card component
-enters or exits the viewport. (Its a component for detecting when elements are visible within the user's viewport).
-
 ```css [style]
 .container {
   position: relative;
