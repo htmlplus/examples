@@ -1,4 +1,4 @@
-import { scoped } from '../../utils.js';
+import { getSnippet, scoped } from '../../utils.js';
 
 export const preview = () => {
   const name = 'preview';
@@ -14,8 +14,6 @@ export const preview = () => {
     let { script, style } = context.outputs?.find((output) => output.name == 'react')?.output;
 
     if (style) style = scoped(style, `.${classNamePrefix}`);
-
-    script.split('export default ')[0];
 
     const dock = context.outputs
       ?.find((output) => output.name == 'prepare')
@@ -35,6 +33,16 @@ export const preview = () => {
       '',
       `export default ${context.className}Example;`
     ].join('\n');
+
+    const config = getSnippet(context, 'config')?.content;
+
+    if (config) {
+      const i = script.lastIndexOf('import');
+
+      const j = script.indexOf('\n', i);
+
+      script = [script.slice(0, j), config, script.slice(j)].join('\n');
+    }
 
     return { script };
   };
