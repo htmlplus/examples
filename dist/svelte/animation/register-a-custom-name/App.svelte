@@ -4,7 +4,7 @@
 </script>
 
 <div class="root">
-  <plus-avatar shape="circle" size="xl">
+  <plus-avatar shape="circle">
     <plus-animation
       delay="0000"
       duration="2000"
@@ -29,7 +29,7 @@
     padding: 1.5rem;
   }
   plus-animation {
-    border: solid 5px black;
+    border: solid 3px black;
     display: inline-block;
     position: absolute;
     inset: 0;

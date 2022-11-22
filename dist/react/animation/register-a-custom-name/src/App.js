@@ -2,7 +2,7 @@ import { Animation, Avatar } from '@htmlplus/react';
 const AnimationRegisterACustomName = () => {
   return (
     <div className="root">
-      <Avatar shape="circle" size="xl">
+      <Avatar shape="circle">
         <Animation
           delay="0000"
           duration="2000"

@@ -3,7 +3,7 @@ import '@htmlplus/core/avatar.js';
 const AnimationRegisterACustomName = () => {
   return (
     <div className="root">
-      <plus-avatar shape="circle" size="xl">
+      <plus-avatar shape="circle">
         <plus-animation
           delay="0000"
           duration="2000"

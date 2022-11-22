@@ -4,7 +4,7 @@
   padding: 1.5rem;
 }
 plus-animation {
-  border: solid 5px black;
+  border: solid 3px black;
   display: inline-block;
   position: absolute;
   inset: 0;
@@ -22,8 +22,8 @@ setConfig({
       asset: {
         name: {
           'custom-pulse': [
-            { offset: 0, opacity: '0.6', transform: 'scale(1.0)' },
-            { offset: 1, opacity: '0.0', transform: 'scale(1.5)' }
+            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },
+            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }
           ]
         }
       }
@@ -40,7 +40,7 @@ class AnimationRegisterACustomName {
   render() {
     return (
       <div class="root">
-        <plus-avatar shape="circle" size="xl">
+        <plus-avatar shape="circle">
           <plus-animation delay="0000" duration="2000" iterations="Infinity" name="custom-pulse" run></plus-animation>
           <plus-animation delay="1000" duration="2000" iterations="Infinity" name="custom-pulse" run></plus-animation>
           <img src="http://placeimg.com/94/94/people" />
