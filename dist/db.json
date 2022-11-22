@@ -199,12 +199,6 @@
   },
   {
     "key": "easing",
-    "category": "description",
-    "component": "animation",
-    "detail": "To see all easings click [here](https://github.com/htmlplus/core/blob/main/src/components/animation/animation.constants.ts)."
-  },
-  {
-    "key": "easing",
     "category": "angular",
     "component": "animation",
     "detail": {
@@ -466,12 +460,6 @@
     "detail": {
       "script": "import { Animation } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}.ex-animation-methods .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;"
     }
-  },
-  {
-    "key": "name",
-    "category": "description",
-    "component": "animation",
-    "detail": "To see all names click [here](/component/animation/names)."
   },
   {
     "key": "name",
@@ -2119,12 +2107,6 @@
   },
   {
     "key": "border-width",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has no border. outlined property Adds border."
-  },
-  {
-    "key": "border-width",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2323,12 +2305,6 @@
   },
   {
     "key": "elevation",
-    "category": "description",
-    "component": "card",
-    "detail": "The card component accepts a custom elevation between `1` and `24`. The elevation property specifies the value of the box-shodow property."
-  },
-  {
-    "key": "elevation",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2395,12 +2371,6 @@
   },
   {
     "key": "outlined",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has no border. outlined property Adds border."
-  },
-  {
-    "key": "outlined",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2464,12 +2434,6 @@
     "detail": {
       "script": "import { Card } from '@htmlplus/react';\nconst CardOutlined = () => {\n  return <Card outlined></Card>;\n};\n\nconst CardOutlinedExample = () => {\n  return (\n    <div className=\"ex-card-outlined\">\n      <CardOutlined />\n      <style>{`.ex-card-outlined plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default CardOutlinedExample;"
     }
-  },
-  {
-    "key": "tile",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has border-radius. The tile property neutralizes border-radius."
   },
   {
     "key": "tile",
@@ -6229,12 +6193,6 @@
   },
   {
     "key": "default",
-    "category": "description",
-    "component": "intersection",
-    "detail": "The intersection component observes the viewport and updates the status when the card component\r\nenters or exits the viewport. (Its a component for detecting when elements are visible within the user's viewport)."
-  },
-  {
-    "key": "default",
     "category": "angular",
     "component": "intersection",
     "detail": {
@@ -6298,12 +6256,6 @@
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Intersection } from '@htmlplus/react';\nconst IntersectionDefault = () => {\n  const [intersecting, setIntersecting] = useState(false);\n  const onChange = (event) => {\n    setIntersecting(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"status\">\n        {intersecting ? 'In Viewport' : 'Out of Viewport'}\n      </div>\n      <div className=\"content\">\n        <div className=\"spacer\"></div>\n        <Intersection onChange={(event) => onChange(event)}>\n          <Card elevation=\"10\">\n            <Card.Body>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n              eiusmod tempor incididunt ut labore et dolore magna aliqua.\n            </Card.Body>\n          </Card>\n        </Intersection>\n        <div className=\"spacer\"></div>\n      </div>\n    </div>\n  );\n};\n\nconst IntersectionDefaultExample = () => {\n  return (\n    <div className=\"ex-intersection-default dock\">\n      <IntersectionDefault />\n      <style>{`.ex-intersection-default .container {  position: relative;  background-color: #eeeeee;}.ex-intersection-default .status {  color: #fafafa;  background-color: #212121;  position: absolute;  top: 1rem;  left: 50%;  transform: translateX(-50%);  padding: 0.5rem 1rem;  border-radius: 2rem;  z-index: 1;}.ex-intersection-default .content {  height: 20rem;  overflow: auto;}.ex-intersection-default .spacer {  padding: 500px 0;}.ex-intersection-default plus-card {  width: 15rem;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default IntersectionDefaultExample;"
     }
-  },
-  {
-    "key": "lazy-image",
-    "category": "description",
-    "component": "intersection",
-    "detail": "This is also used for lazy loading."
   },
   {
     "key": "lazy-image",
@@ -6571,12 +6523,6 @@
   },
   {
     "key": "color",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different colors."
-  },
-  {
-    "key": "color",
     "category": "angular",
     "component": "spinner",
     "detail": {
@@ -6841,12 +6787,6 @@
   },
   {
     "key": "size",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different sizes."
-  },
-  {
-    "key": "size",
     "category": "angular",
     "component": "spinner",
     "detail": {
@@ -6904,12 +6844,6 @@
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerSizeExample = () => {\n  return (\n    <div className=\"ex-spinner-size\">\n      <SpinnerSize />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerSizeExample;"
     }
-  },
-  {
-    "key": "type",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different types."
   },
   {
     "key": "type",
