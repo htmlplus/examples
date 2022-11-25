@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@babel/types": "^7.20.2",
-    "@htmlplus/element": "latest",
+    "@htmlplus/element": "^0.5.5",
     "change-case": "^4.1.2",
     "fast-glob": "^3.2.12",
     "nodemon": "^2.0.20",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "rimraf": "^3.0.2"
   }
 }
