@@ -184,9 +184,24 @@ export const svelte = (options) => {
 
           closingElement.name.name = newName;
         },
-        JSXExpressionContainer(path) {
-          if (path.parentPath.type == 'JSXAttribute') return;
-          path.replaceWithSourceString(`[[[${print(path.node.expression)}]]]`);
+        JSXExpressionContainer: {
+          exit(path) {
+            const { expression } = path.node;
+
+            if (path.parentPath.type == 'JSXAttribute') return;
+
+            if (expression.type == 'LogicalExpression' && expression.right.type == 'JSXElement') {
+              t.addComment(expression.right, 'leading', `%%%{#if ${print(expression.left)}}%%%`);
+
+              t.addComment(expression.right, 'trailing', '%%%{/if}%%%');
+
+              path.replaceWith(expression.right);
+
+              return;
+            }
+
+            path.replaceWithSourceString(`[[[${print(expression)}]]]`);
+          }
         },
         MemberExpression(path) {
           const { object, property } = path.node;
@@ -235,6 +250,8 @@ export const svelte = (options) => {
 
       const content = print(ast)
         ?.trim()
+        ?.replace(/\/\*%%%/g, '')
+        ?.replace(/%%%\*\//g, '')
         ?.replace(/\[\[\[/g, '{')
         ?.replace(/\]\]\]/g, '}');
 
