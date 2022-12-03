@@ -170,9 +170,24 @@ export const angular = (options) => {
 
           closingElement.name.name = newName;
         },
-        JSXExpressionContainer(path) {
-          if (path.parentPath.type == 'JSXAttribute') return;
-          path.replaceWithSourceString(`[[[${print(path.node.expression)}]]]`);
+        JSXExpressionContainer: {
+          exit(path) {
+            const { expression } = path.node;
+
+            if (path.parentPath.type == 'JSXAttribute') return;
+
+            if (expression.type == 'LogicalExpression' && expression.right.type == 'JSXElement') {
+              expression.right.openingElement.attributes.push(
+                t.jsxAttribute(t.jsxIdentifier('*ngIf'), t.stringLiteral(print(expression.left)))
+              );
+
+              path.replaceWith(expression.right);
+
+              return;
+            }
+
+            path.replaceWithSourceString(`[[[${print(expression)}]]]`);
+          }
         },
         MemberExpression(path) {
           const { object, property } = path.node;

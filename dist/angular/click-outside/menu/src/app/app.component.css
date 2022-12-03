@@ -1,0 +1,10 @@
+plus-click-outside {
+  display: inline-block;
+  position: relative;
+}
+#menu {
+  border: solid 1px gray;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  padding: 10px;
+}
