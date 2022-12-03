@@ -2574,6 +2574,72 @@
     }
   },
   {
+    "key": "menu",
+    "category": "angular",
+    "component": "click-outside",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/click-outside.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  open = false;\n  onClick() {\n    this.open = !this.open;\n  }\n  onClickOutside() {\n    this.open = false;\n  }\n}\n",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n",
+      "template": "<plus-click-outside (plus-click-outside)=\"onClickOutside()\">\n  <button (click)=\"onClick()\">Open Menu Dropdown</button>\n  <div *ngIf=\"open\">Click me, I will stay visible until you click outside.</div>\n</plus-click-outside>\n"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "javascript",
+    "component": "click-outside",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nbutton.addEventListener('click', () => {\r\n  menu.hidden = !menu.hidden;\r\n});\r\noutside.addEventListener('plus-click-outside', () => {\r\n  menu.hidden = true;\r\n});",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n",
+      "template": "<plus-click-outside id=\"outside\">\r\n  <button id=\"button\">Open Menu Dropdown</button>\r\n  <div id=\"menu\" hidden>Click me, I will stay visible until you click outside.</div>\r\n</plus-click-outside>"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "react",
+    "component": "click-outside",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <ClickOutside onClickOutside={() => onClickOutside()}>\n      <button onClick={() => onClick()}>Open Menu Dropdown</button>\n      {open && (\n        <div>Click me, I will stay visible until you click outside.</div>\n      )}\n    </ClickOutside>\n  );\n};\nexport default ClickOutsideDefault;\n",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "react@experimental",
+    "component": "click-outside",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <plus-click-outside onplus-click-outside={() => onClickOutside()}>\n      <button onClick={() => onClick()}>Open Menu Dropdown</button>\n      {open && (\n        <div>Click me, I will stay visible until you click outside.</div>\n      )}\n    </plus-click-outside>\n  );\n};\nexport default ClickOutsideDefault;\n",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "svelte",
+    "component": "click-outside",
+    "detail": {
+      "script": "import '@htmlplus/core/click-outside.js';\nlet open = false;\nfunction onClick() {\n  open = !open;\n}\nfunction onClickOutside() {\n  open = false;\n}\n",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n",
+      "template": "<plus-click-outside on:plus-click-outside=\"{() => onClickOutside()}\">\n  <button on:click=\"{() => onClick()}\">Open Menu Dropdown</button>\n  {#if open}\n  <div>Click me, I will stay visible until you click outside.</div>\n  {/if}\n</plus-click-outside>\n"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "vue",
+    "component": "click-outside",
+    "detail": {
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/click-outside.js';\nconst open = ref(false);\nfunction onClick() {\n  open.value = !open.value;\n}\nfunction onClickOutside() {\n  open.value = false;\n}\n",
+      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n#menu {\n  border: solid 1px gray;\n  position: absolute;\n  top: calc(100% + 0.25rem);\n  padding: 10px;\n}\n",
+      "template": "<plus-click-outside @plus-click-outside=\"onClickOutside()\">\n  <button @click=\"onClick()\">Open Menu Dropdown</button>\n  <div v-if=\"open\">Click me, I will stay visible until you click outside.</div>\n</plus-click-outside>\n"
+    }
+  },
+  {
+    "key": "menu",
+    "category": "preview",
+    "component": "click-outside",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <ClickOutside onClickOutside={() => onClickOutside()}>\n      <button onClick={() => onClick()}>Open Menu Dropdown</button>\n      {open && (\n        <div>Click me, I will stay visible until you click outside.</div>\n      )}\n    </ClickOutside>\n  );\n};\n\nconst ClickOutsideDefaultExample = () => {\n  return (\n    <div className=\"ex-click-outside-menu\">\n      <ClickOutsideDefault />\n      <style>{`.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}.ex-click-outside-menu #menu {  border: solid 1px gray;  position: absolute;  top: calc(100% + 0.25rem);  padding: 10px;}`}</style>\n    </div>\n  )\n};\n\nexport default ClickOutsideDefaultExample;"
+    }
+  },
+  {
     "key": "default",
     "category": "angular",
     "component": "counter",
@@ -7989,258 +8055,6 @@
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsVertical = () => {\n  return (\n    <Tabs value=\"1\" vertical>\n      <Tabs.Bar>\n        <Tabs.Tab value=\"1\">Tab 1</Tabs.Tab>\n        <Tabs.Tab value=\"2\">Tab 2</Tabs.Tab>\n        <Tabs.Tab value=\"3\">Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n      <Tabs.Panels>\n        <Tabs.Panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </Tabs.Panel>\n      </Tabs.Panels>\n    </Tabs>\n  );\n};\n\nconst TabsVerticalExample = () => {\n  return (\n    <div className=\"ex-tabs-vertical\">\n      <TabsVertical />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default TabsVerticalExample;"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "angular",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Default\n  <plus-tooltip>Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Round\n  <plus-tooltip arrow=\"round\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Large\n  <plus-tooltip placement=\"bottom\" arrow=\"large\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Small\n  <plus-tooltip placement=\"top\" arrow=\"small\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Wide\n  <plus-tooltip placement=\"top\" arrow=\"wide\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Narrow\n  <plus-tooltip placement=\"top\" arrow=\"narrow\">Tooltip</plus-tooltip>\n</button>\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "javascript",
-    "component": "tooltip",
-    "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/tooltip.js';\n",
-      "template": "<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Default\n  <plus-tooltip>Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Round\n  <plus-tooltip arrow=\"round\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Large\n  <plus-tooltip placement=\"bottom\" arrow=\"large\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Small\n  <plus-tooltip placement=\"top\" arrow=\"small\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Wide\n  <plus-tooltip placement=\"top\" arrow=\"wide\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Narrow\n  <plus-tooltip placement=\"top\" arrow=\"narrow\">Tooltip</plus-tooltip>\n</button>\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "react",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Tooltip } from '@htmlplus/react';\nconst TooltipArrows = () => {\n  return (\n    <>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Default\n        <Tooltip>Tooltip</Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Round\n        <Tooltip arrow=\"round\">Tooltip</Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Large\n        <Tooltip placement=\"bottom\" arrow=\"large\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Small\n        <Tooltip placement=\"top\" arrow=\"small\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Wide\n        <Tooltip placement=\"top\" arrow=\"wide\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Narrow\n        <Tooltip placement=\"top\" arrow=\"narrow\">\n          Tooltip\n        </Tooltip>\n      </button>\n    </>\n  );\n};\nexport default TooltipArrows;\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "react@experimental",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\nconst TooltipArrows = () => {\n  return (\n    <>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Default\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Round\n        <plus-tooltip arrow=\"round\">Tooltip</plus-tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Large\n        <plus-tooltip placement=\"bottom\" arrow=\"large\">\n          Tooltip\n        </plus-tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Small\n        <plus-tooltip placement=\"top\" arrow=\"small\">\n          Tooltip\n        </plus-tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Wide\n        <plus-tooltip placement=\"top\" arrow=\"wide\">\n          Tooltip\n        </plus-tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Narrow\n        <plus-tooltip placement=\"top\" arrow=\"narrow\">\n          Tooltip\n        </plus-tooltip>\n      </button>\n    </>\n  );\n};\nexport default TooltipArrows;\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "svelte",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\n",
-      "template": "<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Default\n  <plus-tooltip>Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Round\n  <plus-tooltip arrow=\"round\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Large\n  <plus-tooltip placement=\"bottom\" arrow=\"large\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Small\n  <plus-tooltip placement=\"top\" arrow=\"small\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Wide\n  <plus-tooltip placement=\"top\" arrow=\"wide\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Narrow\n  <plus-tooltip placement=\"top\" arrow=\"narrow\">Tooltip</plus-tooltip>\n</button>\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "vue",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\n",
-      "template": "<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Default\n  <plus-tooltip>Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Round\n  <plus-tooltip arrow=\"round\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Large\n  <plus-tooltip placement=\"bottom\" arrow=\"large\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Small\n  <plus-tooltip placement=\"top\" arrow=\"small\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Wide\n  <plus-tooltip placement=\"top\" arrow=\"wide\">Tooltip</plus-tooltip>\n</button>\n<button class=\"btn\" xs=\"12\" sm=\"4\">\n  Narrow\n  <plus-tooltip placement=\"top\" arrow=\"narrow\">Tooltip</plus-tooltip>\n</button>\n"
-    }
-  },
-  {
-    "key": "arrows",
-    "category": "preview",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Tooltip } from '@htmlplus/react';\nconst TooltipArrows = () => {\n  return (\n    <>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Default\n        <Tooltip>Tooltip</Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Round\n        <Tooltip arrow=\"round\">Tooltip</Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Large\n        <Tooltip placement=\"bottom\" arrow=\"large\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Small\n        <Tooltip placement=\"top\" arrow=\"small\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Wide\n        <Tooltip placement=\"top\" arrow=\"wide\">\n          Tooltip\n        </Tooltip>\n      </button>\n      <button className=\"btn\" xs=\"12\" sm=\"4\">\n        Narrow\n        <Tooltip placement=\"top\" arrow=\"narrow\">\n          Tooltip\n        </Tooltip>\n      </button>\n    </>\n  );\n};\n\nconst TooltipArrowsExample = () => {\n  return (\n    <div className=\"ex-tooltip-arrows\">\n      <TooltipArrows />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default TooltipArrowsExample;"
-    }
-  },
-  {
-    "key": "default",
-    "category": "angular",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <button>\n    Button\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </button>\n</div>\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "javascript",
-    "component": "tooltip",
-    "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/tooltip.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <button>\n    Button\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </button>\n</div>\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "react",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Tooltip } from '@htmlplus/react';\nconst TooltipDefault = () => {\n  return (\n    <div className=\"center\">\n      <button>\n        Button\n        <Tooltip>Tooltip</Tooltip>\n      </button>\n    </div>\n  );\n};\nexport default TooltipDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "react@experimental",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\nconst TooltipDefault = () => {\n  return (\n    <div className=\"center\">\n      <button>\n        Button\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </button>\n    </div>\n  );\n};\nexport default TooltipDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "svelte",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <button>\n    Button\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </button>\n</div>\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "vue",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/tooltip.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <button>\n    Button\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </button>\n</div>\n"
-    }
-  },
-  {
-    "key": "default",
-    "category": "preview",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Tooltip } from '@htmlplus/react';\nconst TooltipDefault = () => {\n  return (\n    <div className=\"center\">\n      <button>\n        Button\n        <Tooltip>Tooltip</Tooltip>\n      </button>\n    </div>\n  );\n};\n\nconst TooltipDefaultExample = () => {\n  return (\n    <div className=\"ex-tooltip-default\">\n      <TooltipDefault />\n      <style>{`.ex-tooltip-default .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default TooltipDefaultExample;"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "angular",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top\n      <plus-tooltip placement=\"top\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top Start\n      <plus-tooltip placement=\"top-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top End\n      <plus-tooltip placement=\"top-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right\n      <plus-tooltip placement=\"right\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right Start\n      <plus-tooltip placement=\"right-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right End\n      <plus-tooltip placement=\"right-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom\n      <plus-tooltip placement=\"bottom\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom Start\n      <plus-tooltip placement=\"bottom-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom End\n      <plus-tooltip placement=\"bottom-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left\n      <plus-tooltip placement=\"left\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left Start\n      <plus-tooltip placement=\"left-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left End\n      <plus-tooltip placement=\"left-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "javascript",
-    "component": "tooltip",
-    "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/tooltip.js';\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top\n      <plus-tooltip placement=\"top\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top Start\n      <plus-tooltip placement=\"top-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top End\n      <plus-tooltip placement=\"top-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right\n      <plus-tooltip placement=\"right\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right Start\n      <plus-tooltip placement=\"right-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right End\n      <plus-tooltip placement=\"right-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom\n      <plus-tooltip placement=\"bottom\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom Start\n      <plus-tooltip placement=\"bottom-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom End\n      <plus-tooltip placement=\"bottom-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left\n      <plus-tooltip placement=\"left\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left Start\n      <plus-tooltip placement=\"left-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left End\n      <plus-tooltip placement=\"left-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "react",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Grid, Tooltip } from '@htmlplus/react';\nconst TooltipPlacement = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top\n          <Tooltip placement=\"top\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top Start\n          <Tooltip placement=\"top-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top End\n          <Tooltip placement=\"top-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right\n          <Tooltip placement=\"right\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right Start\n          <Tooltip placement=\"right-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right End\n          <Tooltip placement=\"right-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom\n          <Tooltip placement=\"bottom\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom Start\n          <Tooltip placement=\"bottom-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom End\n          <Tooltip placement=\"bottom-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left\n          <Tooltip placement=\"left\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left Start\n          <Tooltip placement=\"left-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left End\n          <Tooltip placement=\"left-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default TooltipPlacement;\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "react@experimental",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\nconst TooltipPlacement = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Top\n          <plus-tooltip placement=\"top\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Top Start\n          <plus-tooltip placement=\"top-start\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Top End\n          <plus-tooltip placement=\"top-end\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Right\n          <plus-tooltip placement=\"right\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Right Start\n          <plus-tooltip placement=\"right-start\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Right End\n          <plus-tooltip placement=\"right-end\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom\n          <plus-tooltip placement=\"bottom\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom Start\n          <plus-tooltip placement=\"bottom-start\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom End\n          <plus-tooltip placement=\"bottom-end\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Left\n          <plus-tooltip placement=\"left\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Left Start\n          <plus-tooltip placement=\"left-start\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"4\">\n        <button>\n          Left End\n          <plus-tooltip placement=\"left-end\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default TooltipPlacement;\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "svelte",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top\n      <plus-tooltip placement=\"top\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top Start\n      <plus-tooltip placement=\"top-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top End\n      <plus-tooltip placement=\"top-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right\n      <plus-tooltip placement=\"right\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right Start\n      <plus-tooltip placement=\"right-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right End\n      <plus-tooltip placement=\"right-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom\n      <plus-tooltip placement=\"bottom\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom Start\n      <plus-tooltip placement=\"bottom-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom End\n      <plus-tooltip placement=\"bottom-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left\n      <plus-tooltip placement=\"left\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left Start\n      <plus-tooltip placement=\"left-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left End\n      <plus-tooltip placement=\"left-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "vue",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "style": "button {\n  display: block;\n  width: 100%;\n  padding: 0.5rem;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top\n      <plus-tooltip placement=\"top\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top Start\n      <plus-tooltip placement=\"top-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Top End\n      <plus-tooltip placement=\"top-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right\n      <plus-tooltip placement=\"right\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right Start\n      <plus-tooltip placement=\"right-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Right End\n      <plus-tooltip placement=\"right-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom\n      <plus-tooltip placement=\"bottom\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom Start\n      <plus-tooltip placement=\"bottom-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Bottom End\n      <plus-tooltip placement=\"bottom-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left\n      <plus-tooltip placement=\"left\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left Start\n      <plus-tooltip placement=\"left-start\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"4\">\n    <button>\n      Left End\n      <plus-tooltip placement=\"left-end\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "placement",
-    "category": "preview",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Grid, Tooltip } from '@htmlplus/react';\nconst TooltipPlacement = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top\n          <Tooltip placement=\"top\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top Start\n          <Tooltip placement=\"top-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Top End\n          <Tooltip placement=\"top-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right\n          <Tooltip placement=\"right\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right Start\n          <Tooltip placement=\"right-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Right End\n          <Tooltip placement=\"right-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom\n          <Tooltip placement=\"bottom\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom Start\n          <Tooltip placement=\"bottom-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Bottom End\n          <Tooltip placement=\"bottom-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left\n          <Tooltip placement=\"left\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left Start\n          <Tooltip placement=\"left-start\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"4\">\n        <button>\n          Left End\n          <Tooltip placement=\"left-end\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst TooltipPlacementExample = () => {\n  return (\n    <div className=\"ex-tooltip-placement\">\n      <TooltipPlacement />\n      <style>{`.ex-tooltip-placement button {  display: block;  width: 100%;  padding: 0.5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default TooltipPlacementExample;"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "angular",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <button>\n      Hover\n      <plus-tooltip trigger=\"hover\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Focus\n      <plus-tooltip trigger=\"focus\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Click\n      <plus-tooltip trigger=\"click\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "javascript",
-    "component": "tooltip",
-    "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <button>\n      Hover\n      <plus-tooltip trigger=\"hover\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Focus\n      <plus-tooltip trigger=\"focus\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Click\n      <plus-tooltip trigger=\"click\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "react",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Grid, Tooltip } from '@htmlplus/react';\nconst TooltipTrigger = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <button>\n          Hover\n          <Tooltip trigger=\"hover\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item>\n        <button>\n          Focus\n          <Tooltip trigger=\"focus\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item>\n        <button>\n          Click\n          <Tooltip trigger=\"click\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default TooltipTrigger;\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "react@experimental",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\nconst TooltipTrigger = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <button>\n          Hover\n          <plus-tooltip trigger=\"hover\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item>\n        <button>\n          Focus\n          <plus-tooltip trigger=\"focus\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n      <plus-grid-item>\n        <button>\n          Click\n          <plus-tooltip trigger=\"click\">Tooltip</plus-tooltip>\n        </button>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default TooltipTrigger;\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "svelte",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <button>\n      Hover\n      <plus-tooltip trigger=\"hover\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Focus\n      <plus-tooltip trigger=\"focus\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Click\n      <plus-tooltip trigger=\"click\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "vue",
-    "component": "tooltip",
-    "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <button>\n      Hover\n      <plus-tooltip trigger=\"hover\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Focus\n      <plus-tooltip trigger=\"focus\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n  <plus-grid-item>\n    <button>\n      Click\n      <plus-tooltip trigger=\"click\"> Tooltip </plus-tooltip>\n    </button>\n  </plus-grid-item>\n</plus-grid>\n"
-    }
-  },
-  {
-    "key": "trigger",
-    "category": "preview",
-    "component": "tooltip",
-    "detail": {
-      "script": "import { Grid, Tooltip } from '@htmlplus/react';\nconst TooltipTrigger = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <button>\n          Hover\n          <Tooltip trigger=\"hover\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item>\n        <button>\n          Focus\n          <Tooltip trigger=\"focus\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n      <Grid.Item>\n        <button>\n          Click\n          <Tooltip trigger=\"click\">Tooltip</Tooltip>\n        </button>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst TooltipTriggerExample = () => {\n  return (\n    <div className=\"ex-tooltip-trigger\">\n      <TooltipTrigger />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default TooltipTriggerExample;"
     }
   }
 ]
