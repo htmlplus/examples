@@ -2,9 +2,7 @@ plus-click-outside {
   display: inline-block;
   position: relative;
 }
-#menu {
-  border: solid 1px gray;
+plus-card {
   position: absolute;
   top: calc(100% + 0.25rem);
-  padding: 10px;
 }

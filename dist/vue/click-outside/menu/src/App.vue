@@ -1,14 +1,21 @@
 <template>
-  <plus-click-outside @plus-click-outside="onClickOutside()">
-    <button @click="onClick()">Open Menu Dropdown</button>
-    <div v-if="open">
-      Click me, I will stay visible until you click outside.
-    </div>
-  </plus-click-outside>
+  <plus-center>
+    <plus-click-outside @plus-click-outside="onClickOutside()">
+      <button @click="onClick()">Open Menu Dropdown</button>
+      <plus-card elevation="10" id="menu" outlined v-if="open">
+        <plus-card-body>
+          Click me, I will stay visible until you click outside.
+        </plus-card-body>
+      </plus-card>
+    </plus-click-outside>
+  </plus-center>
 </template>
 
 <script setup>
   import { ref } from 'vue';
+  import '@htmlplus/core/card.js';
+  import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/click-outside.js';
   const open = ref(false);
   function onClick() {
@@ -24,10 +31,8 @@
     display: inline-block;
     position: relative;
   }
-  #menu {
-    border: solid 1px gray;
+  plus-card {
     position: absolute;
     top: calc(100% + 0.25rem);
-    padding: 10px;
   }
 </style>

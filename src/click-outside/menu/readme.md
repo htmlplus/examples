@@ -3,11 +3,9 @@ plus-click-outside {
   display: inline-block;
   position: relative;
 }
-#menu {
-  border: solid 1px gray;
+plus-card {
   position: absolute;
   top: calc(100% + 0.25rem);
-  padding: 10px;
 }
 ```
 
@@ -29,26 +27,36 @@ class ClickOutsideDefault {
 
   render() {
     return (
-      <plus-click-outside onPlusClickOutside={() => this.onClickOutside()}>
-        <button onClick={() => this.onClick()}>
-          Open Menu Dropdown
-        </button>
-        {this.open && (
-          <div>
-            Click me, I will stay visible until you click outside.
-          </div>
-        )}
-      </plus-click-outside>
-    );
+      <plus-center>
+        <plus-click-outside onPlusClickOutside={() => this.onClickOutside()}>
+          <button onClick={() => this.onClick()}>
+            Open Menu Dropdown
+          </button>
+          {this.open && (
+            <plus-card elevation="10" id="menu" outlined>
+              <plus-card-body>
+                Click me, I will stay visible until you click outside.
+              </plus-card-body>
+            </plus-card>
+          )}
+        </plus-click-outside>
+      </plus-center>
+    )
   }
 }
 ```
 
 ```html [javascript:template]
-<plus-click-outside id="outside">
-  <button id="button">Open Menu Dropdown</button>
-  <div id="menu" hidden>Click me, I will stay visible until you click outside.</div>
-</plus-click-outside>
+<plus-center>
+  <plus-click-outside id="outside">
+    <button id="button">Open Menu Dropdown</button>
+    <plus-card elevation="10" id="menu" outlined>
+      <plus-card-body>
+        Click me, I will stay visible until you click outside.
+      </plus-card-body>
+    </plus-card>
+  </plus-click-outside>
+</plus-center>
 ```
 
 ```js [javascript:script]
