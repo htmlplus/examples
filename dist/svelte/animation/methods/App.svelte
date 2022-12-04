@@ -1,15 +1,18 @@
 <script>
   import '@htmlplus/core/animation.js';
+  import '@htmlplus/core/center.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-animation id="element2" iterations="3" name="fade-out"></plus-animation>
-  <br />
+</plus-center>
+<br />
+<plus-center>
   <button on:click="{() => window.element2.cancel()}">Cancel</button>
   <button on:click="{() => window.element2.finish()}">Finish</button>
   <button on:click="{() => window.element2.pause()}">Pause</button>
   <button on:click="{() => window.element2.play()}">Play</button>
-</div>
+</plus-center>
 
 <style>
   button {
@@ -19,9 +22,5 @@
     background: lightgray;
     width: 100px;
     height: 100px;
-    margin: auto;
-  }
-  .center {
-    text-align: center;
   }
 </style>

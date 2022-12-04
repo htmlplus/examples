@@ -1,5 +1,9 @@
-import { Animation } from '@htmlplus/react';
+import { Animation, Center } from '@htmlplus/react';
 const AnimationDefault = () => {
-  return <Animation iterations="Infinity" name="fade-in" run></Animation>;
+  return (
+    <Center>
+      <Animation iterations="Infinity" name="fade-in" run></Animation>
+    </Center>
+  );
 };
 export default AnimationDefault;

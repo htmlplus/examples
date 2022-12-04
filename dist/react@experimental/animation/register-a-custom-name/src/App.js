@@ -1,8 +1,9 @@
 import '@htmlplus/core/animation.js';
 import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 const AnimationRegisterACustomName = () => {
   return (
-    <div className="root">
+    <plus-center>
       <plus-avatar shape="circle">
         <plus-animation
           delay="0000"
@@ -20,7 +21,7 @@ const AnimationRegisterACustomName = () => {
         ></plus-animation>
         <img src="http://placeimg.com/94/94/people" />
       </plus-avatar>
-    </div>
+    </plus-center>
   );
 };
 export default AnimationRegisterACustomName;

@@ -5,22 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      .center {
-        text-align: center;
-      }
       plus-animation {
         display: inline-block;
       }
     </style>
   </head>
   <body>
-    <div class="center">
+    <plus-center>
       <plus-animation id="animation1" name="tada">
         <button id="button1">Click Me</button>
       </plus-animation>
-    </div>
+    </plus-center>
     <script type="module">
       import 'https://unpkg.com/@htmlplus/core/animation.js';
+      import 'https://unpkg.com/@htmlplus/core/center.js';
 
       import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';
 

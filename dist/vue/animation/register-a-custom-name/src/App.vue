@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <plus-center>
     <plus-avatar shape="circle">
       <plus-animation
         delay="0000"
@@ -17,18 +17,18 @@
       ></plus-animation>
       <img src="http://placeimg.com/94/94/people" />
     </plus-avatar>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/animation.js';
   import '@htmlplus/core/avatar.js';
+  import '@htmlplus/core/center.js';
 </script>
 
 <style scoped>
-  .root {
-    text-align: center;
-    padding: 1.5rem;
+  plus-avatar {
+    margin: 1.5rem;
   }
   plus-animation {
     border: solid 3px black;

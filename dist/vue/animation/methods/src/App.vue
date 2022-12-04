@@ -1,20 +1,23 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-animation
       id="element2"
       iterations="3"
       name="fade-out"
     ></plus-animation>
-    <br />
+  </plus-center>
+  <br />
+  <plus-center>
     <button @click="window.element2.cancel()">Cancel</button>
     <button @click="window.element2.finish()">Finish</button>
     <button @click="window.element2.pause()">Pause</button>
     <button @click="window.element2.play()">Play</button>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/animation.js';
+  import '@htmlplus/core/center.js';
 </script>
 
 <style scoped>
@@ -25,9 +28,5 @@
     background: lightgray;
     width: 100px;
     height: 100px;
-    margin: auto;
-  }
-  .center {
-    text-align: center;
   }
 </style>

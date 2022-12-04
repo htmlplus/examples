@@ -1,7 +1,6 @@
 ```css [style]
-.root {
-  text-align: center;
-  padding: 1.5rem;
+plus-avatar {
+  margin: 1.5rem;
 }
 plus-animation {
   border: solid 3px black;
@@ -39,14 +38,14 @@ import { Element } from '@htmlplus/element';
 class AnimationRegisterACustomName {
   render() {
     return (
-      <div class="root">
+      <plus-center>
         <plus-avatar shape="circle">
           <plus-animation delay="0000" duration="2000" iterations="Infinity" name="custom-pulse" run></plus-animation>
           <plus-animation delay="1000" duration="2000" iterations="Infinity" name="custom-pulse" run></plus-animation>
           <img src="http://placeimg.com/94/94/people" />
         </plus-avatar>
-      </div>
-    );
+      </plus-center>
+    )
   }
 }
 ```

@@ -1,7 +1,4 @@
 ```css [style]
-.center {
-  text-align: center;
-}
 plus-animation {
   display: inline-block;
 }
@@ -15,22 +12,22 @@ import '@htmlplus/core/animation/names/attention-seekers/tada.js';
 class AnimationButton {
   render() {
     return (
-      <div class="center">
+      <plus-center>
         <plus-animation id="animation1" name="tada">
           <button onClick={() => window.animation1.run = true}>Click Me</button>
         </plus-animation>
-      </div>
+      </plus-center>
     )
   }
 }
 ```
 
 ```html [javascript:template]
-<div class="center">
+<plus-center>
   <plus-animation id="animation1" name="tada">
     <button id="button1">Click Me</button>
   </plus-animation>
-</div>
+</plus-center>
 ```
 
 ```js [javascript:script]

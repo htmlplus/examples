@@ -1,7 +1,7 @@
-import { Animation, Avatar } from '@htmlplus/react';
+import { Animation, Avatar, Center } from '@htmlplus/react';
 const AnimationRegisterACustomName = () => {
   return (
-    <div className="root">
+    <Center>
       <Avatar shape="circle">
         <Animation
           delay="0000"
@@ -19,7 +19,7 @@ const AnimationRegisterACustomName = () => {
         ></Animation>
         <img src="http://placeimg.com/94/94/people" />
       </Avatar>
-    </div>
+    </Center>
   );
 };
 export default AnimationRegisterACustomName;

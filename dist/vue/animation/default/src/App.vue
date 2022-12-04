@@ -1,9 +1,12 @@
 <template>
-  <plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
+  <plus-center>
+    <plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/animation.js';
+  import '@htmlplus/core/center.js';
 </script>
 
 <style scoped>
@@ -11,6 +14,5 @@
     background: lightgray;
     width: 100px;
     height: 100px;
-    margin: auto;
   }
 </style>

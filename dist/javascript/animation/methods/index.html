@@ -12,28 +12,27 @@
         background: lightgray;
         width: 100px;
         height: 100px;
-        margin: auto;
-      }
-      .center {
-        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div class="center">
+    <plus-center>
       <plus-animation
         id="element2"
         iterations="3"
         name="fade-out"
       ></plus-animation>
-      <br />
+    </plus-center>
+    <br />
+    <plus-center>
       <button onclick="element2.cancel()">Cancel</button>
       <button onclick="element2.finish()">Finish</button>
       <button onclick="element2.pause()">Pause</button>
       <button onclick="element2.play()">Play</button>
-    </div>
+    </plus-center>
     <script type="module">
       import 'https://unpkg.com/@htmlplus/core/animation.js';
+      import 'https://unpkg.com/@htmlplus/core/center.js';
     </script>
   </body>
 </html>
