@@ -27,12 +27,12 @@
 </script>
 
 <style scoped>
-  plus-click-outside {
-    display: inline-block;
-    position: relative;
-  }
   plus-card {
     position: absolute;
     top: calc(100% + 0.25rem);
+  }
+  plus-click-outside {
+    display: inline-block;
+    position: relative;
   }
 </style>

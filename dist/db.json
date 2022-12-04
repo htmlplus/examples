@@ -2699,7 +2699,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  open = false;\n  onClick() {\n    this.open = !this.open;\n  }\n  onClickOutside() {\n    this.open = false;\n  }\n}\n",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n",
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
       "template": "<plus-center>\n  <plus-click-outside (plus-click-outside)=\"onClickOutside()\">\n    <button (click)=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"menu\" outlined *ngIf=\"open\">\n      <plus-card-body>\n        Click me, I will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
@@ -2709,7 +2709,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nbutton.addEventListener('click', () => {\r\n  menu.hidden = !menu.hidden;\r\n});\r\noutside.addEventListener('plus-click-outside', () => {\r\n  menu.hidden = true;\r\n});",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n",
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
       "template": "<plus-center>\r\n  <plus-click-outside id=\"outside\">\r\n    <button id=\"button\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu\" outlined>\r\n      <plus-card-body>\r\n        Click me, I will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
     }
   },
@@ -2719,7 +2719,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" id=\"menu\" outlined>\n            <Card.Body>\n              Click me, I will stay visible until you click outside.\n            </Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\nexport default ClickOutsideDefault;\n",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n"
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
     }
   },
   {
@@ -2728,7 +2728,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <plus-center>\n      <plus-click-outside onplus-click-outside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <plus-card elevation=\"10\" id=\"menu\" outlined>\n            <plus-card-body>\n              Click me, I will stay visible until you click outside.\n            </plus-card-body>\n          </plus-card>\n        )}\n      </plus-click-outside>\n    </plus-center>\n  );\n};\nexport default ClickOutsideDefault;\n",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n"
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
     }
   },
   {
@@ -2737,7 +2737,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nlet open = false;\nfunction onClick() {\n  open = !open;\n}\nfunction onClickOutside() {\n  open = false;\n}\n",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n",
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
       "template": "<plus-center>\n  <plus-click-outside on:plus-click-outside=\"{() => onClickOutside()}\">\n    <button on:click=\"{() => onClick()}\">Open Menu Dropdown</button>\n    {#if open}<plus-card elevation=\"10\" id=\"menu\" outlined>\n      <plus-card-body>\n        Click me, I will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n    {/if}\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
@@ -2747,7 +2747,7 @@
     "component": "click-outside",
     "detail": {
       "script": "import { ref } from 'vue';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst open = ref(false);\nfunction onClick() {\n  open.value = !open.value;\n}\nfunction onClickOutside() {\n  open.value = false;\n}\n",
-      "style": "plus-click-outside {\n  display: inline-block;\n  position: relative;\n}\nplus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\n",
+      "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
       "template": "<plus-center>\n  <plus-click-outside @plus-click-outside=\"onClickOutside()\">\n    <button @click=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"menu\" outlined v-if=\"open\">\n      <plus-card-body>\n        Click me, I will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
@@ -2756,7 +2756,7 @@
     "category": "preview",
     "component": "click-outside",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" id=\"menu\" outlined>\n            <Card.Body>\n              Click me, I will stay visible until you click outside.\n            </Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\n\nconst ClickOutsideDefaultExample = () => {\n  return (\n    <div className=\"ex-click-outside-menu\">\n      <ClickOutsideDefault />\n      <style>{`.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}`}</style>\n    </div>\n  )\n};\n\nexport default ClickOutsideDefaultExample;"
+      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" id=\"menu\" outlined>\n            <Card.Body>\n              Click me, I will stay visible until you click outside.\n            </Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\n\nconst ClickOutsideDefaultExample = () => {\n  return (\n    <div className=\"ex-click-outside-menu\">\n      <ClickOutsideDefault />\n      <style>{`.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}`}</style>\n    </div>\n  )\n};\n\nexport default ClickOutsideDefaultExample;"
     }
   },
   {
