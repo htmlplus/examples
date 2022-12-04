@@ -2510,6 +2510,132 @@
   {
     "key": "default",
     "category": "angular",
+    "component": "center",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n",
+      "template": "<plus-center>All elements are centered</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "javascript",
+    "component": "center",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n",
+      "template": "<plus-center>All elements are centered</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react",
+    "component": "center",
+    "detail": {
+      "script": "import { Center } from '@htmlplus/react';\nconst CenterDefault = () => {\n  return <Center>All elements are centered</Center>;\n};\nexport default CenterDefault;\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react@experimental",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nconst CenterDefault = () => {\n  return <plus-center>All elements are centered</plus-center>;\n};\nexport default CenterDefault;\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "svelte",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n",
+      "template": "<plus-center>All elements are centered</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "vue",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\n",
+      "style": "plus-center {\n  height: 10rem;\n  background-color: #eeeeee;\n}\n",
+      "template": "<plus-center>All elements are centered</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "preview",
+    "component": "center",
+    "detail": {
+      "script": "import { Center } from '@htmlplus/react';\nconst CenterDefault = () => {\n  return <Center>All elements are centered</Center>;\n};\n\nconst CenterDefaultExample = () => {\n  return (\n    <div className=\"ex-center-default dock\">\n      <CenterDefault />\n      <style>{`.ex-center-default plus-center {  height: 10rem;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default CenterDefaultExample;"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "angular",
+    "component": "center",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "javascript",
+    "component": "center",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "react",
+    "component": "center",
+    "detail": {
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon size=\"2x\">menu</Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "react@experimental",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon size=\"2x\">menu</plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "svelte",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "vue",
+    "component": "center",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "inline",
+    "category": "preview",
+    "component": "center",
+    "detail": {
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon size=\"2x\">menu</Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\n\nconst CenterInlineExample = () => {\n  return (\n    <div className=\"ex-center-inline\">\n      <CenterInline />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default CenterInlineExample;"
+    }
+  },
+  {
+    "key": "default",
+    "category": "angular",
     "component": "click-outside",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/click-outside.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  inside = 0;\n  outside = 0;\n  onClick() {\n    this.inside = this.inside + 1;\n  }\n  onClickOutside() {\n    this.outside = this.outside + 1;\n  }\n}\n",
