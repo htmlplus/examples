@@ -11,7 +11,7 @@
 plus-sticky[state="normal"] {
   background-color: gold;
 }
-plus-sticky[state="sticky"] {
+plus-sticky[state="stick"] {
   background-color: greenyellow;
 }
 ```
