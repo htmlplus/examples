@@ -1,7 +1,3 @@
-<script>
-  import '@htmlplus/core/sticky.js';
-</script>
-
 <div class="container">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh
@@ -17,13 +13,8 @@
     imperdiet, gravida urna tempus, fringilla nisl.
   </p>
   <plus-sticky watcher>
-    <p>
-      Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.
-      Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla
-      dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac
-      ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus
-      rhoncus tincidunt.
-    </p>
+    <p slot="normal">The NORMAL slot</p>
+    <p slot="stick">The STICK slot</p>
   </plus-sticky>
   <p>
     Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.
@@ -121,21 +112,3 @@
     fermentum in mi. Etiam dignissim vitae massa nec semper.
   </p>
 </div>
-
-<style>
-  .container {
-    height: 20rem;
-    overflow: auto;
-  }
-  .container p {
-    margin: 0;
-    padding: 1rem;
-    text-align: justify;
-  }
-  plus-sticky[state='normal'] {
-    background-color: gold;
-  }
-  plus-sticky[state='stick'] {
-    background-color: greenyellow;
-  }
-</style>

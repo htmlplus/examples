@@ -14,13 +14,8 @@
       imperdiet, gravida urna tempus, fringilla nisl.
     </p>
     <plus-sticky watcher>
-      <p>
-        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.
-        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla
-        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac
-        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus
-        rhoncus tincidunt.
-      </p>
+      <p slot="normal">The NORMAL slot</p>
+      <p slot="stick">The STICK slot</p>
     </plus-sticky>
     <p>
       Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.

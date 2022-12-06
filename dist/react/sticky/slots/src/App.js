@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Sticky | State Attribute</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .container {
-        height: 20rem;
-        overflow: auto;
-      }
-      .container p {
-        margin: 0;
-        padding: 1rem;
-        text-align: justify;
-      }
-      plus-sticky[state='normal'] {
-        background-color: gold;
-      }
-      plus-sticky[state='stick'] {
-        background-color: greenyellow;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
+import { Sticky } from '@htmlplus/react';
+const StickySlots = () => {
+  return (
+    <div className="container">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh
         eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam
@@ -37,15 +15,10 @@
         natoque penatibus et magnis dis parturient montes, nascetur ridiculus
         mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.
       </p>
-      <plus-sticky watcher>
-        <p>
-          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.
-          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla
-          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac
-          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus
-          rhoncus tincidunt.
-        </p>
-      </plus-sticky>
+      <Sticky watcher>
+        <p slot="normal">The NORMAL slot</p>
+        <p slot="stick">The STICK slot</p>
+      </Sticky>
       <p>
         Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.
         Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus
@@ -145,9 +118,6 @@
         semper.
       </p>
     </div>
-
-    <script type="module">
-      import 'https://unpkg.com/@htmlplus/core/sticky.js';
-    </script>
-  </body>
-</html>
+  );
+};
+export default StickySlots;

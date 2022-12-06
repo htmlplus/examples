@@ -17,7 +17,7 @@
     <button on:click="{() => onClick()}">Open Menu Dropdown</button>
     {#if open}<plus-card elevation="10" id="menu" outlined>
       <plus-card-body>
-        Click me, I will stay visible until you click outside.
+        It will stay visible until you click outside.
       </plus-card-body>
     </plus-card>
     {/if}
