@@ -16,8 +16,8 @@ const StickySlots = () => {
         mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.
       </p>
       <Sticky watcher>
-        <p slot="normal">The NORMAL slot</p>
-        <p slot="stick">The STICK slot</p>
+        <header slot="normal">Normal Header</header>
+        <header slot="stick">Stick Header</header>
       </Sticky>
       <p>
         Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.

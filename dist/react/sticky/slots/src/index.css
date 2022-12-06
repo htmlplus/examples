@@ -7,9 +7,12 @@
   padding: 1rem;
   text-align: justify;
 }
-plus-sticky[state='normal'] {
-  background-color: gold;
+header {
+  background: lightgray;
+  text-align: center;
+  padding: 1rem;
 }
-plus-sticky[state='stick'] {
-  background-color: greenyellow;
+plus-sticky[state='normal'] header {
+  border-radius: 4px;
+  margin: 1rem;
 }

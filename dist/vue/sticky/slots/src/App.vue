@@ -14,8 +14,8 @@
       imperdiet, gravida urna tempus, fringilla nisl.
     </p>
     <plus-sticky watcher>
-      <p slot="normal">The NORMAL slot</p>
-      <p slot="stick">The STICK slot</p>
+      <header slot="normal">Normal Header</header>
+      <header slot="stick">Stick Header</header>
     </plus-sticky>
     <p>
       Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.
@@ -129,10 +129,13 @@
     padding: 1rem;
     text-align: justify;
   }
-  plus-sticky[state='normal'] {
-    background-color: gold;
+  header {
+    background: lightgray;
+    text-align: center;
+    padding: 1rem;
   }
-  plus-sticky[state='stick'] {
-    background-color: greenyellow;
+  plus-sticky[state='normal'] header {
+    border-radius: 4px;
+    margin: 1rem;
   }
 </style>
