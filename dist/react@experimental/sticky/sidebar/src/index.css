@@ -1,0 +1,15 @@
+.container {
+  height: 20rem;
+  overflow: auto;
+}
+.container p {
+  margin: 0;
+  padding: 1rem;
+  text-align: justify;
+}
+aside,
+header {
+  background: lightgray;
+  text-align: center;
+  padding: 1rem;
+}
