@@ -12,5 +12,6 @@
     color: purple;
     width: 5rem;
     height: 5rem;
+    font-size: 0.8rem;
   }
 </style>
