@@ -20,12 +20,15 @@
 
 <style scoped>
   plus-spinner[size='sm'] {
-    --plus-spinner-size: 24px;
+    width: 24px;
+    height: 24px;
   }
   plus-spinner[size='md'] {
-    --plus-spinner-size: 48px;
+    width: 48px;
+    height: 48px;
   }
   plus-spinner[size='lg'] {
-    --plus-spinner-size: 72px;
+    width: 72px;
+    height: 72px;
   }
 </style>

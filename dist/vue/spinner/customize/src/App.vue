@@ -1,20 +1,18 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-spinner type="dual-ring"></plus-spinner>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/spinner.js';
 </script>
 
 <style scoped>
-  .center {
-    text-align: center;
-  }
   plus-spinner {
-    --plus-spinner-size: 5rem;
-    --plus-spinner-weight: 0.5;
-    --plus-spinner-color: purple;
+    color: purple;
+    width: 5rem;
+    height: 5rem;
   }
 </style>

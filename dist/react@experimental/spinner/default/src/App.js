@@ -1,9 +1,10 @@
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/spinner.js';
 const SpinnerDefault = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-spinner></plus-spinner>
-    </div>
+    </plus-center>
   );
 };
 export default SpinnerDefault;

@@ -1,9 +1,9 @@
-import { Spinner } from '@htmlplus/react';
+import { Center, Spinner } from '@htmlplus/react';
 const SpinnerCustomize = () => {
   return (
-    <div className="center">
+    <Center>
       <Spinner type="dual-ring"></Spinner>
-    </div>
+    </Center>
   );
 };
 export default SpinnerCustomize;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/spinner.js';
 @Component({
   selector: 'app-root',
