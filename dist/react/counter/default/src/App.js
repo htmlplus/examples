@@ -5,7 +5,10 @@ const CounterDefault = () => {
   return (
     <div className="center">
       <Counter
-        to="1000"
+        duration="2000"
+        from="10000"
+        to="50000"
+        separator=","
         play={play}
         onComplete={() => setPlay(false)}
       ></Counter>

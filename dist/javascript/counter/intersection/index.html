@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter | Intersection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      plus-intersection {
+        text-align: center;
+        margin: 25rem auto;
+      }
+      .container {
+        position: relative;
+        height: 20rem;
+        overflow: auto;
+        background-color: #eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <plus-intersection id="intersection1">
+        <plus-counter id="counter1" to="50000"></plus-counter>
+      </plus-intersection>
+    </div>
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/counter.js';
+      import 'https://unpkg.com/@htmlplus/core/intersection.js';
+
+      intersection1.addEventListener('plus-change', (event) => {
+        counter1.play = event.detail.isIntersecting;
+      });
+    </script>
+  </body>
+</html>

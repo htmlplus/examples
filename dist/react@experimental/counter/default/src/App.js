@@ -5,7 +5,10 @@ const CounterDefault = () => {
   return (
     <div className="center">
       <plus-counter
-        to="1000"
+        duration="2000"
+        from="10000"
+        to="50000"
+        separator=","
         play={play}
         onplus-complete={() => setPlay(false)}
       ></plus-counter>

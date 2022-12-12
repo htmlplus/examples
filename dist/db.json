@@ -2766,7 +2766,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  play = false;\n}\n",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    to=\"1000\"\n    [play]=\"play\"\n    (plus-complete)=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button (click)=\"play = true\">Start</button>\n</div>\n"
+      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    [play]=\"play\"\n    (plus-complete)=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button (click)=\"play = true\">Start</button>\n</div>\n"
     }
   },
   {
@@ -2776,7 +2776,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/counter.js';\n\nbutton1.addEventListener('click', () => {\r\n  counter1.play = true;\r\n});",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\r\n    <plus-counter id=\"counter1\" to=\"1000\"></plus-counter>\r\n    <br />\r\n    <button id=\"button1\">Start</button>\r\n</div>"
+      "template": "<div class=\"center\">\r\n    <plus-counter\r\n      id=\"counter1\"\r\n      duration=\"2000\"\r\n      from=\"10000\"\r\n      to=\"50000\"\r\n      separator=\",\"\r\n    ></plus-counter>\r\n    <br />\r\n    <button id=\"button1\">Start</button>\r\n</div>"
     }
   },
   {
@@ -2784,7 +2784,7 @@
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        to=\"1000\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
+      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n"
     }
   },
@@ -2793,7 +2793,7 @@
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <plus-counter\n        to=\"1000\"\n        play={play}\n        onplus-complete={() => setPlay(false)}\n      ></plus-counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <plus-counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onplus-complete={() => setPlay(false)}\n      ></plus-counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n"
     }
   },
@@ -2804,7 +2804,7 @@
     "detail": {
       "script": "import '@htmlplus/core/counter.js';\nlet play = false;\n",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    to=\"1000\"\n    play=\"{play}\"\n    on:plus-complete=\"{() => play = false}\"\n  ></plus-counter>\n  <br />\n  <button on:click=\"{() => play = true}\">Start</button>\n</div>\n"
+      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    play=\"{play}\"\n    on:plus-complete=\"{() => play = false}\"\n  ></plus-counter>\n  <br />\n  <button on:click=\"{() => play = true}\">Start</button>\n</div>\n"
     }
   },
   {
@@ -2814,7 +2814,7 @@
     "detail": {
       "script": "import { ref } from 'vue';\nimport '@htmlplus/core/counter.js';\nconst play = ref(false);\n",
       "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    to=\"1000\"\n    :play=\"play\"\n    @plus-complete=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button @click=\"play = true\">Start</button>\n</div>\n"
+      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    :play=\"play\"\n    @plus-complete=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button @click=\"play = true\">Start</button>\n</div>\n"
     }
   },
   {
@@ -2822,7 +2822,73 @@
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        to=\"1000\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\n\nconst CounterDefaultExample = () => {\n  return (\n    <div className=\"ex-counter-default\">\n      <CounterDefault />\n      <style>{`.ex-counter-default .center {  text-align: center;}.ex-counter-default button {  margin: 1rem 0.5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterDefaultExample;"
+      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\n\nconst CounterDefaultExample = () => {\n  return (\n    <div className=\"ex-counter-default\">\n      <CounterDefault />\n      <style>{`.ex-counter-default .center {  text-align: center;}.ex-counter-default button {  margin: 1rem 0.5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterDefaultExample;"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  play = false;\n  onChange(event) {\n    this.play = event.detail.isIntersecting;\n  }\n}\n",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onChange($event)\">\n    <plus-counter to=\"50000\" [play]=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/counter.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\n\nintersection1.addEventListener('plus-change', (event) => {\r\n  counter1.play = event.detail.isIntersecting;\r\n});",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection1\">\r\n    <plus-counter id=\"counter1\" to=\"50000\"></plus-counter>\r\n  </plus-intersection>\r\n</div>"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"50000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-counter to=\"50000\" play={play}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nlet play = false;\nfunction onChange(event) {\n  play = event.detail.isIntersecting;\n}\n",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection on:plus-change=\"{event => onChange(event)}\">\n    <plus-counter to=\"50000\" play=\"{play}\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst play = ref(false);\nfunction onChange(event) {\n  play.value = event.detail.isIntersecting;\n}\n",
+      "style": "plus-intersection {\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onChange($event)\">\n    <plus-counter to=\"50000\" :play=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+    }
+  },
+  {
+    "key": "intersection",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"50000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\n\nconst CounterIntersectionExample = () => {\n  return (\n    <div className=\"ex-counter-intersection dock\">\n      <CounterIntersection />\n      <style>{`.ex-counter-intersection plus-intersection {  text-align: center;  margin: 25rem auto;}.ex-counter-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterIntersectionExample;"
     }
   },
   {

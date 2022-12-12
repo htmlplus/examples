@@ -17,7 +17,14 @@ class CounterDefault {
   render() {
     return (
       <div class="center">
-        <plus-counter to="1000" play={this.play} onPlusComplete={() => this.play = false}></plus-counter>
+        <plus-counter
+          duration="2000"
+          from="10000"
+          to="50000"
+          separator=","
+          play={this.play}
+          onPlusComplete={() => this.play = false}
+        ></plus-counter>
         <br />
         <button onClick={() => this.play = true}>Start</button>
       </div>
@@ -28,7 +35,13 @@ class CounterDefault {
 
 ```html [javascript:template]
 <div class="center">
-    <plus-counter id="counter1" to="1000"></plus-counter>
+    <plus-counter
+      id="counter1"
+      duration="2000"
+      from="10000"
+      to="50000"
+      separator=","
+    ></plus-counter>
     <br />
     <button id="button1">Start</button>
 </div>

@@ -1,7 +1,10 @@
 <template>
   <div class="center">
     <plus-counter
-      to="1000"
+      duration="2000"
+      from="10000"
+      to="50000"
+      separator=","
       :play="play"
       @plus-complete="play = false"
     ></plus-counter>
