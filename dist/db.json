@@ -6786,7 +6786,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -6796,7 +6796,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -6804,7 +6804,7 @@
     "category": "react",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerColor;\n",
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerColor;\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n"
     }
   },
@@ -6813,7 +6813,7 @@
     "category": "react@experimental",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-1\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-2\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-3\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-4\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-5\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerColor;\n",
+      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-1\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-2\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-3\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-4\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-5\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerColor;\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n"
     }
   },
@@ -6824,7 +6824,7 @@
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -6834,7 +6834,7 @@
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
       "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -6842,7 +6842,7 @@
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerColorExample = () => {\n  return (\n    <div className=\"ex-spinner-color\">\n      <SpinnerColor />\n      <style>{`.ex-spinner-color .spinner-1 {  color: #08dfc8;}.ex-spinner-color .spinner-2 {  color: #ff5449;}.ex-spinner-color .spinner-3 {  color: #5f9ee9;}.ex-spinner-color .spinner-4 {  color: #ffc903;}.ex-spinner-color .spinner-5 {  color: #9073c1;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerColorExample;"
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerColorExample = () => {\n  return (\n    <div className=\"ex-spinner-color\">\n      <SpinnerColor />\n      <style>{`.ex-spinner-color .spinner-1 {  color: #08dfc8;}.ex-spinner-color .spinner-2 {  color: #ff5449;}.ex-spinner-color .spinner-3 {  color: #5f9ee9;}.ex-spinner-color .spinner-4 {  color: #ffc903;}.ex-spinner-color .spinner-5 {  color: #9073c1;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerColorExample;"
     }
   },
   {
@@ -7103,7 +7103,7 @@
     "component": "spinner",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -7112,7 +7112,7 @@
     "component": "spinner",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -7120,7 +7120,7 @@
     "category": "react",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerType = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner type=\"default\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"double-bounce\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"ripple\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"dual-ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"square\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerType;\n"
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerType = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"default\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"double-bounce\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ripple\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"dual-ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"square\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerType;\n"
     }
   },
   {
@@ -7128,7 +7128,7 @@
     "category": "react@experimental",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerType = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner type=\"default\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner type=\"double-bounce\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner type=\"ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner type=\"ripple\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner type=\"dual-ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner type=\"square\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerType;\n"
+      "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerType = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerType;\n"
     }
   },
   {
@@ -7137,7 +7137,7 @@
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -7146,7 +7146,7 @@
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -7154,7 +7154,7 @@
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerType = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner type=\"default\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"double-bounce\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"ripple\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"dual-ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner type=\"square\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerTypeExample = () => {\n  return (\n    <div className=\"ex-spinner-type\">\n      <SpinnerType />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerTypeExample;"
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerType = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"default\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"double-bounce\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ripple\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"dual-ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"square\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerTypeExample = () => {\n  return (\n    <div className=\"ex-spinner-type\">\n      <SpinnerType />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerTypeExample;"
     }
   },
   {

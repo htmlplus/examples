@@ -3,22 +3,22 @@ const SpinnerType = () => {
   return (
     <Grid justifyContent="evenly">
       <Grid.Item>
-        <Spinner type="default"></Spinner>
+        <Spinner size="md" type="default"></Spinner>
       </Grid.Item>
       <Grid.Item>
-        <Spinner type="double-bounce"></Spinner>
+        <Spinner size="md" type="double-bounce"></Spinner>
       </Grid.Item>
       <Grid.Item>
-        <Spinner type="ring"></Spinner>
+        <Spinner size="md" type="ring"></Spinner>
       </Grid.Item>
       <Grid.Item>
-        <Spinner type="ripple"></Spinner>
+        <Spinner size="md" type="ripple"></Spinner>
       </Grid.Item>
       <Grid.Item>
-        <Spinner type="dual-ring"></Spinner>
+        <Spinner size="md" type="dual-ring"></Spinner>
       </Grid.Item>
       <Grid.Item>
-        <Spinner type="square"></Spinner>
+        <Spinner size="md" type="square"></Spinner>
       </Grid.Item>
     </Grid>
   );

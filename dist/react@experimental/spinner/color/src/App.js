@@ -5,19 +5,19 @@ const SpinnerColor = () => {
   return (
     <plus-grid justify-content="evenly">
       <plus-grid-item>
-        <plus-spinner className="spinner-1"></plus-spinner>
+        <plus-spinner size="md" className="spinner-1"></plus-spinner>
       </plus-grid-item>
       <plus-grid-item>
-        <plus-spinner className="spinner-2"></plus-spinner>
+        <plus-spinner size="md" className="spinner-2"></plus-spinner>
       </plus-grid-item>
       <plus-grid-item>
-        <plus-spinner className="spinner-3"></plus-spinner>
+        <plus-spinner size="md" className="spinner-3"></plus-spinner>
       </plus-grid-item>
       <plus-grid-item>
-        <plus-spinner className="spinner-4"></plus-spinner>
+        <plus-spinner size="md" className="spinner-4"></plus-spinner>
       </plus-grid-item>
       <plus-grid-item>
-        <plus-spinner className="spinner-5"></plus-spinner>
+        <plus-spinner size="md" className="spinner-5"></plus-spinner>
       </plus-grid-item>
     </plus-grid>
   );
