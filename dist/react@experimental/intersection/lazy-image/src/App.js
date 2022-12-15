@@ -19,9 +19,9 @@ const IntersectionLazyImage = () => {
         <plus-card elevation="10">
           <plus-spinner></plus-spinner>
           <img
+            alt="Lazy Image"
             data-hidden="true"
             data-src="https://placekitten.com/200/200"
-            alt="Lazy Image"
           />
         </plus-card>
       </plus-intersection>

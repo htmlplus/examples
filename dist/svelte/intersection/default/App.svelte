@@ -11,7 +11,6 @@
 <div class="container">
   <div class="status">{intersecting ? 'In Viewport' : 'Out of Viewport'}</div>
   <div class="content">
-    <div class="spacer"></div>
     <plus-intersection on:plus-change="{event => onChange(event)}">
       <plus-card elevation="10">
         <plus-card-body>
@@ -20,7 +19,6 @@
         </plus-card-body>
       </plus-card>
     </plus-intersection>
-    <div class="spacer"></div>
   </div>
 </div>
 
@@ -32,7 +30,7 @@
 
   .status {
     color: #fafafa;
-    background-color: #212121;
+    background-color: black;
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -47,12 +45,13 @@
     overflow: auto;
   }
 
-  .spacer {
-    padding: 500px 0;
-  }
-
   plus-card {
     width: 15rem;
     margin: auto;
+  }
+
+  plus-intersection {
+    display: block;
+    margin: 40rem auto;
   }
 </style>

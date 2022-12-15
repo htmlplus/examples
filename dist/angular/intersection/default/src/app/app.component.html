@@ -1,7 +1,6 @@
 <div class="container">
   <div class="status">{{intersecting ? 'In Viewport' : 'Out of Viewport'}}</div>
   <div class="content">
-    <div class="spacer"></div>
     <plus-intersection (plus-change)="onChange($event)">
       <plus-card elevation="10">
         <plus-card-body>
@@ -10,6 +9,5 @@
         </plus-card-body>
       </plus-card>
     </plus-intersection>
-    <div class="spacer"></div>
   </div>
 </div>

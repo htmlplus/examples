@@ -13,7 +13,6 @@ const IntersectionDefault = () => {
         {intersecting ? 'In Viewport' : 'Out of Viewport'}
       </div>
       <div className="content">
-        <div className="spacer"></div>
         <plus-intersection onplus-change={(event) => onChange(event)}>
           <plus-card elevation="10">
             <plus-card-body>
@@ -22,7 +21,6 @@ const IntersectionDefault = () => {
             </plus-card-body>
           </plus-card>
         </plus-intersection>
-        <div className="spacer"></div>
       </div>
     </div>
   );

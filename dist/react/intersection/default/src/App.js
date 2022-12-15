@@ -11,7 +11,6 @@ const IntersectionDefault = () => {
         {intersecting ? 'In Viewport' : 'Out of Viewport'}
       </div>
       <div className="content">
-        <div className="spacer"></div>
         <Intersection onChange={(event) => onChange(event)}>
           <Card elevation="10">
             <Card.Body>
@@ -20,7 +19,6 @@ const IntersectionDefault = () => {
             </Card.Body>
           </Card>
         </Intersection>
-        <div className="spacer"></div>
       </div>
     </div>
   );

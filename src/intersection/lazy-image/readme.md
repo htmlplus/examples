@@ -66,9 +66,9 @@ class IntersectionLazyImage {
           <plus-card elevation="10">
             <plus-spinner></plus-spinner>
             <img
+              alt="Lazy Image"
               data-hidden="true"
               data-src="https://placekitten.com/200/200"
-              alt="Lazy Image"
             />
           </plus-card>
         </plus-intersection>
@@ -80,13 +80,13 @@ class IntersectionLazyImage {
 
 ```html [javascript:template]
 <div class="container">
-  <plus-intersection id="element1" once>
+  <plus-intersection id="element3" once>
     <plus-card elevation="10">
       <plus-spinner></plus-spinner>
       <img
+        alt="Lazy Image"
         data-hidden="true"
         data-src="https://placekitten.com/200/200"
-        alt="Lazy Image"
       />
     </plus-card>
   </plus-intersection>
@@ -94,7 +94,7 @@ class IntersectionLazyImage {
 ```
 
 ```js [javascript:script]
-element1.addEventListener('plus-change', (event) => {
+element3.addEventListener('plus-change', (event) => {
   if (!event.detail.isIntersecting) return;
 
   setTimeout(() => {
