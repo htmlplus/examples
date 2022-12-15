@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, Intersection } from '@htmlplus/react';
+import { Card, Center, Intersection, Sticky } from '@htmlplus/react';
 const IntersectionDefault = () => {
   const [intersecting, setIntersecting] = useState(false);
   const onChange = (event) => {
@@ -7,19 +7,21 @@ const IntersectionDefault = () => {
   };
   return (
     <div className="container">
-      <div className="status">
-        {intersecting ? 'In Viewport' : 'Out of Viewport'}
-      </div>
-      <div className="content">
-        <Intersection onChange={(event) => onChange(event)}>
-          <Card elevation="10">
-            <Card.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Card.Body>
-          </Card>
-        </Intersection>
-      </div>
+      <Sticky top="1rem" zIndex="1">
+        <Center>
+          <div className="status">
+            {intersecting ? 'In Viewport' : 'Out of Viewport'}
+          </div>
+        </Center>
+      </Sticky>
+      <Intersection onChange={(event) => onChange(event)}>
+        <Card elevation="10">
+          <Card.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Card.Body>
+        </Card>
+      </Intersection>
     </div>
   );
 };
