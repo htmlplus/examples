@@ -6,6 +6,7 @@ plus-animation {
   margin: auto;
 }
 plus-intersection {
+  display: block;
   text-align: center;
   margin: 1000px auto;
 }

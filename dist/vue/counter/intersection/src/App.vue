@@ -18,6 +18,7 @@
 
 <style scoped>
   plus-intersection {
+    display: block;
     text-align: center;
     margin: 25rem auto;
   }

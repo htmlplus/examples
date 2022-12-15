@@ -7,6 +7,7 @@
 }
 
 plus-intersection {
+  display: block;
   text-align: center;
   margin: 1000px auto;
 }
@@ -20,6 +21,7 @@ img {
   width: 12rem;
   height: 12rem;
   object-fit: cover;
+  margin: 0;
 }
 
 plus-card {
