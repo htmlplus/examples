@@ -6780,6 +6780,486 @@
     }
   },
   {
+    "key": "clear",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature1\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"window.signature1.clear()\">Clear</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\r\n  <plus-signature id=\"signature1\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"signature1.clear()\">Clear</button>\r\n</plus-center>"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureClear = () => {\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature1\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.signature1.clear()}>Clear</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureClear;\n"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureClear = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature1\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.signature1.clear()}>Clear</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureClear;\n"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature1\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => window.signature1.clear()}\">Clear</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature1\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"window.signature1.clear()\">Clear</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "clear",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureClear = () => {\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature1\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.signature1.clear()}>Clear</button>\n      </Center>\n    </>\n  );\n};\n\nconst SignatureClearExample = () => {\n  return (\n    <div className=\"ex-signature-clear\">\n      <SignatureClear />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureClearExample;"
+    }
+  },
+  {
+    "key": "color",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" color=\"blue\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" color=\"blue\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureColor = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" color=\"blue\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureColor;\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureColor = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        color=\"blue\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureColor;\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" color=\"blue\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" color=\"blue\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "color",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureColor = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" color=\"blue\"></Signature>\n    </Center>\n  );\n};\n\nconst SignatureColorExample = () => {\n  return (\n    <div className=\"ex-signature-color\">\n      <SignatureColor />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureColorExample;"
+    }
+  },
+  {
+    "key": "default",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDefault = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDefault = () => {\n  return (\n    <plus-center>\n      <plus-signature background-color=\"lightgray\"></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDefault = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\"></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDefaultExample = () => {\n  return (\n    <div className=\"ex-signature-default\">\n      <SignatureDefault />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDefaultExample;"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    style=\"width: 480px; height: 320px;\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    style=\"width: 480px; height: 320px;\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureDimensions;\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDimensions = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDimensions;\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    style=\"width: 480px; height: 320px;\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    style=\"width: 480px; height: 320px;\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "dimensions",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDimensionsExample = () => {\n  return (\n    <div className=\"ex-signature-dimensions\">\n      <SignatureDimensions />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDimensionsExample;"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDisabled = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" disabled></Signature>\n    </Center>\n  );\n};\nexport default SignatureDisabled;\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDisabled = () => {\n  return (\n    <plus-center>\n      <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDisabled;\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDisabled = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" disabled></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDisabledExample = () => {\n  return (\n    <div className=\"ex-signature-disabled\">\n      <SignatureDisabled />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDisabledExample;"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" distance=\"10\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" distance=\"10\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDistance = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" distance=\"10\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureDistance;\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDistance = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        distance=\"10\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDistance;\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" distance=\"10\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" distance=\"10\"></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "distance",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDistance = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" distance=\"10\"></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDistanceExample = () => {\n  return (\n    <div className=\"ex-signature-distance\">\n      <SignatureDistance />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDistanceExample;"
+    }
+  },
+  {
+    "key": "history",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  canUndo: boolean = false;\n  canRedo: boolean = false;\n  sync() {\n    this.canUndo = window.signature2.canUndo;\n    this.canRedo = window.signature2.canRedo;\n  }\n  onUndo() {\n    window.signature2.undo();\n    this.sync();\n  }\n  onRedo() {\n    window.signature2.redo();\n    this.sync();\n  }\n  onPlusEnd() {\n    this.sync();\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-signature\n    id=\"signature2\"\n    background-color=\"lightgray\"\n    (plus-end)=\"onPlusEnd()\"\n  ></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button [disabled]=\"!canUndo\" (click)=\"onUndo()\">Undo</button>\n  &nbsp; &nbsp;\n  <button [disabled]=\"!canRedo\" (click)=\"onRedo()\">Redo</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "history",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst sync = () => {\r\n  button1.disabled = !signature2.canUndo;\r\n  button2.disabled = !signature2.canRedo;\r\n}\r\nbutton1.addEventListener('click', () => {\r\n  signature2.undo();\r\n  sync();\r\n});\r\nbutton2.addEventListener('click', () => {\r\n  signature2.redo();\r\n  sync();\r\n});\r\nsignature2.addEventListener('plus-end', () => {\r\n  sync();\r\n});",
+      "template": "<plus-center>\r\n  <plus-signature id=\"signature2\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button1\" disabled>Undo</button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"button2\" disabled>Redo</button>\r\n</plus-center>"
+    }
+  },
+  {
+    "key": "history",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Center, Signature } from '@htmlplus/react';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo);\n    setCanRedo(window.signature2.canRedo);\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <Center>\n        <Signature\n          id=\"signature2\"\n          backgroundColor=\"lightgray\"\n          onEnd={() => onPlusEnd()}\n        ></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureHistory;\n"
+    }
+  },
+  {
+    "key": "history",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo);\n    setCanRedo(window.signature2.canRedo);\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature2\"\n          background-color=\"lightgray\"\n          onplus-end={() => onPlusEnd()}\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureHistory;\n"
+    }
+  },
+  {
+    "key": "history",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nlet canUndo = false;\nlet canRedo = false;\nfunction sync() {\n  canUndo = window.signature2.canUndo;\n  canRedo = window.signature2.canRedo;\n}\nfunction onUndo() {\n  window.signature2.undo();\n  sync();\n}\nfunction onRedo() {\n  window.signature2.redo();\n  sync();\n}\nfunction onPlusEnd() {\n  sync();\n}\n",
+      "template": "<plus-center>\n  <plus-signature\n    id=\"signature2\"\n    background-color=\"lightgray\"\n    on:plus-end=\"{() => onPlusEnd()}\"\n  ></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button disabled=\"{!canUndo}\" on:click=\"{() => onUndo()}\">Undo</button>\n  &nbsp; &nbsp;\n  <button disabled=\"{!canRedo}\" on:click=\"{() => onRedo()}\">Redo</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "history",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst canUndo = ref(false);\nconst canRedo = ref(false);\nfunction sync() {\n  canUndo.value = window.signature2.canUndo;\n  canRedo.value = window.signature2.canRedo;\n}\nfunction onUndo() {\n  window.signature2.undo();\n  sync();\n}\nfunction onRedo() {\n  window.signature2.redo();\n  sync();\n}\nfunction onPlusEnd() {\n  sync();\n}\n",
+      "template": "<plus-center>\n  <plus-signature\n    id=\"signature2\"\n    background-color=\"lightgray\"\n    @plus-end=\"onPlusEnd()\"\n  ></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button :disabled=\"!canUndo\" @click=\"onUndo()\">Undo</button>\n  &nbsp; &nbsp;\n  <button :disabled=\"!canRedo\" @click=\"onRedo()\">Redo</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "history",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { useState } from 'react';\nimport { Center, Signature } from '@htmlplus/react';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo);\n    setCanRedo(window.signature2.canRedo);\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <Center>\n        <Signature\n          id=\"signature2\"\n          backgroundColor=\"lightgray\"\n          onEnd={() => onPlusEnd()}\n        ></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </Center>\n    </>\n  );\n};\n\nconst SignatureHistoryExample = () => {\n  return (\n    <div className=\"ex-signature-history\">\n      <SignatureHistory />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureHistoryExample;"
+    }
+  },
+  {
+    "key": "width",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    min-width=\"1.5\"\n    max-width=\"4.5\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    min-width=\"1.5\"\n    max-width=\"4.5\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureWidth = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        minWidth=\"1.5\"\n        maxWidth=\"4.5\"\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureWidth;\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureWidth = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        min-width=\"1.5\"\n        max-width=\"4.5\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureWidth;\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    min-width=\"1.5\"\n    max-width=\"4.5\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
+      "template": "<plus-center>\n  <plus-signature\n    background-color=\"lightgray\"\n    min-width=\"1.5\"\n    max-width=\"4.5\"\n  ></plus-signature>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "width",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureWidth = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        minWidth=\"1.5\"\n        maxWidth=\"4.5\"\n      ></Signature>\n    </Center>\n  );\n};\n\nconst SignatureWidthExample = () => {\n  return (\n    <div className=\"ex-signature-width\">\n      <SignatureWidth />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureWidthExample;"
+    }
+  },
+  {
     "key": "color",
     "category": "angular",
     "component": "spinner",

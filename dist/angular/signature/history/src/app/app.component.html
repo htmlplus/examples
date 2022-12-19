@@ -1,0 +1,13 @@
+<plus-center>
+  <plus-signature
+    id="signature2"
+    background-color="lightgray"
+    (plus-end)="onPlusEnd()"
+  ></plus-signature>
+</plus-center>
+<br />
+<plus-center>
+  <button [disabled]="!canUndo" (click)="onUndo()">Undo</button>
+  &nbsp; &nbsp;
+  <button [disabled]="!canRedo" (click)="onRedo()">Redo</button>
+</plus-center>

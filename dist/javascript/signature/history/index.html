@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signature | History</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <plus-center>
+      <plus-signature
+        id="signature2"
+        background-color="lightgray"
+      ></plus-signature>
+    </plus-center>
+    <br />
+    <plus-center>
+      <button id="button1" disabled>Undo</button>
+      &nbsp; &nbsp;
+      <button id="button2" disabled>Redo</button>
+    </plus-center>
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/center.js';
+      import 'https://unpkg.com/@htmlplus/core/signature.js';
+
+      const sync = () => {
+        button1.disabled = !signature2.canUndo;
+        button2.disabled = !signature2.canRedo;
+      };
+      button1.addEventListener('click', () => {
+        signature2.undo();
+        sync();
+      });
+      button2.addEventListener('click', () => {
+        signature2.redo();
+        sync();
+      });
+      signature2.addEventListener('plus-end', () => {
+        sync();
+      });
+    </script>
+  </body>
+</html>
