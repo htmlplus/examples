@@ -10,8 +10,8 @@ export class AppComponent {
   canUndo: boolean = false;
   canRedo: boolean = false;
   sync() {
-    this.canUndo = window.signature2.canUndo;
-    this.canRedo = window.signature2.canRedo;
+    this.canUndo = window.signature2.canUndo();
+    this.canRedo = window.signature2.canRedo();
   }
   onUndo() {
     window.signature2.undo();

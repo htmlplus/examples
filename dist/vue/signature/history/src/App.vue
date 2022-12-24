@@ -21,8 +21,8 @@
   const canUndo = ref(false);
   const canRedo = ref(false);
   function sync() {
-    canUndo.value = window.signature2.canUndo;
-    canRedo.value = window.signature2.canRedo;
+    canUndo.value = window.signature2.canUndo();
+    canRedo.value = window.signature2.canRedo();
   }
   function onUndo() {
     window.signature2.undo();

@@ -5,8 +5,8 @@ const SignatureHistory = () => {
   const [canUndo, setCanUndo] = useState(false);
   const [canRedo, setCanRedo] = useState(false);
   const sync = () => {
-    setCanUndo(window.signature2.canUndo);
-    setCanRedo(window.signature2.canRedo);
+    setCanUndo(window.signature2.canUndo());
+    setCanRedo(window.signature2.canRedo());
   };
   const onUndo = () => {
     window.signature2.undo();

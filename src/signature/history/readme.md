@@ -10,8 +10,8 @@ class SignatureHistory {
   canRedo: boolean = false;
 
   sync() {
-    this.canUndo = window.signature2.canUndo;
-    this.canRedo = window.signature2.canRedo;
+    this.canUndo = window.signature2.canUndo();
+    this.canRedo = window.signature2.canRedo();
   }
 
   onUndo() {
@@ -64,8 +64,8 @@ class SignatureHistory {
 
 ```js [javascript:script]
 const sync = () => {
-  button1.disabled = !signature2.canUndo;
-  button2.disabled = !signature2.canRedo;
+  button1.disabled = !signature2.canUndo();
+  button2.disabled = !signature2.canRedo();
 }
 button1.addEventListener('click', () => {
   signature2.undo();

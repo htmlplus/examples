@@ -4,8 +4,8 @@
   let canUndo = false;
   let canRedo = false;
   function sync() {
-    canUndo = window.signature2.canUndo;
-    canRedo = window.signature2.canRedo;
+    canUndo = window.signature2.canUndo();
+    canRedo = window.signature2.canRedo();
   }
   function onUndo() {
     window.signature2.undo();
