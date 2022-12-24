@@ -10,7 +10,17 @@ import {
 import fs from 'fs';
 import path from 'path';
 
-import { findClassDeclaration, format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+import {
+  findClassDeclaration,
+  format,
+  formatFile,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameCustomElementName,
+  toFile
+} from '../../utils.js';
 
 const IGNORES = [
   'ArrayExpression',
@@ -104,13 +114,6 @@ export const svelte = (options) => {
             classDeclaration.node.body.body.push(property);
           }
         },
-        MemberExpression(path) {
-          const { object, property } = path.node;
-
-          if (object.type != 'ThisExpression') return;
-
-          path.replaceWith(property);
-        },
         Program(path) {
           JSON.parse(JSON.stringify(context.customElementNames))
             .reverse()
@@ -169,21 +172,6 @@ export const svelte = (options) => {
             path.node.value = t.stringLiteral(`{${newValue}}`);
           }
         },
-        JSXElement(path) {
-          const { openingElement, closingElement } = path.node;
-
-          const name = openingElement.name.name;
-
-          if (!/-/g.test(name)) return;
-
-          const newName = options?.componentNameConvertor?.(name) || name;
-
-          openingElement.name.name = newName;
-
-          if (!closingElement) return;
-
-          closingElement.name.name = newName;
-        },
         JSXExpressionContainer: {
           exit(path) {
             const { expression } = path.node;
@@ -202,13 +190,6 @@ export const svelte = (options) => {
 
             path.replaceWithSourceString(`[[[${print(expression)}]]]`);
           }
-        },
-        MemberExpression(path) {
-          const { object, property } = path.node;
-
-          if (object.type != 'ThisExpression') return;
-
-          path.replaceWith(property);
         }
       }
     };
@@ -225,6 +206,8 @@ export const svelte = (options) => {
       const ast = t.cloneNode(context.fileAST, true);
 
       visitor(ast, visitors.script);
+
+      removeThis(ast);
 
       removeUnusedImport(ast);
 
@@ -246,7 +229,13 @@ export const svelte = (options) => {
     const template = (() => {
       const ast = t.cloneNode(toFile(context.classRender), true);
 
+      removeThis(ast);
+
       visitor(ast, visitors.template);
+
+      renameCustomElementName(ast, (name) => {
+        return options?.componentNameConvertor?.(name);
+      });
 
       const content = print(ast)
         ?.trim()

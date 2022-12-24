@@ -10,7 +10,17 @@ import {
 import fs from 'fs';
 import path from 'path';
 
-import { findClassDeclaration, format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+import {
+  findClassDeclaration,
+  format,
+  formatFile,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameCustomElementName,
+  toFile
+} from '../../utils.js';
 
 const IGNORES = [
   'ArrayExpression',
@@ -169,21 +179,6 @@ export const vue = (options) => {
             if (!name.name.match(/@|:/)) name.name = `:${name.name}`;
           }
         },
-        JSXElement(path) {
-          const { openingElement, closingElement } = path.node;
-
-          const name = openingElement.name.name;
-
-          if (!/-/g.test(name)) return;
-
-          const newName = options?.componentNameConvertor?.(name) || name;
-
-          openingElement.name.name = newName;
-
-          if (!closingElement) return;
-
-          closingElement.name.name = newName;
-        },
         JSXExpressionContainer: {
           exit(path) {
             const { expression } = path.node;
@@ -202,11 +197,6 @@ export const vue = (options) => {
 
             path.replaceWithSourceString(`[[[${print(expression)}]]]`);
           }
-        },
-        MemberExpression(path) {
-          const { object, property } = path.node;
-          if (object.type != 'ThisExpression') return;
-          path.replaceWith(property);
         }
       }
     };
@@ -244,7 +234,13 @@ export const vue = (options) => {
     const template = (() => {
       const ast = t.cloneNode(toFile(context.classRender), true);
 
+      removeThis(ast);
+
       visitor(ast, visitors.template);
+
+      renameCustomElementName(ast, (name) => {
+        return options?.componentNameConvertor?.(name);
+      });
 
       const content = print(ast)
         ?.trim()

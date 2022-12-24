@@ -3,7 +3,16 @@ import { __dirname, print, renderTemplate, visitor } from '@htmlplus/element/com
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent, toFile } from '../../utils.js';
+import {
+  format,
+  formatFile,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameCustomElementName,
+  toFile
+} from '../../utils.js';
 
 const getValue = (path) => {
   switch (path.node.expression.type) {
@@ -65,21 +74,6 @@ export const javascript = (options) => {
 
           if (isEvent(name.name)) path.remove();
         },
-        JSXElement(path) {
-          const { openingElement, closingElement } = path.node;
-
-          const name = openingElement.name.name;
-
-          if (!/-/g.test(name)) return;
-
-          const newName = options?.componentNameConvertor?.(name) || name;
-
-          openingElement.name.name = newName;
-
-          if (!closingElement) return;
-
-          closingElement.name.name = newName;
-        },
         JSXExpressionContainer(path) {
           const value = getValue(path);
 
@@ -106,11 +100,6 @@ export const javascript = (options) => {
                 break;
             }
           }
-        },
-        MemberExpression(path) {
-          const { object, property } = path.node;
-          if (object.type != 'ThisExpression') return;
-          path.replaceWith(property);
         }
       }
     };
@@ -163,6 +152,12 @@ export const javascript = (options) => {
       const ast = t.cloneNode(toFile(context.classRender), true);
 
       visitor(ast, visitors.template);
+
+      removeThis(ast);
+
+      renameCustomElementName(ast, (name) => {
+        return options?.componentNameConvertor?.(name);
+      });
 
       const content = print(ast)?.trim();
 
