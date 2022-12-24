@@ -7,11 +7,20 @@ import {
   renderTemplate,
   visitor
 } from '@htmlplus/element/compiler/utils/index.js';
-import { camelCase, paramCase, pascalCase } from 'change-case';
+import { pascalCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent, styleToObject } from '../../utils.js';
+import {
+  format,
+  formatFile,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameJSXAttributeName,
+  styleToObject
+} from '../../utils.js';
 
 export const reactExperimental = (options) => {
   const name = 'react@experimental';
@@ -81,24 +90,6 @@ export const reactExperimental = (options) => {
         Decorator(path) {
           path.remove();
         },
-        JSXAttribute(path) {
-          const { name, value } = path.node;
-
-          if (isEvent(name.name)) {
-            name.name = options?.eventNameConvertor?.(name.name) || name.name;
-            return;
-          }
-
-          if (name.name === 'class') name.name = 'className';
-
-          // TODO
-          // if (/data[A-Z]/g.test(name.name)) name.name = paramCase(name.name);
-        },
-        MemberExpression(path) {
-          const { property, object } = path.node;
-          if (object.type != 'ThisExpression') return;
-          path.replaceWith(property);
-        },
         Program(path) {
           JSON.parse(JSON.stringify(context.customElementNames))
             .reverse()
@@ -124,7 +115,14 @@ export const reactExperimental = (options) => {
 
       styleToObject(ast);
 
+      removeThis(ast);
+
       removeUnusedImport(ast);
+
+      renameJSXAttributeName(ast, (name) => {
+        if (name == 'class') return 'className';
+        if (isEvent(name)) return options?.eventNameConvertor?.(name);
+      });
 
       const content = print(ast);
 

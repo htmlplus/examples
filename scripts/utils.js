@@ -50,6 +50,45 @@ export const isEvent = (input) => {
   return !!input?.match(/on[A-Z]\w+/g);
 };
 
+export const removeThis = (ast) => {
+  visitor(ast, {
+    MemberExpression(path) {
+      const { property, object } = path.node;
+      if (object.type != 'ThisExpression') return;
+      path.replaceWith(property);
+    }
+  });
+};
+
+export const renameCustomElementName = (ast, fn) => {
+  visitor(ast, {
+    JSXElement(path) {
+      const { openingElement, closingElement } = path.node;
+
+      const name = openingElement.name.name;
+
+      if (!/-/g.test(name)) return;
+
+      const newName = fn?.(name) || name;
+
+      openingElement.name.name = newName;
+
+      if (!closingElement) return;
+
+      closingElement.name.name = newName;
+    }
+  });
+};
+
+export const renameJSXAttributeName = (ast, fn) => {
+  visitor(ast, {
+    JSXAttribute(path) {
+      const { name } = path.node;
+      name.name = fn?.(name.name) || name.name;
+    }
+  });
+};
+
 export const scoped = (styles, className) => {
   try {
     var classLen = className.length,
@@ -83,10 +122,6 @@ export const scoped = (styles, className) => {
   } catch {}
 };
 
-export const toFile = (node) => {
-  return t.file(t.program([t.classDeclaration(t.identifier('Test'), null, t.classBody([node]))], [], 'module'));
-};
-
 export const styleToObject = (ast) => {
   visitor(ast, {
     JSXAttribute(path) {
@@ -114,4 +149,8 @@ export const styleToObject = (ast) => {
       );
     }
   });
+};
+
+export const toFile = (node) => {
+  return t.file(t.program([t.classDeclaration(t.identifier('Test'), null, t.classBody([node]))], [], 'module'));
 };

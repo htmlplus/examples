@@ -11,7 +11,17 @@ import { camelCase, paramCase, pascalCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent, styleToObject } from '../../utils.js';
+import {
+  format,
+  formatFile,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameCustomElementName,
+  renameJSXAttributeName,
+  styleToObject
+} from '../../utils.js';
 
 export const react = (options) => {
   const name = 'react';
@@ -81,41 +91,6 @@ export const react = (options) => {
         Decorator(path) {
           path.remove();
         },
-        JSXAttribute(path) {
-          const { name } = path.node;
-
-          if (isEvent(name.name)) {
-            name.name = options?.eventNameConvertor?.(name.name) || name.name;
-            return;
-          }
-
-          name.name = camelCase(name.name);
-
-          if (name.name === 'class') name.name = 'className';
-
-          // TODO
-          if (/data[A-Z]/g.test(name.name)) name.name = paramCase(name.name);
-        },
-        JSXElement(path) {
-          const { openingElement, closingElement } = path.node;
-
-          const name = openingElement.name.name;
-
-          if (!/-/g.test(name)) return;
-
-          const newName = options?.componentNameConvertor?.(name) || name;
-
-          openingElement.name.name = newName;
-
-          if (!closingElement) return;
-
-          closingElement.name.name = newName;
-        },
-        MemberExpression(path) {
-          const { property, object } = path.node;
-          if (object.type != 'ThisExpression') return;
-          path.replaceWith(property);
-        },
         Program(path) {
           context.customElementNames.forEach((name) => {
             const newName = options?.componentNameConvertor?.(name) || name;
@@ -145,7 +120,24 @@ export const react = (options) => {
 
       styleToObject(ast);
 
+      removeThis(ast);
+
       removeUnusedImport(ast);
+
+      renameCustomElementName(ast, (name) => {
+        return options?.componentNameConvertor?.(name);
+      });
+
+      renameJSXAttributeName(ast, (name) => {
+        if (name == 'class') return 'className';
+
+        if (isEvent(name)) return options?.eventNameConvertor?.(name);
+
+        // TODO
+        if (/data[A-Z]/g.test(camelCase(name))) return paramCase(name);
+
+        return camelCase(name);
+      });
 
       const content = print(ast);
 
