@@ -6982,7 +6982,7 @@
     "category": "react",
     "component": "signature",
     "detail": {
-      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureDimensions;\n"
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style={{\n          width: '480px',\n          height: '320px'\n        }}\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureDimensions;\n"
     }
   },
   {
@@ -6990,7 +6990,7 @@
     "category": "react@experimental",
     "component": "signature",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDimensions = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDimensions;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDimensions = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        style={{\n          width: '480px',\n          height: '320px'\n        }}\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDimensions;\n"
     }
   },
   {
@@ -7016,7 +7016,7 @@
     "category": "preview",
     "component": "signature",
     "detail": {
-      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style=\"width: 480px; height: 320px;\"\n      ></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDimensionsExample = () => {\n  return (\n    <div className=\"ex-signature-dimensions\">\n      <SignatureDimensions />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDimensionsExample;"
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style={{\n          width: '480px',\n          height: '320px'\n        }}\n      ></Signature>\n    </Center>\n  );\n};\n\nconst SignatureDimensionsExample = () => {\n  return (\n    <div className=\"ex-signature-dimensions\">\n      <SignatureDimensions />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SignatureDimensionsExample;"
     }
   },
   {

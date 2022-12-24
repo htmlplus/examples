@@ -4,7 +4,10 @@ const SignatureDimensions = () => {
     <Center>
       <Signature
         backgroundColor="lightgray"
-        style="width: 480px; height: 320px;"
+        style={{
+          width: '480px',
+          height: '320px'
+        }}
       ></Signature>
     </Center>
   );

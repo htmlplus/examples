@@ -82,7 +82,28 @@ export const react = (options) => {
           path.remove();
         },
         JSXAttribute(path) {
-          const { name } = path.node;
+          const { name, value } = path.node;
+
+          if (name.name == 'style' && value.type == 'StringLiteral') {
+            path.replaceWith(
+              t.jsxAttribute(
+                name,
+                t.jsxExpressionContainer(
+                  t.objectExpression(
+                    value.value
+                      .split(';')
+                      .filter((section) => section.trim())
+                      .map((section) => {
+                        const [key, value] = section.split(':').map((section) => section.trim());
+                        return t.objectProperty(t.identifier(key), t.stringLiteral(value));
+                      })
+                  )
+                )
+              )
+            );
+            path.skip();
+            return;
+          }
 
           if (isEvent(name.name)) {
             name.name = options?.eventNameConvertor?.(name.name) || name.name;
