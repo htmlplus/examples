@@ -1,4 +1,5 @@
 import t from '@babel/types';
+import { visitor } from '@htmlplus/element/compiler/utils/index.js';
 import { capitalCase } from 'change-case';
 import fs from 'fs';
 import prettier from 'prettier';
@@ -84,4 +85,33 @@ export const scoped = (styles, className) => {
 
 export const toFile = (node) => {
   return t.file(t.program([t.classDeclaration(t.identifier('Test'), null, t.classBody([node]))], [], 'module'));
+};
+
+export const styleToObject = (ast) => {
+  visitor(ast, {
+    JSXAttribute(path) {
+      const { name, value } = path.node;
+
+      if (name.name != 'style') return;
+
+      if (value.type != 'StringLiteral') return;
+
+      path.replaceWith(
+        t.jsxAttribute(
+          name,
+          t.jsxExpressionContainer(
+            t.objectExpression(
+              value.value
+                .split(';')
+                .filter((section) => section.trim())
+                .map((section) => {
+                  const [key, value] = section.split(':').map((section) => section.trim());
+                  return t.objectProperty(t.identifier(key), t.stringLiteral(value));
+                })
+            )
+          )
+        )
+      );
+    }
+  });
 };

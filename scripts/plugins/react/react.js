@@ -11,7 +11,7 @@ import { camelCase, paramCase, pascalCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 
-import { format, formatFile, getSnippet, getTitle, isEvent } from '../../utils.js';
+import { format, formatFile, getSnippet, getTitle, isEvent, styleToObject } from '../../utils.js';
 
 export const react = (options) => {
   const name = 'react';
@@ -82,28 +82,7 @@ export const react = (options) => {
           path.remove();
         },
         JSXAttribute(path) {
-          const { name, value } = path.node;
-
-          if (name.name == 'style' && value.type == 'StringLiteral') {
-            path.replaceWith(
-              t.jsxAttribute(
-                name,
-                t.jsxExpressionContainer(
-                  t.objectExpression(
-                    value.value
-                      .split(';')
-                      .filter((section) => section.trim())
-                      .map((section) => {
-                        const [key, value] = section.split(':').map((section) => section.trim());
-                        return t.objectProperty(t.identifier(key), t.stringLiteral(value));
-                      })
-                  )
-                )
-              )
-            );
-            path.skip();
-            return;
-          }
+          const { name } = path.node;
 
           if (isEvent(name.name)) {
             name.name = options?.eventNameConvertor?.(name.name) || name.name;
@@ -163,6 +142,8 @@ export const react = (options) => {
       const ast = t.cloneNode(context.fileAST, true);
 
       visitor(ast, visitors.script);
+
+      styleToObject(ast);
 
       removeUnusedImport(ast);
 
