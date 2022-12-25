@@ -19,20 +19,18 @@ export const preview = () => {
       ?.find((output) => output.name == 'prepare')
       ?.output?.some((snippet) => snippet.options?.dock);
 
-    script = [
-      script.split('export default ')[0].trim(),
-      '',
-      `const ${context.className}Example = () => {`,
-      '  return (',
-      `    <div className="${classNamePrefix}${dock ? ' dock' : ''}">`,
-      `      <${context.className} />`,
-      `      <style>{\`${style}\`}</style>`,
-      '    </div>',
-      '  )',
-      '};',
-      '',
-      `export default ${context.className}Example;`
-    ].join('\n');
+    script = script.split('export default ')[0].trim();
+    script += '\n\n';
+    script += `const ${context.className}Example = () => {\n`;
+    script += '  return (\n';
+    script += `    <div className="${classNamePrefix}${dock ? ' dock' : ''}">\n`;
+    script += `      <${context.className} />\n`;
+    script += style ? `      <style>{\`${style}\`}</style>\n` : '';
+    script += '    </div>\n';
+    script += '  )\n';
+    script += '};\n';
+    script += '\n';
+    script += `export default ${context.className}Example;\n`;
 
     const config = getSnippet(context, 'config')?.content;
 
