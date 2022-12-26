@@ -6840,6 +6840,72 @@
     }
   },
   {
+    "key": "clear-on-resize",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature\n  background-color=\"lightgray\"\n  clear-on-resize\n  resizable\n></plus-signature>\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature\n  background-color=\"lightgray\"\n  clear-on-resize\n  resizable\n></plus-signature>\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Signature } from '@htmlplus/react';\nconst SignatureClearOnResize = () => {\n  return (\n    <Signature backgroundColor=\"lightgray\" clearOnResize resizable></Signature>\n  );\n};\nexport default SignatureClearOnResize;\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\nconst SignatureClearOnResize = () => {\n  return (\n    <plus-signature\n      background-color=\"lightgray\"\n      clear-on-resize\n      resizable\n    ></plus-signature>\n  );\n};\nexport default SignatureClearOnResize;\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature\n  background-color=\"lightgray\"\n  clear-on-resize\n  resizable\n></plus-signature>\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature\n  background-color=\"lightgray\"\n  clear-on-resize\n  resizable\n></plus-signature>\n"
+    }
+  },
+  {
+    "key": "clear-on-resize",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Signature } from '@htmlplus/react';\nconst SignatureClearOnResize = () => {\n  return (\n    <Signature backgroundColor=\"lightgray\" clearOnResize resizable></Signature>\n  );\n};\n\nconst SignatureClearOnResizeExample = () => {\n  return (\n    <div className=\"ex-signature-clear-on-resize dock\">\n      <SignatureClearOnResize />\n      <style>{`.ex-signature-clear-on-resize plus-signature {  height: 15rem;  width: 100%;}`}</style>\n    </div>\n  )\n};\n\nexport default SignatureClearOnResizeExample;\n"
+    }
+  },
+  {
     "key": "color",
     "category": "angular",
     "component": "signature",
@@ -7197,6 +7263,72 @@
     "component": "signature",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Center, Signature } from '@htmlplus/react';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo());\n    setCanRedo(window.signature2.canRedo());\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <Center>\n        <Signature\n          id=\"signature2\"\n          backgroundColor=\"lightgray\"\n          onEnd={() => onPlusEnd()}\n        ></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </Center>\n    </>\n  );\n};\n\nconst SignatureHistoryExample = () => {\n  return (\n    <div className=\"ex-signature-history\">\n      <SignatureHistory />\n    </div>\n  )\n};\n\nexport default SignatureHistoryExample;\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Signature } from '@htmlplus/react';\nconst SignatureResizable = () => {\n  return <Signature backgroundColor=\"lightgray\" resizable></Signature>;\n};\nexport default SignatureResizable;\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\nconst SignatureResizable = () => {\n  return (\n    <plus-signature background-color=\"lightgray\" resizable></plus-signature>\n  );\n};\nexport default SignatureResizable;\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/signature.js';\n",
+      "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
+      "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
+    }
+  },
+  {
+    "key": "resizable",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Signature } from '@htmlplus/react';\nconst SignatureResizable = () => {\n  return <Signature backgroundColor=\"lightgray\" resizable></Signature>;\n};\n\nconst SignatureResizableExample = () => {\n  return (\n    <div className=\"ex-signature-resizable dock\">\n      <SignatureResizable />\n      <style>{`.ex-signature-resizable plus-signature {  height: 15rem;  width: 100%;}`}</style>\n    </div>\n  )\n};\n\nexport default SignatureResizableExample;\n"
     }
   },
   {
