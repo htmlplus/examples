@@ -7332,6 +7332,66 @@
     }
   },
   {
+    "key": "save",
+    "category": "angular",
+    "component": "signature",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  save(background) {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button (click)=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "save",
+    "category": "javascript",
+    "component": "signature",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nbutton3.addEventListener('click', () => save(true));\r\nbutton4.addEventListener('click', () => save(false));",
+      "template": "<plus-center>\r\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button3\">\r\n    Save With Background\r\n  </button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"button4\">\r\n    Save Without Background\r\n  </button>\r\n</plus-center>"
+    }
+  },
+  {
+    "key": "save",
+    "category": "react",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+    }
+  },
+  {
+    "key": "save",
+    "category": "react@experimental",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+    }
+  },
+  {
+    "key": "save",
+    "category": "svelte",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => save(true)}\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button on:click=\"{() => save(false)}\">Save Without Background</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "save",
+    "category": "vue",
+    "component": "signature",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button @click=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "save",
+    "category": "preview",
+    "component": "signature",
+    "detail": {
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\n\nconst SignatureSaveExample = () => {\n  return (\n    <div className=\"ex-signature-save\">\n      <SignatureSave />\n    </div>\n  )\n};\n\nexport default SignatureSaveExample;\n"
+    }
+  },
+  {
     "key": "width",
     "category": "angular",
     "component": "signature",
