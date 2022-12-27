@@ -4,6 +4,7 @@ plus-card {
 }
 .placeholder {
   background-color: lightgray;
+  border-radius: 4px;
 }
 ```
 

@@ -23,5 +23,6 @@
   }
   .placeholder {
     background-color: lightgray;
+    border-radius: 4px;
   }
 </style>

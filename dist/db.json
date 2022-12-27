@@ -605,7 +605,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n",
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
       "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
     }
   },
@@ -615,7 +615,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/aspect-ratio.js';\nimport 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n",
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
       "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
     }
   },
@@ -625,7 +625,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio, Card, Center } from '@htmlplus/react';\nconst AspectRatioCard = () => {\n  return (\n    <Center>\n      <Card outlined>\n        <Card.Body>\n          <AspectRatio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </AspectRatio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </Card.Body>\n      </Card>\n    </Center>\n  );\n};\nexport default AspectRatioCard;\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n"
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n"
     }
   },
   {
@@ -634,7 +634,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nconst AspectRatioCard = () => {\n  return (\n    <plus-center>\n      <plus-card outlined>\n        <plus-card-body>\n          <plus-aspect-ratio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </plus-aspect-ratio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </plus-card-body>\n      </plus-card>\n    </plus-center>\n  );\n};\nexport default AspectRatioCard;\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n"
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n"
     }
   },
   {
@@ -643,7 +643,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n",
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
       "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
     }
   },
@@ -653,7 +653,7 @@
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\n",
-      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n}\n",
+      "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
       "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
     }
   },
@@ -662,7 +662,7 @@
     "category": "preview",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import { AspectRatio, Card, Center } from '@htmlplus/react';\nconst AspectRatioCard = () => {\n  return (\n    <Center>\n      <Card outlined>\n        <Card.Body>\n          <AspectRatio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </AspectRatio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </Card.Body>\n      </Card>\n    </Center>\n  );\n};\n\nconst AspectRatioCardExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-card\">\n      <AspectRatioCard />\n      <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;}`}</style>\n    </div>\n  )\n};\n\nexport default AspectRatioCardExample;\n"
+      "script": "import { AspectRatio, Card, Center } from '@htmlplus/react';\nconst AspectRatioCard = () => {\n  return (\n    <Center>\n      <Card outlined>\n        <Card.Body>\n          <AspectRatio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </AspectRatio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </Card.Body>\n      </Card>\n    </Center>\n  );\n};\n\nconst AspectRatioCardExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-card\">\n      <AspectRatioCard />\n      <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;  border-radius: 4px;}`}</style>\n    </div>\n  )\n};\n\nexport default AspectRatioCardExample;\n"
     }
   },
   {
