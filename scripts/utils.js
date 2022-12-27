@@ -141,7 +141,7 @@ export const styleToObject = (ast) => {
                 .filter((section) => section.trim())
                 .map((section) => {
                   const [key, value] = section.split(':').map((section) => section.trim());
-                  return t.objectProperty(t.identifier(key), t.stringLiteral(value));
+                  return t.objectProperty(t.stringLiteral(key), t.stringLiteral(value));
                 })
             )
           )
