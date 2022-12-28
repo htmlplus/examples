@@ -33,8 +33,12 @@ export const formatFile = (file, options = {}) => {
   fs.writeFileSync(file, format(fs.readFileSync(file, 'utf8'), options), 'utf8');
 };
 
-export const getSnippet = (context, key) => {
-  return context.outputs?.find((output) => output.name == 'prepare')?.output?.find((snippet) => snippet.key == key);
+export const getOutput = (key, context) => {
+  return context.outputs?.find((output) => output.key == key)?.output;
+};
+
+export const getSnippet = (key, context) => {
+  return getOutput('prepare', context)?.find((snippet) => snippet.key == key)?.content;
 };
 
 export const getTitle = (context) => {
@@ -48,6 +52,15 @@ export const getTitle = (context) => {
 
 export const isEvent = (input) => {
   return !!input?.match(/on[A-Z]\w+/g);
+};
+
+export const setOutput = (key, context, output) => {
+  context.outputs ??= [];
+  context.outputs = context.outputs
+    .filter((output) => {
+      return output.key != key;
+    })
+    .concat({ key, output });
 };
 
 export const removeThis = (ast) => {

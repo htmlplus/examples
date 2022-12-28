@@ -20,12 +20,13 @@ import {
   removeThis,
   renameCustomElementName,
   renameJSXAttributeName,
+  setOutput,
   styleToObject
 } from '../../utils.js';
 
 export const react = (options) => {
   const name = 'react';
-  const next = (context) => {
+  const run = (context) => {
     const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
@@ -106,7 +107,7 @@ export const react = (options) => {
     };
 
     const config = (() => {
-      const content = getSnippet(context, 'config')?.content;
+      const content = getSnippet('config', context);
 
       if (!content) patterns.push('!templates/src/config.js.*');
 
@@ -147,7 +148,7 @@ export const react = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet(context, 'style')?.content;
+      const content = getSnippet('style', context);
 
       if (!content) return;
 
@@ -167,14 +168,11 @@ export const react = (options) => {
 
     formatFile(path.join(destination, 'src', 'App.js'), { parser: 'babel' });
 
-    return {
+    setOutput(name, context, {
       config,
       script,
       style
-    };
+    });
   };
-  return {
-    name,
-    next
-  };
+  return { name, run };
 };

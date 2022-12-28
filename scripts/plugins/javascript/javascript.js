@@ -11,6 +11,7 @@ import {
   isEvent,
   removeThis,
   renameCustomElementName,
+  setOutput,
   toFile
 } from '../../utils.js';
 
@@ -31,7 +32,7 @@ const getValue = (path) => {
 
 export const javascript = (options) => {
   const name = 'javascript';
-  const next = (context) => {
+  const run = (context) => {
     const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
@@ -105,11 +106,11 @@ export const javascript = (options) => {
     };
 
     const config = (() => {
-      return getSnippet(context, 'config')?.content;
+      return getSnippet('config', context);
     })();
 
     const script = (() => {
-      let content = getSnippet(context, 'javascript:script')?.content || '';
+      let content = getSnippet('javascript:script', context) || '';
 
       if (content && context.customElementNames?.length) {
         content = '\n' + content;
@@ -137,7 +138,7 @@ export const javascript = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet(context, 'style')?.content;
+      const content = getSnippet('style', context);
 
       if (!content) return;
 
@@ -145,9 +146,9 @@ export const javascript = (options) => {
     })();
 
     const template = (() => {
-      const dedicated = getSnippet(context, 'javascript:template');
+      const dedicated = getSnippet('javascript:template', context);
 
-      if (dedicated) return dedicated.content;
+      if (dedicated) return dedicated;
 
       const ast = t.cloneNode(toFile(context.classRender), true);
 
@@ -178,15 +179,12 @@ export const javascript = (options) => {
 
     formatFile(path.join(destination, 'index.html'), { parser: 'html', embeddedLanguageFormatting: 'auto' });
 
-    return {
+    setOutput(name, context, {
       config,
       script,
       style,
       template
-    };
+    });
   };
-  return {
-    name,
-    next
-  };
+  return { name, run };
 };

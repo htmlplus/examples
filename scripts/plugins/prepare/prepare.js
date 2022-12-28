@@ -1,8 +1,10 @@
 import { pascalCase } from 'change-case';
 
+import { setOutput } from '../../utils.js';
+
 export const prepare = () => {
   const name = 'prepare';
-  const next = (context) => {
+  const run = (context) => {
     const regex = /```\w+\s\[\w+(:\w+)?\]\s[\S\s]*?```/g;
 
     const snippets = [];
@@ -65,10 +67,7 @@ export const prepare = () => {
 
     if (script) context.fileContent = script.content;
 
-    return snippets;
+    setOutput(name, context, snippets);
   };
-  return {
-    name,
-    next
-  };
+  return { name, run };
 };

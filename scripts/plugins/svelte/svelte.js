@@ -19,6 +19,7 @@ import {
   isEvent,
   removeThis,
   renameCustomElementName,
+  setOutput,
   toFile
 } from '../../utils.js';
 
@@ -33,7 +34,7 @@ const IGNORES = [
 
 export const svelte = (options) => {
   const name = 'svelte';
-  const next = (context) => {
+  const run = (context) => {
     const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
@@ -195,7 +196,7 @@ export const svelte = (options) => {
     };
 
     const config = (() => {
-      const content = getSnippet(context, 'config')?.content;
+      const content = getSnippet('config', context);
 
       if (!content) patterns.push('!templates/config.js.*');
 
@@ -219,7 +220,7 @@ export const svelte = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet(context, 'style')?.content;
+      const content = getSnippet('style', context);
 
       if (!content) return;
 
@@ -261,15 +262,12 @@ export const svelte = (options) => {
 
     formatFile(path.join(destination, 'App.svelte'), { parser: 'html' });
 
-    return {
+    setOutput(name, context, {
       config,
       script,
       style,
       template
-    };
+    });
   };
-  return {
-    name,
-    next
-  };
+  return { name, run };
 };

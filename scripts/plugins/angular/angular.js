@@ -10,7 +10,16 @@ import {
 import fs from 'fs';
 import path from 'path';
 
-import { format, getSnippet, getTitle, isEvent, removeThis, renameCustomElementName, toFile } from '../../utils.js';
+import {
+  format,
+  getSnippet,
+  getTitle,
+  isEvent,
+  removeThis,
+  renameCustomElementName,
+  setOutput,
+  toFile
+} from '../../utils.js';
 
 const IGNORES = [
   'ArrayExpression',
@@ -23,7 +32,7 @@ const IGNORES = [
 
 export const angular = (options) => {
   const name = 'angular';
-  const next = (context) => {
+  const run = (context) => {
     const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
@@ -178,7 +187,7 @@ export const angular = (options) => {
     };
 
     const config = (() => {
-      const content = getSnippet(context, 'config')?.content;
+      const content = getSnippet('config', context);
 
       if (!content) patterns.push('!templates/src/config.ts.*');
 
@@ -200,7 +209,7 @@ export const angular = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet(context, 'style')?.content;
+      const content = getSnippet('style', context);
 
       if (!content) return;
 
@@ -238,15 +247,12 @@ export const angular = (options) => {
 
     renderTemplate(patterns, destination, { cwd })(model);
 
-    return {
+    setOutput(name, context, {
       config,
       script,
       style,
       template
-    };
+    });
   };
-  return {
-    name,
-    next
-  };
+  return { name, run };
 };

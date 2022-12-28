@@ -19,6 +19,7 @@ import {
   isEvent,
   removeThis,
   renameCustomElementName,
+  setOutput,
   toFile
 } from '../../utils.js';
 
@@ -33,7 +34,7 @@ const IGNORES = [
 
 export const vue = (options) => {
   const name = 'vue';
-  const next = (context) => {
+  const run = (context) => {
     const cwd = __dirname(import.meta.url);
 
     const destination = options?.destination?.(context) || path.join(context.directoryPath, name);
@@ -202,7 +203,7 @@ export const vue = (options) => {
     };
 
     const config = (() => {
-      const content = getSnippet(context, 'config')?.content;
+      const content = getSnippet('config', context);
 
       if (!content) patterns.push('!templates/src/config.js.*');
 
@@ -224,7 +225,7 @@ export const vue = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet(context, 'style')?.content;
+      const content = getSnippet('style', context);
 
       if (!content) return;
 
@@ -264,16 +265,12 @@ export const vue = (options) => {
 
     formatFile(path.join(destination, 'src', 'App.vue'), { parser: 'vue' });
 
-    return {
+    setOutput(name, context, {
       config,
       script,
       style,
       template
-    };
+    });
   };
-  return {
-    name,
-    options,
-    next
-  };
+  return { name, run };
 };
