@@ -4,33 +4,15 @@
     <title>Counter | Default</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .center {
-        text-align: center;
-      }
-      button {
-        margin: 1rem 0.5rem;
-      }
-    </style>
   </head>
   <body>
-    <div class="center">
-      <plus-counter
-        id="counter1"
-        duration="2000"
-        from="10000"
-        to="50000"
-        separator=","
-      ></plus-counter>
-      <br />
-      <button id="button1">Start</button>
-    </div>
-    <script type="module">
-      import 'https://unpkg.com/@htmlplus/core/counter.js';
+    <plus-center>
+      <plus-counter to="1000" play></plus-counter>
+    </plus-center>
 
-      button1.addEventListener('click', () => {
-        counter1.play = true;
-      });
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/center.js';
+      import 'https://unpkg.com/@htmlplus/core/counter.js';
     </script>
   </body>
 </html>

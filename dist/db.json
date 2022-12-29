@@ -2946,13 +2946,72 @@
     }
   },
   {
+    "key": "decimal",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDecimal;\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDecimal;\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimal",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-decimal\">\n      <CounterDecimal />\n    </div>\n  )\n};\n\nexport default CounterDecimalExample;\n"
+    }
+  },
+  {
     "key": "default",
     "category": "angular",
     "component": "counter",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  play = false;\n}\n",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    [play]=\"play\"\n    (plus-complete)=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button (click)=\"play = true\">Start</button>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2960,9 +3019,8 @@
     "category": "javascript",
     "component": "counter",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/counter.js';\n\nbutton1.addEventListener('click', () => {\r\n  counter1.play = true;\r\n});",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\r\n    <plus-counter\r\n      id=\"counter1\"\r\n      duration=\"2000\"\r\n      from=\"10000\"\r\n      to=\"50000\"\r\n      separator=\",\"\r\n    ></plus-counter>\r\n    <br />\r\n    <button id=\"button1\">Start</button>\r\n</div>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2970,8 +3028,7 @@
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  return (\n    <Center>\n      <Counter to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDefault;\n"
     }
   },
   {
@@ -2979,8 +3036,7 @@
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <plus-counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onplus-complete={() => setPlay(false)}\n      ></plus-counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\nexport default CounterDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDefault = () => {\n  return (\n    <plus-center>\n      <plus-counter to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDefault;\n"
     }
   },
   {
@@ -2988,9 +3044,8 @@
     "category": "svelte",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/counter.js';\nlet play = false;\n",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    play=\"{play}\"\n    on:plus-complete=\"{() => play = false}\"\n  ></plus-counter>\n  <br />\n  <button on:click=\"{() => play = true}\">Start</button>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2998,9 +3053,8 @@
     "category": "vue",
     "component": "counter",
     "detail": {
-      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/counter.js';\nconst play = ref(false);\n",
-      "style": ".center {\n  text-align: center;\n}\nbutton {\n  margin: 1rem 0.5rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-counter\n    duration=\"2000\"\n    from=\"10000\"\n    to=\"50000\"\n    separator=\",\"\n    :play=\"play\"\n    @plus-complete=\"play = false\"\n  ></plus-counter>\n  <br />\n  <button @click=\"play = true\">Start</button>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3008,7 +3062,127 @@
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  const [play, setPlay] = useState(false);\n  return (\n    <div className=\"center\">\n      <Counter\n        duration=\"2000\"\n        from=\"10000\"\n        to=\"50000\"\n        separator=\",\"\n        play={play}\n        onComplete={() => setPlay(false)}\n      ></Counter>\n      <br />\n      <button onClick={() => setPlay(true)}>Start</button>\n    </div>\n  );\n};\n\nconst CounterDefaultExample = () => {\n  return (\n    <div className=\"ex-counter-default\">\n      <CounterDefault />\n      <style>{`.ex-counter-default .center {  text-align: center;}.ex-counter-default button {  margin: 1rem 0.5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterDefaultExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  return (\n    <Center>\n      <Counter to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDefaultExample = () => {\n  return (\n    <div className=\"ex-counter-default\">\n      <CounterDefault />\n    </div>\n  )\n};\n\nexport default CounterDefaultExample;\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDelay;\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDelay = () => {\n  return (\n    <plus-center>\n      <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDelay;\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "delay",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDelayExample = () => {\n  return (\n    <div className=\"ex-counter-delay\">\n      <CounterDelay />\n    </div>\n  )\n};\n\nexport default CounterDelayExample;\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"100000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDuration;\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDuration = () => {\n  return (\n    <plus-center>\n      <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDuration;\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "duration",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"100000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDurationExample = () => {\n  return (\n    <div className=\"ex-counter-duration\">\n      <CounterDuration />\n    </div>\n  )\n};\n\nexport default CounterDurationExample;\n"
     }
   },
   {
@@ -3075,6 +3249,306 @@
     "component": "counter",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"50000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\n\nconst CounterIntersectionExample = () => {\n  return (\n    <div className=\"ex-counter-intersection dock\">\n      <CounterIntersection />\n      <style>{`.ex-counter-intersection plus-intersection {  display: block;  text-align: center;  margin: 25rem auto;}.ex-counter-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterIntersectionExample;\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter [numerals]=\"numerals\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n\ncounter2.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];",
+      "template": "<plus-center>\r\n  <plus-counter id=\"counter2\" to=\"1000000\" play></plus-counter>\r\n</plus-center>"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterNumerals;\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterNumerals = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterNumerals;\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nlet numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
+      "template": "<plus-center>\n  <plus-counter numerals=\"{numerals}\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nnumerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
+      "template": "<plus-center>\n  <plus-counter :numerals=\"numerals\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "numerals",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\n\nconst CounterNumeralsExample = () => {\n  return (\n    <div className=\"ex-counter-numerals\">\n      <CounterNumerals />\n    </div>\n  )\n};\n\nexport default CounterNumeralsExample;\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterRange;\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterRange = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterRange;\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "range",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterRangeExample = () => {\n  return (\n    <div className=\"ex-counter-range\">\n      <CounterRange />\n    </div>\n  )\n};\n\nexport default CounterRangeExample;\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"10000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterReverse;\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterReverse = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterReverse;\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "reverse",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"10000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterReverseExample = () => {\n  return (\n    <div className=\"ex-counter-reverse\">\n      <CounterReverse />\n    </div>\n  )\n};\n\nexport default CounterReverseExample;\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparator = () => {\n  return (\n    <Center>\n      <Counter separator=\",\" to=\"10000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparator;\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparator = () => {\n  return (\n    <plus-center>\n      <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparator;\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparator = () => {\n  return (\n    <Center>\n      <Counter separator=\",\" to=\"10000000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterSeparatorExample = () => {\n  return (\n    <div className=\"ex-counter-separator\">\n      <CounterSeparator />\n    </div>\n  )\n};\n\nexport default CounterSeparatorExample;\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "angular",
+    "component": "counter",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "javascript",
+    "component": "counter",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "react",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "react@experimental",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "svelte",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "vue",
+    "component": "counter",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator-&-decimal",
+    "category": "preview",
+    "component": "counter",
+    "detail": {
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\n\nconst CounterSeparatorDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-separator-&-decimal\">\n      <CounterSeparatorDecimal />\n    </div>\n  )\n};\n\nexport default CounterSeparatorDecimalExample;\n"
     }
   },
   {
