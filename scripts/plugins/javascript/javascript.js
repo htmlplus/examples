@@ -106,11 +106,11 @@ export const javascript = (options) => {
     };
 
     const config = (() => {
-      return getSnippet('config', context);
+      return getSnippet('config', context)?.content;
     })();
 
     const script = (() => {
-      let content = getSnippet('javascript:script', context) || '';
+      let content = getSnippet('javascript:script', context)?.content || '';
 
       if (content && context.customElementNames?.length) {
         content = '\n' + content;
@@ -138,7 +138,7 @@ export const javascript = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet('style', context);
+      const content = getSnippet('style', context)?.content;
 
       if (!content) return;
 
@@ -146,7 +146,7 @@ export const javascript = (options) => {
     })();
 
     const template = (() => {
-      const dedicated = getSnippet('javascript:template', context);
+      const dedicated = getSnippet('javascript:template', context)?.content;
 
       if (dedicated) return dedicated;
 

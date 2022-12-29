@@ -38,7 +38,7 @@ export const getOutput = (key, context) => {
 };
 
 export const getSnippet = (key, context) => {
-  return getOutput('prepare', context)?.find((snippet) => snippet.key == key)?.content;
+  return getOutput('prepare', context)?.find((snippet) => snippet.key == key);
 };
 
 export const getTitle = (context) => {

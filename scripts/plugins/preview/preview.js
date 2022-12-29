@@ -30,7 +30,7 @@ export const preview = () => {
     script += '\n';
     script += `export default ${context.className}Example;\n`;
 
-    const config = getSnippet('config', context);
+    const config = getSnippet('config', context)?.content;
 
     if (config) {
       const i = script.lastIndexOf('import');

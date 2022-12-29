@@ -187,7 +187,7 @@ export const angular = (options) => {
     };
 
     const config = (() => {
-      const content = getSnippet('config', context);
+      const content = getSnippet('config', context)?.content;
 
       if (!content) patterns.push('!templates/src/config.ts.*');
 
@@ -209,7 +209,7 @@ export const angular = (options) => {
     })();
 
     const style = (() => {
-      const content = getSnippet('style', context);
+      const content = getSnippet('style', context)?.content;
 
       if (!content) return;
 
