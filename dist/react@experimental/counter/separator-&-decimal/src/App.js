@@ -5,9 +5,9 @@ const CounterSeparatorDecimal = () => {
     <plus-center>
       <plus-counter
         decimal="."
-        decimals="3"
+        decimals="2"
         separator=","
-        to="10000000"
+        to="1000"
         play
       ></plus-counter>
     </plus-center>

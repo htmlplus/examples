@@ -1,6 +1,6 @@
 <template>
   <plus-center>
-    <plus-counter :numerals="numerals" to="1000000" play></plus-counter>
+    <plus-counter :numerals="numerals" to="1000" play></plus-counter>
   </plus-center>
 </template>
 

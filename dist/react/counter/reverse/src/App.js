@@ -2,7 +2,7 @@ import { Center, Counter } from '@htmlplus/react';
 const CounterReverse = () => {
   return (
     <Center>
-      <Counter from="10000" to="1000" play></Counter>
+      <Counter from="1000" to="10" play></Counter>
     </Center>
   );
 };

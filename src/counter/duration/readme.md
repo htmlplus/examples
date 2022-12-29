@@ -1,5 +1,5 @@
 ```html [template]
 <plus-center>
-  <plus-counter duration="5000" to="100000" play></plus-counter>
+  <plus-counter duration="5000" to="1000" play></plus-counter>
 </plus-center>
 ```

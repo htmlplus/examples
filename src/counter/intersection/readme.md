@@ -28,7 +28,7 @@ class CounterIntersection {
     return (
       <div class="container">
         <plus-intersection onPlusChange={(event) => this.onChange(event)}>
-            <plus-counter to="50000" play={this.play}></plus-counter>
+            <plus-counter to="1000" play={this.play}></plus-counter>
          </plus-intersection>
       </div>
     );
@@ -39,7 +39,7 @@ class CounterIntersection {
 ```html [javascript:template]
 <div class="container">
   <plus-intersection id="intersection1">
-    <plus-counter id="counter1" to="50000"></plus-counter>
+    <plus-counter id="counter1" to="1000"></plus-counter>
   </plus-intersection>
 </div>
 ```

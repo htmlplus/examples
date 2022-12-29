@@ -5,7 +5,7 @@ const CounterNumerals = () => {
     <plus-center>
       <plus-counter
         numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}
-        to="1000000"
+        to="1000"
         play
       ></plus-counter>
     </plus-center>

@@ -9,7 +9,7 @@ const CounterIntersection = () => {
   return (
     <div className="container">
       <plus-intersection onplus-change={(event) => onChange(event)}>
-        <plus-counter to="50000" play={play}></plus-counter>
+        <plus-counter to="1000" play={play}></plus-counter>
       </plus-intersection>
     </div>
   );

@@ -8,7 +8,7 @@ const CounterIntersection = () => {
   return (
     <div className="container">
       <Intersection onChange={(event) => onChange(event)}>
-        <Counter to="50000" play={play}></Counter>
+        <Counter to="1000" play={play}></Counter>
       </Intersection>
     </div>
   );

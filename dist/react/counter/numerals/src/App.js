@@ -4,7 +4,7 @@ const CounterNumerals = () => {
     <Center>
       <Counter
         numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}
-        to="1000000"
+        to="1000"
         play
       ></Counter>
     </Center>
