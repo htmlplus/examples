@@ -1,0 +1,16 @@
+```html [template]
+<plus-grid gutter="md">
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper zoomable="false" src="/assets/images/panda.jpg"></plus-cropper>
+    </plus-grid-item>
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper zoomable="true" src="/assets/images/panda.jpg"></plus-cropper>
+    </plus-grid-item>
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper zoomable="touch" src="/assets/images/panda.jpg"></plus-cropper>
+    </plus-grid-item>
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper zoomable="wheel" src="/assets/images/panda.jpg"></plus-cropper>
+    </plus-grid-item>
+</plus-grid>
+```

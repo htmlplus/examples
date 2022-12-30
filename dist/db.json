@@ -4296,6 +4296,126 @@
     }
   },
   {
+    "key": "zoom-ratio",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomRatio = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"0.1\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"1.0\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperZoomRatio;\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperZoomRatio = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          zoom-ratio=\"0.1\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          zoom-ratio=\"1.0\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperZoomRatio;\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoom-ratio",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomRatio = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"0.1\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"1.0\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperZoomRatioExample = () => {\n  return (\n    <div className=\"ex-cropper-zoom-ratio\">\n      <CropperZoomRatio />\n    </div>\n  )\n};\n\nexport default CropperZoomRatioExample;\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomable = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"false\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"touch\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"wheel\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperZoomable;\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperZoomable = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"false\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"true\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperZoomable;\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "zoomable",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomable = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"false\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"true\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"touch\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper zoomable=\"wheel\" src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperZoomableExample = () => {\n  return (\n    <div className=\"ex-cropper-zoomable\">\n      <CropperZoomable />\n    </div>\n  )\n};\n\nexport default CropperZoomableExample;\n"
+    }
+  },
+  {
     "key": "animation",
     "category": "angular",
     "component": "dialog",
