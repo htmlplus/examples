@@ -1,3 +1,16 @@
-```html [template] [dock]
-<plus-cropper backdrop={false} src="/assets/images/panda.jpg"></plus-cropper>
+```html [template]
+<plus-grid gutter="md">
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper
+            backdrop={false}
+            src="/assets/images/panda.jpg"
+        ></plus-cropper>
+    </plus-grid-item>
+    <plus-grid-item xs="12" sm="6">
+        <plus-cropper
+            backdrop={true}
+            src="/assets/images/panda.jpg"
+        ></plus-cropper>
+    </plus-grid-item>
+</plus-grid>
 ```

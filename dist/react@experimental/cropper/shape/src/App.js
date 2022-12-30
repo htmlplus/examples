@@ -4,14 +4,14 @@ import '@htmlplus/core/grid-item.js';
 const CropperShape = () => {
   return (
     <plus-grid gutter="md">
-      <plus-grid-item xs="6">
+      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           shape="rectangle"
           aspect-ratio="2"
           src="/assets/images/panda.jpg"
         ></plus-cropper>
       </plus-grid-item>
-      <plus-grid-item xs="6">
+      <plus-grid-item xs="12" sm="6">
         <plus-grid gutter="md">
           <plus-grid-item xs="12">
             <plus-cropper
