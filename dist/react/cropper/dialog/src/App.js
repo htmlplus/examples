@@ -21,7 +21,7 @@ const CropperDialog = () => {
           <Dialog.Body>
             <Cropper
               disabled={disabled}
-              src="/assets/images/panda.jpg"
+              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
             ></Cropper>
           </Dialog.Body>
           <Dialog.Footer>

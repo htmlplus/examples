@@ -35,7 +35,7 @@ class CropperDialog {
             <plus-dialog-body>
               <plus-cropper
                 disabled={this.disabled}
-                src="/assets/images/panda.jpg"
+                src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
               ></plus-cropper>
             </plus-dialog-body>
             <plus-dialog-footer>
@@ -60,7 +60,7 @@ class CropperDialog {
       <plus-cropper
         id="element2"
         disabled
-        src="/assets/images/panda.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-dialog-body>
     <plus-dialog-footer>

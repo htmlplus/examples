@@ -26,7 +26,7 @@
     <plus-dialog-body>
       <plus-cropper
         disabled="{disabled}"
-        src="/assets/images/panda.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-dialog-body>
     <plus-dialog-footer>

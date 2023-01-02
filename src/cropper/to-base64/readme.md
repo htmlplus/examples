@@ -35,7 +35,7 @@ class CropperToBase64 {
 
 ```html [javascript:template]
 <plus-center>
-  <plus-cropper src="/assets/images/panda.jpg" id="cropper1"></plus-cropper>
+  <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper1"></plus-cropper>
 </plus-center>
 <br />
 <plus-center>
