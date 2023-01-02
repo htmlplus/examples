@@ -4296,6 +4296,186 @@
     }
   },
   {
+    "key": "to-base64",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  return <Cropper></Cropper>;\n};\nexport default CropperToBase64;\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  return <plus-cropper></plus-cropper>;\n};\nexport default CropperToBase64;\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-base64",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  return <Cropper></Cropper>;\n};\n\nconst CropperToBase64Example = () => {\n  return (\n    <div className=\"ex-cropper-to-base64\">\n      <CropperToBase64 />\n    </div>\n  )\n};\n\nexport default CropperToBase64Example;\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return <Cropper></Cropper>;\n};\nexport default CropperToBlob;\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  return <plus-cropper></plus-cropper>;\n};\nexport default CropperToBlob;\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-blob",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return <Cropper></Cropper>;\n};\n\nconst CropperToBlobExample = () => {\n  return (\n    <div className=\"ex-cropper-to-blob\">\n      <CropperToBlob />\n    </div>\n  )\n};\n\nexport default CropperToBlobExample;\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToUrl = () => {\n  return <Cropper></Cropper>;\n};\nexport default CropperToUrl;\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nconst CropperToUrl = () => {\n  return <plus-cropper></plus-cropper>;\n};\nexport default CropperToUrl;\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "to-url",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToUrl = () => {\n  return <Cropper></Cropper>;\n};\n\nconst CropperToUrlExample = () => {\n  return (\n    <div className=\"ex-cropper-to-url\">\n      <CropperToUrl />\n    </div>\n  )\n};\n\nexport default CropperToUrlExample;\n"
+    }
+  },
+  {
     "key": "zoom-ratio",
     "category": "angular",
     "component": "cropper",
