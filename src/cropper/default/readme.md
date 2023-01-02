@@ -1,3 +1,3 @@
 ```html [template] [dock]
-<plus-cropper src="/assets/images/panda.jpg"></plus-cropper>
+<plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></plus-cropper>
 ```

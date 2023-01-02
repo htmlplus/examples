@@ -1,7 +1,7 @@
 <template>
   <plus-cropper
     aspect-ratio="3/4"
-    src="/assets/images/panda.jpg"
+    src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
   ></plus-cropper>
 </template>
 

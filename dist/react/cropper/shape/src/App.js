@@ -6,16 +6,22 @@ const CropperShape = () => {
         <Cropper
           shape="rectangle"
           aspectRatio="2"
-          src="/assets/images/panda.jpg"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></Cropper>
       </Grid.Item>
       <Grid.Item xs="12" sm="6">
         <Grid gutter="md">
           <Grid.Item xs="12">
-            <Cropper shape="square" src="/assets/images/panda.jpg"></Cropper>
+            <Cropper
+              shape="square"
+              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+            ></Cropper>
           </Grid.Item>
           <Grid.Item xs="12">
-            <Cropper shape="circle" src="/assets/images/panda.jpg"></Cropper>
+            <Cropper
+              shape="circle"
+              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+            ></Cropper>
           </Grid.Item>
         </Grid>
       </Grid.Item>

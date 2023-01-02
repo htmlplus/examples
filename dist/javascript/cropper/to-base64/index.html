@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <plus-cropper></plus-cropper>
-
+    <plus-center>
+      <plus-cropper src="/assets/images/panda.jpg" id="cropper1"></plus-cropper>
+    </plus-center>
+    <br />
+    <plus-center>
+      <button onclick="toBase64()">To Base64</button>
+    </plus-center>
     <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/center.js';
       import 'https://unpkg.com/@htmlplus/core/cropper.js';
+
+      const toBase64 = () => {
+        const image = new Image();
+
+        image.src = window.cropper1.toCanvas().toDataURL();
+
+        const tab = window.open('', '_blank');
+
+        tab.onload = () => {
+          tab.document.write(image.outerHTML);
+        };
+      };
     </script>
   </body>
 </html>

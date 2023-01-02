@@ -1,5 +1,8 @@
 <template>
-  <plus-cropper guides src="/assets/images/panda.jpg"></plus-cropper>
+  <plus-cropper
+    guides
+    src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+  ></plus-cropper>
 </template>
 
 <script setup>

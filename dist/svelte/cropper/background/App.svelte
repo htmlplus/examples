@@ -9,14 +9,14 @@
     <plus-cropper
       background="{false}"
       view="none"
-      src="/assets/images/panda.jpg"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
   </plus-grid-item>
   <plus-grid-item xs="12" sm="6">
     <plus-cropper
       background="{true}"
       view="none"
-      src="/assets/images/panda.jpg"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
   </plus-grid-item>
 </plus-grid>

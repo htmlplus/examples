@@ -5,12 +5,15 @@ const CropperMode = () => {
       <Grid.Item xs="12" sm="6">
         <Cropper
           mode="move"
-          src="/assets/images/panda.jpg"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
           view="none"
         ></Cropper>
       </Grid.Item>
       <Grid.Item xs="12" sm="6">
-        <Cropper mode="crop" src="/assets/images/panda.jpg"></Cropper>
+        <Cropper
+          mode="crop"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+        ></Cropper>
       </Grid.Item>
     </Grid>
   );

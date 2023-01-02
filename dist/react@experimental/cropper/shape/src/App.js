@@ -8,7 +8,7 @@ const CropperShape = () => {
         <plus-cropper
           shape="rectangle"
           aspect-ratio="2"
-          src="/assets/images/panda.jpg"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="6">
@@ -16,13 +16,13 @@ const CropperShape = () => {
           <plus-grid-item xs="12">
             <plus-cropper
               shape="square"
-              src="/assets/images/panda.jpg"
+              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
             ></plus-cropper>
           </plus-grid-item>
           <plus-grid-item xs="12">
             <plus-cropper
               shape="circle"
-              src="/assets/images/panda.jpg"
+              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
             ></plus-cropper>
           </plus-grid-item>
         </plus-grid>

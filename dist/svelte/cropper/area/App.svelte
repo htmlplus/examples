@@ -2,4 +2,7 @@
   import '@htmlplus/core/cropper.js';
 </script>
 
-<plus-cropper area="{1}" src="/assets/images/panda.jpg"></plus-cropper>
+<plus-cropper
+  area="{1}"
+  src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+></plus-cropper>

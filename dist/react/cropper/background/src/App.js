@@ -6,14 +6,14 @@ const CropperBackground = () => {
         <Cropper
           background={false}
           view="none"
-          src="/assets/images/panda.jpg"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></Cropper>
       </Grid.Item>
       <Grid.Item xs="12" sm="6">
         <Cropper
           background={true}
           view="none"
-          src="/assets/images/panda.jpg"
+          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></Cropper>
       </Grid.Item>
     </Grid>
