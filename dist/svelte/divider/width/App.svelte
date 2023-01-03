@@ -2,8 +2,14 @@
   import '@htmlplus/core/divider.js';
 </script>
 
-<plus-divider Width="thin"></plus-divider>
-<br />
-<plus-divider Width="medium"></plus-divider>
-<br />
-<plus-divider Width="thick"></plus-divider>
+<div>
+  <plus-divider width="xs"></plus-divider>
+  <br />
+  <plus-divider width="sm"></plus-divider>
+  <br />
+  <plus-divider width="md"></plus-divider>
+  <br />
+  <plus-divider width="lg"></plus-divider>
+  <br />
+  <plus-divider width="xl"></plus-divider>
+</div>

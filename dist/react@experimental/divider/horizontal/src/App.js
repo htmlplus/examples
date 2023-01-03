@@ -1,7 +1,7 @@
 import '@htmlplus/core/divider.js';
 const DividerHorizontal = () => {
   return (
-    <>
+    <div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh
       eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et
       erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,
@@ -16,7 +16,7 @@ const DividerHorizontal = () => {
       vel accumsan. Orci varius natoque penatibus et magnis dis parturient
       montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna
       tempus, fringilla nisl.
-    </>
+    </div>
   );
 };
 export default DividerHorizontal;
