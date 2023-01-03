@@ -4360,8 +4360,8 @@
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBlob() {\n    window.cropper2.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBlob()\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4369,8 +4369,8 @@
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nconst toBlob = () => {\r\n    window.cropper2.toCanvas().toBlob((blob) => {\r\n        console.log(blob);\r\n    });\r\n}",
+      "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"toBlob()\">\r\n    To URL\r\n  </button>\r\n</plus-center>"
     }
   },
   {
@@ -4378,7 +4378,7 @@
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n};\nexport default CropperToBlob;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper2.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
     }
   },
   {
@@ -4386,7 +4386,7 @@
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  return (\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  );\n};\nexport default CropperToBlob;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper2.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
     }
   },
   {
@@ -4394,8 +4394,8 @@
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBlob() {\n  window.cropper2.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBlob()}\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4403,8 +4403,8 @@
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBlob() {\n  window.cropper2.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBlob()\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4412,7 +4412,7 @@
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n};\n\nconst CropperToBlobExample = () => {\n  return (\n    <div className=\"ex-cropper-to-blob\">\n      <CropperToBlob />\n    </div>\n  )\n};\n\nexport default CropperToBlobExample;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper2.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToBlobExample = () => {\n  return (\n    <div className=\"ex-cropper-to-blob\">\n      <CropperToBlob />\n    </div>\n  )\n};\n\nexport default CropperToBlobExample;\n"
     }
   },
   {
