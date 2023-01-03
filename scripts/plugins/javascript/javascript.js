@@ -15,21 +15,6 @@ import {
   toFile
 } from '../../utils.js';
 
-const getValue = (path) => {
-  switch (path.node.expression.type) {
-    case 'BinaryExpression':
-      break;
-    case 'BooleanLiteral':
-    case 'NumericLiteral':
-    case 'StringLiteral':
-      return path.node.expression.value;
-    case 'MemberExpression':
-      break;
-    case 'TemplateLiteral':
-      break;
-  }
-};
-
 export const javascript = (options) => {
   const name = 'javascript';
   const run = (context) => {
@@ -76,7 +61,20 @@ export const javascript = (options) => {
           if (isEvent(name.name)) path.remove();
         },
         JSXExpressionContainer(path) {
-          const value = getValue(path);
+          let value;
+
+          switch (path.node.expression.type) {
+            case 'BinaryExpression':
+              break;
+            case 'BooleanLiteral':
+            case 'NumericLiteral':
+            case 'StringLiteral':
+              value = path.node.expression.value;
+            case 'MemberExpression':
+              break;
+            case 'TemplateLiteral':
+              break;
+          }
 
           const isAttribute = path.parent.type === 'JSXAttribute';
 

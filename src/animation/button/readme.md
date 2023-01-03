@@ -25,15 +25,11 @@ class AnimationButton {
 ```html [javascript:template]
 <plus-center>
   <plus-animation id="animation1" name="tada">
-    <button id="button1">Click Me</button>
+    <button onclick="animation1.run = true">Click Me</button>
   </plus-animation>
 </plus-center>
 ```
 
 ```js [javascript:script]
 import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';
-
-button1.addEventListener('click', () => {
-  animation1.run = true;
-});
 ```

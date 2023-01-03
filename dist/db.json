@@ -14,9 +14,9 @@
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';\r\n\r\nbutton1.addEventListener('click', () => {\r\n  animation1.run = true;\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';",
       "style": "plus-animation {\n  display: inline-block;\n}\n",
-      "template": "<plus-center>\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button id=\"button1\">Click Me</button>\r\n  </plus-animation>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button onclick=\"animation1.run = true\">Click Me</button>\r\n  </plus-animation>\r\n</plus-center>"
     }
   },
   {

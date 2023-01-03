@@ -13,7 +13,7 @@
   <body>
     <plus-center>
       <plus-animation id="animation1" name="tada">
-        <button id="button1">Click Me</button>
+        <button onclick="animation1.run = true">Click Me</button>
       </plus-animation>
     </plus-center>
     <script type="module">
@@ -21,10 +21,6 @@
       import 'https://unpkg.com/@htmlplus/core/center.js';
 
       import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';
-
-      button1.addEventListener('click', () => {
-        animation1.run = true;
-      });
     </script>
   </body>
 </html>
