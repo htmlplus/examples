@@ -2,7 +2,7 @@
   <plus-center>
     <plus-cropper
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      id="cropper1"
+      id="cropper2"
     ></plus-cropper>
   </plus-center>
   <br />
@@ -16,7 +16,7 @@
   import '@htmlplus/core/cropper.js';
   function toBase64() {
     const image = new Image();
-    image.src = window.cropper1.toCanvas().toDataURL();
+    image.src = window.cropper2.toCanvas().toDataURL();
     const tab = window.open('', '_blank');
     tab.onload = () => {
       tab.document.write(image.outerHTML);

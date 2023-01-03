@@ -8,7 +8,7 @@ import '@htmlplus/core/cropper.js';
 })
 export class AppComponent {
   toURL() {
-    window.cropper3.toCanvas().toBlob((blob) => {
+    window.cropper4.toCanvas().toBlob((blob) => {
       window.open(URL.createObjectURL(blob), '_blank');
     });
   }

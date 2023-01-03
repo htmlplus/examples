@@ -13,7 +13,7 @@ const ClickOutsideDefault = () => {
       <ClickOutside onClickOutside={() => onClickOutside()}>
         <button onClick={() => onClick()}>Open Menu Dropdown</button>
         {open && (
-          <Card elevation="10" id="menu" outlined>
+          <Card elevation="10" outlined>
             <Card.Body>It will stay visible until you click outside.</Card.Body>
           </Card>
         )}

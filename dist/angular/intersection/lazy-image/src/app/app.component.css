@@ -11,10 +11,6 @@ plus-intersection {
   margin: 1000px auto;
 }
 
-[data-hidden] {
-  display: none;
-}
-
 img {
   display: block;
   width: 12rem;

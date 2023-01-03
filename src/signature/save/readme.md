@@ -43,11 +43,11 @@ class SignatureSave {
 </plus-center>
 <br />
 <plus-center>
-  <button id="button3">
+  <button id="save1">
     Save With Background
   </button>
   &nbsp; &nbsp;
-  <button id="button4">
+  <button id="save2">
     Save Without Background
   </button>
 </plus-center>
@@ -65,6 +65,6 @@ const save = (background) => {
     tab.document.write(image.outerHTML);
   }
 }
-button3.addEventListener('click', () => save(true));
-button4.addEventListener('click', () => save(false));
+save1.addEventListener('click', () => save(true));
+save2.addEventListener('click', () => save(false));
 ```

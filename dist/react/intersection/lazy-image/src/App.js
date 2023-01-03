@@ -7,8 +7,8 @@ const IntersectionLazyImage = () => {
       const spinner = event.target.querySelector('plus-spinner');
       const src = image.getAttribute('data-src');
       image.setAttribute('src', src);
-      image.removeAttribute('data-hidden');
-      spinner.setAttribute('data-hidden', 'true');
+      image.hidden = false;
+      spinner.hidden = true;
     }, 1000);
   };
   return (
@@ -18,7 +18,7 @@ const IntersectionLazyImage = () => {
           <Spinner></Spinner>
           <img
             alt="Lazy Image"
-            data-hidden="true"
+            hidden
             data-src="https://placekitten.com/200/200"
           />
         </Card>

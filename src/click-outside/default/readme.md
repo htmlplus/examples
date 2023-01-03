@@ -39,7 +39,7 @@ class ClickOutsideDefault {
 ```
 
 ```html [javascript:template]
-<plus-click-outside id="element1">
+<plus-click-outside id="clickOutside1">
   <plus-card elevation="10">
     <plus-card-body>
       <b id="element2">0</b> time(s) inside clicked
@@ -53,11 +53,11 @@ class ClickOutsideDefault {
 ```js [javascript:script]
 let inside = 0;
 let outside = 0;
-element1.addEventListener('click', (event) => {
+clickOutside1.addEventListener('click', (event) => {
   inside = inside + 1;
   element2.innerHTML = inside;
 });
-element1.addEventListener('plus-click-outside', (event) => {
+clickOutside1.addEventListener('plus-click-outside', (event) => {
   outside = outside + 1;
   element3.innerHTML = outside;
 });

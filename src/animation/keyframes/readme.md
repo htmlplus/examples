@@ -48,7 +48,7 @@ class AnimationKeyframes {
 <div class="root">
   <plus-animation
     duration="5000"
-    id="element1"
+    id="animation3"
     iterations="Infinity"
     run
   ></plus-animation>
@@ -57,7 +57,7 @@ class AnimationKeyframes {
 
 ```js [javascript:script]
 setTimeout(() => {
-  element1.keyframes = [
+  animation3.keyframes = [
     {
       transform: "scale(0) rotate(0deg) translate(-50%, -50%)",
       opacity: "1",
@@ -67,6 +67,6 @@ setTimeout(() => {
       opacity: "0",
     },
   ];
-  element1.run = true;
+  animation3.run = true;
 }, 1000);
 ```

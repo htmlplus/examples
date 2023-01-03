@@ -33,7 +33,7 @@ class ClickOutsideDefault {
             Open Menu Dropdown
           </button>
           {this.open && (
-            <plus-card elevation="10" id="menu" outlined>
+            <plus-card elevation="10" outlined>
               <plus-card-body>
                 It will stay visible until you click outside.
               </plus-card-body>
@@ -48,9 +48,9 @@ class ClickOutsideDefault {
 
 ```html [javascript:template]
 <plus-center>
-  <plus-click-outside id="outside">
-    <button id="button">Open Menu Dropdown</button>
-    <plus-card elevation="10" id="menu" outlined>
+  <plus-click-outside id="clickOutside2">
+    <button id="button2">Open Menu Dropdown</button>
+    <plus-card elevation="10" id="menu2" outlined>
       <plus-card-body>
         It will stay visible until you click outside.
       </plus-card-body>
@@ -60,10 +60,10 @@ class ClickOutsideDefault {
 ```
 
 ```js [javascript:script]
-button.addEventListener('click', () => {
-  menu.hidden = !menu.hidden;
+button2.addEventListener('click', () => {
+  menu2.hidden = !menu2.hidden;
 });
-outside.addEventListener('plus-click-outside', () => {
-  menu.hidden = true;
+clickOutside2.addEventListener('plus-click-outside', () => {
+  menu2.hidden = true;
 });
 ```

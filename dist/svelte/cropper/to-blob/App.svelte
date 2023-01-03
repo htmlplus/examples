@@ -2,7 +2,7 @@
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
   function toBlob() {
-    window.cropper2.toCanvas().toBlob((blob) => {
+    window.cropper3.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
   }
@@ -11,7 +11,7 @@
 <plus-center>
   <plus-cropper
     src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    id="cropper2"
+    id="cropper3"
   ></plus-cropper>
 </plus-center>
 <br />

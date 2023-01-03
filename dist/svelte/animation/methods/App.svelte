@@ -4,14 +4,18 @@
 </script>
 
 <plus-center>
-  <plus-animation id="element2" iterations="3" name="fade-out"></plus-animation>
+  <plus-animation
+    id="animation4"
+    iterations="3"
+    name="fade-out"
+  ></plus-animation>
 </plus-center>
 <br />
 <plus-center>
-  <button on:click="{() => window.element2.cancel()}">Cancel</button>
-  <button on:click="{() => window.element2.finish()}">Finish</button>
-  <button on:click="{() => window.element2.pause()}">Pause</button>
-  <button on:click="{() => window.element2.play()}">Play</button>
+  <button on:click="{() => window.animation4.cancel()}">Cancel</button>
+  <button on:click="{() => window.animation4.finish()}">Finish</button>
+  <button on:click="{() => window.animation4.pause()}">Pause</button>
+  <button on:click="{() => window.animation4.play()}">Play</button>
 </plus-center>
 
 <style>

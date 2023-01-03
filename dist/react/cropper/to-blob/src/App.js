@@ -1,7 +1,7 @@
 import { Center, Cropper } from '@htmlplus/react';
 const CropperToBlob = () => {
   const toBlob = () => {
-    window.cropper2.toCanvas().toBlob((blob) => {
+    window.cropper3.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
   };
@@ -10,7 +10,7 @@ const CropperToBlob = () => {
       <Center>
         <Cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper2"
+          id="cropper3"
         ></Cropper>
       </Center>
       <br />

@@ -9,8 +9,8 @@
       const spinner = event.target.querySelector('plus-spinner');
       const src = image.getAttribute('data-src');
       image.setAttribute('src', src);
-      image.removeAttribute('data-hidden');
-      spinner.setAttribute('data-hidden', 'true');
+      image.hidden = false;
+      spinner.hidden = true;
     }, 1000);
   }
 </script>
@@ -19,11 +19,7 @@
   <plus-intersection once on:plus-change="{event => onChange(event)}">
     <plus-card elevation="10">
       <plus-spinner></plus-spinner>
-      <img
-        alt="Lazy Image"
-        data-hidden="true"
-        data-src="https://placekitten.com/200/200"
-      />
+      <img alt="Lazy Image" hidden data-src="https://placekitten.com/200/200" />
     </plus-card>
   </plus-intersection>
 </div>
@@ -40,10 +36,6 @@
     display: block;
     text-align: center;
     margin: 1000px auto;
-  }
-
-  [data-hidden] {
-    display: none;
   }
 
   img {

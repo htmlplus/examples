@@ -9,7 +9,7 @@ import '@htmlplus/core/cropper.js';
 export class AppComponent {
   toBase64() {
     const image = new Image();
-    image.src = window.cropper1.toCanvas().toDataURL();
+    image.src = window.cropper2.toCanvas().toDataURL();
     const tab = window.open('', '_blank');
     tab.onload = () => {
       tab.document.write(image.outerHTML);

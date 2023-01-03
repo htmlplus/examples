@@ -9,28 +9,28 @@
     <plus-center>
       <plus-cropper
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        id="cropper1"
+        id="cropper2"
       ></plus-cropper>
     </plus-center>
     <br />
     <plus-center>
-      <button onclick="toBase64()">To Base64</button>
+      <button id="button2">To Base64</button>
     </plus-center>
     <script type="module">
       import 'https://unpkg.com/@htmlplus/core/center.js';
       import 'https://unpkg.com/@htmlplus/core/cropper.js';
 
-      const toBase64 = () => {
+      button2.addEventListener('click', () => {
         const image = new Image();
 
-        image.src = window.cropper1.toCanvas().toDataURL();
+        image.src = cropper2.toCanvas().toDataURL();
 
-        const tab = window.open('', '_blank');
+        const tab = open('', '_blank');
 
         tab.onload = () => {
           tab.document.write(image.outerHTML);
         };
-      };
+      });
     </script>
   </body>
 </html>

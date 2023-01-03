@@ -6,7 +6,7 @@ class CropperToBase64 {
   toBase64() {
     const image = new Image();
 
-    image.src = window.cropper1.toCanvas().toDataURL();
+    image.src = window.cropper2.toCanvas().toDataURL();
 
     const tab = window.open('', '_blank');
 
@@ -19,7 +19,7 @@ class CropperToBase64 {
     return (
       <>
         <plus-center>
-          <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper1"></plus-cropper>
+          <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper2"></plus-cropper>
         </plus-center>
         <br />
         <plus-center>
@@ -35,26 +35,26 @@ class CropperToBase64 {
 
 ```html [javascript:template]
 <plus-center>
-  <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper1"></plus-cropper>
+  <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper2"></plus-cropper>
 </plus-center>
 <br />
 <plus-center>
-  <button onclick="toBase64()">
+  <button id="button2">
     To Base64
   </button>
 </plus-center>
 ```
 
 ```js [javascript:script]
-const toBase64 = () => {
+button2.addEventListener('click', () => {
   const image = new Image();
 
-  image.src = window.cropper1.toCanvas().toDataURL();
+  image.src = cropper2.toCanvas().toDataURL();
 
-  const tab = window.open('', '_blank');
+  const tab = open('', '_blank');
 
   tab.onload = () => {
     tab.document.write(image.outerHTML);
   }
-}
+});
 ```

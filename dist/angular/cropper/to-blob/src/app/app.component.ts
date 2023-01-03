@@ -8,7 +8,7 @@ import '@htmlplus/core/cropper.js';
 })
 export class AppComponent {
   toBlob() {
-    window.cropper2.toCanvas().toBlob((blob) => {
+    window.cropper3.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
   }

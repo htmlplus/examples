@@ -56,22 +56,22 @@ class SignatureHistory {
 </plus-center>
 <br />
 <plus-center>
-  <button id="button1" disabled>Undo</button>
+  <button id="undo" disabled>Undo</button>
   &nbsp; &nbsp;
-  <button id="button2" disabled>Redo</button>
+  <button id="redo" disabled>Redo</button>
 </plus-center>
 ```
 
 ```js [javascript:script]
 const sync = () => {
-  button1.disabled = !signature2.canUndo();
-  button2.disabled = !signature2.canRedo();
+  undo.disabled = !signature2.canUndo();
+  redo.disabled = !signature2.canRedo();
 }
-button1.addEventListener('click', () => {
+undo.addEventListener('click', () => {
   signature2.undo();
   sync();
 });
-button2.addEventListener('click', () => {
+redo.addEventListener('click', () => {
   signature2.redo();
   sync();
 });

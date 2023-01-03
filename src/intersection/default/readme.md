@@ -63,10 +63,10 @@ class IntersectionDefault {
 <div class="container">
   <plus-sticky top="1rem" z-index="1">
     <plus-center>
-      <div id="element1" class="status"></div>
+      <div id="status" class="status"></div>
     </plus-center>
   </plus-sticky>
-  <plus-intersection id="element2">
+  <plus-intersection id="intersection1">
     <plus-card elevation="10">
       <plus-card-body>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -78,8 +78,8 @@ class IntersectionDefault {
 ```
 
 ```js [javascript:script]
-element2.addEventListener('plus-change', (event) => {
-  element1.innerHTML = event.detail.isIntersecting
+intersection1.addEventListener('plus-change', (event) => {
+  status.innerHTML = event.detail.isIntersecting
     ? 'In Viewport'
     : 'Out of Viewport';
 });

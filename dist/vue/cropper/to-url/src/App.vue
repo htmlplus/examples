@@ -2,7 +2,7 @@
   <plus-center>
     <plus-cropper
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      id="cropper3"
+      id="cropper4"
     ></plus-cropper>
   </plus-center>
   <br />
@@ -15,7 +15,7 @@
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
   function toURL() {
-    window.cropper3.toCanvas().toBlob((blob) => {
+    window.cropper4.toCanvas().toBlob((blob) => {
       window.open(URL.createObjectURL(blob), '_blank');
     });
   }

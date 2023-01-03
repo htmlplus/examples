@@ -16,7 +16,7 @@ const ClickOutsideDefault = () => {
       <plus-click-outside onplus-click-outside={() => onClickOutside()}>
         <button onClick={() => onClick()}>Open Menu Dropdown</button>
         {open && (
-          <plus-card elevation="10" id="menu" outlined>
+          <plus-card elevation="10" outlined>
             <plus-card-body>
               It will stay visible until you click outside.
             </plus-card-body>

@@ -12,10 +12,6 @@ plus-intersection {
   margin: 1000px auto;
 }
 
-[data-hidden] {
-  display: none;
-}
-
 img {
   display: block;
   width: 12rem;
@@ -50,9 +46,9 @@ class IntersectionLazyImage {
 
       image.setAttribute('src', src);
 
-      image.removeAttribute('data-hidden');
+      image.hidden = false;
 
-      spinner.setAttribute('data-hidden', 'true');
+      spinner.hidden = true;
     }, 1000);
   }
 
@@ -67,7 +63,7 @@ class IntersectionLazyImage {
             <plus-spinner></plus-spinner>
             <img
               alt="Lazy Image"
-              data-hidden="true"
+              hidden
               data-src="https://placekitten.com/200/200"
             />
           </plus-card>
@@ -80,12 +76,12 @@ class IntersectionLazyImage {
 
 ```html [javascript:template]
 <div class="container">
-  <plus-intersection id="element3" once>
+  <plus-intersection id="intersection2" once>
     <plus-card elevation="10">
       <plus-spinner></plus-spinner>
       <img
         alt="Lazy Image"
-        data-hidden="true"
+        hidden
         data-src="https://placekitten.com/200/200"
       />
     </plus-card>
@@ -94,7 +90,7 @@ class IntersectionLazyImage {
 ```
 
 ```js [javascript:script]
-element3.addEventListener('plus-change', (event) => {
+intersection2.addEventListener('plus-change', (event) => {
   if (!event.detail.isIntersecting) return;
 
   setTimeout(() => {
@@ -106,9 +102,9 @@ element3.addEventListener('plus-change', (event) => {
 
     image.setAttribute('src', src);
 
-    image.removeAttribute('data-hidden');
+    image.hidden = false;
 
-    spinner.setAttribute('data-hidden', 'true');
+    spinner.hidden = true;
   }, 1000);
 });
 ```

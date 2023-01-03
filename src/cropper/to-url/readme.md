@@ -4,7 +4,7 @@ import { Element } from '@htmlplus/element';
 @Element()
 class CropperToURL {
   toURL() {
-    window.cropper3.toCanvas().toBlob((blob) => {
+    window.cropper4.toCanvas().toBlob((blob) => {
         window.open(URL.createObjectURL(blob), '_blank');
     });
   }
@@ -13,7 +13,7 @@ class CropperToURL {
     return (
       <>
         <plus-center>
-          <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper3"></plus-cropper>
+          <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper4"></plus-cropper>
         </plus-center>
         <br />
         <plus-center>
@@ -29,20 +29,20 @@ class CropperToURL {
 
 ```html [javascript:template]
 <plus-center>
-  <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper3"></plus-cropper>
+  <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" id="cropper4"></plus-cropper>
 </plus-center>
 <br />
 <plus-center>
-  <button onclick="toURL()">
+  <button id="button4">
     To URL
   </button>
 </plus-center>
 ```
 
 ```js [javascript:script]
-const toURL = () => {
-    window.cropper3.toCanvas().toBlob((blob) => {
-        window.open(URL.createObjectURL(blob), '_blank');
+button4.addEventListener('click', () => {
+    cropper4.toCanvas().toBlob((blob) => {
+        open(URL.createObjectURL(blob), '_blank');
     });
-}
+});
 ```

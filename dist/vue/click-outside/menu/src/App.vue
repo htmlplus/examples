@@ -2,7 +2,7 @@
   <plus-center>
     <plus-click-outside @plus-click-outside="onClickOutside()">
       <button @click="onClick()">Open Menu Dropdown</button>
-      <plus-card elevation="10" id="menu" outlined v-if="open">
+      <plus-card elevation="10" outlined v-if="open">
         <plus-card-body>
           It will stay visible until you click outside.
         </plus-card-body>

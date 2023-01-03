@@ -9,22 +9,22 @@
     <plus-center>
       <plus-cropper
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        id="cropper2"
+        id="cropper3"
       ></plus-cropper>
     </plus-center>
     <br />
     <plus-center>
-      <button onclick="toBlob()">To URL</button>
+      <button id="button3">To URL</button>
     </plus-center>
     <script type="module">
       import 'https://unpkg.com/@htmlplus/core/center.js';
       import 'https://unpkg.com/@htmlplus/core/cropper.js';
 
-      const toBlob = () => {
-        window.cropper2.toCanvas().toBlob((blob) => {
+      button3.addEventListener('click', () => {
+        cropper3.toCanvas().toBlob((blob) => {
           console.log(blob);
         });
-      };
+      });
     </script>
   </body>
 </html>
