@@ -104,7 +104,8 @@ export const javascript = (options) => {
     };
 
     const config = (() => {
-      return getSnippet('config', context)?.content;
+      // TODO
+      return getSnippet('config', context)?.content?.replace('@htmlplus/core', 'https://unpkg.com/@htmlplus/core');
     })();
 
     const script = (() => {
