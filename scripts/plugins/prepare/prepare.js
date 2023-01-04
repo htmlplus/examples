@@ -32,7 +32,13 @@ export const prepare = () => {
           ?.replace('[', '')
           ?.replace(']', '');
 
-        const options = { dock };
+        const rtl = !!first
+          ?.match(/\[rtl]/)
+          ?.shift()
+          ?.replace('[', '')
+          ?.replace(']', '');
+
+        const options = { dock, rtl };
 
         const content = lines.slice(1, -1).join('\n').trim();
 

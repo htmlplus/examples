@@ -1,4 +1,4 @@
-```html [template]
+```html [template] [rtl]
 <div>
     <plus-divider variant="middle"></plus-divider>
     <br/>

@@ -17,6 +17,8 @@ export const preview = () => {
 
     const dock = getOutput('prepare', context)?.some((snippet) => snippet.options?.dock);
 
+    const rtl = getOutput('prepare', context)?.some((snippet) => snippet.options?.rtl);
+
     script = script.split('export default ')[0].trim();
     script += '\n\n';
     script += `const ${context.className}Example = () => {\n`;
@@ -40,7 +42,7 @@ export const preview = () => {
       script = [script.slice(0, j), config, script.slice(j)].join('\n');
     }
 
-    setOutput(name, context, { script });
+    setOutput(name, context, { rtl, script });
   };
   return { name, run };
 };
