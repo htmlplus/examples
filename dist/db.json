@@ -5868,6 +5868,73 @@
     }
   },
   {
+    "key": "sticky",
+    "category": "angular",
+    "component": "divider",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "javascript",
+    "component": "divider",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "react",
+    "component": "divider",
+    "detail": {
+      "script": "import { Divider, Sticky } from '@htmlplus/react';\nconst DividerSticky = () => {\n  return (\n    <div className=\"container\">\n      <Sticky>\n        <Divider>\n          <span>Today</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>Yesterday</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>5 Days Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>2 Weeks Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>1 Month Ago</span>\n        </Divider>\n      </Sticky>\n    </div>\n  );\n};\nexport default DividerSticky;\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "react@experimental",
+    "component": "divider",
+    "detail": {
+      "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\nconst DividerSticky = () => {\n  return (\n    <div className=\"container\">\n      <plus-sticky>\n        <plus-divider>\n          <span>Today</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>Yesterday</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>5 Days Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>2 Weeks Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>1 Month Ago</span>\n        </plus-divider>\n      </plus-sticky>\n    </div>\n  );\n};\nexport default DividerSticky;\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "svelte",
+    "component": "divider",
+    "detail": {
+      "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "vue",
+    "component": "divider",
+    "detail": {
+      "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n",
+      "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
+    }
+  },
+  {
+    "key": "sticky",
+    "category": "preview",
+    "component": "divider",
+    "detail": {
+      "rtl": false,
+      "script": "import { Divider, Sticky } from '@htmlplus/react';\nconst DividerSticky = () => {\n  return (\n    <div className=\"container\">\n      <Sticky>\n        <Divider>\n          <span>Today</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>Yesterday</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>5 Days Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>2 Weeks Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>1 Month Ago</span>\n        </Divider>\n      </Sticky>\n    </div>\n  );\n};\n\nconst DividerStickyExample = () => {\n  return (\n    <div className=\"ex-divider-sticky dock\">\n      <DividerSticky />\n      <style>{`.ex-divider-sticky .container {  height: 20rem;  overflow: auto;}.ex-divider-sticky span {  background-color: white;  color: black;  padding: 0.5rem 1rem;}.ex-divider-sticky plus-divider {  --plus-divider-color: lightgray;  --plus-divider-opacity: 1;}.ex-divider-sticky plus-sticky {  margin-bottom: 20rem;}`}</style>\n    </div>\n  )\n};\n\nexport default DividerStickyExample;\n"
+    }
+  },
+  {
     "key": "type",
     "category": "angular",
     "component": "divider",
