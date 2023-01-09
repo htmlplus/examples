@@ -57,7 +57,7 @@ const { start, run, finish } = compiler(
       return '@htmlplus/react';
     },
     componentNameConvertor(name) {
-      const exceptions = ['aspect-ratio', 'button-navigation', 'click-outside', 'scroll-indicator'];
+      const exceptions = ['aspect-ratio', 'button-navigation', 'click-outside', 'scroll-detector', 'scroll-indicator'];
       const exception = exceptions.find((exception) => name.indexOf(exception) != -1);
       if (exception) name = name.replace(exception, pascalCase(exception));
       return name.replace('plus-', '').split('-').map(pascalCase).join('.');
