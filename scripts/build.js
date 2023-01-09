@@ -1,5 +1,4 @@
-import { compiler } from '@htmlplus/element/compiler/index.js';
-import { extract, parse, read } from '@htmlplus/element/compiler/index.js';
+import { compiler, extract, parse, read } from '@htmlplus/element/compiler/index.js';
 import { paramCase, pascalCase } from 'change-case';
 import glob from 'fast-glob';
 import path from 'path';
