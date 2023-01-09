@@ -19,12 +19,6 @@ class ScrollDetectorDefault {
   render() {
     return (
       <div class="container">
-        <plus-scroll-detector
-          source=".scrollable"
-          vertical
-          onPlusChange={(event) => this.onChange(event)}
-        >
-        </plus-scroll-detector>
         <div class="scrollable">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros, luctus in lacus eu, eleifend
@@ -125,6 +119,12 @@ class ScrollDetectorDefault {
             nec semper.
           </p>
         </div>
+        <plus-scroll-detector
+          source=".scrollable"
+          vertical
+          onPlusChange={(event) => this.onChange(event)}
+        >
+        </plus-scroll-detector>
       </div>
     )
   }
@@ -133,7 +133,6 @@ class ScrollDetectorDefault {
 
 ```html [javascript:template]
 <div class="container">
-  <plus-scroll-detector id="scroll1" source=".scrollable" vertical></plus-scroll-detector>
   <div class="scrollable">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros, luctus in lacus eu, eleifend
@@ -234,6 +233,7 @@ class ScrollDetectorDefault {
       nec semper.
     </p>
   </div>
+  <plus-scroll-detector id="scroll1" source=".scrollable" vertical></plus-scroll-detector>
 </div>
 ```
 

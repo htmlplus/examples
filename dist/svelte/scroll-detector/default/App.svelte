@@ -6,12 +6,6 @@
 </script>
 
 <div class="container">
-  <plus-scroll-detector
-    source=".scrollable"
-    vertical
-    on:plus-change="{event => onChange(event)}"
-  >
-  </plus-scroll-detector>
   <div class="scrollable">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh
@@ -136,6 +130,12 @@
       fermentum in mi. Etiam dignissim vitae massa nec semper.
     </p>
   </div>
+  <plus-scroll-detector
+    source=".scrollable"
+    vertical
+    on:plus-change="{event => onChange(event)}"
+  >
+  </plus-scroll-detector>
 </div>
 
 <style>

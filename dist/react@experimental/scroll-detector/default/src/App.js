@@ -5,11 +5,6 @@ const ScrollDetectorDefault = () => {
   };
   return (
     <div className="container">
-      <plus-scroll-detector
-        source=".scrollable"
-        vertical
-        onplus-change={(event) => onChange(event)}
-      ></plus-scroll-detector>
       <div className="scrollable">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -144,6 +139,11 @@ const ScrollDetectorDefault = () => {
           vitae massa nec semper.
         </p>
       </div>
+      <plus-scroll-detector
+        source=".scrollable"
+        vertical
+        onplus-change={(event) => onChange(event)}
+      ></plus-scroll-detector>
     </div>
   );
 };

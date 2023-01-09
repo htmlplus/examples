@@ -1,10 +1,4 @@
 <div class="container">
-  <plus-scroll-detector
-    source=".scrollable"
-    vertical
-    (plus-change)="onChange($event)"
-  >
-  </plus-scroll-detector>
   <div class="scrollable">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh
@@ -129,4 +123,10 @@
       fermentum in mi. Etiam dignissim vitae massa nec semper.
     </p>
   </div>
+  <plus-scroll-detector
+    source=".scrollable"
+    vertical
+    (plus-change)="onChange($event)"
+  >
+  </plus-scroll-detector>
 </div>

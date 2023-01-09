@@ -5,11 +5,6 @@ const ScrollDetectorDefault = () => {
   };
   return (
     <div className="container">
-      <ScrollDetector
-        source=".scrollable"
-        vertical
-        onChange={(event) => onChange(event)}
-      ></ScrollDetector>
       <div className="scrollable">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -144,6 +139,11 @@ const ScrollDetectorDefault = () => {
           vitae massa nec semper.
         </p>
       </div>
+      <ScrollDetector
+        source=".scrollable"
+        vertical
+        onChange={(event) => onChange(event)}
+      ></ScrollDetector>
     </div>
   );
 };
