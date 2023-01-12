@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babel/types": "^7.20.2",
-    "@htmlplus/element": "^0.6.1",
+    "@htmlplus/element": "^0.6.2",
     "change-case": "^4.1.2",
     "fast-glob": "^3.2.12",
     "nodemon": "^2.0.20",
