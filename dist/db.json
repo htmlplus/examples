@@ -6246,6 +6246,603 @@
     }
   },
   {
+    "key": "decimals",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDecimals = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1200\" decimals=\"0\"></Format.Bytes>\n      <Format.Bytes value=\"1200\" decimals=\"3\"></Format.Bytes>\n      <Format.Bytes value=\"1200\" decimals=\"[3, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" decimals=\"[0, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" decimals=\"[1, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1001\" decimals=\"[0, 3]\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesDecimals;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDecimals = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n      <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n      <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDecimals;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "decimals",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDecimals = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1200\" decimals=\"0\"></Format.Bytes>\n      <Format.Bytes value=\"1200\" decimals=\"3\"></Format.Bytes>\n      <Format.Bytes value=\"1200\" decimals=\"[3, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" decimals=\"[0, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" decimals=\"[1, 3]\"></Format.Bytes>\n      <Format.Bytes value=\"1001\" decimals=\"[0, 3]\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesDecimalsExample = () => {\n  return (\n    <div className=\"ex-format-bytes-decimals\">\n      <FormatBytesDecimals />\n      <style>{`.ex-format-bytes-decimals plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesDecimalsExample;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDefault = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDefault = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDefault = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesDefaultExample = () => {\n  return (\n    <div className=\"ex-format-bytes-default\">\n      <FormatBytesDefault />\n    </div>\n  )\n};\n\nexport default FormatBytesDefaultExample;\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDisplay = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" display=\"short\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" display=\"long\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesDisplay;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDisplay = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDisplay;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "display",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesDisplay = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" display=\"short\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" display=\"long\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesDisplayExample = () => {\n  return (\n    <div className=\"ex-format-bytes-display\">\n      <FormatBytesDisplay />\n      <style>{`.ex-format-bytes-display plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesDisplayExample;\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1500\"></plus-format-bytes>\n  <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1500\"></plus-format-bytes>\n  <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesFormatting = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1500\"></Format.Bytes>\n      <Format.Bytes value=\"800000000\"></Format.Bytes>\n      <Format.Bytes value=\"6900000000\"></Format.Bytes>\n      <Format.Bytes value=\"222000000000000\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesFormatting;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesFormatting = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1500\"></plus-format-bytes>\n      <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n      <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n      <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesFormatting;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1500\"></plus-format-bytes>\n  <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1500\"></plus-format-bytes>\n  <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "formatting",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesFormatting = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1500\"></Format.Bytes>\n      <Format.Bytes value=\"800000000\"></Format.Bytes>\n      <Format.Bytes value=\"6900000000\"></Format.Bytes>\n      <Format.Bytes value=\"222000000000000\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesFormattingExample = () => {\n  return (\n    <div className=\"ex-format-bytes-formatting\">\n      <FormatBytesFormatting />\n      <style>{`.ex-format-bytes-formatting plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesFormattingExample;\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"en\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"de\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"en\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"de\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesLocale = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"10000100\" locale=\"en\" unit=\"kilo\"></Format.Bytes>\n      <Format.Bytes value=\"10000100\" locale=\"de\" unit=\"kilo\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesLocale;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesLocale = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes\n        value=\"10000100\"\n        locale=\"en\"\n        unit=\"kilo\"\n      ></plus-format-bytes>\n      <plus-format-bytes\n        value=\"10000100\"\n        locale=\"de\"\n        unit=\"kilo\"\n      ></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesLocale;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"en\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"de\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"en\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n  <plus-format-bytes\n    value=\"10000100\"\n    locale=\"de\"\n    unit=\"kilo\"\n  ></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesLocale = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"10000100\" locale=\"en\" unit=\"kilo\"></Format.Bytes>\n      <Format.Bytes value=\"10000100\" locale=\"de\" unit=\"kilo\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesLocaleExample = () => {\n  return (\n    <div className=\"ex-format-bytes-locale\">\n      <FormatBytesLocale />\n      <style>{`.ex-format-bytes-locale plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesLocaleExample;\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesSeparator = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" separator=\"\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" separator=\" \"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesSeparator;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesSeparator = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesSeparator;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "separator",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesSeparator = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" separator=\"\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" separator=\" \"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesSeparatorExample = () => {\n  return (\n    <div className=\"ex-format-bytes-separator\">\n      <FormatBytesSeparator />\n      <style>{`.ex-format-bytes-separator plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesSeparatorExample;\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesSigned = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"-1000\"></Format.Bytes>\n      <Format.Bytes value=\"-1000\" signed></Format.Bytes>\n      <Format.Bytes value=\"0\"></Format.Bytes>\n      <Format.Bytes value=\"0\" signed></Format.Bytes>\n      <Format.Bytes value=\"1000\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" signed></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesSigned;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesSigned = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n      <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n      <plus-format-bytes value=\"0\"></plus-format-bytes>\n      <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n      <plus-format-bytes value=\"1000\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesSigned;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "signed",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesSigned = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"-1000\"></Format.Bytes>\n      <Format.Bytes value=\"-1000\" signed></Format.Bytes>\n      <Format.Bytes value=\"0\"></Format.Bytes>\n      <Format.Bytes value=\"0\" signed></Format.Bytes>\n      <Format.Bytes value=\"1000\"></Format.Bytes>\n      <Format.Bytes value=\"1000\" signed></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesSignedExample = () => {\n  return (\n    <div className=\"ex-format-bytes-signed\">\n      <FormatBytesSigned />\n      <style>{`.ex-format-bytes-signed plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesSignedExample;\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n  <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n  <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesStandard = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" standard=\"METRIC\"></Format.Bytes>\n      <Format.Bytes value=\"1024\" standard=\"IEC\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesStandard;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesStandard = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n      <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesStandard;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n  <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n  <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "standard",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesStandard = () => {\n  return (\n    <Center>\n      <Format.Bytes value=\"1000\" standard=\"METRIC\"></Format.Bytes>\n      <Format.Bytes value=\"1024\" standard=\"IEC\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesStandardExample = () => {\n  return (\n    <div className=\"ex-format-bytes-standard\">\n      <FormatBytesStandard />\n      <style>{`.ex-format-bytes-standard plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesStandardExample;\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "angular",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "javascript",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "react",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesUnit = () => {\n  return (\n    <Center>\n      <Format.Bytes unit=\"auto\" value=\"1000\"></Format.Bytes>\n      <Format.Bytes unit=\"base\" value=\"10000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"100000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"1000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"10000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"100000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"1000000000\"></Format.Bytes>\n    </Center>\n  );\n};\nexport default FormatBytesUnit;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "react@experimental",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesUnit = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesUnit;\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "svelte",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "vue",
+    "component": "format-bytes",
+    "detail": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
+      "style": "plus-center {\n  flex-direction: column;\n}\n",
+      "template": "<plus-center>\n  <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n</plus-center>\n"
+    }
+  },
+  {
+    "key": "unit",
+    "category": "preview",
+    "component": "format-bytes",
+    "detail": {
+      "rtl": false,
+      "script": "import { Center, Format } from '@htmlplus/react';\nconst FormatBytesUnit = () => {\n  return (\n    <Center>\n      <Format.Bytes unit=\"auto\" value=\"1000\"></Format.Bytes>\n      <Format.Bytes unit=\"base\" value=\"10000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"100000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"1000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"10000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"100000000\"></Format.Bytes>\n      <Format.Bytes unit=\"kilo\" value=\"1000000000\"></Format.Bytes>\n    </Center>\n  );\n};\n\nconst FormatBytesUnitExample = () => {\n  return (\n    <div className=\"ex-format-bytes-unit\">\n      <FormatBytesUnit />\n      <style>{`.ex-format-bytes-unit plus-center {  flex-direction: column;}`}</style>\n    </div>\n  )\n};\n\nexport default FormatBytesUnitExample;\n"
+    }
+  },
+  {
     "key": "align-content",
     "category": "angular",
     "component": "grid",

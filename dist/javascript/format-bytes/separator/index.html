@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Format Bytes | Separator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      plus-center {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <plus-center>
+      <plus-format-bytes value="1000" separator=""></plus-format-bytes>
+      <plus-format-bytes value="1000" separator=" "></plus-format-bytes>
+    </plus-center>
+
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/center.js';
+      import 'https://unpkg.com/@htmlplus/core/format-bytes.js';
+    </script>
+  </body>
+</html>
