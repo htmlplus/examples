@@ -1,8 +1,8 @@
-import { Center, Format } from '@htmlplus/react';
+import { Center, FormatBytes } from '@htmlplus/react';
 const FormatBytesDefault = () => {
   return (
     <Center>
-      <Format.Bytes value="1000"></Format.Bytes>
+      <FormatBytes value="1000"></FormatBytes>
     </Center>
   );
 };

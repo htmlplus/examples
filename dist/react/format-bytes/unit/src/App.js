@@ -1,14 +1,14 @@
-import { Center, Format } from '@htmlplus/react';
+import { Center, FormatBytes } from '@htmlplus/react';
 const FormatBytesUnit = () => {
   return (
     <Center>
-      <Format.Bytes unit="auto" value="1000"></Format.Bytes>
-      <Format.Bytes unit="base" value="10000"></Format.Bytes>
-      <Format.Bytes unit="kilo" value="100000"></Format.Bytes>
-      <Format.Bytes unit="kilo" value="1000000"></Format.Bytes>
-      <Format.Bytes unit="kilo" value="10000000"></Format.Bytes>
-      <Format.Bytes unit="kilo" value="100000000"></Format.Bytes>
-      <Format.Bytes unit="kilo" value="1000000000"></Format.Bytes>
+      <FormatBytes unit="auto" value="1000"></FormatBytes>
+      <FormatBytes unit="base" value="10000"></FormatBytes>
+      <FormatBytes unit="kilo" value="100000"></FormatBytes>
+      <FormatBytes unit="kilo" value="1000000"></FormatBytes>
+      <FormatBytes unit="kilo" value="10000000"></FormatBytes>
+      <FormatBytes unit="kilo" value="100000000"></FormatBytes>
+      <FormatBytes unit="kilo" value="1000000000"></FormatBytes>
     </Center>
   );
 };

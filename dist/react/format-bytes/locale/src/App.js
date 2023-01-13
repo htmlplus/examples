@@ -1,9 +1,9 @@
-import { Center, Format } from '@htmlplus/react';
+import { Center, FormatBytes } from '@htmlplus/react';
 const FormatBytesLocale = () => {
   return (
     <Center>
-      <Format.Bytes value="10000100" locale="en" unit="kilo"></Format.Bytes>
-      <Format.Bytes value="10000100" locale="de" unit="kilo"></Format.Bytes>
+      <FormatBytes value="10000100" locale="en" unit="kilo"></FormatBytes>
+      <FormatBytes value="10000100" locale="de" unit="kilo"></FormatBytes>
     </Center>
   );
 };

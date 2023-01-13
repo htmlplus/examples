@@ -1,13 +1,13 @@
-import { Center, Format } from '@htmlplus/react';
+import { Center, FormatBytes } from '@htmlplus/react';
 const FormatBytesSigned = () => {
   return (
     <Center>
-      <Format.Bytes value="-1000"></Format.Bytes>
-      <Format.Bytes value="-1000" signed></Format.Bytes>
-      <Format.Bytes value="0"></Format.Bytes>
-      <Format.Bytes value="0" signed></Format.Bytes>
-      <Format.Bytes value="1000"></Format.Bytes>
-      <Format.Bytes value="1000" signed></Format.Bytes>
+      <FormatBytes value="-1000"></FormatBytes>
+      <FormatBytes value="-1000" signed></FormatBytes>
+      <FormatBytes value="0"></FormatBytes>
+      <FormatBytes value="0" signed></FormatBytes>
+      <FormatBytes value="1000"></FormatBytes>
+      <FormatBytes value="1000" signed></FormatBytes>
     </Center>
   );
 };
