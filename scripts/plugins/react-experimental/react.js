@@ -24,7 +24,7 @@ import {
 } from '../../utils.js';
 
 export const reactExperimental = (options) => {
-  const name = 'react@experimental';
+  const name = 'react-experimental';
   const run = (context) => {
     const cwd = __dirname(import.meta.url);
 

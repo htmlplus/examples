@@ -7,7 +7,7 @@ export const document = (options) => {
   const name = 'document';
   const finish = (global) => {
     const outputs = [];
-    const plugins = ['angular', 'javascript', 'react', 'react@experimental', 'svelte', 'vue', 'preview'];
+    const plugins = ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue', 'preview'];
     for (const context of global.contexts) {
       const [component, example] = context.directoryPath.split(/[\/|\\]/g).slice(-2);
       for (const plugin of plugins) {

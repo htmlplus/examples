@@ -9,7 +9,7 @@ import {
   javascript,
   prepare,
   preview,
-  react,
+  reactDedicated,
   reactExperimental,
   svelte,
   vue
@@ -51,7 +51,7 @@ const { start, run, finish } = compiler(
       return destination(context, 'javascript');
     }
   }),
-  react({
+  reactDedicated({
     componentRefrence() {
       return '@htmlplus/react';
     },
@@ -69,7 +69,7 @@ const { start, run, finish } = compiler(
       return name.replace('plus-', '').split('-').map(pascalCase).join('.');
     },
     destination(context) {
-      return destination(context, 'react');
+      return destination(context, 'react-dedicated');
     },
     eventNameConvertor(name) {
       return name.replace('onPlus', 'on');
@@ -80,7 +80,7 @@ const { start, run, finish } = compiler(
       return `@htmlplus/core/${name.split('-').slice(1).join('-')}.js`;
     },
     destination(context) {
-      return destination(context, 'react@experimental');
+      return destination(context, 'react-experimental');
     },
     eventNameConvertor(name) {
       if (name.indexOf('Plus') == -1) return name;

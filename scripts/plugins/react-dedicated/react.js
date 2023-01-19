@@ -24,8 +24,8 @@ import {
   styleToObject
 } from '../../utils.js';
 
-export const react = (options) => {
-  const name = 'react';
+export const reactDedicated = (options) => {
+  const name = 'react-dedicated';
   const run = (context) => {
     const cwd = __dirname(import.meta.url);
 

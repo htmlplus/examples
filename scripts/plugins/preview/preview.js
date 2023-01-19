@@ -11,7 +11,7 @@ export const preview = () => {
         .slice(-2)
         .join('-');
 
-    let { script, style } = getOutput('react', context);
+    let { script, style } = getOutput('react-dedicated', context);
 
     if (style) style = scoped(style, `.${classNamePrefix}`);
 
