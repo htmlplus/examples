@@ -26,14 +26,18 @@ class BrowseDefault {
       <plus-browse
         droppable
         onPlusChange={(event) => this.onChange(event)}
-      ></plus-browse>
+      >
+        Click or Drag & Drop a file(s) here
+      </plus-browse>
     );
   }
 }
 ```
 
 ```html [javascript:template]
-<plus-browse id="element" droppable></plus-browse>
+<plus-browse id="element" droppable>
+  Click or Drag & Drop a file(s) here
+</plus-browse>
 ```
 
 ```js [javascript:script]

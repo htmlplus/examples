@@ -1,5 +1,7 @@
 <template>
-  <plus-browse droppable @plus-change="onChange($event)"></plus-browse>
+  <plus-browse droppable @plus-change="onChange($event)">
+    Click or Drag & Drop a file(s) here
+  </plus-browse>
 </template>
 
 <script setup>

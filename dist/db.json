@@ -2138,7 +2138,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/browse.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n}\n",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n",
-      "template": "<plus-browse droppable (plus-change)=\"onChange($event)\"></plus-browse>\n"
+      "template": "<plus-browse droppable (plus-change)=\"onChange($event)\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
     }
   },
   {
@@ -2148,7 +2148,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/browse.js';\n\nconst onChange = (event) => {\r\n  const name = event.detail.files[0].file.name;\r\n  alert(`File '${name}' selected.`);\r\n};\r\nelement.addEventListener('plus-change', onChange);",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n",
-      "template": "<plus-browse id=\"element\" droppable></plus-browse>"
+      "template": "<plus-browse id=\"element\" droppable>\r\n  Click or Drag & Drop a file(s) here\r\n</plus-browse>"
     }
   },
   {
@@ -2156,7 +2156,7 @@
     "category": "react-dedicated",
     "component": "browse",
     "detail": {
-      "script": "import { Browse } from '@htmlplus/react';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return <Browse droppable onChange={(event) => onChange(event)}></Browse>;\n};\nexport default BrowseDefault;\n",
+      "script": "import { Browse } from '@htmlplus/react';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return (\n    <Browse droppable onChange={(event) => onChange(event)}>\n      Click or Drag & Drop a file(s) here\n    </Browse>\n  );\n};\nexport default BrowseDefault;\n",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n"
     }
   },
@@ -2165,7 +2165,7 @@
     "category": "react-experimental",
     "component": "browse",
     "detail": {
-      "script": "import '@htmlplus/core/browse.js';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return (\n    <plus-browse\n      droppable\n      onplus-change={(event) => onChange(event)}\n    ></plus-browse>\n  );\n};\nexport default BrowseDefault;\n",
+      "script": "import '@htmlplus/core/browse.js';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return (\n    <plus-browse droppable onplus-change={(event) => onChange(event)}>\n      Click or Drag & Drop a file(s) here\n    </plus-browse>\n  );\n};\nexport default BrowseDefault;\n",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n"
     }
   },
@@ -2176,7 +2176,7 @@
     "detail": {
       "script": "import '@htmlplus/core/browse.js';\nfunction onChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n",
-      "template": "<plus-browse\n  droppable\n  on:plus-change=\"{event => onChange(event)}\"\n></plus-browse>\n"
+      "template": "<plus-browse droppable on:plus-change=\"{event => onChange(event)}\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
     }
   },
   {
@@ -2186,7 +2186,7 @@
     "detail": {
       "script": "import '@htmlplus/core/browse.js';\nfunction onChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
       "style": "plus-browse {\n  background: white;\n  border: 2px dashed #e0e0e0;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: #0087f7;\n}\n",
-      "template": "<plus-browse droppable @plus-change=\"onChange($event)\"></plus-browse>\n"
+      "template": "<plus-browse droppable @plus-change=\"onChange($event)\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
     }
   },
   {
@@ -2195,7 +2195,7 @@
     "component": "browse",
     "detail": {
       "rtl": false,
-      "script": "import { Browse } from '@htmlplus/react';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return <Browse droppable onChange={(event) => onChange(event)}></Browse>;\n};\n\nconst BrowseDefaultExample = () => {\n  return (\n    <div className=\"ex-browse-default\">\n      <BrowseDefault />\n      <style>{`.ex-browse-default plus-browse {  background: white;  border: 2px dashed #e0e0e0;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-default plus-browse[dragging]:not([dragging='false']) {  border-color: #0087f7;}`}</style>\n    </div>\n  )\n};\n\nexport default BrowseDefaultExample;\n"
+      "script": "import { Browse } from '@htmlplus/react';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return (\n    <Browse droppable onChange={(event) => onChange(event)}>\n      Click or Drag & Drop a file(s) here\n    </Browse>\n  );\n};\n\nconst BrowseDefaultExample = () => {\n  return (\n    <div className=\"ex-browse-default\">\n      <BrowseDefault />\n      <style>{`.ex-browse-default plus-browse {  background: white;  border: 2px dashed #e0e0e0;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-default plus-browse[dragging]:not([dragging='false']) {  border-color: #0087f7;}`}</style>\n    </div>\n  )\n};\n\nexport default BrowseDefaultExample;\n"
     }
   },
   {

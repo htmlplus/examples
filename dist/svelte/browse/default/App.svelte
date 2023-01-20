@@ -6,10 +6,9 @@
   }
 </script>
 
-<plus-browse
-  droppable
-  on:plus-change="{event => onChange(event)}"
-></plus-browse>
+<plus-browse droppable on:plus-change="{event => onChange(event)}">
+  Click or Drag & Drop a file(s) here
+</plus-browse>
 
 <style>
   plus-browse {

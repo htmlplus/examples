@@ -5,10 +5,9 @@ const BrowseDefault = () => {
     alert(`File '${name}' selected.`);
   };
   return (
-    <plus-browse
-      droppable
-      onplus-change={(event) => onChange(event)}
-    ></plus-browse>
+    <plus-browse droppable onplus-change={(event) => onChange(event)}>
+      Click or Drag & Drop a file(s) here
+    </plus-browse>
   );
 };
 export default BrowseDefault;

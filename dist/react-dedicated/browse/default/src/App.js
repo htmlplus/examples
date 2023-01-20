@@ -4,6 +4,10 @@ const BrowseDefault = () => {
     const name = event.detail.files[0].file.name;
     alert(`File '${name}' selected.`);
   };
-  return <Browse droppable onChange={(event) => onChange(event)}></Browse>;
+  return (
+    <Browse droppable onChange={(event) => onChange(event)}>
+      Click or Drag & Drop a file(s) here
+    </Browse>
+  );
 };
 export default BrowseDefault;
