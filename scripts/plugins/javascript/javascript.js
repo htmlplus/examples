@@ -105,10 +105,9 @@ export const javascript = (options) => {
 
     const config = (() => {
       // TODO
-      return getSnippet('config', context)?.content?.replace(
-        '@htmlplus/core',
-        'https://cdn.skypack.dev/@htmlplus/core'
-      );
+      return getSnippet('config', context)
+        ?.content?.replace('@htmlplus/core', 'https://cdn.skypack.dev/@htmlplus/core')
+        ?.replace('@faker-js/faker', 'https://cdn.skypack.dev/@faker-js/faker');
     })();
 
     const script = (() => {

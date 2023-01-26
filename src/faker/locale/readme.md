@@ -9,7 +9,9 @@ import { faker } from '@faker-js/faker/locale/de';
 setConfig({
   component: {
     'plus-faker': {
+      property: {
         instance: faker
+      }
     }
   }
 });
