@@ -6429,70 +6429,70 @@
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "angular",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-faker></plus-faker>\n"
+      "template": "<plus-faker locale=\"ja\"></plus-faker>\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "javascript",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\nimport { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\nimport { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker></plus-faker>\n"
+      "template": "<plus-faker locale=\"ja\"></plus-faker>\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "react-dedicated",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import { Faker } from '@htmlplus/react';\nconst FakerLocale = () => {\n  return <Faker></Faker>;\n};\nexport default FakerLocale;\n"
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerLocalization = () => {\n  return <Faker locale=\"ja\"></Faker>;\n};\nexport default FakerLocalization;\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "react-experimental",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import '@htmlplus/core/faker.js';\nconst FakerLocale = () => {\n  return <plus-faker></plus-faker>;\n};\nexport default FakerLocale;\n"
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerLocalization = () => {\n  return <plus-faker locale=\"ja\"></plus-faker>;\n};\nexport default FakerLocalization;\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "svelte",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker></plus-faker>\n"
+      "template": "<plus-faker locale=\"ja\"></plus-faker>\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "vue",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker></plus-faker>\n"
+      "template": "<plus-faker locale=\"ja\"></plus-faker>\n"
     }
   },
   {
-    "key": "locale",
+    "key": "localization",
     "category": "preview",
     "component": "faker",
     "detail": {
       "rtl": false,
-      "script": "import { Faker } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});\n\nconst FakerLocale = () => {\n  return <Faker></Faker>;\n};\n\nconst FakerLocaleExample = () => {\n  return (\n    <div className=\"ex-faker-locale\">\n      <FakerLocale />\n    </div>\n  )\n};\n\nexport default FakerLocaleExample;\n"
+      "script": "import { Faker } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/ja';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});\n\nconst FakerLocalization = () => {\n  return <Faker locale=\"ja\"></Faker>;\n};\n\nconst FakerLocalizationExample = () => {\n  return (\n    <div className=\"ex-faker-localization\">\n      <FakerLocalization />\n    </div>\n  )\n};\n\nexport default FakerLocalizationExample;\n"
     }
   },
   {
