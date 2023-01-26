@@ -1,5 +1,5 @@
 import '@htmlplus/core/faker.js';
 const FakerLocalization = () => {
-  return <plus-faker locale="ja"></plus-faker>;
+  return <plus-faker></plus-faker>;
 };
 export default FakerLocalization;

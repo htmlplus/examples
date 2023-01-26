@@ -42,7 +42,7 @@ const { start, run, finish } = compiler(
   }),
   javascript({
     componentRefrence(name) {
-      return `https://unpkg.com/@htmlplus/core/${name.split('-').slice(1).join('-')}.js`;
+      return `https://cdn.skypack.dev/@htmlplus/core/${name.split('-').slice(1).join('-')}.js`;
     },
     componentNameConvertor(name) {
       return name;

@@ -1,5 +1,5 @@
 ```html [template]
-<plus-faker locale="ja"></plus-faker>
+<plus-faker></plus-faker>
 ```
 
 ```js [config]
