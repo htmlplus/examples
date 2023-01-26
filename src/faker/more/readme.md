@@ -18,3 +18,9 @@
     <plus-faker api="datatype.uuid"></plus-faker>
 </div>
 ```
+
+```json [dependencies]
+{
+    "@faker-js/faker": "latest"
+}
+```

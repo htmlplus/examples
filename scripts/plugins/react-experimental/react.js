@@ -109,6 +109,16 @@ export const reactExperimental = (options) => {
       return content;
     })();
 
+    const dependencies = (() => {
+      const content = getSnippet('dependencies', context)?.content;
+
+      if (!content) return;
+
+      return Object.keys(content)
+        .map((key) => `\n    "${key}": "${content[key]}",`)
+        .join('');
+    })();
+
     const script = (() => {
       const ast = t.cloneNode(context.fileAST, true);
 
@@ -155,6 +165,7 @@ export const reactExperimental = (options) => {
 
     setOutput(name, context, {
       config,
+      dependencies,
       script,
       style
     });

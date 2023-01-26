@@ -16,3 +16,9 @@ setConfig({
   }
 });
 ```
+
+```json [dependencies]
+{
+    "@faker-js/faker": "latest"
+}
+```

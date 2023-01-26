@@ -6276,6 +6276,7 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerApi = () => {\n  return <plus-faker api=\"lorem.paragraphs\"></plus-faker>;\n};\nexport default FakerApi;\n"
     }
   },
@@ -6337,6 +6338,7 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerArguments = () => {\n  return (\n    <plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n  );\n};\nexport default FakerArguments;\n"
     }
   },
@@ -6398,6 +6400,7 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerDefault = () => {\n  return <plus-faker></plus-faker>;\n};\nexport default FakerDefault;\n"
     }
   },
@@ -6463,6 +6466,7 @@
     "component": "faker",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerLocale = () => {\n  return <plus-faker></plus-faker>;\n};\nexport default FakerLocale;\n"
     }
   },
@@ -6529,6 +6533,7 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerMore = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"name.fullName\"></plus-faker>\n      <plus-faker api=\"address.county\"></plus-faker>\n      <plus-faker api=\"date.weekday\"></plus-faker>\n      <plus-faker api=\"animal.dog\"></plus-faker>\n      <plus-faker api=\"internet.email\"></plus-faker>\n      <plus-faker api=\"phone.number\"></plus-faker>\n      <plus-faker api=\"color.human\"></plus-faker>\n      <plus-faker api=\"datatype.uuid\"></plus-faker>\n    </div>\n  );\n};\nexport default FakerMore;\n",
       "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n"
     }
@@ -6593,6 +6598,7 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
+      "dependencies": "\n    \"@faker-js/faker\": \"latest\",",
       "script": "import '@htmlplus/core/faker.js';\nconst FakerSeed = () => {\n  return <plus-faker seed=\"12345\"></plus-faker>;\n};\nexport default FakerSeed;\n"
     }
   },

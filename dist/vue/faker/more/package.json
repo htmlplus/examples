@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@htmlplus/core": "latest",
+    "@faker-js/faker": "latest",
     "vue": "^3.2.0"
   },
   "devDependencies": {

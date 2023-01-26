@@ -40,7 +40,11 @@ export const prepare = () => {
 
         const options = { dock, rtl };
 
-        const content = lines.slice(1, -1).join('\n').trim();
+        let content = lines.slice(1, -1).join('\n').trim();
+
+        if (key == 'dependencies') {
+          content = JSON.parse(content);
+        }
 
         snippets.push({ key, type, options, content });
       } catch {}
