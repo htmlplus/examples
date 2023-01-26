@@ -9,7 +9,7 @@ const StickySidebar = () => {
       <plus-grid>
         <plus-grid-item xs="7">
           <plus-faker
-            type="lorem.paragraphs"
+            api="lorem.paragraphs"
             arguments='[10, "\n\n"]'
           ></plus-faker>
         </plus-grid-item>

@@ -8524,7 +8524,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    console.log(event.detail);\n  }\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -8534,7 +8534,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/scroll-detector.js';\n\nscroll1.addEventListener('plus-change', (event) => {\r\n  console.log(event.detail)\r\n})",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" source=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" source=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
     }
   },
   {
@@ -8542,7 +8542,7 @@
     "category": "react-dedicated",
     "component": "scroll-detector",
     "detail": {
-      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -8551,7 +8551,7 @@
     "category": "react-experimental",
     "component": "scroll-detector",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          type=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        source=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        source=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -8562,7 +8562,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -8572,7 +8572,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -8581,7 +8581,7 @@
     "component": "scroll-detector",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\n\nconst ScrollDetectorDefaultExample = () => {\n  return (\n    <div className=\"ex-scroll-detector-default dock\">\n      <ScrollDetectorDefault />\n      <style>{`.ex-scroll-detector-default .container {  position: relative;}.ex-scroll-detector-default .scrollable {  height: 20em;  overflow-y: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default ScrollDetectorDefaultExample;\n"
+      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\n\nconst ScrollDetectorDefaultExample = () => {\n  return (\n    <div className=\"ex-scroll-detector-default dock\">\n      <ScrollDetectorDefault />\n      <style>{`.ex-scroll-detector-default .container {  position: relative;}.ex-scroll-detector-default .scrollable {  height: 20em;  overflow-y: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default ScrollDetectorDefaultExample;\n"
     }
   },
   {
@@ -9792,7 +9792,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9802,7 +9802,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9810,7 +9810,7 @@
     "category": "react-dedicated",
     "component": "sticky",
     "detail": {
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky>\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
     }
   },
@@ -9819,7 +9819,7 @@
     "category": "react-experimental",
     "component": "sticky",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
     }
   },
@@ -9830,7 +9830,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9840,7 +9840,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9849,7 +9849,7 @@
     "component": "sticky",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky>\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyDefaultExample = () => {\n  return (\n    <div className=\"ex-sticky-default dock\">\n      <StickyDefault />\n      <style>{`.ex-sticky-default .container {  height: 20rem;  overflow: auto;}.ex-sticky-default plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-default plus-sticky {  background-color: gold;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyDefaultExample;\n"
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyDefaultExample = () => {\n  return (\n    <div className=\"ex-sticky-default dock\">\n      <StickyDefault />\n      <style>{`.ex-sticky-default .container {  height: 20rem;  overflow: auto;}.ex-sticky-default plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-default plus-sticky {  background-color: gold;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyDefaultExample;\n"
     }
   },
   {
@@ -9859,7 +9859,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
-      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
+      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
     }
   },
   {
@@ -9869,7 +9869,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
-      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
+      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
     }
   },
   {
@@ -9877,7 +9877,7 @@
     "category": "react-dedicated",
     "component": "sticky",
     "detail": {
-      "script": "import { Faker, Grid, Sticky } from '@htmlplus/react';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <Faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></Faker>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
+      "script": "import { Faker, Grid, Sticky } from '@htmlplus/react';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <Faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></Faker>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n"
     }
   },
@@ -9886,7 +9886,7 @@
     "category": "react-experimental",
     "component": "sticky",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <plus-grid>\n        <plus-grid-item xs=\"7\">\n          <plus-faker\n            type=\"lorem.paragraphs\"\n            arguments='[10, \"\\n\\n\"]'\n          ></plus-faker>\n        </plus-grid-item>\n        <plus-grid-item xs=\"5\">\n          <br />\n          <plus-sticky>\n            <aside>A Sticky Sidebar</aside>\n          </plus-sticky>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <plus-grid>\n        <plus-grid-item xs=\"7\">\n          <plus-faker\n            api=\"lorem.paragraphs\"\n            arguments='[10, \"\\n\\n\"]'\n          ></plus-faker>\n        </plus-grid-item>\n        <plus-grid-item xs=\"5\">\n          <br />\n          <plus-sticky>\n            <aside>A Sticky Sidebar</aside>\n          </plus-sticky>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n"
     }
   },
@@ -9897,7 +9897,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
-      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
+      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
     }
   },
   {
@@ -9907,7 +9907,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
-      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
+      "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
     }
   },
   {
@@ -9916,7 +9916,7 @@
     "component": "sticky",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, Grid, Sticky } from '@htmlplus/react';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <Faker type=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></Faker>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\n\nconst StickySidebarExample = () => {\n  return (\n    <div className=\"ex-sticky-sidebar dock\">\n      <StickySidebar />\n      <style>{`.ex-sticky-sidebar .container {  height: 20rem;  overflow: auto;}.ex-sticky-sidebar aside,.ex-sticky-sidebar header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-sidebar plus-faker {  display: block;  padding: 1rem;  text-align: justify;}`}</style>\n    </div>\n  )\n};\n\nexport default StickySidebarExample;\n"
+      "script": "import { Faker, Grid, Sticky } from '@htmlplus/react';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <Faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></Faker>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\n\nconst StickySidebarExample = () => {\n  return (\n    <div className=\"ex-sticky-sidebar dock\">\n      <StickySidebar />\n      <style>{`.ex-sticky-sidebar .container {  height: 20rem;  overflow: auto;}.ex-sticky-sidebar aside,.ex-sticky-sidebar header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-sidebar plus-faker {  display: block;  padding: 1rem;  text-align: justify;}`}</style>\n    </div>\n  )\n};\n\nexport default StickySidebarExample;\n"
     }
   },
   {
@@ -9926,7 +9926,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9936,7 +9936,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9944,7 +9944,7 @@
     "category": "react-dedicated",
     "component": "sticky",
     "detail": {
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickySlots;\n",
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickySlots;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n"
     }
   },
@@ -9953,7 +9953,7 @@
     "category": "react-experimental",
     "component": "sticky",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <plus-sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </plus-sticky>\n      <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickySlots;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <plus-sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickySlots;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n"
     }
   },
@@ -9964,7 +9964,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9974,7 +9974,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -9983,7 +9983,7 @@
     "component": "sticky",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickySlotsExample = () => {\n  return (\n    <div className=\"ex-sticky-slots dock\">\n      <StickySlots />\n      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-slots plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;}`}</style>\n    </div>\n  )\n};\n\nexport default StickySlotsExample;\n"
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickySlotsExample = () => {\n  return (\n    <div className=\"ex-sticky-slots dock\">\n      <StickySlots />\n      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-slots plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;}`}</style>\n    </div>\n  )\n};\n\nexport default StickySlotsExample;\n"
     }
   },
   {
@@ -9993,7 +9993,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10003,7 +10003,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10011,7 +10011,7 @@
     "category": "react-dedicated",
     "component": "sticky",
     "detail": {
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky watcher>\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky watcher>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n"
     }
   },
@@ -10020,7 +10020,7 @@
     "category": "react-experimental",
     "component": "sticky",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky watcher>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky watcher>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n"
     }
   },
@@ -10031,7 +10031,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10041,7 +10041,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10050,7 +10050,7 @@
     "component": "sticky",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky watcher>\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyStateAttributeExample = () => {\n  return (\n    <div className=\"ex-sticky-state-attribute dock\">\n      <StickyStateAttribute />\n      <style>{`.ex-sticky-state-attribute .container {  height: 20rem;  overflow: auto;}.ex-sticky-state-attribute plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-state-attribute plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-state-attribute plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyStateAttributeExample;\n"
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky watcher>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyStateAttributeExample = () => {\n  return (\n    <div className=\"ex-sticky-state-attribute dock\">\n      <StickyStateAttribute />\n      <style>{`.ex-sticky-state-attribute .container {  height: 20rem;  overflow: auto;}.ex-sticky-state-attribute plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-state-attribute plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-state-attribute plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyStateAttributeExample;\n"
     }
   },
   {
@@ -10060,7 +10060,7 @@
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10070,7 +10070,7 @@
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10078,7 +10078,7 @@
     "category": "react-dedicated",
     "component": "sticky",
     "detail": {
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky top=\"20px\">\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyTop;\n",
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky top=\"20px\">\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\nexport default StickyTop;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
     }
   },
@@ -10087,7 +10087,7 @@
     "category": "react-experimental",
     "component": "sticky",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky top=\"20px\">\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyTop;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky top=\"20px\">\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n    </div>\n  );\n};\nexport default StickyTop;\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
     }
   },
@@ -10098,7 +10098,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10108,7 +10108,7 @@
     "detail": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
       "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-faker type=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
     }
   },
   {
@@ -10117,7 +10117,7 @@
     "component": "sticky",
     "detail": {
       "rtl": false,
-      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <Faker type=\"lorem.paragraphs\"></Faker>\n      <Sticky top=\"20px\">\n        <Faker></Faker>\n      </Sticky>\n      <Faker type=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyTopExample = () => {\n  return (\n    <div className=\"ex-sticky-top dock\">\n      <StickyTop />\n      <style>{`.ex-sticky-top .container {  height: 20rem;  overflow: auto;}.ex-sticky-top plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-top plus-sticky {  background-color: gold;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyTopExample;\n"
+      "script": "import { Faker, Sticky } from '@htmlplus/react';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky top=\"20px\">\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n    </div>\n  );\n};\n\nconst StickyTopExample = () => {\n  return (\n    <div className=\"ex-sticky-top dock\">\n      <StickyTop />\n      <style>{`.ex-sticky-top .container {  height: 20rem;  overflow: auto;}.ex-sticky-top plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-top plus-sticky {  background-color: gold;}`}</style>\n    </div>\n  )\n};\n\nexport default StickyTopExample;\n"
     }
   },
   {

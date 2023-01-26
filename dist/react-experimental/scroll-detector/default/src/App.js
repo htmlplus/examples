@@ -8,7 +8,7 @@ const ScrollDetectorDefault = () => {
     <div className="container">
       <div className="scrollable">
         <plus-faker
-          type="lorem.paragraphs"
+          api="lorem.paragraphs"
           arguments='[20, "\n\n"]'
         ></plus-faker>
       </div>

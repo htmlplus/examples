@@ -7,7 +7,7 @@ const StickySlots = () => {
         <header slot="normal">Normal Header</header>
         <header slot="stick">Stick Header</header>
       </Sticky>
-      <Faker type="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
+      <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
     </div>
   );
 };

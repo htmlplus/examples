@@ -5,7 +5,7 @@ const StickySidebar = () => {
       <header>Header</header>
       <Grid>
         <Grid.Item xs="7">
-          <Faker type="lorem.paragraphs" arguments='[10, "\n\n"]'></Faker>
+          <Faker api="lorem.paragraphs" arguments='[10, "\n\n"]'></Faker>
         </Grid.Item>
         <Grid.Item xs="5">
           <br />

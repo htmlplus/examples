@@ -15,10 +15,10 @@ plus-sticky {
 
 ```html [template] [dock]
 <div class="container">
-  <plus-faker type="lorem.paragraphs"></plus-faker>
+  <plus-faker api="lorem.paragraphs"></plus-faker>
   <plus-sticky top="20px">
     <plus-faker></plus-faker>
   </plus-sticky>
-  <plus-faker type="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+  <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
 </div>
 ```

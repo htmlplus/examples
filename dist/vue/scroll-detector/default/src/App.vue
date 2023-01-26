@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="scrollable">
-      <plus-faker type="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+      <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
     </div>
     <plus-scroll-detector
       source=".scrollable"

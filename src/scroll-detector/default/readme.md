@@ -20,7 +20,7 @@ class ScrollDetectorDefault {
     return (
       <div class="container">
         <div class="scrollable">
-          <plus-faker type="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+          <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
         </div>
         <plus-scroll-detector
           source=".scrollable"
@@ -37,7 +37,7 @@ class ScrollDetectorDefault {
 ```html [javascript:template]
 <div class="container">
   <div class="scrollable">
-    <plus-faker type="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+    <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
   </div>
   <plus-scroll-detector id="scroll1" source=".scrollable" vertical></plus-scroll-detector>
 </div>
