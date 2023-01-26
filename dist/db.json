@@ -6307,7 +6307,7 @@
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "angular",
     "component": "faker",
     "detail": {
@@ -6316,7 +6316,7 @@
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "javascript",
     "component": "faker",
     "detail": {
@@ -6325,23 +6325,23 @@
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "react-dedicated",
     "component": "faker",
     "detail": {
-      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApiSArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\nexport default FakerApiSArguments;\n"
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\nexport default FakerArguments;\n"
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "react-experimental",
     "component": "faker",
     "detail": {
-      "script": "import '@htmlplus/core/faker.js';\nconst FakerApiSArguments = () => {\n  return (\n    <plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n  );\n};\nexport default FakerApiSArguments;\n"
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerArguments = () => {\n  return (\n    <plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n  );\n};\nexport default FakerArguments;\n"
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "svelte",
     "component": "faker",
     "detail": {
@@ -6350,7 +6350,7 @@
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "vue",
     "component": "faker",
     "detail": {
@@ -6359,12 +6359,12 @@
     }
   },
   {
-    "key": "api's-arguments",
+    "key": "arguments",
     "category": "preview",
     "component": "faker",
     "detail": {
       "rtl": false,
-      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApiSArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\n\nconst FakerApiSArgumentsExample = () => {\n  return (\n    <div className=\"ex-faker-api's-arguments\">\n      <FakerApiSArguments />\n    </div>\n  )\n};\n\nexport default FakerApiSArgumentsExample;\n"
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\n\nconst FakerArgumentsExample = () => {\n  return (\n    <div className=\"ex-faker-arguments\">\n      <FakerArguments />\n    </div>\n  )\n};\n\nexport default FakerArgumentsExample;\n"
     }
   },
   {
