@@ -5,7 +5,7 @@ setConfig({
   component: {
     'plus-faker': {
       property: {
-        instance: faker
+        // instance: faker
       }
     }
   }

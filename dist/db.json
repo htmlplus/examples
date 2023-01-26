@@ -6433,9 +6433,9 @@
     "category": "angular",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+      "template": "<plus-faker></plus-faker>\n"
     }
   },
   {
@@ -6443,9 +6443,9 @@
     "category": "javascript",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\nimport { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\nimport { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+      "template": "<plus-faker></plus-faker>\n"
     }
   },
   {
@@ -6453,8 +6453,8 @@
     "category": "react-dedicated",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import { Faker } from '@htmlplus/react';\nconst FakerLocale = () => {\n  return <Faker locale=\"de\"></Faker>;\n};\nexport default FakerLocale;\n"
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerLocale = () => {\n  return <Faker></Faker>;\n};\nexport default FakerLocale;\n"
     }
   },
   {
@@ -6462,8 +6462,8 @@
     "category": "react-experimental",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import '@htmlplus/core/faker.js';\nconst FakerLocale = () => {\n  return <plus-faker locale=\"de\"></plus-faker>;\n};\nexport default FakerLocale;\n"
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerLocale = () => {\n  return <plus-faker></plus-faker>;\n};\nexport default FakerLocale;\n"
     }
   },
   {
@@ -6471,9 +6471,9 @@
     "category": "svelte",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+      "template": "<plus-faker></plus-faker>\n"
     }
   },
   {
@@ -6481,9 +6481,9 @@
     "category": "vue",
     "component": "faker",
     "detail": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/faker.js';\n",
-      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+      "template": "<plus-faker></plus-faker>\n"
     }
   },
   {
@@ -6492,7 +6492,7 @@
     "component": "faker",
     "detail": {
       "rtl": false,
-      "script": "import { Faker } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        instance: faker\r\n      }\r\n    }\r\n  }\r\n});\n\nconst FakerLocale = () => {\n  return <Faker locale=\"de\"></Faker>;\n};\n\nconst FakerLocaleExample = () => {\n  return (\n    <div className=\"ex-faker-locale\">\n      <FakerLocale />\n    </div>\n  )\n};\n\nexport default FakerLocaleExample;\n"
+      "script": "import { Faker } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n      property: {\r\n        // instance: faker\r\n      }\r\n    }\r\n  }\r\n});\n\nconst FakerLocale = () => {\n  return <Faker></Faker>;\n};\n\nconst FakerLocaleExample = () => {\n  return (\n    <div className=\"ex-faker-locale\">\n      <FakerLocale />\n    </div>\n  )\n};\n\nexport default FakerLocaleExample;\n"
     }
   },
   {

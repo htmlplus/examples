@@ -1,5 +1,5 @@
 ```html [template]
-<plus-faker locale="de"></plus-faker>
+<plus-faker></plus-faker>
 ```
 
 ```js [config]
@@ -10,7 +10,7 @@ setConfig({
   component: {
     'plus-faker': {
       property: {
-        instance: faker
+        // instance: faker
       }
     }
   }

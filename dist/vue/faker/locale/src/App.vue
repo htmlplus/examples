@@ -1,5 +1,5 @@
 <template>
-  <plus-faker locale="de"></plus-faker>
+  <plus-faker></plus-faker>
 </template>
 
 <script setup>
