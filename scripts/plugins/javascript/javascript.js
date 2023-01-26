@@ -105,7 +105,10 @@ export const javascript = (options) => {
 
     const config = (() => {
       // TODO
-      return getSnippet('config', context)?.content?.replace('@htmlplus/core', 'https://unpkg.com/@htmlplus/core');
+      return getSnippet('config', context)?.content?.replace(
+        '@htmlplus/core',
+        'https://cdn.skypack.dev/@htmlplus/core'
+      );
     })();
 
     const script = (() => {

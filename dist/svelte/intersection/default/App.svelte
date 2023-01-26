@@ -2,6 +2,7 @@
   import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
   import '@htmlplus/core/center.js';
+  import '@htmlplus/core/faker.js';
   import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/sticky.js';
   let intersecting = false;
@@ -21,8 +22,7 @@
   <plus-intersection on:plus-change="{event => onChange(event)}">
     <plus-card elevation="10">
       <plus-card-body>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        <plus-faker></plus-faker>
       </plus-card-body>
     </plus-card>
   </plus-intersection>

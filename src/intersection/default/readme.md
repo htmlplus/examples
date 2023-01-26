@@ -48,8 +48,7 @@ class IntersectionDefault {
         <plus-intersection onPlusChange={(event) => this.onChange(event)}>
           <plus-card elevation="10">
             <plus-card-body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <plus-faker></plus-faker>
             </plus-card-body>
           </plus-card>
         </plus-intersection>
@@ -69,8 +68,7 @@ class IntersectionDefault {
   <plus-intersection id="intersection1">
     <plus-card elevation="10">
       <plus-card-body>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua.
+        <plus-faker></plus-faker>
       </plus-card-body>
     </plus-card>
   </plus-intersection>
