@@ -154,6 +154,7 @@ export const reactExperimental = (options) => {
 
     const model = {
       config,
+      dependencies,
       script,
       style,
       title
@@ -165,7 +166,6 @@ export const reactExperimental = (options) => {
 
     setOutput(name, context, {
       config,
-      dependencies,
       script,
       style
     });
