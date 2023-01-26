@@ -1,0 +1,3 @@
+```html [template]
+<plus-faker api="lorem.paragraphs"></plus-faker>
+```

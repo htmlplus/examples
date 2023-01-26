@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Faker | Locale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <plus-faker locale="de"></plus-faker>
+
+    <script type="module">
+      import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';
+      import { faker } from '@faker-js/faker/locale/de';
+
+      setConfig({
+        component: {
+          'plus-faker': {
+            instance: faker
+          }
+        }
+      });
+    </script>
+
+    <script type="module">
+      import 'https://unpkg.com/@htmlplus/core/faker.js';
+    </script>
+  </body>
+</html>

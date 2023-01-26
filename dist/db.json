@@ -6246,6 +6246,384 @@
     }
   },
   {
+    "key": "api",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApi = () => {\n  return <Faker api=\"lorem.paragraphs\"></Faker>;\n};\nexport default FakerApi;\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerApi = () => {\n  return <plus-faker api=\"lorem.paragraphs\"></plus-faker>;\n};\nexport default FakerApi;\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApi = () => {\n  return <Faker api=\"lorem.paragraphs\"></Faker>;\n};\n\nconst FakerApiExample = () => {\n  return (\n    <div className=\"ex-faker-api\">\n      <FakerApi />\n    </div>\n  )\n};\n\nexport default FakerApiExample;\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApiSArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\nexport default FakerApiSArguments;\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerApiSArguments = () => {\n  return (\n    <plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n  );\n};\nexport default FakerApiSArguments;\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n"
+    }
+  },
+  {
+    "key": "api's-arguments",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerApiSArguments = () => {\n  return <Faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></Faker>;\n};\n\nconst FakerApiSArgumentsExample = () => {\n  return (\n    <div className=\"ex-faker-api's-arguments\">\n      <FakerApiSArguments />\n    </div>\n  )\n};\n\nexport default FakerApiSArgumentsExample;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-faker></plus-faker>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker></plus-faker>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerDefault = () => {\n  return <Faker></Faker>;\n};\nexport default FakerDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerDefault = () => {\n  return <plus-faker></plus-faker>;\n};\nexport default FakerDefault;\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker></plus-faker>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker></plus-faker>\n"
+    }
+  },
+  {
+    "key": "default",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerDefault = () => {\n  return <Faker></Faker>;\n};\n\nconst FakerDefaultExample = () => {\n  return (\n    <div className=\"ex-faker-default\">\n      <FakerDefault />\n    </div>\n  )\n};\n\nexport default FakerDefaultExample;\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerLocale = () => {\n  return <Faker locale=\"de\"></Faker>;\n};\nexport default FakerLocale;\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerLocale = () => {\n  return <plus-faker locale=\"de\"></plus-faker>;\n};\nexport default FakerLocale;\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker locale=\"de\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "locale",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\nimport { faker } from '@faker-js/faker/locale/de';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-faker': {\r\n        instance: faker\r\n    }\r\n  }\r\n});\n\nconst FakerLocale = () => {\n  return <Faker locale=\"de\"></Faker>;\n};\n\nconst FakerLocaleExample = () => {\n  return (\n    <div className=\"ex-faker-locale\">\n      <FakerLocale />\n    </div>\n  )\n};\n\nexport default FakerLocaleExample;\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-faker api=\"name.fullName\"></plus-faker>\n  <plus-faker api=\"address.county\"></plus-faker>\n  <plus-faker api=\"date.weekday\"></plus-faker>\n  <plus-faker api=\"animal.dog\"></plus-faker>\n  <plus-faker api=\"internet.email\"></plus-faker>\n  <plus-faker api=\"phone.number\"></plus-faker>\n  <plus-faker api=\"color.human\"></plus-faker>\n  <plus-faker api=\"datatype.uuid\"></plus-faker>\n</div>\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-faker api=\"name.fullName\"></plus-faker>\n  <plus-faker api=\"address.county\"></plus-faker>\n  <plus-faker api=\"date.weekday\"></plus-faker>\n  <plus-faker api=\"animal.dog\"></plus-faker>\n  <plus-faker api=\"internet.email\"></plus-faker>\n  <plus-faker api=\"phone.number\"></plus-faker>\n  <plus-faker api=\"color.human\"></plus-faker>\n  <plus-faker api=\"datatype.uuid\"></plus-faker>\n</div>\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerMore = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"name.fullName\"></Faker>\n      <Faker api=\"address.county\"></Faker>\n      <Faker api=\"date.weekday\"></Faker>\n      <Faker api=\"animal.dog\"></Faker>\n      <Faker api=\"internet.email\"></Faker>\n      <Faker api=\"phone.number\"></Faker>\n      <Faker api=\"color.human\"></Faker>\n      <Faker api=\"datatype.uuid\"></Faker>\n    </div>\n  );\n};\nexport default FakerMore;\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerMore = () => {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"name.fullName\"></plus-faker>\n      <plus-faker api=\"address.county\"></plus-faker>\n      <plus-faker api=\"date.weekday\"></plus-faker>\n      <plus-faker api=\"animal.dog\"></plus-faker>\n      <plus-faker api=\"internet.email\"></plus-faker>\n      <plus-faker api=\"phone.number\"></plus-faker>\n      <plus-faker api=\"color.human\"></plus-faker>\n      <plus-faker api=\"datatype.uuid\"></plus-faker>\n    </div>\n  );\n};\nexport default FakerMore;\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-faker api=\"name.fullName\"></plus-faker>\n  <plus-faker api=\"address.county\"></plus-faker>\n  <plus-faker api=\"date.weekday\"></plus-faker>\n  <plus-faker api=\"animal.dog\"></plus-faker>\n  <plus-faker api=\"internet.email\"></plus-faker>\n  <plus-faker api=\"phone.number\"></plus-faker>\n  <plus-faker api=\"color.human\"></plus-faker>\n  <plus-faker api=\"datatype.uuid\"></plus-faker>\n</div>\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "style": ".container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-faker api=\"name.fullName\"></plus-faker>\n  <plus-faker api=\"address.county\"></plus-faker>\n  <plus-faker api=\"date.weekday\"></plus-faker>\n  <plus-faker api=\"animal.dog\"></plus-faker>\n  <plus-faker api=\"internet.email\"></plus-faker>\n  <plus-faker api=\"phone.number\"></plus-faker>\n  <plus-faker api=\"color.human\"></plus-faker>\n  <plus-faker api=\"datatype.uuid\"></plus-faker>\n</div>\n"
+    }
+  },
+  {
+    "key": "more",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerMore = () => {\n  return (\n    <div className=\"container\">\n      <Faker api=\"name.fullName\"></Faker>\n      <Faker api=\"address.county\"></Faker>\n      <Faker api=\"date.weekday\"></Faker>\n      <Faker api=\"animal.dog\"></Faker>\n      <Faker api=\"internet.email\"></Faker>\n      <Faker api=\"phone.number\"></Faker>\n      <Faker api=\"color.human\"></Faker>\n      <Faker api=\"datatype.uuid\"></Faker>\n    </div>\n  );\n};\n\nconst FakerMoreExample = () => {\n  return (\n    <div className=\"ex-faker-more\">\n      <FakerMore />\n      <style>{`.ex-faker-more .container {  display: flex;  flex-direction: column;  align-items: center;}`}</style>\n    </div>\n  )\n};\n\nexport default FakerMoreExample;\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "angular",
+    "component": "faker",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-faker seed=\"12345\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "javascript",
+    "component": "faker",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker seed=\"12345\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "react-dedicated",
+    "component": "faker",
+    "detail": {
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerSeed = () => {\n  return <Faker seed=\"12345\"></Faker>;\n};\nexport default FakerSeed;\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "react-experimental",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\nconst FakerSeed = () => {\n  return <plus-faker seed=\"12345\"></plus-faker>;\n};\nexport default FakerSeed;\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "svelte",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker seed=\"12345\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "vue",
+    "component": "faker",
+    "detail": {
+      "script": "import '@htmlplus/core/faker.js';\n",
+      "template": "<plus-faker seed=\"12345\"></plus-faker>\n"
+    }
+  },
+  {
+    "key": "seed",
+    "category": "preview",
+    "component": "faker",
+    "detail": {
+      "rtl": false,
+      "script": "import { Faker } from '@htmlplus/react';\nconst FakerSeed = () => {\n  return <Faker seed=\"12345\"></Faker>;\n};\n\nconst FakerSeedExample = () => {\n  return (\n    <div className=\"ex-faker-seed\">\n      <FakerSeed />\n    </div>\n  )\n};\n\nexport default FakerSeedExample;\n"
+    }
+  },
+  {
     "key": "decimals",
     "category": "angular",
     "component": "format-bytes",
