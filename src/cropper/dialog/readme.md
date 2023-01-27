@@ -4,7 +4,7 @@
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
 @Element()
@@ -76,4 +76,10 @@ const change = (disabled) => {
 };
 element1.addEventListener('plus-opened', () => change(false));
 element1.addEventListener('plus-closed', () => change(true));
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

@@ -16,7 +16,7 @@ plus-sticky[state="stick"] {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-faker api="lorem.paragraphs"></plus-faker>
   <plus-sticky watcher>
@@ -24,4 +24,10 @@ plus-sticky[state="stick"] {
   </plus-sticky>
   <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

@@ -23,7 +23,7 @@ plus-intersection {
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
 @Element()
@@ -81,4 +81,10 @@ intersection1.addEventListener('plus-change', (event) => {
     ? 'In Viewport'
     : 'Out of Viewport';
 });
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

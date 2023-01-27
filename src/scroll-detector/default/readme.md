@@ -8,7 +8,7 @@
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element } from '@htmlplus/element';
 
 @Element()
@@ -47,4 +47,10 @@ class ScrollDetectorDefault {
 scroll1.addEventListener('plus-change', (event) => {
   console.log(event.detail)
 })
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

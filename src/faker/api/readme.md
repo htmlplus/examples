@@ -2,8 +2,10 @@
 <plus-faker api="lorem.paragraphs"></plus-faker>
 ```
 
-```json [dependencies]
+```json [settings]
 {
+  "dependencies": {
     "@faker-js/faker": "latest"
+  }
 }
 ```

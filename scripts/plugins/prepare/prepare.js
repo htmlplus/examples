@@ -26,27 +26,13 @@ export const prepare = () => {
           ?.pop()
           ?.replace('```', '');
 
-        const dock = !!first
-          ?.match(/\[dock]/)
-          ?.shift()
-          ?.replace('[', '')
-          ?.replace(']', '');
-
-        const rtl = !!first
-          ?.match(/\[rtl]/)
-          ?.shift()
-          ?.replace('[', '')
-          ?.replace(']', '');
-
-        const options = { dock, rtl };
-
         let content = lines.slice(1, -1).join('\n').trim();
 
-        if (key == 'dependencies') {
+        if (key == 'settings') {
           content = JSON.parse(content);
         }
 
-        snippets.push({ key, type, options, content });
+        snippets.push({ key, type, content });
       } catch {}
     });
 

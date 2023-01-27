@@ -10,7 +10,7 @@ plus-card {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-grid justify-content="evenly" gutter="md">
     <plus-grid-item xs="12" sm="auto">
@@ -24,4 +24,10 @@ plus-card {
     </plus-grid-item>
   </plus-grid>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

@@ -10,8 +10,14 @@ plus-card {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-card></plus-card>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

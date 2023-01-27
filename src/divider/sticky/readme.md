@@ -17,7 +17,7 @@ plus-sticky {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-sticky>
     <plus-divider>
@@ -45,4 +45,10 @@ plus-sticky {
     </plus-divider>
   </plus-sticky>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

@@ -15,7 +15,7 @@ plus-sticky {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-sticky>A</plus-sticky>
   <p>A</p>
@@ -30,4 +30,10 @@ plus-sticky {
   <plus-sticky>F</plus-sticky>
   <p>F</p>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

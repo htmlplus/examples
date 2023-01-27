@@ -12,7 +12,7 @@ plus-intersection {
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
 @Element()
@@ -48,4 +48,10 @@ class CounterIntersection {
 intersection1.addEventListener('plus-change', (event) => {
   counter1.play = event.detail.isIntersecting;
 });
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

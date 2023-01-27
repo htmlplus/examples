@@ -19,8 +19,10 @@
 </div>
 ```
 
-```json [dependencies]
+```json [settings]
 {
+  "dependencies": {
     "@faker-js/faker": "latest"
+  }
 }
 ```

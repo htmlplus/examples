@@ -18,7 +18,7 @@ plus-intersection {
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element, State } from '@htmlplus/element';
 import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
 
@@ -57,4 +57,10 @@ import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/heart
 intersection2.addEventListener('plus-change', (event) => {
   animation2.run = event.detail.isIntersecting;
 });
+```
+
+```json [settings]
+{
+   "dock": true
+}
 ```

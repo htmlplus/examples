@@ -14,7 +14,7 @@ plus-scroll-indicator {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <plus-scroll-indicator source=".scrollable"></plus-scroll-indicator>
   <div class="scrollable">
@@ -118,4 +118,10 @@ plus-scroll-indicator {
     </p>
   </div>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

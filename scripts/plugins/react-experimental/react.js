@@ -110,7 +110,7 @@ export const reactExperimental = (options) => {
     })();
 
     const dependencies = (() => {
-      const content = getSnippet('dependencies', context)?.content;
+      const content = getSnippet('settings', context)?.content?.dependencies;
 
       if (!content) return;
 

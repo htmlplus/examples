@@ -5,6 +5,12 @@ plus-center {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <plus-center>All elements are centered</plus-center>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

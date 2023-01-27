@@ -1,4 +1,4 @@
-```html [template] [rtl]
+```html [template]
 <div>
   <plus-divider placement="center">Center</plus-divider>
   <br/>
@@ -6,4 +6,10 @@
   <br/>
   <plus-divider placement="end">End</plus-divider>
 </div>
+```
+
+```json [settings]
+{
+  "rtl": true
+}
 ```

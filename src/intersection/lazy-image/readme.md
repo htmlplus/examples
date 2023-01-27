@@ -29,7 +29,7 @@ plus-spinner {
 }
 ```
 
-```tsx [script] [dock]
+```tsx [script]
 import { Element } from '@htmlplus/element';
 
 @Element()
@@ -107,4 +107,10 @@ intersection2.addEventListener('plus-change', (event) => {
     spinner.hidden = true;
   }, 1000);
 });
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

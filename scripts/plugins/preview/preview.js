@@ -15,9 +15,7 @@ export const preview = () => {
 
     if (style) style = scoped(style, `.${classNamePrefix}`);
 
-    const dock = getOutput('prepare', context)?.some((snippet) => snippet.options?.dock);
-
-    const rtl = getOutput('prepare', context)?.some((snippet) => snippet.options?.rtl);
+    const { dock = false, rtl = false } = getSnippet('settings', context)?.content || {};
 
     script = script.split('export default ')[0].trim();
     script += '\n\n';

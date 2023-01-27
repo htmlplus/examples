@@ -16,7 +16,7 @@ plus-faker {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <div class="container">
   <header>Header</header>
   <plus-grid>
@@ -31,4 +31,10 @@ plus-faker {
     </plus-grid-item>
   </plus-grid>
 </div>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```

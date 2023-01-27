@@ -5,6 +5,12 @@ plus-signature {
 }
 ```
 
-```html [template] [dock]
+```html [template]
 <plus-signature background-color="lightgray" clear-on-resize resizable></plus-signature>
+```
+
+```json [settings]
+{
+  "dock": true
+}
 ```
