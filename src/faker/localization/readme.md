@@ -21,6 +21,7 @@ setConfig({
 {
   "dependencies": {
     "@faker-js/faker": "latest"
-  }
+  },
+  "isolate": true
 }
 ```

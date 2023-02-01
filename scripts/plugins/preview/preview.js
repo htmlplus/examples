@@ -15,7 +15,7 @@ export const preview = () => {
 
     if (style) style = scoped(style, `.${classNamePrefix}`);
 
-    const { dock = false, rtl = false } = getSnippet('settings', context)?.content || {};
+    const { dock = false, isolate = false, rtl = false } = getSnippet('settings', context)?.content || {};
 
     script = script.split('export default ')[0].trim();
     script += '\n\n';
@@ -40,7 +40,7 @@ export const preview = () => {
       script = [script.slice(0, j), config, script.slice(j)].join('\n');
     }
 
-    setOutput(name, context, { rtl, script });
+    setOutput(name, context, { isolate, rtl, script });
   };
   return { name, run };
 };
