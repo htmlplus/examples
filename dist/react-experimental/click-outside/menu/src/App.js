@@ -3,7 +3,7 @@ import '@htmlplus/core/card.js';
 import '@htmlplus/core/card-body.js';
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/click-outside.js';
-const ClickOutsideDefault = () => {
+const ClickOutsideMenu = () => {
   const [open, setOpen] = useState(false);
   const onClick = () => {
     setOpen(!open);
@@ -26,4 +26,4 @@ const ClickOutsideDefault = () => {
     </plus-center>
   );
 };
-export default ClickOutsideDefault;
+export default ClickOutsideMenu;

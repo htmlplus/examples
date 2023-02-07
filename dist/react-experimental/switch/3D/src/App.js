@@ -1,9 +1,9 @@
 import '@htmlplus/core/switch.js';
-const Switch3D = () => {
+const Switch3d = () => {
   return (
     <div className="center">
       <plus-switch checked></plus-switch>
     </div>
   );
 };
-export default Switch3D;
+export default Switch3d;

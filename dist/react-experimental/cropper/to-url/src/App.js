@@ -1,6 +1,6 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
-const CropperToURL = () => {
+const CropperToUrl = () => {
   const toURL = () => {
     window.cropper4.toCanvas().toBlob((blob) => {
       window.open(URL.createObjectURL(blob), '_blank');
@@ -21,4 +21,4 @@ const CropperToURL = () => {
     </>
   );
 };
-export default CropperToURL;
+export default CropperToUrl;

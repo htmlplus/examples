@@ -1,9 +1,9 @@
 import { Switch } from '@htmlplus/react';
-const Switch3D = () => {
+const Switch3d = () => {
   return (
     <div className="center">
       <Switch checked></Switch>
     </div>
   );
 };
-export default Switch3D;
+export default Switch3d;

@@ -13,7 +13,7 @@ plus-click-outside {
 import { Element, State } from '@htmlplus/element';
 
 @Element()
-class ClickOutsideDefault {
+class ClickOutsideMenu {
   @State()
   open = false;
 

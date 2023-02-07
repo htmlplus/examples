@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Card, Center, ClickOutside } from '@htmlplus/react';
-const ClickOutsideDefault = () => {
+const ClickOutsideMenu = () => {
   const [open, setOpen] = useState(false);
   const onClick = () => {
     setOpen(!open);
@@ -21,4 +21,4 @@ const ClickOutsideDefault = () => {
     </Center>
   );
 };
-export default ClickOutsideDefault;
+export default ClickOutsideMenu;

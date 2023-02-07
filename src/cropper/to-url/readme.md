@@ -2,7 +2,7 @@
 import { Element } from '@htmlplus/element';
 
 @Element()
-class CropperToURL {
+class CropperToUrl {
   toURL() {
     window.cropper4.toCanvas().toBlob((blob) => {
         window.open(URL.createObjectURL(blob), '_blank');

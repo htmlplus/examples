@@ -5,10 +5,9 @@ import path from 'path';
 
 import {
   angular,
-  document,
+  combiner,
   javascript,
   prepare,
-  preview,
   reactDedicated,
   reactExperimental,
   svelte,
@@ -115,9 +114,9 @@ const { start, run, finish } = compiler(
       return paramCase(name).replace('on-', '@');
     }
   }),
-  preview(),
-  document({
-    destination: 'dist/db.json'
+  combiner({
+    destination: 'dist/db.json',
+    plugins: ['angular', 'javascript', 'prepare', 'react-dedicated', 'react-experimental', 'svelte', 'vue']
   })
 );
 
