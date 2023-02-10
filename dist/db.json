@@ -12013,81 +12013,6 @@
   {
     "plugin": "angular",
     "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "javascript",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "prepare",
-    "component": "switch",
-    "example": "3d",
-    "output": [
-      {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\n\r\nplus-switch {\r\n  --width: 10rem;\r\n  --height: 5rem;\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  overflow: visible;\r\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\r\n  perspective: 32em;\r\n  border-radius: var(--height);\r\n}\r\n\r\nplus-switch::part(root) {\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  background: transparent;\r\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\r\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0, 0.625rem 0.625rem 0 -0.25rem #e0e0e0, 0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%), inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%), inset 0.75rem 0.75rem #dfdfdf, inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%), inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\r\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\r\n  transform-style: preserve-3d;\r\n}\r\n\r\nplus-switch::part(handle) {\r\n  width: var(--height);\r\n  height: var(--height);\r\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65% 50% no-repeat, radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%) 50%/200%;\r\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg) rotatex(-90deg) translatey(-75%) rotate(45deg);\r\n  filter: Grayscale(var(--grayscale));\r\n}\r\n\r\nplus-switch[aria-checked='false'] {\r\n  --grayscale: 1;\r\n  --translate: calc(100% + var(--width) * -0.75);\r\n}\r\n\r\nplus-switch[aria-checked='true'] {\r\n  --grayscale: 0;\r\n  --translate: calc(100% + var(--width) * -0.15);\r\n}"
-      },
-      {
-        "key": "template",
-        "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-switch checked></plus-switch>\r\n</div>"
-      }
-    ]
-  },
-  {
-    "plugin": "react-dedicated",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import { Switch } from '@htmlplus/react';\nconst Switch3d = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default Switch3d;\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
-    }
-  },
-  {
-    "plugin": "react-experimental",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\nconst Switch3d = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default Switch3d;\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
-    }
-  },
-  {
-    "plugin": "svelte",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "vue",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "angular",
-    "component": "switch",
     "example": "checked",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
@@ -12468,6 +12393,81 @@
       "script": "import '@htmlplus/core/switch.js';\nfunction onChange(event) {\n  window.alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n}\n",
       "style": ".center {\n  text-align: center;\n  padding: 2.5rem 0;\n}\n",
       "template": "<div class=\"center\">\n  <plus-switch @plus-change=\"onChange($event)\"></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": ".center {\r\n  text-align: center;\r\n}\r\n\r\nplus-switch {\r\n  --width: 10rem;\r\n  --height: 5rem;\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  overflow: visible;\r\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\r\n  perspective: 32em;\r\n  border-radius: var(--height);\r\n}\r\n\r\nplus-switch::part(root) {\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  background: transparent;\r\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\r\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0, 0.625rem 0.625rem 0 -0.25rem #e0e0e0, 0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%), inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%), inset 0.75rem 0.75rem #dfdfdf, inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%), inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\r\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\r\n  transform-style: preserve-3d;\r\n}\r\n\r\nplus-switch::part(handle) {\r\n  width: var(--height);\r\n  height: var(--height);\r\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65% 50% no-repeat, radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%) 50%/200%;\r\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg) rotatex(-90deg) translatey(-75%) rotate(45deg);\r\n  filter: Grayscale(var(--grayscale));\r\n}\r\n\r\nplus-switch[aria-checked='false'] {\r\n  --grayscale: 1;\r\n  --translate: calc(100% + var(--width) * -0.75);\r\n}\r\n\r\nplus-switch[aria-checked='true'] {\r\n  --grayscale: 0;\r\n  --translate: calc(100% + var(--width) * -0.15);\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div class=\"center\">\r\n  <plus-switch checked></plus-switch>\r\n</div>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import { Switch } from '@htmlplus/react';\nconst SwitchThreeDimensional = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default SwitchThreeDimensional;\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\nconst SwitchThreeDimensional = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default SwitchThreeDimensional;\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
     }
   },
   {
