@@ -10,9 +10,9 @@ class CropperToBase64 {
 
     const tab = window.open('', '_blank');
 
-    tab.onload = () => {
+    setTimeout(() => {
       tab.document.write(image.outerHTML);
-    }
+    }, 250);
   }
 
   render() {
@@ -53,8 +53,8 @@ button2.addEventListener('click', () => {
 
   const tab = open('', '_blank');
 
-  tab.onload = () => {
+  setTimeout(() => {
     tab.document.write(image.outerHTML);
-  }
+  }, 250);
 });
 ```

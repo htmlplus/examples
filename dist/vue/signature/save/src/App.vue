@@ -20,8 +20,8 @@
     const image = new Image();
     image.src = window.signature3.toDataURL('image/svg+xml', background);
     const tab = window.open('', '_blank');
-    tab.onload = () => {
+    setTimeout(() => {
       tab.document.write(image.outerHTML);
-    };
+    }, 250);
   }
 </script>

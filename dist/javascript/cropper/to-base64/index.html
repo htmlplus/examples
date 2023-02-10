@@ -27,9 +27,9 @@
 
         const tab = open('', '_blank');
 
-        tab.onload = () => {
+        setTimeout(() => {
           tab.document.write(image.outerHTML);
-        };
+        }, 250);
       });
     </script>
   </body>

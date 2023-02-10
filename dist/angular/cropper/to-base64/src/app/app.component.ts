@@ -11,8 +11,8 @@ export class AppComponent {
     const image = new Image();
     image.src = window.cropper2.toCanvas().toDataURL();
     const tab = window.open('', '_blank');
-    tab.onload = () => {
+    setTimeout(() => {
       tab.document.write(image.outerHTML);
-    };
+    }, 250);
   }
 }

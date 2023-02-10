@@ -5008,7 +5008,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -5017,7 +5017,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\nbutton2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n});",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\nbutton2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n});",
       "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button2\">\r\n    To Base64\r\n  </button>\r\n</plus-center>"
     }
   },
@@ -5029,7 +5029,7 @@
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass CropperToBase64 {\r\n  toBase64() {\r\n    const image = new Image();\r\n\r\n    image.src = window.cropper2.toCanvas().toDataURL();\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    tab.onload = () => {\r\n      tab.document.write(image.outerHTML);\r\n    }\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.toBase64()}>\r\n            Get Base64\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass CropperToBase64 {\r\n  toBase64() {\r\n    const image = new Image();\r\n\r\n    image.src = window.cropper2.toCanvas().toDataURL();\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    setTimeout(() => {\r\n      tab.document.write(image.outerHTML);\r\n    }, 250);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.toBase64()}>\r\n            Get Base64\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
@@ -5039,7 +5039,7 @@
       {
         "key": "javascript:script",
         "type": "js",
-        "content": "button2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n});"
+        "content": "button2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n});"
       }
     ]
   },
@@ -5048,7 +5048,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -5056,7 +5056,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -5064,7 +5064,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBase64()}\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -5073,7 +5073,7 @@
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -10979,7 +10979,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  save(background) {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  save(background) {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button (click)=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
     }
   },
@@ -10988,7 +10988,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));",
       "template": "<plus-center>\r\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"save1\">\r\n    Save With Background\r\n  </button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"save2\">\r\n    Save Without Background\r\n  </button>\r\n</plus-center>"
     }
   },
@@ -11000,7 +11000,7 @@
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass SignatureSave {\r\n  save(background) {\r\n    const image = new Image();\r\n\r\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    tab.onload = () => {\r\n      tab.document.write(image.outerHTML);\r\n    }\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.save(true)}>\r\n            Save With Background\r\n          </button>\r\n          &nbsp; &nbsp;\r\n          <button onClick={() => this.save(false)}>\r\n            Save Without Background\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass SignatureSave {\r\n  save(background) {\r\n    const image = new Image();\r\n\r\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    setTimeout(() => {\r\n      tab.document.write(image.outerHTML);\r\n    }, 250);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.save(true)}>\r\n            Save With Background\r\n          </button>\r\n          &nbsp; &nbsp;\r\n          <button onClick={() => this.save(false)}>\r\n            Save Without Background\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
@@ -11010,7 +11010,7 @@
       {
         "key": "javascript:script",
         "type": "js",
-        "content": "const save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));"
+        "content": "const save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));"
       }
     ]
   },
@@ -11019,7 +11019,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
     }
   },
   {
@@ -11027,7 +11027,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
     }
   },
   {
@@ -11035,7 +11035,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => save(true)}\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button on:click=\"{() => save(false)}\">Save Without Background</button>\n</plus-center>\n"
     }
   },
@@ -11044,7 +11044,7 @@
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button @click=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
     }
   },

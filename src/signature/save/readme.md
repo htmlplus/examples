@@ -10,9 +10,9 @@ class SignatureSave {
 
     const tab = window.open('', '_blank');
 
-    tab.onload = () => {
+    setTimeout(() => {
       tab.document.write(image.outerHTML);
-    }
+    }, 250);
   }
 
   render() {
@@ -61,9 +61,9 @@ const save = (background) => {
 
   const tab = window.open('', '_blank');
 
-  tab.onload = () => {
+  setTimeout(() => {
     tab.document.write(image.outerHTML);
-  }
+  }, 250);
 }
 save1.addEventListener('click', () => save(true));
 save2.addEventListener('click', () => save(false));
