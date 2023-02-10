@@ -32,22 +32,25 @@
     background-color: #eeeeee;
   }
 
-  plus-intersection {
-    display: block;
-    text-align: center;
-    margin: 1000px auto;
-  }
-
   img {
-    display: block;
     width: 12rem;
     height: 12rem;
     object-fit: cover;
     margin: 0;
   }
 
+  img:not([hidden]) {
+    display: block;
+  }
+
   plus-card {
     display: inline-block;
+  }
+
+  plus-intersection {
+    display: block;
+    text-align: center;
+    margin: 50rem auto;
   }
 
   plus-spinner {

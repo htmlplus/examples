@@ -9937,7 +9937,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
       "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
@@ -9947,7 +9947,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\n\nintersection2.addEventListener('plus-change', (event) => {\r\n  if (!event.detail.isIntersecting) return;\r\n\r\n  setTimeout(() => {\r\n    const image = event.target.querySelector('img');\r\n\r\n    const spinner = event.target.querySelector('plus-spinner');\r\n\r\n    const src = image.getAttribute('data-src');\r\n\r\n    image.setAttribute('src', src);\r\n\r\n    image.hidden = false;\r\n\r\n    spinner.hidden = true;\r\n  }, 1000);\r\n});",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
       "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection2\" once>\r\n    <plus-card elevation=\"10\">\r\n      <plus-spinner></plus-spinner>\r\n      <img\r\n        alt=\"Lazy Image\"\r\n        hidden\r\n        data-src=\"https://placekitten.com/200/200\"\r\n      />\r\n    </plus-card>\r\n  </plus-intersection>\r\n</div>"
     }
   },
@@ -9959,7 +9959,7 @@
       {
         "key": "style",
         "type": "css",
-        "content": ".container {\r\n  position: relative;\r\n  height: 20rem;\r\n  overflow: auto;\r\n  background-color: #eeeeee;\r\n}\r\n\r\nplus-intersection {\r\n  display: block;\r\n  text-align: center;\r\n  margin: 1000px auto;\r\n}\r\n\r\nimg {\r\n  display: block;\r\n  width: 12rem;\r\n  height: 12rem;\r\n  object-fit: cover;\r\n  margin: 0;\r\n}\r\n\r\nplus-card {\r\n  display: inline-block;\r\n}\r\n\r\nplus-spinner {\r\n  margin: 1rem;\r\n}"
+        "content": ".container {\r\n  position: relative;\r\n  height: 20rem;\r\n  overflow: auto;\r\n  background-color: #eeeeee;\r\n}\r\n\r\nimg {\r\n  width: 12rem;\r\n  height: 12rem;\r\n  object-fit: cover;\r\n  margin: 0;\r\n}\r\n\r\nimg:not([hidden]) {\r\n  display: block;\r\n}\r\n\r\nplus-card {\r\n  display: inline-block;\r\n}\r\n\r\nplus-intersection {\r\n  display: block;\r\n  text-align: center;\r\n  margin: 50rem auto;\r\n}\r\n\r\nplus-spinner {\r\n  margin: 1rem;\r\n}"
       },
       {
         "key": "script",
@@ -9991,7 +9991,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
     }
   },
   {
@@ -10000,7 +10000,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={(event) => onChange(event)}>\n        <plus-card elevation=\"10\">\n          <plus-spinner></plus-spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
     }
   },
   {
@@ -10009,7 +10009,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
       "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change=\"{event => onChange(event)}\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
@@ -10019,7 +10019,7 @@
     "example": "lazy-image",
     "output": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
       "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
