@@ -58,3 +58,11 @@ button2.addEventListener('click', () => {
   }, 250);
 });
 ```
+
+```json [settings]
+{
+  "dependencies": {
+    "cropperjs": "latest"
+  }
+}
+```

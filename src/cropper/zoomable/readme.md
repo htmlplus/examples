@@ -14,3 +14,11 @@
     </plus-grid-item>
 </plus-grid>
 ```
+
+```json [settings]
+{
+  "dependencies": {
+    "cropperjs": "latest"
+  }
+}
+```

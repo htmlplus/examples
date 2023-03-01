@@ -80,6 +80,9 @@ element1.addEventListener('plus-closed', () => change(true));
 
 ```json [settings]
 {
+  "dependencies": {
+    "cropperjs": "latest"
+  },
   "dock": true
 }
 ```

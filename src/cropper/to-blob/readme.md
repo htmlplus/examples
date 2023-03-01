@@ -46,3 +46,11 @@ button3.addEventListener('click', () => {
     });
 });
 ```
+
+```json [settings]
+{
+  "dependencies": {
+    "cropperjs": "latest"
+  }
+}
+```

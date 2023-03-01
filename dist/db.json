@@ -4164,6 +4164,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4235,6 +4238,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4301,6 +4307,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n            backdrop={false}\r\n            src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n    </plus-grid-item>\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n            backdrop={true}\r\n            src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n    </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -4365,6 +4380,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n      <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n          background={false}\r\n          view=\"none\"\r\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n      </plus-grid-item>\r\n      <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n          background={true}\r\n          view=\"none\"\r\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n      </plus-grid-item>\r\n    </plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -4434,6 +4458,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4522,6 +4549,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4597,6 +4627,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4668,6 +4701,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4739,6 +4775,9 @@
         "key": "settings",
         "type": "json",
         "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          },
           "dock": true
         }
       }
@@ -4812,6 +4851,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper mode=\"move\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" view=\"none\"></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper mode=\"crop\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n  </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -4887,6 +4935,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper shape=\"rectangle\" aspect-ratio=\"2\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-grid gutter=\"md\">\r\n      <plus-grid-item xs=\"12\">\r\n        <plus-cropper shape=\"square\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n      </plus-grid-item>\r\n      <plus-grid-item xs=\"12\">\r\n        <plus-cropper shape=\"circle\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n      </plus-grid-item>\r\n    </plus-grid>\r\n  </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -4961,7 +5018,16 @@
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-grid gutter=\"md\">\r\n  <plus-grid-item xs=\"12\" sm=\"5\">\r\n    <plus-cropper \r\n      class=\"style-1\" \r\n      indicator\r\n      mode=\"crop\" \r\n      shape=\"circle\" \r\n      resizer=\"main\" \r\n      resizer-shape=\"line\" \r\n      src=\"/assets/images/penguin.jpg\" \r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"7\">\r\n    <plus-cropper\r\n      class=\"style-2\"\r\n      indicator\r\n      mode=\"crop\"\r\n      resizer=\"both\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/penguin.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper\r\n      class=\"style-3\"\r\n      guides\r\n      indicator\r\n      mode=\"crop\"\r\n      resizer=\"main\"\r\n      resizer-shape=\"circle\"\r\n      shape=\"circle\"\r\n      src=\"/assets/images/cat.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper\r\n      class=\"style-4\"\r\n      guides\r\n      mode=\"crop\"\r\n      resizer=\"edge\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/cat.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"7\">\r\n    <plus-cropper\r\n      class=\"style-5\"\r\n      backdrop\r\n      background\r\n      mode=\"crop\"\r\n      resizer=\"edge\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/ladybug.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"5\">\r\n    <plus-cropper \r\n      class=\"style-6\" \r\n      src=\"/assets/images/bear.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n</plus-grid>"
+        "content": "<plus-grid gutter=\"md\">\r\n  <plus-grid-item xs=\"12\" sm=\"5\">\r\n    <plus-cropper\r\n      class=\"style-1\"\r\n      indicator\r\n      mode=\"crop\"\r\n      shape=\"circle\"\r\n      resizer=\"main\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/penguin.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"7\">\r\n    <plus-cropper\r\n      class=\"style-2\"\r\n      indicator\r\n      mode=\"crop\"\r\n      resizer=\"both\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/penguin.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper\r\n      class=\"style-3\"\r\n      guides\r\n      indicator\r\n      mode=\"crop\"\r\n      resizer=\"main\"\r\n      resizer-shape=\"circle\"\r\n      shape=\"circle\"\r\n      src=\"/assets/images/cat.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"6\">\r\n    <plus-cropper\r\n      class=\"style-4\"\r\n      guides\r\n      mode=\"crop\"\r\n      resizer=\"edge\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/cat.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"7\">\r\n    <plus-cropper\r\n      class=\"style-5\"\r\n      backdrop\r\n      background\r\n      mode=\"crop\"\r\n      resizer=\"edge\"\r\n      resizer-shape=\"line\"\r\n      src=\"/assets/images/ladybug.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n  <plus-grid-item xs=\"12\" sm=\"5\">\r\n    <plus-cropper\r\n      class=\"style-6\"\r\n      src=\"/assets/images/bear.jpg\"\r\n    ></plus-cropper>\r\n  </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -5040,6 +5106,15 @@
         "key": "javascript:script",
         "type": "js",
         "content": "button2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n});"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -5114,6 +5189,15 @@
         "key": "javascript:script",
         "type": "js",
         "content": "button3.addEventListener('click', () => {\r\n    cropper3.toCanvas().toBlob((blob) => {\r\n        console.log(blob);\r\n    });\r\n});"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -5188,6 +5272,15 @@
         "key": "javascript:script",
         "type": "js",
         "content": "button4.addEventListener('click', () => {\r\n    cropper4.toCanvas().toBlob((blob) => {\r\n        open(URL.createObjectURL(blob), '_blank');\r\n    });\r\n});"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -5252,6 +5345,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n            zoomable\r\n            zoom-ratio=\"0.1\"\r\n            src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n    </plus-grid-item>\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper\r\n            zoomable\r\n            zoom-ratio=\"1.0\"\r\n            src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n        ></plus-cropper>\r\n    </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },
@@ -5316,6 +5418,15 @@
         "key": "template",
         "type": "html",
         "content": "<plus-grid gutter=\"md\">\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper zoomable=\"false\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n    </plus-grid-item>\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper zoomable=\"true\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n    </plus-grid-item>\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper zoomable=\"touch\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n    </plus-grid-item>\r\n    <plus-grid-item xs=\"12\" sm=\"6\">\r\n        <plus-cropper zoomable=\"wheel\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\r\n    </plus-grid-item>\r\n</plus-grid>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "cropperjs": "latest"
+          }
+        }
       }
     ]
   },

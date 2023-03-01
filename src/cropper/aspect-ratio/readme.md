@@ -4,6 +4,9 @@
 
 ```json [settings]
 {
+  "dependencies": {
+    "cropperjs": "latest"
+  },
   "dock": true
 }
 ```

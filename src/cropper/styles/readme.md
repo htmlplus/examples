@@ -47,14 +47,14 @@ plus-cropper.style-6 {
 ```html [template]
 <plus-grid gutter="md">
   <plus-grid-item xs="12" sm="5">
-    <plus-cropper 
-      class="style-1" 
+    <plus-cropper
+      class="style-1"
       indicator
-      mode="crop" 
-      shape="circle" 
-      resizer="main" 
-      resizer-shape="line" 
-      src="/assets/images/penguin.jpg" 
+      mode="crop"
+      shape="circle"
+      resizer="main"
+      resizer-shape="line"
+      src="/assets/images/penguin.jpg"
     ></plus-cropper>
   </plus-grid-item>
   <plus-grid-item xs="12" sm="7">
@@ -101,10 +101,18 @@ plus-cropper.style-6 {
     ></plus-cropper>
   </plus-grid-item>
   <plus-grid-item xs="12" sm="5">
-    <plus-cropper 
-      class="style-6" 
+    <plus-cropper
+      class="style-6"
       src="/assets/images/bear.jpg"
     ></plus-cropper>
   </plus-grid-item>
 </plus-grid>
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "cropperjs": "latest"
+  }
+}
 ```

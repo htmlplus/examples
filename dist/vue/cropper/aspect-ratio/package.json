@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@htmlplus/core": "latest",
+    "cropperjs": "latest",
     "vue": "^3.2.0"
   },
   "devDependencies": {
