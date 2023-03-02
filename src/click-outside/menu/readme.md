@@ -50,7 +50,7 @@ class ClickOutsideMenu {
 <plus-center>
   <plus-click-outside id="clickOutside2">
     <button id="button2">Open Menu Dropdown</button>
-    <plus-card elevation="10" id="menu2" outlined>
+    <plus-card elevation="10" id="menu2" outlined hidden>
       <plus-card-body>
         It will stay visible until you click outside.
       </plus-card-body>

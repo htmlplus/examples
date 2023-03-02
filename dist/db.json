@@ -3386,7 +3386,7 @@
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/click-outside.js';\n\nbutton2.addEventListener('click', () => {\r\n  menu2.hidden = !menu2.hidden;\r\n});\r\nclickOutside2.addEventListener('plus-click-outside', () => {\r\n  menu2.hidden = true;\r\n});",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-      "template": "<plus-center>\r\n  <plus-click-outside id=\"clickOutside2\">\r\n    <button id=\"button2\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu2\" outlined>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-click-outside id=\"clickOutside2\">\r\n    <button id=\"button2\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu2\" outlined hidden>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
     }
   },
   {
@@ -3407,7 +3407,7 @@
       {
         "key": "javascript:template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-click-outside id=\"clickOutside2\">\r\n    <button id=\"button2\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu2\" outlined>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-click-outside id=\"clickOutside2\">\r\n    <button id=\"button2\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu2\" outlined hidden>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
       },
       {
         "key": "javascript:script",
