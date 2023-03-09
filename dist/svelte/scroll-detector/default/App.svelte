@@ -11,7 +11,7 @@
     <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
   </div>
   <plus-scroll-detector
-    source=".scrollable"
+    reference=".scrollable"
     vertical
     on:plus-change="{event => onChange(event)}"
   >

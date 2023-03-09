@@ -9,7 +9,7 @@ const ScrollDetectorDefault = () => {
         <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
       </div>
       <ScrollDetector
-        source=".scrollable"
+        reference=".scrollable"
         vertical
         onChange={(event) => onChange(event)}
       ></ScrollDetector>

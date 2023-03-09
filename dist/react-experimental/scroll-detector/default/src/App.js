@@ -13,7 +13,7 @@ const ScrollDetectorDefault = () => {
         ></plus-faker>
       </div>
       <plus-scroll-detector
-        source=".scrollable"
+        reference=".scrollable"
         vertical
         onplus-change={(event) => onChange(event)}
       ></plus-scroll-detector>

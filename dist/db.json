@@ -10291,7 +10291,7 @@
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    console.log(event.detail);\n  }\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -10301,7 +10301,7 @@
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\nscroll1.addEventListener('plus-change', (event) => {\r\n  console.log(event.detail)\r\n})",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" source=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
     }
   },
   {
@@ -10317,12 +10317,12 @@
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          source=\".scrollable\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\".scrollable\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
         "type": "html",
-        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" source=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
       },
       {
         "key": "javascript:script",
@@ -10343,7 +10343,7 @@
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        reference=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -10352,7 +10352,7 @@
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        source=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -10363,7 +10363,7 @@
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -10373,7 +10373,7 @@
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    source=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
