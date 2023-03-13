@@ -3,8 +3,8 @@ const AvatarLink = () => {
   return (
     <div className="center">
       <plus-avatar>
-        <img src="http://placeimg.com/97/97/people" />
-        <a href="http://placeimg.com/97/97/people" target="_blank"></a>
+        <img src="https://picsum.photos/id/177/90/90" />
+        <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
       </plus-avatar>
     </div>
   );

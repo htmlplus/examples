@@ -4,13 +4,13 @@ const AvatarGroup = () => {
     <div className="center">
       <Avatar.Group>
         <Avatar>
-          <img src="http://placeimg.com/91/91/people" />
+          <img src="https://picsum.photos/id/331/90/90" />
         </Avatar>
         <Avatar>
-          <img src="http://placeimg.com/92/92/people" />
+          <img src="https://picsum.photos/id/334/90/90" />
         </Avatar>
         <Avatar>
-          <img src="http://placeimg.com/93/93/people" />
+          <img src="https://picsum.photos/id/338/90/90" />
         </Avatar>
       </Avatar.Group>
     </div>

@@ -4,7 +4,7 @@
 
 <div class="center">
   <plus-avatar>
-    <img src="http://placeimg.com/90/90/people" />
+    <img src="https://picsum.photos/id/65/90/90" />
   </plus-avatar>
 </div>
 

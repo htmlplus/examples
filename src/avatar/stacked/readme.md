@@ -8,13 +8,13 @@
 <div class="center">
   <plus-avatar-group stacked>
     <plus-avatar shape="circle">
-      <img src="http://placeimg.com/94/94/people" />
+      <img src="https://picsum.photos/id/331/90/90" />
     </plus-avatar>
     <plus-avatar shape="circle">
-      <img src="http://placeimg.com/95/95/people" />
+      <img src="https://picsum.photos/id/334/90/90" />
     </plus-avatar>
     <plus-avatar shape="circle">
-      <img src="http://placeimg.com/96/96/people" />
+      <img src="https://picsum.photos/id/338/90/90" />
     </plus-avatar>
   </plus-avatar-group>
 </div>

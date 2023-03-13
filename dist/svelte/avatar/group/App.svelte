@@ -6,13 +6,13 @@
 <div class="center">
   <plus-avatar-group>
     <plus-avatar>
-      <img src="http://placeimg.com/91/91/people" />
+      <img src="https://picsum.photos/id/331/90/90" />
     </plus-avatar>
     <plus-avatar>
-      <img src="http://placeimg.com/92/92/people" />
+      <img src="https://picsum.photos/id/334/90/90" />
     </plus-avatar>
     <plus-avatar>
-      <img src="http://placeimg.com/93/93/people" />
+      <img src="https://picsum.photos/id/338/90/90" />
     </plus-avatar>
   </plus-avatar-group>
 </div>

@@ -4,16 +4,16 @@ const AvatarHoverable = () => {
     <div className="center">
       <Avatar.Group stacked hoverable>
         <Avatar shape="circle">
-          <img src="http://placeimg.com/97/97/people" />
+          <img src="https://picsum.photos/id/548/90/90" />
         </Avatar>
         <Avatar shape="circle">
-          <img src="http://placeimg.com/98/98/people" />
+          <img src="https://picsum.photos/id/628/90/90" />
         </Avatar>
         <Avatar shape="circle">
-          <img src="http://placeimg.com/99/99/people" />
+          <img src="https://picsum.photos/id/660/90/90" />
         </Avatar>
         <Avatar shape="circle">
-          <img src="http://placeimg.com/99/99/people" />
+          <img src="https://picsum.photos/id/669/90/90" />
         </Avatar>
         <Avatar shape="circle">+2</Avatar>
       </Avatar.Group>
