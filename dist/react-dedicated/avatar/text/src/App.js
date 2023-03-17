@@ -1,9 +1,9 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarText = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar>MA</Avatar>
-    </div>
+    </Center>
   );
 };
 export default AvatarText;

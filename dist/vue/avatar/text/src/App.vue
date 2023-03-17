@@ -1,15 +1,10 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-avatar>MA</plus-avatar>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/avatar.js';
+  import '@htmlplus/core/center.js';
 </script>
-
-<style scoped>
-  .center {
-    text-align: center;
-  }
-</style>

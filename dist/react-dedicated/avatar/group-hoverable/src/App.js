@@ -1,7 +1,7 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarGroupHoverable = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar.Group stacked hoverable>
         <Avatar shape="circle">
           <img src="https://picsum.photos/id/548/90/90" />
@@ -17,7 +17,7 @@ const AvatarGroupHoverable = () => {
         </Avatar>
         <Avatar shape="circle">+2</Avatar>
       </Avatar.Group>
-    </div>
+    </Center>
   );
 };
 export default AvatarGroupHoverable;

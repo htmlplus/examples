@@ -1,15 +1,17 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarSize = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar.Group>
+        <Avatar size="xxs">xxs</Avatar>
         <Avatar size="xs">xs</Avatar>
         <Avatar size="sm">sm</Avatar>
         <Avatar size="md">md</Avatar>
         <Avatar size="lg">lg</Avatar>
         <Avatar size="xl">xl</Avatar>
+        <Avatar size="xxl">xxl</Avatar>
       </Avatar.Group>
-    </div>
+    </Center>
   );
 };
 export default AvatarSize;

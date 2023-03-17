@@ -1,7 +1,7 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarGroupStacked = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar.Group stacked>
         <Avatar shape="circle">
           <img src="https://picsum.photos/id/331/90/90" />
@@ -13,7 +13,7 @@ const AvatarGroupStacked = () => {
           <img src="https://picsum.photos/id/338/90/90" />
         </Avatar>
       </Avatar.Group>
-    </div>
+    </Center>
   );
 };
 export default AvatarGroupStacked;

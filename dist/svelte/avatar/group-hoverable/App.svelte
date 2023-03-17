@@ -1,9 +1,10 @@
 <script>
   import '@htmlplus/core/avatar.js';
   import '@htmlplus/core/avatar-group.js';
+  import '@htmlplus/core/center.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-avatar-group stacked hoverable>
     <plus-avatar shape="circle">
       <img src="https://picsum.photos/id/548/90/90" />
@@ -19,10 +20,4 @@
     </plus-avatar>
     <plus-avatar shape="circle"> +2 </plus-avatar>
   </plus-avatar-group>
-</div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
+</plus-center>

@@ -1,13 +1,7 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```html [template]
-<div class="center">
+<plus-center>
   <plus-avatar>
     <img src="https://picsum.photos/id/65/90/90" />
   </plus-avatar>
-</div>
+</plus-center>
 ```

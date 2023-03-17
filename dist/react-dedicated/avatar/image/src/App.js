@@ -1,11 +1,11 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarImage = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar>
         <img src="https://picsum.photos/id/65/90/90" />
       </Avatar>
-    </div>
+    </Center>
   );
 };
 export default AvatarImage;

@@ -1,13 +1,13 @@
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarShape = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar.Group>
         <Avatar shape="circle">C</Avatar>
         <Avatar shape="round">R</Avatar>
         <Avatar shape="tile">T</Avatar>
       </Avatar.Group>
-    </div>
+    </Center>
   );
 };
 export default AvatarShape;

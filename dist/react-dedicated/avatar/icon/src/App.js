@@ -1,11 +1,11 @@
-import { Avatar, Icon } from '@htmlplus/react';
+import { Avatar, Center, Icon } from '@htmlplus/react';
 const AvatarIcon = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar>
         <Icon>user</Icon>
       </Avatar>
-    </div>
+    </Center>
   );
 };
 export default AvatarIcon;

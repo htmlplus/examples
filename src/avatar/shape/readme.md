@@ -1,15 +1,9 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```html [template]
-<div class="center">
+<plus-center>
   <plus-avatar-group>
     <plus-avatar shape="circle">C</plus-avatar>
     <plus-avatar shape="round">R</plus-avatar>
     <plus-avatar shape="tile">T</plus-avatar>
   </plus-avatar-group>
-</div>
+</plus-center>
 ```

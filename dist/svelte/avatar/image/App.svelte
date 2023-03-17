@@ -1,15 +1,10 @@
 <script>
   import '@htmlplus/core/avatar.js';
+  import '@htmlplus/core/center.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-avatar>
     <img src="https://picsum.photos/id/65/90/90" />
   </plus-avatar>
-</div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
+</plus-center>

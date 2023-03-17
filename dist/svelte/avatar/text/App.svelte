@@ -1,13 +1,8 @@
 <script>
   import '@htmlplus/core/avatar.js';
+  import '@htmlplus/core/center.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-avatar>MA</plus-avatar>
-</div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
+</plus-center>

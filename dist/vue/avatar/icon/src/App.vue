@@ -1,18 +1,13 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-avatar>
       <plus-icon>user</plus-icon>
     </plus-avatar>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/avatar.js';
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/icon.js';
 </script>
-
-<style scoped>
-  .center {
-    text-align: center;
-  }
-</style>

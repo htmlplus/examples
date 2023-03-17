@@ -1,5 +1,5 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-avatar-group stacked hoverable>
       <plus-avatar shape="circle">
         <img src="https://picsum.photos/id/548/90/90" />
@@ -15,16 +15,11 @@
       </plus-avatar>
       <plus-avatar shape="circle"> +2 </plus-avatar>
     </plus-avatar-group>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/avatar.js';
   import '@htmlplus/core/avatar-group.js';
+  import '@htmlplus/core/center.js';
 </script>
-
-<style scoped>
-  .center {
-    text-align: center;
-  }
-</style>

@@ -1,8 +1,9 @@
 import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/center.js';
 const AvatarGroup = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-avatar-group>
         <plus-avatar>
           <img src="https://picsum.photos/id/331/90/90" />
@@ -14,7 +15,7 @@ const AvatarGroup = () => {
           <img src="https://picsum.photos/id/338/90/90" />
         </plus-avatar>
       </plus-avatar-group>
-    </div>
+    </plus-center>
   );
 };
 export default AvatarGroup;

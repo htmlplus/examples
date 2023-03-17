@@ -1,9 +1,10 @@
 import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 const AvatarText = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-avatar>MA</plus-avatar>
-    </div>
+    </plus-center>
   );
 };
 export default AvatarText;

@@ -1,11 +1,5 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```html [template]
-<div class="center">
+<plus-center>
   <plus-avatar-group stacked hoverable>
     <plus-avatar shape="circle">
       <img src="https://picsum.photos/id/548/90/90" />
@@ -23,5 +17,5 @@
       +2
     </plus-avatar>
   </plus-avatar-group>
-</div>
+</plus-center>
 ```
