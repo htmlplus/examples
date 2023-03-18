@@ -1,31 +1,24 @@
 ```css [style]
 plus-avatar[size=xxs] {
-  width: 1.5rem;
-  height: 1.5rem;
+  --plus-avatar-size: 1.5rem;
 }
 plus-avatar[size=xs] {
-  width: 1.75rem;
-  height: 1.75rem;
+  --plus-avatar-size: 1.75rem;
 }
 plus-avatar[size=sm] {
-  width: 2.25rem;
-  height: 2.25rem;
+  --plus-avatar-size: 2.25rem;
 }
 plus-avatar[size=md] {
-  width: 3rem;
-  height: 3rem;
+  --plus-avatar-size: 3rem;
 }
 plus-avatar[size=lg] {
-  width: 4rem;
-  height: 4rem;
+  --plus-avatar-size: 4rem;
 }
 plus-avatar[size=xl] {
-  width: 5.25rem;
-  height: 5.25rem;
+  --plus-avatar-size: 5.25rem;
 }
 plus-avatar[size=xxl] {
-  width: 6.75rem;
-  height: 6.75rem;
+  --plus-avatar-size: 6.75rem;
 }
 ```
 
