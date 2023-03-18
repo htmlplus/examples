@@ -1171,7 +1171,7 @@
     "example": "custom-size",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n",
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
       "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
@@ -1181,7 +1181,7 @@
     "example": "custom-size",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n",
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
       "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
@@ -1193,7 +1193,7 @@
       {
         "key": "style",
         "type": "css",
-        "content": "plus-avatar[size=xxs] {\r\n  --plus-avatar-size: 1.5rem;\r\n}\r\nplus-avatar[size=xs] {\r\n  --plus-avatar-size: 1.75rem;\r\n}\r\nplus-avatar[size=sm] {\r\n  --plus-avatar-size: 2.25rem;\r\n}\r\nplus-avatar[size=md] {\r\n  --plus-avatar-size: 3rem;\r\n}\r\nplus-avatar[size=lg] {\r\n  --plus-avatar-size: 4rem;\r\n}\r\nplus-avatar[size=xl] {\r\n  --plus-avatar-size: 5.25rem;\r\n}\r\nplus-avatar[size=xxl] {\r\n  --plus-avatar-size: 6.75rem;\r\n}"
+        "content": "plus-avatar[size=xxs] {\r\n  --plus-avatar-size: 1.5rem;\r\n}\r\nplus-avatar[size=xs] {\r\n  --plus-avatar-size: 2rem;\r\n}\r\nplus-avatar[size=sm] {\r\n  --plus-avatar-size: 2.5rem;\r\n}\r\nplus-avatar[size=md] {\r\n  --plus-avatar-size: 3rem;\r\n}\r\nplus-avatar[size=lg] {\r\n  --plus-avatar-size: 3.5rem;\r\n}\r\nplus-avatar[size=xl] {\r\n  --plus-avatar-size: 4rem;\r\n}\r\nplus-avatar[size=xxl] {\r\n  --plus-avatar-size: 4.5rem;\r\n}"
       },
       {
         "key": "template",
@@ -1208,7 +1208,7 @@
     "example": "custom-size",
     "output": {
       "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarCustomSize = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar size=\"xxs\">xxs</Avatar>\n        <Avatar size=\"xs\">xs</Avatar>\n        <Avatar size=\"sm\">sm</Avatar>\n        <Avatar size=\"md\">md</Avatar>\n        <Avatar size=\"lg\">lg</Avatar>\n        <Avatar size=\"xl\">xl</Avatar>\n        <Avatar size=\"xxl\">xxl</Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarCustomSize;\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n"
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
     }
   },
   {
@@ -1217,7 +1217,7 @@
     "example": "custom-size",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarCustomSize = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarCustomSize;\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n"
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
     }
   },
   {
@@ -1226,7 +1226,7 @@
     "example": "custom-size",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n",
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
       "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
@@ -1236,7 +1236,7 @@
     "example": "custom-size",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 1.75rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.25rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 5.25rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 6.75rem;\n}\n",
+      "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
       "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
