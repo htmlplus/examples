@@ -1883,6 +1883,81 @@
   {
     "plugin": "angular",
     "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "svg {\r\n  padding: 0.5rem;\r\n  box-sizing: border-box;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle><path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path></svg>\r\n  </plus-avatar>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarSvgRatio = () => {\n  return (\n    <Center>\n      <Avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarSvgRatio;\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarSvgRatio = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarSvgRatio;\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "avatar",
+    "example": "svg-ratio",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "avatar",
     "example": "text",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
@@ -1942,6 +2017,70 @@
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
       "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-avatar>AB</plus-avatar>\r\n  <plus-tooltip>Tooltip</plus-tooltip>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarTooltip = () => {\n  return (\n    <Center>\n      <Avatar>AB</Avatar>\n      <Tooltip>Tooltip</Tooltip>\n    </Center>\n  );\n};\nexport default AvatarTooltip;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar>AB</plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n};\nexport default AvatarTooltip;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "avatar",
+    "example": "tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
     }
   },
   {
