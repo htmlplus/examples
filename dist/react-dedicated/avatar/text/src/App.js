@@ -2,7 +2,7 @@ import { Avatar, Center } from '@htmlplus/react';
 const AvatarText = () => {
   return (
     <Center>
-      <Avatar>MA</Avatar>
+      <Avatar>T</Avatar>
     </Center>
   );
 };

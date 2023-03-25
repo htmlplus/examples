@@ -3,7 +3,7 @@ import '@htmlplus/core/center.js';
 const AvatarText = () => {
   return (
     <plus-center>
-      <plus-avatar>MA</plus-avatar>
+      <plus-avatar>T</plus-avatar>
     </plus-center>
   );
 };

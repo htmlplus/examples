@@ -4,17 +4,17 @@ const AvatarGroupGutter = () => {
     <>
       <Center>
         <Avatar.Group>
-          <Avatar>1</Avatar>
-          <Avatar>2</Avatar>
-          <Avatar>3</Avatar>
+          <Avatar></Avatar>
+          <Avatar></Avatar>
+          <Avatar></Avatar>
         </Avatar.Group>
       </Center>
       <br />
       <Center>
         <Avatar.Group stacked>
-          <Avatar>1</Avatar>
-          <Avatar>2</Avatar>
-          <Avatar>3</Avatar>
+          <Avatar></Avatar>
+          <Avatar></Avatar>
+          <Avatar></Avatar>
         </Avatar.Group>
       </Center>
     </>

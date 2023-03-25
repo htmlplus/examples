@@ -9,17 +9,17 @@ plus-avatar-group {
 <>
   <plus-center>
     <plus-avatar-group>
-      <plus-avatar>1</plus-avatar>
-      <plus-avatar>2</plus-avatar>
-      <plus-avatar>3</plus-avatar>
+      <plus-avatar></plus-avatar>
+      <plus-avatar></plus-avatar>
+      <plus-avatar></plus-avatar>
     </plus-avatar-group>
   </plus-center>
   <br />
   <plus-center>
     <plus-avatar-group stacked>
-      <plus-avatar>1</plus-avatar>
-      <plus-avatar>2</plus-avatar>
-      <plus-avatar>3</plus-avatar>
+      <plus-avatar></plus-avatar>
+      <plus-avatar></plus-avatar>
+      <plus-avatar></plus-avatar>
     </plus-avatar-group>
   </plus-center>
 </>

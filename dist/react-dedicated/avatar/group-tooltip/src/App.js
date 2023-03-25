@@ -3,12 +3,12 @@ const AvatarGroupTooltip = () => {
   return (
     <Center>
       <Avatar.Group stacked>
-        <Avatar shape="circle">A</Avatar>
-        <Tooltip>Tooltip A</Tooltip>
-        <Avatar shape="circle">B</Avatar>
-        <Tooltip>Tooltip B</Tooltip>
-        <Avatar shape="circle">C</Avatar>
-        <Tooltip>Tooltip C</Tooltip>
+        <Avatar></Avatar>
+        <Tooltip>Tooltip</Tooltip>
+        <Avatar></Avatar>
+        <Tooltip>Tooltip</Tooltip>
+        <Avatar></Avatar>
+        <Tooltip>Tooltip</Tooltip>
       </Avatar.Group>
     </Center>
   );

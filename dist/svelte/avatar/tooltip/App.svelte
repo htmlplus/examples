@@ -5,6 +5,6 @@
 </script>
 
 <plus-center>
-  <plus-avatar>AB</plus-avatar>
+  <plus-avatar></plus-avatar>
   <plus-tooltip>Tooltip</plus-tooltip>
 </plus-center>

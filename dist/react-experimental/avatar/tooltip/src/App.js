@@ -4,7 +4,7 @@ import '@htmlplus/core/tooltip.js';
 const AvatarTooltip = () => {
   return (
     <plus-center>
-      <plus-avatar>AB</plus-avatar>
+      <plus-avatar></plus-avatar>
       <plus-tooltip>Tooltip</plus-tooltip>
     </plus-center>
   );
