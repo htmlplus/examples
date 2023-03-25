@@ -1574,6 +1574,70 @@
   {
     "plugin": "angular",
     "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar shape=\"circle\">A</plus-avatar>\r\n    <plus-tooltip>Tooltip A</plus-tooltip>\r\n    <plus-avatar shape=\"circle\">B</plus-avatar>\r\n    <plus-tooltip>Tooltip B</plus-tooltip>\r\n    <plus-avatar shape=\"circle\">C</plus-avatar>\r\n    <plus-tooltip>Tooltip C</plus-tooltip>\r\n  </plus-avatar-group>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarGroupTooltip = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">A</Avatar>\n        <Tooltip>Tooltip A</Tooltip>\n        <Avatar shape=\"circle\">B</Avatar>\n        <Tooltip>Tooltip B</Tooltip>\n        <Avatar shape=\"circle\">C</Avatar>\n        <Tooltip>Tooltip C</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarGroupTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">A</plus-avatar>\n        <plus-tooltip>Tooltip A</plus-tooltip>\n        <plus-avatar shape=\"circle\">B</plus-avatar>\n        <plus-tooltip>Tooltip B</plus-tooltip>\n        <plus-avatar shape=\"circle\">C</plus-avatar>\n        <plus-tooltip>Tooltip C</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "avatar",
+    "example": "group-tooltip",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "avatar",
     "example": "icon",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
