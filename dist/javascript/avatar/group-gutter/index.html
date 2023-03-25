@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Avatar | Group Gutter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      plus-avatar-group {
+        --plus-avatar-group-gutter-stacked: -2rem;
+        --plus-avatar-group-gutter-unstacked: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <plus-center>
+      <plus-avatar-group>
+        <plus-avatar>1</plus-avatar>
+        <plus-avatar>2</plus-avatar>
+        <plus-avatar>3</plus-avatar>
+      </plus-avatar-group>
+    </plus-center>
+    <br />
+    <plus-center>
+      <plus-avatar-group stacked>
+        <plus-avatar>1</plus-avatar>
+        <plus-avatar>2</plus-avatar>
+        <plus-avatar>3</plus-avatar>
+      </plus-avatar-group>
+    </plus-center>
+
+    <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
+    </script>
+  </body>
+</html>
