@@ -29,7 +29,7 @@
 </plus-center>
 
 <style>
-  div {
+  plus-avatar > div {
     background-color: gray;
     color: white;
     font-size: 10px;
