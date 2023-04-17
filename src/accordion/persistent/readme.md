@@ -1,0 +1,21 @@
+```html [template]
+<plus-accordions persistent>
+  <plus-accordion summary="First">
+    <plus-faker></plus-faker>
+  </plus-accordion>
+  <plus-accordion summary="Second">
+    <plus-faker></plus-faker>
+  </plus-accordion>
+  <plus-accordion summary="Third">
+    <plus-faker></plus-faker>
+  </plus-accordion>
+</plus-accordions>
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
+```

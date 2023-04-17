@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accordion | Prevent From Toggling</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <plus-accordion summary="Summary" id="element1">
+      <plus-faker></plus-faker>
+    </plus-accordion>
+    <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
+
+      const ensure = (type, event) => {
+        if (window.confirm(`Are you sure you want to ${type} it?`)) return;
+        event.preventDefault();
+      };
+      element1.addEventListener('plus-collapse', (event) =>
+        ensure('collapse', event)
+      );
+      element1.addEventListener('plus-expand', (event) =>
+        ensure('expand', event)
+      );
+    </script>
+  </body>
+</html>

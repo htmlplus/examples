@@ -1,6 +1,622 @@
 [
   {
     "plugin": "angular",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n",
+      "template": "<plus-accordion>\n  <div slot=\"summary\">\n    <span>Summary</span>\n    <button>Action</button>\n  </div>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n",
+      "template": "<plus-accordion>\n  <div slot=\"summary\">\n    <span>Summary</span>\n    <button>Action</button>\n  </div>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "advanced",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-accordion>\r\n  <div slot=\"summary\">\r\n    <span>Summary</span>\r\n    <button>Action</button>\r\n  </div>\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+      },
+      {
+        "key": "style",
+        "type": "css",
+        "content": "[slot=\"summary\"] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  flex-grow: 1;\r\n  margin-right: 1rem;\r\n}"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionAdvanced = () => {\n  return (\n    <Accordion>\n      <div slot=\"summary\">\n        <span>Summary</span>\n        <button>Action</button>\n      </div>\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionAdvanced;\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionAdvanced = () => {\n  return (\n    <plus-accordion>\n      <div slot=\"summary\">\n        <span>Summary</span>\n        <button>Action</button>\n      </div>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionAdvanced;\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n",
+      "template": "<plus-accordion>\n  <div slot=\"summary\">\n    <span>Summary</span>\n    <button>Action</button>\n  </div>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "advanced",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "style": "[slot='summary'] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n",
+      "template": "<plus-accordion>\n  <div slot=\"summary\">\n    <span>Summary</span>\n    <button>Action</button>\n  </div>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-accordion summary=\"First\">\r\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\r\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import { Accordion, Faker, Icon } from '@htmlplus/react';\nconst AccordionCustomIcon = () => {\n  return (\n    <Accordion summary=\"First\">\n      <Icon slot=\"icon-expand\" name=\"plus\"></Icon>\n      <Icon slot=\"icon-collapse\" name=\"minus\"></Icon>\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\nconst AccordionCustomIcon = () => {\n  return (\n    <plus-accordion summary=\"First\">\n      <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n      <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "custom-icon",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "customized",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n  <plus-accordion summary=\"First\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</div>"
+      },
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-accordion {\r\n  border: 0;\r\n  border-radius: 0;\r\n}\r\nplus-accordion:not(:last-of-type) {\r\n  border-bottom: solid 2px lightgray;\r\n}\r\nplus-accordion::part(header),\r\nplus-accordion::part(body),\r\nplus-accordion::part(svg) {\r\n  transition: all 0.5s ease-out;\r\n}\r\nplus-accordion::part(header) {\r\n  column-gap: 0.5rem;\r\n  flex-direction: row-reverse;\r\n}\r\nplus-accordion[state^='expand']::part(header) {\r\n  background-color: lightgray;\r\n  font-weight: bold;\r\n}\r\nplus-accordion[state^='expand']::part(svg) {\r\n  fill: gray;\r\n  transform: rotate(90deg);\r\n}\r\nplus-accordion[state^='collap']::part(svg) {\r\n  fill: gray;\r\n  transform: rotate(0deg);\r\n}"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionCustomized = () => {\n  return (\n    <div>\n      <Accordion summary=\"First\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Second\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Third\">\n        <Faker></Faker>\n      </Accordion>\n    </div>\n  );\n};\nexport default AccordionCustomized;\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionCustomized = () => {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n};\nexport default AccordionCustomized;\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "customized",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(header),\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n}\nplus-accordion[state^='expand']::part(header) {\n  background-color: lightgray;\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-accordion summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "default",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-accordion summary=\"Summary\">\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionDefault = () => {\n  return (\n    <Accordion summary=\"Summary\">\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionDefault;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionDefault = () => {\n  return (\n    <plus-accordion summary=\"Summary\">\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionDefault;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "disabled",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n  <plus-accordion summary=\"First\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\" disabled>\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</div>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionDisabled = () => {\n  return (\n    <div>\n      <Accordion summary=\"First\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Second\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Third\" disabled>\n        <Faker></Faker>\n      </Accordion>\n    </div>\n  );\n};\nexport default AccordionDisabled;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionDisabled = () => {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n};\nexport default AccordionDisabled;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "disabled",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "open",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-accordion summary=\"Summary\" open>\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionOpen = () => {\n  return (\n    <Accordion summary=\"Summary\" open>\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionOpen;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionOpen = () => {\n  return (\n    <plus-accordion summary=\"Summary\" open>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionOpen;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "open",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/accordions.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/accordions.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "persistent",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-accordions persistent>\r\n  <plus-accordion summary=\"First\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</plus-accordions>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import { Accordion, Accordions, Faker } from '@htmlplus/react';\nconst AccordionPersistent = () => {\n  return (\n    <Accordions persistent>\n      <Accordion summary=\"First\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Second\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Third\">\n        <Faker></Faker>\n      </Accordion>\n    </Accordions>\n  );\n};\nexport default AccordionPersistent;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/accordions.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionPersistent = () => {\n  return (\n    <plus-accordions persistent>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n};\nexport default AccordionPersistent;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/accordions.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "persistent",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/accordions.js';\nimport '@htmlplus/core/faker.js';\n",
+      "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  ensure(type, event) {\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n    event.preventDefault();\n  }\n}\n",
+      "template": "<plus-accordion\n  summary=\"Summary\"\n  (plus-collapse)=\"ensure('collapse', $event)\"\n  (plus-expand)=\"ensure('expand', $event)\"\n>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n\nconst ensure = (type, event) => {\r\nif (window.confirm(`Are you sure you want to ${type} it?`)) return;\r\n  event.preventDefault();\r\n};\r\nelement1.addEventListener('plus-collapse', (event) => ensure('collapse', event));\r\nelement1.addEventListener('plus-expand', (event) => ensure('expand', event));",
+      "template": "<plus-accordion summary=\"Summary\" id=\"element1\">\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": [
+      {
+        "key": "script",
+        "type": "tsx",
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass AccordionPreventFromToggling {\r\n  ensure(type, event) {\r\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\r\n    event.preventDefault();\r\n  }\r\n  render() {\r\n    return (\r\n      <plus-accordion\r\n        summary=\"Summary\"\r\n        onPlusCollapse={(event) => this.ensure('collapse', event)}\r\n        onPlusExpand={(event) => this.ensure('expand', event)}\r\n      >\r\n        <plus-faker></plus-faker>\r\n      </plus-accordion>\r\n    )\r\n  }\r\n}"
+      },
+      {
+        "key": "javascript:template",
+        "type": "html",
+        "content": "<plus-accordion summary=\"Summary\" id=\"element1\">\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+      },
+      {
+        "key": "javascript:script",
+        "type": "js",
+        "content": "const ensure = (type, event) => {\r\nif (window.confirm(`Are you sure you want to ${type} it?`)) return;\r\n  event.preventDefault();\r\n};\r\nelement1.addEventListener('plus-collapse', (event) => ensure('collapse', event));\r\nelement1.addEventListener('plus-expand', (event) => ensure('expand', event));"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionPreventFromToggling = () => {\n  const ensure = (type, event) => {\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n    event.preventDefault();\n  };\n  return (\n    <Accordion\n      summary=\"Summary\"\n      onCollapse={(event) => ensure('collapse', event)}\n      onExpand={(event) => ensure('expand', event)}\n    >\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionPreventFromToggling;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionPreventFromToggling = () => {\n  const ensure = (type, event) => {\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n    event.preventDefault();\n  };\n  return (\n    <plus-accordion\n      summary=\"Summary\"\n      onplus-collapse={(event) => ensure('collapse', event)}\n      onplus-expand={(event) => ensure('expand', event)}\n    >\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionPreventFromToggling;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nfunction ensure(type, event) {\n  if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n  event.preventDefault();\n}\n",
+      "template": "<plus-accordion\n  summary=\"Summary\"\n  on:plus-collapse=\"{event => ensure('collapse', event)}\"\n  on:plus-expand=\"{event => ensure('expand', event)}\"\n>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "accordion",
+    "example": "prevent-from-toggling",
+    "output": {
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nfunction ensure(type, event) {\n  if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n  event.preventDefault();\n}\n",
+      "template": "<plus-accordion\n  summary=\"Summary\"\n  @plus-collapse=\"ensure('collapse', $event)\"\n  @plus-expand=\"ensure('expand', $event)\"\n>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    }
+  },
+  {
+    "plugin": "angular",
     "component": "animation",
     "example": "button",
     "output": {
