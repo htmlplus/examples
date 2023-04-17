@@ -20,7 +20,6 @@ plus-accordion {
 plus-accordion:not(:last-of-type) {
   border-bottom: solid 2px lightgray;
 }
-plus-accordion::part(header),
 plus-accordion::part(body),
 plus-accordion::part(svg) {
   transition: all 0.5s ease-out;
@@ -31,7 +30,6 @@ plus-accordion::part(header) {
   padding-left: 0;
 }
 plus-accordion[state^='expand']::part(header) {
-  background-color: lightgray;
   font-weight: bold;
 }
 plus-accordion[state^='expand']::part(svg) {
