@@ -28,6 +28,7 @@ plus-accordion::part(svg) {
 plus-accordion::part(header) {
   column-gap: 0.5rem;
   flex-direction: row-reverse;
+  padding-left: 0;
 }
 plus-accordion[state^='expand']::part(header) {
   background-color: lightgray;

@@ -1,7 +1,7 @@
-import { Accordion, Accordions, Faker } from '@htmlplus/react';
+import { Accordion, Faker } from '@htmlplus/react';
 const AccordionPersistent = () => {
   return (
-    <Accordions persistent>
+    <div>
       <Accordion summary="First">
         <Faker></Faker>
       </Accordion>
@@ -11,7 +11,7 @@ const AccordionPersistent = () => {
       <Accordion summary="Third">
         <Faker></Faker>
       </Accordion>
-    </Accordions>
+    </div>
   );
 };
 export default AccordionPersistent;

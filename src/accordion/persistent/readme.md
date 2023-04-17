@@ -1,5 +1,5 @@
 ```html [template]
-<plus-accordions persistent>
+<div>
   <plus-accordion summary="First">
     <plus-faker></plus-faker>
   </plus-accordion>
@@ -9,7 +9,7 @@
   <plus-accordion summary="Third">
     <plus-faker></plus-faker>
   </plus-accordion>
-</plus-accordions>
+</div>
 ```
 
 ```json [settings]
