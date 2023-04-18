@@ -3,7 +3,7 @@ const AvatarIcon = () => {
   return (
     <Center>
       <Avatar>
-        <Icon>user</Icon>
+        <Icon name="user"></Icon>
       </Avatar>
     </Center>
   );

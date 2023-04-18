@@ -89,7 +89,7 @@
     "example": "custom-icon",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
     }
   },
   {
@@ -98,7 +98,7 @@
     "example": "custom-icon",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
     }
   },
   {
@@ -109,7 +109,7 @@
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-accordion summary=\"First\">\r\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\r\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
+        "content": "<plus-accordion summary=\"First\">\r\n  <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\r\n  <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\r\n  <plus-faker></plus-faker>\r\n</plus-accordion>"
       },
       {
         "key": "settings",
@@ -127,7 +127,7 @@
     "component": "accordion",
     "example": "custom-icon",
     "output": {
-      "script": "import { Accordion, Faker, Icon } from '@htmlplus/react';\nconst AccordionCustomIcon = () => {\n  return (\n    <Accordion summary=\"First\">\n      <Icon slot=\"icon-expand\" name=\"plus\"></Icon>\n      <Icon slot=\"icon-collapse\" name=\"minus\"></Icon>\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
+      "script": "import { Accordion, Faker, Icon } from '@htmlplus/react';\nconst AccordionCustomIcon = () => {\n  return (\n    <Accordion summary=\"First\">\n      <Icon slot=\"icon-expand\" name=\"square-plus\"></Icon>\n      <Icon slot=\"icon-collapse\" name=\"square-minus\"></Icon>\n      <Faker></Faker>\n    </Accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
     }
   },
   {
@@ -135,7 +135,7 @@
     "component": "accordion",
     "example": "custom-icon",
     "output": {
-      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\nconst AccordionCustomIcon = () => {\n  return (\n    <plus-accordion summary=\"First\">\n      <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n      <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\nconst AccordionCustomIcon = () => {\n  return (\n    <plus-accordion summary=\"First\">\n      <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\n      <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n};\nexport default AccordionCustomIcon;\n"
     }
   },
   {
@@ -144,7 +144,7 @@
     "example": "custom-icon",
     "output": {
       "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
     }
   },
   {
@@ -153,7 +153,7 @@
     "example": "custom-icon",
     "output": {
       "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+      "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"square-plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"square-minus\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
     }
   },
   {
@@ -2257,7 +2257,7 @@
     "example": "icon",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2266,7 +2266,7 @@
     "example": "icon",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2277,7 +2277,7 @@
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <plus-icon>user</plus-icon>\r\n  </plus-avatar>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <plus-icon name=\"user\"></plus-icon>\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -2286,7 +2286,7 @@
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <Center>\n      <Avatar>\n        <Icon>user</Icon>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarIcon;\n"
+      "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <Center>\n      <Avatar>\n        <Icon name=\"user\"></Icon>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -2294,7 +2294,7 @@
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon>user</plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarIcon;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"user\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -2303,7 +2303,7 @@
     "example": "icon",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2312,7 +2312,7 @@
     "example": "icon",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -4224,7 +4224,7 @@
     "example": "inline",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4233,7 +4233,7 @@
     "example": "inline",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4244,7 +4244,7 @@
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon size=\"2x\">menu</plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
+        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
       }
     ]
   },
@@ -4253,7 +4253,7 @@
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon size=\"2x\">menu</Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon name=\"menu-2\" size=\"2x\"></Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4261,7 +4261,7 @@
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon size=\"2x\">menu</plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4270,7 +4270,7 @@
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4279,7 +4279,7 @@
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
