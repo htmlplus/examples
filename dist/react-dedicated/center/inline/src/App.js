@@ -4,7 +4,7 @@ const CenterInline = () => {
     <Center>
       <button>
         <Center inline>
-          <Icon name="menu-2" size="2x"></Icon>
+          <Icon name="menu" size="2x"></Icon>
           &nbsp; Menu
         </Center>
       </button>

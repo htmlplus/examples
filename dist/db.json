@@ -4224,7 +4224,7 @@
     "example": "inline",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4233,7 +4233,7 @@
     "example": "inline",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4244,7 +4244,7 @@
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
+        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
       }
     ]
   },
@@ -4253,7 +4253,7 @@
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon name=\"menu-2\" size=\"2x\"></Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon name=\"menu\" size=\"2x\"></Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4261,7 +4261,7 @@
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4270,7 +4270,7 @@
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4279,7 +4279,7 @@
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu-2\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
