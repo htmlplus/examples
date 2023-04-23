@@ -1,9 +1,9 @@
-import { Icon } from '@htmlplus/react';
+import { Center, Icon } from '@htmlplus/react';
 const IconDefault = () => {
   return (
-    <div className="center">
-      <Icon>home</Icon>
-    </div>
+    <Center>
+      <Icon name="home"></Icon>
+    </Center>
   );
 };
 export default IconDefault;

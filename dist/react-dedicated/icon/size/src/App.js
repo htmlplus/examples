@@ -1,11 +1,11 @@
-import { Icon } from '@htmlplus/react';
+import { Center, Icon } from '@htmlplus/react';
 const IconSize = () => {
   return (
-    <div className="center">
-      <Icon size="1x">home</Icon>
-      <Icon size="2x">home</Icon>
-      <Icon size="3x">home</Icon>
-    </div>
+    <Center>
+      <Icon name="home" size="1x"></Icon>
+      <Icon name="home" size="2x"></Icon>
+      <Icon name="home" size="3x"></Icon>
+    </Center>
   );
 };
 export default IconSize;

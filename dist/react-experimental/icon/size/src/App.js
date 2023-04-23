@@ -1,11 +1,12 @@
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
 const IconSize = () => {
   return (
-    <div className="center">
-      <plus-icon size="1x">home</plus-icon>
-      <plus-icon size="2x">home</plus-icon>
-      <plus-icon size="3x">home</plus-icon>
-    </div>
+    <plus-center>
+      <plus-icon name="home" size="1x"></plus-icon>
+      <plus-icon name="home" size="2x"></plus-icon>
+      <plus-icon name="home" size="3x"></plus-icon>
+    </plus-center>
   );
 };
 export default IconSize;

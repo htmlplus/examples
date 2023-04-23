@@ -1,13 +1,13 @@
-import { Icon } from '@htmlplus/react';
+import { Center, Icon } from '@htmlplus/react';
 const IconColor = () => {
   return (
-    <div className="center">
-      <Icon color="#08DFC8">home</Icon>
-      <Icon color="#FF5449">home</Icon>
-      <Icon color="#5F9EE9">home</Icon>
-      <Icon color="#FFC903">home</Icon>
-      <Icon color="#9073C1">home</Icon>
-    </div>
+    <Center>
+      <Icon name="home" color="#08DFC8"></Icon>
+      <Icon name="home" color="#FF5449"></Icon>
+      <Icon name="home" color="#5F9EE9"></Icon>
+      <Icon name="home" color="#FFC903"></Icon>
+      <Icon name="home" color="#9073C1"></Icon>
+    </Center>
   );
 };
 export default IconColor;

@@ -1,13 +1,8 @@
 <script>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/icon.js';
 </script>
 
-<div class="center">
-  <plus-icon>home</plus-icon>
-</div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
+<plus-center>
+  <plus-icon name="home"></plus-icon>
+</plus-center>

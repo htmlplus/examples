@@ -5,23 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      .center {
-        text-align: center;
-      }
       plus-icon {
         margin: 0 1rem;
       }
     </style>
   </head>
   <body>
-    <div class="center">
-      <plus-icon>home</plus-icon>
-      <plus-icon flip="horizontal">home</plus-icon>
-      <plus-icon flip="vertical">home</plus-icon>
-      <plus-icon flip="both">home</plus-icon>
-    </div>
+    <plus-center>
+      <plus-icon name="home"></plus-icon>
+      <plus-icon name="home" flip="horizontal"></plus-icon>
+      <plus-icon name="home" flip="vertical"></plus-icon>
+      <plus-icon name="home" flip="both"></plus-icon>
+    </plus-center>
 
     <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';
     </script>
   </body>

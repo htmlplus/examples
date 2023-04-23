@@ -1,17 +1,15 @@
 <script>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/icon.js';
 </script>
 
-<div class="center">
-  <plus-icon color="primary">home</plus-icon>
-  <plus-icon color="secondary">home</plus-icon>
-  <plus-icon color="tertiary">home</plus-icon>
-</div>
+<plus-center>
+  <plus-icon name="home" color="primary"></plus-icon>
+  <plus-icon name="home" color="secondary"></plus-icon>
+  <plus-icon name="home" color="tertiary"></plus-icon>
+</plus-center>
 
 <style>
-  .center {
-    text-align: center;
-  }
   plus-icon {
     margin: 0 1rem;
   }

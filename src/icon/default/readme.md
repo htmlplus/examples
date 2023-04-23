@@ -1,11 +1,5 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```html [template]
-<div class="center">
-  <plus-icon>home</plus-icon>
-</div>
+<plus-center>
+  <plus-icon name="home"></plus-icon>
+</plus-center>
 ```

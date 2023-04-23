@@ -1,12 +1,13 @@
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
 const IconFlip = () => {
   return (
-    <div className="center">
-      <plus-icon>home</plus-icon>
-      <plus-icon flip="horizontal">home</plus-icon>
-      <plus-icon flip="vertical">home</plus-icon>
-      <plus-icon flip="both">home</plus-icon>
-    </div>
+    <plus-center>
+      <plus-icon name="home"></plus-icon>
+      <plus-icon name="home" flip="horizontal"></plus-icon>
+      <plus-icon name="home" flip="vertical"></plus-icon>
+      <plus-icon name="home" flip="both"></plus-icon>
+    </plus-center>
   );
 };
 export default IconFlip;
