@@ -10640,6 +10640,81 @@
   {
     "plugin": "angular",
     "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"16\"></plus-icon>\n  <plus-icon name=\"home\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"16\"></plus-icon>\n  <plus-icon name=\"home\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "custom-size",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" size=\"16\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"32px\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconCustomSize = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" size=\"16\"></Icon>\n      <Icon name=\"home\" size=\"32px\"></Icon>\n      <Icon name=\"home\" size=\"3rem\"></Icon>\n    </Center>\n  );\n};\nexport default IconCustomSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconCustomSize = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" size=\"16\"></plus-icon>\n      <plus-icon name=\"home\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconCustomSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"16\"></plus-icon>\n  <plus-icon name=\"home\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "custom-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"16\"></plus-icon>\n  <plus-icon name=\"home\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3rem\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
     "example": "default",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
@@ -10779,6 +10854,499 @@
   {
     "plugin": "angular",
     "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"far-user\"></plus-icon>\r\n  <plus-icon name=\"fas-user\"></plus-icon>\r\n  <plus-icon name=\"fab-apple\"></plus-icon>\r\n</plus-center>"
+      },
+      {
+        "key": "config",
+        "type": "js",
+        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "isolate": true
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconFontAwesome = () => {\n  return (\n    <Center>\n      <Icon name=\"far-user\"></Icon>\n      <Icon name=\"fas-user\"></Icon>\n      <Icon name=\"fab-apple\"></Icon>\n    </Center>\n  );\n};\nexport default IconFontAwesome;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconFontAwesome = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"far-user\"></plus-icon>\n      <plus-icon name=\"fas-user\"></plus-icon>\n      <plus-icon name=\"fab-apple\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconFontAwesome;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "font-awesome",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: async (name, parser) => {\r\n          let category = 'regular';\r\n\r\n          if (name.startsWith('fas-')) category = 'solid';\r\n          if (name.startsWith('fab-')) category = 'brands';\r\n\r\n          name = name.replace(/^fa[rbs]-/, '');\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "label",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconLabel = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" label=\"Go to home\"></Icon>\n    </Center>\n  );\n};\nexport default IconLabel;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconLabel = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconLabel;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" label=\"Go to home\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "material",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"home_outline\"></plus-icon>\r\n  <plus-icon name=\"home_round\"></plus-icon>\r\n  <plus-icon name=\"home_sharp\"></plus-icon>\r\n</plus-center>"
+      },
+      {
+        "key": "config",
+        "type": "js",
+        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "isolate": true
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconMaterial = () => {\n  return (\n    <Center>\n      <Icon name=\"home_outline\"></Icon>\n      <Icon name=\"home_round\"></Icon>\n      <Icon name=\"home_sharp\"></Icon>\n    </Center>\n  );\n};\nexport default IconMaterial;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconMaterial = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconMaterial;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "material",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name, parser) => {\r\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\r\n\r\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n            .then((raw) => parser(raw))\r\n            .then((svg) => {\r\n              svg.setAttribute('fill', 'currentColor');\r\n              return svg;\r\n            })\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"carbon/user\"></plus-icon>\r\n  <plus-icon name=\"lucide/user\"></plus-icon>\r\n  <plus-icon name=\"tabler/user\"></plus-icon>\r\n</plus-center>"
+      },
+      {
+        "key": "config",
+        "type": "js",
+        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "isolate": true
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconMultipleLibrary = () => {\n  return (\n    <Center>\n      <Icon name=\"carbon/user\"></Icon>\n      <Icon name=\"lucide/user\"></Icon>\n      <Icon name=\"tabler/user\"></Icon>\n    </Center>\n  );\n};\nexport default IconMultipleLibrary;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconMultipleLibrary = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"carbon/user\"></plus-icon>\n      <plus-icon name=\"lucide/user\"></plus-icon>\n      <plus-icon name=\"tabler/user\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconMultipleLibrary;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "multiple-library",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-icon': {\r\n      property: {\r\n        resolver: (name) => {\r\n          const [library, icon] = name.split('/');\r\n\r\n          const references = {\r\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\r\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\r\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`,\r\n          }\r\n\r\n          const url = references[library];\r\n\r\n          return fetch(url)\r\n            .then((response) => response.text())\r\n        }\r\n      }\r\n    }\r\n  }\r\n})",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"home\" size=\"md\"></plus-icon>\n  <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"home\" size=\"md\"></plus-icon>\n  <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "override-size",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}\r\nplus-icon[size=xs] {\r\n  height: 1em;\r\n  width: 1em;\r\n}\r\nplus-icon[size=sm] {\r\n  height: 1.25em;\r\n  width: 1.25em;\r\n}\r\nplus-icon[size=md] {\r\n  height: 1.5em;\r\n  width: 1.5em;\r\n}\r\nplus-icon[size=lg] {\r\n  height: 1.75em;\r\n  width: 1.75em;\r\n}\r\nplus-icon[size=xl] {\r\n  height: 2em;\r\n  width: 2em;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" size=\"xs\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"sm\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"md\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"lg\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"xl\"></plus-icon>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconOverrideSize = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" size=\"xs\"></Icon>\n      <Icon name=\"home\" size=\"sm\"></Icon>\n      <Icon name=\"home\" size=\"md\"></Icon>\n      <Icon name=\"home\" size=\"lg\"></Icon>\n      <Icon name=\"home\" size=\"xl\"></Icon>\n    </Center>\n  );\n};\nexport default IconOverrideSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconOverrideSize = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n      <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n      <plus-icon name=\"home\" size=\"md\"></plus-icon>\n      <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n      <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconOverrideSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"home\" size=\"md\"></plus-icon>\n  <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "override-size",
+    "output": {
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\nplus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"home\" size=\"md\"></plus-icon>\n  <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": [
+      {
+        "key": "config",
+        "type": "js",
+        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconRegisterACustomName = () => {\n  return (\n    <Center>\n      <Icon name=\"custom-logo\" size=\"5x\"></Icon>\n    </Center>\n  );\n};\nexport default IconRegisterACustomName;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconRegisterACustomName = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconRegisterACustomName;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "icon",
+    "example": "register-a-custom-name",
+    "output": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    icon: {\r\n      'custom-logo': `\r\n        <svg viewBox=\"0 0 1000 1000\">\r\n          <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\r\n        </svg>\r\n      `\r\n    }\r\n  }\r\n});",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "icon",
     "example": "rotate",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
@@ -10857,8 +11425,8 @@
     "example": "size",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<div>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n    <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n    <plus-icon name=\"home\" size=\"md\"></plus-icon>\n    <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n    <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n  </plus-center>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"4x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"5x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"6x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"7x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"8x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"9x\"></plus-icon>\n  </plus-center>\n</div>\n"
     }
   },
   {
@@ -10867,8 +11435,8 @@
     "example": "size",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<div>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n    <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n    <plus-icon name=\"home\" size=\"md\"></plus-icon>\n    <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n    <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n  </plus-center>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"4x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"5x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"6x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"7x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"8x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"9x\"></plus-icon>\n  </plus-center>\n</div>\n"
     }
   },
   {
@@ -10879,12 +11447,12 @@
       {
         "key": "style",
         "type": "css",
-        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n  vertical-align: middle;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\r\n</plus-center>"
+        "content": "<div>\r\n  <plus-center>\r\n    <plus-icon name=\"home\" size=\"xs\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"sm\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"md\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"lg\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"xl\"></plus-icon>\r\n  </plus-center>\r\n  <plus-center>\r\n    <plus-icon name=\"home\" size=\"1x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"2x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"3x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"4x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"5x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"6x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"7x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"8x\"></plus-icon>\r\n    <plus-icon name=\"home\" size=\"9x\"></plus-icon>\r\n  </plus-center>\r\n</div>"
       }
     ]
   },
@@ -10893,8 +11461,8 @@
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconSize = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" size=\"1x\"></Icon>\n      <Icon name=\"home\" size=\"2x\"></Icon>\n      <Icon name=\"home\" size=\"3x\"></Icon>\n    </Center>\n  );\n};\nexport default IconSize;\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconSize = () => {\n  return (\n    <div>\n      <Center>\n        <Icon name=\"home\" size=\"xs\"></Icon>\n        <Icon name=\"home\" size=\"sm\"></Icon>\n        <Icon name=\"home\" size=\"md\"></Icon>\n        <Icon name=\"home\" size=\"lg\"></Icon>\n        <Icon name=\"home\" size=\"xl\"></Icon>\n      </Center>\n      <Center>\n        <Icon name=\"home\" size=\"1x\"></Icon>\n        <Icon name=\"home\" size=\"2x\"></Icon>\n        <Icon name=\"home\" size=\"3x\"></Icon>\n        <Icon name=\"home\" size=\"4x\"></Icon>\n        <Icon name=\"home\" size=\"5x\"></Icon>\n        <Icon name=\"home\" size=\"6x\"></Icon>\n        <Icon name=\"home\" size=\"7x\"></Icon>\n        <Icon name=\"home\" size=\"8x\"></Icon>\n        <Icon name=\"home\" size=\"9x\"></Icon>\n      </Center>\n    </div>\n  );\n};\nexport default IconSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10902,8 +11470,8 @@
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconSize = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n      <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n      <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconSize;\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconSize = () => {\n  return (\n    <div>\n      <plus-center>\n        <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n        <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n        <plus-icon name=\"home\" size=\"md\"></plus-icon>\n        <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n        <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n      </plus-center>\n      <plus-center>\n        <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"4x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"5x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"6x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"7x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"8x\"></plus-icon>\n        <plus-icon name=\"home\" size=\"9x\"></plus-icon>\n      </plus-center>\n    </div>\n  );\n};\nexport default IconSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10912,8 +11480,8 @@
     "example": "size",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<div>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n    <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n    <plus-icon name=\"home\" size=\"md\"></plus-icon>\n    <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n    <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n  </plus-center>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"4x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"5x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"6x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"7x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"8x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"9x\"></plus-icon>\n  </plus-center>\n</div>\n"
     }
   },
   {
@@ -10922,8 +11490,8 @@
     "example": "size",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<div>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"xs\"></plus-icon>\n    <plus-icon name=\"home\" size=\"sm\"></plus-icon>\n    <plus-icon name=\"home\" size=\"md\"></plus-icon>\n    <plus-icon name=\"home\" size=\"lg\"></plus-icon>\n    <plus-icon name=\"home\" size=\"xl\"></plus-icon>\n  </plus-center>\n  <plus-center>\n    <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"4x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"5x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"6x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"7x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"8x\"></plus-icon>\n    <plus-icon name=\"home\" size=\"9x\"></plus-icon>\n  </plus-center>\n</div>\n"
     }
   },
   {
