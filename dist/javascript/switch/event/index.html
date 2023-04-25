@@ -4,18 +4,13 @@
     <title>Switch | Event</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .center {
-        text-align: center;
-        padding: 2.5rem 0;
-      }
-    </style>
   </head>
   <body>
-    <div class="center">
+    <plus-center>
       <plus-switch id="element1"></plus-switch>
-    </div>
+    </plus-center>
     <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';
 
       element1.addEventListener('plus-change', (event) => {

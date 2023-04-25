@@ -1,8 +1,8 @@
-import '@htmlplus/core/center.js';
 import '@htmlplus/core/format-bytes.js';
+import '@htmlplus/core/stack.js';
 const FormatBytesLocale = () => {
   return (
-    <plus-center>
+    <plus-stack vertical>
       <plus-format-bytes
         value="10000100"
         locale="en"
@@ -13,7 +13,7 @@ const FormatBytesLocale = () => {
         locale="de"
         unit="kilo"
       ></plus-format-bytes>
-    </plus-center>
+    </plus-stack>
   );
 };
 export default FormatBytesLocale;

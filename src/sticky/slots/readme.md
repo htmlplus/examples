@@ -32,6 +32,9 @@ plus-sticky[state='normal'] header {
 
 ```json [settings]
 {
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  },
   "dock": true
 }
 ```

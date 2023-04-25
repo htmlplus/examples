@@ -1,7 +1,7 @@
 import { Divider } from '@htmlplus/react';
 const DividerType = () => {
   return (
-    <div>
+    <>
       <Divider type="dashed"></Divider>
       <br />
       <Divider type="dotted"></Divider>
@@ -17,7 +17,7 @@ const DividerType = () => {
       <Divider type="ridge"></Divider>
       <br />
       <Divider type="solid"></Divider>
-    </div>
+    </>
   );
 };
 export default DividerType;

@@ -22,10 +22,7 @@ plus-card p {
     </h1>
   </plus-portal>
   <plus-card outlined id="before">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
+    <plus-faker></plus-faker>
   </plus-card>
   <br />
   <plus-portal target="#prepend" strategy="prepend">
@@ -34,10 +31,7 @@ plus-card p {
     </h1>
   </plus-portal>
   <plus-card outlined id="prepend">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
+    <plus-faker></plus-faker>
   </plus-card>
   <br />
   <plus-portal target="#append" strategy="append">
@@ -46,10 +40,7 @@ plus-card p {
     </h1>
   </plus-portal>
   <plus-card outlined id="append">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
+    <plus-faker></plus-faker>
   </plus-card>
   <br />
   <plus-portal target="#after" strategy="after">
@@ -58,10 +49,15 @@ plus-card p {
     </h1>
   </plus-portal>
   <plus-card outlined id="after">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </p>
+    <plus-faker></plus-faker>
   </plus-card>
 </>
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
 ```

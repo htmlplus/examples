@@ -4,14 +4,9 @@
     <title>Format Bytes | Locale</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      plus-center {
-        flex-direction: column;
-      }
-    </style>
   </head>
   <body>
-    <plus-center>
+    <plus-stack vertical>
       <plus-format-bytes
         value="10000100"
         locale="en"
@@ -22,11 +17,11 @@
         locale="de"
         unit="kilo"
       ></plus-format-bytes>
-    </plus-center>
+    </plus-stack>
 
     <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
     </script>
   </body>
 </html>

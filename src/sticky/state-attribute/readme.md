@@ -28,6 +28,9 @@ plus-sticky[state="stick"] {
 
 ```json [settings]
 {
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  },
   "dock": true
 }
 ```

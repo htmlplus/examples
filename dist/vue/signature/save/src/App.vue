@@ -6,16 +6,16 @@
     ></plus-signature>
   </plus-center>
   <br />
-  <plus-center>
+  <plus-stack gap="1rem">
     <button @click="save(true)">Save With Background</button>
-    &nbsp; &nbsp;
     <button @click="save(false)">Save Without Background</button>
-  </plus-center>
+  </plus-stack>
 </template>
 
 <script setup>
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
+  import '@htmlplus/core/stack.js';
   function save(background) {
     const image = new Image();
     image.src = window.signature3.toDataURL('image/svg+xml', background);

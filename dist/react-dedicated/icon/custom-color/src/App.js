@@ -1,11 +1,11 @@
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 const IconCustomColor = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="home" color="primary"></Icon>
       <Icon name="home" color="secondary"></Icon>
       <Icon name="home" color="tertiary"></Icon>
-    </Center>
+    </Stack>
   );
 };
 export default IconCustomColor;

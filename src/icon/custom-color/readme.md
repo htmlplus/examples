@@ -1,7 +1,4 @@
 ```css [style]
-plus-icon {
-  margin: 0 1rem;
-}
 [color="primary"] {
   color: #FF5449;
 }
@@ -14,9 +11,9 @@ plus-icon {
 ```
 
 ```html [template]
-<plus-center>
+<plus-stack gap="2rem">
   <plus-icon name="home" color="primary"></plus-icon>
   <plus-icon name="home" color="secondary"></plus-icon>
   <plus-icon name="home" color="tertiary"></plus-icon>
-</plus-center>
+</plus-stack>
 ```

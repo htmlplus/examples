@@ -1,9 +1,9 @@
-import { Switch } from '@htmlplus/react';
+import { Center, Switch } from '@htmlplus/react';
 const SwitchThreeDimensional = () => {
   return (
-    <div className="center">
+    <Center>
       <Switch checked></Switch>
-    </div>
+    </Center>
   );
 };
 export default SwitchThreeDimensional;

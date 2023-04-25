@@ -35,6 +35,9 @@ plus-faker {
 
 ```json [settings]
 {
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  },
   "dock": true
 }
 ```

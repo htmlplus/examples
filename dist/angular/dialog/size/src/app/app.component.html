@@ -1,14 +1,8 @@
-<plus-grid justify-content="center" gutter="md">
-  <plus-grid-item xs="12" sm="auto">
-    <button (click)="show('sm')">Small dialog</button>
-  </plus-grid-item>
-  <plus-grid-item xs="12" sm="auto">
-    <button (click)="show('lg')">Large dialog</button>
-  </plus-grid-item>
-  <plus-grid-item xs="12" sm="auto">
-    <button (click)="show('xl')">Extra large dialog</button>
-  </plus-grid-item>
-</plus-grid>
+<plus-stack gap="1rem">
+  <button (click)="show('sm')">Small dialog</button>
+  <button (click)="show('lg')">Large dialog</button>
+  <button (click)="show('xl')">Extra large dialog</button>
+</plus-stack>
 <plus-dialog animation="fade" [open]="open" [size]="size" (plus-close)="hide()">
   <plus-dialog-content>
     <plus-dialog-header>Dialog Title</plus-dialog-header>

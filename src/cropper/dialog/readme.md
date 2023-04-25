@@ -1,9 +1,3 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
@@ -19,11 +13,11 @@ class CropperDialog {
   render() {
     return (
       <>
-        <div class="center">
+        <plus-center>
           <plus-dialog-toggler connector="dialog-cropper">
             Open
           </plus-dialog-toggler>
-        </div>
+        </plus-center>
         <plus-dialog
           animation="fade"
           connector="dialog-cropper"
@@ -50,9 +44,9 @@ class CropperDialog {
 ```
 
 ```html [javascript:template]
-<div class="center">
+<plus-center>
   <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
-</div>
+</plus-center>
 <plus-dialog id="element1" animation="fade" connector="dialog-cropper">
   <plus-dialog-content>
     <plus-dialog-header> Cropper </plus-dialog-header>

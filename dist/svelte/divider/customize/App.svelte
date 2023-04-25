@@ -17,7 +17,7 @@
 
 <style>
   plus-divider {
-    --plus-divider-color: #5f9ee9;
+    --plus-divider-color: darkgray;
     --plus-divider-width: 0.5rem;
     margin: 2rem 0;
   }

@@ -1,15 +1,10 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-switch></plus-switch>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/switch.js';
 </script>
-
-<style scoped>
-  .center {
-    text-align: center;
-  }
-</style>

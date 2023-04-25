@@ -1,11 +1,4 @@
 ```css [style]
-.center {
-  text-align: center;
-}
-plus-breadcrumb {
-  display: inline-block;
-  color: #707070;
-}
 plus-breadcrumb a {
   color: inherit;
   text-decoration: none;
@@ -16,7 +9,7 @@ plus-breadcrumb a:hover {
 ```
 
 ```html [template]
-<div class="center">
+<plus-center>
   <plus-breadcrumb separator="-">
     <a href="#">First</a>
     <a href="#">Second</a>
@@ -24,5 +17,5 @@ plus-breadcrumb a:hover {
     <a href="#">Fourth</a>
     <a href="#">Fifth</a>
   </plus-breadcrumb>
-</div>
+</plus-center>
 ```

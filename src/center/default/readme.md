@@ -1,7 +1,7 @@
 ```css [style]
 plus-center {
   height: 10rem;
-  background-color: #eeeeee;
+  background-color: whitesmoke;
 }
 ```
 

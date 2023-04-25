@@ -1,7 +1,7 @@
-import { Avatar, Center } from '@htmlplus/react';
+import { Avatar, Stack } from '@htmlplus/react';
 const AvatarSlots = () => {
   return (
-    <Center>
+    <Stack gap="8rem">
       <Avatar size="xxl">
         <div slot="bottom">bottom</div>
         <div slot="center">center</div>
@@ -24,7 +24,7 @@ const AvatarSlots = () => {
         <div slot="start-top">start-top</div>
         <div slot="top">top</div>
       </Avatar>
-    </Center>
+    </Stack>
   );
 };
 export default AvatarSlots;

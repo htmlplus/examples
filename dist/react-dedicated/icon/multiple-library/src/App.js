@@ -1,11 +1,11 @@
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 const IconMultipleLibrary = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="carbon/user"></Icon>
       <Icon name="lucide/user"></Icon>
       <Icon name="tabler/user"></Icon>
-    </Center>
+    </Stack>
   );
 };
 export default IconMultipleLibrary;

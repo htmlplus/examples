@@ -1,10 +1,3 @@
-```css [style]
-.center {
-  text-align: center;
-  padding: 2.5rem 0;
-}
-```
-
 ```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
@@ -15,18 +8,18 @@ class SwitchEvent {
   }
   render() {
     return (
-      <div class="center">
+      <plus-center>
         <plus-switch onPlusChange={(event) => this.onChange(event)}></plus-switch>
-      </div>
+      </plus-center>
     );
   }
 }
 ```
 
 ```html [javascript:template]
-<div class="center">
+<plus-center>
   <plus-switch id="element1"></plus-switch>
-</div>
+</plus-center>
 ```
 
 ```js [javascript:script]

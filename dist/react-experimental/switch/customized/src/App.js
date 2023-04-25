@@ -1,10 +1,11 @@
+import '@htmlplus/core/stack.js';
 import '@htmlplus/core/switch.js';
 const SwitchCustomized = () => {
   return (
-    <div className="container">
+    <plus-stack gap="2rem">
       <plus-switch className="switch-1"></plus-switch>
       <plus-switch className="switch-2"></plus-switch>
-    </div>
+    </plus-stack>
   );
 };
 export default SwitchCustomized;

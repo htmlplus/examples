@@ -44,10 +44,6 @@
     text-align: center;
     margin: 0.75em;
   }
-  plus-breadcrumb {
-    display: inline-block;
-    color: #707070;
-  }
   plus-breadcrumb a {
     color: inherit;
     text-decoration: none;

@@ -1,7 +1,7 @@
 ```css [style]
 .container {
   padding: 2rem 0;
-  background-color: #eeeeee;
+  background-color: whitesmoke;
 }
 plus-card {
   height: 8rem;

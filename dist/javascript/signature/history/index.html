@@ -13,14 +13,14 @@
       ></plus-signature>
     </plus-center>
     <br />
-    <plus-center>
+    <plus-stack gap="1rem">
       <button id="undo" disabled>Undo</button>
-      &nbsp; &nbsp;
       <button id="redo" disabled>Redo</button>
-    </plus-center>
+    </plus-stack>
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
 
       const sync = () => {
         undo.disabled = !signature2.canUndo();

@@ -39,11 +39,10 @@ class SignatureHistory {
           ></plus-signature>
         </plus-center>
         <br />
-        <plus-center>
+        <plus-stack gap="1rem">
           <button disabled={!this.canUndo} onClick={() => this.onUndo()}>Undo</button>
-          &nbsp; &nbsp;
           <button disabled={!this.canRedo} onClick={() => this.onRedo()}>Redo</button>
-        </plus-center>
+        </plus-stack>
       </>
     )
   }
@@ -55,11 +54,10 @@ class SignatureHistory {
   <plus-signature id="signature2" background-color="lightgray"></plus-signature>
 </plus-center>
 <br />
-<plus-center>
+<plus-stack gap="1rem">
   <button id="undo" disabled>Undo</button>
-  &nbsp; &nbsp;
   <button id="redo" disabled>Redo</button>
-</plus-center>
+</plus-stack>
 ```
 
 ```js [javascript:script]

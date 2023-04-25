@@ -3,16 +3,14 @@ plus-avatar > div {
   background-color: gray;
   color: white;
   font-size: 10px;
-  padding: 0.25rem;
+  padding: 0.125rem 0.25rem;
   font-family: monospace;
-}
-plus-center {
-  gap: 8rem;
+  line-height: 1;
 }
 ```
 
 ```html [template]
-<plus-center>
+<plus-stack gap="8rem">
   <plus-avatar size="xxl">
     <div slot="bottom">bottom</div>
     <div slot="center">center</div>
@@ -35,5 +33,5 @@ plus-center {
     <div slot="start-top">start-top</div>
     <div slot="top">top</div>
   </plus-avatar>
-</plus-center>
+</plus-stack>
 ```

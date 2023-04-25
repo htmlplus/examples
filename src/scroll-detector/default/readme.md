@@ -51,6 +51,9 @@ scroll1.addEventListener('plus-change', (event) => {
 
 ```json [settings]
 {
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  },
   "dock": true
 }
 ```

@@ -13,14 +13,14 @@
       ></plus-signature>
     </plus-center>
     <br />
-    <plus-center>
+    <plus-stack gap="1rem">
       <button id="save1">Save With Background</button>
-      &nbsp; &nbsp;
       <button id="save2">Save Without Background</button>
-    </plus-center>
+    </plus-stack>
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
 
       const save = (background) => {
         const image = new Image();

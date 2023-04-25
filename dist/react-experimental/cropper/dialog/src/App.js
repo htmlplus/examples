@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
 import '@htmlplus/core/dialog.js';
 import '@htmlplus/core/dialog-body.js';
@@ -13,11 +14,11 @@ const CropperDialog = () => {
   };
   return (
     <>
-      <div className="center">
+      <plus-center>
         <plus-dialog-toggler connector="dialog-cropper">
           Open
         </plus-dialog-toggler>
-      </div>
+      </plus-center>
       <plus-dialog
         animation="fade"
         connector="dialog-cropper"

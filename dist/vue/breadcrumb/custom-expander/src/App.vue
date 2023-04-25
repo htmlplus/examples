@@ -1,5 +1,5 @@
 <template>
-  <div class="center">
+  <plus-center>
     <plus-breadcrumb separator="-" :max="2" expander-text="Show more">
       <svg slot="expander" viewBox="0 0 16 16">
         <path
@@ -11,21 +11,15 @@
       <a href="#">UI Components</a>
       <a href="#">Breadcrumb</a>
     </plus-breadcrumb>
-  </div>
+  </plus-center>
 </template>
 
 <script setup>
   import '@htmlplus/core/breadcrumb.js';
+  import '@htmlplus/core/center.js';
 </script>
 
 <style scoped>
-  .center {
-    text-align: center;
-  }
-  plus-breadcrumb {
-    display: inline-block;
-    color: #707070;
-  }
   plus-breadcrumb a {
     color: inherit;
     text-decoration: none;

@@ -1,22 +1,19 @@
 <template>
-  <plus-center>
+  <plus-stack gap="2rem">
     <plus-icon name="home" size="xs"></plus-icon>
     <plus-icon name="home" size="sm"></plus-icon>
     <plus-icon name="home" size="md"></plus-icon>
     <plus-icon name="home" size="lg"></plus-icon>
     <plus-icon name="home" size="xl"></plus-icon>
-  </plus-center>
+  </plus-stack>
 </template>
 
 <script setup>
-  import '@htmlplus/core/center.js';
   import '@htmlplus/core/icon.js';
+  import '@htmlplus/core/stack.js';
 </script>
 
 <style scoped>
-  plus-icon {
-    margin: 0 1rem;
-  }
   plus-icon[size='xs'] {
     height: 1em;
     width: 1em;

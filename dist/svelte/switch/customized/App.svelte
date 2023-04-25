@@ -1,19 +1,14 @@
 <script>
+  import '@htmlplus/core/stack.js';
   import '@htmlplus/core/switch.js';
 </script>
 
-<div class="container">
+<plus-stack gap="2rem">
   <plus-switch class="switch-1"></plus-switch>
   <plus-switch class="switch-2"></plus-switch>
-</div>
+</plus-stack>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
   /*
    * switch-1
    */

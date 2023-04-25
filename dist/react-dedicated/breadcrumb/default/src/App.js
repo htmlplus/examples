@@ -1,14 +1,14 @@
-import { Breadcrumb } from '@htmlplus/react';
+import { Breadcrumb, Center } from '@htmlplus/react';
 const BreadcrumbDefault = () => {
   return (
-    <div className="center">
+    <Center>
       <Breadcrumb separator="/">
         <a href="#">HTMLPLUS</a>
         <a href="#">Core</a>
         <a href="#">UI Components</a>
         <span>Breadcrumb</span>
       </Breadcrumb>
-    </div>
+    </Center>
   );
 };
 export default BreadcrumbDefault;

@@ -1,9 +1,3 @@
-```css [style]
-.center {
-  text-align: center;
-}
-```
-
 ```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
@@ -16,11 +10,11 @@ class DialogPrevent {
   render() {
     return (
       <>
-        <div class="center">
+        <plus-center>
           <plus-dialog-toggler connector="dialog-prevent">
             Open
           </plus-dialog-toggler>
-        </div>
+        </plus-center>
         <plus-dialog
           animation="fade"
           connector="dialog-prevent"
@@ -30,10 +24,7 @@ class DialogPrevent {
           <plus-dialog-content>
             <plus-dialog-header>Dialog Title</plus-dialog-header>
             <plus-dialog-body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              <plus-faker></plus-faker>
             </plus-dialog-body>
             <plus-dialog-footer>
               <plus-dialog-toggler>Close</plus-dialog-toggler>
@@ -47,17 +38,14 @@ class DialogPrevent {
 ```
 
 ```html [javascript:template]
-<div class="center">
+<plus-center>
   <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
-</div>
+</plus-center>
 <plus-dialog id="element1" animation="fade" connector="dialog-prevent">
   <plus-dialog-content>
     <plus-dialog-header> Dialog Title </plus-dialog-header>
     <plus-dialog-body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      <plus-faker></plus-faker>
     </plus-dialog-body>
     <plus-dialog-footer>
       <plus-dialog-toggler> Close </plus-dialog-toggler>
@@ -73,4 +61,12 @@ const ensure = (type, event) => {
 };
 element1.addEventListener('plus-open', (event) => ensure('open', event));
 element1.addEventListener('plus-close', (event) => ensure('close', event));
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
 ```

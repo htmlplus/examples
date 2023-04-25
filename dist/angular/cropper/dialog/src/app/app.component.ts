@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
 import '@htmlplus/core/dialog.js';
 import '@htmlplus/core/dialog-body.js';

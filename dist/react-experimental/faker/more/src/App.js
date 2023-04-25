@@ -1,7 +1,8 @@
 import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 const FakerMore = () => {
   return (
-    <div className="container">
+    <plus-stack vertical>
       <plus-faker api="name.fullName"></plus-faker>
       <plus-faker api="address.county"></plus-faker>
       <plus-faker api="date.weekday"></plus-faker>
@@ -10,7 +11,7 @@ const FakerMore = () => {
       <plus-faker api="phone.number"></plus-faker>
       <plus-faker api="color.human"></plus-faker>
       <plus-faker api="datatype.uuid"></plus-faker>
-    </div>
+    </plus-stack>
   );
 };
 export default FakerMore;

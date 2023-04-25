@@ -6,8 +6,7 @@
   ></plus-signature>
 </plus-center>
 <br />
-<plus-center>
+<plus-stack gap="1rem">
   <button [disabled]="!canUndo" (click)="onUndo()">Undo</button>
-  &nbsp; &nbsp;
   <button [disabled]="!canRedo" (click)="onRedo()">Redo</button>
-</plus-center>
+</plus-stack>

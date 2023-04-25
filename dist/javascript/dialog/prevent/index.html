@@ -4,26 +4,18 @@
     <title>Dialog | Prevent</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .center {
-        text-align: center;
-      }
-    </style>
   </head>
   <body>
-    <div class="center">
+    <plus-center>
       <plus-dialog-toggler connector="dialog-prevent">
         Open
       </plus-dialog-toggler>
-    </div>
+    </plus-center>
     <plus-dialog id="element1" animation="fade" connector="dialog-prevent">
       <plus-dialog-content>
         <plus-dialog-header> Dialog Title </plus-dialog-header>
         <plus-dialog-body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          <plus-faker></plus-faker>
         </plus-dialog-body>
         <plus-dialog-footer>
           <plus-dialog-toggler> Close </plus-dialog-toggler>
@@ -31,12 +23,14 @@
       </plus-dialog-content>
     </plus-dialog>
     <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
 
       const ensure = (type, event) => {
         if (window.confirm(`Are you sure you want to ${type} it?`)) return;

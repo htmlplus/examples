@@ -1,22 +1,10 @@
 ```html [template]
-<plus-grid justify-content="evenly">
-  <plus-grid-item>
-    <plus-spinner size="md" type="default"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" type="double-bounce"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" type="ring"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" type="ripple"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" type="dual-ring"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" type="square"></plus-spinner>
-  </plus-grid-item>
-</plus-grid>
+<plus-stack gap="2rem">
+  <plus-spinner type="default"></plus-spinner>
+  <plus-spinner type="double-bounce"></plus-spinner>
+  <plus-spinner type="ring"></plus-spinner>
+  <plus-spinner type="ripple"></plus-spinner>
+  <plus-spinner type="dual-ring"></plus-spinner>
+  <plus-spinner type="square"></plus-spinner>
+</plus-stack>
 ```

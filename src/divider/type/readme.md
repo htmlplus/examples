@@ -1,5 +1,5 @@
 ```html [template]
-<div>
+<>
     <plus-divider type="dashed"></plus-divider>
     <br />
     <plus-divider type="dotted"></plus-divider>
@@ -15,5 +15,5 @@
     <plus-divider type="ridge"></plus-divider>
     <br />
     <plus-divider type="solid"></plus-divider>
-</div>
+</>
 ```

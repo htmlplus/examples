@@ -1,6 +1,6 @@
 ```css [style]
 plus-card {
-  --plus-card-background-color: #C5CAE9;
+  --plus-card-background-color: lightgray;
 }
 ```
 

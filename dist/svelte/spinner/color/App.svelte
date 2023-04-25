@@ -1,26 +1,15 @@
 <script>
-  import '@htmlplus/core/grid.js';
-  import '@htmlplus/core/grid-item.js';
   import '@htmlplus/core/spinner.js';
+  import '@htmlplus/core/stack.js';
 </script>
 
-<plus-grid justify-content="evenly">
-  <plus-grid-item>
-    <plus-spinner size="md" class="spinner-1"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" class="spinner-2"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" class="spinner-3"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" class="spinner-4"></plus-spinner>
-  </plus-grid-item>
-  <plus-grid-item>
-    <plus-spinner size="md" class="spinner-5"></plus-spinner>
-  </plus-grid-item>
-</plus-grid>
+<plus-stack gap="2rem">
+  <plus-spinner class="spinner-1"></plus-spinner>
+  <plus-spinner class="spinner-2"></plus-spinner>
+  <plus-spinner class="spinner-3"></plus-spinner>
+  <plus-spinner class="spinner-4"></plus-spinner>
+  <plus-spinner class="spinner-5"></plus-spinner>
+</plus-stack>
 
 <style>
   .spinner-1 {

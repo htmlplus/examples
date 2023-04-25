@@ -4,23 +4,18 @@
     <title>Format Bytes | Formatting</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      plus-center {
-        flex-direction: column;
-      }
-    </style>
   </head>
   <body>
-    <plus-center>
+    <plus-stack vertical>
       <plus-format-bytes value="1500"></plus-format-bytes>
       <plus-format-bytes value="800000000"></plus-format-bytes>
       <plus-format-bytes value="6900000000"></plus-format-bytes>
       <plus-format-bytes value="222000000000000"></plus-format-bytes>
-    </plus-center>
+    </plus-stack>
 
     <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
     </script>
   </body>
 </html>

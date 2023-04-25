@@ -5,9 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      plus-icon {
-        margin: 0 1rem;
-      }
       [color='primary'] {
         color: #ff5449;
       }
@@ -20,15 +17,15 @@
     </style>
   </head>
   <body>
-    <plus-center>
+    <plus-stack gap="2rem">
       <plus-icon name="home" color="primary"></plus-icon>
       <plus-icon name="home" color="secondary"></plus-icon>
       <plus-icon name="home" color="tertiary"></plus-icon>
-    </plus-center>
+    </plus-stack>
 
     <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
     </script>
   </body>
 </html>

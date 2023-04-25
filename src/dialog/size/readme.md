@@ -1,9 +1,3 @@
-```css [style]
-plus-grid-item {
-  text-align: center;
-}
-```
-
 ```tsx [script]
 import { Element, State } from '@htmlplus/element';
 
@@ -27,17 +21,11 @@ class DialogSize {
   render() {
     return (
       <>
-        <plus-grid justify-content="center" gutter="md">
-          <plus-grid-item xs="12" sm="auto">
-            <button onClick={() => this.show('sm')}>Small dialog</button>
-          </plus-grid-item>
-          <plus-grid-item xs="12" sm="auto">
-            <button onClick={() => this.show('lg')}>Large dialog</button>
-          </plus-grid-item>
-          <plus-grid-item xs="12" sm="auto">
-            <button onClick={() => this.show('xl')}>Extra large dialog</button>
-          </plus-grid-item>
-        </plus-grid>
+        <plus-stack gap="1rem">
+          <button onClick={() => this.show('sm')}>Small dialog</button>
+          <button onClick={() => this.show('lg')}>Large dialog</button>
+          <button onClick={() => this.show('xl')}>Extra large dialog</button>
+        </plus-stack>
         <plus-dialog
           animation="fade"
           open={this.open}
@@ -64,25 +52,16 @@ class DialogSize {
 ```
 
 ```html [javascript:template]
-<plus-grid justify-content="center" gutter="md">
-  <plus-grid-item xs="12" sm="auto">
-    <button id="element1">Small dialog</button>
-  </plus-grid-item>
-  <plus-grid-item xs="12" sm="auto">
-    <button id="element2">Large dialog</button>
-  </plus-grid-item>
-  <plus-grid-item xs="12" sm="auto">
-    <button id="element3">Extra large dialog</button>
-  </plus-grid-item>
-</plus-grid>
+<plus-stack gap="1rem">
+  <button id="element1">Small dialog</button>
+  <button id="element2">Large dialog</button>
+  <button id="element3">Extra large dialog</button>
+</plus-stack>
 <plus-dialog id="element4" animation="fade">
   <plus-dialog-content>
     <plus-dialog-header> Dialog Title </plus-dialog-header>
     <plus-dialog-body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      <plus-faker></plus-faker>
     </plus-dialog-body>
     <plus-dialog-footer>
       <button id="element5">Close</button>
@@ -104,4 +83,12 @@ element2.addEventListener('click', (event) => show('md'));
 element3.addEventListener('click', (event) => show('lg'));
 element4.addEventListener('plus-close', () => hide());
 element5.addEventListener('click', () => hide());
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
 ```

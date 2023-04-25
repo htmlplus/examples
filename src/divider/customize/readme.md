@@ -1,6 +1,6 @@
 ```css [style]
 plus-divider {
-  --plus-divider-color: #5F9EE9;
+  --plus-divider-color: darkgray;
   --plus-divider-width: 0.5rem;
   margin: 2rem 0;
 }
@@ -16,4 +16,12 @@ plus-divider {
     <plus-faker></plus-faker>
   </plus-grid-item>
 </plus-grid>
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
 ```

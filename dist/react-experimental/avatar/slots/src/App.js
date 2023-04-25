@@ -1,8 +1,8 @@
 import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/core/stack.js';
 const AvatarSlots = () => {
   return (
-    <plus-center>
+    <plus-stack gap="8rem">
       <plus-avatar size="xxl">
         <div slot="bottom">bottom</div>
         <div slot="center">center</div>
@@ -25,7 +25,7 @@ const AvatarSlots = () => {
         <div slot="start-top">start-top</div>
         <div slot="top">top</div>
       </plus-avatar>
-    </plus-center>
+    </plus-stack>
   );
 };
 export default AvatarSlots;

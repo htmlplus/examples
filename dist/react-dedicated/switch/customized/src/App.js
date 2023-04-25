@@ -1,10 +1,10 @@
-import { Switch } from '@htmlplus/react';
+import { Stack, Switch } from '@htmlplus/react';
 const SwitchCustomized = () => {
   return (
-    <div className="container">
+    <Stack gap="2rem">
       <Switch className="switch-1"></Switch>
       <Switch className="switch-2"></Switch>
-    </div>
+    </Stack>
   );
 };
 export default SwitchCustomized;

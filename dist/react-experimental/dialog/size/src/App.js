@@ -4,8 +4,7 @@ import '@htmlplus/core/dialog-body.js';
 import '@htmlplus/core/dialog-content.js';
 import '@htmlplus/core/dialog-footer.js';
 import '@htmlplus/core/dialog-header.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/stack.js';
 const DialogSize = () => {
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState('md');
@@ -18,17 +17,11 @@ const DialogSize = () => {
   };
   return (
     <>
-      <plus-grid justify-content="center" gutter="md">
-        <plus-grid-item xs="12" sm="auto">
-          <button onClick={() => show('sm')}>Small dialog</button>
-        </plus-grid-item>
-        <plus-grid-item xs="12" sm="auto">
-          <button onClick={() => show('lg')}>Large dialog</button>
-        </plus-grid-item>
-        <plus-grid-item xs="12" sm="auto">
-          <button onClick={() => show('xl')}>Extra large dialog</button>
-        </plus-grid-item>
-      </plus-grid>
+      <plus-stack gap="1rem">
+        <button onClick={() => show('sm')}>Small dialog</button>
+        <button onClick={() => show('lg')}>Large dialog</button>
+        <button onClick={() => show('xl')}>Extra large dialog</button>
+      </plus-stack>
       <plus-dialog
         animation="fade"
         open={open}

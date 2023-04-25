@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@htmlplus/core/faker.js';
 import '@htmlplus/core/portal.js';
 @Component({
   selector: 'app-root',

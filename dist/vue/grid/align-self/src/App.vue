@@ -19,7 +19,7 @@
 
 <style scoped>
   plus-grid {
-    background-color: #eeeeee;
+    background-color: whitesmoke;
     height: 8rem;
   }
   plus-grid div {

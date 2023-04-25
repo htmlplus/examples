@@ -1,5 +1,6 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/signature.js';
+import '@htmlplus/core/stack.js';
 const SignatureSave = () => {
   const save = (background) => {
     const image = new Image();
@@ -18,11 +19,10 @@ const SignatureSave = () => {
         ></plus-signature>
       </plus-center>
       <br />
-      <plus-center>
+      <plus-stack gap="1rem">
         <button onClick={() => save(true)}>Save With Background</button>
-        &nbsp; &nbsp;
         <button onClick={() => save(false)}>Save Without Background</button>
-      </plus-center>
+      </plus-stack>
     </>
   );
 };

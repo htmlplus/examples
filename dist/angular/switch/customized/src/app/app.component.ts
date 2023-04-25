@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@htmlplus/core/stack.js';
 import '@htmlplus/core/switch.js';
 @Component({
   selector: 'app-root',

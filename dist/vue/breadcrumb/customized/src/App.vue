@@ -20,7 +20,7 @@
   plus-breadcrumb {
     --plus-breadcrumb-gutter-x: 0.75em;
     --plus-breadcrumb-gutter-y: 0.75em;
-    background-color: #dcdcdc;
+    background-color: lightgray;
     border-radius: 0.25em;
     display: block;
     padding: 0.75em;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/signature.js';
+import '@htmlplus/core/stack.js';
 const SignatureHistory = () => {
   const [canUndo, setCanUndo] = useState(false);
   const [canRedo, setCanRedo] = useState(false);
@@ -29,15 +30,14 @@ const SignatureHistory = () => {
         ></plus-signature>
       </plus-center>
       <br />
-      <plus-center>
+      <plus-stack gap="1rem">
         <button disabled={!canUndo} onClick={() => onUndo()}>
           Undo
         </button>
-        &nbsp; &nbsp;
         <button disabled={!canRedo} onClick={() => onRedo()}>
           Redo
         </button>
-      </plus-center>
+      </plus-stack>
     </>
   );
 };

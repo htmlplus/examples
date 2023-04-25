@@ -1,4 +1,5 @@
 <script>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
   import '@htmlplus/core/dialog.js';
   import '@htmlplus/core/dialog-body.js';
@@ -12,9 +13,9 @@
   }
 </script>
 
-<div class="center">
+<plus-center>
   <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
-</div>
+</plus-center>
 <plus-dialog
   animation="fade"
   connector="dialog-cropper"
@@ -34,9 +35,3 @@
     </plus-dialog-footer>
   </plus-dialog-content>
 </plus-dialog>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>

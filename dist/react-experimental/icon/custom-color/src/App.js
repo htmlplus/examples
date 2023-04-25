@@ -1,12 +1,12 @@
-import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
+import '@htmlplus/core/stack.js';
 const IconCustomColor = () => {
   return (
-    <plus-center>
+    <plus-stack gap="2rem">
       <plus-icon name="home" color="primary"></plus-icon>
       <plus-icon name="home" color="secondary"></plus-icon>
       <plus-icon name="home" color="tertiary"></plus-icon>
-    </plus-center>
+    </plus-stack>
   );
 };
 export default IconCustomColor;

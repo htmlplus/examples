@@ -1,13 +1,8 @@
 <script>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/switch.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-switch></plus-switch>
-</div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-</style>
+</plus-center>

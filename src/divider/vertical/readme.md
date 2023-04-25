@@ -9,3 +9,11 @@
   </plus-grid-item>
 </plus-grid>
 ```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
+```

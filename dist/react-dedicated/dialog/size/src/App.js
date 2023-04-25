@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Dialog, Grid } from '@htmlplus/react';
+import { Dialog, Stack } from '@htmlplus/react';
 const DialogSize = () => {
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState('md');
@@ -12,17 +12,11 @@ const DialogSize = () => {
   };
   return (
     <>
-      <Grid justifyContent="center" gutter="md">
-        <Grid.Item xs="12" sm="auto">
-          <button onClick={() => show('sm')}>Small dialog</button>
-        </Grid.Item>
-        <Grid.Item xs="12" sm="auto">
-          <button onClick={() => show('lg')}>Large dialog</button>
-        </Grid.Item>
-        <Grid.Item xs="12" sm="auto">
-          <button onClick={() => show('xl')}>Extra large dialog</button>
-        </Grid.Item>
-      </Grid>
+      <Stack gap="1rem">
+        <button onClick={() => show('sm')}>Small dialog</button>
+        <button onClick={() => show('lg')}>Large dialog</button>
+        <button onClick={() => show('xl')}>Extra large dialog</button>
+      </Stack>
       <Dialog animation="fade" open={open} size={size} onClose={() => hide()}>
         <Dialog.Content>
           <Dialog.Header>Dialog Title</Dialog.Header>

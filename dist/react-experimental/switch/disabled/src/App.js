@@ -1,9 +1,10 @@
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/switch.js';
 const SwitchDisabled = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-switch disabled></plus-switch>
-    </div>
+    </plus-center>
   );
 };
 export default SwitchDisabled;

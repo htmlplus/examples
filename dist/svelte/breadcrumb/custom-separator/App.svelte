@@ -1,8 +1,9 @@
 <script>
   import '@htmlplus/core/breadcrumb.js';
+  import '@htmlplus/core/center.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-breadcrumb>
     <svg slot="separator" viewBox="0 0 16 16">
       <path
@@ -15,16 +16,9 @@
     <a href="#">Fourth</a>
     <a href="#">Fifth</a>
   </plus-breadcrumb>
-</div>
+</plus-center>
 
 <style>
-  .center {
-    text-align: center;
-  }
-  plus-breadcrumb {
-    display: inline-block;
-    color: #707070;
-  }
   plus-breadcrumb a {
     color: inherit;
     text-decoration: none;

@@ -1,26 +1,14 @@
-import { Grid, Spinner } from '@htmlplus/react';
+import { Spinner, Stack } from '@htmlplus/react';
 const SpinnerType = () => {
   return (
-    <Grid justifyContent="evenly">
-      <Grid.Item>
-        <Spinner size="md" type="default"></Spinner>
-      </Grid.Item>
-      <Grid.Item>
-        <Spinner size="md" type="double-bounce"></Spinner>
-      </Grid.Item>
-      <Grid.Item>
-        <Spinner size="md" type="ring"></Spinner>
-      </Grid.Item>
-      <Grid.Item>
-        <Spinner size="md" type="ripple"></Spinner>
-      </Grid.Item>
-      <Grid.Item>
-        <Spinner size="md" type="dual-ring"></Spinner>
-      </Grid.Item>
-      <Grid.Item>
-        <Spinner size="md" type="square"></Spinner>
-      </Grid.Item>
-    </Grid>
+    <Stack gap="2rem">
+      <Spinner type="default"></Spinner>
+      <Spinner type="double-bounce"></Spinner>
+      <Spinner type="ring"></Spinner>
+      <Spinner type="ripple"></Spinner>
+      <Spinner type="dual-ring"></Spinner>
+      <Spinner type="square"></Spinner>
+    </Stack>
   );
 };
 export default SpinnerType;

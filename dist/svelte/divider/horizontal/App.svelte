@@ -3,13 +3,11 @@
   import '@htmlplus/core/faker.js';
 </script>
 
-<div>
-  <plus-faker></plus-faker>
-  <plus-divider></plus-divider>
-  <plus-faker></plus-faker>
-  <plus-divider></plus-divider>
-  <plus-faker></plus-faker>
-</div>
+<plus-faker></plus-faker>
+<plus-divider></plus-divider>
+<plus-faker></plus-faker>
+<plus-divider></plus-divider>
+<plus-faker></plus-faker>
 
 <style>
   plus-divider {

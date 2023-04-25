@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <plus-faker></plus-faker>
-    <plus-divider></plus-divider>
-    <plus-faker></plus-faker>
-    <plus-divider></plus-divider>
-    <plus-faker></plus-faker>
-  </div>
+  <plus-faker></plus-faker>
+  <plus-divider></plus-divider>
+  <plus-faker></plus-faker>
+  <plus-divider></plus-divider>
+  <plus-faker></plus-faker>
 </template>
 
 <script setup>

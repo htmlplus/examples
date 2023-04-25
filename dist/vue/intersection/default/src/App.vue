@@ -33,13 +33,13 @@
 
 <style scoped>
   .container {
-    background-color: #eeeeee;
+    background-color: whitesmoke;
     height: 20rem;
     overflow: auto;
   }
 
   .status {
-    color: #fafafa;
+    color: white;
     background-color: black;
     padding: 0.5rem 1rem;
     border-radius: 2rem;

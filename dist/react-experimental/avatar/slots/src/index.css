@@ -2,9 +2,7 @@ plus-avatar > div {
   background-color: gray;
   color: white;
   font-size: 10px;
-  padding: 0.25rem;
+  padding: 0.125rem 0.25rem;
   font-family: monospace;
-}
-plus-center {
-  gap: 8rem;
+  line-height: 1;
 }

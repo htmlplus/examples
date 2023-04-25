@@ -1,7 +1,8 @@
 import '@htmlplus/core/breadcrumb.js';
+import '@htmlplus/core/center.js';
 const BreadcrumbSeparator = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-breadcrumb separator="-">
         <a href="#">First</a>
         <a href="#">Second</a>
@@ -9,7 +10,7 @@ const BreadcrumbSeparator = () => {
         <a href="#">Fourth</a>
         <a href="#">Fifth</a>
       </plus-breadcrumb>
-    </div>
+    </plus-center>
   );
 };
 export default BreadcrumbSeparator;

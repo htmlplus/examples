@@ -1,15 +1,9 @@
 <template>
-  <plus-grid justify-content="center" gutter="md">
-    <plus-grid-item xs="12" sm="auto">
-      <button @click="show('sm')">Small dialog</button>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="auto">
-      <button @click="show('lg')">Large dialog</button>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="auto">
-      <button @click="show('xl')">Extra large dialog</button>
-    </plus-grid-item>
-  </plus-grid>
+  <plus-stack gap="1rem">
+    <button @click="show('sm')">Small dialog</button>
+    <button @click="show('lg')">Large dialog</button>
+    <button @click="show('xl')">Extra large dialog</button>
+  </plus-stack>
   <plus-dialog animation="fade" :open="open" :size="size" @plus-close="hide()">
     <plus-dialog-content>
       <plus-dialog-header>Dialog Title</plus-dialog-header>
@@ -33,8 +27,7 @@
   import '@htmlplus/core/dialog-content.js';
   import '@htmlplus/core/dialog-footer.js';
   import '@htmlplus/core/dialog-header.js';
-  import '@htmlplus/core/grid.js';
-  import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/stack.js';
   const open = ref(false);
   const size = ref('md');
   function hide() {
@@ -45,9 +38,3 @@
     open.value = true;
   }
 </script>
-
-<style scoped>
-  plus-grid-item {
-    text-align: center;
-  }
-</style>

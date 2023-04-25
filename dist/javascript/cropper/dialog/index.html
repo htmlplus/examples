@@ -4,18 +4,13 @@
     <title>Cropper | Dialog</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .center {
-        text-align: center;
-      }
-    </style>
   </head>
   <body>
-    <div class="center">
+    <plus-center>
       <plus-dialog-toggler connector="dialog-cropper">
         Open
       </plus-dialog-toggler>
-    </div>
+    </plus-center>
     <plus-dialog id="element1" animation="fade" connector="dialog-cropper">
       <plus-dialog-content>
         <plus-dialog-header> Cropper </plus-dialog-header>
@@ -32,6 +27,7 @@
       </plus-dialog-content>
     </plus-dialog>
     <script type="module">
+      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';

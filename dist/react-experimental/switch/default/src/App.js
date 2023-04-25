@@ -1,9 +1,10 @@
+import '@htmlplus/core/center.js';
 import '@htmlplus/core/switch.js';
 const SwitchDefault = () => {
   return (
-    <div className="center">
+    <plus-center>
       <plus-switch></plus-switch>
-    </div>
+    </plus-center>
   );
 };
 export default SwitchDefault;

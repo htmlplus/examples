@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@htmlplus/core": "latest",
+    "@faker-js/faker": "latest",
     "svelte": "^3.32.3"
   },
   "devDependencies": {

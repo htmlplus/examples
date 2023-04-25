@@ -1,7 +1,7 @@
-import { Breadcrumb } from '@htmlplus/react';
+import { Breadcrumb, Center } from '@htmlplus/react';
 const BreadcrumbSeparator = () => {
   return (
-    <div className="center">
+    <Center>
       <Breadcrumb separator="-">
         <a href="#">First</a>
         <a href="#">Second</a>
@@ -9,7 +9,7 @@ const BreadcrumbSeparator = () => {
         <a href="#">Fourth</a>
         <a href="#">Fifth</a>
       </Breadcrumb>
-    </div>
+    </Center>
   );
 };
 export default BreadcrumbSeparator;

@@ -1,10 +1,10 @@
-import { Center, FormatBytes } from '@htmlplus/react';
+import { FormatBytes, Stack } from '@htmlplus/react';
 const FormatBytesLocale = () => {
   return (
-    <Center>
+    <Stack vertical>
       <FormatBytes value="10000100" locale="en" unit="kilo"></FormatBytes>
       <FormatBytes value="10000100" locale="de" unit="kilo"></FormatBytes>
-    </Center>
+    </Stack>
   );
 };
 export default FormatBytesLocale;

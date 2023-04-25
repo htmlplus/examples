@@ -1,6 +1,7 @@
 <script>
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
+  import '@htmlplus/core/stack.js';
   let canUndo = false;
   let canRedo = false;
   function sync() {
@@ -28,8 +29,7 @@
   ></plus-signature>
 </plus-center>
 <br />
-<plus-center>
+<plus-stack gap="1rem">
   <button disabled="{!canUndo}" on:click="{() => onUndo()}">Undo</button>
-  &nbsp; &nbsp;
   <button disabled="{!canRedo}" on:click="{() => onRedo()}">Redo</button>
-</plus-center>
+</plus-stack>

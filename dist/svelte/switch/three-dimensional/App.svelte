@@ -1,16 +1,13 @@
 <script>
+  import '@htmlplus/core/center.js';
   import '@htmlplus/core/switch.js';
 </script>
 
-<div class="center">
+<plus-center>
   <plus-switch checked></plus-switch>
-</div>
+</plus-center>
 
 <style>
-  .center {
-    text-align: center;
-  }
-
   plus-switch {
     --width: 10rem;
     --height: 5rem;

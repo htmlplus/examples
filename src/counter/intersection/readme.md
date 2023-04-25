@@ -8,7 +8,7 @@ plus-intersection {
   position: relative;
   height: 20rem;
   overflow: auto;
-  background-color: #eeeeee;
+  background-color: whitesmoke;
 }
 ```
 

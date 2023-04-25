@@ -1,11 +1,11 @@
 ```css [style]
 plus-card {
-  --plus-card-background-color: #E0E0E0;
+  --plus-card-background-color: lightgray;
   padding: 10rem 0;
   text-align: center;
 }
 plus-drawer plus-card {
-  --plus-card-background-color: #AACAFF;
+  --plus-card-background-color: lightblue;
   margin-right: 0.5rem;
 }
 ```

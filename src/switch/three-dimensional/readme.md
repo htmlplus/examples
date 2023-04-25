@@ -1,8 +1,4 @@
 ```css [style]
-.center {
-  text-align: center;
-}
-
 plus-switch {
   --width: 10rem;
   --height: 5rem;
@@ -44,7 +40,7 @@ plus-switch[aria-checked='true'] {
 ```
 
 ```html [template]
-<div class="center">
+<plus-center>
   <plus-switch checked></plus-switch>
-</div>
+</plus-center>
 ```

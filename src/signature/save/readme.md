@@ -22,15 +22,14 @@ class SignatureSave {
           <plus-signature id="signature3" background-color="lightgray"></plus-signature>
         </plus-center>
         <br />
-        <plus-center>
+        <plus-stack gap="1rem">
           <button onClick={() => this.save(true)}>
             Save With Background
           </button>
-          &nbsp; &nbsp;
           <button onClick={() => this.save(false)}>
             Save Without Background
           </button>
-        </plus-center>
+        </plus-stack>
       </>
     )
   }
@@ -42,15 +41,14 @@ class SignatureSave {
   <plus-signature id="signature3" background-color="lightgray"></plus-signature>
 </plus-center>
 <br />
-<plus-center>
+<plus-stack gap="1rem">
   <button id="save1">
     Save With Background
   </button>
-  &nbsp; &nbsp;
   <button id="save2">
     Save Without Background
   </button>
-</plus-center>
+</plus-stack>
 ```
 
 ```js [javascript:script]

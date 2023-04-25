@@ -1,15 +1,9 @@
 <script>
-  import '@htmlplus/core/center.js';
   import '@htmlplus/core/format-bytes.js';
+  import '@htmlplus/core/stack.js';
 </script>
 
-<plus-center>
+<plus-stack vertical>
   <plus-format-bytes value="1000" standard="METRIC"></plus-format-bytes>
   <plus-format-bytes value="1024" standard="IEC"></plus-format-bytes>
-</plus-center>
-
-<style>
-  plus-center {
-    flex-direction: column;
-  }
-</style>
+</plus-stack>

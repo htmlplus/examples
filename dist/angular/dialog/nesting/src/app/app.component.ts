@@ -5,8 +5,8 @@ import '@htmlplus/core/dialog-content.js';
 import '@htmlplus/core/dialog-footer.js';
 import '@htmlplus/core/dialog-header.js';
 import '@htmlplus/core/dialog-toggler.js';
-import '@htmlplus/core/grid.js';
-import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

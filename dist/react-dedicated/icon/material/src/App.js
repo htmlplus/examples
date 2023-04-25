@@ -1,11 +1,11 @@
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 const IconMaterial = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="home_outline"></Icon>
       <Icon name="home_round"></Icon>
       <Icon name="home_sharp"></Icon>
-    </Center>
+    </Stack>
   );
 };
 export default IconMaterial;

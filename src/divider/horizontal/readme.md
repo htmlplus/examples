@@ -5,11 +5,19 @@ plus-divider {
 ```
 
 ```html [template]
-<div>
+<>
   <plus-faker></plus-faker>
   <plus-divider></plus-divider>
   <plus-faker></plus-faker>
   <plus-divider></plus-divider>
   <plus-faker></plus-faker>
-</div>
+</>
+```
+
+```json [settings]
+{
+  "dependencies": {
+    "@faker-js/faker": "latest"
+  }
+}
 ```

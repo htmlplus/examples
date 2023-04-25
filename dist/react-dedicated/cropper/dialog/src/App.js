@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Cropper, Dialog } from '@htmlplus/react';
+import { Center, Cropper, Dialog } from '@htmlplus/react';
 const CropperDialog = () => {
   const [disabled, setDisabled] = useState(true);
   const change = (disabled) => {
@@ -7,9 +7,9 @@ const CropperDialog = () => {
   };
   return (
     <>
-      <div className="center">
+      <Center>
         <Dialog.Toggler connector="dialog-cropper">Open</Dialog.Toggler>
-      </div>
+      </Center>
       <Dialog
         animation="fade"
         connector="dialog-cropper"

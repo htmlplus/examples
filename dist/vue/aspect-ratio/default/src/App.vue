@@ -16,6 +16,6 @@
 
 <style scoped>
   plus-card {
-    --plus-card-background-color: #c5cae9;
+    --plus-card-background-color: lightgray;
   }
 </style>

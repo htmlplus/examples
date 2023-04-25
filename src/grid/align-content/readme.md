@@ -1,6 +1,6 @@
 ```css [style]
 plus-grid {
-  background-color: #EEEEEE;
+  background-color: whitesmoke;
   height: 8rem;
 }
 plus-grid div {

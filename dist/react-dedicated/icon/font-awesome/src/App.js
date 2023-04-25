@@ -1,11 +1,11 @@
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 const IconFontAwesome = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="far-user"></Icon>
       <Icon name="fas-user"></Icon>
       <Icon name="fab-apple"></Icon>
-    </Center>
+    </Stack>
   );
 };
 export default IconFontAwesome;
