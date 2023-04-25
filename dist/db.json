@@ -464,8 +464,8 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  open = 1;\n  expand(value) {\n    this.open = value;\n  }\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\" [open]=\"open == 1\" (plus-expand)=\"expand(1)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\" [open]=\"open == 2\" (plus-expand)=\"expand(2)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" [open]=\"open == 3\" (plus-expand)=\"expand(3)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
     }
   },
   {
@@ -473,8 +473,8 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
-      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n\ndocument\r\n  .querySelectorAll('#accordions1 > *')\r\n  .forEach((accordion, index, accordions) => {\r\n    accordion.addEventListener('plus-expand', (event) => {\r\n      accordions.forEach((accordion) => {\r\n        accordion.open = event.target == accordion\r\n      })\r\n    })\r\n  })",
+      "template": "<div id=\"accordions1\">\r\n  <plus-accordion summary=\"First\" open>\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</div>"
     }
   },
   {
@@ -483,9 +483,19 @@
     "example": "persistent",
     "output": [
       {
-        "key": "template",
+        "key": "script",
+        "type": "tsx",
+        "content": "import { Element, State } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass AccordionPersistent {\r\n  @State()\r\n  open = 1;\r\n\r\n  expand(value) {\r\n    this.open = value;\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <div>\r\n        <plus-accordion\r\n          summary=\"First\"\r\n          open={this.open == 1}\r\n          onPlusExpand={() => this.expand(1)}\r\n        >\r\n          <plus-faker></plus-faker>\r\n        </plus-accordion>\r\n        <plus-accordion\r\n          summary=\"Second\"\r\n          open={this.open == 2}\r\n          onPlusExpand={() => this.expand(2)}\r\n        >\r\n          <plus-faker></plus-faker>\r\n        </plus-accordion>\r\n        <plus-accordion\r\n          summary=\"Third\"\r\n          open={this.open == 3}\r\n          onPlusExpand={() => this.expand(3)}\r\n        >\r\n          <plus-faker></plus-faker>\r\n        </plus-accordion>\r\n      </div>\r\n    )\r\n  }\r\n}"
+      },
+      {
+        "key": "javascript:template",
         "type": "html",
-        "content": "<div>\r\n  <plus-accordion summary=\"First\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</div>"
+        "content": "<div id=\"accordions1\">\r\n  <plus-accordion summary=\"First\" open>\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Second\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n  <plus-accordion summary=\"Third\">\r\n    <plus-faker></plus-faker>\r\n  </plus-accordion>\r\n</div>"
+      },
+      {
+        "key": "javascript:script",
+        "type": "js",
+        "content": "document\r\n  .querySelectorAll('#accordions1 > *')\r\n  .forEach((accordion, index, accordions) => {\r\n    accordion.addEventListener('plus-expand', (event) => {\r\n      accordions.forEach((accordion) => {\r\n        accordion.open = event.target == accordion\r\n      })\r\n    })\r\n  })"
       },
       {
         "key": "settings",
@@ -503,7 +513,7 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import { Accordion, Faker } from '@htmlplus/react';\nconst AccordionPersistent = () => {\n  return (\n    <div>\n      <Accordion summary=\"First\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Second\">\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Third\">\n        <Faker></Faker>\n      </Accordion>\n    </div>\n  );\n};\nexport default AccordionPersistent;\n"
+      "script": "import { useState } from 'react';\nimport { Accordion, Faker } from '@htmlplus/react';\nconst AccordionPersistent = () => {\n  const [open, setOpen] = useState(1);\n  const expand = (value) => {\n    setOpen(value);\n  };\n  return (\n    <div>\n      <Accordion summary=\"First\" open={open == 1} onExpand={() => expand(1)}>\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Second\" open={open == 2} onExpand={() => expand(2)}>\n        <Faker></Faker>\n      </Accordion>\n      <Accordion summary=\"Third\" open={open == 3} onExpand={() => expand(3)}>\n        <Faker></Faker>\n      </Accordion>\n    </div>\n  );\n};\nexport default AccordionPersistent;\n"
     }
   },
   {
@@ -511,7 +521,7 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionPersistent = () => {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n};\nexport default AccordionPersistent;\n"
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst AccordionPersistent = () => {\n  const [open, setOpen] = useState(1);\n  const expand = (value) => {\n    setOpen(value);\n  };\n  return (\n    <div>\n      <plus-accordion\n        summary=\"First\"\n        open={open == 1}\n        onplus-expand={() => expand(1)}\n      >\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion\n        summary=\"Second\"\n        open={open == 2}\n        onplus-expand={() => expand(2)}\n      >\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion\n        summary=\"Third\"\n        open={open == 3}\n        onplus-expand={() => expand(3)}\n      >\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n};\nexport default AccordionPersistent;\n"
     }
   },
   {
@@ -519,8 +529,8 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
-      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nlet open = 1;\nfunction expand(value) {\n  open = value;\n}\n",
+      "template": "<div>\n  <plus-accordion\n    summary=\"First\"\n    open=\"{open == 1}\"\n    on:plus-expand=\"{() => expand(1)}\"\n  >\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion\n    summary=\"Second\"\n    open=\"{open == 2}\"\n    on:plus-expand=\"{() => expand(2)}\"\n  >\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion\n    summary=\"Third\"\n    open=\"{open == 3}\"\n    on:plus-expand=\"{() => expand(3)}\"\n  >\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
     }
   },
   {
@@ -528,8 +538,8 @@
     "component": "accordion",
     "example": "persistent",
     "output": {
-      "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
-      "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nconst open = ref(1);\nfunction expand(value) {\n  open.value = value;\n}\n",
+      "template": "<div>\n  <plus-accordion summary=\"First\" :open=\"open == 1\" @plus-expand=\"expand(1)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\" :open=\"open == 2\" @plus-expand=\"expand(2)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" :open=\"open == 3\" @plus-expand=\"expand(3)\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
     }
   },
   {

@@ -6,4 +6,9 @@ import '@htmlplus/core/faker.js';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  open = 1;
+  expand(value) {
+    this.open = value;
+  }
+}
