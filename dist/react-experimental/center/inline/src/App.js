@@ -5,7 +5,7 @@ const CenterInline = () => {
     <plus-center>
       <button>
         <plus-center inline>
-          <plus-icon name="menu" size="2x"></plus-icon>
+          <plus-icon name="list" size="2x"></plus-icon>
           &nbsp; Menu
         </plus-center>
       </button>

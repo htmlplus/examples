@@ -1,11 +1,11 @@
-import { Accordion, Faker } from '@htmlplus/react';
+import { Accordion, Faker, Stack } from '@htmlplus/react';
 const AccordionAdvanced = () => {
   return (
     <Accordion>
-      <div slot="summary">
+      <Stack slot="summary" justifyContent="space-between">
         <span>Summary</span>
         <button>Action</button>
-      </div>
+      </Stack>
       <Faker></Faker>
     </Accordion>
   );

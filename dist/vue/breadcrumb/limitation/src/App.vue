@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <plus-stack gap="0.75rem" vertical>
     <plus-breadcrumb separator="/" :max="4" :offset="0">
       <a href="#">Item 1</a>
       <a href="#">Item 2</a>
@@ -10,8 +10,6 @@
       <a href="#">Item 7</a>
       <a href="#">Item 8</a>
     </plus-breadcrumb>
-  </div>
-  <div class="container">
     <plus-breadcrumb separator="/" :max="4" :offset="2">
       <a href="#">Item 1</a>
       <a href="#">Item 2</a>
@@ -22,8 +20,6 @@
       <a href="#">Item 7</a>
       <a href="#">Item 8</a>
     </plus-breadcrumb>
-  </div>
-  <div class="container">
     <plus-breadcrumb separator="/" :max="4" :offset="-1">
       <a href="#">Item 1</a>
       <a href="#">Item 2</a>
@@ -34,18 +30,15 @@
       <a href="#">Item 7</a>
       <a href="#">Item 8</a>
     </plus-breadcrumb>
-  </div>
+  </plus-stack>
 </template>
 
 <script setup>
   import '@htmlplus/core/breadcrumb.js';
+  import '@htmlplus/core/stack.js';
 </script>
 
 <style scoped>
-  .container {
-    text-align: center;
-    margin: 0.75em;
-  }
   plus-breadcrumb a {
     color: inherit;
     text-decoration: none;

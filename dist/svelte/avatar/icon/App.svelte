@@ -6,6 +6,6 @@
 
 <plus-center>
   <plus-avatar>
-    <plus-icon name="user"></plus-icon>
+    <plus-icon name="person"></plus-icon>
   </plus-avatar>
 </plus-center>

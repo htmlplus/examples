@@ -1,8 +1,8 @@
 <template>
   <plus-stack gap="2rem">
-    <plus-icon name="home" color="primary"></plus-icon>
-    <plus-icon name="home" color="secondary"></plus-icon>
-    <plus-icon name="home" color="tertiary"></plus-icon>
+    <plus-icon name="house" color="primary"></plus-icon>
+    <plus-icon name="house" color="secondary"></plus-icon>
+    <plus-icon name="house" color="tertiary"></plus-icon>
   </plus-stack>
 </template>
 

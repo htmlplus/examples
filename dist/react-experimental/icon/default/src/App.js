@@ -3,7 +3,7 @@ import '@htmlplus/core/icon.js';
 const IconDefault = () => {
   return (
     <plus-center>
-      <plus-icon name="home"></plus-icon>
+      <plus-icon name="house"></plus-icon>
     </plus-center>
   );
 };

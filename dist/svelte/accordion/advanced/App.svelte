@@ -1,21 +1,19 @@
 <script>
   import '@htmlplus/core/accordion.js';
   import '@htmlplus/core/faker.js';
+  import '@htmlplus/core/stack.js';
 </script>
 
 <plus-accordion>
-  <div slot="summary">
+  <plus-stack slot="summary" justify-content="space-between">
     <span>Summary</span>
     <button>Action</button>
-  </div>
+  </plus-stack>
   <plus-faker></plus-faker>
 </plus-accordion>
 
 <style>
   [slot='summary'] {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-grow: 1;
     margin-right: 1rem;
   }

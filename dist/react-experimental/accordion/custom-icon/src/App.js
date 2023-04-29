@@ -5,7 +5,7 @@ const AccordionCustomIcon = () => {
   return (
     <plus-accordion summary="First">
       <plus-icon slot="icon-expand" name="plus"></plus-icon>
-      <plus-icon slot="icon-collapse" name="minus"></plus-icon>
+      <plus-icon slot="icon-collapse" name="dash"></plus-icon>
       <plus-faker></plus-faker>
     </plus-accordion>
   );

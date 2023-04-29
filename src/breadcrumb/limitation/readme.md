@@ -9,7 +9,7 @@ plus-breadcrumb a:hover {
 ```
 
 ```html [template]
-<plus-stack>
+<plus-stack gap="0.75rem" vertical>
   <plus-breadcrumb separator="/" max={4} offset={0}>
     <a href="#">Item 1</a>
     <a href="#">Item 2</a>

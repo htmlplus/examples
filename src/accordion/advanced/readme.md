@@ -1,18 +1,15 @@
 ```html [template]
 <plus-accordion>
-  <div slot="summary">
+  <plus-stack slot="summary" justify-content="space-between">
     <span>Summary</span>
     <button>Action</button>
-  </div>
+  </plus-stack>
   <plus-faker></plus-faker>
 </plus-accordion>
 ```
 
 ```css [style]
-[slot="summary"] {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+[slot='summary'] {
   flex-grow: 1;
   margin-right: 1rem;
 }

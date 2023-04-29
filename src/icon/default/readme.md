@@ -1,5 +1,5 @@
 ```html [template]
 <plus-center>
-  <plus-icon name="home"></plus-icon>
+  <plus-icon name="house"></plus-icon>
 </plus-center>
 ```
