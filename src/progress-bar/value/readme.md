@@ -1,0 +1,3 @@
+```html [template]
+<plus-progress-bar value="25"></plus-progress-bar>
+```
