@@ -1,5 +1,5 @@
-import { Progress } from '@htmlplus/react';
+import { ProgressBar } from '@htmlplus/react';
 const ProgressBarLabel = () => {
-  return <Progress.Bar label value="75"></Progress.Bar>;
+  return <ProgressBar label value="75"></ProgressBar>;
 };
 export default ProgressBarLabel;

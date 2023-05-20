@@ -1,12 +1,12 @@
-import { Progress } from '@htmlplus/react';
+import { ProgressBar } from '@htmlplus/react';
 const ProgressBarHeight = () => {
   return (
     <>
-      <Progress.Bar value="50" className="thin"></Progress.Bar>
+      <ProgressBar value="50" className="thin"></ProgressBar>
       <br />
-      <Progress.Bar value="50"></Progress.Bar>
+      <ProgressBar value="50"></ProgressBar>
       <br />
-      <Progress.Bar value="50" className="thick"></Progress.Bar>
+      <ProgressBar value="50" className="thick"></ProgressBar>
     </>
   );
 };

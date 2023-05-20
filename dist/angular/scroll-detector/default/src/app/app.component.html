@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="scrollable">
+  <div class="scrollable" id="reference1">
     <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
   </div>
   <plus-scroll-detector
-    reference=".scrollable"
+    reference="#reference1"
     vertical
     (plus-change)="onChange($event)"
   >

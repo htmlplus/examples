@@ -1,0 +1,16 @@
+<div class="container">
+  <plus-progress-bar [value]="value"></plus-progress-bar>
+  <div class="scrollable" id="reference2">
+    <plus-faker
+      api="lorem.paragraphs"
+      arguments='[20, "\n\n"]'
+      [seed]="0"
+    ></plus-faker>
+  </div>
+  <plus-scroll-detector
+    reference="#reference2"
+    vertical
+    (plus-change)="onChange($event)"
+  >
+  </plus-scroll-detector>
+</div>

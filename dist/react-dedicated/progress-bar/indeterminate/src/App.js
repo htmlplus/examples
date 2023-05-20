@@ -1,5 +1,5 @@
-import { Progress } from '@htmlplus/react';
+import { ProgressBar } from '@htmlplus/react';
 const ProgressBarIndeterminate = () => {
-  return <Progress.Bar variant="indeterminate"></Progress.Bar>;
+  return <ProgressBar variant="indeterminate"></ProgressBar>;
 };
 export default ProgressBarIndeterminate;

@@ -1,5 +1,5 @@
-import { Progress } from '@htmlplus/react';
+import { ProgressBar } from '@htmlplus/react';
 const ProgressBarDefault = () => {
-  return <Progress.Bar></Progress.Bar>;
+  return <ProgressBar></ProgressBar>;
 };
 export default ProgressBarDefault;

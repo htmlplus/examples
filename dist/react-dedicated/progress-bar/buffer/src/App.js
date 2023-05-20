@@ -1,5 +1,5 @@
-import { Progress } from '@htmlplus/react';
+import { ProgressBar } from '@htmlplus/react';
 const ProgressBarBuffer = () => {
-  return <Progress.Bar value="50" buffer="75"></Progress.Bar>;
+  return <ProgressBar value="50" buffer="75"></ProgressBar>;
 };
 export default ProgressBarBuffer;

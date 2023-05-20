@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Scroll Detector | Default</title>
+    <title>Scroll Detector | Scroll Indicator</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
@@ -9,6 +9,7 @@
         position: relative;
       }
       .scrollable {
+        padding: 1rem;
         height: 20em;
         overflow-y: auto;
       }
@@ -16,24 +17,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="scrollable" id="reference1">
+      <plus-progress-bar id="progressbar2"></plus-progress-bar>
+      <div class="scrollable" id="reference2">
         <plus-faker
           api="lorem.paragraphs"
           arguments='[20, "\n\n"]'
+          seed="0"
         ></plus-faker>
       </div>
       <plus-scroll-detector
-        id="scroll1"
-        reference="#reference1"
+        id="scroll2"
+        reference="#reference2"
         vertical
       ></plus-scroll-detector>
     </div>
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';
 
-      scroll1.addEventListener('plus-change', (event) => {
-        console.log(event.detail);
+      scroll2.addEventListener('plus-change', (event) => {
+        progressbar2.value = event.detail.progress;
       });
     </script>
   </body>

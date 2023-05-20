@@ -19,11 +19,11 @@ class ScrollDetectorDefault {
   render() {
     return (
       <div class="container">
-        <div class="scrollable">
+        <div class="scrollable" id="reference1">
           <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
         </div>
         <plus-scroll-detector
-          reference=".scrollable"
+          reference="#reference1"
           vertical
           onPlusChange={(event) => this.onChange(event)}
         >
@@ -36,10 +36,10 @@ class ScrollDetectorDefault {
 
 ```html [javascript:template]
 <div class="container">
-  <div class="scrollable">
+  <div class="scrollable" id="reference1">
     <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
   </div>
-  <plus-scroll-detector id="scroll1" reference=".scrollable" vertical></plus-scroll-detector>
+  <plus-scroll-detector id="scroll1" reference="#reference1" vertical></plus-scroll-detector>
 </div>
 ```
 

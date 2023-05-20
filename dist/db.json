@@ -12018,7 +12018,7 @@
     "component": "progress-bar",
     "example": "aria-label",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarAriaLabel = () => {\n  return <Progress.Bar ariaLabel=\"With Label\" value=\"100\"></Progress.Bar>;\n};\nexport default ProgressBarAriaLabel;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarAriaLabel = () => {\n  return <ProgressBar ariaLabel=\"With Label\" value=\"100\"></ProgressBar>;\n};\nexport default ProgressBarAriaLabel;\n"
     }
   },
   {
@@ -12082,7 +12082,7 @@
     "component": "progress-bar",
     "example": "buffer",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarBuffer = () => {\n  return <Progress.Bar value=\"50\" buffer=\"75\"></Progress.Bar>;\n};\nexport default ProgressBarBuffer;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarBuffer = () => {\n  return <ProgressBar value=\"50\" buffer=\"75\"></ProgressBar>;\n};\nexport default ProgressBarBuffer;\n"
     }
   },
   {
@@ -12146,7 +12146,7 @@
     "component": "progress-bar",
     "example": "custom-label",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarCustomLabel = () => {\n  return <Progress.Bar value=\"75\">Custom label for value of 75</Progress.Bar>;\n};\nexport default ProgressBarCustomLabel;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarCustomLabel = () => {\n  return <ProgressBar value=\"75\">Custom label for value of 75</ProgressBar>;\n};\nexport default ProgressBarCustomLabel;\n"
     }
   },
   {
@@ -12210,7 +12210,7 @@
     "component": "progress-bar",
     "example": "default",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarDefault = () => {\n  return <Progress.Bar></Progress.Bar>;\n};\nexport default ProgressBarDefault;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarDefault = () => {\n  return <ProgressBar></ProgressBar>;\n};\nexport default ProgressBarDefault;\n"
     }
   },
   {
@@ -12281,7 +12281,7 @@
     "component": "progress-bar",
     "example": "height",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarHeight = () => {\n  return (\n    <>\n      <Progress.Bar value=\"50\" className=\"thin\"></Progress.Bar>\n      <br />\n      <Progress.Bar value=\"50\"></Progress.Bar>\n      <br />\n      <Progress.Bar value=\"50\" className=\"thick\"></Progress.Bar>\n    </>\n  );\n};\nexport default ProgressBarHeight;\n",
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarHeight = () => {\n  return (\n    <>\n      <ProgressBar value=\"50\" className=\"thin\"></ProgressBar>\n      <br />\n      <ProgressBar value=\"50\"></ProgressBar>\n      <br />\n      <ProgressBar value=\"50\" className=\"thick\"></ProgressBar>\n    </>\n  );\n};\nexport default ProgressBarHeight;\n",
       "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n"
     }
   },
@@ -12349,7 +12349,7 @@
     "component": "progress-bar",
     "example": "indeterminate",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarIndeterminate = () => {\n  return <Progress.Bar variant=\"indeterminate\"></Progress.Bar>;\n};\nexport default ProgressBarIndeterminate;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarIndeterminate = () => {\n  return <ProgressBar variant=\"indeterminate\"></ProgressBar>;\n};\nexport default ProgressBarIndeterminate;\n"
     }
   },
   {
@@ -12413,7 +12413,7 @@
     "component": "progress-bar",
     "example": "label",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarLabel = () => {\n  return <Progress.Bar label value=\"75\"></Progress.Bar>;\n};\nexport default ProgressBarLabel;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarLabel = () => {\n  return <ProgressBar label value=\"75\"></ProgressBar>;\n};\nexport default ProgressBarLabel;\n"
     }
   },
   {
@@ -12477,7 +12477,7 @@
     "component": "progress-bar",
     "example": "min-and-max",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarMinAndMax = () => {\n  return (\n    <div>\n      <Progress.Bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></Progress.Bar>\n      <br />\n      <Progress.Bar min=\"-10\" max=\"+10\" value=\"0.00\"></Progress.Bar>\n    </div>\n  );\n};\nexport default ProgressBarMinAndMax;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarMinAndMax = () => {\n  return (\n    <div>\n      <ProgressBar min=\"0.0\" max=\"1.0\" value=\"0.25\"></ProgressBar>\n      <br />\n      <ProgressBar min=\"-10\" max=\"+10\" value=\"0.00\"></ProgressBar>\n    </div>\n  );\n};\nexport default ProgressBarMinAndMax;\n"
     }
   },
   {
@@ -12541,7 +12541,7 @@
     "component": "progress-bar",
     "example": "value",
     "output": {
-      "script": "import { Progress } from '@htmlplus/react';\nconst ProgressBarValue = () => {\n  return <Progress.Bar value=\"25\"></Progress.Bar>;\n};\nexport default ProgressBarValue;\n"
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarValue = () => {\n  return <ProgressBar value=\"25\"></ProgressBar>;\n};\nexport default ProgressBarValue;\n"
     }
   },
   {
@@ -12577,7 +12577,7 @@
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    console.log(event.detail);\n  }\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -12587,7 +12587,7 @@
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\nscroll1.addEventListener('plus-change', (event) => {\r\n  console.log(event.detail)\r\n})",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\" id=\"reference1\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\"#reference1\" vertical></plus-scroll-detector>\r\n</div>"
     }
   },
   {
@@ -12603,12 +12603,12 @@
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\".scrollable\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\" id=\"reference1\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\"#reference1\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
         "type": "html",
-        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\" id=\"reference1\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\"#reference1\" vertical></plus-scroll-detector>\r\n</div>"
       },
       {
         "key": "javascript:script",
@@ -12632,7 +12632,7 @@
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        reference=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\" id=\"reference1\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        reference=\"#reference1\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -12641,7 +12641,7 @@
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\" id=\"reference1\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\"#reference1\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -12652,7 +12652,7 @@
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -12662,7 +12662,102 @@
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  value = 0;\n  onChange(event) {\n    this.value = event.detail.progress;\n  }\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar [value]=\"value\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      [seed]=\"0\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\nscroll2.addEventListener('plus-change', (event) => {\r\n  progressbar2.value = event.detail.progress;\r\n})",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\r\n  <plus-progress-bar id=\"progressbar2\"></plus-progress-bar>\r\n  <div class=\"scrollable\" id=\"reference2\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll2\" reference=\"#reference2\" vertical></plus-scroll-detector>\r\n</div>"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": ".container {\r\n  position: relative;\r\n}\r\n.scrollable {\r\n  padding: 1rem;\r\n  height: 20em;\r\n  overflow-y: auto;\r\n}"
+      },
+      {
+        "key": "script",
+        "type": "tsx",
+        "content": "import { Element, State } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorScrollIndicator {\r\n  @State()\r\n  value = 0;\r\n\r\n  onChange(event) {\r\n    this.value = event.detail.progress;\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <plus-progress-bar value={this.value}></plus-progress-bar>\r\n        <div class=\"scrollable\" id=\"reference2\">\r\n          <plus-faker\r\n            api=\"lorem.paragraphs\"\r\n            arguments='[20, \"\\n\\n\"]'\r\n            seed={0}\r\n          ></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\"#reference2\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
+      },
+      {
+        "key": "javascript:template",
+        "type": "html",
+        "content": "<div class=\"container\">\r\n  <plus-progress-bar id=\"progressbar2\"></plus-progress-bar>\r\n  <div class=\"scrollable\" id=\"reference2\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll2\" reference=\"#reference2\" vertical></plus-scroll-detector>\r\n</div>"
+      },
+      {
+        "key": "javascript:script",
+        "type": "js",
+        "content": "scroll2.addEventListener('plus-change', (event) => {\r\n  progressbar2.value = event.detail.progress;\r\n})"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          },
+          "dock": true
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import { useState } from 'react';\nimport { Faker, ProgressBar, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorScrollIndicator = () => {\n  const [value, setValue] = useState(0);\n  const onChange = (event) => {\n    setValue(event.detail.progress);\n  };\n  return (\n    <div className=\"container\">\n      <ProgressBar value={value}></ProgressBar>\n      <div className=\"scrollable\" id=\"reference2\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed={0}></Faker>\n      </div>\n      <ScrollDetector\n        reference=\"#reference2\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorScrollIndicator;\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorScrollIndicator = () => {\n  const [value, setValue] = useState(0);\n  const onChange = (event) => {\n    setValue(event.detail.progress);\n  };\n  return (\n    <div className=\"container\">\n      <plus-progress-bar value={value}></plus-progress-bar>\n      <div className=\"scrollable\" id=\"reference2\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n          seed={0}\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\"#reference2\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorScrollIndicator;\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nlet value = 0;\nfunction onChange(event) {\n  value = event.detail.progress;\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar value=\"{value}\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      seed=\"{0}\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
+    "output": {
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst value = ref(0);\nfunction onChange(event) {\n  value.value = event.detail.progress;\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar :value=\"value\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      :seed=\"0\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {

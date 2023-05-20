@@ -1,17 +1,24 @@
 <script>
   import '@htmlplus/core/faker.js';
+  import '@htmlplus/core/progress-bar.js';
   import '@htmlplus/core/scroll-detector.js';
+  let value = 0;
   function onChange(event) {
-    console.log(event.detail);
+    value = event.detail.progress;
   }
 </script>
 
 <div class="container">
-  <div class="scrollable" id="reference1">
-    <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+  <plus-progress-bar value="{value}"></plus-progress-bar>
+  <div class="scrollable" id="reference2">
+    <plus-faker
+      api="lorem.paragraphs"
+      arguments='[20, "\n\n"]'
+      seed="{0}"
+    ></plus-faker>
   </div>
   <plus-scroll-detector
-    reference="#reference1"
+    reference="#reference2"
     vertical
     on:plus-change="{event => onChange(event)}"
   >
@@ -23,6 +30,7 @@
     position: relative;
   }
   .scrollable {
+    padding: 1rem;
     height: 20em;
     overflow-y: auto;
   }

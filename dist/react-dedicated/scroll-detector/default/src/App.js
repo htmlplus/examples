@@ -5,11 +5,11 @@ const ScrollDetectorDefault = () => {
   };
   return (
     <div className="container">
-      <div className="scrollable">
+      <div className="scrollable" id="reference1">
         <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
       </div>
       <ScrollDetector
-        reference=".scrollable"
+        reference="#reference1"
         vertical
         onChange={(event) => onChange(event)}
       ></ScrollDetector>
