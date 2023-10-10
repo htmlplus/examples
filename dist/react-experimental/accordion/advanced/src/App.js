@@ -1,7 +1,8 @@
 import '@htmlplus/core/accordion.js';
 import '@htmlplus/core/faker.js';
 import '@htmlplus/core/stack.js';
-const AccordionAdvanced = () => {
+
+function App() {
   return (
     <plus-accordion>
       <plus-stack slot="summary" justify-content="space-between">
@@ -11,5 +12,5 @@ const AccordionAdvanced = () => {
       <plus-faker></plus-faker>
     </plus-accordion>
   );
-};
-export default AccordionAdvanced;
+}
+export default App;

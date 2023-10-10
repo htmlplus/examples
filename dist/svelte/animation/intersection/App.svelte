@@ -1,16 +1,17 @@
 <script>
   import '@htmlplus/core/animation.js';
-  import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
-  let run = false;
-  function onChange(event) {
-    run = event.detail.isIntersecting;
+  import '@htmlplus/core/intersection.js';
+
+  let animationRef;
+  function onPlusChange(event) {
+    animationRef.run = event.detail.isIntersecting;
   }
 </script>
 
 <div class="container">
-  <plus-intersection on:plus-change="{event => onChange(event)}">
-    <plus-animation name="heart-beat" run="{run}"></plus-animation>
+  <plus-intersection on:plus-change={onPlusChange}>
+    <plus-animation name="heart-beat" bind:this={animationRef}></plus-animation>
   </plus-intersection>
 </div>
 

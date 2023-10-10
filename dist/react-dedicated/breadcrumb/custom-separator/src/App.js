@@ -1,5 +1,6 @@
 import { Breadcrumb, Center, Icon } from '@htmlplus/react';
-const BreadcrumbCustomSeparator = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb>
@@ -12,5 +13,5 @@ const BreadcrumbCustomSeparator = () => {
       </Breadcrumb>
     </Center>
   );
-};
-export default BreadcrumbCustomSeparator;
+}
+export default App;

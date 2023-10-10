@@ -1,5 +1,6 @@
 import { Spinner, Stack } from '@htmlplus/react';
-const SpinnerType = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Spinner type="default"></Spinner>
@@ -10,5 +11,5 @@ const SpinnerType = () => {
       <Spinner type="square"></Spinner>
     </Stack>
   );
-};
-export default SpinnerType;
+}
+export default App;

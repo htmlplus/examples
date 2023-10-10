@@ -1,6 +1,7 @@
 import '@htmlplus/core/breadcrumb.js';
 import '@htmlplus/core/icon.js';
-const BreadcrumbCustomized = () => {
+
+function App() {
   return (
     <plus-breadcrumb max={2}>
       <plus-icon slot="separator" name="arrow-right-short"></plus-icon>
@@ -10,5 +11,5 @@ const BreadcrumbCustomized = () => {
       <a href="#">Breadcrumb</a>
     </plus-breadcrumb>
   );
-};
-export default BreadcrumbCustomized;
+}
+export default App;

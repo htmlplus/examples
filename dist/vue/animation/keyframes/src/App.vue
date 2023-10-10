@@ -1,17 +1,18 @@
 <template>
   <div class="root">
     <plus-animation
-      duration="5000"
-      iterations="Infinity"
-      :keyframes="keyframes"
+      :duration="5000"
+      :iterations="Infinity"
       run
+      :keyframes="keyframes"
     ></plus-animation>
   </div>
 </template>
 
 <script setup>
   import '@htmlplus/core/animation.js';
-  keyframes = [
+
+  const keyframes = [
     {
       transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
       opacity: '1'

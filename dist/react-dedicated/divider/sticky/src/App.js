@@ -1,5 +1,6 @@
 import { Divider, Sticky } from '@htmlplus/react';
-const DividerSticky = () => {
+
+function App() {
   return (
     <div className="container">
       <Sticky>
@@ -29,5 +30,5 @@ const DividerSticky = () => {
       </Sticky>
     </div>
   );
-};
-export default DividerSticky;
+}
+export default App;

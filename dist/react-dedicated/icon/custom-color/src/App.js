@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@htmlplus/react';
-const IconCustomColor = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="house" color="primary"></Icon>
@@ -7,5 +8,5 @@ const IconCustomColor = () => {
       <Icon name="house" color="tertiary"></Icon>
     </Stack>
   );
-};
-export default IconCustomColor;
+}
+export default App;

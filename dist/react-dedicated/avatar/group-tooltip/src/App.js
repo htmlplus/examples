@@ -1,5 +1,6 @@
 import { Avatar, Center, Tooltip } from '@htmlplus/react';
-const AvatarGroupTooltip = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group stacked>
@@ -12,5 +13,5 @@ const AvatarGroupTooltip = () => {
       </Avatar.Group>
     </Center>
   );
-};
-export default AvatarGroupTooltip;
+}
+export default App;

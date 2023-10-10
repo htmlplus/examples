@@ -1,5 +1,6 @@
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingPlacement = () => {
+
+function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
@@ -11,5 +12,5 @@ const FloatingPlacement = () => {
       </Floating>
     </div>
   );
-};
-export default FloatingPlacement;
+}
+export default App;

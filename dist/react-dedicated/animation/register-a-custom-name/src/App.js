@@ -1,19 +1,20 @@
 import { Animation, Avatar, Center } from '@htmlplus/react';
-const AnimationRegisterACustomName = () => {
+
+function App() {
   return (
     <Center>
       <Avatar shape="circle">
         <Animation
-          delay="0000"
-          duration="2000"
-          iterations="Infinity"
+          delay={0}
+          duration={2000}
+          iterations={Infinity}
           name="custom-pulse"
           run
         ></Animation>
         <Animation
-          delay="1000"
-          duration="2000"
-          iterations="Infinity"
+          delay={1000}
+          duration={2000}
+          iterations={Infinity}
           name="custom-pulse"
           run
         ></Animation>
@@ -21,5 +22,5 @@ const AnimationRegisterACustomName = () => {
       </Avatar>
     </Center>
   );
-};
-export default AnimationRegisterACustomName;
+}
+export default App;

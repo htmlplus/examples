@@ -1,5 +1,6 @@
 import '@htmlplus/core/progress-bar.js';
-const ProgressBarIndeterminate = () => {
+
+function App() {
   return <plus-progress-bar variant="indeterminate"></plus-progress-bar>;
-};
-export default ProgressBarIndeterminate;
+}
+export default App;

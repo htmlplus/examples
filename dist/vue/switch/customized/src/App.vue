@@ -12,8 +12,8 @@
 
 <style scoped>
   /*
-   * switch-1
-   */
+      * switch-1
+      */
 
   .switch-1[aria-checked='false']::part(root) {
     background: #28292c;
@@ -34,8 +34,8 @@
   }
 
   /*
-   * switch-2
-   */
+      * switch-2
+      */
 
   .switch-2 {
     border-radius: 2px;

@@ -1,16 +1,17 @@
 import { Cropper, Grid } from '@htmlplus/react';
-const CropperZoomable = () => {
+
+function App() {
   return (
     <Grid gutter="md">
       <Grid.Item xs="12" sm="6">
         <Cropper
-          zoomable="false"
+          zoomable={false}
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></Cropper>
       </Grid.Item>
       <Grid.Item xs="12" sm="6">
         <Cropper
-          zoomable="true"
+          zoomable={true}
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></Cropper>
       </Grid.Item>
@@ -28,5 +29,5 @@ const CropperZoomable = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default CropperZoomable;
+}
+export default App;

@@ -1,9 +1,10 @@
 import '@htmlplus/core/card.js';
-const CardDefault = () => {
+
+function App() {
   return (
     <div className="container">
       <plus-card></plus-card>
     </div>
   );
-};
-export default CardDefault;
+}
+export default App;

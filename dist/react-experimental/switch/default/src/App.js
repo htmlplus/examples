@@ -1,10 +1,11 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/switch.js';
-const SwitchDefault = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-switch></plus-switch>
     </plus-center>
   );
-};
-export default SwitchDefault;
+}
+export default App;

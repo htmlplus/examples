@@ -1,5 +1,6 @@
 import { Breadcrumb, Center } from '@htmlplus/react';
-const BreadcrumbSeparator = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="-">
@@ -11,5 +12,5 @@ const BreadcrumbSeparator = () => {
       </Breadcrumb>
     </Center>
   );
-};
-export default BreadcrumbSeparator;
+}
+export default App;

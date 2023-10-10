@@ -1,13 +1,11 @@
 import { Center, Counter } from '@htmlplus/react';
-const CounterNumerals = () => {
+
+function App() {
+  const numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
   return (
     <Center>
-      <Counter
-        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}
-        to="1000"
-        play
-      ></Counter>
+      <Counter to={1000} play numerals={numerals}></Counter>
     </Center>
   );
-};
-export default CounterNumerals;
+}
+export default App;

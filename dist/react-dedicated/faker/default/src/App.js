@@ -1,5 +1,6 @@
 import { Faker } from '@htmlplus/react';
-const FakerDefault = () => {
+
+function App() {
   return <Faker></Faker>;
-};
-export default FakerDefault;
+}
+export default App;

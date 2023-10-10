@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconMaterial = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="home_outline"></plus-icon>
@@ -8,5 +9,5 @@ const IconMaterial = () => {
       <plus-icon name="home_sharp"></plus-icon>
     </plus-stack>
   );
-};
-export default IconMaterial;
+}
+export default App;

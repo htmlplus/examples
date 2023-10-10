@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Animation | Keyframes</title>
@@ -22,29 +22,22 @@
   </head>
   <body>
     <div class="root">
-      <plus-animation
-        duration="5000"
-        id="animation3"
-        iterations="Infinity"
-        run
-      ></plus-animation>
+      <plus-animation duration="5000" id="$animation" iterations="Infinity" run></plus-animation>
     </div>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';
 
-      setTimeout(() => {
-        animation3.keyframes = [
-          {
-            transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
-            opacity: '1'
-          },
-          {
-            transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',
-            opacity: '0'
-          }
-        ];
-        animation3.run = true;
-      }, 1000);
+      $animation.keyframes = [
+        {
+          transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
+          opacity: '1'
+        },
+        {
+          transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',
+          opacity: '0'
+        }
+      ];
     </script>
   </body>
 </html>

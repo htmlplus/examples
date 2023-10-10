@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useRef } from 'react';
+
 import { Animation, Intersection } from '@htmlplus/react';
+
 import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
-const AnimationIntersection = () => {
-  const [run, setRun] = useState(false);
-  const onChange = (event) => {
-    setRun(event.detail.isIntersecting);
-  };
+
+function App() {
+  const animationRef = useRef();
+  function onChange(event) {
+    animationRef.current.run = event.detail.isIntersecting;
+  }
   return (
     <div className="container">
-      <Intersection onChange={(event) => onChange(event)}>
-        <Animation name="heart-beat" run={run}></Animation>
+      <Intersection onChange={onChange}>
+        <Animation name="heart-beat" ref={animationRef}></Animation>
       </Intersection>
     </div>
   );
-};
-export default AnimationIntersection;
+}
+export default App;

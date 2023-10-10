@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@htmlplus/react';
-const IconFontAwesome = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="far-user"></Icon>
@@ -7,5 +8,5 @@ const IconFontAwesome = () => {
       <Icon name="fab-apple"></Icon>
     </Stack>
   );
-};
-export default IconFontAwesome;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridWrap = () => {
+
+function App() {
   return (
     <Grid wrap="off">
       <Grid.Item xs="6">
@@ -16,5 +17,5 @@ const GridWrap = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridWrap;
+}
+export default App;

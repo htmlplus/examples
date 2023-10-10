@@ -1,10 +1,11 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/switch.js';
-const SwitchThreeDimensional = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-switch checked></plus-switch>
     </plus-center>
   );
-};
-export default SwitchThreeDimensional;
+}
+export default App;

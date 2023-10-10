@@ -1,5 +1,6 @@
 import '@htmlplus/core/card.js';
-const CardOutlined = () => {
+
+function App() {
   return <plus-card outlined></plus-card>;
-};
-export default CardOutlined;
+}
+export default App;

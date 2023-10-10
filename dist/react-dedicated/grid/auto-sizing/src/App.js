@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridAutoSizing = () => {
+
+function App() {
   return (
     <>
       <Grid>
@@ -26,5 +27,5 @@ const GridAutoSizing = () => {
       </Grid>
     </>
   );
-};
-export default GridAutoSizing;
+}
+export default App;

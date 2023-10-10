@@ -1,12 +1,8 @@
 <plus-center>
-  <plus-signature
-    id="signature2"
-    background-color="lightgray"
-    (plus-end)="onPlusEnd()"
-  ></plus-signature>
+  <plus-signature background-color="lightgray" (plus-end)="onPlusEnd()" #signature></plus-signature>
 </plus-center>
 <br />
 <plus-stack gap="1rem">
-  <button [disabled]="!canUndo" (click)="onUndo()">Undo</button>
-  <button [disabled]="!canRedo" (click)="onRedo()">Redo</button>
+  <button (click)="onClick1()" [disabled]="disabled1">Undo</button>
+  <button (click)="onClick2()" [disabled]="disabled2">Redo</button>
 </plus-stack>

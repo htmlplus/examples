@@ -1,6 +1,7 @@
 import '@htmlplus/core/breadcrumb.js';
 import '@htmlplus/core/center.js';
-const BreadcrumbDefault = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-breadcrumb separator="/">
@@ -11,5 +12,5 @@ const BreadcrumbDefault = () => {
       </plus-breadcrumb>
     </plus-center>
   );
-};
-export default BreadcrumbDefault;
+}
+export default App;

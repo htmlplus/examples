@@ -1,11 +1,44 @@
 {
-  "embeddedLanguageFormatting": "off",
-  "printWidth": 120,
+  "embeddedLanguageFormatting": "auto",
+  "printWidth": 100,
   "quoteProps": "consistent",
   "singleQuote": true,
+  "jsxSingleQuote": false,
   "trailingComma": "none",
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^[.](.*)"],
-  "importOrderCaseInsensitive": true,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@htmlplus/react(.*)$",
+    "^@htmlplus/core(.*)$",
+    "^@/(.*)$",
+    "./config*",
+    "^[.](.*)"
+  ],
+  "importOrderCaseInsensitive": false,
+  "importOrderParserPlugins": [
+    "typescript",
+    "jsx",
+    "classProperties",
+    "[\"decorators\", { \"decoratorsBeforeExport\": true }]"
+  ],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": false
+  "importOrderSortSpecifiers": true,
+  "vueIndentScriptAndStyle": true,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 50
+      }
+    },
+    { 
+      "files": "*.svelte", 
+      "options": { 
+        "parser": "svelte" 
+      } 
+    }
+  ],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports", 
+    "prettier-plugin-svelte"
+  ]
 }

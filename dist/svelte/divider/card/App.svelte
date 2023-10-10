@@ -3,7 +3,7 @@
   import '@htmlplus/core/divider.js';
 </script>
 
-<plus-card elevation="10">
+<plus-card elevation={10}>
   Item 1
   <plus-divider></plus-divider>
   Item 2

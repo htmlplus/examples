@@ -1,7 +1,8 @@
 import '@htmlplus/core/cropper.js';
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const CropperBackdrop = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid gutter="md">
       <plus-grid-item xs="12" sm="6">
@@ -18,5 +19,5 @@ const CropperBackdrop = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default CropperBackdrop;
+}
+export default App;

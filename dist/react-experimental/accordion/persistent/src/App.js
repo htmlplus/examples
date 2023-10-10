@@ -1,35 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useRef } from 'react';
+
 import '@htmlplus/core/accordion.js';
 import '@htmlplus/core/faker.js';
-const AccordionPersistent = () => {
-  const [open, setOpen] = useState(1);
-  const expand = (value) => {
-    setOpen(value);
-  };
+
+function App() {
+  const accordionsRef = useRef();
+  useEffect(() => {
+    Array.from(accordionsRef.current.children).forEach((accordion, index, accordions) => {
+      accordion.addEventListener('plus-expand', (event) => {
+        accordions.forEach((accordion) => {
+          accordion.open = event.target == accordion;
+        });
+      });
+    });
+  }, []);
   return (
-    <div>
-      <plus-accordion
-        summary="First"
-        open={open == 1}
-        onplus-expand={() => expand(1)}
-      >
+    <div ref={accordionsRef}>
+      <plus-accordion summary="First">
         <plus-faker></plus-faker>
       </plus-accordion>
-      <plus-accordion
-        summary="Second"
-        open={open == 2}
-        onplus-expand={() => expand(2)}
-      >
+      <plus-accordion summary="Second">
         <plus-faker></plus-faker>
       </plus-accordion>
-      <plus-accordion
-        summary="Third"
-        open={open == 3}
-        onplus-expand={() => expand(3)}
-      >
+      <plus-accordion summary="Third">
         <plus-faker></plus-faker>
       </plus-accordion>
     </div>
   );
-};
-export default AccordionPersistent;
+}
+export default App;

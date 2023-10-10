@@ -1,9 +1,0 @@
-```html [template]
-<plus-center>
-  <plus-avatar-group>
-    <plus-avatar></plus-avatar>
-    <plus-avatar></plus-avatar>
-    <plus-avatar></plus-avatar>
-  </plus-avatar-group>
-</plus-center>
-```

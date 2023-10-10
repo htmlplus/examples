@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Click Outside | Default</title>
@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <plus-click-outside id="clickOutside1">
+    <plus-click-outside id="$clickOutside">
       <plus-card elevation="10">
         <plus-card-body>
-          <b id="element2">0</b> time(s) inside clicked
+          <b id="$inside">0</b> time(s) inside clicked
           <br />
-          <b id="element3">0</b> time(s) outside clicked
+          <b id="$outside">0</b> time(s) outside clicked
         </plus-card-body>
       </plus-card>
     </plus-click-outside>
+
     <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/card.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/card.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/click-outside.js';
 
       let inside = 0;
       let outside = 0;
-      clickOutside1.addEventListener('click', (event) => {
+      $clickOutside.addEventListener('click', () => {
         inside = inside + 1;
-        element2.innerHTML = inside;
+        $inside.innerHTML = `${inside}`;
       });
-      clickOutside1.addEventListener('plus-click-outside', (event) => {
+      $clickOutside.addEventListener('plus-click-outside', () => {
         outside = outside + 1;
-        element3.innerHTML = outside;
+        $outside.innerHTML = `${outside}`;
       });
     </script>
   </body>

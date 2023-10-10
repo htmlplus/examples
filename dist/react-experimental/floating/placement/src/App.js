@@ -1,7 +1,8 @@
 import '@htmlplus/core/faker.js';
 import '@htmlplus/core/floating.js';
 import '@htmlplus/core/icon.js';
-const FloatingPlacement = () => {
+
+function App() {
   return (
     <div>
       <plus-faker api="lorem.paragraphs"></plus-faker>
@@ -13,5 +14,5 @@ const FloatingPlacement = () => {
       </plus-floating>
     </div>
   );
-};
-export default FloatingPlacement;
+}
+export default App;

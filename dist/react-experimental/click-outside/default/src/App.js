@@ -1,32 +1,32 @@
-import { useState } from 'react';
-import '@htmlplus/core/card.js';
+import { useRef, useState } from 'react';
+
 import '@htmlplus/core/card-body.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/core/card.js';
 import '@htmlplus/core/click-outside.js';
-const ClickOutsideDefault = () => {
+
+function App() {
+  const outsideRef = useRef();
+  const insideRef = useRef();
   const [inside, setInside] = useState(0);
   const [outside, setOutside] = useState(0);
-  const onClick = () => {
+  function onClick() {
     setInside(inside + 1);
-  };
-  const onClickOutside = () => {
+    insideRef.current.innerHTML = `${inside}`;
+  }
+  function onPlusClickOutside() {
     setOutside(outside + 1);
-  };
+    outsideRef.current.innerHTML = `${outside}`;
+  }
   return (
-    <plus-center>
-      <plus-click-outside
-        onClick={() => onClick()}
-        onplus-click-outside={() => onClickOutside()}
-      >
-        <plus-card elevation="10">
-          <plus-card-body>
-            <b>{inside}</b> time(s) inside clicked
-            <br />
-            <b>{outside}</b> time(s) outside clicked
-          </plus-card-body>
-        </plus-card>
-      </plus-click-outside>
-    </plus-center>
+    <plus-click-outside onclick={onClick} onplus-click-outside={onPlusClickOutside}>
+      <plus-card elevation={10}>
+        <plus-card-body>
+          <b ref={insideRef}>0</b> time(s) inside clicked
+          <br />
+          <b ref={outsideRef}>0</b> time(s) outside clicked
+        </plus-card-body>
+      </plus-card>
+    </plus-click-outside>
   );
-};
-export default ClickOutsideDefault;
+}
+export default App;

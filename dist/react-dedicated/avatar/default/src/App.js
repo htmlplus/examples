@@ -1,9 +1,10 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarDefault = () => {
+
+function App() {
   return (
     <Center>
       <Avatar></Avatar>
     </Center>
   );
-};
-export default AvatarDefault;
+}
+export default App;

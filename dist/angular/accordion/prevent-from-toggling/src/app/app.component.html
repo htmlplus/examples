@@ -1,7 +1,7 @@
 <plus-accordion
   summary="Summary"
-  (plus-collapse)="ensure('collapse', $event)"
-  (plus-expand)="ensure('expand', $event)"
+  (plus-collapse)="onPlusCollapse($event)"
+  (plus-expand)="onPlusExpand($event)"
 >
   <plus-faker></plus-faker>
 </plus-accordion>

@@ -1,6 +1,7 @@
 import '@htmlplus/core/animation.js';
-const AnimationKeyframes = () => {
-  let keyframes = [
+
+function App() {
+  const keyframes = [
     {
       transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
       opacity: '1'
@@ -13,12 +14,12 @@ const AnimationKeyframes = () => {
   return (
     <div className="root">
       <plus-animation
-        duration="5000"
-        iterations="Infinity"
-        keyframes={keyframes}
+        duration={5000}
+        iterations={Infinity}
         run
+        keyframes={keyframes}
       ></plus-animation>
     </div>
   );
-};
-export default AnimationKeyframes;
+}
+export default App;

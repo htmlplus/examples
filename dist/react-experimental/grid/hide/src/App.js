@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridHide = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid>
       <plus-grid-item hide-sm xs="3">
@@ -14,5 +15,5 @@ const GridHide = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridHide;
+}
+export default App;

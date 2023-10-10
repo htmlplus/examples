@@ -1,10 +1,11 @@
 import { Avatar, Center, Tooltip } from '@htmlplus/react';
-const AvatarTooltip = () => {
+
+function App() {
   return (
     <Center>
       <Avatar></Avatar>
       <Tooltip>Tooltip</Tooltip>
     </Center>
   );
-};
-export default AvatarTooltip;
+}
+export default App;

@@ -1,21 +1,22 @@
 import '@htmlplus/core/animation.js';
 import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AnimationRegisterACustomName = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar shape="circle">
         <plus-animation
-          delay="0000"
-          duration="2000"
-          iterations="Infinity"
+          delay={0}
+          duration={2000}
+          iterations={Infinity}
           name="custom-pulse"
           run
         ></plus-animation>
         <plus-animation
-          delay="1000"
-          duration="2000"
-          iterations="Infinity"
+          delay={1000}
+          duration={2000}
+          iterations={Infinity}
           name="custom-pulse"
           run
         ></plus-animation>
@@ -23,5 +24,5 @@ const AnimationRegisterACustomName = () => {
       </plus-avatar>
     </plus-center>
   );
-};
-export default AnimationRegisterACustomName;
+}
+export default App;

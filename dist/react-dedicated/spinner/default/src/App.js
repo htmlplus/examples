@@ -1,9 +1,10 @@
 import { Center, Spinner } from '@htmlplus/react';
-const SpinnerDefault = () => {
+
+function App() {
   return (
     <Center>
       <Spinner></Spinner>
     </Center>
   );
-};
-export default SpinnerDefault;
+}
+export default App;

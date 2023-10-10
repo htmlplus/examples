@@ -1,8 +1,9 @@
 import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/card.js';
 import '@htmlplus/core/card-body.js';
+import '@htmlplus/core/card.js';
 import '@htmlplus/core/center.js';
-const AspectRatioCard = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-card outlined>
@@ -16,5 +17,5 @@ const AspectRatioCard = () => {
       </plus-card>
     </plus-center>
   );
-};
-export default AspectRatioCard;
+}
+export default App;

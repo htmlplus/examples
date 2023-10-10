@@ -1,7 +1,7 @@
 <script>
   import '@htmlplus/core/card.js';
-  import '@htmlplus/core/grid.js';
   import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/grid.js';
 </script>
 
 <plus-grid justify-content="evenly" gutter="md">

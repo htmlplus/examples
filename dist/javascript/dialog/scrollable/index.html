@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Dialog | Scrollable</title>
@@ -7,18 +7,13 @@
   </head>
   <body>
     <plus-center>
-      <plus-dialog-toggler connector="dialog-scrollable">
-        Open
-      </plus-dialog-toggler>
+      <plus-dialog-toggler connector="dialog-scrollable"> Open </plus-dialog-toggler>
     </plus-center>
     <plus-dialog animation="fade" connector="dialog-scrollable" scrollable>
       <plus-dialog-content>
         <plus-dialog-header> Dialog Title </plus-dialog-header>
         <plus-dialog-body>
-          <plus-faker
-            api="lorem.paragraphs"
-            arguments='[15, "\n\n"]'
-          ></plus-faker>
+          <plus-faker api="lorem.paragraphs" arguments='[15, "\n\n"]'></plus-faker>
         </plus-dialog-body>
         <plus-dialog-footer>
           <plus-dialog-toggler> Close </plus-dialog-toggler>
@@ -28,12 +23,12 @@
 
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
     </script>
   </body>

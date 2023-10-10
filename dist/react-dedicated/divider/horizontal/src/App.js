@@ -1,5 +1,6 @@
 import { Divider, Faker } from '@htmlplus/react';
-const DividerHorizontal = () => {
+
+function App() {
   return (
     <>
       <Faker></Faker>
@@ -9,5 +10,5 @@ const DividerHorizontal = () => {
       <Faker></Faker>
     </>
   );
-};
-export default DividerHorizontal;
+}
+export default App;

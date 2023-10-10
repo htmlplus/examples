@@ -1,32 +1,35 @@
 import { useState } from 'react';
+
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
-import '@htmlplus/core/dialog.js';
 import '@htmlplus/core/dialog-body.js';
 import '@htmlplus/core/dialog-content.js';
 import '@htmlplus/core/dialog-footer.js';
 import '@htmlplus/core/dialog-header.js';
 import '@htmlplus/core/dialog-toggler.js';
-const CropperDialog = () => {
+import '@htmlplus/core/dialog.js';
+
+function App() {
   const [disabled, setDisabled] = useState(true);
-  const change = (disabled) => {
-    setDisabled(disabled);
-  };
+  function onPlusOpened() {
+    setDisabled(false);
+  }
+  function onPlusClosed() {
+    setDisabled(true);
+  }
   return (
     <>
       <plus-center>
-        <plus-dialog-toggler connector="dialog-cropper">
-          Open
-        </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
       </plus-center>
       <plus-dialog
         animation="fade"
         connector="dialog-cropper"
-        onplus-opened={() => change(false)}
-        onplus-closed={() => change(true)}
+        onplus-opened={onPlusOpened}
+        onplus-closed={onPlusClosed}
       >
         <plus-dialog-content>
-          <plus-dialog-header>Cropper</plus-dialog-header>
+          <plus-dialog-header> Cropper </plus-dialog-header>
           <plus-dialog-body>
             <plus-cropper
               disabled={disabled}
@@ -34,11 +37,11 @@ const CropperDialog = () => {
             ></plus-cropper>
           </plus-dialog-body>
           <plus-dialog-footer>
-            <plus-dialog-toggler>Close</plus-dialog-toggler>
+            <plus-dialog-toggler> Close </plus-dialog-toggler>
           </plus-dialog-footer>
         </plus-dialog-content>
       </plus-dialog>
     </>
   );
-};
-export default CropperDialog;
+}
+export default App;

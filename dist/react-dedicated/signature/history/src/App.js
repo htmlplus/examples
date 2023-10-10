@@ -1,42 +1,41 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+
 import { Center, Signature, Stack } from '@htmlplus/react';
-const SignatureHistory = () => {
-  const [canUndo, setCanUndo] = useState(false);
-  const [canRedo, setCanRedo] = useState(false);
+
+function App() {
+  const signatureRef = useRef();
+  const [disabled2, setDisabled2] = useState(true);
+  const [disabled1, setDisabled1] = useState(true);
   const sync = () => {
-    setCanUndo(window.signature2.canUndo());
-    setCanRedo(window.signature2.canRedo());
+    setDisabled1(!signatureRef.current.canUndo());
+    setDisabled2(!signatureRef.current.canRedo());
   };
-  const onUndo = () => {
-    window.signature2.undo();
+  function onClick1() {
+    signatureRef.current.undo();
     sync();
-  };
-  const onRedo = () => {
-    window.signature2.redo();
+  }
+  function onClick2() {
+    signatureRef.current.redo();
     sync();
-  };
-  const onPlusEnd = () => {
+  }
+  function onEnd() {
     sync();
-  };
+  }
   return (
     <>
       <Center>
-        <Signature
-          id="signature2"
-          backgroundColor="lightgray"
-          onEnd={() => onPlusEnd()}
-        ></Signature>
+        <Signature backgroundColor="lightgray" onEnd={onEnd} ref={signatureRef}></Signature>
       </Center>
       <br />
       <Stack gap="1rem">
-        <button disabled={!canUndo} onClick={() => onUndo()}>
+        <button disabled={disabled1} onClick={onClick1}>
           Undo
         </button>
-        <button disabled={!canRedo} onClick={() => onRedo()}>
+        <button disabled={disabled2} onClick={onClick2}>
           Redo
         </button>
       </Stack>
     </>
   );
-};
-export default SignatureHistory;
+}
+export default App;

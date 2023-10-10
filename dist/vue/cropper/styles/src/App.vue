@@ -55,18 +55,15 @@
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="5">
-      <plus-cropper
-        class="style-6"
-        src="/assets/images/bear.jpg"
-      ></plus-cropper>
+      <plus-cropper class="style-6" src="/assets/images/bear.jpg"></plus-cropper>
     </plus-grid-item>
   </plus-grid>
 </template>
 
 <script setup>
   import '@htmlplus/core/cropper.js';
-  import '@htmlplus/core/grid.js';
   import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/grid.js';
 </script>
 
 <style scoped>

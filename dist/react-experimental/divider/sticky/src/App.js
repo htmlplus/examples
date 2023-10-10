@@ -1,6 +1,7 @@
 import '@htmlplus/core/divider.js';
 import '@htmlplus/core/sticky.js';
-const DividerSticky = () => {
+
+function App() {
   return (
     <div className="container">
       <plus-sticky>
@@ -30,5 +31,5 @@ const DividerSticky = () => {
       </plus-sticky>
     </div>
   );
-};
-export default DividerSticky;
+}
+export default App;

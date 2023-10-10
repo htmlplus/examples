@@ -1,6 +1,7 @@
 import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AvatarLink = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar>
@@ -9,5 +10,5 @@ const AvatarLink = () => {
       </plus-avatar>
     </plus-center>
   );
-};
-export default AvatarLink;
+}
+export default App;

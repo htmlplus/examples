@@ -1,9 +1,10 @@
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDimensions = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray"></Signature>
     </Center>
   );
-};
-export default SignatureDimensions;
+}
+export default App;

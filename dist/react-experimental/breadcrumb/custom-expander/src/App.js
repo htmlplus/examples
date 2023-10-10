@@ -1,7 +1,8 @@
 import '@htmlplus/core/breadcrumb.js';
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
-const BreadcrumbCustomExpander = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-breadcrumb separator="-" max={2} expander-text="Show more">
@@ -13,5 +14,5 @@ const BreadcrumbCustomExpander = () => {
       </plus-breadcrumb>
     </plus-center>
   );
-};
-export default BreadcrumbCustomExpander;
+}
+export default App;

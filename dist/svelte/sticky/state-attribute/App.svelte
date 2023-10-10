@@ -8,7 +8,7 @@
   <plus-sticky watcher>
     <plus-faker></plus-faker>
   </plus-sticky>
-  <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+  <plus-faker api="lorem.paragraphs" arguments={[20, '\n\n']}></plus-faker>
 </div>
 
 <style>

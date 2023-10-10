@@ -2,18 +2,20 @@
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
   import '@htmlplus/core/stack.js';
-  let canUndo = false;
-  let canRedo = false;
-  function sync() {
-    canUndo = window.signature2.canUndo();
-    canRedo = window.signature2.canRedo();
-  }
-  function onUndo() {
-    window.signature2.undo();
+
+  let signatureRef;
+  let disabled2 = true;
+  let disabled1 = true;
+  const sync = () => {
+    disabled1 = !signatureRef.canUndo();
+    disabled2 = !signatureRef.canRedo();
+  };
+  function onClick1() {
+    signatureRef.undo();
     sync();
   }
-  function onRedo() {
-    window.signature2.redo();
+  function onClick2() {
+    signatureRef.redo();
     sync();
   }
   function onPlusEnd() {
@@ -22,14 +24,11 @@
 </script>
 
 <plus-center>
-  <plus-signature
-    id="signature2"
-    background-color="lightgray"
-    on:plus-end="{() => onPlusEnd()}"
+  <plus-signature background-color="lightgray" on:plus-end={onPlusEnd} bind:this={signatureRef}
   ></plus-signature>
 </plus-center>
 <br />
 <plus-stack gap="1rem">
-  <button disabled="{!canUndo}" on:click="{() => onUndo()}">Undo</button>
-  <button disabled="{!canRedo}" on:click="{() => onRedo()}">Redo</button>
+  <button disabled={disabled1} on:click={onClick1}>Undo</button>
+  <button disabled={disabled2} on:click={onClick2}>Redo</button>
 </plus-stack>

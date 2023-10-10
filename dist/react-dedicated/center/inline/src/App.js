@@ -1,5 +1,6 @@
 import { Center, Icon } from '@htmlplus/react';
-const CenterInline = () => {
+
+function App() {
   return (
     <Center>
       <button>
@@ -10,5 +11,5 @@ const CenterInline = () => {
       </button>
     </Center>
   );
-};
-export default CenterInline;
+}
+export default App;

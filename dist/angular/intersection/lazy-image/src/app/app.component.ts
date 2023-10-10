@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+
 import '@htmlplus/core/card.js';
 import '@htmlplus/core/intersection.js';
 import '@htmlplus/core/spinner.js';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onChange(event) {
+  onPlusChange(event) {
     if (!event.detail.isIntersecting) return;
     setTimeout(() => {
       const image = event.target.querySelector('img');

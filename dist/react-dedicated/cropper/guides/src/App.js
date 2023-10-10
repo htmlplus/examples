@@ -1,10 +1,8 @@
 import { Cropper } from '@htmlplus/react';
-const CropperGuides = () => {
+
+function App() {
   return (
-    <Cropper
-      guides
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper guides src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
-export default CropperGuides;
+}
+export default App;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Intersection | Default</title>
@@ -33,10 +33,10 @@
     <div class="container">
       <plus-sticky top="1rem" z-index="1">
         <plus-center>
-          <div id="status" class="status"></div>
+          <div id="$status" class="status"></div>
         </plus-center>
       </plus-sticky>
-      <plus-intersection id="intersection1">
+      <plus-intersection id="$intersection">
         <plus-card elevation="10">
           <plus-card-body>
             <plus-faker></plus-faker>
@@ -44,18 +44,17 @@
         </plus-card>
       </plus-intersection>
     </div>
+
     <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/card.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/card.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';
 
-      intersection1.addEventListener('plus-change', (event) => {
-        status.innerHTML = event.detail.isIntersecting
-          ? 'In Viewport'
-          : 'Out of Viewport';
+      $intersection.addEventListener('plus-change', (event) => {
+        $status.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
       });
     </script>
   </body>

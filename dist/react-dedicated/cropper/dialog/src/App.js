@@ -1,23 +1,23 @@
 import { useState } from 'react';
+
 import { Center, Cropper, Dialog } from '@htmlplus/react';
-const CropperDialog = () => {
+
+function App() {
   const [disabled, setDisabled] = useState(true);
-  const change = (disabled) => {
-    setDisabled(disabled);
-  };
+  function onOpened() {
+    setDisabled(false);
+  }
+  function onClosed() {
+    setDisabled(true);
+  }
   return (
     <>
       <Center>
-        <Dialog.Toggler connector="dialog-cropper">Open</Dialog.Toggler>
+        <Dialog.Toggler connector="dialog-cropper"> Open </Dialog.Toggler>
       </Center>
-      <Dialog
-        animation="fade"
-        connector="dialog-cropper"
-        onOpened={() => change(false)}
-        onClosed={() => change(true)}
-      >
+      <Dialog animation="fade" connector="dialog-cropper" onOpened={onOpened} onClosed={onClosed}>
         <Dialog.Content>
-          <Dialog.Header>Cropper</Dialog.Header>
+          <Dialog.Header> Cropper </Dialog.Header>
           <Dialog.Body>
             <Cropper
               disabled={disabled}
@@ -25,11 +25,11 @@ const CropperDialog = () => {
             ></Cropper>
           </Dialog.Body>
           <Dialog.Footer>
-            <Dialog.Toggler>Close</Dialog.Toggler>
+            <Dialog.Toggler> Close </Dialog.Toggler>
           </Dialog.Footer>
         </Dialog.Content>
       </Dialog>
     </>
   );
-};
-export default CropperDialog;
+}
+export default App;

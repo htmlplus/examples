@@ -1,7 +1,8 @@
 import { Card, Divider } from '@htmlplus/react';
-const DividerCard = () => {
+
+function App() {
   return (
-    <Card elevation="10">
+    <Card elevation={10}>
       Item 1<Divider></Divider>
       Item 2<Divider></Divider>
       Item 3<Divider></Divider>
@@ -9,5 +10,5 @@ const DividerCard = () => {
       Item 5
     </Card>
   );
-};
-export default DividerCard;
+}
+export default App;

@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconCustomSize = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="house" size="16"></plus-icon>
@@ -8,5 +9,5 @@ const IconCustomSize = () => {
       <plus-icon name="house" size="3rem"></plus-icon>
     </plus-stack>
   );
-};
-export default IconCustomSize;
+}
+export default App;

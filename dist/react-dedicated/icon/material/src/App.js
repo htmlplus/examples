@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@htmlplus/react';
-const IconMaterial = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="home_outline"></Icon>
@@ -7,5 +8,5 @@ const IconMaterial = () => {
       <Icon name="home_sharp"></Icon>
     </Stack>
   );
-};
-export default IconMaterial;
+}
+export default App;

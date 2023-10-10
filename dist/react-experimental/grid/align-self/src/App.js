@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridAlignSelf = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid align-items="center">
       <plus-grid-item xs="grow" align-self="start">
@@ -14,5 +15,5 @@ const GridAlignSelf = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridAlignSelf;
+}
+export default App;

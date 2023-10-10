@@ -1,18 +1,20 @@
 <template>
   <div class="container">
-    <plus-intersection @plus-change="onChange($event)">
-      <plus-counter to="1000" :play="play"></plus-counter>
+    <plus-intersection @plus-change="onPlusChange">
+      <plus-counter :to="1000" ref="counterRef"></plus-counter>
     </plus-intersection>
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
+
   import '@htmlplus/core/counter.js';
   import '@htmlplus/core/intersection.js';
-  const play = ref(false);
-  function onChange(event) {
-    play.value = event.detail.isIntersecting;
+
+  const counterRef = ref();
+  function onPlusChange(event) {
+    counterRef.value.play = event.detail.isIntersecting;
   }
 </script>
 

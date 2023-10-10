@@ -1,10 +1,8 @@
 import { Cropper } from '@htmlplus/react';
-const CropperIndicator = () => {
+
+function App() {
   return (
-    <Cropper
-      indicator
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper indicator src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
-export default CropperIndicator;
+}
+export default App;

@@ -1,35 +1,40 @@
 <template>
-  <plus-center>
-    <plus-signature
-      id="signature2"
-      background-color="lightgray"
-      @plus-end="onPlusEnd()"
-    ></plus-signature>
-  </plus-center>
-  <br />
-  <plus-stack gap="1rem">
-    <button :disabled="!canUndo" @click="onUndo()">Undo</button>
-    <button :disabled="!canRedo" @click="onRedo()">Redo</button>
-  </plus-stack>
+  <div>
+    <plus-center>
+      <plus-signature
+        background-color="lightgray"
+        @plus-end="onPlusEnd"
+        ref="signatureRef"
+      ></plus-signature>
+    </plus-center>
+    <br />
+    <plus-stack gap="1rem">
+      <button @click="onClick1" :disabled="disabled1">Undo</button>
+      <button @click="onClick2" :disabled="disabled2">Redo</button>
+    </plus-stack>
+  </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
+
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
   import '@htmlplus/core/stack.js';
-  const canUndo = ref(false);
-  const canRedo = ref(false);
-  function sync() {
-    canUndo.value = window.signature2.canUndo();
-    canRedo.value = window.signature2.canRedo();
-  }
-  function onUndo() {
-    window.signature2.undo();
+
+  const signatureRef = ref();
+  const disabled2 = ref(true);
+  const disabled1 = ref(true);
+  const sync = () => {
+    disabled1.value = !signatureRef.value.canUndo();
+    disabled2.value = !signatureRef.value.canRedo();
+  };
+  function onClick1() {
+    signatureRef.value.undo();
     sync();
   }
-  function onRedo() {
-    window.signature2.redo();
+  function onClick2() {
+    signatureRef.value.redo();
     sync();
   }
   function onPlusEnd() {

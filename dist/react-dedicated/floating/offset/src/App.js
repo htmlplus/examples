@@ -1,5 +1,6 @@
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingOffset = () => {
+
+function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
@@ -8,5 +9,5 @@ const FloatingOffset = () => {
       </Floating>
     </div>
   );
-};
-export default FloatingOffset;
+}
+export default App;

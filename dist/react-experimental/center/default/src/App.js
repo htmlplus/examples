@@ -1,5 +1,6 @@
 import '@htmlplus/core/center.js';
-const CenterDefault = () => {
+
+function App() {
   return <plus-center>All elements are centered</plus-center>;
-};
-export default CenterDefault;
+}
+export default App;

@@ -1,5 +1,5 @@
 <template>
-  <plus-progress-bar value="25"></plus-progress-bar>
+  <plus-progress-bar :value="25"></plus-progress-bar>
 </template>
 
 <script setup>

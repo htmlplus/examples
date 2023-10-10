@@ -1,5 +1,6 @@
 import { Avatar, Center, Icon } from '@htmlplus/react';
-const AvatarIcon = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -7,5 +8,5 @@ const AvatarIcon = () => {
       </Avatar>
     </Center>
   );
-};
-export default AvatarIcon;
+}
+export default App;

@@ -1,5 +1,6 @@
 import '@htmlplus/core/faker.js';
-const FakerApi = () => {
+
+function App() {
   return <plus-faker api="lorem.paragraphs"></plus-faker>;
-};
-export default FakerApi;
+}
+export default App;

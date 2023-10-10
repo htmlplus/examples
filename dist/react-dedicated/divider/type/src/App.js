@@ -1,5 +1,6 @@
 import { Divider } from '@htmlplus/react';
-const DividerType = () => {
+
+function App() {
   return (
     <>
       <Divider type="dashed"></Divider>
@@ -19,5 +20,5 @@ const DividerType = () => {
       <Divider type="solid"></Divider>
     </>
   );
-};
-export default DividerType;
+}
+export default App;

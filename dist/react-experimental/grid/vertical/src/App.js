@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridVertical = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid align-items="center" vertical>
       <plus-grid-item xs="3">
@@ -14,5 +15,5 @@ const GridVertical = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridVertical;
+}
+export default App;

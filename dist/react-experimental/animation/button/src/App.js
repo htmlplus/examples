@@ -1,13 +1,20 @@
+import { useRef } from 'react';
+
 import '@htmlplus/core/animation.js';
-import '@htmlplus/core/center.js';
 import '@htmlplus/core/animation/names/attention-seekers/tada.js';
-const AnimationButton = () => {
+import '@htmlplus/core/center.js';
+
+function App() {
+  const animationRef = useRef();
+  function onClick() {
+    animationRef.current.run = true;
+  }
   return (
     <plus-center>
-      <plus-animation id="animation1" name="tada">
-        <button onClick={() => (window.animation1.run = true)}>Click Me</button>
+      <plus-animation name="tada" ref={animationRef}>
+        <button onclick={onClick}>Click Me</button>
       </plus-animation>
     </plus-center>
   );
-};
-export default AnimationButton;
+}
+export default App;

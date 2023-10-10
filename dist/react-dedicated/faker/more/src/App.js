@@ -1,5 +1,6 @@
 import { Faker, Stack } from '@htmlplus/react';
-const FakerMore = () => {
+
+function App() {
   return (
     <Stack vertical>
       <Faker api="name.fullName"></Faker>
@@ -12,5 +13,5 @@ const FakerMore = () => {
       <Faker api="datatype.uuid"></Faker>
     </Stack>
   );
-};
-export default FakerMore;
+}
+export default App;

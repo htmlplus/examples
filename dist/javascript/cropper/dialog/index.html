@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Cropper | Dialog</title>
@@ -7,16 +7,14 @@
   </head>
   <body>
     <plus-center>
-      <plus-dialog-toggler connector="dialog-cropper">
-        Open
-      </plus-dialog-toggler>
+      <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
     </plus-center>
-    <plus-dialog id="element1" animation="fade" connector="dialog-cropper">
+    <plus-dialog id="$dialog" animation="fade" connector="dialog-cropper">
       <plus-dialog-content>
         <plus-dialog-header> Cropper </plus-dialog-header>
         <plus-dialog-body>
           <plus-cropper
-            id="element2"
+            id="$cropper"
             disabled
             src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
           ></plus-cropper>
@@ -26,21 +24,23 @@
         </plus-dialog-footer>
       </plus-dialog-content>
     </plus-dialog>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
 
-      const change = (disabled) => {
-        element2.disabled = disabled;
-      };
-      element1.addEventListener('plus-opened', () => change(false));
-      element1.addEventListener('plus-closed', () => change(true));
+      $dialog.addEventListener('plus-opened', () => {
+        $cropper.disabled = false;
+      });
+      $dialog.addEventListener('plus-closed', () => {
+        $cropper.disabled = true;
+      });
     </script>
   </body>
 </html>

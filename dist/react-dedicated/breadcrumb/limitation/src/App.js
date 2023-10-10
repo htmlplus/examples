@@ -1,5 +1,6 @@
 import { Breadcrumb, Stack } from '@htmlplus/react';
-const BreadcrumbLimitation = () => {
+
+function App() {
   return (
     <Stack gap="0.75rem" vertical>
       <Breadcrumb separator="/" max={4} offset={0}>
@@ -34,5 +35,5 @@ const BreadcrumbLimitation = () => {
       </Breadcrumb>
     </Stack>
   );
-};
-export default BreadcrumbLimitation;
+}
+export default App;

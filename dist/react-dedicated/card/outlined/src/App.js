@@ -1,5 +1,6 @@
 import { Card } from '@htmlplus/react';
-const CardOutlined = () => {
+
+function App() {
   return <Card outlined></Card>;
-};
-export default CardOutlined;
+}
+export default App;

@@ -1,5 +1,0 @@
-```html [template]
-<plus-center>
-  <plus-signature background-color="lightgray"></plus-signature>
-</plus-center>
-```

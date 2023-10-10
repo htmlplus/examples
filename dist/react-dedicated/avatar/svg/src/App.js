@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSvg = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -11,5 +12,5 @@ const AvatarSvg = () => {
       </Avatar>
     </Center>
   );
-};
-export default AvatarSvg;
+}
+export default App;

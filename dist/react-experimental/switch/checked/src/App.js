@@ -1,10 +1,11 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/switch.js';
-const SwitchChecked = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-switch checked></plus-switch>
     </plus-center>
   );
-};
-export default SwitchChecked;
+}
+export default App;

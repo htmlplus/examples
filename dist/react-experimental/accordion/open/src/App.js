@@ -1,10 +1,11 @@
 import '@htmlplus/core/accordion.js';
 import '@htmlplus/core/faker.js';
-const AccordionOpen = () => {
+
+function App() {
   return (
     <plus-accordion summary="Summary" open>
       <plus-faker></plus-faker>
     </plus-accordion>
   );
-};
-export default AccordionOpen;
+}
+export default App;

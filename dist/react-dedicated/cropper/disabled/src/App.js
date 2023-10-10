@@ -1,10 +1,8 @@
 import { Cropper } from '@htmlplus/react';
-const CropperDisabled = () => {
+
+function App() {
   return (
-    <Cropper
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      disabled
-    ></Cropper>
+    <Cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg" disabled></Cropper>
   );
-};
-export default CropperDisabled;
+}
+export default App;

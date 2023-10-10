@@ -1,6 +1,7 @@
 import '@htmlplus/core/faker.js';
 import '@htmlplus/core/stack.js';
-const FakerMore = () => {
+
+function App() {
   return (
     <plus-stack vertical>
       <plus-faker api="name.fullName"></plus-faker>
@@ -13,5 +14,5 @@ const FakerMore = () => {
       <plus-faker api="datatype.uuid"></plus-faker>
     </plus-stack>
   );
-};
-export default FakerMore;
+}
+export default App;

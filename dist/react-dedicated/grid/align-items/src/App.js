@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridAlignItems = () => {
+
+function App() {
   return (
     <Grid alignItems="center">
       <Grid.Item xs="6">
@@ -22,5 +23,5 @@ const GridAlignItems = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridAlignItems;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Accordion, Faker, Icon } from '@htmlplus/react';
-const AccordionCustomIcon = () => {
+
+function App() {
   return (
     <Accordion summary="First">
       <Icon slot="icon-expand" name="plus"></Icon>
@@ -7,5 +8,5 @@ const AccordionCustomIcon = () => {
       <Faker></Faker>
     </Accordion>
   );
-};
-export default AccordionCustomIcon;
+}
+export default App;

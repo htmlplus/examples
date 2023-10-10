@@ -1,24 +1,24 @@
 import { useState } from 'react';
+
 import { Card, Center, ClickOutside } from '@htmlplus/react';
-const ClickOutsideMenu = () => {
-  const [open, setOpen] = useState(false);
-  const onClick = () => {
-    setOpen(!open);
-  };
-  const onClickOutside = () => {
-    setOpen(false);
-  };
+
+function App() {
+  const [hidden, setHidden] = useState(true);
+  function onClick() {
+    setHidden(!hidden);
+  }
+  function onClickOutside() {
+    setHidden(true);
+  }
   return (
     <Center>
-      <ClickOutside onClickOutside={() => onClickOutside()}>
-        <button onClick={() => onClick()}>Open Menu Dropdown</button>
-        {open && (
-          <Card elevation="10" outlined>
-            <Card.Body>It will stay visible until you click outside.</Card.Body>
-          </Card>
-        )}
+      <ClickOutside onClickOutside={onClickOutside}>
+        <button onClick={onClick}>Open Menu Dropdown</button>
+        <Card elevation={10} hidden={hidden} outlined>
+          <Card.Body> It will stay visible until you click outside. </Card.Body>
+        </Card>
       </ClickOutside>
     </Center>
   );
-};
-export default ClickOutsideMenu;
+}
+export default App;

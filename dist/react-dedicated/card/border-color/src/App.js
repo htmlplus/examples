@@ -1,5 +1,6 @@
 import { Card, Grid } from '@htmlplus/react';
-const CardBorderColor = () => {
+
+function App() {
   return (
     <Grid justifyContent="evenly" gutter="md">
       <Grid.Item xs="12" sm="auto">
@@ -13,5 +14,5 @@ const CardBorderColor = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default CardBorderColor;
+}
+export default App;

@@ -1,13 +1,11 @@
 <div class="container">
-  <plus-sticky top="1rem" z-index="1">
+  <plus-sticky top="1rem" [z-index]="1">
     <plus-center>
-      <div class="status">
-        {{intersecting ? 'In Viewport' : 'Out of Viewport'}}
-      </div>
+      <div class="status" #status></div>
     </plus-center>
   </plus-sticky>
-  <plus-intersection (plus-change)="onChange($event)">
-    <plus-card elevation="10">
+  <plus-intersection (plus-change)="onPlusChange($event)">
+    <plus-card [elevation]="10">
       <plus-card-body>
         <plus-faker></plus-faker>
       </plus-card-body>

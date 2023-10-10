@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconOverrideSize = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="house" size="xs"></plus-icon>
@@ -10,5 +11,5 @@ const IconOverrideSize = () => {
       <plus-icon name="house" size="xl"></plus-icon>
     </plus-stack>
   );
-};
-export default IconOverrideSize;
+}
+export default App;

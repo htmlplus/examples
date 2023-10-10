@@ -1,6 +1,7 @@
 import '@htmlplus/core/divider.js';
 import '@htmlplus/core/faker.js';
-const DividerHorizontal = () => {
+
+function App() {
   return (
     <>
       <plus-faker></plus-faker>
@@ -10,5 +11,5 @@ const DividerHorizontal = () => {
       <plus-faker></plus-faker>
     </>
   );
-};
-export default DividerHorizontal;
+}
+export default App;

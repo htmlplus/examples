@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridOffset = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid>
       <plus-grid-item xs="3">
@@ -14,5 +15,5 @@ const GridOffset = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridOffset;
+}
+export default App;

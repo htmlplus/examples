@@ -1,5 +1,6 @@
 import '@htmlplus/core/divider.js';
-const DividerPlacement = () => {
+
+function App() {
   return (
     <>
       <plus-divider placement="center">Center</plus-divider>
@@ -9,5 +10,5 @@ const DividerPlacement = () => {
       <plus-divider placement="end">End</plus-divider>
     </>
   );
-};
-export default DividerPlacement;
+}
+export default App;

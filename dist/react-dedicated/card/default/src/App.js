@@ -1,9 +1,10 @@
 import { Card } from '@htmlplus/react';
-const CardDefault = () => {
+
+function App() {
   return (
     <div className="container">
       <Card></Card>
     </div>
   );
-};
-export default CardDefault;
+}
+export default App;

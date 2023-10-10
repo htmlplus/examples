@@ -1,10 +1,11 @@
 import '@htmlplus/core/animation.js';
 import '@htmlplus/core/center.js';
-const AnimationDefault = () => {
+
+function App() {
   return (
     <plus-center>
-      <plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
+      <plus-animation iterations={Infinity} name="fade-in" run></plus-animation>
     </plus-center>
   );
-};
-export default AnimationDefault;
+}
+export default App;

@@ -1,6 +1,7 @@
 import '@htmlplus/core/spinner.js';
 import '@htmlplus/core/stack.js';
-const SpinnerType = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-spinner type="default"></plus-spinner>
@@ -11,5 +12,5 @@ const SpinnerType = () => {
       <plus-spinner type="square"></plus-spinner>
     </plus-stack>
   );
-};
-export default SpinnerType;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Spinner, Stack } from '@htmlplus/react';
-const SpinnerColor = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Spinner className="spinner-1"></Spinner>
@@ -9,5 +10,5 @@ const SpinnerColor = () => {
       <Spinner className="spinner-5"></Spinner>
     </Stack>
   );
-};
-export default SpinnerColor;
+}
+export default App;

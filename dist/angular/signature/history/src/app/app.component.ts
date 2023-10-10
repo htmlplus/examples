@@ -1,25 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/signature.js';
 import '@htmlplus/core/stack.js';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  canUndo: boolean = false;
-  canRedo: boolean = false;
+  @ViewChild('signature')
+  signatureRef!: ElementRef;
+  disabled2 = true;
+  disabled1 = true;
   sync() {
-    this.canUndo = window.signature2.canUndo();
-    this.canRedo = window.signature2.canRedo();
+    this.disabled1 = !this.signatureRef.nativeElement.canUndo();
+    this.disabled2 = !this.signatureRef.nativeElement.canRedo();
   }
-  onUndo() {
-    window.signature2.undo();
+  onClick1() {
+    this.signatureRef.nativeElement.undo();
     this.sync();
   }
-  onRedo() {
-    window.signature2.redo();
+  onClick2() {
+    this.signatureRef.nativeElement.redo();
     this.sync();
   }
   onPlusEnd() {

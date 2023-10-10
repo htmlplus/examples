@@ -3,7 +3,7 @@
   import '@htmlplus/core/icon.js';
 </script>
 
-<plus-breadcrumb max="{2}">
+<plus-breadcrumb max={2}>
   <plus-icon slot="separator" name="arrow-right-short"></plus-icon>
   <a href="#">HTMLPLUS</a>
   <a href="#">Core</a>

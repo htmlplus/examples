@@ -1,19 +1,21 @@
 <template>
   <div class="container">
-    <plus-intersection @plus-change="onChange($event)">
-      <plus-animation name="heart-beat" :run="run"></plus-animation>
+    <plus-intersection @plus-change="onPlusChange">
+      <plus-animation name="heart-beat" ref="animationRef"></plus-animation>
     </plus-intersection>
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
+
   import '@htmlplus/core/animation.js';
-  import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
-  const run = ref(false);
-  function onChange(event) {
-    run.value = event.detail.isIntersecting;
+  import '@htmlplus/core/intersection.js';
+
+  const animationRef = ref();
+  function onPlusChange(event) {
+    animationRef.value.run = event.detail.isIntersecting;
   }
 </script>
 

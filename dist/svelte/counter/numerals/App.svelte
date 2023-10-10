@@ -1,9 +1,10 @@
 <script>
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/counter.js';
-  let numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+
+  const numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 </script>
 
 <plus-center>
-  <plus-counter numerals="{numerals}" to="1000" play></plus-counter>
+  <plus-counter to={1000} play {numerals}></plus-counter>
 </plus-center>

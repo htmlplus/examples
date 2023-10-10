@@ -1,9 +1,11 @@
 <template>
-  <plus-progress-bar value="50" class="thin"></plus-progress-bar>
-  <br />
-  <plus-progress-bar value="50"></plus-progress-bar>
-  <br />
-  <plus-progress-bar value="50" class="thick"></plus-progress-bar>
+  <div>
+    <plus-progress-bar :value="50" class="thin"></plus-progress-bar>
+    <br />
+    <plus-progress-bar :value="50"></plus-progress-bar>
+    <br />
+    <plus-progress-bar :value="50" class="thick"></plus-progress-bar>
+  </div>
 </template>
 
 <script setup>

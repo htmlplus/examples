@@ -1,10 +1,8 @@
 import { Cropper } from '@htmlplus/react';
-const CropperArea = () => {
+
+function App() {
   return (
-    <Cropper
-      area={1}
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper area={1} src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
-export default CropperArea;
+}
+export default App;

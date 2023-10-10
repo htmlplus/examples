@@ -1,9 +1,10 @@
 import { Center, Switch } from '@htmlplus/react';
-const SwitchDisabled = () => {
+
+function App() {
   return (
     <Center>
       <Switch disabled></Switch>
     </Center>
   );
-};
-export default SwitchDisabled;
+}
+export default App;

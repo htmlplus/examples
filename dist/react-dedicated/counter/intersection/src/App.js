@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useRef } from 'react';
+
 import { Counter, Intersection } from '@htmlplus/react';
-const CounterIntersection = () => {
-  const [play, setPlay] = useState(false);
-  const onChange = (event) => {
-    setPlay(event.detail.isIntersecting);
-  };
+
+function App() {
+  const counterRef = useRef();
+  function onChange(event) {
+    counterRef.current.play = event.detail.isIntersecting;
+  }
   return (
     <div className="container">
-      <Intersection onChange={(event) => onChange(event)}>
-        <Counter to="1000" play={play}></Counter>
+      <Intersection onChange={onChange}>
+        <Counter to={1000} ref={counterRef}></Counter>
       </Intersection>
     </div>
   );
-};
-export default CounterIntersection;
+}
+export default App;

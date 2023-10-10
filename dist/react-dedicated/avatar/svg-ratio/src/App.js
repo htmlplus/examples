@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSvgRatio = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -11,5 +12,5 @@ const AvatarSvgRatio = () => {
       </Avatar>
     </Center>
   );
-};
-export default AvatarSvgRatio;
+}
+export default App;

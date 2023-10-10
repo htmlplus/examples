@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Animation | Button</title>
@@ -12,15 +12,19 @@
   </head>
   <body>
     <plus-center>
-      <plus-animation id="animation1" name="tada">
-        <button onclick="animation1.run = true">Click Me</button>
+      <plus-animation id="$animation" name="tada">
+        <button id="$button">Click Me</button>
       </plus-animation>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/animation/names/attention-seekers/tada.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
 
-      import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';
+      $button.addEventListener('click', () => {
+        $animation.run = true;
+      });
     </script>
   </body>
 </html>

@@ -1,9 +1,10 @@
 import { Center, Counter } from '@htmlplus/react';
-const CounterSeparator = () => {
+
+function App() {
   return (
     <Center>
-      <Counter separator="," to="10000000" play></Counter>
+      <Counter separator="," to={10000000} play></Counter>
     </Center>
   );
-};
-export default CounterSeparator;
+}
+export default App;

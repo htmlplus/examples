@@ -1,6 +1,7 @@
 import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AvatarImage = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar>
@@ -8,5 +9,5 @@ const AvatarImage = () => {
       </plus-avatar>
     </plus-center>
   );
-};
-export default AvatarImage;
+}
+export default App;

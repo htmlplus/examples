@@ -1,7 +1,8 @@
-import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AvatarGroup = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar-group>
@@ -11,5 +12,5 @@ const AvatarGroup = () => {
       </plus-avatar-group>
     </plus-center>
   );
-};
-export default AvatarGroup;
+}
+export default App;

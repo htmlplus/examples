@@ -1,5 +1,6 @@
 import { Accordion, Faker } from '@htmlplus/react';
-const AccordionCustomized = () => {
+
+function App() {
   return (
     <div>
       <Accordion summary="First">
@@ -13,5 +14,5 @@ const AccordionCustomized = () => {
       </Accordion>
     </div>
   );
-};
-export default AccordionCustomized;
+}
+export default App;

@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridReverse = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid reverse>
       <plus-grid-item xs="2">
@@ -14,5 +15,5 @@ const GridReverse = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridReverse;
+}
+export default App;

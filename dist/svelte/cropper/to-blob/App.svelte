@@ -1,8 +1,10 @@
 <script>
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
-  function toBlob() {
-    window.cropper3.toCanvas().toBlob((blob) => {
+
+  let cropperRef;
+  function onClick() {
+    cropperRef.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
   }
@@ -11,10 +13,10 @@
 <plus-center>
   <plus-cropper
     src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    id="cropper3"
+    bind:this={cropperRef}
   ></plus-cropper>
 </plus-center>
 <br />
 <plus-center>
-  <button on:click="{() => toBlob()}">To Blob</button>
+  <button on:click={onClick}>To Blob</button>
 </plus-center>

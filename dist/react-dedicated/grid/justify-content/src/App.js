@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridJustifyContent = () => {
+
+function App() {
   return (
     <Grid justifyContent="center">
       <Grid.Item xs="2">
@@ -13,5 +14,5 @@ const GridJustifyContent = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridJustifyContent;
+}
+export default App;

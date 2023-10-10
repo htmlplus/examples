@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Counter | Numerals</title>
@@ -7,13 +7,14 @@
   </head>
   <body>
     <plus-center>
-      <plus-counter id="counter2" to="1000" play></plus-counter>
+      <plus-counter id="$counter" to="1000" play></plus-counter>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/counter.js';
 
-      counter2.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+      $counter.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     </script>
   </body>
 </html>

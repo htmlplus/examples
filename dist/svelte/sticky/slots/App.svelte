@@ -9,7 +9,7 @@
     <header slot="normal">Normal Header</header>
     <header slot="stick">Stick Header</header>
   </plus-sticky>
-  <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+  <plus-faker api="lorem.paragraphs" arguments={[20, '\n\n']}></plus-faker>
 </div>
 
 <style>

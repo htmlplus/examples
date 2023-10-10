@@ -1,8 +1,9 @@
 import '@htmlplus/core/card.js';
 import '@htmlplus/core/divider.js';
-const DividerCard = () => {
+
+function App() {
   return (
-    <plus-card elevation="10">
+    <plus-card elevation={10}>
       Item 1<plus-divider></plus-divider>
       Item 2<plus-divider></plus-divider>
       Item 3<plus-divider></plus-divider>
@@ -10,5 +11,5 @@ const DividerCard = () => {
       Item 5
     </plus-card>
   );
-};
-export default DividerCard;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Breadcrumb, Center } from '@htmlplus/react';
-const BreadcrumbDefault = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="/">
@@ -10,5 +11,5 @@ const BreadcrumbDefault = () => {
       </Breadcrumb>
     </Center>
   );
-};
-export default BreadcrumbDefault;
+}
+export default App;

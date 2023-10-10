@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Animation | Methods</title>
@@ -17,22 +17,32 @@
   </head>
   <body>
     <plus-center>
-      <plus-animation
-        id="animation4"
-        iterations="3"
-        name="fade-out"
-      ></plus-animation>
+      <plus-animation id="$animation" iterations="3" name="fade-out"></plus-animation>
     </plus-center>
     <br />
     <plus-center>
-      <button onclick="animation4.cancel()">Cancel</button>
-      <button onclick="animation4.finish()">Finish</button>
-      <button onclick="animation4.pause()">Pause</button>
-      <button onclick="animation4.play()">Play</button>
+      <button id="$cancel">Cancel</button>
+      <button id="$finish">Finish</button>
+      <button id="$pause">Pause</button>
+      <button id="$play">Play</button>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
+
+      $cancel.addEventListener('click', () => {
+        $animation.cancel();
+      });
+      $finish.addEventListener('click', () => {
+        $animation.finish();
+      });
+      $pause.addEventListener('click', () => {
+        $animation.pause();
+      });
+      $play.addEventListener('click', () => {
+        $animation.play();
+      });
     </script>
   </body>
 </html>

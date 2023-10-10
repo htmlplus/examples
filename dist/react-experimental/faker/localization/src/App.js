@@ -1,5 +1,6 @@
 import '@htmlplus/core/faker.js';
-const FakerLocalization = () => {
+
+function App() {
   return <plus-faker></plus-faker>;
-};
-export default FakerLocalization;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarGroup = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -9,5 +10,5 @@ const AvatarGroup = () => {
       </Avatar.Group>
     </Center>
   );
-};
-export default AvatarGroup;
+}
+export default App;

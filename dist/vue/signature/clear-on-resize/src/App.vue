@@ -1,9 +1,5 @@
 <template>
-  <plus-signature
-    background-color="lightgray"
-    clear-on-resize
-    resizable
-  ></plus-signature>
+  <plus-signature background-color="lightgray" clear-on-resize resizable></plus-signature>
 </template>
 
 <script setup>

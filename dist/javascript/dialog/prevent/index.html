@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Dialog | Prevent</title>
@@ -7,11 +7,9 @@
   </head>
   <body>
     <plus-center>
-      <plus-dialog-toggler connector="dialog-prevent">
-        Open
-      </plus-dialog-toggler>
+      <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
     </plus-center>
-    <plus-dialog id="element1" animation="fade" connector="dialog-prevent">
+    <plus-dialog id="$dialog" animation="fade" connector="dialog-prevent">
       <plus-dialog-content>
         <plus-dialog-header> Dialog Title </plus-dialog-header>
         <plus-dialog-body>
@@ -22,24 +20,25 @@
         </plus-dialog-footer>
       </plus-dialog-content>
     </plus-dialog>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
 
-      const ensure = (type, event) => {
-        if (window.confirm(`Are you sure you want to ${type} it?`)) return;
+      $dialog.addEventListener('plus-open', (event) => {
+        if (confirm('Are you sure you want to open it?')) return;
         event.preventDefault();
-      };
-      element1.addEventListener('plus-open', (event) => ensure('open', event));
-      element1.addEventListener('plus-close', (event) =>
-        ensure('close', event)
-      );
+      });
+      $dialog.addEventListener('plus-close', (event) => {
+        if (confirm('Are you sure you want to close it?')) return;
+        event.preventDefault();
+      });
     </script>
   </body>
 </html>

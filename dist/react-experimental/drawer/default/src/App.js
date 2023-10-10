@@ -1,24 +1,23 @@
 import '@htmlplus/core/card.js';
-import '@htmlplus/core/drawer.js';
 import '@htmlplus/core/drawer-toggler.js';
-import '@htmlplus/core/grid.js';
+import '@htmlplus/core/drawer.js';
 import '@htmlplus/core/grid-item.js';
-const DrawerDefault = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid>
       <plus-grid-item xs="auto">
         <plus-drawer animation="fade" size="200px" connector="drawer-default">
-          <plus-card>Drawer Content</plus-card>
+          <plus-card> Drawer Content </plus-card>
         </plus-drawer>
       </plus-grid-item>
       <plus-grid-item xs="grow">
         <plus-card>
-          <plus-drawer-toggler connector="drawer-default">
-            Toggle
-          </plus-drawer-toggler>
+          <plus-drawer-toggler connector="drawer-default"> Toggle </plus-drawer-toggler>
         </plus-card>
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default DrawerDefault;
+}
+export default App;

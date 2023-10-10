@@ -4,7 +4,7 @@
 </script>
 
 <plus-stack gap="0.75rem" vertical>
-  <plus-breadcrumb separator="/" max="{4}" offset="{0}">
+  <plus-breadcrumb separator="/" max={4} offset={0}>
     <a href="#">Item 1</a>
     <a href="#">Item 2</a>
     <a href="#">Item 3</a>
@@ -14,7 +14,7 @@
     <a href="#">Item 7</a>
     <a href="#">Item 8</a>
   </plus-breadcrumb>
-  <plus-breadcrumb separator="/" max="{4}" offset="{2}">
+  <plus-breadcrumb separator="/" max={4} offset={2}>
     <a href="#">Item 1</a>
     <a href="#">Item 2</a>
     <a href="#">Item 3</a>
@@ -24,7 +24,7 @@
     <a href="#">Item 7</a>
     <a href="#">Item 8</a>
   </plus-breadcrumb>
-  <plus-breadcrumb separator="/" max="{4}" offset="{-1}">
+  <plus-breadcrumb separator="/" max={4} offset={-1}>
     <a href="#">Item 1</a>
     <a href="#">Item 2</a>
     <a href="#">Item 3</a>

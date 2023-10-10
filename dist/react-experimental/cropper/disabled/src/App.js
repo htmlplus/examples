@@ -1,10 +1,11 @@
 import '@htmlplus/core/cropper.js';
-const CropperDisabled = () => {
+
+function App() {
   return (
     <plus-cropper
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       disabled
     ></plus-cropper>
   );
-};
-export default CropperDisabled;
+}
+export default App;

@@ -1,6 +1,7 @@
 import { Animation } from '@htmlplus/react';
-const AnimationKeyframes = () => {
-  let keyframes = [
+
+function App() {
+  const keyframes = [
     {
       transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
       opacity: '1'
@@ -12,13 +13,8 @@ const AnimationKeyframes = () => {
   ];
   return (
     <div className="root">
-      <Animation
-        duration="5000"
-        iterations="Infinity"
-        keyframes={keyframes}
-        run
-      ></Animation>
+      <Animation duration={5000} iterations={Infinity} run keyframes={keyframes}></Animation>
     </div>
   );
-};
-export default AnimationKeyframes;
+}
+export default App;

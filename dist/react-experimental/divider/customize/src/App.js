@@ -1,8 +1,9 @@
 import '@htmlplus/core/divider.js';
 import '@htmlplus/core/faker.js';
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const DividerCustomize = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid align-items="center" justify-content="evenly">
       <plus-grid-item xs="5">
@@ -14,5 +15,5 @@ const DividerCustomize = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default DividerCustomize;
+}
+export default App;

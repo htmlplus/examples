@@ -1,6 +1,7 @@
 import '@htmlplus/core/spinner.js';
 import '@htmlplus/core/stack.js';
-const SpinnerColor = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-spinner className="spinner-1"></plus-spinner>
@@ -10,5 +11,5 @@ const SpinnerColor = () => {
       <plus-spinner className="spinner-5"></plus-spinner>
     </plus-stack>
   );
-};
-export default SpinnerColor;
+}
+export default App;

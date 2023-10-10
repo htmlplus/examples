@@ -1,9 +1,10 @@
 import { Animation, Center } from '@htmlplus/react';
-const AnimationDefault = () => {
+
+function App() {
   return (
     <Center>
-      <Animation iterations="Infinity" name="fade-in" run></Animation>
+      <Animation iterations={Infinity} name="fade-in" run></Animation>
     </Center>
   );
-};
-export default AnimationDefault;
+}
+export default App;

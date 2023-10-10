@@ -1,5 +1,6 @@
 import '@htmlplus/core/divider.js';
-const DividerVariant = () => {
+
+function App() {
   return (
     <>
       <plus-divider variant="middle"></plus-divider>
@@ -9,5 +10,5 @@ const DividerVariant = () => {
       <plus-divider variant="full"></plus-divider>
     </>
   );
-};
-export default DividerVariant;
+}
+export default App;

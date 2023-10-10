@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridOrder = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid>
       <plus-grid-item order-xs="3" xs="grow">
@@ -14,5 +15,5 @@ const GridOrder = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridOrder;
+}
+export default App;

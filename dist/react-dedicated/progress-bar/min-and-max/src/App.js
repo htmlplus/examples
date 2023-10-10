@@ -1,11 +1,12 @@
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarMinAndMax = () => {
+
+function App() {
   return (
-    <div>
-      <ProgressBar min="0.0" max="1.0" value="0.25"></ProgressBar>
+    <>
+      <ProgressBar min={0} max={1} value={0.25}></ProgressBar>
       <br />
-      <ProgressBar min="-10" max="+10" value="0.00"></ProgressBar>
-    </div>
+      <ProgressBar min={-10} max={10} value={0}></ProgressBar>
+    </>
   );
-};
-export default ProgressBarMinAndMax;
+}
+export default App;

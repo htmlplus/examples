@@ -1,17 +1,23 @@
 <template>
-  <plus-center>
-    <plus-signature
-      id="signature1"
-      background-color="lightgray"
-    ></plus-signature>
-  </plus-center>
-  <br />
-  <plus-center>
-    <button @click="window.signature1.clear()">Clear</button>
-  </plus-center>
+  <div>
+    <plus-center>
+      <plus-signature background-color="lightgray" ref="signatureRef"></plus-signature>
+    </plus-center>
+    <br />
+    <plus-center>
+      <button @click="onClick">Clear</button>
+    </plus-center>
+  </div>
 </template>
 
 <script setup>
+  import { ref } from 'vue';
+
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
+
+  const signatureRef = ref();
+  function onClick() {
+    signatureRef.value.clear();
+  }
 </script>

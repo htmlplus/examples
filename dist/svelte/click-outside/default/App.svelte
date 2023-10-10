@@ -1,29 +1,28 @@
 <script>
-  import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
-  import '@htmlplus/core/center.js';
+  import '@htmlplus/core/card.js';
   import '@htmlplus/core/click-outside.js';
+
+  let outsideRef;
+  let insideRef;
   let inside = 0;
   let outside = 0;
   function onClick() {
     inside = inside + 1;
+    insideRef.innerHTML = `${inside}`;
   }
-  function onClickOutside() {
+  function onPlusClickOutside() {
     outside = outside + 1;
+    outsideRef.innerHTML = `${outside}`;
   }
 </script>
 
-<plus-center>
-  <plus-click-outside
-    on:click="{() => onClick()}"
-    on:plus-click-outside="{() => onClickOutside()}"
-  >
-    <plus-card elevation="10">
-      <plus-card-body>
-        <b>{inside}</b> time(s) inside clicked
-        <br />
-        <b>{outside}</b> time(s) outside clicked
-      </plus-card-body>
-    </plus-card>
-  </plus-click-outside>
-</plus-center>
+<plus-click-outside on:click={onClick} on:plus-click-outside={onPlusClickOutside}>
+  <plus-card elevation={10}>
+    <plus-card-body>
+      <b bind:this={insideRef}>0</b> time(s) inside clicked
+      <br />
+      <b bind:this={outsideRef}>0</b> time(s) outside clicked
+    </plus-card-body>
+  </plus-card>
+</plus-click-outside>

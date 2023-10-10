@@ -1,7 +1,0 @@
-```html [template]
-<plus-center>
-  <plus-avatar>
-    <plus-icon name="person"></plus-icon>
-  </plus-avatar>
-</plus-center>
-```

@@ -1,21 +1,21 @@
-import { useState } from 'react';
+import { useRef } from 'react';
+
 import { Card, Center, Faker, Intersection, Sticky } from '@htmlplus/react';
-const IntersectionDefault = () => {
-  const [intersecting, setIntersecting] = useState(false);
-  const onChange = (event) => {
-    setIntersecting(event.detail.isIntersecting);
-  };
+
+function App() {
+  const statusRef = useRef();
+  function onChange(event) {
+    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
+  }
   return (
     <div className="container">
-      <Sticky top="1rem" zIndex="1">
+      <Sticky top="1rem" zIndex={1}>
         <Center>
-          <div className="status">
-            {intersecting ? 'In Viewport' : 'Out of Viewport'}
-          </div>
+          <div className="status" ref={statusRef}></div>
         </Center>
       </Sticky>
-      <Intersection onChange={(event) => onChange(event)}>
-        <Card elevation="10">
+      <Intersection onChange={onChange}>
+        <Card elevation={10}>
           <Card.Body>
             <Faker></Faker>
           </Card.Body>
@@ -23,5 +23,5 @@ const IntersectionDefault = () => {
       </Intersection>
     </div>
   );
-};
-export default IntersectionDefault;
+}
+export default App;

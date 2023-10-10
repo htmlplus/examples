@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridOrder = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item orderXs="3" xs="grow">
@@ -13,5 +14,5 @@ const GridOrder = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridOrder;
+}
+export default App;

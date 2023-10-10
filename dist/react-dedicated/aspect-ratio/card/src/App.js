@@ -1,5 +1,6 @@
 import { AspectRatio, Card, Center } from '@htmlplus/react';
-const AspectRatioCard = () => {
+
+function App() {
   return (
     <Center>
       <Card outlined>
@@ -13,5 +14,5 @@ const AspectRatioCard = () => {
       </Card>
     </Center>
   );
-};
-export default AspectRatioCard;
+}
+export default App;

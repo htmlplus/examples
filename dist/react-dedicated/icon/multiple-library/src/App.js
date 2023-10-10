@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@htmlplus/react';
-const IconMultipleLibrary = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="carbon/user"></Icon>
@@ -7,5 +8,5 @@ const IconMultipleLibrary = () => {
       <Icon name="tabler/user"></Icon>
     </Stack>
   );
-};
-export default IconMultipleLibrary;
+}
+export default App;

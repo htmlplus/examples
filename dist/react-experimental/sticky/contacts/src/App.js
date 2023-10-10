@@ -1,5 +1,6 @@
 import '@htmlplus/core/sticky.js';
-const StickyContacts = () => {
+
+function App() {
   return (
     <div className="container">
       <plus-sticky>A</plus-sticky>
@@ -16,5 +17,5 @@ const StickyContacts = () => {
       <p>F</p>
     </div>
   );
-};
-export default StickyContacts;
+}
+export default App;

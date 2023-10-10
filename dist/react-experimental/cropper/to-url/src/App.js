@@ -1,24 +1,28 @@
+import { useRef } from 'react';
+
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
-const CropperToUrl = () => {
-  const toURL = () => {
-    window.cropper4.toCanvas().toBlob((blob) => {
-      window.open(URL.createObjectURL(blob), '_blank');
+
+function App() {
+  const cropperRef = useRef();
+  function onClick() {
+    cropperRef.current.toCanvas().toBlob((blob) => {
+      open(URL.createObjectURL(blob), '_blank');
     });
-  };
+  }
   return (
     <>
       <plus-center>
         <plus-cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper4"
+          ref={cropperRef}
         ></plus-cropper>
       </plus-center>
       <br />
       <plus-center>
-        <button onClick={() => toURL()}>To URL</button>
+        <button onclick={onClick}>To URL</button>
       </plus-center>
     </>
   );
-};
-export default CropperToUrl;
+}
+export default App;

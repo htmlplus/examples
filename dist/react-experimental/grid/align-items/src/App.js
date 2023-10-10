@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridAlignItems = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid align-items="center">
       <plus-grid-item xs="6">
@@ -23,5 +24,5 @@ const GridAlignItems = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridAlignItems;
+}
+export default App;

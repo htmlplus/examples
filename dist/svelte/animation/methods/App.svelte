@@ -1,21 +1,31 @@
 <script>
   import '@htmlplus/core/animation.js';
   import '@htmlplus/core/center.js';
+
+  let animationRef;
+  function onClick1() {
+    animationRef.cancel();
+  }
+  function onClick2() {
+    animationRef.finish();
+  }
+  function onClick3() {
+    animationRef.pause();
+  }
+  function onClick4() {
+    animationRef.play();
+  }
 </script>
 
 <plus-center>
-  <plus-animation
-    id="animation4"
-    iterations="3"
-    name="fade-out"
-  ></plus-animation>
+  <plus-animation iterations={3} name="fade-out" bind:this={animationRef}></plus-animation>
 </plus-center>
 <br />
 <plus-center>
-  <button on:click="{() => window.animation4.cancel()}">Cancel</button>
-  <button on:click="{() => window.animation4.finish()}">Finish</button>
-  <button on:click="{() => window.animation4.pause()}">Pause</button>
-  <button on:click="{() => window.animation4.play()}">Play</button>
+  <button on:click={onClick1}>Cancel</button>
+  <button on:click={onClick2}>Finish</button>
+  <button on:click={onClick3}>Pause</button>
+  <button on:click={onClick4}>Play</button>
 </plus-center>
 
 <style>

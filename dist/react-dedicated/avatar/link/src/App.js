@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarLink = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -8,5 +9,5 @@ const AvatarLink = () => {
       </Avatar>
     </Center>
   );
-};
-export default AvatarLink;
+}
+export default App;

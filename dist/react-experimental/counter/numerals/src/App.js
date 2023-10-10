@@ -1,14 +1,12 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/counter.js';
-const CounterNumerals = () => {
+
+function App() {
+  const numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
   return (
     <plus-center>
-      <plus-counter
-        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}
-        to="1000"
-        play
-      ></plus-counter>
+      <plus-counter to={1000} play numerals={numerals}></plus-counter>
     </plus-center>
   );
-};
-export default CounterNumerals;
+}
+export default App;

@@ -1,7 +1,8 @@
-import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AvatarCustomSize = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar-group>
@@ -15,5 +16,5 @@ const AvatarCustomSize = () => {
       </plus-avatar-group>
     </plus-center>
   );
-};
-export default AvatarCustomSize;
+}
+export default App;

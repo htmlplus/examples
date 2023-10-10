@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridDefault = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item xs="12" md="4">
@@ -13,5 +14,5 @@ const GridDefault = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridDefault;
+}
+export default App;

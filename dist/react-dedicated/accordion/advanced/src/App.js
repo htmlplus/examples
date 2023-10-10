@@ -1,5 +1,6 @@
 import { Accordion, Faker, Stack } from '@htmlplus/react';
-const AccordionAdvanced = () => {
+
+function App() {
   return (
     <Accordion>
       <Stack slot="summary" justifyContent="space-between">
@@ -9,5 +10,5 @@ const AccordionAdvanced = () => {
       <Faker></Faker>
     </Accordion>
   );
-};
-export default AccordionAdvanced;
+}
+export default App;

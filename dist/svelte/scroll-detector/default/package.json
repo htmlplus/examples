@@ -9,8 +9,8 @@
     "start:dev": "sirv public --dev"
   },
   "dependencies": {
-    "@htmlplus/core": "latest",
     "@faker-js/faker": "latest",
+    "@htmlplus/core": "latest",
     "svelte": "^3.32.3"
   },
   "devDependencies": {

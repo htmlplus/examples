@@ -1,5 +1,6 @@
 import { Faker } from '@htmlplus/react';
-const FakerLocalization = () => {
+
+function App() {
   return <Faker></Faker>;
-};
-export default FakerLocalization;
+}
+export default App;

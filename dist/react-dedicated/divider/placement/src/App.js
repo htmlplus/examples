@@ -1,5 +1,6 @@
 import { Divider } from '@htmlplus/react';
-const DividerPlacement = () => {
+
+function App() {
   return (
     <>
       <Divider placement="center">Center</Divider>
@@ -9,5 +10,5 @@ const DividerPlacement = () => {
       <Divider placement="end">End</Divider>
     </>
   );
-};
-export default DividerPlacement;
+}
+export default App;

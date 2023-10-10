@@ -1,9 +1,10 @@
 import { Center, Switch } from '@htmlplus/react';
-const SwitchChecked = () => {
+
+function App() {
   return (
     <Center>
       <Switch checked></Switch>
     </Center>
   );
-};
-export default SwitchChecked;
+}
+export default App;

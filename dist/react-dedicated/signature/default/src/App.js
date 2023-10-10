@@ -1,9 +1,10 @@
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDefault = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray"></Signature>
     </Center>
   );
-};
-export default SignatureDefault;
+}
+export default App;

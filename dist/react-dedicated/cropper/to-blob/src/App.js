@@ -1,23 +1,27 @@
+import { useRef } from 'react';
+
 import { Center, Cropper } from '@htmlplus/react';
-const CropperToBlob = () => {
-  const toBlob = () => {
-    window.cropper3.toCanvas().toBlob((blob) => {
+
+function App() {
+  const cropperRef = useRef();
+  function onClick() {
+    cropperRef.current.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
-  };
+  }
   return (
     <>
       <Center>
         <Cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper3"
+          ref={cropperRef}
         ></Cropper>
       </Center>
       <br />
       <Center>
-        <button onClick={() => toBlob()}>To Blob</button>
+        <button onClick={onClick}>To Blob</button>
       </Center>
     </>
   );
-};
-export default CropperToBlob;
+}
+export default App;

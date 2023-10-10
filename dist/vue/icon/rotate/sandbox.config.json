@@ -1,0 +1,9 @@
+{
+  "template": "vue3-vite-template",
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": false,
+  "view": "browser",
+  "container": {
+    "port": 3000
+  }
+}

@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridHide = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item hideSm xs="3">
@@ -13,5 +14,5 @@ const GridHide = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridHide;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridVertical = () => {
+
+function App() {
   return (
     <Grid alignItems="center" vertical>
       <Grid.Item xs="3">
@@ -13,5 +14,5 @@ const GridVertical = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridVertical;
+}
+export default App;

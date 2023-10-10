@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconFontAwesome = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="far-user"></plus-icon>
@@ -8,5 +9,5 @@ const IconFontAwesome = () => {
       <plus-icon name="fab-apple"></plus-icon>
     </plus-stack>
   );
-};
-export default IconFontAwesome;
+}
+export default App;

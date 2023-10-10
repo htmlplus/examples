@@ -1,6 +1,7 @@
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
-const CenterInline = () => {
+
+function App() {
   return (
     <plus-center>
       <button>
@@ -11,5 +12,5 @@ const CenterInline = () => {
       </button>
     </plus-center>
   );
-};
-export default CenterInline;
+}
+export default App;

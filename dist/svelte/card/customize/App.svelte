@@ -2,7 +2,7 @@
   import '@htmlplus/core/card.js';
 </script>
 
-<plus-card elevation="12" outlined></plus-card>
+<plus-card elevation={12} outlined></plus-card>
 
 <style>
   plus-card {

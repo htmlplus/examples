@@ -1,5 +1,6 @@
 import { Spinner, Stack } from '@htmlplus/react';
-const SpinnerSize = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Spinner size="sm"></Spinner>
@@ -7,5 +8,5 @@ const SpinnerSize = () => {
       <Spinner size="lg"></Spinner>
     </Stack>
   );
-};
-export default SpinnerSize;
+}
+export default App;

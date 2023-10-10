@@ -1,5 +1,6 @@
 import { Center } from '@htmlplus/react';
-const CenterDefault = () => {
+
+function App() {
   return <Center>All elements are centered</Center>;
-};
-export default CenterDefault;
+}
+export default App;

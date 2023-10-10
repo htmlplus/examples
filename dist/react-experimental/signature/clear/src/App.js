@@ -1,19 +1,23 @@
+import { useRef } from 'react';
+
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/signature.js';
-const SignatureClear = () => {
+
+function App() {
+  const signatureRef = useRef();
+  function onClick() {
+    signatureRef.current.clear();
+  }
   return (
     <>
       <plus-center>
-        <plus-signature
-          id="signature1"
-          background-color="lightgray"
-        ></plus-signature>
+        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
       </plus-center>
       <br />
       <plus-center>
-        <button onClick={() => window.signature1.clear()}>Clear</button>
+        <button onclick={onClick}>Clear</button>
       </plus-center>
     </>
   );
-};
-export default SignatureClear;
+}
+export default App;

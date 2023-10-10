@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarWildcardSize = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -9,5 +10,5 @@ const AvatarWildcardSize = () => {
       </Avatar.Group>
     </Center>
   );
-};
-export default AvatarWildcardSize;
+}
+export default App;

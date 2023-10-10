@@ -1,7 +1,8 @@
 import { Accordion, Faker } from '@htmlplus/react';
-const AccordionDisabled = () => {
+
+function App() {
   return (
-    <div>
+    <>
       <Accordion summary="First">
         <Faker></Faker>
       </Accordion>
@@ -11,7 +12,7 @@ const AccordionDisabled = () => {
       <Accordion summary="Third" disabled>
         <Faker></Faker>
       </Accordion>
-    </div>
+    </>
   );
-};
-export default AccordionDisabled;
+}
+export default App;

@@ -1,5 +1,6 @@
 import { Breadcrumb, Icon } from '@htmlplus/react';
-const BreadcrumbCustomized = () => {
+
+function App() {
   return (
     <Breadcrumb max={2}>
       <Icon slot="separator" name="arrow-right-short"></Icon>
@@ -9,5 +10,5 @@ const BreadcrumbCustomized = () => {
       <a href="#">Breadcrumb</a>
     </Breadcrumb>
   );
-};
-export default BreadcrumbCustomized;
+}
+export default App;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Signature | History</title>
@@ -7,34 +7,32 @@
   </head>
   <body>
     <plus-center>
-      <plus-signature
-        id="signature2"
-        background-color="lightgray"
-      ></plus-signature>
+      <plus-signature id="$signature" background-color="lightgray"></plus-signature>
     </plus-center>
     <br />
     <plus-stack gap="1rem">
-      <button id="undo" disabled>Undo</button>
-      <button id="redo" disabled>Redo</button>
+      <button id="$undo" disabled>Undo</button>
+      <button id="$redo" disabled>Redo</button>
     </plus-stack>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
 
       const sync = () => {
-        undo.disabled = !signature2.canUndo();
-        redo.disabled = !signature2.canRedo();
+        $undo.disabled = !$signature.canUndo();
+        $redo.disabled = !$signature.canRedo();
       };
-      undo.addEventListener('click', () => {
-        signature2.undo();
+      $undo.addEventListener('click', () => {
+        $signature.undo();
         sync();
       });
-      redo.addEventListener('click', () => {
-        signature2.redo();
+      $redo.addEventListener('click', () => {
+        $signature.redo();
         sync();
       });
-      signature2.addEventListener('plus-end', () => {
+      $signature.addEventListener('plus-end', () => {
         sync();
       });
     </script>

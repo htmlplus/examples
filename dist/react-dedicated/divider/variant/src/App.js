@@ -1,5 +1,6 @@
 import { Divider } from '@htmlplus/react';
-const DividerVariant = () => {
+
+function App() {
   return (
     <>
       <Divider variant="middle"></Divider>
@@ -9,5 +10,5 @@ const DividerVariant = () => {
       <Divider variant="full"></Divider>
     </>
   );
-};
-export default DividerVariant;
+}
+export default App;

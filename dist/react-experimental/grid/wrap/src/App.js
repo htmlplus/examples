@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridWrap = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid wrap="off">
       <plus-grid-item xs="6">
@@ -17,5 +18,5 @@ const GridWrap = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridWrap;
+}
+export default App;

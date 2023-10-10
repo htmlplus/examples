@@ -1,26 +1,25 @@
 <script>
-  import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/card.js';
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/faker.js';
   import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/sticky.js';
-  let intersecting = false;
-  function onChange(event) {
-    intersecting = event.detail.isIntersecting;
+
+  let statusRef;
+  function onPlusChange(event) {
+    statusRef.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
   }
 </script>
 
 <div class="container">
-  <plus-sticky top="1rem" z-index="1">
+  <plus-sticky top="1rem" z-index={1}>
     <plus-center>
-      <div class="status">
-        {intersecting ? 'In Viewport' : 'Out of Viewport'}
-      </div>
+      <div class="status" bind:this={statusRef}></div>
     </plus-center>
   </plus-sticky>
-  <plus-intersection on:plus-change="{event => onChange(event)}">
-    <plus-card elevation="10">
+  <plus-intersection on:plus-change={onPlusChange}>
+    <plus-card elevation={10}>
       <plus-card-body>
         <plus-faker></plus-faker>
       </plus-card-body>

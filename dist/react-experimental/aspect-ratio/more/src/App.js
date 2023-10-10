@@ -1,7 +1,8 @@
 import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const AspectRatioMore = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid>
       <plus-grid-item xs="12" sm="6">
@@ -39,5 +40,5 @@ const AspectRatioMore = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default AspectRatioMore;
+}
+export default App;

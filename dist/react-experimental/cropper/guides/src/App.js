@@ -1,10 +1,11 @@
 import '@htmlplus/core/cropper.js';
-const CropperGuides = () => {
+
+function App() {
   return (
     <plus-cropper
       guides
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
   );
-};
-export default CropperGuides;
+}
+export default App;

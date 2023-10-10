@@ -1,27 +1,31 @@
+import { useRef } from 'react';
+
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/cropper.js';
-const CropperToBase64 = () => {
-  const toBase64 = () => {
+
+function App() {
+  const cropperRef = useRef();
+  function onClick() {
     const image = new Image();
-    image.src = window.cropper2.toCanvas().toDataURL();
-    const tab = window.open('', '_blank');
+    image.src = cropperRef.current.toCanvas().toDataURL();
+    const tab = open('', '_blank');
     setTimeout(() => {
       tab.document.write(image.outerHTML);
     }, 250);
-  };
+  }
   return (
     <>
       <plus-center>
         <plus-cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper2"
+          ref={cropperRef}
         ></plus-cropper>
       </plus-center>
       <br />
       <plus-center>
-        <button onClick={() => toBase64()}>Get Base64</button>
+        <button onclick={onClick}>To Base64</button>
       </plus-center>
     </>
   );
-};
-export default CropperToBase64;
+}
+export default App;

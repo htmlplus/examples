@@ -1,5 +1,6 @@
 import { AspectRatio, Grid } from '@htmlplus/react';
-const AspectRatioMore = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item xs="12" sm="6">
@@ -37,5 +38,5 @@ const AspectRatioMore = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default AspectRatioMore;
+}
+export default App;

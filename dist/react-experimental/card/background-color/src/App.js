@@ -1,7 +1,8 @@
 import '@htmlplus/core/card.js';
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const CardBackgroundColor = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid justify-content="evenly" gutter="md">
       <plus-grid-item xs="12" sm="auto">
@@ -15,5 +16,5 @@ const CardBackgroundColor = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default CardBackgroundColor;
+}
+export default App;

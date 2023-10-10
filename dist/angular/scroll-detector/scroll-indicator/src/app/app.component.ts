@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+
 import '@htmlplus/core/faker.js';
 import '@htmlplus/core/progress-bar.js';
 import '@htmlplus/core/scroll-detector.js';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,7 @@ import '@htmlplus/core/scroll-detector.js';
 })
 export class AppComponent {
   value = 0;
-  onChange(event) {
+  onPlusChange(event) {
     this.value = event.detail.progress;
   }
 }

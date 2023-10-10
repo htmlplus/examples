@@ -1,14 +1,12 @@
 <template>
   <div class="container">
-    <plus-sticky top="1rem" z-index="1">
+    <plus-sticky top="1rem" :z-index="1">
       <plus-center>
-        <div class="status">
-          {{intersecting ? 'In Viewport' : 'Out of Viewport'}}
-        </div>
+        <div class="status" ref="statusRef"></div>
       </plus-center>
     </plus-sticky>
-    <plus-intersection @plus-change="onChange($event)">
-      <plus-card elevation="10">
+    <plus-intersection @plus-change="onPlusChange">
+      <plus-card :elevation="10">
         <plus-card-body>
           <plus-faker></plus-faker>
         </plus-card-body>
@@ -19,15 +17,17 @@
 
 <script setup>
   import { ref } from 'vue';
-  import '@htmlplus/core/card.js';
+
   import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/card.js';
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/faker.js';
   import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/sticky.js';
-  const intersecting = ref(false);
-  function onChange(event) {
-    intersecting.value = event.detail.isIntersecting;
+
+  const statusRef = ref();
+  function onPlusChange(event) {
+    statusRef.value.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
   }
 </script>
 

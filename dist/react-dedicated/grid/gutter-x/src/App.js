@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridGutterX = () => {
+
+function App() {
   return (
     <Grid gutterX="md">
       <Grid.Item xs="12" sm="6" lg="5">
@@ -22,5 +23,5 @@ const GridGutterX = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridGutterX;
+}
+export default App;

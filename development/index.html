@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <plus-accordion id="$accordion"></plus-accordion>
+
+    <plus-intersection id="$intersection">
+      <plus-animation id="$animation" name="heart-beat" run="false"></plus-animation>
+      <plus-animation id="$animation2" name="heart-beat" run="false"></plus-animation>
+    </plus-intersection>
+
+    <plus-center>
+      <button id="$cancel">Cancel</button>
+      <button id="$finish">Finish</button>
+    </plus-center>
+
+    <plus-card id="$card" elevation="12"></plus-card>
+    <input id="$input" type="range" value="12" min="1" max="24" />
+
+    <plus-signature id="$signature"> &nbsp; Menu </plus-signature>
+
+    <button id="$with">Save With Background</button>
+    <button id="$without">Save Without Background</button>
+
+    <button id="$button">Test</button>
+
+    <p id="$el1" property>1</p>
+    <p id="$el2" property>2</p>
+
+    <div id="$accordions">
+      <plus-accordion summary="First">
+        <plus-faker></plus-faker>
+      </plus-accordion>
+      <plus-accordion summary="Second">
+        <plus-faker></plus-faker>
+      </plus-accordion>
+      <plus-accordion summary="Third">
+        <plus-faker></plus-faker>
+      </plus-accordion>
+    </div>
+
+    <script type="module">
+      import 'https://cdn.skypack.dev/@faker-js/faker';
+      import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
+
+      const PI = 3.14;
+
+      let counter = 0;
+
+      let shadow = 0;
+
+      $animation2.keyframes = [{}];
+      $animation2.keyframes = [{}, {}];
+
+      $animation.keyframes = [
+        {
+          transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',
+          opacity: '1'
+        },
+        {
+          transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',
+          opacity: '0'
+        }
+      ];
+
+      $accordion.addEventListener('plus-collapse', (event) => {
+        if (confirm('Are you sure you want to collapse it?')) return;
+        event.preventDefault();
+        $animation2.keyframes = [];
+      });
+
+      const intersectionChange = function (event) {
+        $animation.run = event.detail.isIntersecting;
+      };
+
+      $intersection.addEventListener('plus-change', intersectionChange);
+
+      $cancel.addEventListener('click', () => {
+        $animation.cancel();
+        $animation.hidden = !$animation.hidden;
+      });
+
+      $finish.addEventListener('click', () => {
+        $animation.finish();
+      });
+
+      function updateCard() {
+        counter++;
+        $card.innerHTML = 'Elevation' + shadow;
+      }
+
+      $input.addEventListener('change', function (event) {
+        $card.elevation = event.target.value;
+        $card.elevation = event.target.value;
+
+        shadow = event.target.value;
+
+        updateCard();
+      });
+
+      const save = (background) => {
+        const image = new Image();
+
+        image.src = $signature.toDataURL('image/svg+xml', background);
+
+        const tab = open('', '_blank');
+
+        setTimeout(() => {
+          tab?.document.write(image.outerHTML);
+        }, 250);
+      };
+
+      $with.addEventListener('click', () => save(true));
+
+      $without.addEventListener('click', (event) => save(false, event));
+
+      function test(p1) {
+        return (event) => {
+          $el1.property = false;
+          $el2.property = false;
+        };
+      }
+
+      $button.addEventListener('click', test('p1'));
+
+      Array.from($accordions.children).forEach((accordion, index, accordions) => {
+        accordion.addEventListener('plus-expand', (event) => {
+          accordions.forEach((accordion) => {
+            accordion.open = event.target == accordion;
+          });
+        });
+      });
+
+      Array.from($accordions.children).forEach((accordion, index, accordions) => {
+        accordion.addEventListener('plus-expand', (event) => {
+          accordions.forEach((accordion) => {
+            accordion.open = event.target == accordion;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,9 +1,10 @@
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDistance = () => {
+
+function App() {
   return (
     <Center>
-      <Signature backgroundColor="lightgray" distance="10"></Signature>
+      <Signature backgroundColor="lightgray" distance={10}></Signature>
     </Center>
   );
-};
-export default SignatureDistance;
+}
+export default App;

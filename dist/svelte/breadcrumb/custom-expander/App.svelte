@@ -5,7 +5,7 @@
 </script>
 
 <plus-center>
-  <plus-breadcrumb separator="-" max="{2}" expander-text="Show more">
+  <plus-breadcrumb separator="-" max={2} expander-text="Show more">
     <plus-icon slot="expander" name="chevron-compact-right"></plus-icon>
     <a href="#">HTMLPLUS</a>
     <a href="#">Core</a>

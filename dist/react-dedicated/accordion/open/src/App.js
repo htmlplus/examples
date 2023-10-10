@@ -1,9 +1,10 @@
 import { Accordion, Faker } from '@htmlplus/react';
-const AccordionOpen = () => {
+
+function App() {
   return (
     <Accordion summary="Summary" open>
       <Faker></Faker>
     </Accordion>
   );
-};
-export default AccordionOpen;
+}
+export default App;

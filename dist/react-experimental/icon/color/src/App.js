@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconColor = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="house" color="#08DFC8"></plus-icon>
@@ -10,5 +11,5 @@ const IconColor = () => {
       <plus-icon name="house" color="#9073C1"></plus-icon>
     </plus-stack>
   );
-};
-export default IconColor;
+}
+export default App;

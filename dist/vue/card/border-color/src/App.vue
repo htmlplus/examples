@@ -14,8 +14,8 @@
 
 <script setup>
   import '@htmlplus/core/card.js';
-  import '@htmlplus/core/grid.js';
   import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/grid.js';
 </script>
 
 <style scoped>

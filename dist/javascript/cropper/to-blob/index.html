@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Cropper | To Blob</title>
@@ -9,19 +9,20 @@
     <plus-center>
       <plus-cropper
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        id="cropper3"
+        id="$cropper"
       ></plus-cropper>
     </plus-center>
     <br />
     <plus-center>
-      <button id="button3">To URL</button>
+      <button id="$button">To Blob</button>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';
 
-      button3.addEventListener('click', () => {
-        cropper3.toCanvas().toBlob((blob) => {
+      $button.addEventListener('click', () => {
+        $cropper.toCanvas().toBlob((blob) => {
           console.log(blob);
         });
       });

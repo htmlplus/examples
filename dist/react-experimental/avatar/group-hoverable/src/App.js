@@ -1,7 +1,8 @@
-import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
 import '@htmlplus/core/center.js';
-const AvatarGroupHoverable = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-avatar-group stacked hoverable>
@@ -17,9 +18,9 @@ const AvatarGroupHoverable = () => {
         <plus-avatar shape="circle">
           <img src="https://picsum.photos/id/669/90/90" />
         </plus-avatar>
-        <plus-avatar shape="circle">+2</plus-avatar>
+        <plus-avatar shape="circle"> +2 </plus-avatar>
       </plus-avatar-group>
     </plus-center>
   );
-};
-export default AvatarGroupHoverable;
+}
+export default App;

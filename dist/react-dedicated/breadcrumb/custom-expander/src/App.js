@@ -1,5 +1,6 @@
 import { Breadcrumb, Center, Icon } from '@htmlplus/react';
-const BreadcrumbCustomExpander = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="-" max={2} expanderText="Show more">
@@ -11,5 +12,5 @@ const BreadcrumbCustomExpander = () => {
       </Breadcrumb>
     </Center>
   );
-};
-export default BreadcrumbCustomExpander;
+}
+export default App;

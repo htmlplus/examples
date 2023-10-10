@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridOffset = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item xs="3">
@@ -13,5 +14,5 @@ const GridOffset = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridOffset;
+}
+export default App;

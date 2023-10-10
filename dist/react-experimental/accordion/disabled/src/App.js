@@ -1,8 +1,9 @@
 import '@htmlplus/core/accordion.js';
 import '@htmlplus/core/faker.js';
-const AccordionDisabled = () => {
+
+function App() {
   return (
-    <div>
+    <>
       <plus-accordion summary="First">
         <plus-faker></plus-faker>
       </plus-accordion>
@@ -12,7 +13,7 @@ const AccordionDisabled = () => {
       <plus-accordion summary="Third" disabled>
         <plus-faker></plus-faker>
       </plus-accordion>
-    </div>
+    </>
   );
-};
-export default AccordionDisabled;
+}
+export default App;

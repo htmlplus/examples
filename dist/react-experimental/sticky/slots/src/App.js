@@ -1,6 +1,7 @@
 import '@htmlplus/core/faker.js';
 import '@htmlplus/core/sticky.js';
-const StickySlots = () => {
+
+function App() {
   return (
     <div className="container">
       <br />
@@ -8,8 +9,8 @@ const StickySlots = () => {
         <header slot="normal">Normal Header</header>
         <header slot="stick">Stick Header</header>
       </plus-sticky>
-      <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+      <plus-faker api="lorem.paragraphs" arguments={[20, '\n\n']}></plus-faker>
     </div>
   );
-};
-export default StickySlots;
+}
+export default App;

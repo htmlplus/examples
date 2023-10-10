@@ -1,5 +1,6 @@
 import { Avatar, Stack } from '@htmlplus/react';
-const AvatarSlots = () => {
+
+function App() {
   return (
     <Stack gap="8rem">
       <Avatar size="xxl">
@@ -26,5 +27,5 @@ const AvatarSlots = () => {
       </Avatar>
     </Stack>
   );
-};
-export default AvatarSlots;
+}
+export default App;

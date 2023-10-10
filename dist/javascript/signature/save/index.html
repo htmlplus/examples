@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Signature | Save</title>
@@ -7,16 +7,14 @@
   </head>
   <body>
     <plus-center>
-      <plus-signature
-        id="signature3"
-        background-color="lightgray"
-      ></plus-signature>
+      <plus-signature id="$signature" background-color="lightgray"></plus-signature>
     </plus-center>
     <br />
     <plus-stack gap="1rem">
-      <button id="save1">Save With Background</button>
-      <button id="save2">Save Without Background</button>
+      <button id="$with">Save With Background</button>
+      <button id="$without">Save Without Background</button>
     </plus-stack>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
@@ -24,17 +22,14 @@
 
       const save = (background) => {
         const image = new Image();
-
-        image.src = window.signature3.toDataURL('image/svg+xml', background);
-
-        const tab = window.open('', '_blank');
-
+        image.src = $signature.toDataURL('image/svg+xml', background);
+        const tab = open('', '_blank');
         setTimeout(() => {
           tab.document.write(image.outerHTML);
         }, 250);
       };
-      save1.addEventListener('click', () => save(true));
-      save2.addEventListener('click', () => save(false));
+      $with.addEventListener('click', () => save(true));
+      $without.addEventListener('click', () => save(false));
     </script>
   </body>
 </html>

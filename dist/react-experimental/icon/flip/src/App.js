@@ -1,6 +1,7 @@
 import '@htmlplus/core/icon.js';
 import '@htmlplus/core/stack.js';
-const IconFlip = () => {
+
+function App() {
   return (
     <plus-stack gap="2rem">
       <plus-icon name="house"></plus-icon>
@@ -9,5 +10,5 @@ const IconFlip = () => {
       <plus-icon name="house" flip="both"></plus-icon>
     </plus-stack>
   );
-};
-export default IconFlip;
+}
+export default App;

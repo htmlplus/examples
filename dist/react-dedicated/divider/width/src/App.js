@@ -1,5 +1,6 @@
 import { Divider } from '@htmlplus/react';
-const DividerWidth = () => {
+
+function App() {
   return (
     <>
       <Divider width="xs"></Divider>
@@ -13,5 +14,5 @@ const DividerWidth = () => {
       <Divider width="xl"></Divider>
     </>
   );
-};
-export default DividerWidth;
+}
+export default App;

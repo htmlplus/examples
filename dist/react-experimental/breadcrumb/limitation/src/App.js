@@ -1,6 +1,7 @@
 import '@htmlplus/core/breadcrumb.js';
 import '@htmlplus/core/stack.js';
-const BreadcrumbLimitation = () => {
+
+function App() {
   return (
     <plus-stack gap="0.75rem" vertical>
       <plus-breadcrumb separator="/" max={4} offset={0}>
@@ -35,5 +36,5 @@ const BreadcrumbLimitation = () => {
       </plus-breadcrumb>
     </plus-stack>
   );
-};
-export default BreadcrumbLimitation;
+}
+export default App;

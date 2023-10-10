@@ -1,5 +1,6 @@
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSize = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -13,5 +14,5 @@ const AvatarSize = () => {
       </Avatar.Group>
     </Center>
   );
-};
-export default AvatarSize;
+}
+export default App;

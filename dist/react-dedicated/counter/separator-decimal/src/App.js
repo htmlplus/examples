@@ -1,9 +1,10 @@
 import { Center, Counter } from '@htmlplus/react';
-const CounterSeparatorDecimal = () => {
+
+function App() {
   return (
     <Center>
-      <Counter decimal="." decimals="2" separator="," to="1000" play></Counter>
+      <Counter decimal="." decimals={2} separator="," to={1000} play></Counter>
     </Center>
   );
-};
-export default CounterSeparatorDecimal;
+}
+export default App;

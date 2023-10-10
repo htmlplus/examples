@@ -1,12 +1,13 @@
 import { Center, Switch } from '@htmlplus/react';
-const SwitchEvent = () => {
-  const onChange = (event) => {
-    window.alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
-  };
+
+function App() {
+  function onChange(event) {
+    alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
+  }
   return (
     <Center>
-      <Switch onChange={(event) => onChange(event)}></Switch>
+      <Switch onChange={onChange}></Switch>
     </Center>
   );
-};
-export default SwitchEvent;
+}
+export default App;

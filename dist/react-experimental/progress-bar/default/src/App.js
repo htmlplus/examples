@@ -1,5 +1,6 @@
 import '@htmlplus/core/progress-bar.js';
-const ProgressBarDefault = () => {
+
+function App() {
   return <plus-progress-bar></plus-progress-bar>;
-};
-export default ProgressBarDefault;
+}
+export default App;

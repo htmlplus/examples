@@ -1,9 +1,10 @@
 import { Center, Icon } from '@htmlplus/react';
-const IconDefault = () => {
+
+function App() {
   return (
     <Center>
       <Icon name="house"></Icon>
     </Center>
   );
-};
-export default IconDefault;
+}
+export default App;

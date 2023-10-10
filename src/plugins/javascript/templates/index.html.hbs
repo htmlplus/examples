@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{#if style}}
+    <style>
+      {{{style.content}}}
+    </style>
+    {{/if}}
+  </head>
+  <body>
+    {{{template.content}}}
+    
+    {{#if config}}
+    <script type="module">
+      {{{config.content}}}
+    </script>
+    {{/if}}
+
+    {{#if script}}
+    <script type="module">
+      {{{script.content}}}
+    </script>
+    {{/if}}
+  </body>
+</html>

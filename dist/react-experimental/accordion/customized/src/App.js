@@ -1,6 +1,7 @@
 import '@htmlplus/core/accordion.js';
 import '@htmlplus/core/faker.js';
-const AccordionCustomized = () => {
+
+function App() {
   return (
     <div>
       <plus-accordion summary="First">
@@ -14,5 +15,5 @@ const AccordionCustomized = () => {
       </plus-accordion>
     </div>
   );
-};
-export default AccordionCustomized;
+}
+export default App;

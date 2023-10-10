@@ -1,5 +1,6 @@
 import { Divider, Faker, Grid } from '@htmlplus/react';
-const DividerVertical = () => {
+
+function App() {
   return (
     <Grid alignItems="center" justifyContent="evenly">
       <Grid.Item xs="5">
@@ -11,5 +12,5 @@ const DividerVertical = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default DividerVertical;
+}
+export default App;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Browse | Default</title>
@@ -19,17 +19,15 @@
     </style>
   </head>
   <body>
-    <plus-browse id="element" droppable>
-      Click or Drag & Drop a file(s) here
-    </plus-browse>
+    <plus-browse id="$browse" droppable> Click or Drag & Drop a file(s) here </plus-browse>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/browse.js';
 
-      const onChange = (event) => {
+      $browse.addEventListener('plus-change', (event) => {
         const name = event.detail.files[0].file.name;
         alert(`File '${name}' selected.`);
-      };
-      element.addEventListener('plus-change', onChange);
+      });
     </script>
   </body>
 </html>

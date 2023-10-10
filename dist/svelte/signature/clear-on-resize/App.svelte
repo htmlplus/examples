@@ -2,11 +2,7 @@
   import '@htmlplus/core/signature.js';
 </script>
 
-<plus-signature
-  background-color="lightgray"
-  clear-on-resize
-  resizable
-></plus-signature>
+<plus-signature background-color="lightgray" clear-on-resize resizable></plus-signature>
 
 <style>
   plus-signature {

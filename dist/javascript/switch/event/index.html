@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Switch | Event</title>
@@ -7,16 +7,15 @@
   </head>
   <body>
     <plus-center>
-      <plus-switch id="element1"></plus-switch>
+      <plus-switch id="$switch"></plus-switch>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';
 
-      element1.addEventListener('plus-change', (event) => {
-        window.alert(
-          `Will be changed to ${event.target.checked ? 'On' : 'Off'}`
-        );
+      $switch.addEventListener('plus-change', (event) => {
+        alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
       });
     </script>
   </body>

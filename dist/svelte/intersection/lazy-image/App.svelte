@@ -2,7 +2,8 @@
   import '@htmlplus/core/card.js';
   import '@htmlplus/core/intersection.js';
   import '@htmlplus/core/spinner.js';
-  function onChange(event) {
+
+  function onPlusChange(event) {
     if (!event.detail.isIntersecting) return;
     setTimeout(() => {
       const image = event.target.querySelector('img');
@@ -16,8 +17,8 @@
 </script>
 
 <div class="container">
-  <plus-intersection once on:plus-change="{event => onChange(event)}">
-    <plus-card elevation="10">
+  <plus-intersection once on:plus-change={onPlusChange}>
+    <plus-card elevation={10}>
       <plus-spinner></plus-spinner>
       <img alt="Lazy Image" hidden data-src="https://placekitten.com/200/200" />
     </plus-card>

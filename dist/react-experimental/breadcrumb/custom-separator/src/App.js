@@ -1,7 +1,8 @@
 import '@htmlplus/core/breadcrumb.js';
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/icon.js';
-const BreadcrumbCustomSeparator = () => {
+
+function App() {
   return (
     <plus-center>
       <plus-breadcrumb>
@@ -14,5 +15,5 @@ const BreadcrumbCustomSeparator = () => {
       </plus-breadcrumb>
     </plus-center>
   );
-};
-export default BreadcrumbCustomSeparator;
+}
+export default App;

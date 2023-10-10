@@ -1,5 +1,6 @@
 import { Cropper, Grid } from '@htmlplus/react';
-const CropperShape = () => {
+
+function App() {
   return (
     <Grid gutter="md">
       <Grid.Item xs="12" sm="6">
@@ -27,5 +28,5 @@ const CropperShape = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default CropperShape;
+}
+export default App;

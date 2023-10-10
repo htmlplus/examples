@@ -1,21 +1,21 @@
 <template>
   <div class="container">
-    <div class="scrollable" id="reference1">
-      <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+    <div class="scrollable reference1">
+      <plus-faker api="lorem.paragraphs" :arguments="[20, '\n\n']"></plus-faker>
     </div>
     <plus-scroll-detector
-      reference="#reference1"
+      reference=".reference1"
       vertical
-      @plus-change="onChange($event)"
-    >
-    </plus-scroll-detector>
+      @plus-change="onPlusChange"
+    ></plus-scroll-detector>
   </div>
 </template>
 
 <script setup>
   import '@htmlplus/core/faker.js';
   import '@htmlplus/core/scroll-detector.js';
-  function onChange(event) {
+
+  function onPlusChange(event) {
     console.log(event.detail);
   }
 </script>

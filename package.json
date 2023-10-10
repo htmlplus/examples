@@ -4,19 +4,31 @@
   "license": "MIT",
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
   "description": "Collection of examples for @htmlplus/core.",
-  "type": "module",
   "scripts": {
-    "build": "node scripts/build.js",
     "clean": "rimraf dist",
-    "development:build:watch": "nodemon scripts/build.js --ignore ./src/**/*.*"
+    "format": "prettier --write .",
+    "generate": "ts-node src/generate.ts",
+    "generate:watch": "nodemon src/generate.ts"
   },
   "devDependencies": {
-    "@babel/types": "^7.20.2",
-    "@htmlplus/element": "^0.7.6",
+    "@babel/generator": "^7.22.9",
+    "@babel/traverse": "^7.22.8",
+    "@babel/types": "^7.22.5",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/babel__generator": "^7.6.4",
+    "@types/babel__traverse": "^7.20.1",
+    "@types/prettier": "^3.0.0",
+    "@vue/compiler-sfc": "^3.3.4",
     "change-case": "^4.1.2",
-    "fast-glob": "^3.2.12",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.8.0",
-    "rimraf": "^3.0.2"
+    "deepmerge": "^4.3.1",
+    "fast-glob": "^3.3.1",
+    "handlebars": "^4.7.7",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
   }
 }

@@ -4,5 +4,5 @@
 </script>
 
 <plus-center>
-  <plus-format-bytes value="1000"></plus-format-bytes>
+  <plus-format-bytes value={1000}></plus-format-bytes>
 </plus-center>

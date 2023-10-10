@@ -1,5 +1,5 @@
 <div class="container">
-  <plus-intersection (plus-change)="onChange($event)">
-    <plus-animation name="heart-beat" [run]="run"></plus-animation>
+  <plus-intersection (plus-change)="onPlusChange($event)">
+    <plus-animation name="heart-beat" #animation></plus-animation>
   </plus-intersection>
 </div>

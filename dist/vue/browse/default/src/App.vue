@@ -1,12 +1,13 @@
 <template>
-  <plus-browse droppable @plus-change="onChange($event)">
+  <plus-browse droppable @plus-change="onPlusChange">
     Click or Drag & Drop a file(s) here
   </plus-browse>
 </template>
 
 <script setup>
   import '@htmlplus/core/browse.js';
-  function onChange(event) {
+
+  function onPlusChange(event) {
     const name = event.detail.files[0].file.name;
     alert(`File '${name}' selected.`);
   }

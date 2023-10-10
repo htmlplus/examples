@@ -1,5 +1,6 @@
 import '@htmlplus/core/faker.js';
-const FakerDefault = () => {
+
+function App() {
   return <plus-faker></plus-faker>;
-};
-export default FakerDefault;
+}
+export default App;

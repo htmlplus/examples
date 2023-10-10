@@ -6,8 +6,8 @@
     "start": "react-scripts start"
   },
   "dependencies": {
-    "@htmlplus/core": "latest",
     "@faker-js/faker": "latest",
+    "@htmlplus/core": "latest",
     "react": "experimental",
     "react-dom": "experimental",
     "react-scripts": "5.0.0"

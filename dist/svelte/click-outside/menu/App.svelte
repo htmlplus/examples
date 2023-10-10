@@ -1,26 +1,24 @@
 <script>
-  import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/card.js';
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/click-outside.js';
-  let open = false;
+
+  let hidden = true;
   function onClick() {
-    open = !open;
+    hidden = !hidden;
   }
-  function onClickOutside() {
-    open = false;
+  function onPlusClickOutside() {
+    hidden = true;
   }
 </script>
 
 <plus-center>
-  <plus-click-outside on:plus-click-outside="{() => onClickOutside()}">
-    <button on:click="{() => onClick()}">Open Menu Dropdown</button>
-    {#if open}<plus-card elevation="10" outlined>
-      <plus-card-body>
-        It will stay visible until you click outside.
-      </plus-card-body>
+  <plus-click-outside on:plus-click-outside={onPlusClickOutside}>
+    <button on:click={onClick}>Open Menu Dropdown</button>
+    <plus-card elevation={10} {hidden} outlined>
+      <plus-card-body> It will stay visible until you click outside. </plus-card-body>
     </plus-card>
-    {/if}
   </plus-click-outside>
 </plus-center>
 

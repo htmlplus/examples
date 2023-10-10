@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Signature | Clear</title>
@@ -7,18 +7,20 @@
   </head>
   <body>
     <plus-center>
-      <plus-signature
-        id="signature1"
-        background-color="lightgray"
-      ></plus-signature>
+      <plus-signature id="$signature" background-color="lightgray"></plus-signature>
     </plus-center>
     <br />
     <plus-center>
-      <button onclick="signature1.clear()">Clear</button>
+      <button id="$button">Clear</button>
     </plus-center>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
+
+      $button.addEventListener('click', () => {
+        $signature.clear();
+      });
     </script>
   </body>
 </html>

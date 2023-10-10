@@ -1,6 +1,6 @@
 <template>
   <plus-center>
-    <plus-animation iterations="Infinity" name="fade-in" run></plus-animation>
+    <plus-animation :iterations="Infinity" name="fade-in" run></plus-animation>
   </plus-center>
 </template>
 

@@ -1,5 +1,6 @@
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarDefault = () => {
+
+function App() {
   return <ProgressBar></ProgressBar>;
-};
-export default ProgressBarDefault;
+}
+export default App;

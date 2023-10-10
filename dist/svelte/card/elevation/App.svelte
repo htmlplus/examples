@@ -1,20 +1,15 @@
 <script>
   import '@htmlplus/core/card.js';
-  let elevation = '12';
+
+  let elevation = 12;
   function onChange(event) {
     elevation = event.target.value;
   }
 </script>
 
-<plus-card elevation="{elevation}"></plus-card>
+<plus-card {elevation}></plus-card>
 <br />
-<input
-  type="range"
-  value="{elevation}"
-  min="1"
-  max="24"
-  on:change="{event => onChange(event)}"
-/>
+<input type="range" value="12" min="1" max="24" on:change={onChange} />
 
 <style>
   plus-card {

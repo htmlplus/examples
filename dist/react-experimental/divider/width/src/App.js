@@ -1,5 +1,6 @@
 import '@htmlplus/core/divider.js';
-const DividerWidth = () => {
+
+function App() {
   return (
     <>
       <plus-divider width="xs"></plus-divider>
@@ -13,5 +14,5 @@ const DividerWidth = () => {
       <plus-divider width="xl"></plus-divider>
     </>
   );
-};
-export default DividerWidth;
+}
+export default App;

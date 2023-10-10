@@ -1,22 +1,21 @@
 /*
-* THIS FILE WILL NOT AFECT THE SANDBOX BUT 
-* WILL AFECT THE DEPLOYMENT AND DOWNLOAD
-*/
-
-import svelte from "rollup-plugin-svelte";
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
+ * THIS FILE WILL NOT AFECT THE SANDBOX BUT
+ * WILL AFECT THE DEPLOYMENT AND DOWNLOAD
+ */
+import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
+import svelte from 'rollup-plugin-svelte';
+import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  input: "index.js",
+  input: 'index.js',
   output: {
     sourcemap: true,
-    format: "iife",
-    name: "app",
-    file: "public/bundle.js"
+    format: 'iife',
+    name: 'app',
+    file: 'public/bundle.js'
   },
   plugins: [
     svelte({
@@ -24,8 +23,8 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file — better for performance
-      css: css => {
-        css.write("public/bundle.css");
+      css: (css) => {
+        css.write('public/bundle.css');
       }
     }),
 

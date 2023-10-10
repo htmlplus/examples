@@ -1,9 +1,10 @@
 import { Center, Counter } from '@htmlplus/react';
-const CounterRange = () => {
+
+function App() {
   return (
     <Center>
-      <Counter from="10" to="1000" play></Counter>
+      <Counter from={10} to={1000} play></Counter>
     </Center>
   );
-};
-export default CounterRange;
+}
+export default App;

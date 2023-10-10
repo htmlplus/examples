@@ -1,5 +1,6 @@
 import '@htmlplus/core/divider.js';
-const DividerType = () => {
+
+function App() {
   return (
     <>
       <plus-divider type="dashed"></plus-divider>
@@ -19,5 +20,5 @@ const DividerType = () => {
       <plus-divider type="solid"></plus-divider>
     </>
   );
-};
-export default DividerType;
+}
+export default App;

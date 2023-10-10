@@ -1,21 +1,27 @@
 <template>
-  <plus-center>
-    <plus-cropper
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      id="cropper3"
-    ></plus-cropper>
-  </plus-center>
-  <br />
-  <plus-center>
-    <button @click="toBlob()">To Blob</button>
-  </plus-center>
+  <div>
+    <plus-center>
+      <plus-cropper
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+        ref="cropperRef"
+      ></plus-cropper>
+    </plus-center>
+    <br />
+    <plus-center>
+      <button @click="onClick">To Blob</button>
+    </plus-center>
+  </div>
 </template>
 
 <script setup>
+  import { ref } from 'vue';
+
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
-  function toBlob() {
-    window.cropper3.toCanvas().toBlob((blob) => {
+
+  const cropperRef = ref();
+  function onClick() {
+    cropperRef.value.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
   }

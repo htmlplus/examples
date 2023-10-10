@@ -1,7 +1,7 @@
 <script>
   import '@htmlplus/core/aspect-ratio.js';
-  import '@htmlplus/core/card.js';
   import '@htmlplus/core/card-body.js';
+  import '@htmlplus/core/card.js';
 </script>
 
 <plus-aspect-ratio value="16/9">

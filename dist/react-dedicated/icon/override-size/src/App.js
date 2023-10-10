@@ -1,5 +1,6 @@
 import { Icon, Stack } from '@htmlplus/react';
-const IconOverrideSize = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="house" size="xs"></Icon>
@@ -9,5 +10,5 @@ const IconOverrideSize = () => {
       <Icon name="house" size="xl"></Icon>
     </Stack>
   );
-};
-export default IconOverrideSize;
+}
+export default App;

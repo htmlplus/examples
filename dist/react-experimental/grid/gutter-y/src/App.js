@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridGutterY = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <plus-grid gutter-y="md">
       <plus-grid-item xs="12" sm="6" lg="5">
@@ -23,5 +24,5 @@ const GridGutterY = () => {
       </plus-grid-item>
     </plus-grid>
   );
-};
-export default GridGutterY;
+}
+export default App;

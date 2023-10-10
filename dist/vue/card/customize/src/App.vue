@@ -1,5 +1,5 @@
 <template>
-  <plus-card elevation="12" outlined></plus-card>
+  <plus-card :elevation="12" outlined></plus-card>
 </template>
 
 <script setup>

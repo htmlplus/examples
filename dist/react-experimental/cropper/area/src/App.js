@@ -1,10 +1,11 @@
 import '@htmlplus/core/cropper.js';
-const CropperArea = () => {
+
+function App() {
   return (
     <plus-cropper
       area={1}
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
   );
-};
-export default CropperArea;
+}
+export default App;

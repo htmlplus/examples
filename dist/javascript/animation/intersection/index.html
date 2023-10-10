@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Animation | Intersection</title>
@@ -26,18 +26,18 @@
   </head>
   <body>
     <div class="container">
-      <plus-intersection id="intersection2">
-        <plus-animation id="animation2" name="heart-beat"></plus-animation>
+      <plus-intersection id="$intersection">
+        <plus-animation id="$animation" name="heart-beat"></plus-animation>
       </plus-intersection>
     </div>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';
+      import 'https://cdn.skypack.dev/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';
 
-      import 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
-
-      intersection2.addEventListener('plus-change', (event) => {
-        animation2.run = event.detail.isIntersecting;
+      $intersection.addEventListener('plus-change', (event) => {
+        $animation.run = event.detail.isIntersecting;
       });
     </script>
   </body>

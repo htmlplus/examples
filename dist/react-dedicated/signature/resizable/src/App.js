@@ -1,5 +1,6 @@
 import { Signature } from '@htmlplus/react';
-const SignatureResizable = () => {
+
+function App() {
   return <Signature backgroundColor="lightgray" resizable></Signature>;
-};
-export default SignatureResizable;
+}
+export default App;

@@ -1,9 +1,11 @@
 <script>
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/cropper.js';
-  function toURL() {
-    window.cropper4.toCanvas().toBlob((blob) => {
-      window.open(URL.createObjectURL(blob), '_blank');
+
+  let cropperRef;
+  function onClick() {
+    cropperRef.toCanvas().toBlob((blob) => {
+      open(URL.createObjectURL(blob), '_blank');
     });
   }
 </script>
@@ -11,10 +13,10 @@
 <plus-center>
   <plus-cropper
     src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    id="cropper4"
+    bind:this={cropperRef}
   ></plus-cropper>
 </plus-center>
 <br />
 <plus-center>
-  <button on:click="{() => toURL()}">To URL</button>
+  <button on:click={onClick}>To URL</button>
 </plus-center>

@@ -1,5 +1,6 @@
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingDefault = () => {
+
+function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
@@ -8,5 +9,5 @@ const FloatingDefault = () => {
       </Floating>
     </div>
   );
-};
-export default FloatingDefault;
+}
+export default App;

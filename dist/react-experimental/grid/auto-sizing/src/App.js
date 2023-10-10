@@ -1,6 +1,7 @@
-import '@htmlplus/core/grid.js';
 import '@htmlplus/core/grid-item.js';
-const GridAutoSizing = () => {
+import '@htmlplus/core/grid.js';
+
+function App() {
   return (
     <>
       <plus-grid>
@@ -27,5 +28,5 @@ const GridAutoSizing = () => {
       </plus-grid>
     </>
   );
-};
-export default GridAutoSizing;
+}
+export default App;

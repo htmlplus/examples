@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Scroll Detector | Scroll Indicator</title>
@@ -17,27 +17,20 @@
   </head>
   <body>
     <div class="container">
-      <plus-progress-bar id="progressbar2"></plus-progress-bar>
-      <div class="scrollable" id="reference2">
-        <plus-faker
-          api="lorem.paragraphs"
-          arguments='[20, "\n\n"]'
-          seed="0"
-        ></plus-faker>
+      <plus-progress-bar id="$progressbar" value="0"></plus-progress-bar>
+      <div class="scrollable reference2">
+        <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]' seed="0"></plus-faker>
       </div>
-      <plus-scroll-detector
-        id="scroll2"
-        reference="#reference2"
-        vertical
-      ></plus-scroll-detector>
+      <plus-scroll-detector id="$detector" reference=".reference2" vertical></plus-scroll-detector>
     </div>
+
     <script type="module">
       import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';
       import 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';
 
-      scroll2.addEventListener('plus-change', (event) => {
-        progressbar2.value = event.detail.progress;
+      $detector.addEventListener('plus-change', (event) => {
+        $progressbar.value = event.detail.progress;
       });
     </script>
   </body>

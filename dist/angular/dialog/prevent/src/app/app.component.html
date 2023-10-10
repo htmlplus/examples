@@ -4,16 +4,16 @@
 <plus-dialog
   animation="fade"
   connector="dialog-prevent"
-  (plus-open)="ensure('open', $event)"
-  (plus-close)="ensure('close', $event)"
+  (plus-open)="onPlusOpen($event)"
+  (plus-close)="onPlusClose($event)"
 >
   <plus-dialog-content>
-    <plus-dialog-header>Dialog Title</plus-dialog-header>
+    <plus-dialog-header> Dialog Title </plus-dialog-header>
     <plus-dialog-body>
       <plus-faker></plus-faker>
     </plus-dialog-body>
     <plus-dialog-footer>
-      <plus-dialog-toggler>Close</plus-dialog-toggler>
+      <plus-dialog-toggler> Close </plus-dialog-toggler>
     </plus-dialog-footer>
   </plus-dialog-content>
 </plus-dialog>

@@ -1,5 +1,6 @@
 import { Grid } from '@htmlplus/react';
-const GridReverse = () => {
+
+function App() {
   return (
     <Grid reverse>
       <Grid.Item xs="2">
@@ -13,5 +14,5 @@ const GridReverse = () => {
       </Grid.Item>
     </Grid>
   );
-};
-export default GridReverse;
+}
+export default App;

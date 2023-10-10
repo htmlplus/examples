@@ -7,9 +7,7 @@
     </plus-grid-item>
     <plus-grid-item xs="grow">
       <plus-card>
-        <plus-drawer-toggler connector="drawer-default">
-          Toggle
-        </plus-drawer-toggler>
+        <plus-drawer-toggler connector="drawer-default"> Toggle </plus-drawer-toggler>
       </plus-card>
     </plus-grid-item>
   </plus-grid>
@@ -17,10 +15,10 @@
 
 <script setup>
   import '@htmlplus/core/card.js';
-  import '@htmlplus/core/drawer.js';
   import '@htmlplus/core/drawer-toggler.js';
-  import '@htmlplus/core/grid.js';
+  import '@htmlplus/core/drawer.js';
   import '@htmlplus/core/grid-item.js';
+  import '@htmlplus/core/grid.js';
 </script>
 
 <style scoped>

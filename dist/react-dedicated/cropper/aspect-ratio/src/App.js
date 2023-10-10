@@ -1,10 +1,11 @@
 import { Cropper } from '@htmlplus/react';
-const CropperAspectRatio = () => {
+
+function App() {
   return (
     <Cropper
       aspectRatio="3/4"
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></Cropper>
   );
-};
-export default CropperAspectRatio;
+}
+export default App;

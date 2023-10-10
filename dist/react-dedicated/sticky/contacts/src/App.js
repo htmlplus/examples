@@ -1,5 +1,6 @@
 import { Sticky } from '@htmlplus/react';
-const StickyContacts = () => {
+
+function App() {
   return (
     <div className="container">
       <Sticky>A</Sticky>
@@ -16,5 +17,5 @@ const StickyContacts = () => {
       <p>F</p>
     </div>
   );
-};
-export default StickyContacts;
+}
+export default App;

@@ -1,9 +1,10 @@
 import { Center, Switch } from '@htmlplus/react';
-const SwitchThreeDimensional = () => {
+
+function App() {
   return (
     <Center>
       <Switch checked></Switch>
     </Center>
   );
-};
-export default SwitchThreeDimensional;
+}
+export default App;
