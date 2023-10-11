@@ -3,7 +3,7 @@ import * as t from '@babel/types';
 import { camelCase, pascalCase } from 'change-case';
 import merge from 'deepmerge';
 
-import { IContext, IPlugin } from '@/types';
+import { IContext, IContextDependency, IPlugin } from '@/types';
 import {
   IImportResolverFunction,
   Resolver,
@@ -27,6 +27,7 @@ export interface IReactDedicatedOptions {
 
   // TODO
   customElementNameResolver: (name: string) => string;
+  dependencies: (dependencies: IContextDependency[]) => IContextDependency[];
 }
 
 export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
@@ -380,7 +381,7 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
             parameters.pattern.node.closingElement.name = t.jsxIdentifier(next);
           }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 
@@ -418,6 +419,9 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
         content: script
       }
     });
+
+    // TODO
+    model.dependencies = options.dependencies(context.dependencies);
 
     const patterns = ['templates/**/*.*'];
 

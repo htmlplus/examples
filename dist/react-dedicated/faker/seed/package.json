@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "latest",
-    "@htmlplus/core": "latest",
+    "@htmlplus/react": "latest",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0"

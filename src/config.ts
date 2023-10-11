@@ -12,7 +12,7 @@ import {
   svelte,
   vue
 } from '@/plugins';
-import { IContext } from '@/types';
+import { IContext, IContextDependency } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
 // const SOURCE = './development/index.html';
@@ -131,16 +131,16 @@ export const plugins = [
       return `${capitalCase(getComponentName(context))} | ${capitalCase(context.file.name)}`;
     }
   }),
-  angular({
-    destination: destination('angular'),
-    eventResolver: eventResolver('angular'),
-    importResolver: importResolver('angular'),
-    isStringAttribute
-  }),
-  javascript({
-    destination: destination('javascript'),
-    importResolver: importResolver('javascript')
-  }),
+  // angular({
+  //   destination: destination('angular'),
+  //   eventResolver: eventResolver('angular'),
+  //   importResolver: importResolver('angular'),
+  //   isStringAttribute
+  // }),
+  // javascript({
+  //   destination: destination('javascript'),
+  //   importResolver: importResolver('javascript')
+  // }),
   reactDedicated({
     destination: destination('react-dedicated'),
     eventResolver: eventResolver('react-dedicated'),
@@ -160,31 +160,40 @@ export const plugins = [
         .split('-')
         .map((section) => pascalCase(section))
         .join('.');
+    },
+    dependencies(dependencies: IContextDependency[]) {
+      return dependencies.map((dependency) => Object.assign(
+        {},
+        dependency,
+        {
+          name: dependency.name.replace('@htmlplus/core', '@htmlplus/react')
+        }
+      ))
     }
   }),
-  reactExperimental({
-    destination: destination('react-experimental'),
-    eventResolver: eventResolver('react-experimental'),
-    importResolver: importResolver('react-experimental'),
-    isStringAttribute
-  }),
-  svelte({
-    destination: destination('svelte'),
-    eventResolver: eventResolver('svelte'),
-    importResolver: importResolver('svelte'),
-    isStringAttribute
-  }),
-  vue({
-    destination: destination('vue'),
-    eventResolver: eventResolver('vue'),
-    importResolver: importResolver('vue'),
-    isStringAttribute
-  }),
-  json({
-    destination: 'dist/db.json',
-    plugins: ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue'],
-    keyResolver(plugin, context) {
-      return `${plugin}/${getComponentName(context)}/${context.file.name}`;
-    }
-  })
+  // reactExperimental({
+  //   destination: destination('react-experimental'),
+  //   eventResolver: eventResolver('react-experimental'),
+  //   importResolver: importResolver('react-experimental'),
+  //   isStringAttribute
+  // }),
+  // svelte({
+  //   destination: destination('svelte'),
+  //   eventResolver: eventResolver('svelte'),
+  //   importResolver: importResolver('svelte'),
+  //   isStringAttribute
+  // }),
+  // vue({
+  //   destination: destination('vue'),
+  //   eventResolver: eventResolver('vue'),
+  //   importResolver: importResolver('vue'),
+  //   isStringAttribute
+  // }),
+  // json({
+  //   destination: 'dist/db.json',
+  //   plugins: ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue'],
+  //   keyResolver(plugin, context) {
+  //     return `${plugin}/${getComponentName(context)}/${context.file.name}`;
+  //   }
+  // })
 ];

@@ -6,7 +6,7 @@
     "start": "react-scripts start"
   },
   "dependencies": {
-    "@htmlplus/core": "latest",
+    "@htmlplus/react": "latest",
     "cropperjs": "latest",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
