@@ -2,7 +2,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "ng serve --disable-host-check"
+    "ng": "ng",
+    "start": "ng serve --disable-host-check",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
   },
   "dependencies": {
     "@htmlplus/core": "latest",
