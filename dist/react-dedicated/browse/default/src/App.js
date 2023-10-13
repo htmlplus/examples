@@ -1,13 +1,14 @@
 import { Browse } from '@htmlplus/react';
-const BrowseDefault = () => {
-  const onChange = (event) => {
+
+function App() {
+  function onChange(event) {
     const name = event.detail.files[0].file.name;
     alert(`File '${name}' selected.`);
-  };
+  }
   return (
-    <Browse droppable onChange={(event) => onChange(event)}>
+    <Browse droppable onChange={onChange}>
       Click or Drag & Drop a file(s) here
     </Browse>
   );
-};
-export default BrowseDefault;
+}
+export default App;

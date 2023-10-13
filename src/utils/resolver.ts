@@ -4,7 +4,7 @@ import * as t from '@babel/types';
 import { cloneNode } from '@babel/types';
 
 import { IContext } from '@/types';
-import { getAttribute } from '@/utils';
+import { getAttribute, hasAttribute } from '@/utils';
 
 import { getElementById } from './getElementById';
 
@@ -18,7 +18,6 @@ export interface IResolverOptions {
       /**
        * Examples:
        * ```
-       *   // 1
        *   const name = () => any
        * ```
        */
@@ -98,7 +97,6 @@ export interface IResolverOptions {
           /**
            * Examples:
            * ```
-           *   // 1
            *   element.addEventListener('event', function () => {})
            * ```
            */
@@ -114,7 +112,6 @@ export interface IResolverOptions {
           /**
            * Examples:
            * ```
-           *   // 1
            *   element.addEventListener('event', handler)
            * ```
            */
@@ -159,11 +156,11 @@ export interface IResolverOptions {
             element: t.JSXElement;
             id: string;
             initializer:
-              | t.ArrayExpression
-              | t.BooleanLiteral
-              | t.NumericLiteral
-              | t.ObjectExpression
-              | t.StringLiteral;
+            | t.ArrayExpression
+            | t.BooleanLiteral
+            | t.NumericLiteral
+            | t.ObjectExpression
+            | t.StringLiteral;
             pattern: NodePath<t.MemberExpression>;
             property: t.Identifier;
           }>;
@@ -223,7 +220,6 @@ export interface IResolverOptions {
     /**
      * Examples:
      * ```
-     *   // 1
      *   function name() {}
      * ```
      */
@@ -236,7 +232,6 @@ export interface IResolverOptions {
       /**
        * Examples:
        * ```
-       *   // 1
        *   const name = function() {}
        * ```
        */
@@ -275,7 +270,10 @@ export interface IResolverOptions {
     element: {
       attribute: {
         /**
-         * TODO
+         * Examples:
+         * ```
+         *   <element id="element" name="value" />
+         * ```
          */
         class: IResolverFunction<{
           element: t.JSXElement;
@@ -284,7 +282,10 @@ export interface IResolverOptions {
           value?: t.StringLiteral;
         }>;
         /**
-         * TODO
+         * Examples:
+         * ```
+         *   <element id="element" name="value" />
+         * ```
          */
         default: IResolverFunction<{
           element: t.JSXElement;
@@ -293,7 +294,10 @@ export interface IResolverOptions {
           value?: t.StringLiteral;
         }>;
         /**
-         * TODO
+         * Examples:
+         * ```
+         *   <element id="element" name="value" />
+         * ```
          */
         id: IResolverFunction<{
           element: t.JSXElement;
@@ -303,14 +307,24 @@ export interface IResolverOptions {
         }>;
       };
       /**
-       * TODO
+       * Examples:
+       * ```
+       *   // 1
+       *   <element />
+       * 
+       *   // 2
+       *   <element></element>
+       * ```
        */
       default: IResolverFunction<{
         pattern: NodePath<t.JSXElement>;
       }>;
     };
     /**
-     * TODO
+     * Examples:
+     * ```
+     *   <></>
+     * ```
      */
     fragment: IResolverFunction<{
       pattern: NodePath<t.JSXFragment>;
@@ -398,15 +412,15 @@ export class Resolver {
 
         if (!t.isIdentifier(path.parent.property, { name: 'addEventListener' })) return;
 
+        const wrapper = path.parentPath!.parentPath!.parentPath!;
+
+        if (this.resolved(wrapper.node)) return;
+
         const [event, handler] = path.parentPath!.parent.arguments;
 
         const id = path.node.name;
 
         const isRoot = t.isProgram(path.parentPath!.parentPath!.parentPath!.parent);
-
-        const wrapper = path.parentPath!.parentPath!.parentPath!;
-
-        if (this.resolved(wrapper.node)) return;
 
         const parameters = {
           element,
@@ -460,13 +474,13 @@ export class Resolver {
     // script.functionDeclaration
     core(this.script, {
       FunctionDeclaration: (path) => {
+        if (this.resolved(path.node)) return;
+
         const id = path.node.id!.name;
 
         const isRoot = t.isProgram(path.parent);
 
         const pattern = path;
-
-        if (this.resolved(path.node)) return;
 
         const parameters = {
           id,
@@ -487,13 +501,13 @@ export class Resolver {
 
         if (!t.isVariableDeclaration(path.parentPath.parent, { kind: 'const' })) return;
 
+        if (this.resolved(path.parentPath!.parentPath!.node)) return;
+
         const id = path.parent.id.name;
 
         const isRoot = t.isProgram(path.parentPath.parentPath!.parent);
 
         const pattern = path.parentPath!.parentPath as any;
-
-        if (this.resolved(path.parentPath!.parentPath!.node)) return;
 
         const parameters = {
           function: path.node,
@@ -515,13 +529,13 @@ export class Resolver {
 
         if (!t.isVariableDeclaration(path.parentPath.parent, { kind: 'const' })) return;
 
+        if (this.resolved(path.parentPath!.parentPath!.node)) return;
+
         const id = path.parent.id.name;
 
         const isRoot = t.isProgram(path.parentPath.parentPath!.parent);
 
         const pattern = path.parentPath!.parentPath as any;
-
-        if (this.resolved(path.parentPath!.parentPath!.node)) return;
 
         const parameters = {
           function: path.node,
@@ -539,11 +553,11 @@ export class Resolver {
       VariableDeclaration: (path) => {
         if (path.node.kind !== 'const') return;
 
+        if (this.resolved(path.node)) return;
+
         const isRoot = t.isProgram(path.parent);
 
         const pattern = path;
-
-        if (this.resolved(path.node)) return;
 
         const parameters = {
           isRoot,
@@ -559,11 +573,11 @@ export class Resolver {
       VariableDeclaration: (path) => {
         if (path.node.kind !== 'let' && path.node.kind !== 'var') return;
 
+        if (this.resolved(path.node)) return;
+
         const isRoot = t.isProgram(path.parent);
 
         const pattern = path;
-
-        if (this.resolved(path.node)) return;
 
         const parameters = {
           isRoot,
@@ -626,22 +640,24 @@ export class Resolver {
 
         if (!t.isIdentifier(path.parent.property)) return;
 
-        const initializer = getAttribute(element, path.parent.property.name);
+        if (!hasAttribute(element, path.parent.property.name)) return;
 
-        if (initializer === undefined) return;
+        if (this.resolved(path.parent)) return;
+
+        const attribute = getAttribute(element, path.parent.property.name);
 
         const id = path.node.name;
 
-        const pattern = path.parentPath as any;
+        const initializer = (attribute as any)?.expression || attribute || t.booleanLiteral(true);
 
-        if (this.resolved(path.parent)) return;
+        const pattern = path.parentPath as any;
 
         const property = pattern.node.property;
 
         const parameters = {
           element,
           id,
-          initializer: (initializer as any)?.expression || initializer || t.booleanLiteral(true), // TODO
+          initializer,
           pattern,
           property
         };
@@ -667,20 +683,20 @@ export class Resolver {
 
         if (!t.isExpressionStatement(path.parentPath.parentPath!.parent)) return;
 
-        const initializer = getAttribute(element, path.parent.property.name);
-
-        if (initializer === undefined) return;
-
-        const id = path.node.name;
+        if (!hasAttribute(element, path.parent.property.name)) return;
 
         const wrapper = path.parentPath.parentPath!.parentPath as any;
 
         if (this.resolved(wrapper.node)) return;
 
+        const id = path.node.name;
+
+        const pattern = path.parentPath.parentPath as any;
+
         const parameters = {
           element,
           id,
-          pattern: path.parentPath.parentPath as any,
+          pattern,
           wrapper
         };
 
@@ -701,18 +717,18 @@ export class Resolver {
 
         if (!t.isIdentifier(path.parent.property)) return;
 
-        const initializer = getAttribute(element, path.parent.property.name);
+        if (!hasAttribute(element, path.parent.property.name)) return;
 
-        if (initializer === undefined) return;
+        if (this.resolved(path.parent)) return;
 
         const id = path.node.name;
 
-        if (this.resolved(path.parent)) return;
+        const pattern = path.parentPath as any;
 
         const parameters = {
           element,
           id,
-          pattern: path.parentPath as any
+          pattern
         };
 
         this.options.script.element.property.state.getter.bind(this)(parameters);
@@ -726,11 +742,11 @@ export class Resolver {
 
         if (!element) return;
 
+        if (this.resolved(path.node)) return;
+
         const id = path.node.name;
 
         const pattern = path;
-
-        if (this.resolved(path.node)) return;
 
         const parameters = {
           element,
@@ -745,11 +761,11 @@ export class Resolver {
     // script.unresolved
     core(this.script, {
       enter: (path) => {
+        if (this.resolved(path.node)) return;
+
         const isRoot = t.isProgram(path.parent);
 
         const pattern = path;
-
-        if (this.resolved(path.node)) return;
 
         const parameters = {
           isRoot,

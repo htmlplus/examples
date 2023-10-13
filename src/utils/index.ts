@@ -6,6 +6,7 @@ export * from './format';
 export * from './getAttribute';
 export * from './getBody';
 export * from './getElementById';
+export * from './hasAttribute';
 export * from './importResolver';
 export * from './isCustomElement';
 export * from './rename';

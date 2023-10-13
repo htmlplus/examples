@@ -156,7 +156,6 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
 
                 this.script.program.body.unshift(node);
               },
-              // TODO
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
@@ -201,7 +200,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
             });
           }
         },
-        final(parameters) {},
+        final(parameters) { },
         functionDeclaration(parameters) {
           this.resolve(parameters.pattern.node);
         },
@@ -246,7 +245,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
       template: {
         element: {
           attribute: {
-            class() {},
+            class() { },
             default(parameters) {
               if (!isCustomElement(parameters.element)) return;
 
@@ -271,9 +270,9 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
               parameters.pattern.remove();
             }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 

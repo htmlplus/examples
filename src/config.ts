@@ -83,7 +83,6 @@ const importResolver = (key: string): IImportResolverFunction => {
       parameters.source = parameters.source.replace(CDN, '');
     }
 
-    // TODO
     if (key == 'react-dedicated') {
       const [, matched] = parameters.source.match(/^@htmlplus\/core\/([^/]+)\.js$/) || [];
       if (matched && matched != 'config') {
@@ -146,8 +145,6 @@ export const plugins = [
     eventResolver: eventResolver('react-dedicated'),
     importResolver: importResolver('react-dedicated'),
     isStringAttribute,
-
-    // TODO
     customElementNameResolver(name) {
       const exception = CUSTOM_ELEMENTS.find((exception) => name.includes(exception));
 
@@ -161,7 +158,7 @@ export const plugins = [
         .map((section) => pascalCase(section))
         .join('.');
     },
-    dependencies(dependencies: IContextDependency[]) {
+    dependenciesTransformer(dependencies: IContextDependency[]) {
       return dependencies.map((dependency) => Object.assign(
         {},
         dependency,

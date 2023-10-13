@@ -171,7 +171,6 @@ export const reactExperimental: IPlugin<IReactExperimentalOptions> = (options) =
 
                 this.script.program.body.unshift(node);
               },
-              // TODO
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
@@ -361,9 +360,9 @@ export const reactExperimental: IPlugin<IReactExperimentalOptions> = (options) =
               parameters.pattern.remove();
             }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 

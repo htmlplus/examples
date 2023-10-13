@@ -189,7 +189,6 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
 
                 this.script.program.body.unshift(node as any);
               },
-              // TODO
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
@@ -378,7 +377,7 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
       template: {
         element: {
           attribute: {
-            class() {},
+            class() { },
             default(parameters) {
               const has = parameters.element.openingElement.attributes.some(
                 (attribute: any) => attribute.name.name == '[' + parameters.name.name + ']'
@@ -409,9 +408,9 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
               parameters.pattern.remove();
             }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 

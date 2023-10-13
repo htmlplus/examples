@@ -168,7 +168,6 @@ export const vue: IPlugin<IVueOptions> = (options) => {
 
                 this.script.program.body.unshift(node);
               },
-              // TODO
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
@@ -226,7 +225,7 @@ export const vue: IPlugin<IVueOptions> = (options) => {
             });
           }
         },
-        final(parameters) {},
+        final(parameters) { },
         functionDeclaration(parameters) {
           this.resolve(parameters.pattern.node);
         },
@@ -296,7 +295,7 @@ export const vue: IPlugin<IVueOptions> = (options) => {
       template: {
         element: {
           attribute: {
-            class() {},
+            class() { },
             default(parameters) {
               const has = parameters.element.openingElement.attributes.some(
                 (attribute: any) => attribute.name.name == ':' + parameters.name.name
@@ -327,7 +326,7 @@ export const vue: IPlugin<IVueOptions> = (options) => {
               parameters.pattern.remove();
             }
           },
-          default() {}
+          default() { }
         },
         fragment(parameters) {
           parameters.pattern.replaceWith(

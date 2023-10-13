@@ -24,10 +24,8 @@ export interface IReactDedicatedOptions {
   eventResolver: (name: string) => string;
   importResolver: IImportResolverFunction;
   isStringAttribute: (element: string, name: string) => boolean;
-
-  // TODO
   customElementNameResolver: (name: string) => string;
-  dependencies: (dependencies: IContextDependency[]) => IContextDependency[];
+  dependenciesTransformer: (dependencies: IContextDependency[]) => IContextDependency[];
 }
 
 export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
@@ -175,7 +173,6 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
 
                 this.script.program.body.unshift(node);
               },
-              // TODO
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
@@ -421,7 +418,7 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
     });
 
     // TODO
-    model.dependencies = options.dependencies(context.dependencies);
+    model.dependencies = options.dependenciesTransformer(context.dependencies);
 
     const patterns = ['templates/**/*.*'];
 
