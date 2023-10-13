@@ -1,29 +1,30 @@
-import { useState } from 'react';
-import { Card, Center, ClickOutside } from '@htmlplus/react';
-const ClickOutsideDefault = () => {
+import { useRef, useState } from 'react';
+
+import { Card, ClickOutside } from '@htmlplus/react';
+
+function App() {
+  const outsideRef = useRef();
+  const insideRef = useRef();
   const [inside, setInside] = useState(0);
   const [outside, setOutside] = useState(0);
-  const onClick = () => {
+  function onClick() {
     setInside(inside + 1);
-  };
-  const onClickOutside = () => {
+    insideRef.current.innerHTML = `${inside}`;
+  }
+  function onClickOutside() {
     setOutside(outside + 1);
-  };
+    outsideRef.current.innerHTML = `${outside}`;
+  }
   return (
-    <Center>
-      <ClickOutside
-        onClick={() => onClick()}
-        onClickOutside={() => onClickOutside()}
-      >
-        <Card elevation="10">
-          <Card.Body>
-            <b>{inside}</b> time(s) inside clicked
-            <br />
-            <b>{outside}</b> time(s) outside clicked
-          </Card.Body>
-        </Card>
-      </ClickOutside>
-    </Center>
+    <ClickOutside onClick={onClick} onClickOutside={onClickOutside}>
+      <Card elevation={10}>
+        <Card.Body>
+          <b ref={insideRef}>0</b> time(s) inside clicked
+          <br />
+          <b ref={outsideRef}>0</b> time(s) outside clicked
+        </Card.Body>
+      </Card>
+    </ClickOutside>
   );
-};
-export default ClickOutsideDefault;
+}
+export default App;

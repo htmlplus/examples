@@ -11,7 +11,7 @@ function App() {
     <>
       <plus-card elevation={elevation}></plus-card>
       <br />
-      <input type="range" value="12" min="1" max="24" onchange={onChange} />
+      <input type="range" value={elevation} min="1" max="24" onchange={onChange} />
     </>
   );
 }
