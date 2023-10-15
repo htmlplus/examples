@@ -8,12 +8,14 @@
   let inside = 0;
   let outside = 0;
   function onClick() {
-    inside = inside + 1;
-    insideRef.innerHTML = `${inside}`;
+    const count = inside + 1;
+    inside = count;
+    insideRef.innerHTML = `${count}`;
   }
   function onPlusClickOutside() {
-    outside = outside + 1;
-    outsideRef.innerHTML = `${outside}`;
+    const count = outside + 1;
+    outside = count;
+    outsideRef.innerHTML = `${count}`;
   }
 </script>
 

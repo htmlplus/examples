@@ -22,11 +22,13 @@
   const inside = ref(0);
   const outside = ref(0);
   function onClick() {
-    inside.value = inside.value + 1;
-    insideRef.value.innerHTML = `${inside.value}`;
+    const count = inside.value + 1;
+    inside.value = count;
+    insideRef.value.innerHTML = `${count}`;
   }
   function onPlusClickOutside() {
-    outside.value = outside.value + 1;
-    outsideRef.value.innerHTML = `${outside.value}`;
+    const count = outside.value + 1;
+    outside.value = count;
+    outsideRef.value.innerHTML = `${count}`;
   }
 </script>

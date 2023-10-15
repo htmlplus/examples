@@ -17,11 +17,13 @@ export class AppComponent {
   inside = 0;
   outside = 0;
   onClick() {
-    this.inside = this.inside + 1;
-    this.insideRef.nativeElement.innerHTML = `${this.inside}`;
+    const count = this.inside + 1;
+    this.inside = count;
+    this.insideRef.nativeElement.innerHTML = `${count}`;
   }
   onPlusClickOutside() {
-    this.outside = this.outside + 1;
-    this.outsideRef.nativeElement.innerHTML = `${this.outside}`;
+    const count = this.outside + 1;
+    this.outside = count;
+    this.outsideRef.nativeElement.innerHTML = `${count}`;
   }
 }

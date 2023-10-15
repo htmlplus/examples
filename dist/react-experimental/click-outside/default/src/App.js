@@ -10,12 +10,14 @@ function App() {
   const [inside, setInside] = useState(0);
   const [outside, setOutside] = useState(0);
   function onClick() {
-    setInside(inside + 1);
-    insideRef.current.innerHTML = `${inside}`;
+    const count = inside + 1;
+    setInside(count);
+    insideRef.current.innerHTML = `${count}`;
   }
   function onPlusClickOutside() {
-    setOutside(outside + 1);
-    outsideRef.current.innerHTML = `${outside}`;
+    const count = outside + 1;
+    setOutside(count);
+    outsideRef.current.innerHTML = `${count}`;
   }
   return (
     <plus-click-outside onclick={onClick} onplus-click-outside={onPlusClickOutside}>
