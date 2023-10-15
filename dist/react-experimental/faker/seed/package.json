@@ -8,8 +8,8 @@
   "dependencies": {
     "@faker-js/faker": "latest",
     "@htmlplus/core": "latest",
-    "react": "experimental",
-    "react-dom": "experimental",
+    "react": "^0.0.0-experimental-09fbee89d-20231013",
+    "react-dom": "^0.0.0-experimental-09fbee89d-20231013",
     "react-scripts": "5.0.0"
   },
   "browserslist": {
