@@ -373,34 +373,64 @@
   },
   {
     "key": "angular/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/core/intersection.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('animation')\n  animationRef!: ElementRef;\n  onPlusChange(event) {\n    this.animationRef.nativeElement.run = event.detail.isIntersecting;\n  }\n}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onPlusChange($event)\">\n    <plus-animation name=\"heart-beat\" #animation></plus-animation>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $animation.run = event.detail.isIntersecting;\n});\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\">\n    <plus-animation id=\"$animation\" name=\"heart-beat\"></plus-animation>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react-dedicated/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport { Animation, Intersection } from '@htmlplus/react';\n\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onChange(event) {\n    animationRef.current.run = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <Intersection onChange={onChange}>\n        <Animation name=\"heart-beat\" ref={animationRef}></Animation>\n      </Intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "react-experimental/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/core/intersection.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onPlusChange(event) {\n    animationRef.current.run = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-animation name=\"heart-beat\" ref={animationRef}></plus-animation>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "svelte/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/core/intersection.js';\n\nlet animationRef;\nfunction onPlusChange(event) {\n  animationRef.run = event.detail.isIntersecting;\n}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection on:plus-change={onPlusChange}>\n    <plus-animation name=\"heart-beat\" bind:this={animationRef}></plus-animation>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/animation/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/core/intersection.js';\n\nconst animationRef = ref();\nfunction onPlusChange(event) {\n  animationRef.value.run = event.detail.isIntersecting;\n}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onPlusChange\">\n    <plus-animation name=\"heart-beat\" ref=\"animationRef\"></plus-animation>\n  </plus-intersection>\n</div>\n"
@@ -1643,34 +1673,64 @@
   },
   {
     "key": "angular/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-card></plus-card>\n</div>\n"
   },
   {
     "key": "javascript/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-card></plus-card>\n</div>\n"
   },
   {
     "key": "react-dedicated/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Card } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Card></Card>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "react-experimental/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-card></plus-card>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "svelte/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-card></plus-card>\n</div>\n"
   },
   {
     "key": "vue/card/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-card></plus-card>\n</div>\n"
@@ -1745,68 +1805,128 @@
   },
   {
     "key": "angular/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-grid justify-content=\"evenly\" gutter=\"md\">\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile outlined></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile [elevation]=\"5\"></plus-card>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "javascript/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-grid justify-content=\"evenly\" gutter=\"md\">\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile outlined></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile elevation=\"5\"></plus-card>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "react-dedicated/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Card, Grid } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Grid justifyContent=\"evenly\" gutter=\"md\">\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile></Card>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile outlined></Card>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile elevation={5}></Card>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "react-experimental/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-grid justify-content=\"evenly\" gutter=\"md\">\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile></plus-card>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile outlined></plus-card>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile elevation={5}></plus-card>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "svelte/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-grid justify-content=\"evenly\" gutter=\"md\">\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile outlined></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile elevation={5}></plus-card>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "vue/card/tile",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-grid justify-content=\"evenly\" gutter=\"md\">\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile outlined></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile :elevation=\"5\"></plus-card>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "angular/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n",
     "template": "<plus-center>All elements are centered</plus-center>\n"
   },
   {
     "key": "javascript/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n",
     "template": "<plus-center>All elements are centered</plus-center>\n"
   },
   {
     "key": "react-dedicated/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Center } from '@htmlplus/react';\n\nfunction App() {\n  return <Center>All elements are centered</Center>;\n}\nexport default App;\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "react-experimental/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/center.js';\n\nfunction App() {\n  return <plus-center>All elements are centered</plus-center>;\n}\nexport default App;\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "svelte/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/center.js';\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n",
     "template": "<plus-center>All elements are centered</plus-center>\n"
   },
   {
     "key": "vue/center/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/center.js';\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n",
     "template": "<plus-center>All elements are centered</plus-center>\n"
@@ -2015,34 +2135,64 @@
   },
   {
     "key": "angular/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('counter')\n  counterRef!: ElementRef;\n  onPlusChange(event) {\n    this.counterRef.nativeElement.play = event.detail.isIntersecting;\n  }\n}\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onPlusChange($event)\">\n    <plus-counter [to]=\"1000\" #counter></plus-counter>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $counter.play = event.detail.isIntersecting;\n});\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\">\n    <plus-counter id=\"$counter\" to=\"1000\"></plus-counter>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react-dedicated/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport { Counter, Intersection } from '@htmlplus/react';\n\nfunction App() {\n  const counterRef = useRef();\n  function onChange(event) {\n    counterRef.current.play = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <Intersection onChange={onChange}>\n        <Counter to={1000} ref={counterRef}></Counter>\n      </Intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "react-experimental/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n\nfunction App() {\n  const counterRef = useRef();\n  function onPlusChange(event) {\n    counterRef.current.play = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-counter to={1000} ref={counterRef}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
     "key": "svelte/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n\nlet counterRef;\nfunction onPlusChange(event) {\n  counterRef.play = event.detail.isIntersecting;\n}\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection on:plus-change={onPlusChange}>\n    <plus-counter to={1000} bind:this={counterRef}></plus-counter>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/counter/intersection",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n\nconst counterRef = ref();\nfunction onPlusChange(event) {\n  counterRef.value.play = event.detail.isIntersecting;\n}\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onPlusChange\">\n    <plus-counter :to=\"1000\" ref=\"counterRef\"></plus-counter>\n  </plus-intersection>\n</div>\n"
@@ -2189,57 +2339,117 @@
   },
   {
     "key": "angular/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper\n  [area]=\"1\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  area=\"1\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Cropper area={1} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper\n      area={1}\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper area={1} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/area",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  :area=\"1\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "angular/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper\n  aspect-ratio=\"3/4\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  aspect-ratio=\"3/4\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Cropper\n      aspectRatio=\"3/4\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></Cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper\n      aspect-ratio=\"3/4\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper aspect-ratio=\"3/4\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/aspect-ratio",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  aspect-ratio=\"3/4\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
@@ -2301,141 +2511,291 @@
   },
   {
     "key": "angular/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>;\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n"
   },
   {
     "key": "angular/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  disabled = true;\n  onPlusOpened() {\n    this.disabled = false;\n  }\n  onPlusClosed() {\n    this.disabled = true;\n  }\n}\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  (plus-opened)=\"onPlusOpened()\"\n  (plus-closed)=\"onPlusClosed()\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        [disabled]=\"disabled\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "javascript/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\n\n$dialog.addEventListener('plus-opened', () => {\n  $cropper.disabled = false;\n});\n$dialog.addEventListener('plus-closed', () => {\n  $cropper.disabled = true;\n});\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog id=\"$dialog\" animation=\"fade\" connector=\"dialog-cropper\">\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        id=\"$cropper\"\n        disabled\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "react-dedicated/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useState } from 'react';\n\nimport { Center, Cropper, Dialog } from '@htmlplus/react';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onOpened() {\n    setDisabled(false);\n  }\n  function onClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <Center>\n        <Dialog.Toggler connector=\"dialog-cropper\"> Open </Dialog.Toggler>\n      </Center>\n      <Dialog animation=\"fade\" connector=\"dialog-cropper\" onOpened={onOpened} onClosed={onClosed}>\n        <Dialog.Content>\n          <Dialog.Header> Cropper </Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler> Close </Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onPlusOpened() {\n    setDisabled(false);\n  }\n  function onPlusClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onplus-opened={onPlusOpened}\n        onplus-closed={onPlusClosed}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header> Cropper </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\n\nlet disabled = true;\nfunction onPlusOpened() {\n  disabled = false;\n}\nfunction onPlusClosed() {\n  disabled = true;\n}\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  on:plus-opened={onPlusOpened}\n  on:plus-closed={onPlusClosed}\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper {disabled} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "vue/cropper/dialog",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\n\nconst disabled = ref(true);\nfunction onPlusOpened() {\n  disabled.value = false;\n}\nfunction onPlusClosed() {\n  disabled.value = true;\n}\n",
     "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog\n    animation=\"fade\"\n    connector=\"dialog-cropper\"\n    @plus-opened=\"onPlusOpened\"\n    @plus-closed=\"onPlusClosed\"\n  >\n    <plus-dialog-content>\n      <plus-dialog-header> Cropper </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          :disabled=\"disabled\"\n        ></plus-cropper>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
     "key": "angular/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  disabled\n></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  disabled\n></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" disabled></Cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      disabled\n    ></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" disabled\n></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/disabled",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  disabled\n></plus-cropper>\n"
   },
   {
     "key": "angular/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper\n  guides\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  guides\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Cropper guides src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper\n      guides\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper guides src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/guides",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  guides\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "angular/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-cropper\n  indicator\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "javascript/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  indicator\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "react-dedicated/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Cropper } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Cropper indicator src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n\nfunction App() {\n  return (\n    <plus-cropper\n      indicator\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper indicator src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
     "key": "vue/cropper/indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  indicator\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
@@ -3149,62 +3509,122 @@
   },
   {
     "key": "angular/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
   },
   {
     "key": "javascript/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
     "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
   },
   {
     "key": "react-dedicated/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import { Divider } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider placement=\"center\">Center</plus-divider>\n      <br />\n      <plus-divider placement=\"start\">Start</plus-divider>\n      <br />\n      <plus-divider placement=\"end\">End</plus-divider>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
   },
   {
     "key": "vue/divider/placement",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
   },
   {
     "key": "angular/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
   },
   {
     "key": "javascript/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
   },
   {
     "key": "react-dedicated/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Divider, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Sticky>\n        <Divider>\n          <span>Today</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>Yesterday</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>5 Days Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>2 Weeks Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>1 Month Ago</span>\n        </Divider>\n      </Sticky>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n"
   },
   {
     "key": "react-experimental/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-sticky>\n        <plus-divider>\n          <span>Today</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>Yesterday</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>5 Days Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>2 Weeks Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>1 Month Ago</span>\n        </plus-divider>\n      </plus-sticky>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n"
   },
   {
     "key": "svelte/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
   },
   {
     "key": "vue/divider/sticky",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
@@ -3239,29 +3659,59 @@
   },
   {
     "key": "angular/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
   },
   {
     "key": "javascript/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
     "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
   },
   {
     "key": "react-dedicated/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import { Divider } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider variant=\"middle\"></plus-divider>\n      <br />\n      <plus-divider variant=\"inset\"></plus-divider>\n      <br />\n      <plus-divider variant=\"full\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
   },
   {
     "key": "vue/divider/variant",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
     "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
   },
@@ -4973,68 +5423,128 @@
   },
   {
     "key": "angular/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('status')\n  statusRef!: ElementRef;\n  onPlusChange(event) {\n    this.statusRef.nativeElement.innerHTML = event.detail.isIntersecting\n      ? 'In Viewport'\n      : 'Out of Viewport';\n  }\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" [z-index]=\"1\">\n    <plus-center>\n      <div class=\"status\" #status></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $status.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n});\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" z-index=\"1\">\n    <plus-center>\n      <div id=\"$status\" class=\"status\"></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection id=\"$intersection\">\n    <plus-card elevation=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react-dedicated/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport { Card, Center, Faker, Intersection, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  const statusRef = useRef();\n  function onChange(event) {\n    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n  }\n  return (\n    <div className=\"container\">\n      <Sticky top=\"1rem\" zIndex={1}>\n        <Center>\n          <div className=\"status\" ref={statusRef}></div>\n        </Center>\n      </Sticky>\n      <Intersection onChange={onChange}>\n        <Card elevation={10}>\n          <Card.Body>\n            <Faker></Faker>\n          </Card.Body>\n        </Card>\n      </Intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n"
   },
   {
     "key": "react-experimental/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  const statusRef = useRef();\n  function onPlusChange(event) {\n    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n  }\n  return (\n    <div className=\"container\">\n      <plus-sticky top=\"1rem\" z-index={1}>\n        <plus-center>\n          <div className=\"status\" ref={statusRef}></div>\n        </plus-center>\n      </plus-sticky>\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-card-body>\n            <plus-faker></plus-faker>\n          </plus-card-body>\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n"
   },
   {
     "key": "svelte/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\n\nlet statusRef;\nfunction onPlusChange(event) {\n  statusRef.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" z-index={1}>\n    <plus-center>\n      <div class=\"status\" bind:this={statusRef}></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/intersection/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\n\nconst statusRef = ref();\nfunction onPlusChange(event) {\n  statusRef.value.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" :z-index=\"1\">\n    <plus-center>\n      <div class=\"status\" ref=\"statusRef\"></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "angular/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react-dedicated/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\n\nfunction App() {\n  function onChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={onChange}>\n        <Card elevation={10}>\n          <Spinner></Spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n        </Card>\n      </Intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
   {
     "key": "react-experimental/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
   {
     "key": "svelte/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/intersection/lazy-image",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -5299,102 +5809,192 @@
   },
   {
     "key": "angular/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    console.log(event.detail);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    (plus-change)=\"onPlusChange($event)\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "javascript/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference1\" vertical></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "react-dedicated/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\n\nfunction App() {\n  function onChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></Faker>\n      </div>\n      <ScrollDetector reference=\".reference1\" vertical onChange={onChange}></ScrollDetector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
     "key": "react-experimental/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference1\"\n        vertical\n        onplus-change={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
     "key": "svelte/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n  </div>\n  <plus-scroll-detector reference=\".reference1\" vertical on:plus-change={onPlusChange}\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "vue/scroll-detector/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    @plus-change=\"onPlusChange\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "angular/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  value = 0;\n  onPlusChange(event) {\n    this.value = event.detail.progress;\n  }\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-progress-bar [value]=\"value\"></plus-progress-bar>\n  <div class=\"scrollable reference2\">\n    <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]' [seed]=\"0\"></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference2\"\n    vertical\n    (plus-change)=\"onPlusChange($event)\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "javascript/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  $progressbar.value = event.detail.progress;\n});\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-progress-bar id=\"$progressbar\" value=\"0\"></plus-progress-bar>\n  <div class=\"scrollable reference2\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference2\" vertical></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "react-dedicated/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useState } from 'react';\n\nimport { Faker, ProgressBar, ScrollDetector } from '@htmlplus/react';\n\nfunction App() {\n  const [value, setValue] = useState(0);\n  function onChange(event) {\n    setValue(event.detail.progress);\n  }\n  return (\n    <div className=\"container\">\n      <ProgressBar value={value}></ProgressBar>\n      <div className=\"scrollable reference2\">\n        <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']} seed={0}></Faker>\n      </div>\n      <ScrollDetector reference=\".reference2\" vertical onChange={onChange}></ScrollDetector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
     "key": "react-experimental/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nfunction App() {\n  const [value, setValue] = useState(0);\n  function onPlusChange(event) {\n    setValue(event.detail.progress);\n  }\n  return (\n    <div className=\"container\">\n      <plus-progress-bar value={value}></plus-progress-bar>\n      <div className=\"scrollable reference2\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']} seed={0}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference2\"\n        vertical\n        onplus-change={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
     "key": "svelte/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nlet value = 0;\nfunction onPlusChange(event) {\n  value = event.detail.progress;\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-progress-bar {value}></plus-progress-bar>\n  <div class=\"scrollable reference2\">\n    <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']} seed={0}></plus-faker>\n  </div>\n  <plus-scroll-detector reference=\".reference2\" vertical on:plus-change={onPlusChange}\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "vue/scroll-detector/scroll-indicator",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n\nconst value = ref(0);\nfunction onPlusChange(event) {\n  value.value = event.detail.progress;\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-progress-bar :value=\"value\"></plus-progress-bar>\n  <div class=\"scrollable reference2\">\n    <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]' :seed=\"0\"></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference2\"\n    vertical\n    @plus-change=\"onPlusChange\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
     "key": "angular/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/signature.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>\n"
   },
   {
     "key": "javascript/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>\n"
   },
   {
     "key": "react-dedicated/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Signature } from '@htmlplus/react';\n\nfunction App() {\n  return <Signature backgroundColor=\"lightgray\" clearOnResize resizable></Signature>;\n}\nexport default App;\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
   },
   {
     "key": "react-experimental/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n\nfunction App() {\n  return <plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>;\n}\nexport default App;\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
   },
   {
     "key": "svelte/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>\n"
   },
   {
     "key": "vue/signature/clear-on-resize",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>\n"
@@ -5603,34 +6203,64 @@
   },
   {
     "key": "angular/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/signature.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
   },
   {
     "key": "javascript/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
   },
   {
     "key": "react-dedicated/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Signature } from '@htmlplus/react';\n\nfunction App() {\n  return <Signature backgroundColor=\"lightgray\" resizable></Signature>;\n}\nexport default App;\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
   },
   {
     "key": "react-experimental/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n\nfunction App() {\n  return <plus-signature background-color=\"lightgray\" resizable></plus-signature>;\n}\nexport default App;\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n"
   },
   {
     "key": "svelte/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
   },
   {
     "key": "vue/signature/resizable",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
@@ -5879,204 +6509,384 @@
   },
   {
     "key": "angular/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>A</plus-sticky>\n  <p>A</p>\n  <plus-sticky>B</plus-sticky>\n  <p>B</p>\n  <plus-sticky>C</plus-sticky>\n  <p>C</p>\n  <plus-sticky>D</plus-sticky>\n  <p>D</p>\n  <plus-sticky>E</plus-sticky>\n  <p>E</p>\n  <plus-sticky>F</plus-sticky>\n  <p>F</p>\n</div>\n"
   },
   {
     "key": "javascript/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>A</plus-sticky>\n  <p>A</p>\n  <plus-sticky>B</plus-sticky>\n  <p>B</p>\n  <plus-sticky>C</plus-sticky>\n  <p>C</p>\n  <plus-sticky>D</plus-sticky>\n  <p>D</p>\n  <plus-sticky>E</plus-sticky>\n  <p>E</p>\n  <plus-sticky>F</plus-sticky>\n  <p>F</p>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Sticky>A</Sticky>\n      <p>A</p>\n      <Sticky>B</Sticky>\n      <p>B</p>\n      <Sticky>C</Sticky>\n      <p>C</p>\n      <Sticky>D</Sticky>\n      <p>D</p>\n      <Sticky>E</Sticky>\n      <p>E</p>\n      <Sticky>F</Sticky>\n      <p>F</p>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n"
   },
   {
     "key": "react-experimental/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-sticky>A</plus-sticky>\n      <p>A</p>\n      <plus-sticky>B</plus-sticky>\n      <p>B</p>\n      <plus-sticky>C</plus-sticky>\n      <p>C</p>\n      <plus-sticky>D</plus-sticky>\n      <p>D</p>\n      <plus-sticky>E</plus-sticky>\n      <p>E</p>\n      <plus-sticky>F</plus-sticky>\n      <p>F</p>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n"
   },
   {
     "key": "svelte/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>A</plus-sticky>\n  <p>A</p>\n  <plus-sticky>B</plus-sticky>\n  <p>B</p>\n  <plus-sticky>C</plus-sticky>\n  <p>C</p>\n  <plus-sticky>D</plus-sticky>\n  <p>D</p>\n  <plus-sticky>E</plus-sticky>\n  <p>E</p>\n  <plus-sticky>F</plus-sticky>\n  <p>F</p>\n</div>\n"
   },
   {
     "key": "vue/sticky/contacts",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>A</plus-sticky>\n  <p>A</p>\n  <plus-sticky>B</plus-sticky>\n  <p>B</p>\n  <plus-sticky>C</plus-sticky>\n  <p>C</p>\n  <plus-sticky>D</plus-sticky>\n  <p>D</p>\n  <plus-sticky>E</plus-sticky>\n  <p>E</p>\n  <plus-sticky>F</plus-sticky>\n  <p>F</p>\n</div>\n"
   },
   {
     "key": "angular/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "javascript/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></Faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
   },
   {
     "key": "react-experimental/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
   },
   {
     "key": "svelte/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n</div>\n"
   },
   {
     "key": "vue/sticky/default",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
     "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" [arguments]='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "javascript/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
     "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, Grid, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <Faker api=\"lorem.paragraphs\" arguments={[10, '\\n\\n']}></Faker>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n"
   },
   {
     "key": "react-experimental/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <plus-grid>\n        <plus-grid-item xs=\"7\">\n          <plus-faker api=\"lorem.paragraphs\" arguments={[10, '\\n\\n']}></plus-faker>\n        </plus-grid-item>\n        <plus-grid-item xs=\"5\">\n          <br />\n          <plus-sticky>\n            <aside>A Sticky Sidebar</aside>\n          </plus-sticky>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n"
   },
   {
     "key": "svelte/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
     "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments={[10, '\\n\\n']}></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "vue/sticky/sidebar",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
     "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" :arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
   {
     "key": "angular/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "javascript/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></Faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n"
   },
   {
     "key": "react-experimental/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <br />\n      <plus-sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n"
   },
   {
     "key": "svelte/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n</div>\n"
   },
   {
     "key": "vue/sticky/slots",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "javascript/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky watcher>\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></Faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n"
   },
   {
     "key": "react-experimental/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky watcher>\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n"
   },
   {
     "key": "svelte/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n</div>\n"
   },
   {
     "key": "vue/sticky/state-attribute",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "javascript/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
   {
     "key": "react-dedicated/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import { Faker, Sticky } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Sticky top=\"20px\">\n        <Faker></Faker>\n      </Sticky>\n      <Faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></Faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
   },
   {
     "key": "react-experimental/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-sticky top=\"20px\">\n        <plus-faker></plus-faker>\n      </plus-sticky>\n      <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n"
   },
   {
     "key": "svelte/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n</div>\n"
   },
   {
     "key": "vue/sticky/top",
+    "settings": {
+      "dock": true,
+      "isolate": false,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"

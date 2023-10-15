@@ -66,11 +66,11 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
     })();
 
     context.settings = (() => {
-      const dock = /<body[^>]*\dock(?=\s|>)/i.test(context.file.content);
+      const dock = /<body[^>]*\sdock(?:\s|>)/i.test(context.file.content);
 
-      const isolate = /<body[^>]*\isolate(?=\s|>)/i.test(context.file.content);
+      const isolate = /<body[^>]*\sisolate(?:\s|>)/i.test(context.file.content);
 
-      const rtl = /<body[^>]*\rtl(?=\s|>)/i.test(context.file.content);
+      const rtl = /<body[^>]*\srtl(?:\s|>)/i.test(context.file.content);
 
       if (!dock && !isolate && !rtl) return;
 
