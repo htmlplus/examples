@@ -141,7 +141,7 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
               define(parameters) {
                 const getter = this.addToken(
                   parameters.property.name,
-                  parameters.id + parameters.property.name
+                  'getter' + parameters.id + parameters.property.name
                 );
 
                 const setter = this.addToken(
@@ -176,7 +176,9 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
               getter(parameters) {
                 if (!t.isIdentifier(parameters.pattern.node.property)) return;
 
-                const token = this.getToken(parameters.id + parameters.pattern.node.property.name);
+                const token = this.getToken(
+                  'getter' + parameters.id + parameters.pattern.node.property.name
+                );
 
                 if (!token) return;
 
@@ -187,12 +189,12 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
 
                 const name = left.property.name;
 
-                const setter = this.addToken(
+                const token = this.addToken(
                   'set' + pascalCase(name),
                   'setter' + parameters.id + name
                 );
 
-                const node = t.callExpression(t.identifier(setter.value), [
+                const node = t.callExpression(t.identifier(token.value), [
                   parameters.pattern.node.right
                 ]);
 
@@ -297,39 +299,58 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
 
           parameters.pattern.remove();
         },
-        variable(parameters) {
-          if (!parameters.isRoot) return;
+        variable: {
+          define(parameters) {
+            if (!parameters.isRoot) return;
 
-          parameters.pattern.node.declarations.forEach((declaration) => {
-            const id = declaration.id as any;
+            parameters.pattern.node.declarations.forEach((declaration) => {
+              const id = declaration.id as any;
 
-            // TODO
-            // rename(parameters.pattern, id.name, (node) => {
-            //   return t.memberExpression(node, t.identifier('value'));
-            // });
+              addDependency(this.script, 'react', 'useState', 'useState');
 
-            addDependency(this.script, 'react', 'useState', 'useState');
+              const getter = this.addToken(id.name);
 
-            const getter = this.addToken(id.name);
+              const setter = this.addToken('set' + pascalCase(id.name));
 
-            const setter = this.addToken('set' + pascalCase(id.name), 'setter' + id.name);
-
-            const node = t.variableDeclaration('const', [
-              t.variableDeclarator(
-                t.arrayPattern([t.identifier(getter.value), t.identifier(setter.value)]),
-                t.callExpression(
-                  t.identifier('useState'),
-                  declaration.init ? [declaration.init] : []
+              const node = t.variableDeclaration('const', [
+                t.variableDeclarator(
+                  t.arrayPattern([t.identifier(getter.value), t.identifier(setter.value)]),
+                  t.callExpression(
+                    t.identifier('useState'),
+                    declaration.init ? [declaration.init] : []
+                  )
                 )
-              )
+              ]);
+
+              this.resolve(node);
+
+              parameters.pattern.insertAfter(node);
+            });
+
+            parameters.pattern.remove();
+          },
+          getter(parameters) {
+            const token = this.getToken(parameters.pattern.node.name);
+
+            if (!token) return;
+
+            parameters.pattern.replaceWith(t.identifier(token.value));
+          },
+          setter(parameters) {
+            const left = parameters.pattern.node.left as any;
+
+            const name = left.name;
+
+            const token = this.addToken('set' + pascalCase(name));
+
+            const node = t.callExpression(t.identifier(token.value), [
+              parameters.pattern.node.right
             ]);
 
             this.resolve(node);
 
-            parameters.pattern.insertAfter(node);
-          });
-
-          parameters.pattern.remove();
+            parameters.wrapper.replaceWith(node);
+          }
         }
       },
       template: {
@@ -378,7 +399,7 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
             parameters.pattern.node.closingElement.name = t.jsxIdentifier(next);
           }
         },
-        fragment() { }
+        fragment() {}
       }
     });
 

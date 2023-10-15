@@ -354,24 +354,35 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
 
           parameters.pattern.remove();
         },
-        variable(parameters) {
-          if (!parameters.isRoot) return;
+        variable: {
+          define(parameters) {
+            if (!parameters.isRoot) return;
 
-          parameters.pattern.node.declarations.forEach((declaration) => {
-            const id = declaration.id as any;
+            parameters.pattern.node.declarations.forEach((declaration) => {
+              const id = declaration.id as any;
 
-            rename(parameters.pattern, id.name, (node) => {
-              return t.memberExpression(t.thisExpression(), node);
+              const node = t.classProperty(id, declaration.init);
+
+              this.resolve(node);
+
+              parameters.pattern.insertAfter(node);
             });
 
-            const node = t.classProperty(id, declaration.init);
+            parameters.pattern.remove();
+          },
+          getter(parameters) {
+            parameters.pattern.replaceWith(
+              t.memberExpression(t.thisExpression(), parameters.pattern.node)
+            );
+          },
+          setter(parameters) {
+            parameters.pattern.node.left = t.memberExpression(
+              t.thisExpression(),
+              parameters.pattern.node.left as any
+            );
 
-            this.resolve(node);
-
-            parameters.pattern.insertAfter(node);
-          });
-
-          parameters.pattern.remove();
+            this.resolve(parameters.wrapper.node);
+          }
         }
       },
       template: {

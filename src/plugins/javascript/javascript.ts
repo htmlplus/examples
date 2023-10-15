@@ -50,7 +50,11 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
           constant() {}
         },
         unresolved() {},
-        variable() {}
+        variable: {
+          define() {},
+          getter() {},
+          setter() {}
+        }
       },
       template: {
         element: {

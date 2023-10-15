@@ -238,8 +238,14 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
 
           parameters.pattern.remove();
         },
-        variable(parameters) {
-          this.resolve(parameters.pattern.node);
+        variable: {
+          define(parameters) {
+            this.resolve(parameters.pattern.node);
+          },
+          getter() { },
+          setter(parameters) {
+            this.resolve(parameters.wrapper.node);
+          }
         }
       },
       template: {

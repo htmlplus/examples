@@ -264,7 +264,51 @@ export interface IResolverOptions {
      *       name2 = value2;
      * ```
      */
-    variable: IResolverFunction<{ isRoot: boolean; pattern: NodePath<t.VariableDeclaration> }>;
+    variable: {
+      /**
+       * Examples:
+       * ```
+       *   // 1
+       *   let name = value;
+       *
+       *   // 2
+       *   let name1 = value1,
+       *       name2 = value2;
+       *
+       *   // 3
+       *   var name = value;
+       *
+       *   // 4
+       *   var name1 = value1,
+       *       name2 = value2;
+       * ```
+       */
+      define: IResolverFunction<{
+        isRoot: boolean;
+        pattern: NodePath<t.VariableDeclaration>;
+      }>;
+      /**
+       * Examples:
+       * ```
+       *   // anywhere in script
+       *   name;
+       * ```
+       */
+      getter: IResolverFunction<{
+        pattern: NodePath<t.Identifier>;
+      }>;
+      /**
+       * Examples:
+       * ```
+       *   // anywhere in script
+       *   name = any;
+       * ```
+       */
+      setter: IResolverFunction<{
+        pattern: NodePath<t.AssignmentExpression>;
+        wrapper: NodePath<t.ExpressionStatement>;
+      }>;
+    };
   };
   template: {
     element: {
@@ -311,7 +355,7 @@ export interface IResolverOptions {
        * ```
        *   // 1
        *   <element />
-       * 
+       *
        *   // 2
        *   <element></element>
        * ```
@@ -568,7 +612,65 @@ export class Resolver {
       }
     });
 
-    // script.variable
+    // TODO
+    // script.variable.setter
+    core(this.script, {
+      Identifier: (path) => {
+        if (!t.isAssignmentExpression(path.parent)) return;
+
+        if (!t.isExpressionStatement(path.parentPath!.parent)) return;
+
+        const binding = path.scope.getBinding(path.node.name);
+
+        if (!binding) return;
+
+        if (!t.isVariableDeclarator(binding.path.node)) return;
+
+        if (!t.isVariableDeclaration(binding.path.parentPath!.node)) return;
+
+        if (!['var', 'let'].includes(binding.path.parentPath!.node.kind)) return;
+
+        const wrapper = path.parentPath!.parentPath as any;
+
+        if (this.resolved(wrapper.node)) return;
+
+        const parameters = {
+          pattern: path.parentPath as any,
+          wrapper
+        };
+
+        this.options.script.variable.setter.bind(this)(parameters);
+      }
+    });
+
+    // TODO
+    // script.variable.getter
+    core(this.script, {
+      Identifier: (path) => {
+        const binding = path.scope.getBinding(path.node.name);
+
+        if (!binding) return;
+
+        if (!t.isVariableDeclarator(binding.path.node)) return;
+
+        if (!t.isVariableDeclaration(binding.path.parentPath!.node)) return;
+
+        if (!['var', 'let'].includes(binding.path.parentPath!.node.kind)) return;
+
+        if (path.parent == binding.path.node) return;
+
+        if (!binding.referencePaths.some((reference) => reference.node === path.node)) return;
+
+        const parameters = {
+          pattern: path
+        };
+
+        this.options.script.variable.getter.bind(this)(parameters);
+      }
+    });
+
+    // TODO
+    // script.variable.define
     core(this.script, {
       VariableDeclaration: (path) => {
         if (path.node.kind !== 'let' && path.node.kind !== 'var') return;
@@ -584,7 +686,7 @@ export class Resolver {
           pattern
         };
 
-        this.options.script.variable.bind(this)(parameters);
+        this.options.script.variable.define.bind(this)(parameters);
       }
     });
 

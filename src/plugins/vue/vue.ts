@@ -16,7 +16,6 @@ import {
   getAttribute,
   importResolver,
   isCustomElement,
-  rename,
   write
 } from '@/utils';
 
@@ -263,33 +262,44 @@ export const vue: IPlugin<IVueOptions> = (options) => {
 
           parameters.pattern.remove();
         },
-        variable(parameters) {
-          if (!parameters.isRoot) return;
+        variable: {
+          define(parameters) {
+            if (!parameters.isRoot) return;
 
-          parameters.pattern.node.declarations.forEach((declaration) => {
-            const id = declaration.id as any;
+            parameters.pattern.node.declarations.forEach((declaration) => {
+              const id = declaration.id as any;
 
-            rename(parameters.pattern, id.name, (node) => {
-              return t.memberExpression(node, t.identifier('value'));
+              addDependency(this.script, 'vue', 'ref', 'ref');
+
+              const token = this.addToken(id.name);
+
+              const node = t.variableDeclaration('const', [
+                t.variableDeclarator(
+                  t.identifier(token.value),
+                  t.callExpression(t.identifier('ref'), declaration.init ? [declaration.init] : [])
+                )
+              ]);
+
+              this.resolve(node);
+
+              parameters.pattern.insertAfter(node);
             });
 
-            addDependency(this.script, 'vue', 'ref', 'ref');
+            parameters.pattern.remove();
+          },
+          getter(parameters) {
+            parameters.pattern.replaceWith(
+              t.memberExpression(parameters.pattern.node, t.identifier('value'))
+            );
+          },
+          setter(parameters) {
+            parameters.pattern.node.left = t.memberExpression(
+              parameters.pattern.node.left as any,
+              t.identifier('value')
+            );
 
-            const token = this.addToken(id.name);
-
-            const node = t.variableDeclaration('const', [
-              t.variableDeclarator(
-                t.identifier(token.value),
-                t.callExpression(t.identifier('ref'), declaration.init ? [declaration.init] : [])
-              )
-            ]);
-
-            this.resolve(node);
-
-            parameters.pattern.insertAfter(node);
-          });
-
-          parameters.pattern.remove();
+            this.resolve(parameters.wrapper.node);
+          }
         }
       },
       template: {

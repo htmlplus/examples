@@ -30,15 +30,12 @@
         "printWidth": 50
       }
     },
-    { 
-      "files": "*.svelte", 
-      "options": { 
-        "parser": "svelte" 
-      } 
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
     }
   ],
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports", 
-    "prettier-plugin-svelte"
-  ]
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-svelte"]
 }
