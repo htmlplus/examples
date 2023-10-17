@@ -15,8 +15,8 @@ import {
 import { IContext, IContextDependency } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
-// const SOURCE = './development/index.html';
-// const TARGET = './development';
+// const SOURCE = './src/development/index.html';
+// const TARGET = './src/development';
 
 const SOURCE = '../core/src/components/*/examples/*.html';
 const TARGET = './dist';
