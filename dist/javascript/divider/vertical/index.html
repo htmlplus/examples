@@ -6,7 +6,16 @@
     <title>Divider | Vertical</title>
   </head>
   <body>
-    <div id="app"></div>
+    <plus-grid align-items="center" justify-content="evenly">
+      <plus-grid-item xs="5">
+        <plus-faker></plus-faker>
+      </plus-grid-item>
+      <plus-divider vertical></plus-divider>
+      <plus-grid-item xs="5">
+        <plus-faker></plus-faker>
+      </plus-grid-item>
+    </plus-grid>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

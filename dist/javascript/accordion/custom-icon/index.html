@@ -6,7 +6,12 @@
     <title>Accordion | Custom Icon</title>
   </head>
   <body>
-    <div id="app"></div>
+    <plus-accordion summary="First">
+      <plus-icon slot="icon-expand" name="plus"></plus-icon>
+      <plus-icon slot="icon-collapse" name="dash"></plus-icon>
+      <plus-faker></plus-faker>
+    </plus-accordion>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

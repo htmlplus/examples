@@ -6,7 +6,16 @@
     <title>Breadcrumb | Custom Expander</title>
   </head>
   <body>
-    <div id="app"></div>
+    <plus-center>
+      <plus-breadcrumb separator="-" max="2" expander-text="Show more">
+        <plus-icon slot="expander" name="chevron-compact-right"></plus-icon>
+        <a href="#">HTMLPLUS</a>
+        <a href="#">Core</a>
+        <a href="#">UI Components</a>
+        <a href="#">Breadcrumb</a>
+      </plus-breadcrumb>
+    </plus-center>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

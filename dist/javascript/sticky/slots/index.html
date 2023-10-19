@@ -6,7 +6,15 @@
     <title>Sticky | Slots</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <br />
+      <plus-sticky watcher>
+        <header slot="normal">Normal Header</header>
+        <header slot="stick">Stick Header</header>
+      </plus-sticky>
+      <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

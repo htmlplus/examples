@@ -6,7 +6,14 @@
     <title>Sticky | State Attribute</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <plus-faker api="lorem.paragraphs"></plus-faker>
+      <plus-sticky watcher>
+        <plus-faker></plus-faker>
+      </plus-sticky>
+      <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

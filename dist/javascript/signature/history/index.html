@@ -6,7 +6,15 @@
     <title>Signature | History</title>
   </head>
   <body>
-    <div id="app"></div>
+    <plus-center>
+      <plus-signature id="$signature" background-color="lightgray"></plus-signature>
+    </plus-center>
+    <br />
+    <plus-stack gap="1rem">
+      <button id="$undo" disabled>Undo</button>
+      <button id="$redo" disabled>Redo</button>
+    </plus-stack>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

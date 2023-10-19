@@ -6,7 +6,21 @@
     <title>Dialog | Prevent</title>
   </head>
   <body>
-    <div id="app"></div>
+    <plus-center>
+      <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
+    </plus-center>
+    <plus-dialog id="$dialog" animation="fade" connector="dialog-prevent">
+      <plus-dialog-content>
+        <plus-dialog-header> Dialog Title </plus-dialog-header>
+        <plus-dialog-body>
+          <plus-faker></plus-faker>
+        </plus-dialog-body>
+        <plus-dialog-footer>
+          <plus-dialog-toggler> Close </plus-dialog-toggler>
+        </plus-dialog-footer>
+      </plus-dialog-content>
+    </plus-dialog>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

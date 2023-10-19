@@ -6,7 +6,21 @@
     <title>Sticky | Sidebar</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <header>Header</header>
+      <plus-grid>
+        <plus-grid-item xs="7">
+          <plus-faker api="lorem.paragraphs" arguments='[10, "\n\n"]'></plus-faker>
+        </plus-grid-item>
+        <plus-grid-item xs="5">
+          <br />
+          <plus-sticky>
+            <aside>A Sticky Sidebar</aside>
+          </plus-sticky>
+        </plus-grid-item>
+      </plus-grid>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

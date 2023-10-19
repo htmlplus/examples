@@ -6,7 +6,14 @@
     <title>Scroll Detector | Scroll Indicator</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <plus-progress-bar id="$progressbar" value="0"></plus-progress-bar>
+      <div class="scrollable reference2">
+        <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]' seed="0"></plus-faker>
+      </div>
+      <plus-scroll-detector id="$detector" reference=".reference2" vertical></plus-scroll-detector>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
