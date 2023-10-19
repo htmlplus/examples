@@ -1,0 +1,18 @@
+.container {
+  height: 20rem;
+  overflow: auto;
+}
+header {
+  background: lightgray;
+  text-align: center;
+  padding: 1rem;
+}
+plus-faker {
+  display: block;
+  padding: 1rem;
+  text-align: justify;
+}
+plus-sticky[state='normal'] header {
+  border-radius: 4px;
+  margin: 1rem;
+}

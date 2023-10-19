@@ -19,53 +19,53 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     const resolver = new Resolver(context, {
       script: {
         arrowFunctionExpression: {
-          constant() {}
+          constant() { }
         },
-        constant() {},
+        constant() { },
         element: {
           method: {
             addEventListener: {
               arrowFunctionExpression: {
-                blockStatement() {},
-                callExpression() {}
+                blockStatement() { },
+                callExpression() { }
               },
-              callExpression() {},
-              functionExpression() {},
-              identifier() {}
+              callExpression() { },
+              functionExpression() { },
+              identifier() { }
             }
           },
           property: {
-            constant() {},
+            constant() { },
             state: {
-              define() {},
-              getter() {},
-              setter() {}
+              define() { },
+              getter() { },
+              setter() { }
             }
           },
-          reference() {}
+          reference() { }
         },
-        final() {},
-        functionDeclaration() {},
+        final() { },
+        functionDeclaration() { },
         functionExpression: {
-          constant() {}
+          constant() { }
         },
-        unresolved() {},
+        unresolved() { },
         variable: {
-          define() {},
-          getter() {},
-          setter() {}
+          define() { },
+          getter() { },
+          setter() { }
         }
       },
       template: {
         element: {
           attribute: {
-            class() {},
-            default() {},
-            id() {}
+            class() { },
+            default() { },
+            id() { }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 
@@ -120,6 +120,14 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     });
 
     const patterns = ['templates/**/*.*'];
+
+    if (!context.config) {
+      patterns.push('!templates/config.js.*');
+    }
+
+    if (!context.style) {
+      patterns.push('!templates/style.css.*');
+    }
 
     await write(__dirname, patterns, destination)(model);
 

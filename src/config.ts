@@ -79,9 +79,7 @@ const getComponentName = (context: IContext) => {
 
 const importResolver = (key: string): IImportResolverFunction => {
   return (parameters) => {
-    if (key != 'javascript') {
-      parameters.source = parameters.source.replace(CDN, '');
-    }
+    parameters.source = parameters.source.replace(CDN, '');
 
     if (key == 'react-dedicated') {
       const [, matched] = parameters.source.match(/^@htmlplus\/core\/([^/]+)\.js$/) || [];

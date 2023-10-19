@@ -1,21 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordion | Custom Icon</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <plus-accordion summary="First">
-      <plus-icon slot="icon-expand" name="plus"></plus-icon>
-      <plus-icon slot="icon-collapse" name="dash"></plus-icon>
-      <plus-faker></plus-faker>
-    </plus-accordion>
-
-    <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';
-    </script>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

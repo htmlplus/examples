@@ -1,40 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signature | History</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <plus-center>
-      <plus-signature id="$signature" background-color="lightgray"></plus-signature>
-    </plus-center>
-    <br />
-    <plus-stack gap="1rem">
-      <button id="$undo" disabled>Undo</button>
-      <button id="$redo" disabled>Redo</button>
-    </plus-stack>
-
-    <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/center.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';
-
-      const sync = () => {
-        $undo.disabled = !$signature.canUndo();
-        $redo.disabled = !$signature.canRedo();
-      };
-      $undo.addEventListener('click', () => {
-        $signature.undo();
-        sync();
-      });
-      $redo.addEventListener('click', () => {
-        $signature.redo();
-        sync();
-      });
-      $signature.addEventListener('plus-end', () => {
-        sync();
-      });
-    </script>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

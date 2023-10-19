@@ -1,0 +1,12 @@
+.container {
+  height: 20rem;
+  overflow: auto;
+}
+plus-faker {
+  display: block;
+  padding: 1rem;
+  text-align: justify;
+}
+plus-sticky {
+  background-color: gold;
+}

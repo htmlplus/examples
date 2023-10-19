@@ -1,0 +1,10 @@
+import App from './App.svelte';
+{{#if config.content}}
+import './config.js'; 
+{{/if}}
+
+const app = new App({
+  target: document.getElementById('app')
+});
+
+export default app;

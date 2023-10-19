@@ -1,34 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Detector | Default</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      .container {
-        position: relative;
-      }
-      .scrollable {
-        height: 20em;
-        overflow-y: auto;
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="scrollable reference1">
-        <plus-faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></plus-faker>
-      </div>
-      <plus-scroll-detector id="$detector" reference=".reference1" vertical></plus-scroll-detector>
-    </div>
-
-    <script type="module">
-      import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';
-      import 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';
-
-      $detector.addEventListener('plus-change', (event) => {
-        console.log(event.detail);
-      });
-    </script>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

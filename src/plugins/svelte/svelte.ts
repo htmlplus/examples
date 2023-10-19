@@ -335,7 +335,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
     const patterns = ['templates/**/*.*'];
 
     if (!context.config) {
-      patterns.push('!templates/config.js.*');
+      patterns.push('!templates/src/config.js.*');
     }
 
     await write(__dirname, patterns, destination)(model);
