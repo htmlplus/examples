@@ -399,7 +399,7 @@ export const reactDedicated: IPlugin<IReactDedicatedOptions> = (options) => {
             parameters.pattern.node.closingElement.name = t.jsxIdentifier(next);
           }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 

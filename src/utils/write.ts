@@ -50,6 +50,7 @@ export const write =
           const extension = path.extname(to).replace('.', '');
           switch (extension) {
             case 'js':
+            case 'jsx':
               return 'babel';
             case 'ts':
               return 'typescript';
@@ -61,7 +62,7 @@ export const write =
 
       try {
         if (fs.readFileSync(to, 'utf8') == formated) continue;
-      } catch {}
+      } catch { }
 
       fs.writeFileSync(to, formated, 'utf8');
     }

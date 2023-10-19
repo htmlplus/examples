@@ -7,7 +7,7 @@
   },
   {
     "key": "javascript/accordion/advanced",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-right: 1rem;\n}\n",
     "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify-content=\"space-between\">\n    <span>Summary</span>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
@@ -40,7 +40,7 @@
   },
   {
     "key": "javascript/accordion/custom-icon",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-accordion summary=\"First\">\n  <plus-icon slot=\"icon-expand\" name=\"plus\"></plus-icon>\n  <plus-icon slot=\"icon-collapse\" name=\"dash\"></plus-icon>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -69,7 +69,7 @@
   },
   {
     "key": "javascript/accordion/customized",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
     "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
     "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
@@ -102,7 +102,7 @@
   },
   {
     "key": "javascript/accordion/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-accordion summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -130,7 +130,7 @@
   },
   {
     "key": "javascript/accordion/disabled",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -158,7 +158,7 @@
   },
   {
     "key": "javascript/accordion/open",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -186,7 +186,7 @@
   },
   {
     "key": "javascript/accordion/persistent",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n\nArray.from($accordions.children).forEach((accordion, index, accordions) => {\n  accordion.addEventListener('plus-expand', (event) => {\n    accordions.forEach((accordion) => {\n      accordion.open = event.target == accordion;\n    });\n  });\n});\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n\nArray.from($accordions.children).forEach((accordion, index, accordions) => {\n  accordion.addEventListener('plus-expand', (event) => {\n    accordions.forEach((accordion) => {\n      accordion.open = event.target == accordion;\n    });\n  });\n});\n",
     "template": "<div id=\"$accordions\">\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
@@ -214,7 +214,7 @@
   },
   {
     "key": "javascript/accordion/prevent-from-toggling",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/accordion.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n\n$accordion.addEventListener('plus-collapse', (event) => {\n  if (confirm('Are you sure you want to collapse it?')) return;\n  event.preventDefault();\n});\n$accordion.addEventListener('plus-expand', (event) => {\n  if (confirm('Are you sure you want to expand it?')) return;\n  event.preventDefault();\n});\n",
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\n\n$accordion.addEventListener('plus-collapse', (event) => {\n  if (confirm('Are you sure you want to collapse it?')) return;\n  event.preventDefault();\n});\n$accordion.addEventListener('plus-expand', (event) => {\n  if (confirm('Are you sure you want to expand it?')) return;\n  event.preventDefault();\n});\n",
     "template": "<plus-accordion summary=\"Summary\" id=\"$accordion\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -243,7 +243,7 @@
   },
   {
     "key": "javascript/animation/button",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n\n$button.addEventListener('click', () => {\n  $animation.run = true;\n});\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/center.js';\n\n$button.addEventListener('click', () => {\n  $animation.run = true;\n});\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n",
     "template": "<plus-center>\n  <plus-animation id=\"$animation\" name=\"tada\">\n    <button id=\"$button\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
   },
@@ -277,7 +277,7 @@
   },
   {
     "key": "javascript/animation/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
   },
@@ -311,7 +311,7 @@
   },
   {
     "key": "javascript/animation/duration",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-center>\n  <plus-animation duration=\"2500\" iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
   },
@@ -345,7 +345,7 @@
   },
   {
     "key": "javascript/animation/easing",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/fading-exits/fade-out-down.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-in\"\n      iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n<br />\n<br />\n<br />\n"
   },
@@ -389,7 +389,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $animation.run = event.detail.isIntersecting;\n});\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $animation.run = event.detail.isIntersecting;\n});\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\">\n    <plus-animation id=\"$animation\" name=\"heart-beat\"></plus-animation>\n  </plus-intersection>\n</div>\n"
   },
@@ -443,7 +443,7 @@
   },
   {
     "key": "javascript/animation/keyframes",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\n\n$animation.keyframes = [\n  {\n    transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n    opacity: '1'\n  },\n  {\n    transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n    opacity: '0'\n  }\n];\n",
+    "script": "import '@htmlplus/core/animation.js';\n\n$animation.keyframes = [\n  {\n    transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n    opacity: '1'\n  },\n  {\n    transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n    opacity: '0'\n  }\n];\n",
     "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
     "template": "<div class=\"root\">\n  <plus-animation duration=\"5000\" id=\"$animation\" iterations=\"Infinity\" run></plus-animation>\n</div>\n"
   },
@@ -477,7 +477,7 @@
   },
   {
     "key": "javascript/animation/methods",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n\n$cancel.addEventListener('click', () => {\n  $animation.cancel();\n});\n$finish.addEventListener('click', () => {\n  $animation.finish();\n});\n$pause.addEventListener('click', () => {\n  $animation.pause();\n});\n$play.addEventListener('click', () => {\n  $animation.play();\n});\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n\n$cancel.addEventListener('click', () => {\n  $animation.cancel();\n});\n$finish.addEventListener('click', () => {\n  $animation.finish();\n});\n$pause.addEventListener('click', () => {\n  $animation.pause();\n});\n$play.addEventListener('click', () => {\n  $animation.play();\n});\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-center>\n  <plus-animation id=\"$animation\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$cancel\">Cancel</button>\n  <button id=\"$finish\">Finish</button>\n  <button id=\"$pause\">Pause</button>\n  <button id=\"$play\">Play</button>\n</plus-center>\n"
   },
@@ -511,7 +511,7 @@
   },
   {
     "key": "javascript/animation/name",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/flippers/flip-in-x.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/animation/names/flippers/flip-in-y.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/core/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -546,8 +546,8 @@
   },
   {
     "key": "javascript/animation/register-a-custom-name",
-    "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
     "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
@@ -585,7 +585,7 @@
   },
   {
     "key": "javascript/aspect-ratio/card",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
     "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
   },
@@ -619,7 +619,7 @@
   },
   {
     "key": "javascript/aspect-ratio/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n",
     "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
   },
@@ -653,7 +653,7 @@
   },
   {
     "key": "javascript/aspect-ratio/image",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\n",
     "style": "img {\n  object-fit: cover;\n}\n",
     "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" />\n</plus-aspect-ratio>\n"
   },
@@ -686,7 +686,7 @@
   },
   {
     "key": "javascript/aspect-ratio/map",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\n",
     "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
   },
   {
@@ -715,7 +715,7 @@
   },
   {
     "key": "javascript/aspect-ratio/more",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": ".box {\n  color: white;\n  padding: 0.75rem;\n  margin: 0.25rem;\n}\n.ratio-one {\n  width: 40.625%;\n  float: right;\n}\n.one {\n  background: #08dfc8;\n}\n.two {\n  background: #ff5449;\n}\n.three {\n  background: #5f9ee9;\n}\n.four {\n  background: #ffc903;\n}\n.five {\n  background: #9073c1;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid>\n      <plus-grid-item xs=\"12\">\n        <plus-aspect-ratio value=\"3/2\" class=\"ratio-one\">\n          <div class=\"box one\">3/2</div>\n        </plus-aspect-ratio>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-aspect-ratio value=\"16/9\">\n          <div class=\"box two\">16/9</div>\n        </plus-aspect-ratio>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid>\n      <plus-grid-item xs=\"6\">\n        <plus-aspect-ratio value=\"1\">\n          <div class=\"box three\">1/1</div>\n        </plus-aspect-ratio>\n      </plus-grid-item>\n      <plus-grid-item xs=\"6\" align-self=\"end\">\n        <plus-aspect-ratio value=\"4/3\">\n          <div class=\"box four\">4/3</div>\n        </plus-aspect-ratio>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-aspect-ratio value=\"18/6\">\n          <div class=\"box five\">18/6</div>\n        </plus-aspect-ratio>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -748,7 +748,7 @@
   },
   {
     "key": "javascript/aspect-ratio/video",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\n",
+    "script": "import '@htmlplus/core/aspect-ratio.js';\n",
     "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
   },
   {
@@ -777,7 +777,7 @@
   },
   {
     "key": "javascript/avatar/custom-size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
@@ -810,7 +810,7 @@
   },
   {
     "key": "javascript/avatar/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n</plus-center>\n"
   },
   {
@@ -839,7 +839,7 @@
   },
   {
     "key": "javascript/avatar/group-gutter",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
@@ -872,7 +872,7 @@
   },
   {
     "key": "javascript/avatar/group-hoverable",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -900,7 +900,7 @@
   },
   {
     "key": "javascript/avatar/group-stacked",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -928,7 +928,7 @@
   },
   {
     "key": "javascript/avatar/group-tooltip",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -956,7 +956,7 @@
   },
   {
     "key": "javascript/avatar/group",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -984,7 +984,7 @@
   },
   {
     "key": "javascript/avatar/icon",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
@@ -1012,7 +1012,7 @@
   },
   {
     "key": "javascript/avatar/image",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
@@ -1040,7 +1040,7 @@
   },
   {
     "key": "javascript/avatar/link",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
@@ -1068,7 +1068,7 @@
   },
   {
     "key": "javascript/avatar/shape",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -1096,7 +1096,7 @@
   },
   {
     "key": "javascript/avatar/size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -1125,7 +1125,7 @@
   },
   {
     "key": "javascript/avatar/slots",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "plus-avatar > div {\n  background-color: gray;\n  color: white;\n  font-size: 10px;\n  padding: 0.125rem 0.25rem;\n  font-family: monospace;\n  line-height: 1;\n}\n",
     "template": "<plus-stack gap=\"8rem\">\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"left\">left</div>\n    <div slot=\"left-bottom\">left-bottom</div>\n    <div slot=\"left-top\">left-top</div>\n    <div slot=\"right\">right</div>\n    <div slot=\"right-bottom\">right-bottom</div>\n    <div slot=\"right-top\">right-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"end\">end</div>\n    <div slot=\"end-bottom\">end-bottom</div>\n    <div slot=\"end-top\">end-top</div>\n    <div slot=\"start\">start</div>\n    <div slot=\"start-bottom\">start-bottom</div>\n    <div slot=\"start-top\">start-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n</plus-stack>\n"
   },
@@ -1159,7 +1159,7 @@
   },
   {
     "key": "javascript/avatar/svg-ratio",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
@@ -1192,7 +1192,7 @@
   },
   {
     "key": "javascript/avatar/svg",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
@@ -1220,7 +1220,7 @@
   },
   {
     "key": "javascript/avatar/text",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
   },
   {
@@ -1248,7 +1248,7 @@
   },
   {
     "key": "javascript/avatar/tooltip",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
     "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
@@ -1276,7 +1276,7 @@
   },
   {
     "key": "javascript/avatar/wildcard-size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"48\">48px</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
@@ -1305,7 +1305,7 @@
   },
   {
     "key": "javascript/breadcrumb/custom-expander",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
     "template": "<plus-center>\n  <plus-breadcrumb separator=\"-\" max=\"2\" expander-text=\"Show more\">\n    <plus-icon slot=\"expander\" name=\"chevron-compact-right\"></plus-icon>\n    <a href=\"#\">HTMLPLUS</a>\n    <a href=\"#\">Core</a>\n    <a href=\"#\">UI Components</a>\n    <a href=\"#\">Breadcrumb</a>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
@@ -1339,7 +1339,7 @@
   },
   {
     "key": "javascript/breadcrumb/custom-separator",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
     "template": "<plus-center>\n  <plus-breadcrumb>\n    <plus-icon slot=\"separator\" name=\"caret-right-fill\"></plus-icon>\n    <a href=\"#\">First</a>\n    <a href=\"#\">Second</a>\n    <a href=\"#\">Third</a>\n    <a href=\"#\">Fourth</a>\n    <a href=\"#\">Fifth</a>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
@@ -1373,7 +1373,7 @@
   },
   {
     "key": "javascript/breadcrumb/customized",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb {\n  --plus-breadcrumb-gutter-x: 0.75em;\n  --plus-breadcrumb-gutter-y: 0.75em;\n  background-color: lightgray;\n  border-radius: 0.25em;\n  display: block;\n  padding: 0.75em;\n}\nplus-breadcrumb a {\n  text-decoration: none;\n  color: black;\n}\nplus-breadcrumb::part(expander) {\n  background-color: transparent;\n  color: black;\n  height: 1em;\n  width: 1em;\n}\nplus-breadcrumb::part(separator) {\n  color: black;\n  height: 0.75em;\n  width: 0.75em;\n}\n",
     "template": "<plus-breadcrumb max=\"2\">\n  <plus-icon slot=\"separator\" name=\"arrow-right-short\"></plus-icon>\n  <a href=\"#\">HTMLPLUS</a>\n  <a href=\"#\">Core</a>\n  <a href=\"#\">UI Components</a>\n  <a href=\"#\">Breadcrumb</a>\n</plus-breadcrumb>\n"
   },
@@ -1407,7 +1407,7 @@
   },
   {
     "key": "javascript/breadcrumb/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
     "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <a href=\"#\">HTMLPLUS</a>\n    <a href=\"#\">Core</a>\n    <a href=\"#\">UI Components</a>\n    <span>Breadcrumb</span>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
@@ -1441,7 +1441,7 @@
   },
   {
     "key": "javascript/breadcrumb/limitation",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
     "template": "<plus-stack gap=\"0.75rem\" vertical>\n  <plus-breadcrumb separator=\"/\" max=\"4\" offset=\"0\">\n    <a href=\"#\">Item 1</a>\n    <a href=\"#\">Item 2</a>\n    <a href=\"#\">Item 3</a>\n    <a href=\"#\">Item 4</a>\n    <a href=\"#\">Item 5</a>\n    <a href=\"#\">Item 6</a>\n    <a href=\"#\">Item 7</a>\n    <a href=\"#\">Item 8</a>\n  </plus-breadcrumb>\n  <plus-breadcrumb separator=\"/\" max=\"4\" offset=\"2\">\n    <a href=\"#\">Item 1</a>\n    <a href=\"#\">Item 2</a>\n    <a href=\"#\">Item 3</a>\n    <a href=\"#\">Item 4</a>\n    <a href=\"#\">Item 5</a>\n    <a href=\"#\">Item 6</a>\n    <a href=\"#\">Item 7</a>\n    <a href=\"#\">Item 8</a>\n  </plus-breadcrumb>\n  <plus-breadcrumb separator=\"/\" max=\"4\" offset=\"-1\">\n    <a href=\"#\">Item 1</a>\n    <a href=\"#\">Item 2</a>\n    <a href=\"#\">Item 3</a>\n    <a href=\"#\">Item 4</a>\n    <a href=\"#\">Item 5</a>\n    <a href=\"#\">Item 6</a>\n    <a href=\"#\">Item 7</a>\n    <a href=\"#\">Item 8</a>\n  </plus-breadcrumb>\n</plus-stack>\n"
   },
@@ -1475,7 +1475,7 @@
   },
   {
     "key": "javascript/breadcrumb/separator",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/breadcrumb.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
     "template": "<plus-center>\n  <plus-breadcrumb separator=\"-\">\n    <a href=\"#\">First</a>\n    <a href=\"#\">Second</a>\n    <a href=\"#\">Third</a>\n    <a href=\"#\">Fourth</a>\n    <a href=\"#\">Fifth</a>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
@@ -1509,7 +1509,7 @@
   },
   {
     "key": "javascript/browse/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/browse.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n});\n",
+    "script": "import '@htmlplus/core/browse.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n});\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse id=\"$browse\" droppable> Click or Drag & Drop a file(s) here </plus-browse>\n"
   },
@@ -1543,7 +1543,7 @@
   },
   {
     "key": "javascript/card/background-color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\nplus-card.pink {\n  --plus-card-background-color: #ef9a9a;\n}\nplus-card.yellow {\n  --plus-card-background-color: #fff59d;\n}\nplus-card.blue {\n  --plus-card-background-color: #80cbc4;\n}\n",
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"pink\"></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"yellow\"></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"blue\"></plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -1577,7 +1577,7 @@
   },
   {
     "key": "javascript/card/border-color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\nplus-card.pink {\n  --plus-card-border-color: #ef9a9a;\n}\nplus-card.yellow {\n  --plus-card-border-color: #fff59d;\n}\nplus-card.blue {\n  --plus-card-border-color: #80cbc4;\n}\n",
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"pink\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"yellow\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"blue\" outlined></plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -1611,7 +1611,7 @@
   },
   {
     "key": "javascript/card/border-width",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n",
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-1\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-2\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-3\" outlined></plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -1645,7 +1645,7 @@
   },
   {
     "key": "javascript/card/customize",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n",
+    "script": "import '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card elevation=\"12\" outlined></plus-card>\n"
   },
@@ -1689,7 +1689,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n",
+    "script": "import '@htmlplus/core/card.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-card></plus-card>\n</div>\n"
   },
@@ -1743,7 +1743,7 @@
   },
   {
     "key": "javascript/card/elevation",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n\n$input.addEventListener('change', (event) => {\n  $card.elevation = event.target.value;\n});\n",
+    "script": "import '@htmlplus/core/card.js';\n\n$input.addEventListener('change', (event) => {\n  $card.elevation = event.target.value;\n});\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card id=\"$card\" elevation=\"12\"></plus-card>\n<br />\n<input id=\"$input\" type=\"range\" value=\"12\" min=\"1\" max=\"24\" />\n"
   },
@@ -1777,7 +1777,7 @@
   },
   {
     "key": "javascript/card/outlined",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\n",
+    "script": "import '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card outlined></plus-card>\n"
   },
@@ -1821,7 +1821,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n  margin: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-grid justify-content=\"evenly\" gutter=\"md\">\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile outlined></plus-card>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" sm=\"auto\">\n      <plus-card tile elevation=\"5\"></plus-card>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
@@ -1885,7 +1885,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+    "script": "import '@htmlplus/core/center.js';\n",
     "style": "plus-center {\n  height: 10rem;\n  background-color: whitesmoke;\n}\n",
     "template": "<plus-center>All elements are centered</plus-center>\n"
   },
@@ -1938,7 +1938,7 @@
   },
   {
     "key": "javascript/center/inline",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
   },
   {
@@ -1966,7 +1966,7 @@
   },
   {
     "key": "javascript/click-outside/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/click-outside.js';\n\nlet inside = 0;\nlet outside = 0;\n$clickOutside.addEventListener('click', () => {\n  const count = inside + 1;\n  inside = count;\n  $inside.innerHTML = `${count}`;\n});\n$clickOutside.addEventListener('plus-click-outside', () => {\n  const count = outside + 1;\n  outside = count;\n  $outside.innerHTML = `${count}`;\n});\n",
+    "script": "import '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/click-outside.js';\n\nlet inside = 0;\nlet outside = 0;\n$clickOutside.addEventListener('click', () => {\n  const count = inside + 1;\n  inside = count;\n  $inside.innerHTML = `${count}`;\n});\n$clickOutside.addEventListener('plus-click-outside', () => {\n  const count = outside + 1;\n  outside = count;\n  $outside.innerHTML = `${count}`;\n});\n",
     "template": "<plus-click-outside id=\"$clickOutside\">\n  <plus-card elevation=\"10\">\n    <plus-card-body>\n      <b id=\"$inside\">0</b> time(s) inside clicked\n      <br />\n      <b id=\"$outside\">0</b> time(s) outside clicked\n    </plus-card-body>\n  </plus-card>\n</plus-click-outside>\n"
   },
   {
@@ -1995,7 +1995,7 @@
   },
   {
     "key": "javascript/click-outside/menu",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/click-outside.js';\n\n$button.addEventListener('click', () => {\n  $menu.hidden = !$menu.hidden;\n});\n$clickOutside.addEventListener('plus-click-outside', () => {\n  $menu.hidden = true;\n});\n",
+    "script": "import '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\n\n$button.addEventListener('click', () => {\n  $menu.hidden = !$menu.hidden;\n});\n$clickOutside.addEventListener('plus-click-outside', () => {\n  $menu.hidden = true;\n});\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
     "template": "<plus-center>\n  <plus-click-outside id=\"$clickOutside\">\n    <button id=\"$button\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"$menu\" hidden outlined>\n      <plus-card-body> It will stay visible until you click outside. </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
   },
@@ -2028,7 +2028,7 @@
   },
   {
     "key": "javascript/counter/decimal",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2056,7 +2056,7 @@
   },
   {
     "key": "javascript/counter/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2084,7 +2084,7 @@
   },
   {
     "key": "javascript/counter/delay",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2112,7 +2112,7 @@
   },
   {
     "key": "javascript/counter/duration",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2151,7 +2151,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $counter.play = event.detail.isIntersecting;\n});\n",
+    "script": "import '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $counter.play = event.detail.isIntersecting;\n});\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\">\n    <plus-counter id=\"$counter\" to=\"1000\"></plus-counter>\n  </plus-intersection>\n</div>\n"
   },
@@ -2204,7 +2204,7 @@
   },
   {
     "key": "javascript/counter/numerals",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n\n$counter.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n\n$counter.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
     "template": "<plus-center>\n  <plus-counter id=\"$counter\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2232,7 +2232,7 @@
   },
   {
     "key": "javascript/counter/range",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2260,7 +2260,7 @@
   },
   {
     "key": "javascript/counter/reverse",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2288,7 +2288,7 @@
   },
   {
     "key": "javascript/counter/separator-decimal",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter decimal=\".\" decimals=\"2\" separator=\",\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2316,7 +2316,7 @@
   },
   {
     "key": "javascript/counter/separator",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/counter.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
     "template": "<plus-center>\n  <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n</plus-center>\n"
   },
   {
@@ -2354,7 +2354,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  area=\"1\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
@@ -2412,7 +2412,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  aspect-ratio=\"3/4\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
@@ -2460,7 +2460,7 @@
   },
   {
     "key": "javascript/cropper/backdrop",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
@@ -2488,7 +2488,7 @@
   },
   {
     "key": "javascript/cropper/background",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"false\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"true\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
@@ -2526,7 +2526,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n"
   },
   {
@@ -2584,7 +2584,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\n\n$dialog.addEventListener('plus-opened', () => {\n  $cropper.disabled = false;\n});\n$dialog.addEventListener('plus-closed', () => {\n  $cropper.disabled = true;\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\n\n$dialog.addEventListener('plus-opened', () => {\n  $cropper.disabled = false;\n});\n$dialog.addEventListener('plus-closed', () => {\n  $cropper.disabled = true;\n});\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog id=\"$dialog\" animation=\"fade\" connector=\"dialog-cropper\">\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        id=\"$cropper\"\n        disabled\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -2642,7 +2642,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  disabled\n></plus-cropper>\n"
   },
   {
@@ -2700,7 +2700,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  guides\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
@@ -2758,7 +2758,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\n",
     "template": "<plus-cropper\n  indicator\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
@@ -2807,7 +2807,7 @@
   },
   {
     "key": "javascript/cropper/mode",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-cropper {\n  height: 18rem;\n}\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      mode=\"move\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      view=\"none\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      mode=\"crop\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -2841,7 +2841,7 @@
   },
   {
     "key": "javascript/cropper/shape",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -2875,7 +2875,7 @@
   },
   {
     "key": "javascript/cropper/styles",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-cropper {\n  height: 250px;\n}\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"5\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"/assets/images/penguin.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\">\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"/assets/images/penguin.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"/assets/images/cat.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"/assets/images/cat.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"/assets/images/ladybug.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\">\n    <plus-cropper class=\"style-6\" src=\"/assets/images/bear.jpg\"></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -2908,7 +2908,7 @@
   },
   {
     "key": "javascript/cropper/to-base64",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  const image = new Image();\n  image.src = $cropper.toCanvas().toDataURL();\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  const image = new Image();\n  image.src = $cropper.toCanvas().toDataURL();\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n});\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Base64</button>\n</plus-center>\n"
   },
   {
@@ -2936,7 +2936,7 @@
   },
   {
     "key": "javascript/cropper/to-blob",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n});\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Blob</button>\n</plus-center>\n"
   },
   {
@@ -2964,7 +2964,7 @@
   },
   {
     "key": "javascript/cropper/to-url",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    open(URL.createObjectURL(blob), '_blank');\n  });\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    open(URL.createObjectURL(blob), '_blank');\n  });\n});\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To URL</button>\n</plus-center>\n"
   },
   {
@@ -2992,7 +2992,7 @@
   },
   {
     "key": "javascript/cropper/zoom-ratio",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
@@ -3020,7 +3020,7 @@
   },
   {
     "key": "javascript/cropper/zoomable",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
@@ -3048,7 +3048,7 @@
   },
   {
     "key": "javascript/dialog/animation",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-animation\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-animation\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3076,7 +3076,7 @@
   },
   {
     "key": "javascript/dialog/backdrop",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop=\"false\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3104,7 +3104,7 @@
   },
   {
     "key": "javascript/dialog/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-default\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog connector=\"dialog-default\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3132,7 +3132,7 @@
   },
   {
     "key": "javascript/dialog/full-height",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-full-height\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-full-height\" placement=\"center\" full-height>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3160,7 +3160,7 @@
   },
   {
     "key": "javascript/dialog/full-width",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-full-width\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-full-width\" full-width>\n  <plus-dialog-content>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3188,7 +3188,7 @@
   },
   {
     "key": "javascript/dialog/fullscreen",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-fullscreen\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-fullscreen\" placement=\"bottom\" fullscreen>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3216,7 +3216,7 @@
   },
   {
     "key": "javascript/dialog/nesting",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"1rem\">\n  <plus-dialog-toggler connector=\"dialog-nesting-1\"> Open Dialog 1 </plus-dialog-toggler>\n  <plus-dialog-toggler connector=\"dialog-nesting-2\"> Open Dialog 2 </plus-dialog-toggler>\n  <plus-dialog-toggler connector=\"dialog-nesting-3\"> Open Dialog 3 </plus-dialog-toggler>\n</plus-stack>\n<plus-dialog animation=\"fade\" connector=\"dialog-nesting-1\" size=\"xl\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog 1 </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler connector=\"dialog-nesting-2\"> Open Dialog 2 </plus-dialog-toggler>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n<plus-dialog animation=\"fade\" connector=\"dialog-nesting-2\" size=\"lg\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog 2 </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler connector=\"dialog-nesting-3\"> Open Dialog 3 </plus-dialog-toggler>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n<plus-dialog animation=\"fade\" connector=\"dialog-nesting-3\" size=\"sm\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog 3 </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3244,7 +3244,7 @@
   },
   {
     "key": "javascript/dialog/persistent",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-persistent\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-persistent\" persistent>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3272,7 +3272,7 @@
   },
   {
     "key": "javascript/dialog/placement",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-placement\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-placement\" placement=\"center-bottom\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3300,7 +3300,7 @@
   },
   {
     "key": "javascript/dialog/prevent",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n\n$dialog.addEventListener('plus-open', (event) => {\n  if (confirm('Are you sure you want to open it?')) return;\n  event.preventDefault();\n});\n$dialog.addEventListener('plus-close', (event) => {\n  if (confirm('Are you sure you want to close it?')) return;\n  event.preventDefault();\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\n$dialog.addEventListener('plus-open', (event) => {\n  if (confirm('Are you sure you want to open it?')) return;\n  event.preventDefault();\n});\n$dialog.addEventListener('plus-close', (event) => {\n  if (confirm('Are you sure you want to close it?')) return;\n  event.preventDefault();\n});\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-prevent\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog id=\"$dialog\" animation=\"fade\" connector=\"dialog-prevent\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3328,7 +3328,7 @@
   },
   {
     "key": "javascript/dialog/scrollable",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-scrollable\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-scrollable\" scrollable>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3356,7 +3356,7 @@
   },
   {
     "key": "javascript/dialog/specific-scrollable",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-footer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-header.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-specific-scrollable\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-specific-scrollable\" scrollable>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body scrollable>\n      <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3384,7 +3384,7 @@
   },
   {
     "key": "javascript/dialog/sticky",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-content.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/dialog.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-sticky\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-sticky\" full-width sticky>\n  <plus-dialog-content>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
@@ -3413,7 +3413,7 @@
   },
   {
     "key": "javascript/divider/card",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n",
     "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n",
     "template": "<plus-card elevation=\"10\">\n  Item 1\n  <plus-divider></plus-divider>\n  Item 2\n  <plus-divider></plus-divider>\n  Item 3\n  <plus-divider></plus-divider>\n  Item 4\n  <plus-divider></plus-divider>\n  Item 5\n</plus-card>\n"
   },
@@ -3447,7 +3447,7 @@
   },
   {
     "key": "javascript/divider/customize",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-divider {\n  --plus-divider-color: darkgray;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n",
     "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    <plus-faker></plus-faker>\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    <plus-faker></plus-faker>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -3481,7 +3481,7 @@
   },
   {
     "key": "javascript/divider/horizontal",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
     "template": "<plus-faker></plus-faker>\n<plus-divider></plus-divider>\n<plus-faker></plus-faker>\n<plus-divider></plus-divider>\n<plus-faker></plus-faker>\n"
   },
@@ -3524,7 +3524,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
   },
   {
@@ -3583,7 +3583,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nspan {\n  background-color: white;\n  color: black;\n  padding: 0.5rem 1rem;\n}\nplus-divider {\n  --plus-divider-color: lightgray;\n  --plus-divider-opacity: 1;\n}\nplus-sticky {\n  margin-bottom: 20rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
   },
@@ -3636,7 +3636,7 @@
   },
   {
     "key": "javascript/divider/type",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n<br />\n<plus-divider type=\"double\"></plus-divider>\n<br />\n<plus-divider type=\"groove\"></plus-divider>\n<br />\n<plus-divider type=\"inset\"></plus-divider>\n<br />\n<plus-divider type=\"outset\"></plus-divider>\n<br />\n<plus-divider type=\"ridge\"></plus-divider>\n<br />\n<plus-divider type=\"solid\"></plus-divider>\n"
   },
   {
@@ -3674,7 +3674,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
   },
   {
@@ -3722,7 +3722,7 @@
   },
   {
     "key": "javascript/divider/vertical",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    <plus-faker></plus-faker>\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    <plus-faker></plus-faker>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
@@ -3750,7 +3750,7 @@
   },
   {
     "key": "javascript/divider/width",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/divider.js';\n",
+    "script": "import '@htmlplus/core/divider.js';\n",
     "template": "<plus-divider width=\"xs\"></plus-divider>\n<br />\n<plus-divider width=\"sm\"></plus-divider>\n<br />\n<plus-divider width=\"md\"></plus-divider>\n<br />\n<plus-divider width=\"lg\"></plus-divider>\n<br />\n<plus-divider width=\"xl\"></plus-divider>\n"
   },
   {
@@ -3779,7 +3779,7 @@
   },
   {
     "key": "javascript/drawer/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/drawer-toggler.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/drawer.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/drawer-toggler.js';\nimport '@htmlplus/core/drawer.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -3812,7 +3812,7 @@
   },
   {
     "key": "javascript/faker/api",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
   },
   {
@@ -3840,7 +3840,7 @@
   },
   {
     "key": "javascript/faker/arguments",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\" arguments='[5, \"\\n\\n\"]'></plus-faker>\n"
   },
   {
@@ -3868,7 +3868,7 @@
   },
   {
     "key": "javascript/faker/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
   {
@@ -3907,8 +3907,8 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/ja';\n\nimport { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
   {
@@ -3960,7 +3960,7 @@
   },
   {
     "key": "javascript/faker/more",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-faker api=\"name.fullName\"></plus-faker>\n  <plus-faker api=\"address.county\"></plus-faker>\n  <plus-faker api=\"date.weekday\"></plus-faker>\n  <plus-faker api=\"animal.dog\"></plus-faker>\n  <plus-faker api=\"internet.email\"></plus-faker>\n  <plus-faker api=\"phone.number\"></plus-faker>\n  <plus-faker api=\"color.human\"></plus-faker>\n  <plus-faker api=\"datatype.uuid\"></plus-faker>\n</plus-stack>\n"
   },
   {
@@ -3988,7 +3988,7 @@
   },
   {
     "key": "javascript/faker/seed",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker seed=\"12345\"></plus-faker>\n"
   },
   {
@@ -4017,7 +4017,7 @@
   },
   {
     "key": "javascript/floating/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "div {\n  position: relative;\n}\n",
     "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
@@ -4060,7 +4060,7 @@
       "isolate": true,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n<br />\n<br />\n<br />\n<plus-floating fixed>\n  <plus-icon name=\"circle-fill\"></plus-icon>\n</plus-floating>\n"
   },
   {
@@ -4109,7 +4109,7 @@
   },
   {
     "key": "javascript/floating/offset",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "div {\n  position: relative;\n}\n",
     "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating offset=\"[20, 20]\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
@@ -4143,7 +4143,7 @@
   },
   {
     "key": "javascript/floating/placement",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "div {\n  position: relative;\n}\n",
     "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
@@ -4176,7 +4176,7 @@
   },
   {
     "key": "javascript/format-bytes/decimals",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n  <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n  <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4204,7 +4204,7 @@
   },
   {
     "key": "javascript/format-bytes/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\n",
     "template": "<plus-center>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n</plus-center>\n"
   },
   {
@@ -4232,7 +4232,7 @@
   },
   {
     "key": "javascript/format-bytes/display",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4260,7 +4260,7 @@
   },
   {
     "key": "javascript/format-bytes/formatting",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1500\"></plus-format-bytes>\n  <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n  <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4288,7 +4288,7 @@
   },
   {
     "key": "javascript/format-bytes/locale",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"10000100\" locale=\"en\" unit=\"kilo\"></plus-format-bytes>\n  <plus-format-bytes value=\"10000100\" locale=\"de\" unit=\"kilo\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4316,7 +4316,7 @@
   },
   {
     "key": "javascript/format-bytes/separator",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4344,7 +4344,7 @@
   },
   {
     "key": "javascript/format-bytes/signed",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"0\"></plus-format-bytes>\n  <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n  <plus-format-bytes value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4372,7 +4372,7 @@
   },
   {
     "key": "javascript/format-bytes/standard",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n  <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4400,7 +4400,7 @@
   },
   {
     "key": "javascript/format-bytes/unit",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/format-bytes.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/format-bytes.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack vertical>\n  <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n  <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
@@ -4429,7 +4429,7 @@
   },
   {
     "key": "javascript/grid/align-content",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid align-content=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4463,7 +4463,7 @@
   },
   {
     "key": "javascript/grid/align-items",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4497,7 +4497,7 @@
   },
   {
     "key": "javascript/grid/align-self",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"grow\" align-self=\"start\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\" align-self=\"end\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4531,7 +4531,7 @@
   },
   {
     "key": "javascript/grid/auto-sizing",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n</plus-grid>\n<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4565,7 +4565,7 @@
   },
   {
     "key": "javascript/grid/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4599,7 +4599,7 @@
   },
   {
     "key": "javascript/grid/gutter-x",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid gutter-x=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4633,7 +4633,7 @@
   },
   {
     "key": "javascript/grid/gutter-y",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid gutter-y=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4667,7 +4667,7 @@
   },
   {
     "key": "javascript/grid/gutter",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid gutter=\"lg\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4701,7 +4701,7 @@
   },
   {
     "key": "javascript/grid/hide",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item hide-sm xs=\"3\">\n    <div>xs=3, hide-sm</div>\n  </plus-grid-item>\n  <plus-grid-item hide-md xs=\"4\">\n    <div>xs=4, hide-md</div>\n  </plus-grid-item>\n  <plus-grid-item hide-lg xs=\"5\">\n    <div>xs=5, hide-lg</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4735,7 +4735,7 @@
   },
   {
     "key": "javascript/grid/justify-content",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid justify-content=\"center\">\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4769,7 +4769,7 @@
   },
   {
     "key": "javascript/grid/offset",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item offset-xs=\"3\" xs=\"3\">\n    <div>offset-xs=\"3\", xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4803,7 +4803,7 @@
   },
   {
     "key": "javascript/grid/order",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid>\n  <plus-grid-item order-xs=\"3\" xs=\"grow\">\n    <div>order=3</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"2\" xs=\"grow\">\n    <div>order=2</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"1\" xs=\"grow\">\n    <div>order=1</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4837,7 +4837,7 @@
   },
   {
     "key": "javascript/grid/reverse",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid reverse>\n  <plus-grid-item xs=\"2\">\n    <div>Item 1</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 3</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4871,7 +4871,7 @@
   },
   {
     "key": "javascript/grid/vertical",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid align-items=\"center\" vertical>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4905,7 +4905,7 @@
   },
   {
     "key": "javascript/grid/wrap",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\n",
+    "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
@@ -4938,7 +4938,7 @@
   },
   {
     "key": "javascript/icon/color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"#08DFC8\"></plus-icon>\n  <plus-icon name=\"house\" color=\"#FF5449\"></plus-icon>\n  <plus-icon name=\"house\" color=\"#5F9EE9\"></plus-icon>\n  <plus-icon name=\"house\" color=\"#FFC903\"></plus-icon>\n  <plus-icon name=\"house\" color=\"#9073C1\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -4967,7 +4967,7 @@
   },
   {
     "key": "javascript/icon/custom-color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n</plus-stack>\n"
   },
@@ -5000,7 +5000,7 @@
   },
   {
     "key": "javascript/icon/custom-size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5028,7 +5028,7 @@
   },
   {
     "key": "javascript/icon/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
   {
@@ -5056,7 +5056,7 @@
   },
   {
     "key": "javascript/icon/flip",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\"></plus-icon>\n  <plus-icon name=\"house\" flip=\"horizontal\"></plus-icon>\n  <plus-icon name=\"house\" flip=\"vertical\"></plus-icon>\n  <plus-icon name=\"house\" flip=\"both\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5095,8 +5095,8 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5148,7 +5148,7 @@
   },
   {
     "key": "javascript/icon/label",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\" label=\"Go to home\"></plus-icon>\n</plus-center>\n"
   },
   {
@@ -5187,8 +5187,8 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5251,8 +5251,8 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5305,7 +5305,7 @@
   },
   {
     "key": "javascript/icon/override-size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
   },
@@ -5339,8 +5339,8 @@
   },
   {
     "key": "javascript/icon/register-a-custom-name",
-    "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
   },
   {
@@ -5372,7 +5372,7 @@
   },
   {
     "key": "javascript/icon/rotate",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" rotate=\"0\"></plus-icon>\n  <plus-icon name=\"house\" rotate=\"90\"></plus-icon>\n  <plus-icon name=\"house\" rotate=\"180\"></plus-icon>\n  <plus-icon name=\"house\" rotate=\"270\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5400,7 +5400,7 @@
   },
   {
     "key": "javascript/icon/size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"4x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"5x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"6x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"7x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"8x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"9x\"></plus-icon>\n</plus-stack>\n"
   },
   {
@@ -5439,7 +5439,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card-body.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $status.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n});\n",
+    "script": "import '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $status.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n});\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" z-index=\"1\">\n    <plus-center>\n      <div id=\"$status\" class=\"status\"></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection id=\"$intersection\">\n    <plus-card elevation=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
@@ -5503,7 +5503,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/card.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/intersection.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
+    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
@@ -5556,7 +5556,7 @@
   },
   {
     "key": "javascript/progress-bar/aria-label",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n"
   },
   {
@@ -5584,7 +5584,7 @@
   },
   {
     "key": "javascript/progress-bar/buffer",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>\n"
   },
   {
@@ -5612,7 +5612,7 @@
   },
   {
     "key": "javascript/progress-bar/custom-label",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
   },
   {
@@ -5640,7 +5640,7 @@
   },
   {
     "key": "javascript/progress-bar/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar></plus-progress-bar>\n"
   },
   {
@@ -5669,7 +5669,7 @@
   },
   {
     "key": "javascript/progress-bar/height",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n",
     "template": "<plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\n"
   },
@@ -5702,7 +5702,7 @@
   },
   {
     "key": "javascript/progress-bar/indeterminate",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
   },
   {
@@ -5730,7 +5730,7 @@
   },
   {
     "key": "javascript/progress-bar/label",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar label value=\"75\"></plus-progress-bar>\n"
   },
   {
@@ -5758,7 +5758,7 @@
   },
   {
     "key": "javascript/progress-bar/min-and-max",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n<br />\n<plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n"
   },
   {
@@ -5786,7 +5786,7 @@
   },
   {
     "key": "javascript/progress-bar/value",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+    "script": "import '@htmlplus/core/progress-bar.js';\n",
     "template": "<plus-progress-bar value=\"25\"></plus-progress-bar>\n"
   },
   {
@@ -5825,7 +5825,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference1\" vertical></plus-scroll-detector>\n</div>\n"
   },
@@ -5889,7 +5889,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  $progressbar.value = event.detail.progress;\n});\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  $progressbar.value = event.detail.progress;\n});\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-progress-bar id=\"$progressbar\" value=\"0\"></plus-progress-bar>\n  <div class=\"scrollable reference2\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference2\" vertical></plus-scroll-detector>\n</div>\n"
   },
@@ -5953,7 +5953,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" clear-on-resize resizable></plus-signature>\n"
   },
@@ -6006,7 +6006,7 @@
   },
   {
     "key": "javascript/signature/clear",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n\n$button.addEventListener('click', () => {\n  $signature.clear();\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n\n$button.addEventListener('click', () => {\n  $signature.clear();\n});\n",
     "template": "<plus-center>\n  <plus-signature id=\"$signature\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">Clear</button>\n</plus-center>\n"
   },
   {
@@ -6034,7 +6034,7 @@
   },
   {
     "key": "javascript/signature/color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" color=\"blue\"></plus-signature>\n</plus-center>\n"
   },
   {
@@ -6062,7 +6062,7 @@
   },
   {
     "key": "javascript/signature/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
   },
   {
@@ -6091,7 +6091,7 @@
   },
   {
     "key": "javascript/signature/dimensions",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 320px;\n  width: 480px;\n}\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\"></plus-signature>\n</plus-center>\n"
   },
@@ -6124,7 +6124,7 @@
   },
   {
     "key": "javascript/signature/disabled",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n</plus-center>\n"
   },
   {
@@ -6152,7 +6152,7 @@
   },
   {
     "key": "javascript/signature/distance",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" distance=\"10\"></plus-signature>\n</plus-center>\n"
   },
   {
@@ -6180,7 +6180,7 @@
   },
   {
     "key": "javascript/signature/history",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n\nconst sync = () => {\n  $undo.disabled = !$signature.canUndo();\n  $redo.disabled = !$signature.canRedo();\n};\n$undo.addEventListener('click', () => {\n  $signature.undo();\n  sync();\n});\n$redo.addEventListener('click', () => {\n  $signature.redo();\n  sync();\n});\n$signature.addEventListener('plus-end', () => {\n  sync();\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nimport '@htmlplus/core/stack.js';\n\nconst sync = () => {\n  $undo.disabled = !$signature.canUndo();\n  $redo.disabled = !$signature.canRedo();\n};\n$undo.addEventListener('click', () => {\n  $signature.undo();\n  sync();\n});\n$redo.addEventListener('click', () => {\n  $signature.redo();\n  sync();\n});\n$signature.addEventListener('plus-end', () => {\n  sync();\n});\n",
     "template": "<plus-center>\n  <plus-signature id=\"$signature\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button id=\"$undo\" disabled>Undo</button>\n  <button id=\"$redo\" disabled>Redo</button>\n</plus-stack>\n"
   },
   {
@@ -6219,7 +6219,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/signature.js';\n",
     "style": "plus-signature {\n  height: 15rem;\n  width: 100%;\n}\n",
     "template": "<plus-signature background-color=\"lightgray\" resizable></plus-signature>\n"
   },
@@ -6272,7 +6272,7 @@
   },
   {
     "key": "javascript/signature/save",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n\nconst save = (background) => {\n  const image = new Image();\n  image.src = $signature.toDataURL('image/svg+xml', background);\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n};\n$with.addEventListener('click', () => save(true));\n$without.addEventListener('click', () => save(false));\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nimport '@htmlplus/core/stack.js';\n\nconst save = (background) => {\n  const image = new Image();\n  image.src = $signature.toDataURL('image/svg+xml', background);\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n};\n$with.addEventListener('click', () => save(true));\n$without.addEventListener('click', () => save(false));\n",
     "template": "<plus-center>\n  <plus-signature id=\"$signature\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button id=\"$with\">Save With Background</button>\n  <button id=\"$without\">Save Without Background</button>\n</plus-stack>\n"
   },
   {
@@ -6300,7 +6300,7 @@
   },
   {
     "key": "javascript/signature/width",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n",
     "template": "<plus-center>\n  <plus-signature background-color=\"lightgray\" min-width=\"1.5\" max-width=\"4.5\"></plus-signature>\n</plus-center>\n"
   },
   {
@@ -6329,7 +6329,7 @@
   },
   {
     "key": "javascript/spinner/color",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/spinner.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner class=\"spinner-1\"></plus-spinner>\n  <plus-spinner class=\"spinner-2\"></plus-spinner>\n  <plus-spinner class=\"spinner-3\"></plus-spinner>\n  <plus-spinner class=\"spinner-4\"></plus-spinner>\n  <plus-spinner class=\"spinner-5\"></plus-spinner>\n</plus-stack>\n"
   },
@@ -6363,7 +6363,7 @@
   },
   {
     "key": "javascript/spinner/custom-size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/spinner.js';\nimport '@htmlplus/core/stack.js';\n",
     "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner size=\"sm\"></plus-spinner>\n  <plus-spinner size=\"md\"></plus-spinner>\n  <plus-spinner size=\"lg\"></plus-spinner>\n</plus-stack>\n"
   },
@@ -6397,7 +6397,7 @@
   },
   {
     "key": "javascript/spinner/customize",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
     "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
   },
@@ -6430,7 +6430,7 @@
   },
   {
     "key": "javascript/spinner/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
     "template": "<plus-center>\n  <plus-spinner></plus-spinner>\n</plus-center>\n"
   },
   {
@@ -6458,7 +6458,7 @@
   },
   {
     "key": "javascript/spinner/size",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/spinner.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner size=\"sm\"></plus-spinner>\n  <plus-spinner size=\"md\"></plus-spinner>\n  <plus-spinner size=\"lg\"></plus-spinner>\n</plus-stack>\n"
   },
   {
@@ -6486,7 +6486,7 @@
   },
   {
     "key": "javascript/spinner/type",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/spinner.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
+    "script": "import '@htmlplus/core/spinner.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner type=\"default\"></plus-spinner>\n  <plus-spinner type=\"double-bounce\"></plus-spinner>\n  <plus-spinner type=\"ring\"></plus-spinner>\n  <plus-spinner type=\"ripple\"></plus-spinner>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n  <plus-spinner type=\"square\"></plus-spinner>\n</plus-stack>\n"
   },
   {
@@ -6525,7 +6525,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\np {\n  color: lightgray;\n  font-size: 10rem;\n  line-height: 2;\n  text-align: center;\n}\nplus-sticky {\n  background-color: lightgray;\n  padding: 0.5rem 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky>A</plus-sticky>\n  <p>A</p>\n  <plus-sticky>B</plus-sticky>\n  <p>B</p>\n  <plus-sticky>C</plus-sticky>\n  <p>C</p>\n  <plus-sticky>D</plus-sticky>\n  <p>D</p>\n  <plus-sticky>E</plus-sticky>\n  <p>E</p>\n  <plus-sticky>F</plus-sticky>\n  <p>F</p>\n</div>\n"
   },
@@ -6589,7 +6589,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
@@ -6653,7 +6653,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid-item.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/grid.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\naside,\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\n",
     "template": "<div class=\"container\">\n  <header>Header</header>\n  <plus-grid>\n    <plus-grid-item xs=\"7\">\n      <plus-faker api=\"lorem.paragraphs\" arguments='[10, \"\\n\\n\"]'></plus-faker>\n    </plus-grid-item>\n    <plus-grid-item xs=\"5\">\n      <br />\n      <plus-sticky>\n        <aside>A Sticky Sidebar</aside>\n      </plus-sticky>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
   },
@@ -6717,7 +6717,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nheader {\n  background: lightgray;\n  text-align: center;\n  padding: 1rem;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] header {\n  border-radius: 4px;\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <br />\n  <plus-sticky watcher>\n    <header slot=\"normal\">Normal Header</header>\n    <header slot=\"stick\">Stick Header</header>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
@@ -6781,7 +6781,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky[state='normal'] {\n  background-color: gold;\n}\nplus-sticky[state='stick'] {\n  background-color: greenyellow;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky watcher>\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
@@ -6845,7 +6845,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/sticky.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/sticky.js';\n",
     "style": ".container {\n  height: 20rem;\n  overflow: auto;\n}\nplus-faker {\n  display: block;\n  padding: 1rem;\n  text-align: justify;\n}\nplus-sticky {\n  background-color: gold;\n}\n",
     "template": "<div class=\"container\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-sticky top=\"20px\">\n    <plus-faker></plus-faker>\n  </plus-sticky>\n  <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n</div>\n"
   },
@@ -6898,7 +6898,7 @@
   },
   {
     "key": "javascript/switch/checked",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/switch.js';\n",
     "template": "<plus-center>\n  <plus-switch checked></plus-switch>\n</plus-center>\n"
   },
   {
@@ -6927,7 +6927,7 @@
   },
   {
     "key": "javascript/switch/customized",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+    "script": "import '@htmlplus/core/stack.js';\nimport '@htmlplus/core/switch.js';\n",
     "style": "/*\n      * switch-1\n      */\n\n.switch-1[aria-checked='false']::part(root) {\n  background: #28292c;\n}\n\n.switch-1[aria-checked='false']::part(handle) {\n  background: #28292c;\n  box-shadow: inset calc(1.25em * 0.35) calc(1.25em * -0.075) 0 0 #d8dbe0;\n}\n\n.switch-1[aria-checked='true']::part(root) {\n  background: #d8dbe0;\n}\n\n.switch-1[aria-checked='true']::part(handle) {\n  background: #28292c;\n  box-shadow: none;\n}\n\n/*\n      * switch-2\n      */\n\n.switch-2 {\n  border-radius: 2px;\n  transition: 0.6s ease all;\n  font-family: Arial, Helvetica, sans-serif;\n}\n\n.switch-2::part(root) {\n  background: #ebf7fc;\n}\n\n.switch-2[aria-checked]:not([aria-checked='false'])::part(root) {\n  background: #fcebeb;\n}\n\n.switch-2::part(handle) {\n  background: #03a9f4;\n  transform: translateY(-50%) rotateY(-000deg);\n  transform-origin: 0% 50%;\n}\n\n.switch-2[aria-checked]:not([aria-checked='false'])::part(handle) {\n  background-color: #f44336;\n  transform: translateY(-50%) rotateY(-180deg);\n}\n\n.switch-2::part(root) {\n  perspective: 70px;\n}\n\n.switch-2::part(slot) {\n  opacity: 1;\n  color: #4e4e4e;\n  font-size: 0.625em;\n  font-weight: bold;\n  text-align: center;\n  line-height: 1;\n}\n\n.switch-2::part(on)::before {\n  content: 'YES';\n  left: 0.25em;\n}\n\n.switch-2::part(off)::before {\n  content: 'NO';\n  right: 0.25em;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-switch class=\"switch-1\"></plus-switch>\n  <plus-switch class=\"switch-2\"></plus-switch>\n</plus-stack>\n"
   },
@@ -6960,7 +6960,7 @@
   },
   {
     "key": "javascript/switch/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/switch.js';\n",
     "template": "<plus-center>\n  <plus-switch></plus-switch>\n</plus-center>\n"
   },
   {
@@ -6988,7 +6988,7 @@
   },
   {
     "key": "javascript/switch/disabled",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/switch.js';\n",
     "template": "<plus-center>\n  <plus-switch disabled></plus-switch>\n</plus-center>\n"
   },
   {
@@ -7016,7 +7016,7 @@
   },
   {
     "key": "javascript/switch/event",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n\n$switch.addEventListener('plus-change', (event) => {\n  alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n});\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/switch.js';\n\n$switch.addEventListener('plus-change', (event) => {\n  alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n});\n",
     "template": "<plus-center>\n  <plus-switch id=\"$switch\"></plus-switch>\n</plus-center>\n"
   },
   {
@@ -7045,7 +7045,7 @@
   },
   {
     "key": "javascript/switch/three-dimensional",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/switch.js';\n",
     "style": "plus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow:\n    0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background:\n    radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65% 50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%) 50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg) rotatex(-90deg)\n    translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
     "template": "<plus-center>\n  <plus-switch checked></plus-switch>\n</plus-center>\n"
   },
@@ -7078,7 +7078,7 @@
   },
   {
     "key": "javascript/tabs/below",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panel.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panels.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs value=\"tab-1\">\n  <plus-tabs-panels>\n    <plus-tabs-panel value=\"tab-1\">\n      <b>Tab One</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-2\">\n      <b>Tab Two</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-3\">\n      <b>Tab Three</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n  </plus-tabs-panels>\n  <plus-tabs-bar>\n    <plus-tabs-tab value=\"tab-1\"> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-2\"> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-3\"> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n"
   },
   {
@@ -7106,7 +7106,7 @@
   },
   {
     "key": "javascript/tabs/default",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panel.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panels.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs value=\"tab-1\">\n  <plus-tabs-bar>\n    <plus-tabs-tab value=\"tab-1\"> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-2\"> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-3\"> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n  <plus-tabs-panels>\n    <plus-tabs-panel value=\"tab-1\">\n      <b>Tab One</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-2\">\n      <b>Tab Two</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-3\">\n      <b>Tab Three</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n  </plus-tabs-panels>\n</plus-tabs>\n"
   },
   {
@@ -7134,7 +7134,7 @@
   },
   {
     "key": "javascript/tabs/grow",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs>\n  <plus-tabs-bar grow>\n    <plus-tabs-tab> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n"
   },
   {
@@ -7162,7 +7162,7 @@
   },
   {
     "key": "javascript/tabs/justify",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs>\n  <plus-tabs-bar justify=\"start\">\n    <plus-tabs-tab> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n<br />\n<plus-tabs>\n  <plus-tabs-bar justify=\"center\">\n    <plus-tabs-tab> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n<br />\n<plus-tabs>\n  <plus-tabs-bar justify=\"end\">\n    <plus-tabs-tab> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n"
   },
   {
@@ -7190,7 +7190,7 @@
   },
   {
     "key": "javascript/tabs/reverse",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs>\n  <plus-tabs-bar reverse>\n    <plus-tabs-tab> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n</plus-tabs>\n"
   },
   {
@@ -7218,7 +7218,7 @@
   },
   {
     "key": "javascript/tabs/separate",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panel.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panels.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<header>\n  <plus-tabs value=\"tab-1\" connector=\"tabs-separate\">\n    <plus-tabs-bar>\n      <plus-tabs-tab value=\"tab-1\"> Tab 1 </plus-tabs-tab>\n      <plus-tabs-tab value=\"tab-2\"> Tab 2 </plus-tabs-tab>\n      <plus-tabs-tab value=\"tab-3\"> Tab 3 </plus-tabs-tab>\n    </plus-tabs-bar>\n  </plus-tabs>\n</header>\n<section>\n  <plus-tabs-panels connector=\"tabs-separate\">\n    <plus-tabs-panel value=\"tab-1\">\n      <b>Tab One</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-2\">\n      <b>Tab Two</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-3\">\n      <b>Tab Three</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n  </plus-tabs-panels>\n</section>\n"
   },
   {
@@ -7246,7 +7246,7 @@
   },
   {
     "key": "javascript/tabs/vertical",
-    "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panel.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-panels.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs-tab.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tabs.js';\n",
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nimport '@htmlplus/core/tabs.js';\n",
     "template": "<plus-tabs value=\"tab-1\" vertical>\n  <plus-tabs-bar>\n    <plus-tabs-tab value=\"tab-1\"> Tab 1 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-2\"> Tab 2 </plus-tabs-tab>\n    <plus-tabs-tab value=\"tab-3\"> Tab 3 </plus-tabs-tab>\n  </plus-tabs-bar>\n  <plus-tabs-panels>\n    <plus-tabs-panel value=\"tab-1\">\n      <b>Tab One</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-2\">\n      <b>Tab Two</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n    <plus-tabs-panel value=\"tab-3\">\n      <b>Tab Three</b>\n      <br />\n      <plus-faker></plus-faker>\n    </plus-tabs-panel>\n  </plus-tabs-panels>\n</plus-tabs>\n"
   },
   {
