@@ -381,9 +381,9 @@ export const reactExperimental: IPlugin<IReactExperimentalOptions> = (options) =
               parameters.pattern.remove();
             }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 
