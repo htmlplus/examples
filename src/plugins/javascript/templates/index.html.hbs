@@ -7,6 +7,9 @@
   </head>
   <body>
     {{{template.content}}}
+    {{#if config}}
+    <script type="module" src="/config.js"></script>
+    {{/if}}
     <script type="module" src="/main.js"></script>
   </body>
 </html>
