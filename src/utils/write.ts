@@ -39,11 +39,16 @@ export const write =
 
       const directory = path.dirname(to);
 
+      if (!fs.existsSync(directory)) fs.mkdirSync(directory, { recursive: true });
+
+      if (!from.endsWith('.hbs')) {
+        fs.copyFileSync(from, to);
+        continue;
+      }
+
       const raw = fs.readFileSync(from, 'utf8');
 
       const template = handlebars.compile(raw)(context);
-
-      if (!fs.existsSync(directory)) fs.mkdirSync(directory, { recursive: true });
 
       const formated = await format(template, {
         parser: (() => {
