@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion | Slots</title>
+  </head>
+  <body>
+    <plus-stack align-items="stretch" gap="1rem" vertical>
+      <div>
+        <plus-accordion summary="Summary" open>
+          <plus-progress-bar variant="indeterminate" slot="top"></plus-progress-bar>
+          <plus-faker seed="0"></plus-faker>
+        </plus-accordion>
+      </div>
+      <div>
+        <plus-accordion summary="Summary" open>
+          <plus-progress-bar variant="indeterminate" slot="middle"></plus-progress-bar>
+          <plus-faker seed="0"></plus-faker>
+        </plus-accordion>
+      </div>
+      <div>
+        <plus-accordion summary="Summary" open>
+          <plus-progress-bar variant="indeterminate" slot="bottom"></plus-progress-bar>
+          <plus-faker seed="0"></plus-faker>
+        </plus-accordion>
+      </div>
+    </plus-stack>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
