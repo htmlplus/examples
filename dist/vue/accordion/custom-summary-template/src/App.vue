@@ -17,6 +17,6 @@
 <style scoped>
   [slot='summary'] {
     flex-grow: 1;
-    margin-right: 1rem;
+    margin-inline-end: 1rem;
   }
 </style>
