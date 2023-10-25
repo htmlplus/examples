@@ -15,13 +15,7 @@ export const write =
     });
 
     for (const file of files) {
-      removes = removes.filter((remove) => {
-        if (path.extname(remove)) {
-          return !file.endsWith(`${remove}.hbs`);
-        } else {
-          return !path.dirname(file).endsWith(remove);
-        }
-      });
+      removes = removes.filter((remove) => !file.replace('.hbs', '').endsWith(remove) && !path.dirname(file).endsWith(remove));
 
       const from = path.resolve(root, file);
 
