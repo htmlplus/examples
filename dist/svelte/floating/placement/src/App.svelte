@@ -4,7 +4,7 @@
   import '@htmlplus/core/icon.js';
 </script>
 
-<div>
+<div style="position: relative;">
   <plus-faker api="lorem.paragraphs"></plus-faker>
   <br />
   <br />
@@ -13,9 +13,3 @@
     <plus-icon name="circle-fill"></plus-icon>
   </plus-floating>
 </div>
-
-<style>
-  div {
-    position: relative;
-  }
-</style>

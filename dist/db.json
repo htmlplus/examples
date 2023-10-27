@@ -7,8 +7,7 @@
       "rtl": true
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('accordion')\n  accordionRef!: ElementRef;\n  hidden = true;\n  onPlusExpand(event) {\n    event.preventDefault();\n    this.hidden = false;\n    setTimeout(() => {\n      this.hidden = true;\n      this.accordionRef.nativeElement.open = true;\n    }, 2500);\n  }\n}\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" (plus-expand)=\"onPlusExpand($event)\" #accordion>\n  <plus-progress-bar variant=\"indeterminate\" slot=\"top\" [hidden]=\"hidden\"></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" (plus-expand)=\"onPlusExpand($event)\" #accordion>\n  <plus-progress-bar\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    [hidden]=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/async-content",
@@ -18,8 +17,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\n$accordion.addEventListener('plus-expand', (event) => {\n  event.preventDefault();\n  $progress.hidden = false;\n  setTimeout(() => {\n    $progress.hidden = true;\n    $accordion.open = true;\n  }, 2500);\n});\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-progress-bar id=\"$progress\" variant=\"indeterminate\" slot=\"top\" hidden></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-progress-bar\n    id=\"$progress\"\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    hidden\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react-dedicated/accordion/async-content",
@@ -28,8 +26,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useRef, useState } from 'react';\n\nimport { Accordion, Faker, ProgressBar } from '@htmlplus/react';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <Accordion summary=\"Summary\" onExpand={onExpand} ref={accordionRef}>\n      <ProgressBar variant=\"indeterminate\" slot=\"top\" hidden={hidden}></ProgressBar>\n      <Faker></Faker>\n    </Accordion>\n  );\n}\nexport default App;\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport { Accordion, Faker, ProgressBar } from '@htmlplus/react';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <Accordion summary=\"Summary\" onExpand={onExpand} ref={accordionRef}>\n      <ProgressBar\n        variant=\"indeterminate\"\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></ProgressBar>\n      <Faker></Faker>\n    </Accordion>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/async-content",
@@ -38,8 +35,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onplus-expand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"top\" hidden={hidden}></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onplus-expand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/async-content",
@@ -49,8 +45,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\nlet accordionRef;\nlet hidden = true;\nfunction onPlusExpand(event) {\n  event.preventDefault();\n  hidden = false;\n  setTimeout(() => {\n    hidden = true;\n    accordionRef.open = true;\n  }, 2500);\n}\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" on:plus-expand={onPlusExpand} bind:this={accordionRef}>\n  <plus-progress-bar variant=\"indeterminate\" slot=\"top\" {hidden}></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" on:plus-expand={onPlusExpand} bind:this={accordionRef}>\n  <plus-progress-bar variant=\"indeterminate\" slot=\"top\" style=\"height: 2px;\" {hidden}\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/async-content",
@@ -60,8 +55,7 @@
       "rtl": true
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\n\nconst accordionRef = ref();\nconst hidden = ref(true);\nfunction onPlusExpand(event) {\n  event.preventDefault();\n  hidden.value = false;\n  setTimeout(() => {\n    hidden.value = true;\n    accordionRef.value.open = true;\n  }, 2500);\n}\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" @plus-expand=\"onPlusExpand\" ref=\"accordionRef\">\n  <plus-progress-bar variant=\"indeterminate\" slot=\"top\" :hidden=\"hidden\"></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" @plus-expand=\"onPlusExpand\" ref=\"accordionRef\">\n  <plus-progress-bar\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    :hidden=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "angular/accordion/custom-icon",
@@ -605,8 +599,7 @@
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"top\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"middle\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"bottom\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
   },
   {
     "key": "javascript/accordion/slots",
@@ -616,8 +609,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"top\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"middle\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"bottom\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
   },
   {
     "key": "react-dedicated/accordion/slots",
@@ -626,8 +618,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Accordion, Faker, ProgressBar, Stack } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Stack alignItems=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar variant=\"indeterminate\" slot=\"top\"></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar variant=\"indeterminate\" slot=\"middle\"></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar variant=\"indeterminate\" slot=\"bottom\"></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n    </Stack>\n  );\n}\nexport default App;\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n"
+    "script": "import { Accordion, Faker, ProgressBar, Stack } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Stack alignItems=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n      <div>\n        <Accordion summary=\"Summary\" open>\n          <ProgressBar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></ProgressBar>\n          <Faker seed={0}></Faker>\n        </Accordion>\n      </div>\n    </Stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/slots",
@@ -636,8 +627,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar variant=\"indeterminate\" slot=\"top\"></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar variant=\"indeterminate\" slot=\"middle\"></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar variant=\"indeterminate\" slot=\"bottom\"></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n"
+    "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/slots",
@@ -647,8 +637,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"top\"></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"middle\"></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"bottom\"></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
   },
   {
     "key": "vue/accordion/slots",
@@ -658,8 +647,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/core/accordion.js';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/stack.js';\n",
-    "style": "plus-progress-bar {\n  height: 2px;\n}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"middle\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" slot=\"bottom\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
   },
   {
     "key": "angular/animation/button",
@@ -1074,36 +1062,30 @@
   {
     "key": "angular/aspect-ratio/image",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/aspect-ratio.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "img {\n  object-fit: cover;\n}\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" />\n</plus-aspect-ratio>\n"
+    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
   },
   {
     "key": "javascript/aspect-ratio/image",
     "script": "import '@htmlplus/core/aspect-ratio.js';\n",
-    "style": "img {\n  object-fit: cover;\n}\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" />\n</plus-aspect-ratio>\n"
+    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
   },
   {
     "key": "react-dedicated/aspect-ratio/image",
-    "script": "import { AspectRatio } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img src=\"https://picsum.photos/id/95/640/640\" />\n    </AspectRatio>\n  );\n}\nexport default App;\n",
-    "style": "img {\n  object-fit: cover;\n}\n"
+    "script": "import { AspectRatio } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img\n        src=\"https://picsum.photos/id/95/640/640\"\n        style={{\n          objectFit: 'cover'\n        }}\n      />\n    </AspectRatio>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/aspect-ratio/image",
-    "script": "import '@htmlplus/core/aspect-ratio.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img src=\"https://picsum.photos/id/95/640/640\" />\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n",
-    "style": "img {\n  object-fit: cover;\n}\n"
+    "script": "import '@htmlplus/core/aspect-ratio.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img\n        src=\"https://picsum.photos/id/95/640/640\"\n        style={{\n          objectFit: 'cover'\n        }}\n      />\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/aspect-ratio/image",
     "script": "import '@htmlplus/core/aspect-ratio.js';\n",
-    "style": "img {\n  object-fit: cover;\n}\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" />\n</plus-aspect-ratio>\n"
+    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
   },
   {
     "key": "vue/aspect-ratio/image",
     "script": "import '@htmlplus/core/aspect-ratio.js';\n",
-    "style": "img {\n  object-fit: cover;\n}\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" />\n</plus-aspect-ratio>\n"
+    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
   },
   {
     "key": "angular/aspect-ratio/map",
@@ -4438,36 +4420,30 @@
   {
     "key": "angular/floating/default",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "javascript/floating/default",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "react-dedicated/floating/default",
-    "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Floating>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "div {\n  position: relative;\n}\n"
+    "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div\n      style={{\n        position: 'relative'\n      }}\n    >\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Floating>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/floating/default",
-    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-floating>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "div {\n  position: relative;\n}\n"
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <div\n      style={{\n        position: 'relative'\n      }}\n    >\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-floating>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/floating/default",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative;\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "vue/floating/default",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "angular/floating/fixed",
@@ -4564,36 +4540,30 @@
   {
     "key": "angular/floating/placement",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "javascript/floating/placement",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "react-dedicated/floating/placement",
-    "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <br />\n      <br />\n      <br />\n      <Floating placement=\"bottom\">\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "div {\n  position: relative;\n}\n"
+    "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <div\n      style={{\n        position: 'relative'\n      }}\n    >\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <br />\n      <br />\n      <br />\n      <Floating placement=\"bottom\">\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/floating/placement",
-    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <br />\n      <br />\n      <br />\n      <plus-floating placement=\"bottom\">\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "div {\n  position: relative;\n}\n"
+    "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <div\n      style={{\n        position: 'relative'\n      }}\n    >\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <br />\n      <br />\n      <br />\n      <plus-floating placement=\"bottom\">\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/floating/placement",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative;\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "vue/floating/placement",
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": "div {\n  position: relative;\n}\n",
-    "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    "template": "<div style=\"position: relative\">\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
   {
     "key": "angular/format-bytes/decimals",

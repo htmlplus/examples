@@ -274,7 +274,8 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
             },
             id(parameters) {
               parameters.pattern.remove();
-            }
+            },
+            style() { }
           },
           default() { }
         },

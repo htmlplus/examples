@@ -15,7 +15,14 @@ function App() {
   }
   return (
     <Accordion summary="Summary" onExpand={onExpand} ref={accordionRef}>
-      <ProgressBar variant="indeterminate" slot="top" hidden={hidden}></ProgressBar>
+      <ProgressBar
+        variant="indeterminate"
+        slot="top"
+        style={{
+          height: '2px'
+        }}
+        hidden={hidden}
+      ></ProgressBar>
       <Faker></Faker>
     </Accordion>
   );

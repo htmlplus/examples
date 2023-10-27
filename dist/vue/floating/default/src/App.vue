@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="position: relative">
     <plus-faker api="lorem.paragraphs"></plus-faker>
     <plus-floating>
       <plus-icon name="circle-fill"></plus-icon>
@@ -12,9 +12,3 @@
   import '@htmlplus/core/floating.js';
   import '@htmlplus/core/icon.js';
 </script>
-
-<style scoped>
-  div {
-    position: relative;
-  }
-</style>

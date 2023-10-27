@@ -17,7 +17,14 @@ function App() {
   }
   return (
     <plus-accordion summary="Summary" onplus-expand={onPlusExpand} ref={accordionRef}>
-      <plus-progress-bar variant="indeterminate" slot="top" hidden={hidden}></plus-progress-bar>
+      <plus-progress-bar
+        variant="indeterminate"
+        slot="top"
+        style={{
+          height: '2px'
+        }}
+        hidden={hidden}
+      ></plus-progress-bar>
       <plus-faker></plus-faker>
     </plus-accordion>
   );

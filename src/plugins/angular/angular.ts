@@ -417,7 +417,8 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
             },
             id(parameters) {
               parameters.pattern.remove();
-            }
+            },
+            style() { }
           },
           default() { }
         },

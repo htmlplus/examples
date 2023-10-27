@@ -334,7 +334,8 @@ export const vue: IPlugin<IVueOptions> = (options) => {
             },
             id(parameters) {
               parameters.pattern.remove();
-            }
+            },
+            style() { }
           },
           default() { }
         },

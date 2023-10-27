@@ -316,7 +316,7 @@ export interface IResolverOptions {
         /**
          * Examples:
          * ```
-         *   <element id="element" name="value" />
+         *   <element name="value" />
          * ```
          */
         class: IResolverFunction<{
@@ -328,7 +328,7 @@ export interface IResolverOptions {
         /**
          * Examples:
          * ```
-         *   <element id="element" name="value" />
+         *   <element name="value" />
          * ```
          */
         default: IResolverFunction<{
@@ -340,10 +340,22 @@ export interface IResolverOptions {
         /**
          * Examples:
          * ```
-         *   <element id="element" name="value" />
+         *   <element name="value" />
          * ```
          */
         id: IResolverFunction<{
+          element: t.JSXElement;
+          name: t.JSXIdentifier;
+          pattern: NodePath<t.JSXAttribute>;
+          value?: t.StringLiteral;
+        }>;
+        /**
+         * Examples:
+         * ```
+         *   <element style="value" />
+         * ```
+         */
+        style: IResolverFunction<{
           element: t.JSXElement;
           name: t.JSXIdentifier;
           pattern: NodePath<t.JSXAttribute>;
@@ -920,6 +932,22 @@ export class Resolver {
         };
 
         this.options.template.element.attribute.id.bind(this)(parameters);
+      }
+    });
+
+    // template.element.attribute.style
+    core(this.template, {
+      JSXAttribute: (path) => {
+        if (path.node.name.name != 'style') return;
+
+        const parameters = {
+          element: path.parentPath.parent as t.JSXElement,
+          name: path.node.name as t.JSXIdentifier,
+          pattern: path,
+          value: path.node.value as any
+        };
+
+        this.options.template.element.attribute.style.bind(this)(parameters);
       }
     });
 

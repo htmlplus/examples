@@ -379,6 +379,19 @@ export const reactExperimental: IPlugin<IReactExperimentalOptions> = (options) =
             },
             id(parameters) {
               parameters.pattern.remove();
+            },
+            style(parameters) {
+              if (!parameters.value) return;
+
+              const properties = parameters.value.value
+                .split(';')
+                .filter((section) => section.trim())
+                .map((section) => {
+                  const [key, value] = section.split(':').map((section) => section.trim());
+                  return t.objectProperty(t.identifier(camelCase(key)), t.stringLiteral(value))
+                })
+
+              parameters.pattern.node.value = t.jsxExpressionContainer(t.objectExpression(properties))
             }
           },
           default() { }

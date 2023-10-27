@@ -4,7 +4,11 @@ import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        position: 'relative'
+      }}
+    >
       <plus-faker api="lorem.paragraphs"></plus-faker>
       <br />
       <br />

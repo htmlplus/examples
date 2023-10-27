@@ -61,7 +61,8 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
           attribute: {
             class() { },
             default() { },
-            id() { }
+            id() { },
+            style() { }
           },
           default() { }
         },

@@ -1,6 +1,11 @@
 <template>
   <plus-accordion summary="Summary" @plus-expand="onPlusExpand" ref="accordionRef">
-    <plus-progress-bar variant="indeterminate" slot="top" :hidden="hidden"></plus-progress-bar>
+    <plus-progress-bar
+      variant="indeterminate"
+      slot="top"
+      style="height: 2px"
+      :hidden="hidden"
+    ></plus-progress-bar>
     <plus-faker></plus-faker>
   </plus-accordion>
 </template>
@@ -23,9 +28,3 @@
     }, 2500);
   }
 </script>
-
-<style scoped>
-  plus-progress-bar {
-    height: 2px;
-  }
-</style>
