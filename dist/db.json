@@ -1302,6 +1302,62 @@
     "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
+    "key": "angular/avatar/group-link-with-tooltip",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/group-link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "react-dedicated/avatar/group-link-with-tooltip",
+    "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n        <Tooltip>Tooltip</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/avatar/group-link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/avatar/group-link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/group-link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/group-link",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/group-link",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "react-dedicated/avatar/group-link",
+    "script": "import { Avatar, Center } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/avatar/group-link",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/avatar/group-link",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/group-link",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
     "key": "angular/avatar/group-stacked",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
@@ -1332,30 +1388,30 @@
   {
     "key": "angular/avatar/group-tooltip",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/group-tooltip",
     "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "react-dedicated/avatar/group-tooltip",
-    "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n"
+    "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/avatar/group-tooltip",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/group-tooltip",
     "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/group-tooltip",
     "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/group",
@@ -1384,6 +1440,68 @@
     "key": "vue/avatar/group",
     "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/icon-ratio-global",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/icon-ratio-global",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "react-dedicated/avatar/icon-ratio-global",
+    "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <Icon name=\"person\" className=\"icon-1\"></Icon>\n        </Avatar>\n        <Avatar>\n          <Icon name=\"person\" className=\"icon-2\"></Icon>\n        </Avatar>\n        <Avatar>\n          <Icon name=\"person\" className=\"icon-3\"></Icon>\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n"
+  },
+  {
+    "key": "react-experimental/avatar/icon-ratio-global",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-1\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-2\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-3\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n"
+  },
+  {
+    "key": "svelte/avatar/icon-ratio-global",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/icon-ratio-global",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/icon-ratio-inline",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/icon-ratio-inline",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "react-dedicated/avatar/icon-ratio-inline",
+    "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <Icon name=\"person\" size=\"1.0em\"></Icon>\n        </Avatar>\n        <Avatar>\n          <Icon name=\"person\" size=\"1.5em\"></Icon>\n        </Avatar>\n        <Avatar>\n          <Icon name=\"person\" size=\"2.0em\"></Icon>\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/avatar/icon-ratio-inline",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/avatar/icon-ratio-inline",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/icon-ratio-inline",
+    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/icon",
@@ -1440,6 +1558,34 @@
     "key": "vue/avatar/image",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/link-with-tooltip",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+  },
+  {
+    "key": "react-dedicated/avatar/link-with-tooltip",
+    "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Center>\n      <Avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </Avatar>\n      <Tooltip>Tooltip</Tooltip>\n    </Center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/avatar/link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/avatar/link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/link-with-tooltip",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/link",
