@@ -18,7 +18,7 @@ import { IImportResolverFunction } from '@/utils';
 // const SOURCE = './src/development/index.html';
 // const TARGET = './src/development/dist';
 
-const SOURCE = '../core/src/components/*/examples/*.html';
+const SOURCE = '../core/src/elements/*/examples/*.html';
 const TARGET = './dist';
 
 const CDN = 'https://cdn.skypack.dev/';
@@ -60,7 +60,7 @@ const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
 
 const destination = (key: string) => {
   return (context: IContext) => {
-    return path.join(TARGET, key, getComponentName(context), context.file.name);
+    return path.join(TARGET, key, getElementName(context), context.file.name);
   };
 };
 
@@ -73,7 +73,7 @@ const eventResolver = (key: string) => {
   };
 };
 
-const getComponentName = (context: IContext) => {
+const getElementName = (context: IContext) => {
   return path.basename(path.dirname(context.directory.path));
 };
 
@@ -125,7 +125,7 @@ export const plugins = [
       };
     },
     getTitle(context: IContext) {
-      return `${capitalCase(getComponentName(context))} | ${capitalCase(context.file.name)}`;
+      return `${capitalCase(getElementName(context))} | ${capitalCase(context.file.name)}`;
     }
   }),
   angular({
@@ -157,13 +157,11 @@ export const plugins = [
         .join('.');
     },
     dependenciesTransformer(dependencies: IContextDependency[]) {
-      return dependencies.map((dependency) => Object.assign(
-        {},
-        dependency,
-        {
+      return dependencies.map((dependency) =>
+        Object.assign({}, dependency, {
           name: dependency.name.replace('@htmlplus/core', '@htmlplus/react')
-        }
-      ))
+        })
+      );
     }
   }),
   reactExperimental({
@@ -188,7 +186,7 @@ export const plugins = [
     destination: 'dist/db.json',
     plugins: ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue'],
     keyResolver(plugin, context) {
-      return `${plugin}/${getComponentName(context)}/${context.file.name}`;
+      return `${plugin}/${getElementName(context)}/${context.file.name}`;
     }
   })
 ];

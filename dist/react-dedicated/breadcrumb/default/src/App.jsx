@@ -6,7 +6,7 @@ function App() {
       <Breadcrumb separator="/">
         <a href="#">HTMLPLUS</a>
         <a href="#">Core</a>
-        <a href="#">UI Components</a>
+        <a href="#">UI Elements</a>
         <span>Breadcrumb</span>
       </Breadcrumb>
     </Center>

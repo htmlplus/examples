@@ -1,7 +1,7 @@
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
-  component: {
+  element: {
     'plus-icon': {
       property: {
         resolver: async (name, parser) => {

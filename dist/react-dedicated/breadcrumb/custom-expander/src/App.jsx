@@ -7,7 +7,7 @@ function App() {
         <Icon slot="expander" name="chevron-compact-right"></Icon>
         <a href="#">HTMLPLUS</a>
         <a href="#">Core</a>
-        <a href="#">UI Components</a>
+        <a href="#">UI Elements</a>
         <a href="#">Breadcrumb</a>
       </Breadcrumb>
     </Center>

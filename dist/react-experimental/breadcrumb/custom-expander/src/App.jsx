@@ -9,7 +9,7 @@ function App() {
         <plus-icon slot="expander" name="chevron-compact-right"></plus-icon>
         <a href="#">HTMLPLUS</a>
         <a href="#">Core</a>
-        <a href="#">UI Components</a>
+        <a href="#">UI Elements</a>
         <a href="#">Breadcrumb</a>
       </plus-breadcrumb>
     </plus-center>

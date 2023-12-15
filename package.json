@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "format": "prettier --write .",
-    "generate": "ts-node src/generate.ts",
-    "generate:watch": "nodemon src/generate.ts"
+    "generate": "tsx src/generate.ts",
+    "generate:watch": "tsx watch src/generate.ts"
   },
   "devDependencies": {
     "@babel/generator": "^7.22.9",
@@ -23,12 +23,10 @@
     "deepmerge": "^4.3.1",
     "fast-glob": "^3.3.1",
     "handlebars": "^4.7.7",
-    "nodemon": "^3.0.1",
     "prettier": "^3.0.0",
     "prettier-plugin-svelte": "^3.0.3",
     "rimraf": "^5.0.1",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.6.2",
     "typescript": "^5.1.6"
   }
 }
