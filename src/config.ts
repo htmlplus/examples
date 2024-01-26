@@ -7,6 +7,7 @@ import {
   initialize,
   javascript,
   json,
+  react,
   reactDedicated,
   reactExperimental,
   svelte,
@@ -15,7 +16,7 @@ import {
 import { IContext, IContextDependency } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
-// const SOURCE = './src/development/index.html';
+// const SOURCE = './src/development/*.html';
 // const TARGET = './src/development/dist';
 
 const SOURCE = '../core/src/elements/*/examples/*.html';
@@ -137,6 +138,12 @@ export const plugins = [
   javascript({
     destination: destination('javascript'),
     importResolver: importResolver('javascript')
+  }),
+  react({
+    destination: destination('react'),
+    eventResolver: eventResolver('react'),
+    importResolver: importResolver('react'),
+    isStringAttribute
   }),
   reactDedicated({
     destination: destination('react-dedicated'),

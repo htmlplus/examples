@@ -156,11 +156,11 @@ export interface IResolverOptions {
             element: t.JSXElement;
             id: string;
             initializer:
-            | t.ArrayExpression
-            | t.BooleanLiteral
-            | t.NumericLiteral
-            | t.ObjectExpression
-            | t.StringLiteral;
+              | t.ArrayExpression
+              | t.BooleanLiteral
+              | t.NumericLiteral
+              | t.ObjectExpression
+              | t.StringLiteral;
             pattern: NodePath<t.MemberExpression>;
             property: t.Identifier;
           }>;
