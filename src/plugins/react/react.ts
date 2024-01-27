@@ -58,147 +58,202 @@ export const react: IPlugin<IReactOptions> = (options) => {
                 }
               },
               callExpression(parameters) {
-                this.options.script.element.method.addEventListener.identifier.bind(this)(
-                  parameters as any
-                );
+                if (isCustomElement(parameters.element)) {
+                  this.options.script.element.method.addEventListener.identifier.bind(this)(
+                    parameters as any
+                  );
+                } else {
+                  if (!parameters.isRoot) return;
+
+                  const event = options.eventResolver(parameters.event);
+
+                  addAttribute(
+                    parameters.element,
+                    'on' + event,
+                    t.jsxExpressionContainer(parameters.handler)
+                  );
+
+                  parameters.wrapper.remove();
+                }
               },
               functionExpression(parameters) {
-                if (!parameters.isRoot) return;
+                if (isCustomElement(parameters.element)) {
+                  if (!parameters.isRoot) return;
 
-                addDependency(this.script, 'react', 'useEffect', 'useEffect');
+                  addDependency(this.script, 'react', 'useEffect', 'useEffect');
 
-                const event = options.eventResolver(parameters.event);
+                  const event = options.eventResolver(parameters.event);
 
-                const token = this.addToken('on' + pascalCase(event), event, true);
+                  const token = this.addToken('on' + pascalCase(event), event, true);
 
-                const handler = t.functionDeclaration(
-                  t.identifier(token.value),
-                  parameters.handler.params,
-                  parameters.handler.body
-                );
+                  const handler = t.functionDeclaration(
+                    t.identifier(token.value),
+                    parameters.handler.params,
+                    parameters.handler.body
+                  );
 
-                this.resolve(handler);
+                  this.resolve(handler);
 
-                const addEventListener = t.expressionStatement(
-                  t.callExpression(
-                    t.memberExpression(
-                      t.identifier(parameters.id),
-                      t.identifier('addEventListener')
-                    ),
-                    [t.stringLiteral(event), t.identifier(token.value)]
-                  )
-                );
+                  const addEventListener = t.expressionStatement(
+                    t.callExpression(
+                      t.memberExpression(
+                        t.identifier(parameters.id),
+                        t.identifier('addEventListener')
+                      ),
+                      [t.stringLiteral(event), t.identifier(token.value)]
+                    )
+                  );
 
-                this.resolve(addEventListener);
+                  this.resolve(addEventListener);
 
-                const removeEventListener = t.expressionStatement(
-                  t.callExpression(
-                    t.memberExpression(
-                      t.identifier(parameters.id),
-                      t.identifier('removeEventListener')
-                    ),
-                    [t.stringLiteral(event), t.identifier(token.value)]
-                  )
-                );
+                  const removeEventListener = t.expressionStatement(
+                    t.callExpression(
+                      t.memberExpression(
+                        t.identifier(parameters.id),
+                        t.identifier('removeEventListener')
+                      ),
+                      [t.stringLiteral(event), t.identifier(token.value)]
+                    )
+                  );
 
-                this.resolve(removeEventListener);
+                  this.resolve(removeEventListener);
 
-                const useEffect = t.expressionStatement(
-                  t.callExpression(t.identifier('useEffect'), [
-                    t.arrowFunctionExpression(
-                      [],
-                      t.blockStatement([
-                        handler,
-                        addEventListener,
-                        t.returnStatement(
-                          t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
-                        )
-                      ])
-                    ),
-                    t.arrayExpression([])
-                  ])
-                );
+                  const useEffect = t.expressionStatement(
+                    t.callExpression(t.identifier('useEffect'), [
+                      t.arrowFunctionExpression(
+                        [],
+                        t.blockStatement([
+                          handler,
+                          addEventListener,
+                          t.returnStatement(
+                            t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
+                          )
+                        ])
+                      ),
+                      t.arrayExpression([])
+                    ])
+                  );
 
-                this.resolve(useEffect);
+                  this.resolve(useEffect);
 
-                parameters.wrapper.replaceWith(useEffect);
+                  parameters.wrapper.replaceWith(useEffect);
+                } else {
+                  if (!parameters.isRoot) return;
+
+                  const event = options.eventResolver(parameters.event);
+
+                  const token = this.addToken('on' + pascalCase(event), event, true);
+
+                  addAttribute(
+                    parameters.element,
+                    'on' + event,
+                    t.jsxExpressionContainer(t.identifier(token.value))
+                  );
+
+                  const node = t.functionDeclaration(
+                    t.identifier(token.value),
+                    parameters.handler.params,
+                    parameters.handler.body
+                  );
+
+                  this.resolve(node);
+
+                  parameters.wrapper.replaceWith(node);
+                }
               },
               identifier(parameters) {
-                if (!parameters.isRoot) return;
+                if (isCustomElement(parameters.element)) {
+                  if (!parameters.isRoot) return;
 
-                addDependency(this.script, 'react', 'useEffect', 'useEffect');
+                  addDependency(this.script, 'react', 'useEffect', 'useEffect');
 
-                const event = options.eventResolver(parameters.event);
+                  const event = options.eventResolver(parameters.event);
 
-                const addEventListener = t.expressionStatement(
-                  t.callExpression(
-                    t.memberExpression(
-                      t.identifier(parameters.id),
-                      t.identifier('addEventListener')
-                    ),
-                    [t.stringLiteral(event), parameters.handler]
-                  )
-                );
+                  const addEventListener = t.expressionStatement(
+                    t.callExpression(
+                      t.memberExpression(
+                        t.identifier(parameters.id),
+                        t.identifier('addEventListener')
+                      ),
+                      [t.stringLiteral(event), parameters.handler]
+                    )
+                  );
 
-                this.resolve(addEventListener);
+                  this.resolve(addEventListener);
 
-                const removeEventListener = t.expressionStatement(
-                  t.callExpression(
-                    t.memberExpression(
-                      t.identifier(parameters.id),
-                      t.identifier('removeEventListener')
-                    ),
-                    [t.stringLiteral(event), parameters.handler]
-                  )
-                );
+                  const removeEventListener = t.expressionStatement(
+                    t.callExpression(
+                      t.memberExpression(
+                        t.identifier(parameters.id),
+                        t.identifier('removeEventListener')
+                      ),
+                      [t.stringLiteral(event), parameters.handler]
+                    )
+                  );
 
-                this.resolve(removeEventListener);
+                  this.resolve(removeEventListener);
 
-                const useEffect = t.expressionStatement(
-                  t.callExpression(t.identifier('useEffect'), [
-                    t.arrowFunctionExpression(
-                      [],
-                      t.blockStatement([
-                        addEventListener,
-                        t.returnStatement(
-                          t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
-                        )
-                      ])
-                    ),
-                    t.arrayExpression([])
-                  ])
-                );
+                  const useEffect = t.expressionStatement(
+                    t.callExpression(t.identifier('useEffect'), [
+                      t.arrowFunctionExpression(
+                        [],
+                        t.blockStatement([
+                          addEventListener,
+                          t.returnStatement(
+                            t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
+                          )
+                        ])
+                      ),
+                      t.arrayExpression([])
+                    ])
+                  );
 
-                this.resolve(useEffect);
+                  this.resolve(useEffect);
 
-                parameters.wrapper.replaceWith(useEffect);
+                  parameters.wrapper.replaceWith(useEffect);
+                } else {
+                  if (!parameters.isRoot) return;
+
+                  const event = options.eventResolver(parameters.event);
+
+                  addAttribute(
+                    parameters.element,
+                    'on' + event,
+                    t.jsxExpressionContainer(parameters.handler)
+                  );
+
+                  parameters.wrapper.remove();
+                }
               }
             }
           },
           property: {
             constant(parameters) {
-              const token = this.addToken(
-                parameters.property.name,
-                parameters.id + parameters.property.name
+              addDependency(this.script, 'react', 'useEffect', 'useEffect');
+
+              const assignmentExpression = t.expressionStatement(
+                t.assignmentExpression(
+                  '=',
+                  t.memberExpression(
+                    t.identifier(parameters.id),
+                    t.identifier(parameters.property.name)
+                  ),
+                  parameters.initializer
+                )
               );
 
-              addAttribute(
-                parameters.element,
-                parameters.property.name,
-                t.jsxExpressionContainer(t.identifier(token.value))
+              this.resolve(assignmentExpression);
+
+              const useEffect = t.expressionStatement(
+                t.callExpression(t.identifier('useEffect'), [
+                  t.arrowFunctionExpression([], t.blockStatement([assignmentExpression])),
+                  t.arrayExpression([])
+                ])
               );
 
-              const node = t.variableDeclaration('const', [
-                t.variableDeclarator(t.identifier(token.value), parameters.initializer)
-              ]);
+              this.resolve(useEffect);
 
-              this.resolve(node);
-
-              addToArray(this.script.program.body, node, (input: any) => {
-                return input.declarations?.some((declaration: any) => {
-                  return declaration.id.name == token.value;
-                });
-              });
+              parameters.pattern.insertAfter(useEffect);
 
               parameters.pattern.remove();
             },
