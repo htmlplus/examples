@@ -24,10 +24,10 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onclick={onClick1}>Cancel</button>
-        <button onclick={onClick2}>Finish</button>
-        <button onclick={onClick3}>Pause</button>
-        <button onclick={onClick4}>Play</button>
+        <button onClick={onClick1}>Cancel</button>
+        <button onClick={onClick2}>Finish</button>
+        <button onClick={onClick3}>Pause</button>
+        <button onClick={onClick4}>Play</button>
       </plus-center>
     </>
   );

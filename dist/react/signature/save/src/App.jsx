@@ -21,8 +21,8 @@ function App() {
       </plus-center>
       <br />
       <plus-stack gap="1rem">
-        <button onclick={() => save(true)}>Save With Background</button>
-        <button onclick={() => save(false)}>Save Without Background</button>
+        <button onClick={() => save(true)}>Save With Background</button>
+        <button onClick={() => save(false)}>Save Without Background</button>
       </plus-stack>
     </>
   );

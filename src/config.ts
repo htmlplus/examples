@@ -8,7 +8,6 @@ import {
   javascript,
   json,
   react,
-  reactDedicated,
   reactExperimental,
   svelte,
   vue
@@ -67,9 +66,6 @@ const destination = (key: string) => {
 
 const eventResolver = (key: string) => {
   return (name: string) => {
-    if (key == 'react-dedicated') {
-      return pascalCase(name.replace('plus-', ''));
-    }
     return name;
   };
 };
@@ -81,20 +77,6 @@ const getElementName = (context: IContext) => {
 const importResolver = (key: string): IImportResolverFunction => {
   return (parameters) => {
     parameters.source = parameters.source.replace(CDN, '');
-
-    if (key == 'react-dedicated') {
-      const [, matched] = parameters.source.match(/^@htmlplus\/core\/([^/]+)\.js$/) || [];
-      if (matched && matched != 'config') {
-        if (!CUSTOM_ELEMENTS.includes(matched) && matched.includes('-')) return null;
-        parameters.source = '@htmlplus/react';
-        parameters.specifiers = [
-          {
-            imported: pascalCase(matched),
-            local: pascalCase(matched)
-          }
-        ];
-      }
-    }
 
     if (
       parameters.default ||
@@ -145,32 +127,6 @@ export const plugins = [
     importResolver: importResolver('react'),
     isStringAttribute
   }),
-  reactDedicated({
-    destination: destination('react-dedicated'),
-    eventResolver: eventResolver('react-dedicated'),
-    importResolver: importResolver('react-dedicated'),
-    isStringAttribute,
-    customElementNameResolver(name) {
-      const exception = CUSTOM_ELEMENTS.find((exception) => name.includes(exception));
-
-      if (exception) {
-        name = name.replace(exception, pascalCase(exception));
-      }
-
-      return name
-        .replace('plus-', '')
-        .split('-')
-        .map((section) => pascalCase(section))
-        .join('.');
-    },
-    dependenciesTransformer(dependencies: IContextDependency[]) {
-      return dependencies.map((dependency) =>
-        Object.assign({}, dependency, {
-          name: dependency.name.replace('@htmlplus/core', '@htmlplus/react')
-        })
-      );
-    }
-  }),
   reactExperimental({
     destination: destination('react-experimental'),
     eventResolver: eventResolver('react-experimental'),
@@ -191,7 +147,7 @@ export const plugins = [
   }),
   json({
     destination: 'dist/db.json',
-    plugins: ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue'],
+    plugins: ['angular', 'javascript', 'react', 'react-experimental', 'svelte', 'vue'],
     keyResolver(plugin, context) {
       return `${plugin}/${getElementName(context)}/${context.file.name}`;
     }

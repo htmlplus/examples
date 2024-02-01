@@ -13,7 +13,7 @@ function App() {
     return () => {
       switchRef.current.removeEventListener('plus-change', onPlusChange);
     };
-  }, []);
+  });
   return (
     <plus-center>
       <plus-switch ref={switchRef}></plus-switch>

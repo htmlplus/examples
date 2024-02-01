@@ -23,7 +23,7 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onclick={onClick}>To Base64</button>
+        <button onClick={onClick}>To Base64</button>
       </plus-center>
     </>
   );

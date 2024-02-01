@@ -129,8 +129,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
                             t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
                           )
                         ])
-                      ),
-                      t.arrayExpression([])
+                      )
                     ])
                   );
 
@@ -203,8 +202,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
                             t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
                           )
                         ])
-                      ),
-                      t.arrayExpression([])
+                      )
                     ])
                   );
 
@@ -498,6 +496,69 @@ export const react: IPlugin<IReactOptions> = (options) => {
                 return;
 
               parameters.pattern.node.value = value;
+
+              if (parameters.name.name == 'style') return;
+
+              if (!['ArrayExpression', 'ObjectExpression'].includes((value as any).expression.type))
+                return;
+
+              addDependency(this.script, 'react', 'useEffect', 'useEffect');
+
+              const app = parameters.pattern.findParent((path) =>
+                t.isFunctionDeclaration(path.node)
+              ) as any;
+
+              const elementName = (parameters.element.openingElement.name as any).name;
+
+              const token = this.addToken(camelCase(elementName + 'Ref'), elementName);
+
+              const useEffect = t.expressionStatement(
+                t.callExpression(t.identifier('useEffect'), [
+                  t.arrowFunctionExpression(
+                    [],
+                    t.blockStatement([
+                      t.expressionStatement(
+                        t.assignmentExpression(
+                          '=',
+                          t.memberExpression(
+                            t.memberExpression(t.identifier(token.value), t.identifier('current')),
+                            t.identifier(camelCase(parameters.name.name))
+                          ),
+                          (value as any).expression
+                        )
+                      )
+                    ])
+                  ),
+                  t.arrayExpression([])
+                ])
+              );
+
+              this.resolve(useEffect);
+
+              app.node.body.body.splice(-1, 0, useEffect);
+
+              parameters.pattern.remove();
+
+              if (!token.new) return;
+
+              addDependency(this.script, 'react', 'useRef', 'useRef');
+
+              const ref = t.variableDeclaration('const', [
+                t.variableDeclarator(
+                  t.identifier(token.value),
+                  t.callExpression(t.identifier('useRef'), [])
+                )
+              ]);
+
+              this.resolve(ref);
+
+              app.node.body.body.unshift(ref);
+
+              addAttribute(
+                parameters.element,
+                'ref',
+                t.jsxExpressionContainer(t.identifier(token.value))
+              );
             },
             id(parameters) {
               parameters.pattern.remove();

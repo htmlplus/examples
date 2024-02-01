@@ -7,7 +7,8 @@ function App() {
   }
   return (
     <plus-browse droppable onplus-change={onPlusChange}>
-      Click or Drag & Drop a file(s) here
+      {' '}
+      Click or Drag & Drop a file(s) here{' '}
     </plus-browse>
   );
 }

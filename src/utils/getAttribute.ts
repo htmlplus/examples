@@ -31,9 +31,10 @@ export const getAttribute = (
 
   try {
     JSON.parse(value);
-    return t.jsxExpressionContainer(
-      (parse(value, { sourceType: 'module' }).program.body[0] as any).expression
-    );
+
+    const parsed = parse(`export default ${value}`, { sourceType: 'module' });
+
+    return t.jsxExpressionContainer((parsed.program.body[0] as any).declaration);
   } catch {}
 
   return attribute.value;
