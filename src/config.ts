@@ -7,7 +7,7 @@ import {
   initialize,
   javascript,
   json,
-  reactDedicated,
+  react,
   reactExperimental,
   svelte,
   vue
@@ -15,10 +15,10 @@ import {
 import { IContext, IContextDependency } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
-// const SOURCE = './src/development/index.html';
+// const SOURCE = './src/development/*.html';
 // const TARGET = './src/development/dist';
 
-const SOURCE = '../core/src/components/*/examples/*.html';
+const SOURCE = '../core/src/elements/*/examples/*.html';
 const TARGET = './dist';
 
 const CDN = 'https://cdn.skypack.dev/';
@@ -60,40 +60,23 @@ const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
 
 const destination = (key: string) => {
   return (context: IContext) => {
-    return path.join(TARGET, key, getComponentName(context), context.file.name);
+    return path.join(TARGET, key, getElementName(context), context.file.name);
   };
 };
 
 const eventResolver = (key: string) => {
   return (name: string) => {
-    if (key == 'react-dedicated') {
-      return pascalCase(name.replace('plus-', ''));
-    }
     return name;
   };
 };
 
-const getComponentName = (context: IContext) => {
+const getElementName = (context: IContext) => {
   return path.basename(path.dirname(context.directory.path));
 };
 
 const importResolver = (key: string): IImportResolverFunction => {
   return (parameters) => {
     parameters.source = parameters.source.replace(CDN, '');
-
-    if (key == 'react-dedicated') {
-      const [, matched] = parameters.source.match(/^@htmlplus\/core\/([^/]+)\.js$/) || [];
-      if (matched && matched != 'config') {
-        if (!CUSTOM_ELEMENTS.includes(matched) && matched.includes('-')) return null;
-        parameters.source = '@htmlplus/react';
-        parameters.specifiers = [
-          {
-            imported: pascalCase(matched),
-            local: pascalCase(matched)
-          }
-        ];
-      }
-    }
 
     if (
       parameters.default ||
@@ -125,7 +108,7 @@ export const plugins = [
       };
     },
     getTitle(context: IContext) {
-      return `${capitalCase(getComponentName(context))} | ${capitalCase(context.file.name)}`;
+      return `${capitalCase(getElementName(context))} | ${capitalCase(context.file.name)}`;
     }
   }),
   angular({
@@ -138,33 +121,11 @@ export const plugins = [
     destination: destination('javascript'),
     importResolver: importResolver('javascript')
   }),
-  reactDedicated({
-    destination: destination('react-dedicated'),
-    eventResolver: eventResolver('react-dedicated'),
-    importResolver: importResolver('react-dedicated'),
-    isStringAttribute,
-    customElementNameResolver(name) {
-      const exception = CUSTOM_ELEMENTS.find((exception) => name.includes(exception));
-
-      if (exception) {
-        name = name.replace(exception, pascalCase(exception));
-      }
-
-      return name
-        .replace('plus-', '')
-        .split('-')
-        .map((section) => pascalCase(section))
-        .join('.');
-    },
-    dependenciesTransformer(dependencies: IContextDependency[]) {
-      return dependencies.map((dependency) => Object.assign(
-        {},
-        dependency,
-        {
-          name: dependency.name.replace('@htmlplus/core', '@htmlplus/react')
-        }
-      ))
-    }
+  react({
+    destination: destination('react'),
+    eventResolver: eventResolver('react'),
+    importResolver: importResolver('react'),
+    isStringAttribute
   }),
   reactExperimental({
     destination: destination('react-experimental'),
@@ -186,9 +147,9 @@ export const plugins = [
   }),
   json({
     destination: 'dist/db.json',
-    plugins: ['angular', 'javascript', 'react-dedicated', 'react-experimental', 'svelte', 'vue'],
+    plugins: ['angular', 'javascript', 'react', 'react-experimental', 'svelte', 'vue'],
     keyResolver(plugin, context) {
-      return `${plugin}/${getComponentName(context)}/${context.file.name}`;
+      return `${plugin}/${getElementName(context)}/${context.file.name}`;
     }
   })
 ];
