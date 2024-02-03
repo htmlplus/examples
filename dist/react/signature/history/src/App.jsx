@@ -24,9 +24,9 @@ function App() {
     function onPlusEnd() {
       sync();
     }
-    signatureRef.current.addEventListener('PlusEnd', onPlusEnd);
+    signatureRef.current.addEventListener('plus-end', onPlusEnd);
     return () => {
-      signatureRef.current.removeEventListener('PlusEnd', onPlusEnd);
+      signatureRef.current.removeEventListener('plus-end', onPlusEnd);
     };
   });
   return (

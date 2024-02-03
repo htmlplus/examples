@@ -65,11 +65,9 @@ export const react: IPlugin<IReactOptions> = (options) => {
                 } else {
                   if (!parameters.isRoot) return;
 
-                  const event = options.eventResolver(parameters.event);
-
                   addAttribute(
                     parameters.element,
-                    'on' + event,
+                    'on' + pascalCase(parameters.event),
                     t.jsxExpressionContainer(parameters.handler)
                   );
 
@@ -139,25 +137,27 @@ export const react: IPlugin<IReactOptions> = (options) => {
                 } else {
                   if (!parameters.isRoot) return;
 
-                  const event = options.eventResolver(parameters.event);
-
-                  const token = this.addToken('on' + pascalCase(event), event, true);
+                  const token = this.addToken(
+                    'on' + pascalCase(parameters.event),
+                    parameters.event,
+                    true
+                  );
 
                   addAttribute(
                     parameters.element,
-                    'on' + event,
+                    'on' + pascalCase(parameters.event),
                     t.jsxExpressionContainer(t.identifier(token.value))
                   );
 
-                  const node = t.functionDeclaration(
+                  const handler = t.functionDeclaration(
                     t.identifier(token.value),
                     parameters.handler.params,
                     parameters.handler.body
                   );
 
-                  this.resolve(node);
+                  this.resolve(handler);
 
-                  parameters.wrapper.replaceWith(node);
+                  parameters.wrapper.replaceWith(handler);
                 }
               },
               identifier(parameters) {
@@ -212,11 +212,9 @@ export const react: IPlugin<IReactOptions> = (options) => {
                 } else {
                   if (!parameters.isRoot) return;
 
-                  const event = options.eventResolver(parameters.event);
-
                   addAttribute(
                     parameters.element,
-                    'on' + event,
+                    'on' + pascalCase(parameters.event),
                     t.jsxExpressionContainer(parameters.handler)
                   );
 

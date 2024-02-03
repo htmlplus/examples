@@ -15,9 +15,9 @@ function App() {
     function onPlusClickOutside() {
       setHidden(true);
     }
-    clickOutsideRef.current.addEventListener('PlusClickOutside', onPlusClickOutside);
+    clickOutsideRef.current.addEventListener('plus-click-outside', onPlusClickOutside);
     return () => {
-      clickOutsideRef.current.removeEventListener('PlusClickOutside', onPlusClickOutside);
+      clickOutsideRef.current.removeEventListener('plus-click-outside', onPlusClickOutside);
     };
   });
   return (
