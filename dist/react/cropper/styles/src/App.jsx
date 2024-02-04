@@ -7,7 +7,7 @@ function App() {
     <plus-grid gutter="md">
       <plus-grid-item xs="12" sm="5">
         <plus-cropper
-          className="style-1"
+          class="style-1"
           indicator
           mode="crop"
           shape="circle"
@@ -18,7 +18,7 @@ function App() {
       </plus-grid-item>
       <plus-grid-item xs="12" sm="7">
         <plus-cropper
-          className="style-2"
+          class="style-2"
           indicator
           mode="crop"
           resizer="both"
@@ -28,7 +28,7 @@ function App() {
       </plus-grid-item>
       <plus-grid-item xs="12" sm="6">
         <plus-cropper
-          className="style-3"
+          class="style-3"
           guides
           indicator
           mode="crop"
@@ -40,7 +40,7 @@ function App() {
       </plus-grid-item>
       <plus-grid-item xs="12" sm="6">
         <plus-cropper
-          className="style-4"
+          class="style-4"
           guides
           mode="crop"
           resizer="edge"
@@ -50,7 +50,7 @@ function App() {
       </plus-grid-item>
       <plus-grid-item xs="12" sm="7">
         <plus-cropper
-          className="style-5"
+          class="style-5"
           backdrop
           background
           mode="crop"
@@ -60,7 +60,7 @@ function App() {
         ></plus-cropper>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="5">
-        <plus-cropper className="style-6" src="/assets/images/bear.jpg"></plus-cropper>
+        <plus-cropper class="style-6" src="/assets/images/bear.jpg"></plus-cropper>
       </plus-grid-item>
     </plus-grid>
   );

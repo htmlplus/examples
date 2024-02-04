@@ -8,7 +8,7 @@ function App() {
       <plus-grid-item xs="12" sm="6">
         <plus-grid>
           <plus-grid-item xs="12">
-            <plus-aspect-ratio value="3/2" className="ratio-one">
+            <plus-aspect-ratio value="3/2" class="ratio-one">
               <div className="box one">3/2</div>
             </plus-aspect-ratio>
           </plus-grid-item>

@@ -6,13 +6,13 @@ function App() {
   return (
     <plus-grid justify-content="evenly" gutter="md">
       <plus-grid-item xs="12" sm="auto">
-        <plus-card className="pink"></plus-card>
+        <plus-card class="pink"></plus-card>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="auto">
-        <plus-card className="yellow"></plus-card>
+        <plus-card class="yellow"></plus-card>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="auto">
-        <plus-card className="blue"></plus-card>
+        <plus-card class="blue"></plus-card>
       </plus-grid-item>
     </plus-grid>
   );
