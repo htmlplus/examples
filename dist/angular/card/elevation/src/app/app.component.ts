@@ -8,7 +8,7 @@ import '@htmlplus/core/card.js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  elevation = 12;
+  elevation = 24;
   onChange(event) {
     this.elevation = event.target.value;
   }

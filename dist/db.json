@@ -2291,37 +2291,37 @@
   },
   {
     "key": "angular/card/elevation",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  elevation = 12;\n  onChange(event) {\n    this.elevation = event.target.value;\n  }\n}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  elevation = 24;\n  onChange(event) {\n    this.elevation = event.target.value;\n  }\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
-    "template": "<plus-card [elevation]=\"elevation\"></plus-card>\n<br />\n<input type=\"range\" value=\"12\" min=\"1\" max=\"24\" (change)=\"onChange($event)\" />\n"
+    "template": "<plus-card [elevation]=\"elevation\"></plus-card>\n<br />\n<input type=\"range\" min=\"1\" max=\"24\" (change)=\"onChange($event)\" />\n"
   },
   {
     "key": "javascript/card/elevation",
     "script": "import '@htmlplus/core/card.js';\n\n$input.addEventListener('change', (event) => {\n  $card.elevation = event.target.value;\n});\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
-    "template": "<plus-card id=\"$card\" elevation=\"12\"></plus-card>\n<br />\n<input id=\"$input\" type=\"range\" value=\"12\" min=\"1\" max=\"24\" />\n"
+    "template": "<plus-card id=\"$card\" elevation=\"24\"></plus-card>\n<br />\n<input id=\"$input\" type=\"range\" min=\"1\" max=\"24\" />\n"
   },
   {
     "key": "react/card/elevation",
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(12);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" value=\"12\" min=\"1\" max=\"24\" onChange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(24);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" min=\"1\" max=\"24\" onChange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "react-experimental/card/elevation",
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(12);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" value=\"12\" min=\"1\" max=\"24\" onchange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/core/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(24);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" min=\"1\" max=\"24\" onchange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
     "key": "svelte/card/elevation",
-    "script": "import '@htmlplus/core/card.js';\n\nlet elevation = 12;\nfunction onChange(event) {\n  elevation = event.target.value;\n}\n",
+    "script": "import '@htmlplus/core/card.js';\n\nlet elevation = 24;\nfunction onChange(event) {\n  elevation = event.target.value;\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
-    "template": "<plus-card {elevation}></plus-card>\n<br />\n<input type=\"range\" value=\"12\" min=\"1\" max=\"24\" on:change={onChange} />\n"
+    "template": "<plus-card {elevation}></plus-card>\n<br />\n<input type=\"range\" min=\"1\" max=\"24\" on:change={onChange} />\n"
   },
   {
     "key": "vue/card/elevation",
-    "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/card.js';\n\nconst elevation = ref(12);\nfunction onChange(event) {\n  elevation.value = event.target.value;\n}\n",
+    "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/card.js';\n\nconst elevation = ref(24);\nfunction onChange(event) {\n  elevation.value = event.target.value;\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
-    "template": "<div>\n  <plus-card :elevation=\"elevation\"></plus-card>\n  <br />\n  <input type=\"range\" value=\"12\" min=\"1\" max=\"24\" @change=\"onChange\" />\n</div>\n"
+    "template": "<div>\n  <plus-card :elevation=\"elevation\"></plus-card>\n  <br />\n  <input type=\"range\" min=\"1\" max=\"24\" @change=\"onChange\" />\n</div>\n"
   },
   {
     "key": "angular/card/outlined",
