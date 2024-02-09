@@ -9,11 +9,13 @@ function App() {
   const detectorRef = useRef();
   const [value, setValue] = useState(0);
   useEffect(() => {
+    if (!detectorRef.current) return;
     function onPlusChange(event) {
       setValue(event.detail.progress);
     }
     detectorRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!detectorRef.current) return;
       detectorRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });

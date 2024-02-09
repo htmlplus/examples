@@ -6,11 +6,12 @@ import '@htmlplus/core/click-outside.js';
 
 function App() {
   const outsideRef = useRef();
-  const clickOutsideRef = useRef();
   const insideRef = useRef();
+  const clickOutsideRef = useRef();
   const [inside, setInside] = useState(0);
   const [outside, setOutside] = useState(0);
   useEffect(() => {
+    if (!clickOutsideRef.current) return;
     function onClick() {
       const count = inside + 1;
       setInside(count);
@@ -18,10 +19,12 @@ function App() {
     }
     clickOutsideRef.current.addEventListener('click', onClick);
     return () => {
+      if (!clickOutsideRef.current) return;
       clickOutsideRef.current.removeEventListener('click', onClick);
     };
   });
   useEffect(() => {
+    if (!clickOutsideRef.current) return;
     function onPlusClickOutside() {
       const count = outside + 1;
       setOutside(count);
@@ -29,6 +32,7 @@ function App() {
     }
     clickOutsideRef.current.addEventListener('plus-click-outside', onPlusClickOutside);
     return () => {
+      if (!clickOutsideRef.current) return;
       clickOutsideRef.current.removeEventListener('plus-click-outside', onPlusClickOutside);
     };
   });

@@ -13,20 +13,24 @@ function App() {
   const dialogRef = useRef();
   const [disabled, setDisabled] = useState(true);
   useEffect(() => {
+    if (!dialogRef.current) return;
     function onPlusOpened() {
       setDisabled(false);
     }
     dialogRef.current.addEventListener('plus-opened', onPlusOpened);
     return () => {
+      if (!dialogRef.current) return;
       dialogRef.current.removeEventListener('plus-opened', onPlusOpened);
     };
   });
   useEffect(() => {
+    if (!dialogRef.current) return;
     function onPlusClosed() {
       setDisabled(true);
     }
     dialogRef.current.addEventListener('plus-closed', onPlusClosed);
     return () => {
+      if (!dialogRef.current) return;
       dialogRef.current.removeEventListener('plus-closed', onPlusClosed);
     };
   });

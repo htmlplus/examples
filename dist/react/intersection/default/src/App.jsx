@@ -8,14 +8,16 @@ import '@htmlplus/core/intersection.js';
 import '@htmlplus/core/sticky.js';
 
 function App() {
-  const intersectionRef = useRef();
   const statusRef = useRef();
+  const intersectionRef = useRef();
   useEffect(() => {
+    if (!intersectionRef.current) return;
     function onPlusChange(event) {
       statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
     }
     intersectionRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!intersectionRef.current) return;
       intersectionRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });

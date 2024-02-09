@@ -12,22 +12,26 @@ import '@htmlplus/core/faker.js';
 function App() {
   const dialogRef = useRef();
   useEffect(() => {
+    if (!dialogRef.current) return;
     function onPlusOpen(event) {
       if (confirm('Are you sure you want to open it?')) return;
       event.preventDefault();
     }
     dialogRef.current.addEventListener('plus-open', onPlusOpen);
     return () => {
+      if (!dialogRef.current) return;
       dialogRef.current.removeEventListener('plus-open', onPlusOpen);
     };
   });
   useEffect(() => {
+    if (!dialogRef.current) return;
     function onPlusClose(event) {
       if (confirm('Are you sure you want to close it?')) return;
       event.preventDefault();
     }
     dialogRef.current.addEventListener('plus-close', onPlusClose);
     return () => {
+      if (!dialogRef.current) return;
       dialogRef.current.removeEventListener('plus-close', onPlusClose);
     };
   });

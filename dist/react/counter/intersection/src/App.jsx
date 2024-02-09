@@ -4,14 +4,16 @@ import '@htmlplus/core/counter.js';
 import '@htmlplus/core/intersection.js';
 
 function App() {
-  const intersectionRef = useRef();
   const counterRef = useRef();
+  const intersectionRef = useRef();
   useEffect(() => {
+    if (!intersectionRef.current) return;
     function onPlusChange(event) {
       counterRef.current.play = event.detail.isIntersecting;
     }
     intersectionRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!intersectionRef.current) return;
       intersectionRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });

@@ -121,10 +121,23 @@ export const react: IPlugin<IReactOptions> = (options) => {
                       t.arrowFunctionExpression(
                         [],
                         t.blockStatement([
+                          t.ifStatement(
+                            t.unaryExpression('!', t.identifier(parameters.id)),
+                            t.returnStatement()
+                          ),
                           handler,
                           addEventListener,
                           t.returnStatement(
-                            t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
+                            t.arrowFunctionExpression(
+                              [],
+                              t.blockStatement([
+                                t.ifStatement(
+                                  t.unaryExpression('!', t.identifier(parameters.id)),
+                                  t.returnStatement()
+                                ),
+                                removeEventListener
+                              ])
+                            )
                           )
                         ])
                       )
@@ -197,9 +210,22 @@ export const react: IPlugin<IReactOptions> = (options) => {
                       t.arrowFunctionExpression(
                         [],
                         t.blockStatement([
+                          t.ifStatement(
+                            t.unaryExpression('!', t.identifier(parameters.id)),
+                            t.returnStatement()
+                          ),
                           addEventListener,
                           t.returnStatement(
-                            t.arrowFunctionExpression([], t.blockStatement([removeEventListener]))
+                            t.arrowFunctionExpression(
+                              [],
+                              t.blockStatement([
+                                t.ifStatement(
+                                  t.unaryExpression('!', t.identifier(parameters.id)),
+                                  t.returnStatement()
+                                ),
+                                removeEventListener
+                              ])
+                            )
                           )
                         ])
                       )

@@ -21,11 +21,13 @@ function App() {
     sync();
   }
   useEffect(() => {
+    if (!signatureRef.current) return;
     function onPlusEnd() {
       sync();
     }
     signatureRef.current.addEventListener('plus-end', onPlusEnd);
     return () => {
+      if (!signatureRef.current) return;
       signatureRef.current.removeEventListener('plus-end', onPlusEnd);
     };
   });

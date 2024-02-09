@@ -12,11 +12,13 @@ function App() {
     setHidden(!hidden);
   }
   useEffect(() => {
+    if (!clickOutsideRef.current) return;
     function onPlusClickOutside() {
       setHidden(true);
     }
     clickOutsideRef.current.addEventListener('plus-click-outside', onPlusClickOutside);
     return () => {
+      if (!clickOutsideRef.current) return;
       clickOutsideRef.current.removeEventListener('plus-click-outside', onPlusClickOutside);
     };
   });

@@ -5,14 +5,16 @@ import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
 import '@htmlplus/core/intersection.js';
 
 function App() {
-  const intersectionRef = useRef();
   const animationRef = useRef();
+  const intersectionRef = useRef();
   useEffect(() => {
+    if (!intersectionRef.current) return;
     function onPlusChange(event) {
       animationRef.current.run = event.detail.isIntersecting;
     }
     intersectionRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!intersectionRef.current) return;
       intersectionRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });
