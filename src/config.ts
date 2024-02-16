@@ -1,4 +1,4 @@
-import { capitalCase, pascalCase } from 'change-case';
+import { capitalCase } from 'change-case';
 import * as glob from 'fast-glob';
 import path from 'node:path';
 
@@ -12,7 +12,7 @@ import {
   svelte,
   vue
 } from '@/plugins';
-import { IContext, IContextDependency } from '@/types';
+import { IContext } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
 // const SOURCE = './src/development/*.html';
@@ -22,14 +22,6 @@ const SOURCE = '../core/src/elements/*/examples/*.html';
 const TARGET = './dist';
 
 const CDN = 'https://cdn.skypack.dev/';
-
-const CUSTOM_ELEMENTS = [
-  'aspect-ratio',
-  'click-outside',
-  'format-bytes',
-  'progress-bar',
-  'scroll-detector'
-];
 
 const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
   {
