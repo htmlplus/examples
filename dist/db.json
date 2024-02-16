@@ -1443,65 +1443,65 @@
   },
   {
     "key": "angular/avatar/icon-ratio-global",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n"
   },
   {
     "key": "react-experimental/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-1\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-2\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" className=\"icon-3\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n"
   },
   {
     "key": "svelte/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "style": ".icon-1 {\n  padding: 0.25em;\n}\n.icon-2 {\n  padding: 0.5em;\n}\n.icon-3 {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-1\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-2\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" class=\"icon-3\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/icon-ratio-inline",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n        </plus-avatar>\n        <plus-avatar>\n          <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.0em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"1.5em\"></plus-icon>\n    </plus-avatar>\n    <plus-avatar>\n      <plus-icon name=\"person\" size=\"2.0em\"></plus-icon>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/icon",
@@ -1706,38 +1706,66 @@
     "template": "<plus-stack gap=\"8rem\">\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"left\">left</div>\n    <div slot=\"left-bottom\">left-bottom</div>\n    <div slot=\"left-top\">left-top</div>\n    <div slot=\"right\">right</div>\n    <div slot=\"right-bottom\">right-bottom</div>\n    <div slot=\"right-top\">right-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"end\">end</div>\n    <div slot=\"end-bottom\">end-bottom</div>\n    <div slot=\"end-top\">end-top</div>\n    <div slot=\"start\">start</div>\n    <div slot=\"start-bottom\">start-bottom</div>\n    <div slot=\"start-top\">start-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n</plus-stack>\n"
   },
   {
-    "key": "angular/avatar/svg-ratio",
+    "key": "angular/avatar/svg-ratio-global",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+    "style": "svg {\n  padding: 0.5em;\n}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
-    "key": "javascript/avatar/svg-ratio",
+    "key": "javascript/avatar/svg-ratio-global",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+    "style": "svg {\n  padding: 0.5em;\n}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
-    "key": "react/avatar/svg-ratio",
+    "key": "react/avatar/svg-ratio-global",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n"
+    "style": "svg {\n  padding: 0.5em;\n}\n"
   },
   {
-    "key": "react-experimental/avatar/svg-ratio",
+    "key": "react-experimental/avatar/svg-ratio-global",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n"
+    "style": "svg {\n  padding: 0.5em;\n}\n"
   },
   {
-    "key": "svelte/avatar/svg-ratio",
+    "key": "svelte/avatar/svg-ratio-global",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+    "style": "svg {\n  padding: 0.5em;\n}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
-    "key": "vue/avatar/svg-ratio",
+    "key": "vue/avatar/svg-ratio-global",
     "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
-    "style": "svg {\n  padding: 0.5rem;\n  box-sizing: border-box;\n}\n",
+    "style": "svg {\n  padding: 0.5em;\n}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/svg-ratio-inline",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/svg-ratio-inline",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+  },
+  {
+    "key": "react/avatar/svg-ratio-inline",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg\n          viewBox=\"0 0 24 24\"\n          stroke=\"currentColor\"\n          fill=\"none\"\n          style={{\n            padding: '0.5em'\n          }}\n        >\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/avatar/svg-ratio-inline",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg\n          viewBox=\"0 0 24 24\"\n          stroke=\"currentColor\"\n          fill=\"none\"\n          style={{\n            padding: '0.5em'\n          }}\n        >\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/avatar/svg-ratio-inline",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em;\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/svg-ratio-inline",
+    "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/svg",
