@@ -1,8 +1,6 @@
 import '@htmlplus/core/browse.js';
-
-import './style.css';
+import '@htmlplus/core/center.js';
 
 $browse.addEventListener('plus-change', (event) => {
-  const name = event.detail.files[0].file.name;
-  alert(`File '${name}' selected.`);
+  console.log(event.detail);
 });

@@ -2084,38 +2084,206 @@
     "template": "<plus-center>\n  <plus-breadcrumb separator=\"-\">\n    <a href=\"#\">First</a>\n    <a href=\"#\">Second</a>\n    <a href=\"#\">Third</a>\n    <a href=\"#\">Fourth</a>\n    <a href=\"#\">Fifth</a>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
   {
+    "key": "angular/browse/accept",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/accept",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\" accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/accept",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-browse accept=\".jpg, .pdf, video/*\">\n        Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/accept",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-browse accept=\".jpg, .pdf, video/*\">\n        Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/accept",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/accept",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n",
+    "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
     "key": "angular/browse/default",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    console.log(event.detail);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse (plus-change)=\"onPlusChange($event)\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/default",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/default",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange(event) {\n      console.log(event.detail);\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-center>\n      <plus-browse ref={browseRef}> Click Here </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/default",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <plus-center>\n      <plus-browse onplus-change={onPlusChange}> Click Here </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/default",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
+    "template": "<plus-center>\n  <plus-browse on:plus-change={onPlusChange}> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/default",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
+    "template": "<plus-center>\n  <plus-browse @plus-change=\"onPlusChange\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/browse/disabled",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange() {\n    alert('File selected.');\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse disabled (plus-change)=\"onPlusChange()\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/disabled",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n$browse.addEventListener('plus-change', () => {\n  alert('File selected.');\n});\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\" disabled> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/disabled",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange() {\n      alert('File selected.');\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-center>\n      <plus-browse disabled ref={browseRef}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/disabled",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  function onPlusChange() {\n    alert('File selected.');\n  }\n  return (\n    <plus-center>\n      <plus-browse disabled onplus-change={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/disabled",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange() {\n  alert('File selected.');\n}\n",
+    "template": "<plus-center>\n  <plus-browse disabled on:plus-change={onPlusChange}> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/disabled",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange() {\n  alert('File selected.');\n}\n",
+    "template": "<plus-center>\n  <plus-browse disabled @plus-change=\"onPlusChange\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/browse/droppable",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n}\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable (plus-change)=\"onPlusChange($event)\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
   },
   {
-    "key": "javascript/browse/default",
+    "key": "javascript/browse/droppable",
     "script": "import '@htmlplus/core/browse.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n});\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse id=\"$browse\" droppable> Click or Drag & Drop a file(s) here </plus-browse>\n"
   },
   {
-    "key": "react/browse/default",
+    "key": "react/browse/droppable",
     "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange(event) {\n      const name = event.detail.files[0].file.name;\n      alert(`File '${name}' selected.`);\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-browse droppable ref={browseRef}>\n      {' '}\n      Click or Drag & Drop a file(s) here{' '}\n    </plus-browse>\n  );\n}\nexport default App;\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n"
   },
   {
-    "key": "react-experimental/browse/default",
+    "key": "react-experimental/browse/droppable",
     "script": "import '@htmlplus/core/browse.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n  return (\n    <plus-browse droppable onplus-change={onPlusChange}>\n      {' '}\n      Click or Drag & Drop a file(s) here{' '}\n    </plus-browse>\n  );\n}\nexport default App;\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n"
   },
   {
-    "key": "svelte/browse/default",
+    "key": "svelte/browse/droppable",
     "script": "import '@htmlplus/core/browse.js';\n\nfunction onPlusChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable on:plus-change={onPlusChange}>\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
   },
   {
-    "key": "vue/browse/default",
+    "key": "vue/browse/droppable",
     "script": "import '@htmlplus/core/browse.js';\n\nfunction onPlusChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable @plus-change=\"onPlusChange\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
+  },
+  {
+    "key": "angular/browse/min-and-max-size",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse [min-size]=\"1000000\" [max-size]=\"5000000\" (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/min-and-max-size",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n});\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\" min-size=\"1000000\" max-size=\"5000000\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/min-and-max-size",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange(event) {\n      if (event.detail.files?.[0]?.errors.length) {\n        alert(event.detail.files[0].errors[0].message);\n      }\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} ref={browseRef}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/min-and-max-size",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onplus-change={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/min-and-max-size",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse min-size={1000000} max-size={5000000} on:plus-change={onPlusChange}>\n    Click Here\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/min-and-max-size",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse :min-size=\"1000000\" :max-size=\"5000000\" @plus-change=\"onPlusChange\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/browse/min-and-max",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse [min]=\"3\" [max]=\"5\" multiple (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/min-and-max",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n});\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\" min=\"3\" max=\"5\" multiple> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/min-and-max",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange(event) {\n      if (event.detail.error) {\n        alert(event.detail.error.message);\n      }\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple ref={browseRef}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/min-and-max",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onplus-change={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/min-and-max",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse min={3} max={5} multiple on:plus-change={onPlusChange}> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/min-and-max",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse :min=\"3\" :max=\"5\" multiple @plus-change=\"onPlusChange\"> Click Here </plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/browse/multiple",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n}\n",
+    "template": "<plus-center>\n  <plus-browse multiple (plus-change)=\"onPlusChange($event)\">Click Here</plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/browse/multiple",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  alert(`${event.detail.files.length} file(s) are selected.`);\n});\n",
+    "template": "<plus-center>\n  <plus-browse id=\"$browse\" multiple>Click Here</plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "react/browse/multiple",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  const browseRef = useRef();\n  useEffect(() => {\n    if (!browseRef.current) return;\n    function onPlusChange(event) {\n      alert(`${event.detail.files.length} file(s) are selected.`);\n    }\n    browseRef.current.addEventListener('plus-change', onPlusChange);\n    return () => {\n      if (!browseRef.current) return;\n      browseRef.current.removeEventListener('plus-change', onPlusChange);\n    };\n  });\n  return (\n    <plus-center>\n      <plus-browse multiple ref={browseRef}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/browse/multiple",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n  return (\n    <plus-center>\n      <plus-browse multiple onplus-change={onPlusChange}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/browse/multiple",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  alert(`${event.detail.files.length} file(s) are selected.`);\n}\n",
+    "template": "<plus-center>\n  <plus-browse multiple on:plus-change={onPlusChange}>Click Here</plus-browse>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/browse/multiple",
+    "script": "import '@htmlplus/core/browse.js';\nimport '@htmlplus/core/center.js';\n\nfunction onPlusChange(event) {\n  alert(`${event.detail.files.length} file(s) are selected.`);\n}\n",
+    "template": "<plus-center>\n  <plus-browse multiple @plus-change=\"onPlusChange\">Click Here</plus-browse>\n</plus-center>\n"
   },
   {
     "key": "angular/card/background-color",

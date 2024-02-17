@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import '@htmlplus/core/browse.js';
+import '@htmlplus/core/center.js';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,6 @@ import '@htmlplus/core/browse.js';
 })
 export class AppComponent {
   onPlusChange(event) {
-    const name = event.detail.files[0].file.name;
-    alert(`File '${name}' selected.`);
+    console.log(event.detail);
   }
 }

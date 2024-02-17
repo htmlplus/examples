@@ -1,15 +1,14 @@
 import '@htmlplus/core/browse.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   function onPlusChange(event) {
-    const name = event.detail.files[0].file.name;
-    alert(`File '${name}' selected.`);
+    console.log(event.detail);
   }
   return (
-    <plus-browse droppable onplus-change={onPlusChange}>
-      {' '}
-      Click or Drag & Drop a file(s) here{' '}
-    </plus-browse>
+    <plus-center>
+      <plus-browse onplus-change={onPlusChange}> Click Here </plus-browse>
+    </plus-center>
   );
 }
 export default App;

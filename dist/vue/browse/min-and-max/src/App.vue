@@ -1,0 +1,16 @@
+<template>
+  <plus-center>
+    <plus-browse :min="3" :max="5" multiple @plus-change="onPlusChange"> Click Here </plus-browse>
+  </plus-center>
+</template>
+
+<script setup>
+  import '@htmlplus/core/browse.js';
+  import '@htmlplus/core/center.js';
+
+  function onPlusChange(event) {
+    if (event.detail.error) {
+      alert(event.detail.error.message);
+    }
+  }
+</script>
