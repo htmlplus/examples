@@ -7,11 +7,11 @@
 
 <plus-center>
   <plus-avatar-group>
-    <plus-avatar></plus-avatar>
-    <plus-tooltip>Tooltip</plus-tooltip>
-    <plus-avatar></plus-avatar>
-    <plus-tooltip>Tooltip</plus-tooltip>
-    <plus-avatar></plus-avatar>
-    <plus-tooltip>Tooltip</plus-tooltip>
+    <plus-avatar>A</plus-avatar>
+    <plus-tooltip>Tooltip A</plus-tooltip>
+    <plus-avatar>B</plus-avatar>
+    <plus-tooltip>Tooltip B</plus-tooltip>
+    <plus-avatar>C</plus-avatar>
+    <plus-tooltip>Tooltip C</plus-tooltip>
   </plus-avatar-group>
 </plus-center>
