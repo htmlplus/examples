@@ -4,9 +4,7 @@
 </script>
 
 <plus-faker></plus-faker>
-<plus-divider></plus-divider>
-<plus-faker></plus-faker>
-<plus-divider></plus-divider>
+<plus-divider>OR</plus-divider>
 <plus-faker></plus-faker>
 
 <style>

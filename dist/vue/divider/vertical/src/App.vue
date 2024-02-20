@@ -1,18 +1,18 @@
 <template>
-  <plus-grid align-items="center" justify-content="evenly">
-    <plus-grid-item xs="5">
-      <plus-faker></plus-faker>
-    </plus-grid-item>
-    <plus-divider vertical></plus-divider>
-    <plus-grid-item xs="5">
-      <plus-faker></plus-faker>
-    </plus-grid-item>
-  </plus-grid>
+  <plus-stack>
+    <plus-faker></plus-faker>
+    <plus-divider vertical>OR</plus-divider>
+    <plus-faker></plus-faker>
+  </plus-stack>
 </template>
 
 <script setup>
   import '@htmlplus/core/divider.js';
   import '@htmlplus/core/faker.js';
-  import '@htmlplus/core/grid-item.js';
-  import '@htmlplus/core/grid.js';
 </script>
+
+<style scoped>
+  plus-divider {
+    margin: 0 1rem;
+  }
+</style>
