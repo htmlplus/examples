@@ -2087,35 +2087,35 @@
     "key": "angular/breadcrumb/with-icon",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
-    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
   {
     "key": "javascript/breadcrumb/with-icon",
     "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
-    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
   {
     "key": "react/breadcrumb/with-icon",
-    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-breadcrumb separator=\"/\">\n        <div>\n          <plus-icon name=\"house\"></plus-icon>\n          <a href=\"#\">HTMLPLUS</a>\n        </div>\n        <div>\n          <plus-icon name=\"brush\"></plus-icon>\n          <a href=\"#\">UI</a>\n        </div>\n        <div>\n          <plus-icon name=\"puzzle\"></plus-icon>\n          <a href=\"#\">Elements</a>\n        </div>\n        <div>Breadcrumb</div>\n      </plus-breadcrumb>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-breadcrumb separator=\"/\">\n        <div>\n          <plus-icon name=\"house\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">HTMLPLUS</a>\n        </div>\n        <div>\n          <plus-icon name=\"brush\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">UI</a>\n        </div>\n        <div>\n          <plus-icon name=\"puzzle\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">Elements</a>\n        </div>\n        <div>Breadcrumb</div>\n      </plus-breadcrumb>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n"
   },
   {
     "key": "react-experimental/breadcrumb/with-icon",
-    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-breadcrumb separator=\"/\">\n        <div>\n          <plus-icon name=\"house\"></plus-icon>\n          <a href=\"#\">HTMLPLUS</a>\n        </div>\n        <div>\n          <plus-icon name=\"brush\"></plus-icon>\n          <a href=\"#\">UI</a>\n        </div>\n        <div>\n          <plus-icon name=\"puzzle\"></plus-icon>\n          <a href=\"#\">Elements</a>\n        </div>\n        <div>Breadcrumb</div>\n      </plus-breadcrumb>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-breadcrumb separator=\"/\">\n        <div>\n          <plus-icon name=\"house\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">HTMLPLUS</a>\n        </div>\n        <div>\n          <plus-icon name=\"brush\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">UI</a>\n        </div>\n        <div>\n          <plus-icon name=\"puzzle\"></plus-icon>\n          &nbsp;\n          <a href=\"#\">Elements</a>\n        </div>\n        <div>Breadcrumb</div>\n      </plus-breadcrumb>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n"
   },
   {
     "key": "svelte/breadcrumb/with-icon",
     "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
-    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
   {
     "key": "vue/breadcrumb/with-icon",
     "script": "import '@htmlplus/core/breadcrumb.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "style": "plus-breadcrumb a {\n  color: inherit;\n  text-decoration: none;\n  vertical-align: middle;\n}\nplus-breadcrumb a:hover {\n  text-decoration: underline;\n}\n",
-    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-breadcrumb separator=\"/\">\n    <div>\n      <plus-icon name=\"house\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">HTMLPLUS</a>\n    </div>\n    <div>\n      <plus-icon name=\"brush\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">UI</a>\n    </div>\n    <div>\n      <plus-icon name=\"puzzle\"></plus-icon>\n      &nbsp;\n      <a href=\"#\">Elements</a>\n    </div>\n    <div>Breadcrumb</div>\n  </plus-breadcrumb>\n</plus-center>\n"
   },
   {
     "key": "angular/browse/accept",
@@ -4190,72 +4190,38 @@
     "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-sticky\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation=\"fade\" connector=\"dialog-sticky\" full-width sticky>\n    <plus-dialog-content>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
-    "key": "angular/divider/card",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n",
-    "template": "<plus-card [elevation]=\"10\">\n  Item 1\n  <plus-divider></plus-divider>\n  Item 2\n  <plus-divider></plus-divider>\n  Item 3\n  <plus-divider></plus-divider>\n  Item 4\n  <plus-divider></plus-divider>\n  Item 5\n</plus-card>\n"
-  },
-  {
-    "key": "javascript/divider/card",
-    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n",
-    "template": "<plus-card elevation=\"10\">\n  Item 1\n  <plus-divider></plus-divider>\n  Item 2\n  <plus-divider></plus-divider>\n  Item 3\n  <plus-divider></plus-divider>\n  Item 4\n  <plus-divider></plus-divider>\n  Item 5\n</plus-card>\n"
-  },
-  {
-    "key": "react/divider/card",
-    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n\nfunction App() {\n  return (\n    <plus-card elevation={10}>\n      Item 1<plus-divider></plus-divider>\n      Item 2<plus-divider></plus-divider>\n      Item 3<plus-divider></plus-divider>\n      Item 4<plus-divider></plus-divider>\n      Item 5\n    </plus-card>\n  );\n}\nexport default App;\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n"
-  },
-  {
-    "key": "react-experimental/divider/card",
-    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n\nfunction App() {\n  return (\n    <plus-card elevation={10}>\n      Item 1<plus-divider></plus-divider>\n      Item 2<plus-divider></plus-divider>\n      Item 3<plus-divider></plus-divider>\n      Item 4<plus-divider></plus-divider>\n      Item 5\n    </plus-card>\n  );\n}\nexport default App;\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n"
-  },
-  {
-    "key": "svelte/divider/card",
-    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n",
-    "template": "<plus-card elevation={10}>\n  Item 1\n  <plus-divider></plus-divider>\n  Item 2\n  <plus-divider></plus-divider>\n  Item 3\n  <plus-divider></plus-divider>\n  Item 4\n  <plus-divider></plus-divider>\n  Item 5\n</plus-card>\n"
-  },
-  {
-    "key": "vue/divider/card",
-    "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\n",
-    "style": "plus-card {\n  padding: 0 1rem;\n  line-height: 3rem;\n}\n",
-    "template": "<plus-card :elevation=\"10\">\n  Item 1\n  <plus-divider></plus-divider>\n  Item 2\n  <plus-divider></plus-divider>\n  Item 3\n  <plus-divider></plus-divider>\n  Item 4\n  <plus-divider></plus-divider>\n  Item 5\n</plus-card>\n"
-  },
-  {
     "key": "angular/divider/customize",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "javascript/divider/customize",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "react/divider/customize",
-    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-faker></plus-faker>\n      <plus-divider>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider>\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
   },
   {
     "key": "react-experimental/divider/customize",
-    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-faker></plus-faker>\n      <plus-divider>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider>\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
   },
   {
     "key": "svelte/divider/customize",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "vue/divider/customize",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<div>\n  <plus-faker></plus-faker>\n  <plus-divider>OR</plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
+    "template": "<div>\n  <plus-divider>\n    <span>\n      <plus-icon name=\"tag\"></plus-icon>\n      &nbsp; Description\n    </span>\n  </plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/divider/default",
@@ -5588,6 +5554,34 @@
     "script": "import '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
     "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
     "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
+  },
+  {
+    "key": "angular/icon/animation",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-animation [duration]=\"1000\" [iterations]=\"Infinity\" name=\"pulse\" run>\n    <plus-icon name=\"heart\"></plus-icon>\n  </plus-animation>\n  <plus-animation [duration]=\"1000\" [iterations]=\"Infinity\" name=\"swing\" run>\n    <plus-icon name=\"telephone\"></plus-icon>\n  </plus-animation>\n  <plus-animation [duration]=\"2000\" [iterations]=\"Infinity\" name=\"tada\" run>\n    <plus-icon name=\"bell\"></plus-icon>\n  </plus-animation>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/icon/animation",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-animation duration=\"1000\" iterations=\"Infinity\" name=\"pulse\" run>\n    <plus-icon name=\"heart\"></plus-icon>\n  </plus-animation>\n  <plus-animation duration=\"1000\" iterations=\"Infinity\" name=\"swing\" run>\n    <plus-icon name=\"telephone\"></plus-icon>\n  </plus-animation>\n  <plus-animation duration=\"2000\" iterations=\"Infinity\" name=\"tada\" run>\n    <plus-icon name=\"bell\"></plus-icon>\n  </plus-animation>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/icon/animation",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-animation duration={1000} iterations={Infinity} name=\"pulse\" run>\n        <plus-icon name=\"heart\"></plus-icon>\n      </plus-animation>\n      <plus-animation duration={1000} iterations={Infinity} name=\"swing\" run>\n        <plus-icon name=\"telephone\"></plus-icon>\n      </plus-animation>\n      <plus-animation duration={2000} iterations={Infinity} name=\"tada\" run>\n        <plus-icon name=\"bell\"></plus-icon>\n      </plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/icon/animation",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-animation duration={1000} iterations={Infinity} name=\"pulse\" run>\n        <plus-icon name=\"heart\"></plus-icon>\n      </plus-animation>\n      <plus-animation duration={1000} iterations={Infinity} name=\"swing\" run>\n        <plus-icon name=\"telephone\"></plus-icon>\n      </plus-animation>\n      <plus-animation duration={2000} iterations={Infinity} name=\"tada\" run>\n        <plus-icon name=\"bell\"></plus-icon>\n      </plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/icon/animation",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-animation duration={1000} iterations={Infinity} name=\"pulse\" run>\n    <plus-icon name=\"heart\"></plus-icon>\n  </plus-animation>\n  <plus-animation duration={1000} iterations={Infinity} name=\"swing\" run>\n    <plus-icon name=\"telephone\"></plus-icon>\n  </plus-animation>\n  <plus-animation duration={2000} iterations={Infinity} name=\"tada\" run>\n    <plus-icon name=\"bell\"></plus-icon>\n  </plus-animation>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/icon/animation",
+    "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/core/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-animation :duration=\"1000\" :iterations=\"Infinity\" name=\"pulse\" run>\n    <plus-icon name=\"heart\"></plus-icon>\n  </plus-animation>\n  <plus-animation :duration=\"1000\" :iterations=\"Infinity\" name=\"swing\" run>\n    <plus-icon name=\"telephone\"></plus-icon>\n  </plus-animation>\n  <plus-animation :duration=\"2000\" :iterations=\"Infinity\" name=\"tada\" run>\n    <plus-icon name=\"bell\"></plus-icon>\n  </plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "angular/icon/color",

@@ -4,8 +4,12 @@ import '@htmlplus/core/faker.js';
 function App() {
   return (
     <>
-      <plus-faker></plus-faker>
-      <plus-divider>OR</plus-divider>
+      <plus-divider>
+        <span>
+          <plus-icon name="tag"></plus-icon>
+          &nbsp; Description
+        </span>
+      </plus-divider>
       <plus-faker></plus-faker>
     </>
   );
