@@ -2422,35 +2422,35 @@
     "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-1\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-2\" outlined></plus-card>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-card class=\"size-3\" outlined></plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
-    "key": "angular/card/customize",
+    "key": "angular/card/customized",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card [elevation]=\"12\" outlined></plus-card>\n"
   },
   {
-    "key": "javascript/card/customize",
+    "key": "javascript/card/customized",
     "script": "import '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card elevation=\"12\" outlined></plus-card>\n"
   },
   {
-    "key": "react/card/customize",
+    "key": "react/card/customized",
     "script": "import '@htmlplus/core/card.js';\n\nfunction App() {\n  return <plus-card elevation={12} outlined></plus-card>;\n}\nexport default App;\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
-    "key": "react-experimental/card/customize",
+    "key": "react-experimental/card/customized",
     "script": "import '@htmlplus/core/card.js';\n\nfunction App() {\n  return <plus-card elevation={12} outlined></plus-card>;\n}\nexport default App;\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
-    "key": "svelte/card/customize",
+    "key": "svelte/card/customized",
     "script": "import '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card elevation={12} outlined></plus-card>\n"
   },
   {
-    "key": "vue/card/customize",
+    "key": "vue/card/customized",
     "script": "import '@htmlplus/core/card.js';\n",
     "style": "plus-card {\n  --plus-card-border-radius: 3rem 0;\n  --plus-card-border-width: 2px;\n  --plus-card-border-color: darkgray;\n  --plus-card-background-color: lightgray;\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card :elevation=\"12\" outlined></plus-card>\n"
@@ -3238,60 +3238,32 @@
     "template": "<plus-cropper\n  aspect-ratio=\"3/4\"\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
   },
   {
-    "key": "angular/cropper/backdrop",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [backdrop]=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [backdrop]=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/cropper/backdrop",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/cropper/backdrop",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/cropper/backdrop",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/cropper/backdrop",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper backdrop={false} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper backdrop={true} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/cropper/backdrop",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :backdrop=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :backdrop=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
     "key": "angular/cropper/background",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [background]=\"false\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [background]=\"true\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "javascript/cropper/background",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"false\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"true\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "react/cropper/background",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={false}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={true}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/background",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={false}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={true}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/background",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background={false}\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background={true}\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper view=\"none\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "vue/cropper/background",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :background=\"false\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :background=\"true\"\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "angular/cropper/default",
@@ -3770,6 +3742,34 @@
     "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To URL</button>\n  </plus-center>\n</div>\n"
   },
   {
+    "key": "angular/cropper/transparent",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+  },
+  {
+    "key": "javascript/cropper/transparent",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+  },
+  {
+    "key": "react/cropper/transparent",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          transparent\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/cropper/transparent",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          transparent\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/cropper/transparent",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper transparent src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+  },
+  {
+    "key": "vue/cropper/transparent",
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+  },
+  {
     "key": "angular/cropper/zoom-ratio",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      [zoom-ratio]=\"0.1\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      [zoom-ratio]=\"1.0\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
@@ -3800,30 +3800,30 @@
   {
     "key": "angular/cropper/zoomable",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [zoomable]=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [zoomable]=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "javascript/cropper/zoomable",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "react/cropper/zoomable",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/zoomable",
-    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/zoomable",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable={false} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable={true} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"touch\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"wheel\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"touch\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper zoomable=\"wheel\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "vue/cropper/zoomable",
     "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/grid.js';\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :zoomable=\"false\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :zoomable=\"true\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "angular/dialog/animation",
@@ -3852,34 +3852,6 @@
     "key": "vue/dialog/animation",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
     "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-animation\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation=\"fade\" connector=\"dialog-animation\">\n    <plus-dialog-content>\n      <plus-dialog-header> Dialog Title </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
-  },
-  {
-    "key": "angular/dialog/backdrop",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" [backdrop]=\"false\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
-  },
-  {
-    "key": "javascript/dialog/backdrop",
-    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop=\"false\">\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
-  },
-  {
-    "key": "react/dialog/backdrop",
-    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop={false}>\n        <plus-dialog-content>\n          <plus-dialog-header> Dialog Title </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/dialog/backdrop",
-    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop={false}>\n        <plus-dialog-content>\n          <plus-dialog-header> Dialog Title </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/dialog/backdrop",
-    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop={false}>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
-  },
-  {
-    "key": "vue/dialog/backdrop",
-    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
-    "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" :backdrop=\"false\">\n    <plus-dialog-content>\n      <plus-dialog-header> Dialog Title </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
     "key": "angular/dialog/default",
@@ -4190,37 +4162,65 @@
     "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-sticky\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation=\"fade\" connector=\"dialog-sticky\" full-width sticky>\n    <plus-dialog-content>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
-    "key": "angular/divider/customize",
+    "key": "angular/dialog/transparent",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+  },
+  {
+    "key": "javascript/dialog/transparent",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+  },
+  {
+    "key": "react/dialog/transparent",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n        <plus-dialog-content>\n          <plus-dialog-header> Dialog Title </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/dialog/transparent",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n        <plus-dialog-content>\n          <plus-dialog-header> Dialog Title </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/dialog/transparent",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n  <plus-dialog-content>\n    <plus-dialog-header> Dialog Title </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+  },
+  {
+    "key": "vue/dialog/transparent",
+    "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/faker.js';\n",
+    "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation=\"fade\" connector=\"dialog-backdrop\" transparent>\n    <plus-dialog-content>\n      <plus-dialog-header> Dialog Title </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
+  },
+  {
+    "key": "angular/divider/customized",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
     "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
-    "key": "javascript/divider/customize",
+    "key": "javascript/divider/customized",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
     "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
-    "key": "react/divider/customize",
+    "key": "react/divider/customized",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider>\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
   },
   {
-    "key": "react-experimental/divider/customize",
+    "key": "react-experimental/divider/customized",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider>\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
   },
   {
-    "key": "svelte/divider/customize",
+    "key": "svelte/divider/customized",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
     "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
-    "key": "vue/divider/customize",
+    "key": "vue/divider/customized",
     "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin: 1rem 0;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
+    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
     "template": "<div>\n  <plus-divider>\n    <span>\n      <plus-icon name=\"tag\"></plus-icon>\n      &nbsp; Description\n    </span>\n  </plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
   },
   {
@@ -7134,35 +7134,35 @@
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner size=\"sm\"></plus-spinner>\n  <plus-spinner size=\"md\"></plus-spinner>\n  <plus-spinner size=\"lg\"></plus-spinner>\n</plus-stack>\n"
   },
   {
-    "key": "angular/spinner/customize",
+    "key": "angular/spinner/customized",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
     "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
   },
   {
-    "key": "javascript/spinner/customize",
+    "key": "javascript/spinner/customized",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
     "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
   },
   {
-    "key": "react/spinner/customize",
+    "key": "react/spinner/customized",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n"
   },
   {
-    "key": "react-experimental/spinner/customize",
+    "key": "react-experimental/spinner/customized",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n"
   },
   {
-    "key": "svelte/spinner/customize",
+    "key": "svelte/spinner/customized",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
     "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
   },
   {
-    "key": "vue/spinner/customize",
+    "key": "vue/spinner/customized",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
     "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
     "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
