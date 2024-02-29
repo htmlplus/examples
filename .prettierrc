@@ -7,7 +7,6 @@
   "trailingComma": "none",
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
-    "^@htmlplus/react(.*)$",
     "^@htmlplus/core(.*)$",
     "^@/(.*)$",
     "./config*",
