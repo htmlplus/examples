@@ -12,6 +12,6 @@ export class AppComponent {
   @ViewChild('signature')
   signatureRef!: ElementRef;
   onClick() {
-    this.signatureRef.nativeElement.clear();
+    this.signatureRef.nativeElement.value = '';
   }
 }

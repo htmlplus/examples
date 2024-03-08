@@ -7,8 +7,8 @@
   let disabled2 = true;
   let disabled1 = true;
   const sync = () => {
-    disabled1 = !signatureRef.canUndo();
-    disabled2 = !signatureRef.canRedo();
+    disabled1 = !signatureRef.undoable;
+    disabled2 = !signatureRef.redoable;
   };
   function onClick1() {
     signatureRef.undo();

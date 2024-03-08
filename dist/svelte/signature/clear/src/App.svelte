@@ -4,7 +4,7 @@
 
   let signatureRef;
   function onClick() {
-    signatureRef.clear();
+    signatureRef.value = '';
   }
 </script>
 

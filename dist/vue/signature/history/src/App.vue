@@ -26,8 +26,8 @@
   const disabled2 = ref(true);
   const disabled1 = ref(true);
   const sync = () => {
-    disabled1.value = !signatureRef.value.canUndo();
-    disabled2.value = !signatureRef.value.canRedo();
+    disabled1.value = !signatureRef.value.undoable;
+    disabled2.value = !signatureRef.value.redoable;
   };
   function onClick1() {
     signatureRef.value.undo();

@@ -15,8 +15,8 @@ export class AppComponent {
   disabled2 = true;
   disabled1 = true;
   sync() {
-    this.disabled1 = !this.signatureRef.nativeElement.canUndo();
-    this.disabled2 = !this.signatureRef.nativeElement.canRedo();
+    this.disabled1 = !this.signatureRef.nativeElement.undoable;
+    this.disabled2 = !this.signatureRef.nativeElement.redoable;
   }
   onClick1() {
     this.signatureRef.nativeElement.undo();

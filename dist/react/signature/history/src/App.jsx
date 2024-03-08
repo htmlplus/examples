@@ -9,8 +9,8 @@ function App() {
   const [disabled2, setDisabled2] = useState(true);
   const [disabled1, setDisabled1] = useState(true);
   const sync = () => {
-    setDisabled1(!signatureRef.current.canUndo());
-    setDisabled2(!signatureRef.current.canRedo());
+    setDisabled1(!signatureRef.current.undoable);
+    setDisabled2(!signatureRef.current.redoable);
   };
   function onClick1() {
     signatureRef.current.undo();

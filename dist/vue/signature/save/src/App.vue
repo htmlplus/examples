@@ -4,10 +4,9 @@
       <plus-signature background-color="lightgray" ref="signatureRef"></plus-signature>
     </plus-center>
     <br />
-    <plus-stack gap="1rem">
-      <button @click="save(true)">Save With Background</button>
-      <button @click="save(false)">Save Without Background</button>
-    </plus-stack>
+    <plus-center>
+      <button @click="onClick">Save</button>
+    </plus-center>
   </div>
 </template>
 
@@ -16,15 +15,12 @@
 
   import '@htmlplus/core/center.js';
   import '@htmlplus/core/signature.js';
-  import '@htmlplus/core/stack.js';
 
   const signatureRef = ref();
-  const save = (background) => {
-    const image = new Image();
-    image.src = signatureRef.value.toDataURL('image/svg+xml', background);
+  function onClick() {
     const tab = open('', '_blank');
     setTimeout(() => {
-      tab.document.write(image.outerHTML);
+      tab.document.write(signatureRef.value.value);
     }, 250);
-  };
+  }
 </script>

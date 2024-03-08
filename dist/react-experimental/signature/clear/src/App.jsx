@@ -6,7 +6,7 @@ import '@htmlplus/core/signature.js';
 function App() {
   const signatureRef = useRef();
   function onClick() {
-    signatureRef.current.clear();
+    signatureRef.current.value = '';
   }
   return (
     <>

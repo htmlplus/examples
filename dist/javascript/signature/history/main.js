@@ -3,8 +3,8 @@ import '@htmlplus/core/signature.js';
 import '@htmlplus/core/stack.js';
 
 const sync = () => {
-  $undo.disabled = !$signature.canUndo();
-  $redo.disabled = !$signature.canRedo();
+  $undo.disabled = !$signature.undoable;
+  $redo.disabled = !$signature.redoable;
 };
 $undo.addEventListener('click', () => {
   $signature.undo();

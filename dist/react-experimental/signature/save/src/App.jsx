@@ -2,28 +2,24 @@ import { useRef } from 'react';
 
 import '@htmlplus/core/center.js';
 import '@htmlplus/core/signature.js';
-import '@htmlplus/core/stack.js';
 
 function App() {
   const signatureRef = useRef();
-  const save = (background) => {
-    const image = new Image();
-    image.src = signatureRef.current.toDataURL('image/svg+xml', background);
+  function onClick() {
     const tab = open('', '_blank');
     setTimeout(() => {
-      tab.document.write(image.outerHTML);
+      tab.document.write(signatureRef.current.value);
     }, 250);
-  };
+  }
   return (
     <>
       <plus-center>
         <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
       </plus-center>
       <br />
-      <plus-stack gap="1rem">
-        <button onclick={() => save(true)}>Save With Background</button>
-        <button onclick={() => save(false)}>Save Without Background</button>
-      </plus-stack>
+      <plus-center>
+        <button onclick={onClick}>Save</button>
+      </plus-center>
     </>
   );
 }
