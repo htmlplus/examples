@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@faker-js/faker": "latest",
     "@htmlplus/core": "latest",
     "vite": "^4.4.8"
   }
