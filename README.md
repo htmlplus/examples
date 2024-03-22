@@ -1,3 +1,3 @@
 # Examples
 
-Collection of examples for @htmlplus/core.
+Collection of examples for @htmlplus/ui.

@@ -26,8 +26,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/avatar.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/avatar.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <style scoped>

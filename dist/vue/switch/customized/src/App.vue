@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/stack.js';
-  import '@htmlplus/core/switch.js';
+  import '@htmlplus/ui/stack.js';
+  import '@htmlplus/ui/switch.js';
 </script>
 
 <style scoped>

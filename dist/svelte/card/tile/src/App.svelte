@@ -1,7 +1,7 @@
 <script>
-  import '@htmlplus/core/card.js';
-  import '@htmlplus/core/grid-item.js';
-  import '@htmlplus/core/grid.js';
+  import '@htmlplus/ui/card.js';
+  import '@htmlplus/ui/grid-item.js';
+  import '@htmlplus/ui/grid.js';
 </script>
 
 <div class="container">

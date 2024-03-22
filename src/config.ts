@@ -18,7 +18,7 @@ import { IImportResolverFunction } from '@/utils';
 // const SOURCE = './src/development/*.html';
 // const TARGET = './src/development/dist';
 
-const SOURCE = '../core/src/elements/*/examples/*.html';
+const SOURCE = '../ui/src/elements/*/examples/*.html';
 const TARGET = './dist';
 
 const CDN = 'https://cdn.skypack.dev/';

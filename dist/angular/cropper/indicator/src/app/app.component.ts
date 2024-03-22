@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/cropper.js';
+import '@htmlplus/ui/cropper.js';
 
 @Component({
   selector: 'app-root',

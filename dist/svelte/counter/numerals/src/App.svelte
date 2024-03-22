@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/counter.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/counter.js';
 
   const numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 </script>

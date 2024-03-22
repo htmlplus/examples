@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/divider.js';
+  import '@htmlplus/ui/divider.js';
 </script>
 
 <plus-divider type="dashed"></plus-divider>

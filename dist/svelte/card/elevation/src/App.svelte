@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/card.js';
+  import '@htmlplus/ui/card.js';
 
   let elevation = 24;
   function onChange(event) {

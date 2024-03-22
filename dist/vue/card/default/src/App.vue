@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/card.js';
+  import '@htmlplus/ui/card.js';
 </script>
 
 <style scoped>

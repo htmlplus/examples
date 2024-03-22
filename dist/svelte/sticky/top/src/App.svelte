@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/faker.js';
-  import '@htmlplus/core/sticky.js';
+  import '@htmlplus/ui/faker.js';
+  import '@htmlplus/ui/sticky.js';
 </script>
 
 <div class="container">

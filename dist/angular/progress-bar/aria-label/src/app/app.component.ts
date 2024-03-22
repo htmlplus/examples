@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/progress-bar.js';
+import '@htmlplus/ui/progress-bar.js';
 
 @Component({
   selector: 'app-root',

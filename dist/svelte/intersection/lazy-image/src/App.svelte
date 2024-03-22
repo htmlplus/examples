@@ -1,7 +1,7 @@
 <script>
-  import '@htmlplus/core/card.js';
-  import '@htmlplus/core/intersection.js';
-  import '@htmlplus/core/spinner.js';
+  import '@htmlplus/ui/card.js';
+  import '@htmlplus/ui/intersection.js';
+  import '@htmlplus/ui/spinner.js';
 
   function onPlusChange(event) {
     if (!event.detail.isIntersecting) return;

@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/signature.js';
+  import '@htmlplus/ui/signature.js';
 </script>
 
 <style scoped>

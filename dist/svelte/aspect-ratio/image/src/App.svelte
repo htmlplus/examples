@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/aspect-ratio.js';
+  import '@htmlplus/ui/aspect-ratio.js';
 </script>
 
 <plus-aspect-ratio value="18/6">

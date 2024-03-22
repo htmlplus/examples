@@ -9,9 +9,9 @@
 <script setup>
   import { ref } from 'vue';
 
-  import '@htmlplus/core/animation.js';
-  import '@htmlplus/core/animation/names/attention-seekers/tada.js';
-  import '@htmlplus/core/center.js';
+  import '@htmlplus/ui/animation.js';
+  import '@htmlplus/ui/animation/names/attention-seekers/tada.js';
+  import '@htmlplus/ui/center.js';
 
   const animationRef = ref();
   function onClick() {

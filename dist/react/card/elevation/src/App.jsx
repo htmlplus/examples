@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import '@htmlplus/core/card.js';
+import '@htmlplus/ui/card.js';
 
 function App() {
   const [elevation, setElevation] = useState(24);

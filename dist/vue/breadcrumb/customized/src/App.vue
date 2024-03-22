@@ -9,8 +9,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/breadcrumb.js';
-  import '@htmlplus/core/icon.js';
+  import '@htmlplus/ui/breadcrumb.js';
+  import '@htmlplus/ui/icon.js';
 </script>
 
 <style scoped>

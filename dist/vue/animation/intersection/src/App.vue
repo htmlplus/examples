@@ -9,9 +9,9 @@
 <script setup>
   import { ref } from 'vue';
 
-  import '@htmlplus/core/animation.js';
-  import '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';
-  import '@htmlplus/core/intersection.js';
+  import '@htmlplus/ui/animation.js';
+  import '@htmlplus/ui/animation/names/attention-seekers/heart-beat.js';
+  import '@htmlplus/ui/intersection.js';
 
   const animationRef = ref();
   function onPlusChange(event) {

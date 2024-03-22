@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/cropper.js';
+  import '@htmlplus/ui/cropper.js';
 </script>

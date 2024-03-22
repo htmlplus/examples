@@ -1,7 +1,7 @@
 <script>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/signature.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/signature.js';
+  import '@htmlplus/ui/stack.js';
 
   let signatureRef;
   let disabled2 = true;

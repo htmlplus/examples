@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/progress-bar.js';
+  import '@htmlplus/ui/progress-bar.js';
 </script>
 
 <plus-progress-bar min={0} max={1} value={0.25}></plus-progress-bar>

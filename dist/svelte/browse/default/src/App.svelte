@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/browse.js';
-  import '@htmlplus/core/center.js';
+  import '@htmlplus/ui/browse.js';
+  import '@htmlplus/ui/center.js';
 
   function onPlusChange(event) {
     console.log(event.detail);

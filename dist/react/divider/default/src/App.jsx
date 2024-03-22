@@ -1,4 +1,4 @@
-import '@htmlplus/core/divider.js';
+import '@htmlplus/ui/divider.js';
 
 function App() {
   return <plus-divider></plus-divider>;

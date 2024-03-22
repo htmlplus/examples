@@ -1,5 +1,5 @@
-import '@htmlplus/core/format-bytes.js';
-import '@htmlplus/core/stack.js';
+import '@htmlplus/ui/format-bytes.js';
+import '@htmlplus/ui/stack.js';
 
 function App() {
   return (

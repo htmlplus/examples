@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/signature.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/signature.js';
 
 @Component({
   selector: 'app-root',

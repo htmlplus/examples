@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core/faker.js';
-import '@htmlplus/core/scroll-detector.js';
+import '@htmlplus/ui/faker.js';
+import '@htmlplus/ui/scroll-detector.js';
 
 function App() {
   const plusFakerRef = useRef();

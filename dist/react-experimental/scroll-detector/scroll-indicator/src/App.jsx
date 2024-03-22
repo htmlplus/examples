@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import '@htmlplus/core/faker.js';
-import '@htmlplus/core/progress-bar.js';
-import '@htmlplus/core/scroll-detector.js';
+import '@htmlplus/ui/faker.js';
+import '@htmlplus/ui/progress-bar.js';
+import '@htmlplus/ui/scroll-detector.js';
 
 function App() {
   const [value, setValue] = useState(0);

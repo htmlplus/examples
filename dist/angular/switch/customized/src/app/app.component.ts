@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/stack.js';
-import '@htmlplus/core/switch.js';
+import '@htmlplus/ui/stack.js';
+import '@htmlplus/ui/switch.js';
 
 @Component({
   selector: 'app-root',

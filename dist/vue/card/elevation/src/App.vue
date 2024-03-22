@@ -9,7 +9,7 @@
 <script setup>
   import { ref } from 'vue';
 
-  import '@htmlplus/core/card.js';
+  import '@htmlplus/ui/card.js';
 
   const elevation = ref(24);
   function onChange(event) {

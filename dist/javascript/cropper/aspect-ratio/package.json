@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@htmlplus/core": "latest",
+    "@htmlplus/ui": "latest",
     "cropperjs": "latest",
     "vite": "^4.4.8"
   }

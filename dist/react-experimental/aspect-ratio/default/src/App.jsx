@@ -1,6 +1,6 @@
-import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/card-body.js';
-import '@htmlplus/core/card.js';
+import '@htmlplus/ui/aspect-ratio.js';
+import '@htmlplus/ui/card-body.js';
+import '@htmlplus/ui/card.js';
 
 function App() {
   return (

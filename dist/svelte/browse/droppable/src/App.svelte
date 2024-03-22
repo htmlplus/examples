@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/browse.js';
+  import '@htmlplus/ui/browse.js';
 
   function onPlusChange(event) {
     const name = event.detail.files[0].file.name;

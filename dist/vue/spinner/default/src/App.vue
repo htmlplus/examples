@@ -5,6 +5,6 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/spinner.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/spinner.js';
 </script>

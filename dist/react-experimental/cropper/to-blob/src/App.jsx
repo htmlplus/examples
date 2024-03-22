@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/cropper.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/cropper.js';
 
 function App() {
   const cropperRef = useRef();

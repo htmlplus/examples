@@ -1,2 +1,2 @@
-import '@htmlplus/core/faker.js';
-import '@htmlplus/core/stack.js';
+import '@htmlplus/ui/faker.js';
+import '@htmlplus/ui/stack.js';

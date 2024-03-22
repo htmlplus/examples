@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/card.js';
-import '@htmlplus/core/intersection.js';
-import '@htmlplus/core/spinner.js';
+import '@htmlplus/ui/card.js';
+import '@htmlplus/ui/intersection.js';
+import '@htmlplus/ui/spinner.js';
 
 @Component({
   selector: 'app-root',

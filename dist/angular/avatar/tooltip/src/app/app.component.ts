@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/tooltip.js';
+import '@htmlplus/ui/avatar.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/tooltip.js';
 
 @Component({
   selector: 'app-root',

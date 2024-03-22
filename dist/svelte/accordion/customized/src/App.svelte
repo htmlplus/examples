@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/accordion.js';
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/accordion.js';
+  import '@htmlplus/ui/faker.js';
 </script>
 
 <div>

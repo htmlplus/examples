@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@htmlplus/core": "latest",
+    "@htmlplus/ui": "latest",
     "cropperjs": "latest",
     "vue": "^3.3.4"
   },

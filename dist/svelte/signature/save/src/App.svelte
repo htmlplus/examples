@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/signature.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/signature.js';
 
   let signatureRef;
   function onClick() {

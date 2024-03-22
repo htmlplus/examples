@@ -1,4 +1,4 @@
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/switch.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/switch.js';
 
 import './style.css';

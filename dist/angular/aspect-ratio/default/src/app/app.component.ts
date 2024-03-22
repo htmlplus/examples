@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/aspect-ratio.js';
-import '@htmlplus/core/card-body.js';
-import '@htmlplus/core/card.js';
+import '@htmlplus/ui/aspect-ratio.js';
+import '@htmlplus/ui/card-body.js';
+import '@htmlplus/ui/card.js';
 
 @Component({
   selector: 'app-root',

@@ -10,6 +10,6 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/spinner.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/spinner.js';
+  import '@htmlplus/ui/stack.js';
 </script>

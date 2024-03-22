@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/format-bytes.js';
-import '@htmlplus/core/stack.js';
+import '@htmlplus/ui/format-bytes.js';
+import '@htmlplus/ui/stack.js';
 
 @Component({
   selector: 'app-root',

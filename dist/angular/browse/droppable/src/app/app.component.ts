@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/browse.js';
+import '@htmlplus/ui/browse.js';
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,4 @@
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   asset: {

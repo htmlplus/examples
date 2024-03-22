@@ -9,8 +9,8 @@
 <script setup>
   import { ref } from 'vue';
 
-  import '@htmlplus/core/counter.js';
-  import '@htmlplus/core/intersection.js';
+  import '@htmlplus/ui/counter.js';
+  import '@htmlplus/ui/intersection.js';
 
   const counterRef = ref();
   function onPlusChange(event) {

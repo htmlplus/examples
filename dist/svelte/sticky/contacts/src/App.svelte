@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/sticky.js';
+  import '@htmlplus/ui/sticky.js';
 </script>
 
 <div class="container">

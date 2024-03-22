@@ -1,2 +1,2 @@
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/format-bytes.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/format-bytes.js';

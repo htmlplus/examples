@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "latest",
-    "@htmlplus/core": "latest",
+    "@htmlplus/ui": "latest",
     "svelte": "^3.32.3"
   },
   "devDependencies": {

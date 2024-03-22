@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/center.js';
+  import '@htmlplus/ui/center.js';
 </script>
 
 <plus-center>All elements are centered</plus-center>

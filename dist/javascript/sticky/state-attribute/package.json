@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "latest",
-    "@htmlplus/core": "latest",
+    "@htmlplus/ui": "latest",
     "vite": "^4.4.8"
   }
 }

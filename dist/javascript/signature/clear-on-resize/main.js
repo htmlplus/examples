@@ -1,3 +1,3 @@
-import '@htmlplus/core/signature.js';
+import '@htmlplus/ui/signature.js';
 
 import './style.css';

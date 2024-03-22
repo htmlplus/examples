@@ -7,7 +7,7 @@
   "trailingComma": "none",
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
-    "^@htmlplus/core(.*)$",
+    "^@htmlplus/ui(.*)$",
     "^@/(.*)$",
     "./config*",
     "^[.](.*)"

@@ -1,4 +1,4 @@
-import '@htmlplus/core/cropper.js';
+import '@htmlplus/ui/cropper.js';
 
 function App() {
   return (

@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/sticky.js';
+  import '@htmlplus/ui/sticky.js';
 </script>
 
 <style scoped>

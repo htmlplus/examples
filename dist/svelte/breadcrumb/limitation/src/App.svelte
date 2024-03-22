@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/breadcrumb.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/breadcrumb.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <plus-stack gap="0.75rem" vertical>

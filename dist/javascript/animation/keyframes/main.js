@@ -1,4 +1,4 @@
-import '@htmlplus/core/animation.js';
+import '@htmlplus/ui/animation.js';
 
 import './style.css';
 

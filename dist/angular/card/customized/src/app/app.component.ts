@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/card.js';
+import '@htmlplus/ui/card.js';
 
 @Component({
   selector: 'app-root',

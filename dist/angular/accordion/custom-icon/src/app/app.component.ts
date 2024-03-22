@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/accordion.js';
-import '@htmlplus/core/faker.js';
-import '@htmlplus/core/icon.js';
+import '@htmlplus/ui/accordion.js';
+import '@htmlplus/ui/faker.js';
+import '@htmlplus/ui/icon.js';
 
 @Component({
   selector: 'app-root',

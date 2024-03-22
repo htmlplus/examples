@@ -1,7 +1,7 @@
 <script>
-  import '@htmlplus/core/aspect-ratio.js';
-  import '@htmlplus/core/grid-item.js';
-  import '@htmlplus/core/grid.js';
+  import '@htmlplus/ui/aspect-ratio.js';
+  import '@htmlplus/ui/grid-item.js';
+  import '@htmlplus/ui/grid.js';
 </script>
 
 <plus-grid>

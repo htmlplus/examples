@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/cropper.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/cropper.js';
 
   let cropperRef;
   function onClick() {

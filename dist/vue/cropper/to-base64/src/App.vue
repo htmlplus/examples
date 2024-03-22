@@ -16,8 +16,8 @@
 <script setup>
   import { ref } from 'vue';
 
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/cropper.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/cropper.js';
 
   const cropperRef = ref();
   function onClick() {

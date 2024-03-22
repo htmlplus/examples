@@ -1,8 +1,8 @@
 <script>
-  import '@htmlplus/core/accordion.js';
-  import '@htmlplus/core/faker.js';
-  import '@htmlplus/core/progress-bar.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/accordion.js';
+  import '@htmlplus/ui/faker.js';
+  import '@htmlplus/ui/progress-bar.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <plus-stack align-items="stretch" gap="1rem" vertical>

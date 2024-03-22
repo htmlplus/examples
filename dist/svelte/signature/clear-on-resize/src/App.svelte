@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/signature.js';
+  import '@htmlplus/ui/signature.js';
 </script>
 
 <plus-signature background-color="lightgray" clear-on-resize resizable></plus-signature>

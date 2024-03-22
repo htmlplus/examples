@@ -1,3 +1,3 @@
-import '@htmlplus/core/avatar-group.js';
-import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/ui/avatar-group.js';
+import '@htmlplus/ui/avatar.js';
+import '@htmlplus/ui/center.js';

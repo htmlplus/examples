@@ -1,4 +1,4 @@
-import '@htmlplus/core/divider.js';
-import '@htmlplus/core/sticky.js';
+import '@htmlplus/ui/divider.js';
+import '@htmlplus/ui/sticky.js';
 
 import './style.css';

@@ -1,5 +1,5 @@
-import '@htmlplus/core/counter.js';
-import '@htmlplus/core/intersection.js';
+import '@htmlplus/ui/counter.js';
+import '@htmlplus/ui/intersection.js';
 
 import './style.css';
 

@@ -1,4 +1,4 @@
-import '@htmlplus/core/divider.js';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/divider.js';
+import '@htmlplus/ui/faker.js';
 
 import './style.css';

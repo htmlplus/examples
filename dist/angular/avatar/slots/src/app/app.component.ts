@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/stack.js';
+import '@htmlplus/ui/avatar.js';
+import '@htmlplus/ui/stack.js';
 
 @Component({
   selector: 'app-root',

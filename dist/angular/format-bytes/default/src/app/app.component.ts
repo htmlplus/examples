@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/format-bytes.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/format-bytes.js';
 
 @Component({
   selector: 'app-root',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/animation.js';
+import '@htmlplus/ui/animation.js';
 
 @Component({
   selector: 'app-root',

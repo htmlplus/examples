@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/aspect-ratio.js';
+import '@htmlplus/ui/aspect-ratio.js';
 
 @Component({
   selector: 'app-root',

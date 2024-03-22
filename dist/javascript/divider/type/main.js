@@ -1,1 +1,1 @@
-import '@htmlplus/core/divider.js';
+import '@htmlplus/ui/divider.js';

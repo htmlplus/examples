@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/animation.js';
+  import '@htmlplus/ui/animation.js';
 
   const keyframes = [
     {

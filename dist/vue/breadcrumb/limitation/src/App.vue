@@ -34,8 +34,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/breadcrumb.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/breadcrumb.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <style scoped>

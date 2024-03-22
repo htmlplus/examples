@@ -1,1 +1,1 @@
-import '@htmlplus/core/aspect-ratio.js';
+import '@htmlplus/ui/aspect-ratio.js';

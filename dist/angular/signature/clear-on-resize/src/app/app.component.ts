@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/signature.js';
+import '@htmlplus/ui/signature.js';
 
 @Component({
   selector: 'app-root',

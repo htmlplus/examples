@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/faker.js';
 </script>
 
 <plus-faker seed={12345}></plus-faker>

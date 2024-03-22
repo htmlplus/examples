@@ -1,5 +1,5 @@
-import '@htmlplus/core/accordion.js';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/accordion.js';
+import '@htmlplus/ui/faker.js';
 
 Array.from($accordions.children).forEach((accordion, index, accordions) => {
   accordion.addEventListener('plus-expand', (event) => {

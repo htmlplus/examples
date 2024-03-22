@@ -1,4 +1,4 @@
-import '@htmlplus/core/browse.js';
+import '@htmlplus/ui/browse.js';
 
 import './style.css';
 

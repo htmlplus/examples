@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/stack.js';
-  import '@htmlplus/core/switch.js';
+  import '@htmlplus/ui/stack.js';
+  import '@htmlplus/ui/switch.js';
 </script>
 
 <plus-stack gap="2rem">

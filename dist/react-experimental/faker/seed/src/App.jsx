@@ -1,4 +1,4 @@
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/faker.js';
 
 function App() {
   return <plus-faker seed={12345}></plus-faker>;

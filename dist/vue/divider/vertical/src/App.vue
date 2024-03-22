@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/divider.js';
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/divider.js';
+  import '@htmlplus/ui/faker.js';
 </script>
 
 <style scoped>

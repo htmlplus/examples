@@ -1,5 +1,5 @@
-import '@htmlplus/core/breadcrumb.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/ui/breadcrumb.js';
+import '@htmlplus/ui/center.js';
 
 function App() {
   return (

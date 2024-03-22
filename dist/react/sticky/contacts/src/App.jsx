@@ -1,4 +1,4 @@
-import '@htmlplus/core/sticky.js';
+import '@htmlplus/ui/sticky.js';
 
 function App() {
   return (

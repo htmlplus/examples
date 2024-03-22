@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import '@htmlplus/core/divider.js';
+import '@htmlplus/ui/divider.js';
 
 @Component({
   selector: 'app-root',

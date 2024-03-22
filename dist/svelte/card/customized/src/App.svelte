@@ -1,5 +1,5 @@
 <script>
-  import '@htmlplus/core/card.js';
+  import '@htmlplus/ui/card.js';
 </script>
 
 <plus-card elevation={12} outlined></plus-card>

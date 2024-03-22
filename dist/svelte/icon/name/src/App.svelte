@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/icon.js';
-  import '@htmlplus/core/stack.js';
+  import '@htmlplus/ui/icon.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <plus-stack gap="2rem">

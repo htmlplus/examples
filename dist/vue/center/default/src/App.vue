@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/center.js';
+  import '@htmlplus/ui/center.js';
 </script>
 
 <style scoped>

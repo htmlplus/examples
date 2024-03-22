@@ -1,4 +1,4 @@
-import '@htmlplus/core/card.js';
+import '@htmlplus/ui/card.js';
 
 function App() {
   return <plus-card outlined></plus-card>;

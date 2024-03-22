@@ -15,8 +15,8 @@
 <script setup>
   import { onMounted, ref } from 'vue';
 
-  import '@htmlplus/core/accordion.js';
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/accordion.js';
+  import '@htmlplus/ui/faker.js';
 
   const accordionsRef = ref();
   onMounted(() => {

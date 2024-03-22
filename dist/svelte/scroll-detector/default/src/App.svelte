@@ -1,6 +1,6 @@
 <script>
-  import '@htmlplus/core/faker.js';
-  import '@htmlplus/core/scroll-detector.js';
+  import '@htmlplus/ui/faker.js';
+  import '@htmlplus/ui/scroll-detector.js';
 
   function onPlusChange(event) {
     console.log(event.detail);

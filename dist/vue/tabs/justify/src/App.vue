@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/tabs-bar.js';
-  import '@htmlplus/core/tabs-tab.js';
-  import '@htmlplus/core/tabs.js';
+  import '@htmlplus/ui/tabs-bar.js';
+  import '@htmlplus/ui/tabs-tab.js';
+  import '@htmlplus/ui/tabs.js';
 </script>

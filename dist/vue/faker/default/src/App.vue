@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/faker.js';
 </script>

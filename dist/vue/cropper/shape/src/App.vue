@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/cropper.js';
-  import '@htmlplus/core/grid-item.js';
-  import '@htmlplus/core/grid.js';
+  import '@htmlplus/ui/cropper.js';
+  import '@htmlplus/ui/grid-item.js';
+  import '@htmlplus/ui/grid.js';
 </script>
 
 <style scoped>

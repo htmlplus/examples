@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "latest",
-    "@htmlplus/core": "latest",
+    "@htmlplus/ui": "latest",
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",

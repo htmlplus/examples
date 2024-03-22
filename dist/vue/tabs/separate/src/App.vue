@@ -32,10 +32,10 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/faker.js';
-  import '@htmlplus/core/tabs-bar.js';
-  import '@htmlplus/core/tabs-panel.js';
-  import '@htmlplus/core/tabs-panels.js';
-  import '@htmlplus/core/tabs-tab.js';
-  import '@htmlplus/core/tabs.js';
+  import '@htmlplus/ui/faker.js';
+  import '@htmlplus/ui/tabs-bar.js';
+  import '@htmlplus/ui/tabs-panel.js';
+  import '@htmlplus/ui/tabs-panels.js';
+  import '@htmlplus/ui/tabs-tab.js';
+  import '@htmlplus/ui/tabs.js';
 </script>

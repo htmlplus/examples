@@ -1,12 +1,12 @@
 <script>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/cropper.js';
-  import '@htmlplus/core/dialog-body.js';
-  import '@htmlplus/core/dialog-content.js';
-  import '@htmlplus/core/dialog-footer.js';
-  import '@htmlplus/core/dialog-header.js';
-  import '@htmlplus/core/dialog-toggler.js';
-  import '@htmlplus/core/dialog.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/cropper.js';
+  import '@htmlplus/ui/dialog-body.js';
+  import '@htmlplus/ui/dialog-content.js';
+  import '@htmlplus/ui/dialog-footer.js';
+  import '@htmlplus/ui/dialog-header.js';
+  import '@htmlplus/ui/dialog-toggler.js';
+  import '@htmlplus/ui/dialog.js';
 
   let disabled = true;
   function onPlusOpened() {

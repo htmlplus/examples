@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/progress-bar.js';
+  import '@htmlplus/ui/progress-bar.js';
 </script>

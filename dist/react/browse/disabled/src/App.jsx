@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core/browse.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/ui/browse.js';
+import '@htmlplus/ui/center.js';
 
 function App() {
   const browseRef = useRef();

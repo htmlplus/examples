@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/accordion.js';
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/accordion.js';
+  import '@htmlplus/ui/faker.js';
 
   function onPlusCollapse(event) {
     if (confirm('Are you sure you want to collapse it?')) return;

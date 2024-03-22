@@ -14,10 +14,10 @@
 </template>
 
 <script setup>
-  import '@htmlplus/core/center.js';
-  import '@htmlplus/core/dialog-body.js';
-  import '@htmlplus/core/dialog-content.js';
-  import '@htmlplus/core/dialog-toggler.js';
-  import '@htmlplus/core/dialog.js';
-  import '@htmlplus/core/faker.js';
+  import '@htmlplus/ui/center.js';
+  import '@htmlplus/ui/dialog-body.js';
+  import '@htmlplus/ui/dialog-content.js';
+  import '@htmlplus/ui/dialog-toggler.js';
+  import '@htmlplus/ui/dialog.js';
+  import '@htmlplus/ui/faker.js';
 </script>

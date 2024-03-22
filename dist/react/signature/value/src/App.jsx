@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core/center.js';
-import '@htmlplus/core/signature.js';
+import '@htmlplus/ui/center.js';
+import '@htmlplus/ui/signature.js';
 
 function App() {
   const signatureRef = useRef();
