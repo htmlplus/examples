@@ -187,7 +187,7 @@
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
     "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
@@ -198,7 +198,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
     "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
@@ -209,7 +209,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
     "key": "react-experimental/accordion/customized",
@@ -219,7 +219,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
     "key": "svelte/accordion/customized",
@@ -229,7 +229,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
     "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
@@ -240,7 +240,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-accordion {\n  border: 0;\n  border-radius: 0;\n}\nplus-accordion:not(:last-of-type) {\n  border-bottom: solid 2px lightgray;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding-left: 0;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
+    "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
     "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
@@ -482,8 +482,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('accordions')\n  accordionsRef!: ElementRef;\n  ngAfterViewInit() {\n    Array.from(this.accordionsRef.nativeElement.children).forEach(\n      (accordion, index, accordions) => {\n        accordion.addEventListener('plus-expand', (event) => {\n          accordions.forEach((accordion) => {\n            accordion.open = event.target == accordion;\n          });\n        });\n      }\n    );\n  }\n}\n",
-    "template": "<div #accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "javascript/accordion/persistent",
@@ -492,8 +492,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nArray.from($accordions.children).forEach((accordion, index, accordions) => {\n  accordion.addEventListener('plus-expand', (event) => {\n    accordions.forEach((accordion) => {\n      accordion.open = event.target == accordion;\n    });\n  });\n});\n",
-    "template": "<div id=\"$accordions\">\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "react/accordion/persistent",
@@ -502,7 +502,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  const accordionsRef = useRef();\n  useEffect(() => {\n    Array.from(accordionsRef.current.children).forEach((accordion, index, accordions) => {\n      accordion.addEventListener('plus-expand', (event) => {\n        accordions.forEach((accordion) => {\n          accordion.open = event.target == accordion;\n        });\n      });\n    });\n  }, []);\n  return (\n    <div ref={accordionsRef}>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions persistent>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/persistent",
@@ -511,7 +511,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  const accordionsRef = useRef();\n  useEffect(() => {\n    Array.from(accordionsRef.current.children).forEach((accordion, index, accordions) => {\n      accordion.addEventListener('plus-expand', (event) => {\n        accordions.forEach((accordion) => {\n          accordion.open = event.target == accordion;\n        });\n      });\n    });\n  }, []);\n  return (\n    <div ref={accordionsRef}>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions persistent>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/persistent",
@@ -520,8 +520,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nlet accordionsRef;\nonMount(() => {\n  Array.from(accordionsRef.children).forEach((accordion, index, accordions) => {\n    accordion.addEventListener('plus-expand', (event) => {\n      accordions.forEach((accordion) => {\n        accordion.open = event.target == accordion;\n      });\n    });\n  });\n});\n",
-    "template": "<div bind:this={accordionsRef}>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "vue/accordion/persistent",
@@ -530,8 +530,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nconst accordionsRef = ref();\nonMounted(() => {\n  Array.from(accordionsRef.value.children).forEach((accordion, index, accordions) => {\n    accordion.addEventListener('plus-expand', (event) => {\n      accordions.forEach((accordion) => {\n        accordion.open = event.target == accordion;\n      });\n    });\n  });\n});\n",
-    "template": "<div ref=\"accordionsRef\">\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions persistent>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "angular/accordion/prevent-from-toggling",
