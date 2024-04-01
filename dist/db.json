@@ -6350,6 +6350,68 @@
     "template": "<plus-progress-bar :value=\"50\" :buffer=\"75\"></plus-progress-bar>\n"
   },
   {
+    "key": "angular/progress-bar/color",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-progress-bar color=\"lightseagreen\" [value]=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"#FFA500\" [value]=\"30\"></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"rgb(138,43,226)\" [value]=\"70\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "javascript/progress-bar/color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<plus-progress-bar color=\"lightseagreen\" value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"#FFA500\" value=\"30\"></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"rgb(138,43,226)\" value=\"70\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "react/progress-bar/color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-progress-bar color=\"lightseagreen\" value={50}></plus-progress-bar>\n      <br />\n      <plus-progress-bar color=\"#FFA500\" value={30}></plus-progress-bar>\n      <br />\n      <plus-progress-bar color=\"rgb(138,43,226)\" value={70}></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/progress-bar/color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-progress-bar color=\"lightseagreen\" value={50}></plus-progress-bar>\n      <br />\n      <plus-progress-bar color=\"#FFA500\" value={30}></plus-progress-bar>\n      <br />\n      <plus-progress-bar color=\"rgb(138,43,226)\" value={70}></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/progress-bar/color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<plus-progress-bar color=\"lightseagreen\" value={50}></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"#FFA500\" value={30}></plus-progress-bar>\n<br />\n<plus-progress-bar color=\"rgb(138,43,226)\" value={70}></plus-progress-bar>\n"
+  },
+  {
+    "key": "vue/progress-bar/color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<div>\n  <plus-progress-bar color=\"lightseagreen\" :value=\"50\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar color=\"#FFA500\" :value=\"30\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar color=\"rgb(138,43,226)\" :value=\"70\"></plus-progress-bar>\n</div>\n"
+  },
+  {
+    "key": "angular/progress-bar/custom-color",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n",
+    "template": "<plus-progress-bar [value]=\"50\" color=\"primary\"></plus-progress-bar>\n<br />\n<plus-progress-bar [value]=\"30\" color=\"secondary\"></plus-progress-bar>\n<br />\n<plus-progress-bar [value]=\"70\" color=\"tertiary\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "javascript/progress-bar/custom-color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n",
+    "template": "<plus-progress-bar value=\"50\" color=\"primary\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"30\" color=\"secondary\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"70\" color=\"tertiary\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "react/progress-bar/custom-color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-progress-bar value={50} color=\"primary\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value={30} color=\"secondary\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value={70} color=\"tertiary\"></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n"
+  },
+  {
+    "key": "react-experimental/progress-bar/custom-color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-progress-bar value={50} color=\"primary\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value={30} color=\"secondary\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value={70} color=\"tertiary\"></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n"
+  },
+  {
+    "key": "svelte/progress-bar/custom-color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n",
+    "template": "<plus-progress-bar value={50} color=\"primary\"></plus-progress-bar>\n<br />\n<plus-progress-bar value={30} color=\"secondary\"></plus-progress-bar>\n<br />\n<plus-progress-bar value={70} color=\"tertiary\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "vue/progress-bar/custom-color",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar[color='primary'] {\n  --plus-progress-bar-current-background-color: #00bfff;\n}\nplus-progress-bar[color='secondary'] {\n  --plus-progress-bar-current-background-color: #7cfc00;\n}\nplus-progress-bar[color='tertiary'] {\n  --plus-progress-bar-current-background-color: #ff1493;\n}\n",
+    "template": "<div>\n  <plus-progress-bar :value=\"50\" color=\"primary\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar :value=\"30\" color=\"secondary\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar :value=\"70\" color=\"tertiary\"></plus-progress-bar>\n</div>\n"
+  },
+  {
     "key": "angular/progress-bar/custom-label",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-progress-bar [value]=\"75\">Custom label for value of 75</plus-progress-bar>\n"
@@ -6376,6 +6438,40 @@
     "key": "vue/progress-bar/custom-label",
     "script": "import '@htmlplus/ui/progress-bar.js';\n",
     "template": "<plus-progress-bar :value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
+  },
+  {
+    "key": "angular/progress-bar/customized",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n",
+    "template": "<plus-progress-bar [value]=\"60\" [buffer]=\"80\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "javascript/progress-bar/customized",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n",
+    "template": "<plus-progress-bar value=\"60\" buffer=\"80\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "react/progress-bar/customized",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return <plus-progress-bar value={60} buffer={80}></plus-progress-bar>;\n}\nexport default App;\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n"
+  },
+  {
+    "key": "react-experimental/progress-bar/customized",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return <plus-progress-bar value={60} buffer={80}></plus-progress-bar>;\n}\nexport default App;\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n"
+  },
+  {
+    "key": "svelte/progress-bar/customized",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n",
+    "template": "<plus-progress-bar value={60} buffer={80}></plus-progress-bar>\n"
+  },
+  {
+    "key": "vue/progress-bar/customized",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n",
+    "style": "plus-progress-bar {\n  border-radius: 1rem;\n  background-color: transparent;\n  border: solid 0.3rem transparent;\n  outline: solid 0.15rem gainsboro;\n}\n\nplus-progress-bar::part(buffer) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n\nplus-progress-bar::part(indicator) {\n  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));\n}\n",
+    "template": "<plus-progress-bar :value=\"60\" :buffer=\"80\"></plus-progress-bar>\n"
   },
   {
     "key": "angular/progress-bar/default",
@@ -6522,6 +6618,62 @@
     "key": "vue/progress-bar/min-and-max",
     "script": "import '@htmlplus/ui/progress-bar.js';\n",
     "template": "<div>\n  <plus-progress-bar :min=\"0.0\" :max=\"1.0\" :value=\"0.25\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar :min=\"-10\" :max=\"+10\" :value=\"0.00\"></plus-progress-bar>\n</div>\n"
+  },
+  {
+    "key": "angular/progress-bar/stacked",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-progress-bar-stack>\n  <plus-progress-bar color=\"#32CD32\" [value]=\"50\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FFA500\" [value]=\"25\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FF0000\" [value]=\"10\"></plus-progress-bar>\n</plus-progress-bar-stack>\n"
+  },
+  {
+    "key": "javascript/progress-bar/stacked",
+    "script": "import '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<plus-progress-bar-stack>\n  <plus-progress-bar color=\"#32CD32\" value=\"50\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FFA500\" value=\"25\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FF0000\" value=\"10\"></plus-progress-bar>\n</plus-progress-bar-stack>\n"
+  },
+  {
+    "key": "react/progress-bar/stacked",
+    "script": "import '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <plus-progress-bar-stack>\n      <plus-progress-bar color=\"#32CD32\" value={50}></plus-progress-bar>\n      <plus-progress-bar color=\"#FFA500\" value={25}></plus-progress-bar>\n      <plus-progress-bar color=\"#FF0000\" value={10}></plus-progress-bar>\n    </plus-progress-bar-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/progress-bar/stacked",
+    "script": "import '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return (\n    <plus-progress-bar-stack>\n      <plus-progress-bar color=\"#32CD32\" value={50}></plus-progress-bar>\n      <plus-progress-bar color=\"#FFA500\" value={25}></plus-progress-bar>\n      <plus-progress-bar color=\"#FF0000\" value={10}></plus-progress-bar>\n    </plus-progress-bar-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/progress-bar/stacked",
+    "script": "import '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<plus-progress-bar-stack>\n  <plus-progress-bar color=\"#32CD32\" value={50}></plus-progress-bar>\n  <plus-progress-bar color=\"#FFA500\" value={25}></plus-progress-bar>\n  <plus-progress-bar color=\"#FF0000\" value={10}></plus-progress-bar>\n</plus-progress-bar-stack>\n"
+  },
+  {
+    "key": "vue/progress-bar/stacked",
+    "script": "import '@htmlplus/ui/progress-bar-stack.js';\nimport '@htmlplus/ui/progress-bar.js';\n",
+    "template": "<plus-progress-bar-stack>\n  <plus-progress-bar color=\"#32CD32\" :value=\"50\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FFA500\" :value=\"25\"></plus-progress-bar>\n  <plus-progress-bar color=\"#FF0000\" :value=\"10\"></plus-progress-bar>\n</plus-progress-bar-stack>\n"
+  },
+  {
+    "key": "angular/progress-bar/sync",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('latency')\n  latencyRef!: ElementRef;\n  @ViewChild('sync')\n  syncRef!: ElementRef;\n  update() {\n    if (!this.syncRef.nativeElement || !this.latencyRef.nativeElement) return;\n    const value = Math.random() * 100;\n    this.syncRef.nativeElement.value = value;\n    this.latencyRef.nativeElement.value = value;\n    setTimeout(() => this.update(), 100);\n  }\n  ngAfterViewInit() {\n    this.update();\n  }\n}\n",
+    "template": "<plus-progress-bar sync #sync></plus-progress-bar>\n<br />\n<plus-progress-bar #latency></plus-progress-bar>\n"
+  },
+  {
+    "key": "javascript/progress-bar/sync",
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction update() {\n  if (!$sync || !$latency) return;\n  const value = Math.random() * 100;\n  $sync.value = value;\n  $latency.value = value;\n  setTimeout(() => update(), 100);\n}\nupdate();\n",
+    "template": "<plus-progress-bar id=\"$sync\" sync></plus-progress-bar>\n<br />\n<plus-progress-bar id=\"$latency\"></plus-progress-bar>\n"
+  },
+  {
+    "key": "react/progress-bar/sync",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const latencyRef = useRef();\n  const syncRef = useRef();\n  function update() {\n    if (!syncRef.current || !latencyRef.current) return;\n    const value = Math.random() * 100;\n    syncRef.current.value = value;\n    latencyRef.current.value = value;\n    setTimeout(() => update(), 100);\n  }\n  useEffect(() => {\n    update();\n  }, []);\n  return (\n    <>\n      <plus-progress-bar sync ref={syncRef}></plus-progress-bar>\n      <br />\n      <plus-progress-bar ref={latencyRef}></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/progress-bar/sync",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const latencyRef = useRef();\n  const syncRef = useRef();\n  function update() {\n    if (!syncRef.current || !latencyRef.current) return;\n    const value = Math.random() * 100;\n    syncRef.current.value = value;\n    latencyRef.current.value = value;\n    setTimeout(() => update(), 100);\n  }\n  useEffect(() => {\n    update();\n  }, []);\n  return (\n    <>\n      <plus-progress-bar sync ref={syncRef}></plus-progress-bar>\n      <br />\n      <plus-progress-bar ref={latencyRef}></plus-progress-bar>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/progress-bar/sync",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/progress-bar.js';\n\nlet latencyRef;\nlet syncRef;\nfunction update() {\n  if (!syncRef || !latencyRef) return;\n  const value = Math.random() * 100;\n  syncRef.value = value;\n  latencyRef.value = value;\n  setTimeout(() => update(), 100);\n}\nonMount(() => {\n  update();\n});\n",
+    "template": "<plus-progress-bar sync bind:this={syncRef}></plus-progress-bar>\n<br />\n<plus-progress-bar bind:this={latencyRef}></plus-progress-bar>\n"
+  },
+  {
+    "key": "vue/progress-bar/sync",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/progress-bar.js';\n\nconst latencyRef = ref();\nconst syncRef = ref();\nfunction update() {\n  if (!syncRef.value || !latencyRef.value) return;\n  const value = Math.random() * 100;\n  syncRef.value.value = value;\n  latencyRef.value.value = value;\n  setTimeout(() => update(), 100);\n}\nonMounted(() => {\n  update();\n});\n",
+    "template": "<div>\n  <plus-progress-bar sync ref=\"syncRef\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar ref=\"latencyRef\"></plus-progress-bar>\n</div>\n"
   },
   {
     "key": "angular/progress-bar/value",
