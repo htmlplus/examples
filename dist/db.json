@@ -186,9 +186,9 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "javascript/accordion/customized",
@@ -197,9 +197,9 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "react/accordion/customized",
@@ -208,7 +208,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
@@ -218,7 +218,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
@@ -228,9 +228,9 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "vue/accordion/customized",
@@ -239,9 +239,9 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "angular/accordion/default",
@@ -308,8 +308,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "javascript/accordion/disabled",
@@ -318,8 +318,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "react/accordion/disabled",
@@ -328,7 +328,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/disabled",
@@ -337,7 +337,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/disabled",
@@ -346,8 +346,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "vue/accordion/disabled",
@@ -356,8 +356,8 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "angular/accordion/methods",
@@ -599,7 +599,7 @@
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/slots",
@@ -609,7 +609,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/slots",
@@ -618,7 +618,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/slots",
@@ -627,7 +627,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/slots",
@@ -637,7 +637,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/slots",
@@ -647,7 +647,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "angular/animation/button",
