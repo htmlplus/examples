@@ -4,7 +4,7 @@ import '@htmlplus/ui/icon.js';
 function App() {
   return (
     <plus-center>
-      <plus-icon name="house"></plus-icon>
+      <plus-icon></plus-icon>
     </plus-center>
   );
 }

@@ -4,5 +4,5 @@
 </script>
 
 <plus-center>
-  <plus-icon name="house"></plus-icon>
+  <plus-icon></plus-icon>
 </plus-center>

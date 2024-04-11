@@ -21,8 +21,10 @@
 </plus-center>
 
 <style>
-  plus-avatar-group {
-    --plus-avatar-group-gutter-stacked: -2rem;
-    --plus-avatar-group-gutter-unstacked: 2rem;
+  plus-avatar-group plus-avatar {
+    margin-inline-end: 2rem;
+  }
+  plus-avatar-group[stacked] plus-avatar {
+    margin-inline-end: -2rem;
   }
 </style>

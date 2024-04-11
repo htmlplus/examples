@@ -13,7 +13,7 @@
 </plus-accordion>
 
 <style>
-  [slot='summary'] {
+  plus-stack[slot='summary'] {
     flex-grow: 1;
     margin-inline-end: 1rem;
   }
