@@ -1,5 +1,5 @@
 <template>
-  <plus-breadcrumb :max="2">
+  <plus-breadcrumb block :max="2">
     <plus-icon slot="separator" name="arrow-right-short"></plus-icon>
     <a href="#">HTMLPLUS</a>
     <a href="#">UI</a>
@@ -15,11 +15,9 @@
 
 <style scoped>
   plus-breadcrumb {
-    --plus-breadcrumb-gutter-x: 0.75em;
-    --plus-breadcrumb-gutter-y: 0.75em;
+    gap: 0.75em;
     background-color: lightgray;
     border-radius: 0.25em;
-    display: block;
     padding: 0.75em;
   }
   plus-breadcrumb a {

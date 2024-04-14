@@ -10,12 +10,12 @@
 
 <style>
   plus-progress-bar[color='primary'] {
-    --plus-progress-bar-current-background-color: #00bfff;
+    --plus-progress-bar-indicator-background-color: #00bfff;
   }
   plus-progress-bar[color='secondary'] {
-    --plus-progress-bar-current-background-color: #7cfc00;
+    --plus-progress-bar-indicator-background-color: #7cfc00;
   }
   plus-progress-bar[color='tertiary'] {
-    --plus-progress-bar-current-background-color: #ff1493;
+    --plus-progress-bar-indicator-background-color: #ff1493;
   }
 </style>
