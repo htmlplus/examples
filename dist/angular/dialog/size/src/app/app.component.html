@@ -1,0 +1,17 @@
+<plus-stack gap="1rem">
+  <button (click)="show('sm')">Small</button>
+  <button (click)="show('md')">Medium</button>
+  <button (click)="show('lg')">Large</button>
+  <button (click)="show('xl')">Extra Large</button>
+</plus-stack>
+<plus-dialog animation connector="dialog-size" #dialog>
+  <plus-dialog-content>
+    <plus-dialog-header>Dialog Title</plus-dialog-header>
+    <plus-dialog-body>
+      <plus-faker></plus-faker>
+    </plus-dialog-body>
+    <plus-dialog-footer>
+      <plus-dialog-toggler>Close</plus-dialog-toggler>
+    </plus-dialog-footer>
+  </plus-dialog-content>
+</plus-dialog>

@@ -4,7 +4,7 @@
       <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
     </plus-center>
     <plus-dialog
-      animation="fade"
+      animation
       connector="dialog-prevent"
       @plus-open="onPlusOpen"
       @plus-close="onPlusClose"

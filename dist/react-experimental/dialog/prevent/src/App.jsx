@@ -22,7 +22,7 @@ function App() {
         <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
       </plus-center>
       <plus-dialog
-        animation="fade"
+        animation
         connector="dialog-prevent"
         onplus-open={onPlusOpen}
         onplus-close={onPlusClose}

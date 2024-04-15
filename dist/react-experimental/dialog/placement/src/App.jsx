@@ -13,7 +13,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-placement"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-placement" placement="center-bottom">
+      <plus-dialog animation connector="dialog-placement" placement="center-bottom">
         <plus-dialog-content>
           <plus-dialog-header> Dialog Title </plus-dialog-header>
           <plus-dialog-body>

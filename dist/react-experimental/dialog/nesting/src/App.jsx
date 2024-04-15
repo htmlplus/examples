@@ -15,7 +15,7 @@ function App() {
         <plus-dialog-toggler connector="dialog-nesting-2"> Open Dialog 2 </plus-dialog-toggler>
         <plus-dialog-toggler connector="dialog-nesting-3"> Open Dialog 3 </plus-dialog-toggler>
       </plus-stack>
-      <plus-dialog animation="fade" connector="dialog-nesting-1" size="xl">
+      <plus-dialog animation connector="dialog-nesting-1" size="xl">
         <plus-dialog-content>
           <plus-dialog-header> Dialog 1 </plus-dialog-header>
           <plus-dialog-body>
@@ -27,7 +27,7 @@ function App() {
           </plus-dialog-footer>
         </plus-dialog-content>
       </plus-dialog>
-      <plus-dialog animation="fade" connector="dialog-nesting-2" size="lg">
+      <plus-dialog animation connector="dialog-nesting-2" size="lg">
         <plus-dialog-content>
           <plus-dialog-header> Dialog 2 </plus-dialog-header>
           <plus-dialog-body>
@@ -39,7 +39,7 @@ function App() {
           </plus-dialog-footer>
         </plus-dialog-content>
       </plus-dialog>
-      <plus-dialog animation="fade" connector="dialog-nesting-3" size="sm">
+      <plus-dialog animation connector="dialog-nesting-3" size="sm">
         <plus-dialog-content>
           <plus-dialog-header> Dialog 3 </plus-dialog-header>
           <plus-dialog-body>

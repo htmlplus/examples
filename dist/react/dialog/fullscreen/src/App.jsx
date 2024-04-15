@@ -13,7 +13,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-fullscreen"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-fullscreen" placement="bottom" fullscreen>
+      <plus-dialog animation connector="dialog-fullscreen" placement="bottom" fullscreen>
         <plus-dialog-content>
           <plus-dialog-header> Dialog Title </plus-dialog-header>
           <plus-dialog-body>

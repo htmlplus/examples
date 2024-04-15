@@ -19,7 +19,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-scrollable"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-scrollable" scrollable>
+      <plus-dialog animation connector="dialog-scrollable" scrollable>
         <plus-dialog-content>
           <plus-dialog-header> Dialog Title </plus-dialog-header>
           <plus-dialog-body>

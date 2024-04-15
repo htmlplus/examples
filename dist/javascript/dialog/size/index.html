@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog | Size</title>
+  </head>
+  <body>
+    <plus-stack gap="1rem">
+      <button id="$button1">Small</button>
+      <button id="$button2">Medium</button>
+      <button id="$button3">Large</button>
+      <button id="$button4">Extra Large</button>
+    </plus-stack>
+    <plus-dialog animation connector="dialog-size" id="$dialog">
+      <plus-dialog-content>
+        <plus-dialog-header>Dialog Title</plus-dialog-header>
+        <plus-dialog-body>
+          <plus-faker></plus-faker>
+        </plus-dialog-body>
+        <plus-dialog-footer>
+          <plus-dialog-toggler>Close</plus-dialog-toggler>
+        </plus-dialog-footer>
+      </plus-dialog-content>
+    </plus-dialog>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

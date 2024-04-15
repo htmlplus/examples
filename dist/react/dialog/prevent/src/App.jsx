@@ -40,7 +40,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-prevent"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-prevent" ref={dialogRef}>
+      <plus-dialog animation connector="dialog-prevent" ref={dialogRef}>
         <plus-dialog-content>
           <plus-dialog-header> Dialog Title </plus-dialog-header>
           <plus-dialog-body>
