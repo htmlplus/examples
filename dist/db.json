@@ -3333,7 +3333,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  disabled = true;\n  onPlusOpened() {\n    this.disabled = false;\n  }\n  onPlusClosed() {\n    this.disabled = true;\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  (plus-opened)=\"onPlusOpened()\"\n  (plus-closed)=\"onPlusClosed()\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        [disabled]=\"disabled\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation\n  connector=\"dialog-cropper\"\n  (plus-opened)=\"onPlusOpened()\"\n  (plus-closed)=\"onPlusClosed()\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        [disabled]=\"disabled\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "javascript/cropper/dialog",
@@ -3343,7 +3343,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\n$dialog.addEventListener('plus-opened', () => {\n  $cropper.disabled = false;\n});\n$dialog.addEventListener('plus-closed', () => {\n  $cropper.disabled = true;\n});\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog id=\"$dialog\" animation=\"fade\" connector=\"dialog-cropper\">\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        id=\"$cropper\"\n        disabled\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog id=\"$dialog\" animation connector=\"dialog-cropper\">\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        id=\"$cropper\"\n        disabled\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "react/cropper/dialog",
@@ -3352,7 +3352,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useEffect, useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const [disabled, setDisabled] = useState(true);\n  useEffect(() => {\n    if (!dialogRef.current) return;\n    function onPlusOpened() {\n      setDisabled(false);\n    }\n    dialogRef.current.addEventListener('plus-opened', onPlusOpened);\n    return () => {\n      if (!dialogRef.current) return;\n      dialogRef.current.removeEventListener('plus-opened', onPlusOpened);\n    };\n  });\n  useEffect(() => {\n    if (!dialogRef.current) return;\n    function onPlusClosed() {\n      setDisabled(true);\n    }\n    dialogRef.current.addEventListener('plus-closed', onPlusClosed);\n    return () => {\n      if (!dialogRef.current) return;\n      dialogRef.current.removeEventListener('plus-closed', onPlusClosed);\n    };\n  });\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation=\"fade\" connector=\"dialog-cropper\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header> Cropper </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useEffect, useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const [disabled, setDisabled] = useState(true);\n  useEffect(() => {\n    if (!dialogRef.current) return;\n    function onPlusOpened() {\n      setDisabled(false);\n    }\n    dialogRef.current.addEventListener('plus-opened', onPlusOpened);\n    return () => {\n      if (!dialogRef.current) return;\n      dialogRef.current.removeEventListener('plus-opened', onPlusOpened);\n    };\n  });\n  useEffect(() => {\n    if (!dialogRef.current) return;\n    function onPlusClosed() {\n      setDisabled(true);\n    }\n    dialogRef.current.addEventListener('plus-closed', onPlusClosed);\n    return () => {\n      if (!dialogRef.current) return;\n      dialogRef.current.removeEventListener('plus-closed', onPlusClosed);\n    };\n  });\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog animation connector=\"dialog-cropper\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header> Cropper </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/dialog",
@@ -3361,7 +3361,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onPlusOpened() {\n    setDisabled(false);\n  }\n  function onPlusClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onplus-opened={onPlusOpened}\n        onplus-closed={onPlusClosed}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header> Cropper </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onPlusOpened() {\n    setDisabled(false);\n  }\n  function onPlusClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation\n        connector=\"dialog-cropper\"\n        onplus-opened={onPlusOpened}\n        onplus-closed={onPlusClosed}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header> Cropper </plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler> Close </plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/dialog",
@@ -3371,7 +3371,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nlet disabled = true;\nfunction onPlusOpened() {\n  disabled = false;\n}\nfunction onPlusClosed() {\n  disabled = true;\n}\n",
-    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  on:plus-opened={onPlusOpened}\n  on:plus-closed={onPlusClosed}\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper {disabled} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-center>\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</plus-center>\n<plus-dialog\n  animation\n  connector=\"dialog-cropper\"\n  on:plus-opened={onPlusOpened}\n  on:plus-closed={onPlusClosed}\n>\n  <plus-dialog-content>\n    <plus-dialog-header> Cropper </plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper {disabled} src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "vue/cropper/dialog",
@@ -3381,7 +3381,7 @@
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nconst disabled = ref(true);\nfunction onPlusOpened() {\n  disabled.value = false;\n}\nfunction onPlusClosed() {\n  disabled.value = true;\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog\n    animation=\"fade\"\n    connector=\"dialog-cropper\"\n    @plus-opened=\"onPlusOpened\"\n    @plus-closed=\"onPlusClosed\"\n  >\n    <plus-dialog-content>\n      <plus-dialog-header> Cropper </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          :disabled=\"disabled\"\n        ></plus-cropper>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog\n    animation\n    connector=\"dialog-cropper\"\n    @plus-opened=\"onPlusOpened\"\n    @plus-closed=\"onPlusClosed\"\n  >\n    <plus-dialog-content>\n      <plus-dialog-header> Cropper </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          :disabled=\"disabled\"\n        ></plus-cropper>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
     "key": "angular/cropper/disabled",
@@ -4220,6 +4220,34 @@
     "template": "<div>\n  <plus-center>\n    <plus-dialog-toggler connector=\"dialog-backdrop\"> Open </plus-dialog-toggler>\n  </plus-center>\n  <plus-dialog animation connector=\"dialog-backdrop\" transparent>\n    <plus-dialog-content>\n      <plus-dialog-header> Dialog Title </plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler> Close </plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
+    "key": "angular/divider/color",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-divider color=\"#808080\">GRAY</plus-divider>\n<br />\n<plus-divider color=\"#2fb344\">GREEN</plus-divider>\n<br />\n<plus-divider color=\"#d63939\">RED</plus-divider>\n<br />\n<plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n<br />\n<plus-divider color=\"#206bc4\">BLUE</plus-divider>\n"
+  },
+  {
+    "key": "javascript/divider/color",
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider color=\"#808080\">GRAY</plus-divider>\n<br />\n<plus-divider color=\"#2fb344\">GREEN</plus-divider>\n<br />\n<plus-divider color=\"#d63939\">RED</plus-divider>\n<br />\n<plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n<br />\n<plus-divider color=\"#206bc4\">BLUE</plus-divider>\n"
+  },
+  {
+    "key": "react/divider/color",
+    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider color=\"#808080\">GRAY</plus-divider>\n      <br />\n      <plus-divider color=\"#2fb344\">GREEN</plus-divider>\n      <br />\n      <plus-divider color=\"#d63939\">RED</plus-divider>\n      <br />\n      <plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n      <br />\n      <plus-divider color=\"#206bc4\">BLUE</plus-divider>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/divider/color",
+    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider color=\"#808080\">GRAY</plus-divider>\n      <br />\n      <plus-divider color=\"#2fb344\">GREEN</plus-divider>\n      <br />\n      <plus-divider color=\"#d63939\">RED</plus-divider>\n      <br />\n      <plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n      <br />\n      <plus-divider color=\"#206bc4\">BLUE</plus-divider>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/divider/color",
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider color=\"#808080\">GRAY</plus-divider>\n<br />\n<plus-divider color=\"#2fb344\">GREEN</plus-divider>\n<br />\n<plus-divider color=\"#d63939\">RED</plus-divider>\n<br />\n<plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n<br />\n<plus-divider color=\"#206bc4\">BLUE</plus-divider>\n"
+  },
+  {
+    "key": "vue/divider/color",
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<div>\n  <plus-divider color=\"#808080\">GRAY</plus-divider>\n  <br />\n  <plus-divider color=\"#2fb344\">GREEN</plus-divider>\n  <br />\n  <plus-divider color=\"#d63939\">RED</plus-divider>\n  <br />\n  <plus-divider color=\"#f59f00\">ORANGE</plus-divider>\n  <br />\n  <plus-divider color=\"#206bc4\">BLUE</plus-divider>\n</div>\n"
+  },
+  {
     "key": "angular/divider/customized",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
@@ -4314,6 +4342,34 @@
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
     "template": "<div>\n  <plus-faker></plus-faker>\n  <plus-divider>OR</plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
+  },
+  {
+    "key": "angular/divider/icon",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n"
+  },
+  {
+    "key": "javascript/divider/icon",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n"
+  },
+  {
+    "key": "react/divider/icon",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-divider>\n      <span>\n        <plus-icon name=\"tag\"></plus-icon>\n        &nbsp; Description\n      </span>\n    </plus-divider>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/divider/icon",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-divider>\n      <span>\n        <plus-icon name=\"tag\"></plus-icon>\n        &nbsp; Description\n      </span>\n    </plus-divider>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/divider/icon",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n"
+  },
+  {
+    "key": "vue/divider/icon",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n"
   },
   {
     "key": "angular/divider/placement",
@@ -4589,35 +4645,35 @@
     "key": "angular/drawer/default",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "javascript/drawer/default",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "react/drawer/default",
-    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"auto\">\n        <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n          <plus-card> Drawer Content </plus-card>\n        </plus-drawer>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <plus-card>\n          <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n        </plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"auto\">\n        <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n          <plus-card> Drawer Content </plus-card>\n        </plus-drawer>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <plus-card>\n          <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n        </plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n"
   },
   {
     "key": "react-experimental/drawer/default",
-    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"auto\">\n        <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n          <plus-card> Drawer Content </plus-card>\n        </plus-drawer>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <plus-card>\n          <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n        </plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"auto\">\n        <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n          <plus-card> Drawer Content </plus-card>\n        </plus-drawer>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <plus-card>\n          <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n        </plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n"
   },
   {
     "key": "svelte/drawer/default",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "vue/drawer/default",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/drawer-toggler.js';\nimport '@htmlplus/ui/drawer.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
     "style": "plus-card {\n  --plus-card-background-color: lightgray;\n  padding: 10rem 0;\n  text-align: center;\n}\nplus-drawer plus-card {\n  --plus-card-background-color: lightblue;\n  margin-right: 0.5rem;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
+    "template": "<plus-grid>\n  <plus-grid-item xs=\"auto\">\n    <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n      <plus-card> Drawer Content </plus-card>\n    </plus-drawer>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <plus-card>\n      <plus-drawer-toggler connector=\"drawer-default\"> Toggle </plus-drawer-toggler>\n    </plus-card>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "angular/faker/api",

@@ -39,7 +39,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-cropper" ref={dialogRef}>
+      <plus-dialog animation connector="dialog-cropper" ref={dialogRef}>
         <plus-dialog-content>
           <plus-dialog-header> Cropper </plus-dialog-header>
           <plus-dialog-body>

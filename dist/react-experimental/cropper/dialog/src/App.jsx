@@ -23,7 +23,7 @@ function App() {
         <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
       </plus-center>
       <plus-dialog
-        animation="fade"
+        animation
         connector="dialog-cropper"
         onplus-opened={onPlusOpened}
         onplus-closed={onPlusClosed}
