@@ -1,7 +1,7 @@
 <template>
   <div>
     <plus-center>
-      <plus-dialog-toggler connector="dialog-sticky"> Open </plus-dialog-toggler>
+      <plus-dialog-toggler connector="dialog-sticky">Open</plus-dialog-toggler>
     </plus-center>
     <plus-dialog animation connector="dialog-sticky" full-width sticky>
       <plus-dialog-content>

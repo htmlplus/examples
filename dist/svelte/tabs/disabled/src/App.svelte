@@ -7,17 +7,13 @@
   import '@htmlplus/ui/tabs.js';
 </script>
 
-<header>
-  <plus-tabs value="tab-1" connector="tabs-separate">
-    <plus-tabs-bar>
-      <plus-tabs-tab value="tab-1"> Tab 1 </plus-tabs-tab>
-      <plus-tabs-tab value="tab-2"> Tab 2 </plus-tabs-tab>
-      <plus-tabs-tab value="tab-3"> Tab 3 </plus-tabs-tab>
-    </plus-tabs-bar>
-  </plus-tabs>
-</header>
-<section>
-  <plus-tabs-panels connector="tabs-separate">
+<plus-tabs value="tab-1">
+  <plus-tabs-bar>
+    <plus-tabs-tab value="tab-1">Tab 1</plus-tabs-tab>
+    <plus-tabs-tab value="tab-2" disabled>Tab 2</plus-tabs-tab>
+    <plus-tabs-tab value="tab-3">Tab 3</plus-tabs-tab>
+  </plus-tabs-bar>
+  <plus-tabs-panels>
     <plus-tabs-panel value="tab-1">
       <b>Tab One</b>
       <br />
@@ -34,4 +30,4 @@
       <plus-faker></plus-faker>
     </plus-tabs-panel>
   </plus-tabs-panels>
-</section>
+</plus-tabs>

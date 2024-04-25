@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <plus-center>
-        <plus-dialog-toggler connector="dialog-full-width"> Open </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-full-width">Open</plus-dialog-toggler>
       </plus-center>
       <plus-dialog animation connector="dialog-full-width" full-width>
         <plus-dialog-content>

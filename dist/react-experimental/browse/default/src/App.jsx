@@ -7,7 +7,7 @@ function App() {
   }
   return (
     <plus-center>
-      <plus-browse onplus-change={onPlusChange}> Click Here </plus-browse>
+      <plus-browse onplus-change={onPlusChange}>Click Here</plus-browse>
     </plus-center>
   );
 }

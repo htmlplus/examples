@@ -17,16 +17,16 @@ function App() {
   return (
     <>
       <plus-center>
-        <plus-dialog-toggler connector="dialog-specific-scrollable"> Open </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-specific-scrollable">Open</plus-dialog-toggler>
       </plus-center>
       <plus-dialog animation connector="dialog-specific-scrollable" scrollable>
         <plus-dialog-content>
-          <plus-dialog-header> Dialog Title </plus-dialog-header>
+          <plus-dialog-header>Dialog Title</plus-dialog-header>
           <plus-dialog-body scrollable>
             <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
           </plus-dialog-body>
           <plus-dialog-footer>
-            <plus-dialog-toggler> Close </plus-dialog-toggler>
+            <plus-dialog-toggler>Close</plus-dialog-toggler>
           </plus-dialog-footer>
         </plus-dialog-content>
       </plus-dialog>

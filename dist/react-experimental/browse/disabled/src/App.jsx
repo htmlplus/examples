@@ -8,8 +8,7 @@ function App() {
   return (
     <plus-center>
       <plus-browse disabled onplus-change={onPlusChange}>
-        {' '}
-        Click Here{' '}
+        Click Here
       </plus-browse>
     </plus-center>
   );

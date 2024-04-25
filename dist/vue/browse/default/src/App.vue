@@ -1,6 +1,6 @@
 <template>
   <plus-center>
-    <plus-browse @plus-change="onPlusChange"> Click Here </plus-browse>
+    <plus-browse @plus-change="onPlusChange">Click Here</plus-browse>
   </plus-center>
 </template>
 

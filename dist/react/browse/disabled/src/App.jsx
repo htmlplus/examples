@@ -19,8 +19,7 @@ function App() {
   return (
     <plus-center>
       <plus-browse disabled ref={browseRef}>
-        {' '}
-        Click Here{' '}
+        Click Here
       </plus-browse>
     </plus-center>
   );

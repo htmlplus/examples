@@ -18,7 +18,7 @@ function App() {
       <plus-click-outside onplus-click-outside={onPlusClickOutside}>
         <button onclick={onClick}>Open Menu Dropdown</button>
         <plus-card elevation={10} hidden={hidden} outlined>
-          <plus-card-body> It will stay visible until you click outside. </plus-card-body>
+          <plus-card-body>It will stay visible until you click outside.</plus-card-body>
         </plus-card>
       </plus-click-outside>
     </plus-center>

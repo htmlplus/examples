@@ -1,7 +1,7 @@
 <template>
   <div>
     <plus-center>
-      <plus-dialog-toggler connector="dialog-cropper"> Open </plus-dialog-toggler>
+      <plus-dialog-toggler connector="dialog-cropper">Open</plus-dialog-toggler>
     </plus-center>
     <plus-dialog
       animation
@@ -10,7 +10,7 @@
       @plus-closed="onPlusClosed"
     >
       <plus-dialog-content>
-        <plus-dialog-header> Cropper </plus-dialog-header>
+        <plus-dialog-header>Cropper</plus-dialog-header>
         <plus-dialog-body>
           <plus-cropper
             src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
@@ -18,7 +18,7 @@
           ></plus-cropper>
         </plus-dialog-body>
         <plus-dialog-footer>
-          <plus-dialog-toggler> Close </plus-dialog-toggler>
+          <plus-dialog-toggler>Close</plus-dialog-toggler>
         </plus-dialog-footer>
       </plus-dialog-content>
     </plus-dialog>

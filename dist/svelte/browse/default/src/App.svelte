@@ -8,5 +8,5 @@
 </script>
 
 <plus-center>
-  <plus-browse on:plus-change={onPlusChange}> Click Here </plus-browse>
+  <plus-browse on:plus-change={onPlusChange}>Click Here</plus-browse>
 </plus-center>

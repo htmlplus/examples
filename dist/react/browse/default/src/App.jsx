@@ -18,7 +18,7 @@ function App() {
   });
   return (
     <plus-center>
-      <plus-browse ref={browseRef}> Click Here </plus-browse>
+      <plus-browse ref={browseRef}>Click Here</plus-browse>
     </plus-center>
   );
 }
