@@ -24,8 +24,8 @@ function App() {
       <plus-dialog
         animation
         connector="dialog-prevent"
-        onplus-open={onPlusOpen}
-        onplus-close={onPlusClose}
+        onPlusOpen={onPlusOpen}
+        onPlusClose={onPlusClose}
       >
         <plus-dialog-content>
           <plus-dialog-header>Dialog Title</plus-dialog-header>

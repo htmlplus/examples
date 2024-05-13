@@ -19,7 +19,7 @@ function App() {
           <div className="status" ref={statusRef}></div>
         </plus-center>
       </plus-sticky>
-      <plus-intersection onplus-change={onPlusChange}>
+      <plus-intersection onPlusChange={onPlusChange}>
         <plus-card elevation={10}>
           <plus-card-body>
             <plus-faker></plus-faker>

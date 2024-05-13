@@ -11,7 +11,7 @@ function App() {
     event.preventDefault();
   }
   return (
-    <plus-accordion summary="Summary" onplus-collapse={onPlusCollapse} onplus-expand={onPlusExpand}>
+    <plus-accordion summary="Summary" onPlusCollapse={onPlusCollapse} onPlusExpand={onPlusExpand}>
       <plus-faker></plus-faker>
     </plus-accordion>
   );

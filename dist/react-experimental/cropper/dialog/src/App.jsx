@@ -25,8 +25,8 @@ function App() {
       <plus-dialog
         animation
         connector="dialog-cropper"
-        onplus-opened={onPlusOpened}
-        onplus-closed={onPlusClosed}
+        onPlusOpened={onPlusOpened}
+        onPlusClosed={onPlusClosed}
       >
         <plus-dialog-content>
           <plus-dialog-header>Cropper</plus-dialog-header>

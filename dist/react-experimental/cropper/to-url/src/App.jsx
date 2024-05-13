@@ -20,7 +20,7 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onclick={onClick}>To URL</button>
+        <button onClick={onClick}>To URL</button>
       </plus-center>
     </>
   );

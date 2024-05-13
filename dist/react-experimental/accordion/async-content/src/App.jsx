@@ -16,7 +16,7 @@ function App() {
     }, 2500);
   }
   return (
-    <plus-accordion summary="Summary" onplus-expand={onPlusExpand} ref={accordionRef}>
+    <plus-accordion summary="Summary" onPlusExpand={onPlusExpand} ref={accordionRef}>
       <plus-progress-bar
         variant="indeterminate"
         slot="top"

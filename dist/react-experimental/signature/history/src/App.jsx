@@ -28,16 +28,16 @@ function App() {
       <plus-center>
         <plus-signature
           background-color="lightgray"
-          onplus-end={onPlusEnd}
+          onPlusEnd={onPlusEnd}
           ref={signatureRef}
         ></plus-signature>
       </plus-center>
       <br />
       <plus-stack gap="1rem">
-        <button disabled={disabled1} onclick={onClick1}>
+        <button disabled={disabled1} onClick={onClick1}>
           Undo
         </button>
-        <button disabled={disabled2} onclick={onClick2}>
+        <button disabled={disabled2} onClick={onClick2}>
           Redo
         </button>
       </plus-stack>

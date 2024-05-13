@@ -1,4 +1,4 @@
-import { capitalCase } from 'change-case';
+import { capitalCase, pascalCase } from 'change-case';
 import * as glob from 'fast-glob';
 import path from 'node:path';
 
@@ -58,6 +58,9 @@ const destination = (key: string) => {
 
 const eventResolver = (key: string) => {
   return (name: string) => {
+    if (key == 'react-experimental') {
+      return pascalCase(name);
+    }
     return name;
   };
 };

@@ -10,7 +10,7 @@ function App() {
   }
   return (
     <div className="container">
-      <plus-intersection onplus-change={onPlusChange}>
+      <plus-intersection onPlusChange={onPlusChange}>
         <plus-counter to={1000} ref={counterRef}></plus-counter>
       </plus-intersection>
     </div>

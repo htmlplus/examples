@@ -6,7 +6,7 @@ function App() {
     alert(`File '${name}' selected.`);
   }
   return (
-    <plus-browse droppable onplus-change={onPlusChange}>
+    <plus-browse droppable onPlusChange={onPlusChange}>
       {' '}
       Click or Drag & Drop a file(s) here{' '}
     </plus-browse>

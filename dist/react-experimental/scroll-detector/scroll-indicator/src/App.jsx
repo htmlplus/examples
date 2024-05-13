@@ -18,7 +18,7 @@ function App() {
       <plus-scroll-detector
         reference=".reference2"
         vertical
-        onplus-change={onPlusChange}
+        onPlusChange={onPlusChange}
       ></plus-scroll-detector>
     </div>
   );

@@ -20,7 +20,7 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onclick={onClick}>To Blob</button>
+        <button onClick={onClick}>To Blob</button>
       </plus-center>
     </>
   );

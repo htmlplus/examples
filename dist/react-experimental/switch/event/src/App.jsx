@@ -7,7 +7,7 @@ function App() {
   }
   return (
     <plus-center>
-      <plus-switch onplus-change={onPlusChange}></plus-switch>
+      <plus-switch onPlusChange={onPlusChange}></plus-switch>
     </plus-center>
   );
 }

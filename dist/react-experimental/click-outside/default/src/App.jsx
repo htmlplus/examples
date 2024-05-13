@@ -20,7 +20,7 @@ function App() {
     outsideRef.current.innerHTML = `${count}`;
   }
   return (
-    <plus-click-outside onclick={onClick} onplus-click-outside={onPlusClickOutside}>
+    <plus-click-outside onClick={onClick} onPlusClickOutside={onPlusClickOutside}>
       <plus-card elevation={10}>
         <plus-card-body>
           <b ref={insideRef}>0</b> time(s) inside clicked

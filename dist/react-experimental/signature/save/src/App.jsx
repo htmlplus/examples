@@ -18,7 +18,7 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onclick={onClick}>Save</button>
+        <button onClick={onClick}>Save</button>
       </plus-center>
     </>
   );

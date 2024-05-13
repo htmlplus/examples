@@ -35,7 +35,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onplus-expand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onPlusExpand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/async-content",
@@ -395,7 +395,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  function onClick1() {\n    accordionRef.current.collapse();\n  }\n  function onClick2() {\n    accordionRef.current.expand();\n  }\n  function onClick3() {\n    accordionRef.current.toggle();\n  }\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onclick={onClick1}>Collapse</button>\n        <button onclick={onClick2}>Expand</button>\n        <button onclick={onClick3}>Toggle</button>\n      </plus-stack>\n      <br />\n      <plus-accordion summary=\"Summary\" ref={accordionRef}>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  function onClick1() {\n    accordionRef.current.collapse();\n  }\n  function onClick2() {\n    accordionRef.current.expand();\n  }\n  function onClick3() {\n    accordionRef.current.toggle();\n  }\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onClick={onClick1}>Collapse</button>\n        <button onClick={onClick2}>Expand</button>\n        <button onClick={onClick3}>Toggle</button>\n      </plus-stack>\n      <br />\n      <plus-accordion summary=\"Summary\" ref={accordionRef}>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/methods",
@@ -569,7 +569,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  function onPlusCollapse(event) {\n    if (confirm('Are you sure you want to collapse it?')) return;\n    event.preventDefault();\n  }\n  function onPlusExpand(event) {\n    if (confirm('Are you sure you want to expand it?')) return;\n    event.preventDefault();\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onplus-collapse={onPlusCollapse} onplus-expand={onPlusExpand}>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  function onPlusCollapse(event) {\n    if (confirm('Are you sure you want to collapse it?')) return;\n    event.preventDefault();\n  }\n  function onPlusExpand(event) {\n    if (confirm('Are you sure you want to expand it?')) return;\n    event.preventDefault();\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onPlusCollapse={onPlusCollapse} onPlusExpand={onPlusExpand}>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/prevent-from-toggling",
@@ -599,7 +599,7 @@
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "javascript/accordion/slots",
@@ -609,7 +609,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "react/accordion/slots",
@@ -618,7 +618,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/slots",
@@ -627,7 +627,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/slots",
@@ -637,7 +637,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "vue/accordion/slots",
@@ -647,7 +647,7 @@
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</div>\n"
   },
   {
     "key": "angular/animation/button",
@@ -668,7 +668,7 @@
   },
   {
     "key": "react-experimental/animation/button",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick() {\n    animationRef.current.run = true;\n  }\n  return (\n    <plus-center>\n      <plus-animation name=\"tada\" ref={animationRef}>\n        <button onclick={onClick}>Click Me</button>\n      </plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick() {\n    animationRef.current.run = true;\n  }\n  return (\n    <plus-center>\n      <plus-animation name=\"tada\" ref={animationRef}>\n        <button onClick={onClick}>Click Me</button>\n      </plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n"
   },
   {
@@ -824,7 +824,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/ui/intersection.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onPlusChange(event) {\n    animationRef.current.run = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-animation name=\"heart-beat\" ref={animationRef}></plus-animation>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/heart-beat.js';\nimport '@htmlplus/ui/intersection.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onPlusChange(event) {\n    animationRef.current.run = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onPlusChange={onPlusChange}>\n        <plus-animation name=\"heart-beat\" ref={animationRef}></plus-animation>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
@@ -902,7 +902,7 @@
   },
   {
     "key": "react-experimental/animation/methods",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick1() {\n    animationRef.current.cancel();\n  }\n  function onClick2() {\n    animationRef.current.finish();\n  }\n  function onClick3() {\n    animationRef.current.pause();\n  }\n  function onClick4() {\n    animationRef.current.play();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-animation iterations={3} name=\"fade-out\" ref={animationRef}></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick1}>Cancel</button>\n        <button onclick={onClick2}>Finish</button>\n        <button onclick={onClick3}>Pause</button>\n        <button onclick={onClick4}>Play</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick1() {\n    animationRef.current.cancel();\n  }\n  function onClick2() {\n    animationRef.current.finish();\n  }\n  function onClick3() {\n    animationRef.current.pause();\n  }\n  function onClick4() {\n    animationRef.current.play();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-animation iterations={3} name=\"fade-out\" ref={animationRef}></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick1}>Cancel</button>\n        <button onClick={onClick2}>Finish</button>\n        <button onClick={onClick3}>Pause</button>\n        <button onClick={onClick4}>Play</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -2191,7 +2191,7 @@
   },
   {
     "key": "react-experimental/browse/default",
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <plus-center>\n      <plus-browse onplus-change={onPlusChange}>Click Here</plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <plus-center>\n      <plus-browse onPlusChange={onPlusChange}>Click Here</plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/default",
@@ -2219,7 +2219,7 @@
   },
   {
     "key": "react-experimental/browse/disabled",
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange() {\n    alert('File selected.');\n  }\n  return (\n    <plus-center>\n      <plus-browse disabled onplus-change={onPlusChange}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange() {\n    alert('File selected.');\n  }\n  return (\n    <plus-center>\n      <plus-browse disabled onPlusChange={onPlusChange}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/disabled",
@@ -2250,7 +2250,7 @@
   },
   {
     "key": "react-experimental/browse/droppable",
-    "script": "import '@htmlplus/ui/browse.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n  return (\n    <plus-browse droppable onplus-change={onPlusChange}>\n      {' '}\n      Click or Drag & Drop a file(s) here{' '}\n    </plus-browse>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/browse.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n  return (\n    <plus-browse droppable onPlusChange={onPlusChange}>\n      {' '}\n      Click or Drag & Drop a file(s) here{' '}\n    </plus-browse>\n  );\n}\nexport default App;\n",
     "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n"
   },
   {
@@ -2281,7 +2281,7 @@
   },
   {
     "key": "react-experimental/browse/min-and-max-size",
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onplus-change={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/min-and-max-size",
@@ -2309,7 +2309,7 @@
   },
   {
     "key": "react-experimental/browse/min-and-max",
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onplus-change={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/min-and-max",
@@ -2337,7 +2337,7 @@
   },
   {
     "key": "react-experimental/browse/multiple",
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n  return (\n    <plus-center>\n      <plus-browse multiple onplus-change={onPlusChange}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n  return (\n    <plus-center>\n      <plus-browse multiple onPlusChange={onPlusChange}>\n        Click Here\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/multiple",
@@ -2568,7 +2568,7 @@
   },
   {
     "key": "react-experimental/card/elevation",
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(24);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" min=\"1\" max=\"24\" onchange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(24);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" min=\"1\" max=\"24\" onChange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
   {
@@ -2789,7 +2789,7 @@
   },
   {
     "key": "react-experimental/click-outside/default",
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const outsideRef = useRef();\n  const insideRef = useRef();\n  const [inside, setInside] = useState(0);\n  const [outside, setOutside] = useState(0);\n  function onClick() {\n    const count = inside + 1;\n    setInside(count);\n    insideRef.current.innerHTML = `${count}`;\n  }\n  function onPlusClickOutside() {\n    const count = outside + 1;\n    setOutside(count);\n    outsideRef.current.innerHTML = `${count}`;\n  }\n  return (\n    <plus-click-outside onclick={onClick} onplus-click-outside={onPlusClickOutside}>\n      <plus-card elevation={10}>\n        <plus-card-body>\n          <b ref={insideRef}>0</b> time(s) inside clicked\n          <br />\n          <b ref={outsideRef}>0</b> time(s) outside clicked\n        </plus-card-body>\n      </plus-card>\n    </plus-click-outside>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const outsideRef = useRef();\n  const insideRef = useRef();\n  const [inside, setInside] = useState(0);\n  const [outside, setOutside] = useState(0);\n  function onClick() {\n    const count = inside + 1;\n    setInside(count);\n    insideRef.current.innerHTML = `${count}`;\n  }\n  function onPlusClickOutside() {\n    const count = outside + 1;\n    setOutside(count);\n    outsideRef.current.innerHTML = `${count}`;\n  }\n  return (\n    <plus-click-outside onClick={onClick} onPlusClickOutside={onPlusClickOutside}>\n      <plus-card elevation={10}>\n        <plus-card-body>\n          <b ref={insideRef}>0</b> time(s) inside clicked\n          <br />\n          <b ref={outsideRef}>0</b> time(s) outside clicked\n        </plus-card-body>\n      </plus-card>\n    </plus-click-outside>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/click-outside/default",
@@ -2820,7 +2820,7 @@
   },
   {
     "key": "react-experimental/click-outside/menu",
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const [hidden, setHidden] = useState(true);\n  function onClick() {\n    setHidden(!hidden);\n  }\n  function onPlusClickOutside() {\n    setHidden(true);\n  }\n  return (\n    <plus-center>\n      <plus-click-outside onplus-click-outside={onPlusClickOutside}>\n        <button onclick={onClick}>Open Menu Dropdown</button>\n        <plus-card elevation={10} hidden={hidden} outlined>\n          <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n        </plus-card>\n      </plus-click-outside>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const [hidden, setHidden] = useState(true);\n  function onClick() {\n    setHidden(!hidden);\n  }\n  function onPlusClickOutside() {\n    setHidden(true);\n  }\n  return (\n    <plus-center>\n      <plus-click-outside onPlusClickOutside={onPlusClickOutside}>\n        <button onClick={onClick}>Open Menu Dropdown</button>\n        <plus-card elevation={10} hidden={hidden} outlined>\n          <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n        </plus-card>\n      </plus-click-outside>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
   },
   {
@@ -2986,7 +2986,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/counter.js';\nimport '@htmlplus/ui/intersection.js';\n\nfunction App() {\n  const counterRef = useRef();\n  function onPlusChange(event) {\n    counterRef.current.play = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-counter to={1000} ref={counterRef}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/counter.js';\nimport '@htmlplus/ui/intersection.js';\n\nfunction App() {\n  const counterRef = useRef();\n  function onPlusChange(event) {\n    counterRef.current.play = event.detail.isIntersecting;\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection onPlusChange={onPlusChange}>\n        <plus-counter to={1000} ref={counterRef}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n"
   },
   {
@@ -3389,7 +3389,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onPlusOpened() {\n    setDisabled(false);\n  }\n  function onPlusClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\">Open</plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation\n        connector=\"dialog-cropper\"\n        onplus-opened={onPlusOpened}\n        onplus-closed={onPlusClosed}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Cropper</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\n\nfunction App() {\n  const [disabled, setDisabled] = useState(true);\n  function onPlusOpened() {\n    setDisabled(false);\n  }\n  function onPlusClosed() {\n    setDisabled(true);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-cropper\">Open</plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation\n        connector=\"dialog-cropper\"\n        onPlusOpened={onPlusOpened}\n        onPlusClosed={onPlusClosed}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Cropper</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/dialog",
@@ -3703,7 +3703,7 @@
   },
   {
     "key": "react-experimental/cropper/to-base64",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    const image = new Image();\n    image.src = cropperRef.current.toCanvas().toDataURL();\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>To Base64</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    const image = new Image();\n    image.src = cropperRef.current.toCanvas().toDataURL();\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To Base64</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-base64",
@@ -3731,7 +3731,7 @@
   },
   {
     "key": "react-experimental/cropper/to-blob",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>To Blob</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To Blob</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-blob",
@@ -3759,7 +3759,7 @@
   },
   {
     "key": "react-experimental/cropper/to-url",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>To URL</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To URL</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-url",
@@ -4095,7 +4095,7 @@
   },
   {
     "key": "react-experimental/dialog/prevent",
-    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  function onPlusOpen(event) {\n    if (confirm('Are you sure you want to open it?')) return;\n    event.preventDefault();\n  }\n  function onPlusClose(event) {\n    if (confirm('Are you sure you want to close it?')) return;\n    event.preventDefault();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-prevent\">Open</plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation\n        connector=\"dialog-prevent\"\n        onplus-open={onPlusOpen}\n        onplus-close={onPlusClose}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  function onPlusOpen(event) {\n    if (confirm('Are you sure you want to open it?')) return;\n    event.preventDefault();\n  }\n  function onPlusClose(event) {\n    if (confirm('Are you sure you want to close it?')) return;\n    event.preventDefault();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-dialog-toggler connector=\"dialog-prevent\">Open</plus-dialog-toggler>\n      </plus-center>\n      <plus-dialog\n        animation\n        connector=\"dialog-prevent\"\n        onPlusOpen={onPlusOpen}\n        onPlusClose={onPlusClose}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/dialog/prevent",
@@ -4151,7 +4151,7 @@
   },
   {
     "key": "react-experimental/dialog/size",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const show = (size) => {\n    dialogRef.current.size = size;\n    dialogRef.current.open = true;\n  };\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onclick={() => show('sm')}>Small</button>\n        <button onclick={() => show('md')}>Medium</button>\n        <button onclick={() => show('lg')}>Large</button>\n        <button onclick={() => show('xl')}>Extra Large</button>\n      </plus-stack>\n      <plus-dialog animation connector=\"dialog-size\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const show = (size) => {\n    dialogRef.current.size = size;\n    dialogRef.current.open = true;\n  };\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onClick={() => show('sm')}>Small</button>\n        <button onClick={() => show('md')}>Medium</button>\n        <button onClick={() => show('lg')}>Large</button>\n        <button onClick={() => show('xl')}>Extra Large</button>\n      </plus-stack>\n      <plus-dialog animation connector=\"dialog-size\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/dialog/size",
@@ -6318,7 +6318,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\nfunction App() {\n  const statusRef = useRef();\n  function onPlusChange(event) {\n    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n  }\n  return (\n    <div className=\"container\">\n      <plus-sticky top=\"1rem\" z-index={1}>\n        <plus-center>\n          <div className=\"status\" ref={statusRef}></div>\n        </plus-center>\n      </plus-sticky>\n      <plus-intersection onplus-change={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-card-body>\n            <plus-faker></plus-faker>\n          </plus-card-body>\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\nfunction App() {\n  const statusRef = useRef();\n  function onPlusChange(event) {\n    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n  }\n  return (\n    <div className=\"container\">\n      <plus-sticky top=\"1rem\" z-index={1}>\n        <plus-center>\n          <div className=\"status\" ref={statusRef}></div>\n        </plus-center>\n      </plus-sticky>\n      <plus-intersection onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-card-body>\n            <plus-faker></plus-faker>\n          </plus-card-body>\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n"
   },
   {
@@ -6382,7 +6382,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
   {
@@ -6856,7 +6856,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference1\"\n        vertical\n        onplus-change={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference1\"\n        vertical\n        onPlusChange={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
@@ -6920,7 +6920,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  const [value, setValue] = useState(0);\n  function onPlusChange(event) {\n    setValue(event.detail.progress);\n  }\n  return (\n    <div className=\"container\">\n      <plus-progress-bar value={value}></plus-progress-bar>\n      <div className=\"scrollable reference2\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']} seed={0}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference2\"\n        vertical\n        onplus-change={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  const [value, setValue] = useState(0);\n  function onPlusChange(event) {\n    setValue(event.detail.progress);\n  }\n  return (\n    <div className=\"container\">\n      <plus-progress-bar value={value}></plus-progress-bar>\n      <div className=\"scrollable reference2\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']} seed={0}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference2\"\n        vertical\n        onPlusChange={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
@@ -7025,7 +7025,7 @@
   },
   {
     "key": "react-experimental/signature/clear",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.value = '';\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature background-color=\"lightgray\" ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>Clear</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.value = '';\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature background-color=\"lightgray\" ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>Clear</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/clear",
@@ -7199,7 +7199,7 @@
   },
   {
     "key": "react-experimental/signature/history",
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  const [disabled2, setDisabled2] = useState(true);\n  const [disabled1, setDisabled1] = useState(true);\n  const sync = () => {\n    setDisabled1(!signatureRef.current.undoable);\n    setDisabled2(!signatureRef.current.redoable);\n  };\n  function onClick1() {\n    signatureRef.current.undo();\n    sync();\n  }\n  function onClick2() {\n    signatureRef.current.redo();\n    sync();\n  }\n  function onPlusEnd() {\n    sync();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          background-color=\"lightgray\"\n          onplus-end={onPlusEnd}\n          ref={signatureRef}\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"1rem\">\n        <button disabled={disabled1} onclick={onClick1}>\n          Undo\n        </button>\n        <button disabled={disabled2} onclick={onClick2}>\n          Redo\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  const [disabled2, setDisabled2] = useState(true);\n  const [disabled1, setDisabled1] = useState(true);\n  const sync = () => {\n    setDisabled1(!signatureRef.current.undoable);\n    setDisabled2(!signatureRef.current.redoable);\n  };\n  function onClick1() {\n    signatureRef.current.undo();\n    sync();\n  }\n  function onClick2() {\n    signatureRef.current.redo();\n    sync();\n  }\n  function onPlusEnd() {\n    sync();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          background-color=\"lightgray\"\n          onPlusEnd={onPlusEnd}\n          ref={signatureRef}\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"1rem\">\n        <button disabled={disabled1} onClick={onClick1}>\n          Undo\n        </button>\n        <button disabled={disabled2} onClick={onClick2}>\n          Redo\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/history",
@@ -7291,7 +7291,7 @@
   },
   {
     "key": "react-experimental/signature/save",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(signatureRef.current.value);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature background-color=\"lightgray\" ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>Save</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(signatureRef.current.value);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature background-color=\"lightgray\" ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>Save</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/save",
@@ -7544,6 +7544,90 @@
     "key": "vue/spinner/type",
     "script": "import '@htmlplus/ui/spinner.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner type=\"default\"></plus-spinner>\n  <plus-spinner type=\"double-bounce\"></plus-spinner>\n  <plus-spinner type=\"ring\"></plus-spinner>\n  <plus-spinner type=\"ripple\"></plus-spinner>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n  <plus-spinner type=\"square\"></plus-spinner>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/stack/default",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/stack/default",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/stack/default",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/stack/default",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/stack/default",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation={5}>\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/stack/default",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/stack/divider",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/stack/divider",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/stack/divider",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/stack/divider",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/stack/divider",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation={5}>\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/stack/divider",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/stack/vertical",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"1rem\" vertical>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/stack/vertical",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\" vertical>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/stack/vertical",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\" vertical>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/stack/vertical",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\" vertical>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/stack/vertical",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\" vertical>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/stack/vertical",
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\" vertical>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
   },
   {
     "key": "angular/sticky/contacts",
@@ -8063,7 +8147,7 @@
   },
   {
     "key": "react-experimental/switch/event",
-    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/switch.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n  }\n  return (\n    <plus-center>\n      <plus-switch onplus-change={onPlusChange}></plus-switch>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/switch.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n  }\n  return (\n    <plus-center>\n      <plus-switch onPlusChange={onPlusChange}></plus-switch>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/switch/event",

@@ -9,7 +9,7 @@ function App() {
   }
   return (
     <plus-center>
-      <plus-browse min={3} max={5} multiple onplus-change={onPlusChange}>
+      <plus-browse min={3} max={5} multiple onPlusChange={onPlusChange}>
         {' '}
         Click Here{' '}
       </plus-browse>

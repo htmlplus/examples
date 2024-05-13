@@ -11,7 +11,7 @@ function App() {
   }
   return (
     <div className="container">
-      <plus-intersection onplus-change={onPlusChange}>
+      <plus-intersection onPlusChange={onPlusChange}>
         <plus-animation name="heart-beat" ref={animationRef}></plus-animation>
       </plus-intersection>
     </div>
