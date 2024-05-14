@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/signature.js';
@@ -20,21 +20,17 @@ function App() {
     signatureRef.current.redo();
     sync();
   }
-  useEffect(() => {
-    if (!signatureRef.current) return;
-    function onPlusEnd() {
-      sync();
-    }
-    signatureRef.current.addEventListener('plus-end', onPlusEnd);
-    return () => {
-      if (!signatureRef.current) return;
-      signatureRef.current.removeEventListener('plus-end', onPlusEnd);
-    };
-  });
+  function onPlusEnd() {
+    sync();
+  }
   return (
     <>
       <plus-center>
-        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+        <plus-signature
+          background-color="lightgray"
+          onPlusEnd={onPlusEnd}
+          ref={signatureRef}
+        ></plus-signature>
       </plus-center>
       <br />
       <plus-stack gap="1rem">

@@ -2,16 +2,7 @@ import { capitalCase, pascalCase } from 'change-case';
 import * as glob from 'fast-glob';
 import path from 'node:path';
 
-import {
-  angular,
-  initialize,
-  javascript,
-  json,
-  react,
-  reactExperimental,
-  svelte,
-  vue
-} from '@/plugins';
+import { angular, initialize, javascript, json, react, svelte, vue } from '@/plugins';
 import { IContext } from '@/types';
 import { IImportResolverFunction } from '@/utils';
 
@@ -58,7 +49,7 @@ const destination = (key: string) => {
 
 const eventResolver = (key: string) => {
   return (name: string) => {
-    if (key == 'react-experimental') {
+    if (key == 'react') {
       return pascalCase(name);
     }
     return name;
@@ -122,12 +113,6 @@ export const plugins = [
     importResolver: importResolver('react'),
     isStringAttribute
   }),
-  reactExperimental({
-    destination: destination('react-experimental'),
-    eventResolver: eventResolver('react-experimental'),
-    importResolver: importResolver('react-experimental'),
-    isStringAttribute
-  }),
   svelte({
     destination: destination('svelte'),
     eventResolver: eventResolver('svelte'),
@@ -142,7 +127,7 @@ export const plugins = [
   }),
   json({
     destination: 'dist/db.json',
-    plugins: ['angular', 'javascript', 'react', 'react-experimental', 'svelte', 'vue'],
+    plugins: ['angular', 'javascript', 'react', 'svelte', 'vue'],
     keyResolver(plugin, context) {
       return `${plugin}/${getElementName(context)}/${context.file.name}`;
     }

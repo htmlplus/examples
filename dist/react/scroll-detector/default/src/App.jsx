@@ -1,34 +1,19 @@
-import { useEffect, useRef } from 'react';
-
 import '@htmlplus/ui/faker.js';
 import '@htmlplus/ui/scroll-detector.js';
 
 function App() {
-  const plusFakerRef = useRef();
-  const detectorRef = useRef();
-  useEffect(() => {
-    if (!detectorRef.current) return;
-    function onPlusChange(event) {
-      console.log(event.detail);
-    }
-    detectorRef.current.addEventListener('plus-change', onPlusChange);
-    return () => {
-      if (!detectorRef.current) return;
-      detectorRef.current.removeEventListener('plus-change', onPlusChange);
-    };
-  });
-  useEffect(() => {
-    plusFakerRef.current.arguments = [20, '\n\n'];
-  }, []);
+  function onPlusChange(event) {
+    console.log(event.detail);
+  }
   return (
     <div className="container">
       <div className="scrollable reference1">
-        <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
+        <plus-faker api="lorem.paragraphs" arguments={[20, '\n\n']}></plus-faker>
       </div>
       <plus-scroll-detector
         reference=".reference1"
         vertical
-        ref={detectorRef}
+        onPlusChange={onPlusChange}
       ></plus-scroll-detector>
     </div>
   );

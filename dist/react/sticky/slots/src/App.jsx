@@ -1,13 +1,7 @@
-import { useEffect, useRef } from 'react';
-
 import '@htmlplus/ui/faker.js';
 import '@htmlplus/ui/sticky.js';
 
 function App() {
-  const plusFakerRef = useRef();
-  useEffect(() => {
-    plusFakerRef.current.arguments = [20, '\n\n'];
-  }, []);
   return (
     <div className="container">
       <br />
@@ -15,7 +9,7 @@ function App() {
         <header slot="normal">Normal Header</header>
         <header slot="stick">Stick Header</header>
       </plus-sticky>
-      <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
+      <plus-faker api="lorem.paragraphs" arguments={[20, '\n\n']}></plus-faker>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/cropper.js';
@@ -10,36 +10,24 @@ import '@htmlplus/ui/dialog-toggler.js';
 import '@htmlplus/ui/dialog.js';
 
 function App() {
-  const dialogRef = useRef();
   const [disabled, setDisabled] = useState(true);
-  useEffect(() => {
-    if (!dialogRef.current) return;
-    function onPlusOpened() {
-      setDisabled(false);
-    }
-    dialogRef.current.addEventListener('plus-opened', onPlusOpened);
-    return () => {
-      if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-opened', onPlusOpened);
-    };
-  });
-  useEffect(() => {
-    if (!dialogRef.current) return;
-    function onPlusClosed() {
-      setDisabled(true);
-    }
-    dialogRef.current.addEventListener('plus-closed', onPlusClosed);
-    return () => {
-      if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-closed', onPlusClosed);
-    };
-  });
+  function onPlusOpened() {
+    setDisabled(false);
+  }
+  function onPlusClosed() {
+    setDisabled(true);
+  }
   return (
     <>
       <plus-center>
         <plus-dialog-toggler connector="dialog-cropper">Open</plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation connector="dialog-cropper" ref={dialogRef}>
+      <plus-dialog
+        animation
+        connector="dialog-cropper"
+        onPlusOpened={onPlusOpened}
+        onPlusClosed={onPlusClosed}
+      >
         <plus-dialog-content>
           <plus-dialog-header>Cropper</plus-dialog-header>
           <plus-dialog-body>

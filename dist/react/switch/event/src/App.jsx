@@ -1,24 +1,13 @@
-import { useEffect, useRef } from 'react';
-
 import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/switch.js';
 
 function App() {
-  const switchRef = useRef();
-  useEffect(() => {
-    if (!switchRef.current) return;
-    function onPlusChange(event) {
-      alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
-    }
-    switchRef.current.addEventListener('plus-change', onPlusChange);
-    return () => {
-      if (!switchRef.current) return;
-      switchRef.current.removeEventListener('plus-change', onPlusChange);
-    };
-  });
+  function onPlusChange(event) {
+    alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
+  }
   return (
     <plus-center>
-      <plus-switch ref={switchRef}></plus-switch>
+      <plus-switch onPlusChange={onPlusChange}></plus-switch>
     </plus-center>
   );
 }

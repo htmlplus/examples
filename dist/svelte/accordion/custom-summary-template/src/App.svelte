@@ -5,7 +5,7 @@
 </script>
 
 <plus-accordion>
-  <plus-stack slot="summary" justify-content="space-between">
+  <plus-stack slot="summary" justify="space-between">
     <b>Summary</b>
     <button>Action</button>
   </plus-stack>
