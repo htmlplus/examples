@@ -19,7 +19,17 @@ export const json: IPlugin<IJsonOptions> = (options) => {
       for (const plugin of options.plugins) {
         const key = options.keyResolver(plugin, context);
 
-        const output = merge({ key, settings: context.settings }, context.output?.[plugin] || {});
+        const output = merge(
+          {
+            key,
+            settings: {
+              dock: context.settingsDock,
+              isolate: context.settingsIsolate,
+              rtl: context.settingsRTL
+            }
+          },
+          context.output?.[plugin] || {}
+        );
 
         outputs.push(output);
       }

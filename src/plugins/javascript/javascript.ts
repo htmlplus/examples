@@ -19,61 +19,61 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     const resolver = new Resolver(context, {
       script: {
         arrowFunctionExpression: {
-          constant() { }
+          constant() {}
         },
-        constant() { },
+        constant() {},
         element: {
           method: {
             addEventListener: {
               arrowFunctionExpression: {
-                blockStatement() { },
-                callExpression() { }
+                blockStatement() {},
+                callExpression() {}
               },
-              callExpression() { },
-              functionExpression() { },
-              identifier() { }
+              callExpression() {},
+              functionExpression() {},
+              identifier() {}
             }
           },
           property: {
-            constant() { },
+            constant() {},
             state: {
-              define() { },
-              getter() { },
-              setter() { }
+              define() {},
+              getter() {},
+              setter() {}
             }
           },
-          reference() { }
+          reference() {}
         },
-        final() { },
-        functionDeclaration() { },
+        final() {},
+        functionDeclaration() {},
         functionExpression: {
-          constant() { }
+          constant() {}
         },
-        unresolved() { },
+        unresolved() {},
         variable: {
-          define() { },
-          getter() { },
-          setter() { }
+          define() {},
+          getter() {},
+          setter() {}
         }
       },
       template: {
         element: {
           attribute: {
-            class() { },
-            default() { },
-            id() { },
-            style() { }
+            class() {},
+            default() {},
+            id() {},
+            style() {}
           },
-          default() { }
+          default() {}
         },
-        fragment() { }
+        fragment() {}
       }
     });
 
     resolver.execute();
 
     const config = await (async () => {
-      if (!context.config) return;
+      if (!context.configAST) return;
 
       importResolver(resolver.config, options.importResolver);
 
@@ -85,7 +85,7 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     })();
 
     const script = await (async () => {
-      if (!context.script) return;
+      if (!context.scriptAST) return;
 
       importResolver(resolver.script, options.importResolver);
 
@@ -97,7 +97,7 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     })();
 
     const template = await (async () => {
-      if (!context.template) return;
+      if (!context.templateAST) return;
 
       const { code } = generator(resolver.template, {});
 
@@ -109,24 +109,18 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     })();
 
     const model = merge(context, {
-      config: config && {
-        content: config
-      },
-      script: script && {
-        content: script
-      },
-      template: template && {
-        content: template
-      }
+      configContent: config,
+      scriptContent: script,
+      templateContent: template
     });
 
     const patterns = ['templates/**/*.*'];
 
-    if (!context.config) {
+    if (!context.configAST) {
       patterns.push('!templates/config.js.*');
     }
 
-    if (!context.style) {
+    if (!context.styleContent) {
       patterns.push('!templates/style.css.*');
     }
 
@@ -135,7 +129,7 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
     context.output[name] = {
       config,
       script,
-      style: context.style?.content,
+      style: context.styleContent,
       template
     };
   };

@@ -200,7 +200,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
             });
           }
         },
-        final(parameters) { },
+        final(parameters) {},
         functionDeclaration(parameters) {
           this.resolve(parameters.pattern.node);
         },
@@ -242,7 +242,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
           define(parameters) {
             this.resolve(parameters.pattern.node);
           },
-          getter() { },
+          getter() {},
           setter(parameters) {
             this.resolve(parameters.wrapper.node);
           }
@@ -251,7 +251,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
       template: {
         element: {
           attribute: {
-            class() { },
+            class() {},
             default(parameters) {
               if (!isCustomElement(parameters.element)) return;
 
@@ -275,18 +275,18 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
             id(parameters) {
               parameters.pattern.remove();
             },
-            style() { }
+            style() {}
           },
-          default() { }
+          default() {}
         },
-        fragment() { }
+        fragment() {}
       }
     });
 
     resolver.execute();
 
     const config = await (async () => {
-      if (!context.config) return;
+      if (!context.configAST) return;
 
       importResolver(resolver.config, options.importResolver);
 
@@ -298,7 +298,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
     })();
 
     const script = await (async () => {
-      if (!context.script) return;
+      if (!context.scriptAST) return;
 
       importResolver(resolver.script, options.importResolver);
 
@@ -310,7 +310,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
     })();
 
     const template = await (async () => {
-      if (!context.template) return;
+      if (!context.templateAST) return;
 
       const { code } = generator(resolver.template, {});
 
@@ -322,20 +322,14 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
     })();
 
     const model = merge(context, {
-      config: config && {
-        content: config
-      },
-      script: script && {
-        content: script
-      },
-      template: template && {
-        content: template
-      }
+      configContent: config,
+      scriptContent: script,
+      templateContent: template
     });
 
     const patterns = ['templates/**/*.*'];
 
-    if (!context.config) {
+    if (!context.configAST) {
       patterns.push('!templates/src/config.js.*');
     }
 
@@ -344,7 +338,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
     context.output[name] = {
       config,
       script,
-      style: context.style?.content,
+      style: context.styleContent,
       template
     };
   };

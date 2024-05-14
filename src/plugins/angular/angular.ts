@@ -388,7 +388,7 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
       template: {
         element: {
           attribute: {
-            class() { },
+            class() {},
             default(parameters) {
               const has = parameters.element.openingElement.attributes.some(
                 (attribute: any) => attribute.name.name == '[' + parameters.name.name + ']'
@@ -418,18 +418,18 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
             id(parameters) {
               parameters.pattern.remove();
             },
-            style() { }
+            style() {}
           },
-          default() { }
+          default() {}
         },
-        fragment() { }
+        fragment() {}
       }
     });
 
     resolver.execute();
 
     const config = await (async () => {
-      if (!context.config) return;
+      if (!context.configAST) return;
 
       importResolver(resolver.config, options.importResolver);
 
@@ -441,7 +441,7 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
     })();
 
     const script = await (async () => {
-      if (!context.script) return;
+      if (!context.scriptAST) return;
 
       importResolver(resolver.script, options.importResolver);
 
@@ -453,7 +453,7 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
     })();
 
     const template = await (async () => {
-      if (!context.template) return;
+      if (!context.templateAST) return;
 
       const { code } = generator(resolver.template, {});
 
@@ -465,20 +465,14 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
     })();
 
     const model = merge(context, {
-      config: config && {
-        content: config
-      },
-      script: script && {
-        content: script
-      },
-      template: template && {
-        content: template
-      }
+      configContent: config,
+      scriptContent: script,
+      templateContent: template
     });
 
     const patterns = ['templates/**/*.*'];
 
-    if (!context.config) {
+    if (!context.configAST) {
       patterns.push('!templates/src/config.ts.*');
     }
 
@@ -487,7 +481,7 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
     context.output[name] = {
       config,
       script,
-      style: context.style?.content,
+      style: context.styleContent,
       template
     };
   };

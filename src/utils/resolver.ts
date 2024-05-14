@@ -408,11 +408,11 @@ export class Resolver {
     public context: IContext,
     public options: IResolverOptions
   ) {
-    this.config = cloneNode(context.config?.ast!, true);
+    this.config = cloneNode(context.configAST!, true);
 
-    this.script = cloneNode(context.script?.ast!, true);
+    this.script = cloneNode(context.scriptAST!, true);
 
-    this.template = cloneNode(context.template?.ast!, true);
+    this.template = cloneNode(context.templateAST!, true);
   }
 
   public addToken(key: string, scope?: string, unique?: boolean): IResolverToken {

@@ -39,76 +39,42 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
   const run = async (context: IContext) => {
     context.output = {};
 
-    context.directory = (() => {
-      const address = path.dirname(context.file.path);
+    context.directoryPath = path.dirname(context.filePath);
 
-      const name = path.basename(address!);
+    context.directoryName = path.basename(context.directoryPath);
 
-      return {
-        name,
-        path: address
-      };
-    })();
+    context.fileContent = fs.readFileSync(context.filePath, 'utf8');
 
-    context.file = (() => {
-      const content = fs.readFileSync(context.file.path, 'utf8');
+    context.fileExtension = path.extname(context.filePath);
 
-      const extension = path.extname(context.file.path);
+    context.fileName = path.basename(context.filePath, context.fileExtension);
 
-      const name = path.basename(context.file.path, extension);
+    context.settingsDock = /<body[^>]*\sdock(?:\s|>)/i.test(context.fileContent);
 
-      return {
-        content,
-        extension,
-        name,
-        path: context.file.path
-      };
-    })();
+    context.settingsIsolate = /<body[^>]*\sisolate(?:\s|>)/i.test(context.fileContent);
 
-    context.settings = (() => {
-      const dock = /<body[^>]*\sdock(?:\s|>)/i.test(context.file.content);
+    context.settingsRTL = /<body[^>]*\srtl(?:\s|>)/i.test(context.fileContent);
 
-      const isolate = /<body[^>]*\sisolate(?:\s|>)/i.test(context.file.content);
-
-      const rtl = /<body[^>]*\srtl(?:\s|>)/i.test(context.file.content);
-
-      if (!dock && !isolate && !rtl) return;
-
-      return {
-        dock,
-        isolate,
-        rtl
-      };
-    })();
-
-    context.style = await (async () => {
-      const [content] = extract('style', context.file.content);
+    await (async () => {
+      const [content] = extract('style', context.fileContent);
 
       if (!content) return;
 
-      const formatted = await format(content, { parser: 'css' });
-
-      return {
-        content: formatted
-      };
+      context.styleContent = await format(content, { parser: 'css' });
     })();
 
-    context.config = (() => {
-      const [one, two] = extract('script', context.file.content);
+    (() => {
+      const [one, two] = extract('script', context.fileContent);
 
       const content = two ? one : undefined;
 
       if (!content) return;
 
-      const ast = parse(content, { sourceType: 'module' });
-
-      return {
-        ast
-      };
+      context.configAST = parse(content, { sourceType: 'module' });
     })();
 
-    context.template = (() => {
-      const [content] = extract('body', context.file.content, ['script', 'style']);
+    (() => {
+      const [content] = extract('body', context.fileContent, ['script', 'style']);
 
       if (!content) return;
 
@@ -129,28 +95,23 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
 
       ast.program.body = [element];
 
-      return {
-        ast,
-        wrapped: element == fragment
-      };
+      context.templateAST = ast;
+
+      context.templateWrapped = element == fragment;
     })();
 
-    context.script = (() => {
-      const [one, two] = extract('script', context.file.content);
+    (() => {
+      const [one, two] = extract('script', context.fileContent);
 
       const content = two || one;
 
       if (!content) return;
 
-      const ast = parse(content, { sourceType: 'module' });
-
-      return {
-        ast
-      };
+      context.scriptAST = parse(content, { sourceType: 'module' });
     })();
 
     context.dependencies = (() => {
-      if (!context.script) return [];
+      if (!context.scriptAST) return [];
 
       const dependencies: IContextDependency[] = [];
 
@@ -169,12 +130,12 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
         dependencies.push(dependency);
       };
 
-      if (context.config) {
-        traverse(context.config.ast, { ImportDeclaration });
+      if (context.configAST) {
+        traverse(context.configAST, { ImportDeclaration });
       }
 
-      if (context.script) {
-        traverse(context.script.ast, { ImportDeclaration });
+      if (context.scriptAST) {
+        traverse(context.scriptAST, { ImportDeclaration });
       }
 
       return dependencies.sort();

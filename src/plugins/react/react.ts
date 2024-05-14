@@ -406,7 +406,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
     resolver.execute();
 
     const config = await (async () => {
-      if (!context.config) return;
+      if (!context.configAST) return;
 
       importResolver(resolver.config, options.importResolver);
 
@@ -418,7 +418,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
     })();
 
     const script = await (async () => {
-      if (!context.script) return;
+      if (!context.scriptAST) return;
 
       importResolver(resolver.script, options.importResolver);
 
@@ -430,21 +430,17 @@ export const react: IPlugin<IReactOptions> = (options) => {
     })();
 
     const model = merge(context, {
-      config: config && {
-        content: config
-      },
-      script: script && {
-        content: script
-      }
+      configContent: config,
+      scriptContent: script
     });
 
     const patterns = ['templates/**/*.*'];
 
-    if (!context.config) {
+    if (!context.configAST) {
       patterns.push('!templates/src/config.js.*');
     }
 
-    if (!context.style) {
+    if (!context.styleContent) {
       patterns.push('!templates/src/index.css.*');
     }
 
@@ -453,7 +449,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
     context.output[name] = {
       config,
       script,
-      style: context.style?.content
+      style: context.styleContent
     };
   };
 

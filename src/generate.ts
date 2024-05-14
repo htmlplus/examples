@@ -10,10 +10,8 @@ const contexts: IContext[] = [];
   }
 
   for (const file of files) {
-    let context = {
-      file: {
-        path: file
-      }
+    let context: IContext = {
+      filePath: file
     } as any;
 
     contexts.push(context);
@@ -27,7 +25,7 @@ const contexts: IContext[] = [];
       }
 
       let index = contexts.findIndex((current) => {
-        return current.file?.path == context.file?.path;
+        return current.filePath == context.filePath;
       });
 
       contexts.splice(index, 1, context);

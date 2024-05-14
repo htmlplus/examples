@@ -1,20 +1,35 @@
 import * as t from '@babel/types';
 
 export interface IContext {
-  config?: IContextConfig;
-  dependencies: IContextDependency[];
-  directory: IContextDirectory;
-  file: IContextFile;
-  output: IContextOutput;
-  script?: IContextScript;
-  settings?: IContextSettings;
-  style?: IContextStyle;
-  template?: IContextTemplate;
-  title: string;
-}
+  configAST?: t.File;
+  configContent?: string;
 
-export interface IContextConfig {
-  ast: t.File;
+  dependencies: IContextDependency[];
+
+  directoryName: string;
+  directoryPath: string;
+
+  fileContent: string;
+  fileExtension: string;
+  fileName: string;
+  filePath: string;
+
+  output: IContextOutput;
+
+  scriptAST?: t.File;
+  scriptContent?: string;
+
+  settingsDock?: boolean;
+  settingsIsolate?: boolean;
+  settingsRTL?: boolean;
+
+  styleContent?: string;
+
+  templateAST?: t.File;
+  templateContent?: string;
+  templateWrapped?: boolean;
+
+  title: string;
 }
 
 export interface IContextDependency {
@@ -22,37 +37,6 @@ export interface IContextDependency {
   version: string;
 }
 
-export interface IContextDirectory {
-  name: string;
-  path: string;
-}
-
-export interface IContextFile {
-  content: string;
-  extension: string;
-  name: string;
-  path: string;
-}
-
 export interface IContextOutput {
   [key: string]: any;
-}
-
-export interface IContextScript {
-  ast: t.File;
-}
-
-export interface IContextSettings {
-  dock?: boolean;
-  isolate?: boolean;
-  rtl?: boolean;
-}
-
-export interface IContextStyle {
-  content: string;
-}
-
-export interface IContextTemplate {
-  ast: t.File;
-  wrapped: boolean;
 }

@@ -43,7 +43,7 @@ const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
 
 const destination = (key: string) => {
   return (context: IContext) => {
-    return path.join(TARGET, key, getElementName(context), context.file.name);
+    return path.join(TARGET, key, getElementName(context), context.fileName);
   };
 };
 
@@ -57,7 +57,7 @@ const eventResolver = (key: string) => {
 };
 
 const getElementName = (context: IContext) => {
-  return path.basename(path.dirname(context.directory.path));
+  return path.basename(path.dirname(context.directoryPath));
 };
 
 const importResolver = (key: string): IImportResolverFunction => {
@@ -94,7 +94,7 @@ export const plugins = [
       };
     },
     getTitle(context: IContext) {
-      return `${capitalCase(getElementName(context))} | ${capitalCase(context.file.name)}`;
+      return `${capitalCase(getElementName(context))} | ${capitalCase(context.fileName)}`;
     }
   }),
   angular({
@@ -129,7 +129,7 @@ export const plugins = [
     destination: 'dist/db.json',
     plugins: ['angular', 'javascript', 'react', 'svelte', 'vue'],
     keyResolver(plugin, context) {
-      return `${plugin}/${getElementName(context)}/${context.file.name}`;
+      return `${plugin}/${getElementName(context)}/${context.fileName}`;
     }
   })
 ];
