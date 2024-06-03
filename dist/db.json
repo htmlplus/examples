@@ -106,7 +106,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/custom-summary-template",
@@ -117,7 +117,7 @@
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/custom-summary-template",
@@ -126,7 +126,7 @@
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify=\"space-between\">\n        <b>Summary</b>\n        <button>Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify=\"between\">\n        <b>Summary</b>\n        <button>Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
   },
   {
@@ -138,7 +138,7 @@
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/custom-summary-template",
@@ -149,7 +149,7 @@
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "angular/accordion/customized",
