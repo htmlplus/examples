@@ -9,7 +9,7 @@
 </script>
 
 <plus-center>
-  <plus-signature background-color="lightgray" bind:this={signatureRef}></plus-signature>
+  <plus-signature bind:this={signatureRef}></plus-signature>
 </plus-center>
 <br />
 <plus-center>

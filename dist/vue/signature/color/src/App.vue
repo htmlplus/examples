@@ -1,6 +1,6 @@
 <template>
   <plus-center>
-    <plus-signature background-color="lightgray" color="blue"></plus-signature>
+    <plus-signature color="blue"></plus-signature>
   </plus-center>
 </template>
 

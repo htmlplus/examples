@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <plus-center>
-        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+        <plus-signature ref={signatureRef}></plus-signature>
       </plus-center>
       <br />
       <plus-center>

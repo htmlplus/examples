@@ -1,11 +1,7 @@
 <template>
   <div>
     <plus-center>
-      <plus-signature
-        background-color="lightgray"
-        @plus-end="onPlusEnd"
-        ref="signatureRef"
-      ></plus-signature>
+      <plus-signature @plus-end="onPlusEnd" ref="signatureRef"></plus-signature>
     </plus-center>
     <br />
     <plus-stack gap="1rem">

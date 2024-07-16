@@ -24,8 +24,7 @@
 </script>
 
 <plus-center>
-  <plus-signature background-color="lightgray" on:plus-end={onPlusEnd} bind:this={signatureRef}
-  ></plus-signature>
+  <plus-signature on:plus-end={onPlusEnd} bind:this={signatureRef}></plus-signature>
 </plus-center>
 <br />
 <plus-stack gap="1rem">

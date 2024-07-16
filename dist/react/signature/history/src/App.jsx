@@ -26,11 +26,7 @@ function App() {
   return (
     <>
       <plus-center>
-        <plus-signature
-          background-color="lightgray"
-          onPlusEnd={onPlusEnd}
-          ref={signatureRef}
-        ></plus-signature>
+        <plus-signature onPlusEnd={onPlusEnd} ref={signatureRef}></plus-signature>
       </plus-center>
       <br />
       <plus-stack gap="1rem">

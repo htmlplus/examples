@@ -2,7 +2,7 @@
   import '@htmlplus/ui/signature.js';
 </script>
 
-<plus-signature background-color="lightgray" resizable></plus-signature>
+<plus-signature resizable></plus-signature>
 
 <style>
   plus-signature {

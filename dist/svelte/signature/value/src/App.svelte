@@ -6,5 +6,5 @@
 </script>
 
 <plus-center>
-  <plus-signature background-color="lightgray" {value}></plus-signature>
+  <plus-signature {value}></plus-signature>
 </plus-center>

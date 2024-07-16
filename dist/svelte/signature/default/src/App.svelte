@@ -4,5 +4,5 @@
 </script>
 
 <plus-center>
-  <plus-signature background-color="lightgray"></plus-signature>
+  <plus-signature></plus-signature>
 </plus-center>

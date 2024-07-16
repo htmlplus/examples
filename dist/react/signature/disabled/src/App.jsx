@@ -4,7 +4,7 @@ import '@htmlplus/ui/signature.js';
 function App() {
   return (
     <plus-center>
-      <plus-signature background-color="lightgray" disabled></plus-signature>
+      <plus-signature disabled></plus-signature>
     </plus-center>
   );
 }
