@@ -1,6 +1,0 @@
-plus-avatar-group plus-avatar {
-  margin-inline-end: 2rem;
-}
-plus-avatar-group[stacked] plus-avatar {
-  margin-inline-end: -2rem;
-}
