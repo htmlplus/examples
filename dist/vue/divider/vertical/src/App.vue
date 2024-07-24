@@ -9,6 +9,7 @@
 <script setup>
   import '@htmlplus/ui/divider.js';
   import '@htmlplus/ui/faker.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <style scoped>

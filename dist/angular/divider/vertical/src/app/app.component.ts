@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import '@htmlplus/ui/divider.js';
 import '@htmlplus/ui/faker.js';
+import '@htmlplus/ui/stack.js';
 
 @Component({
   selector: 'app-root',

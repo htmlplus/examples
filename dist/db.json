@@ -6101,7 +6101,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
     "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
@@ -6112,7 +6112,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
     "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
@@ -6123,7 +6123,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-stack>\n      <plus-faker></plus-faker>\n      <plus-divider vertical>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack>\n      <plus-faker></plus-faker>\n      <plus-divider vertical>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n"
   },
   {
@@ -6133,7 +6133,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
     "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
@@ -6144,7 +6144,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
     "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
