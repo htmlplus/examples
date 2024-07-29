@@ -10,8 +10,11 @@ import '@htmlplus/ui/center.js';
 })
 export class AppComponent {
   onPlusChange(event) {
-    if (event.detail.files?.[0]?.errors.length) {
-      alert(event.detail.files[0].errors[0].message);
+    const { errors, file } = event.detail.files[0];
+    if (errors?.length) {
+      alert(errors[0].message);
+    } else {
+      alert(`File '${file.name}' selected.`);
     }
   }
 }

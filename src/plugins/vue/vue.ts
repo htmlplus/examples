@@ -30,6 +30,8 @@ export const vue: IPlugin<IVueOptions> = (options) => {
   const name = 'vue';
 
   const run = async (context: IContext) => {
+    if (context.skip) return;
+
     const destination = options.destination(context);
 
     const resolver = new Resolver(context, {

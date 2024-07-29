@@ -32,6 +32,8 @@ export const angular: IPlugin<IAngularOptions> = (options) => {
   const name = 'angular';
 
   const run = async (context: IContext) => {
+    if (context.skip) return;
+
     const destination = options.destination(context);
 
     const resolver = new Resolver(context, {

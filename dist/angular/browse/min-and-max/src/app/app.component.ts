@@ -12,6 +12,8 @@ export class AppComponent {
   onPlusChange(event) {
     if (event.detail.error) {
       alert(event.detail.error.message);
+    } else {
+      alert(`${event.detail.files.length} file(s) are selected.`);
     }
   }
 }

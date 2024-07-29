@@ -87,6 +87,7 @@ export const files = glob.sync(SOURCE);
 
 export const plugins = [
   initialize({
+    cache: 'dist/.cache',
     dependencyResolver(source) {
       return {
         name: source.replace(CDN, '').split('/').slice(0, 2).join('/'),

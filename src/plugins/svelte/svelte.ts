@@ -28,6 +28,8 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
   const name = 'svelte';
 
   const run = async (context: IContext) => {
+    if (context.skip) return;
+
     const destination = options.destination(context);
 
     const resolver = new Resolver(context, {

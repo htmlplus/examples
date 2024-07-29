@@ -15,21 +15,29 @@ export const json: IPlugin<IJsonOptions> = (options) => {
   const finish = async (contexts: IContext[]) => {
     const outputs = [];
 
+    const previous = fs.existsSync(options.destination)
+      ? (JSON.parse(fs.readFileSync(options.destination)) as [])
+      : [];
+
     for (const context of contexts) {
       for (const plugin of options.plugins) {
         const key = options.keyResolver(plugin, context);
 
-        const output = merge(
-          {
-            key,
-            settings: {
-              dock: context.settingsDock,
-              isolate: context.settingsIsolate,
-              rtl: context.settingsRTL
-            }
-          },
-          context.output?.[plugin] || {}
-        );
+        const current = context.skip ? previous.find((item: any) => item.key == key) : undefined;
+
+        const output =
+          current ||
+          merge(
+            {
+              key,
+              settings: {
+                dock: context.settingsDock,
+                isolate: context.settingsIsolate,
+                rtl: context.settingsRTL
+              }
+            },
+            context.output?.[plugin] || {}
+          );
 
         outputs.push(output);
       }

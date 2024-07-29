@@ -1,5 +1,4 @@
 import generator from '@babel/generator';
-import * as t from '@babel/types';
 import merge from 'deepmerge';
 
 import { IContext, IPlugin } from '@/types';
@@ -14,6 +13,8 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
   const name = 'javascript';
 
   const run = async (context: IContext) => {
+    if (context.skip) return;
+
     const destination = options.destination(context);
 
     const resolver = new Resolver(context, {

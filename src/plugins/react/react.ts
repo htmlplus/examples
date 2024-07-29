@@ -30,6 +30,8 @@ export const react: IPlugin<IReactOptions> = (options) => {
   const name = 'react';
 
   const run = async (context: IContext) => {
+    if (context.skip) return;
+
     const destination = options.destination(context);
 
     const resolver = new Resolver(context, {

@@ -7,12 +7,15 @@ import { IContext, IContextDependency, IPlugin } from '@/types';
 import { format } from '@/utils';
 
 export interface IInitializeOptions {
+  cache: string;
   dependencyResolver: (source: string) => IContextDependency;
   getTitle: (context: IContext) => string;
 }
 
 export const initialize: IPlugin<IInitializeOptions> = (options) => {
   const name = 'initialize';
+
+  const cache = fs.existsSync(options.cache) ? JSON.parse(fs.readFileSync(options.cache)) : {};
 
   const extract = (tag: string, input: string, ignores?: string[]) => {
     const inner = (tag: string) => {
@@ -48,6 +51,15 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
     context.fileExtension = path.extname(context.filePath);
 
     context.fileName = path.basename(context.filePath, context.fileExtension);
+
+    context.fileUpdatedTime = fs.statSync(context.filePath).mtime.toISOString();
+
+    context.title = options.getTitle(context) || '';
+
+    if (cache[context.filePath] == context.fileUpdatedTime) {
+      context.skip = true;
+      return;
+    }
 
     context.settingsDock = /<body[^>]*\sdock(?:\s|>)/i.test(context.fileContent);
 
@@ -140,9 +152,15 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
 
       return dependencies.sort();
     })();
-
-    context.title = options.getTitle(context) || '';
   };
 
-  return { name, run };
+  const finish = async (contexts: IContext[]) => {
+    for (const context of contexts) {
+      cache[context.filePath] = context.fileUpdatedTime;
+    }
+
+    fs.writeFileSync(options.cache, JSON.stringify(cache));
+  };
+
+  return { name, run, finish };
 };

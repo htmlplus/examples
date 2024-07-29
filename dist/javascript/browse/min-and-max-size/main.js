@@ -2,7 +2,10 @@ import '@htmlplus/ui/browse.js';
 import '@htmlplus/ui/center.js';
 
 $browse.addEventListener('plus-change', (event) => {
-  if (event.detail.files?.[0]?.errors.length) {
-    alert(event.detail.files[0].errors[0].message);
+  const { errors, file } = event.detail.files[0];
+  if (errors?.length) {
+    alert(errors[0].message);
+  } else {
+    alert(`File '${file.name}' selected.`);
   }
 });

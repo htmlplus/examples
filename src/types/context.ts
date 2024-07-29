@@ -13,6 +13,7 @@ export interface IContext {
   fileExtension: string;
   fileName: string;
   filePath: string;
+  fileUpdatedTime: string;
 
   output: IContextOutput;
 
@@ -30,6 +31,8 @@ export interface IContext {
   templateWrapped?: boolean;
 
   title: string;
+
+  skip: boolean;
 }
 
 export interface IContextDependency {

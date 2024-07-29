@@ -2831,7 +2831,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    const { errors, file } = event.detail.files[0];\n    if (errors?.length) {\n      alert(errors[0].message);\n    } else {\n      alert(`File '${file.name}' selected.`);\n    }\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse [min-size]=\"1000000\" [max-size]=\"5000000\" (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2841,7 +2841,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n});\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n});\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\" min-size=\"1000000\" max-size=\"5000000\"> Click Here </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2851,7 +2851,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.files?.[0]?.errors.length) {\n      alert(event.detail.files[0].errors[0].message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const { errors, file } = event.detail.files[0];\n    if (errors?.length) {\n      alert(errors[0].message);\n    } else {\n      alert(`File '${file.name}' selected.`);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/min-and-max-size",
@@ -2860,7 +2860,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n}\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse min-size={1000000} max-size={5000000} on:plus-change={onPlusChange}>\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2870,7 +2870,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.files?.[0]?.errors.length) {\n    alert(event.detail.files[0].errors[0].message);\n  }\n}\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse :min-size=\"1000000\" :max-size=\"5000000\" @plus-change=\"onPlusChange\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2880,7 +2880,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    } else {\n      alert(`${event.detail.files.length} file(s) are selected.`);\n    }\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse [min]=\"3\" [max]=\"5\" multiple (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2890,7 +2890,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n});\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n});\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\" min=\"3\" max=\"5\" multiple> Click Here </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2900,7 +2900,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    } else {\n      alert(`${event.detail.files.length} file(s) are selected.`);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/browse/min-and-max",
@@ -2909,7 +2909,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n}\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse min={3} max={5} multiple on:plus-change={onPlusChange}> Click Here </plus-browse>\n</plus-center>\n"
   },
   {
@@ -2919,7 +2919,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  }\n}\n",
+    "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse :min=\"3\" :max=\"5\" multiple @plus-change=\"onPlusChange\"> Click Here </plus-browse>\n</plus-center>\n"
   },
   {
@@ -8683,7 +8683,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/intersection/lazy-image",
@@ -8694,7 +8694,7 @@
     },
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react/intersection/lazy-image",
@@ -8703,7 +8703,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
   {
@@ -8715,7 +8715,7 @@
     },
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/intersection/lazy-image",
@@ -8726,7 +8726,7 @@
     },
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "angular/progress-bar/aria-label",

@@ -3,7 +3,7 @@
     <plus-intersection once @plus-change="onPlusChange">
       <plus-card :elevation="10">
         <plus-spinner></plus-spinner>
-        <img alt="Lazy Image" hidden data-src="https://placekitten.com/200/200" />
+        <img alt="Lazy Image" hidden data-src="https://picsum.photos/id/25/200/200" />
       </plus-card>
     </plus-intersection>
   </div>
