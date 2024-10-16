@@ -9430,6 +9430,300 @@
     "template": "<plus-progress-bar :value=\"25\"></plus-progress-bar>\n"
   },
   {
+    "key": "angular/relative-time/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-relative-time></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/relative-time/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "react/relative-time/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-relative-time></plus-relative-time>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/relative-time/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/relative-time/format",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"narrow\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"short\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"long\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/relative-time/format",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"narrow\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"short\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"long\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/relative-time/format",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" vertical>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"narrow\"></plus-relative-time>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"short\"></plus-relative-time>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"long\"></plus-relative-time>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/format",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"narrow\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"short\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"long\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/relative-time/format",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"narrow\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"short\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" format=\"long\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/relative-time/localization",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"en\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"ja\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"es\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/relative-time/localization",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"en\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"ja\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"es\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/relative-time/localization",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" vertical>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"en\"></plus-relative-time>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"ja\"></plus-relative-time>\n      <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"es\"></plus-relative-time>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/localization",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"en\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"ja\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"es\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/relative-time/localization",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"en\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"ja\"></plus-relative-time>\n  <plus-relative-time value=\"2020-01-01T00:00:00\" lang=\"es\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/relative-time/numeric",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  value2 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n  value1 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time numeric=\"auto\" [value]=\"value1\"></plus-relative-time>\n  <plus-relative-time numeric=\"always\" [value]=\"value2\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/relative-time/numeric",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\n$relativeTime1.value = new Date(Date.now() - 24 * 60 * 60 * 1000);\n$relativeTime2.value = new Date(Date.now() - 24 * 60 * 60 * 1000);\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time id=\"$relativeTime1\" numeric=\"auto\"></plus-relative-time>\n  <plus-relative-time id=\"$relativeTime2\" numeric=\"always\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/relative-time/numeric",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const value2 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n  const value1 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n  return (\n    <plus-stack gap=\"0.5rem\" vertical>\n      <plus-relative-time numeric=\"auto\" value={value1}></plus-relative-time>\n      <plus-relative-time numeric=\"always\" value={value2}></plus-relative-time>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/numeric",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\nconst value2 = new Date(Date.now() - 24 * 60 * 60 * 1000);\nconst value1 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time numeric=\"auto\" value={value1}></plus-relative-time>\n  <plus-relative-time numeric=\"always\" value={value2}></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/relative-time/numeric",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/relative-time.js';\nimport '@htmlplus/ui/stack.js';\n\nconst value2 = new Date(Date.now() - 24 * 60 * 60 * 1000);\nconst value1 = new Date(Date.now() - 24 * 60 * 60 * 1000);\n",
+    "template": "<plus-stack gap=\"0.5rem\" vertical>\n  <plus-relative-time numeric=\"auto\" :value=\"value1\"></plus-relative-time>\n  <plus-relative-time numeric=\"always\" :value=\"value2\"></plus-relative-time>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/relative-time/sync",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-relative-time sync></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/relative-time/sync",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time sync></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "react/relative-time/sync",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-relative-time sync></plus-relative-time>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/sync",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time sync></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/relative-time/sync",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time sync></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/relative-time/value",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/relative-time/value",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "react/relative-time/value",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n    </plus-center>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/relative-time/value",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/relative-time/value",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
     "key": "angular/scroll-detector/default",
     "settings": {
       "dock": true,
