@@ -1,4 +1,4 @@
-import glob from 'fast-glob';
+import { glob } from 'glob';
 import handlebars from 'handlebars';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -7,10 +7,17 @@ import { format } from './format';
 
 export const write =
   (root: string, source: string | string[], destination: string) => async (context: any) => {
-    const files = glob.sync(source, { cwd: root });
+    const pattern = [source].flat();
+
+    const ignore = pattern
+      .filter((source) => source.startsWith('!'))
+      .map((source) => source.slice(1));
+
+    const files = glob.sync(pattern, { cwd: root, ignore });
 
     let removes = glob.sync(`**/*`, {
-      onlyFiles: false,
+      // TODO
+      // onlyFiles: false,
       cwd: path.join(process.cwd(), destination)
     });
 
@@ -47,7 +54,7 @@ export const write =
 
       const template = handlebars.compile(raw)(context);
 
-      const formated = await format(template, {
+      const formatted = await format(template, {
         parser: (() => {
           const extension = path.extname(to).replace('.', '');
           switch (extension) {
@@ -63,10 +70,10 @@ export const write =
       });
 
       try {
-        if (fs.readFileSync(to, 'utf8') == formated) continue;
-      } catch {}
+        if (fs.readFileSync(to, 'utf8') == formatted) continue;
+      } catch { }
 
-      fs.writeFileSync(to, formated, 'utf8');
+      fs.writeFileSync(to, formatted, 'utf8');
     }
 
     for (const remove of removes) {

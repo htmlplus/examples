@@ -1,5 +1,5 @@
 import { capitalCase, pascalCase } from 'change-case';
-import * as glob from 'fast-glob';
+import * as glob from 'glob';
 import path from 'node:path';
 
 import { angular, initialize, javascript, json, react, svelte, vue } from '@/plugins';
