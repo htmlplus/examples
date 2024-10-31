@@ -12,7 +12,7 @@ import { IImportResolverFunction } from '@/utils';
 const SOURCE = '../ui/src/elements/*/examples/*.html';
 const TARGET = './dist';
 
-const CDN = 'https://cdn.skypack.dev/';
+const CDN = 'https://esm.run/';
 
 const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
   {
