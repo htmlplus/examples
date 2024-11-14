@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@htmlplus/ui": "latest",
+    "react": "19.0.0-beta-9d76c954cf-20240510",
+    "react-dom": "19.0.0-beta-9d76c954cf-20240510"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.8"
+  }
+}
