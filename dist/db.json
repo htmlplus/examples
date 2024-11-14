@@ -10982,7 +10982,7 @@
     "key": "angular/app-progress-bar/methods",
     "settings": {
       "dock": false,
-      "isolate": true,
+      "isolate": false,
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  onClick1() {\n    this.appProgressBarRef.nativeElement.start();\n  }\n  onClick2() {\n    this.appProgressBarRef.nativeElement.set(0.4);\n  }\n  onClick3() {\n    this.appProgressBarRef.nativeElement.increase();\n  }\n  onClick4() {\n    this.appProgressBarRef.nativeElement.trickle();\n  }\n  onClick5() {\n    this.appProgressBarRef.nativeElement.done();\n  }\n  onClick6() {\n    this.appProgressBarRef.nativeElement.done(true);\n  }\n}\n",
@@ -10993,7 +10993,7 @@
     "key": "javascript/app-progress-bar/methods",
     "settings": {
       "dock": false,
-      "isolate": true,
+      "isolate": false,
       "rtl": false
     },
     "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n$start.addEventListener('click', () => {\n  $appProgressBar.start();\n});\n$set.addEventListener('click', () => {\n  $appProgressBar.set(0.4);\n});\n$increase.addEventListener('click', () => {\n  $appProgressBar.increase();\n});\n$trickle.addEventListener('click', () => {\n  $appProgressBar.trickle();\n});\n$done.addEventListener('click', () => {\n  $appProgressBar.done();\n});\n$forceDone.addEventListener('click', () => {\n  $appProgressBar.done(true);\n});\n",
@@ -11004,7 +11004,7 @@
     "key": "react/app-progress-bar/methods",
     "settings": {
       "dock": false,
-      "isolate": true,
+      "isolate": false,
       "rtl": false
     },
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  function onClick1() {\n    appProgressBarRef.current.start();\n  }\n  function onClick2() {\n    appProgressBarRef.current.set(0.4);\n  }\n  function onClick3() {\n    appProgressBarRef.current.increase();\n  }\n  function onClick4() {\n    appProgressBarRef.current.trickle();\n  }\n  function onClick5() {\n    appProgressBarRef.current.done();\n  }\n  function onClick6() {\n    appProgressBarRef.current.done(true);\n  }\n  return (\n    <>\n      <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button onClick={onClick1}>Start</button>\n        <button onClick={onClick2}>Set</button>\n        <button onClick={onClick3}>Increase</button>\n        <button onClick={onClick4}>Trickle</button>\n        <button onClick={onClick5}>Done</button>\n        <button onClick={onClick6}>Force Done</button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n",
@@ -11014,7 +11014,7 @@
     "key": "svelte/app-progress-bar/methods",
     "settings": {
       "dock": false,
-      "isolate": true,
+      "isolate": false,
       "rtl": false
     },
     "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nlet appProgressBarRef;\nfunction onClick1() {\n  appProgressBarRef.start();\n}\nfunction onClick2() {\n  appProgressBarRef.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.done();\n}\nfunction onClick6() {\n  appProgressBarRef.done(true);\n}\n",
@@ -11025,7 +11025,7 @@
     "key": "vue/app-progress-bar/methods",
     "settings": {
       "dock": false,
-      "isolate": true,
+      "isolate": false,
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nconst appProgressBarRef = ref();\nfunction onClick1() {\n  appProgressBarRef.value.start();\n}\nfunction onClick2() {\n  appProgressBarRef.value.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.value.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.value.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.value.done();\n}\nfunction onClick6() {\n  appProgressBarRef.value.done(true);\n}\n",
