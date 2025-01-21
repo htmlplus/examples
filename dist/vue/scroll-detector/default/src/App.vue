@@ -25,6 +25,7 @@
     position: relative;
   }
   .scrollable {
+    padding: 1rem;
     height: 20em;
     overflow-y: auto;
   }

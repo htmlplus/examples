@@ -6,22 +6,22 @@ import '@htmlplus/ui/stack.js';
 function App() {
   const appProgressBarRef = useRef();
   function onClick1() {
-    appProgressBarRef.current.start();
+    appProgressBarRef.current?.start();
   }
   function onClick2() {
-    appProgressBarRef.current.set(0.4);
+    appProgressBarRef.current?.set(0.4);
   }
   function onClick3() {
-    appProgressBarRef.current.increase();
+    appProgressBarRef.current?.increase();
   }
   function onClick4() {
-    appProgressBarRef.current.trickle();
+    appProgressBarRef.current?.trickle();
   }
   function onClick5() {
-    appProgressBarRef.current.done();
+    appProgressBarRef.current?.done();
   }
   function onClick6() {
-    appProgressBarRef.current.done(true);
+    appProgressBarRef.current?.done(true);
   }
   return (
     <>

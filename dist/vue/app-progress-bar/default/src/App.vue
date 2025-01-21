@@ -10,10 +10,10 @@
   const appProgressBarRef = ref();
   onMounted(() => {
     requestAnimationFrame(() => {
-      appProgressBarRef.value.start();
+      appProgressBarRef.value?.start();
     });
     setTimeout(() => {
-      appProgressBarRef.value.done();
+      appProgressBarRef.value?.done();
     }, 1500);
   });
 </script>

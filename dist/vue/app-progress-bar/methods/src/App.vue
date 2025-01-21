@@ -21,22 +21,22 @@
 
   const appProgressBarRef = ref();
   function onClick1() {
-    appProgressBarRef.value.start();
+    appProgressBarRef.value?.start();
   }
   function onClick2() {
-    appProgressBarRef.value.set(0.4);
+    appProgressBarRef.value?.set(0.4);
   }
   function onClick3() {
-    appProgressBarRef.value.increase();
+    appProgressBarRef.value?.increase();
   }
   function onClick4() {
-    appProgressBarRef.value.trickle();
+    appProgressBarRef.value?.trickle();
   }
   function onClick5() {
-    appProgressBarRef.value.done();
+    appProgressBarRef.value?.done();
   }
   function onClick6() {
-    appProgressBarRef.value.done(true);
+    appProgressBarRef.value?.done(true);
   }
 </script>
 

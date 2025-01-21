@@ -3,8 +3,8 @@ import '@htmlplus/ui/app-progress-bar.js';
 import './style.css';
 
 requestAnimationFrame(() => {
-  $appProgressBar.start();
+  $appProgressBar?.start();
 });
 setTimeout(() => {
-  $appProgressBar.done();
+  $appProgressBar?.done();
 }, 1500);

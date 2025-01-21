@@ -4,22 +4,22 @@
 
   let appProgressBarRef;
   function onClick1() {
-    appProgressBarRef.start();
+    appProgressBarRef?.start();
   }
   function onClick2() {
-    appProgressBarRef.set(0.4);
+    appProgressBarRef?.set(0.4);
   }
   function onClick3() {
-    appProgressBarRef.increase();
+    appProgressBarRef?.increase();
   }
   function onClick4() {
-    appProgressBarRef.trickle();
+    appProgressBarRef?.trickle();
   }
   function onClick5() {
-    appProgressBarRef.done();
+    appProgressBarRef?.done();
   }
   function onClick6() {
-    appProgressBarRef.done(true);
+    appProgressBarRef?.done(true);
   }
 </script>
 

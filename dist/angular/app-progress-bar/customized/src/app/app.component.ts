@@ -12,10 +12,10 @@ export class AppComponent {
   appProgressBarRef!: ElementRef;
   ngAfterViewInit() {
     requestAnimationFrame(() => {
-      this.appProgressBarRef.nativeElement.start();
+      this.appProgressBarRef.nativeElement?.start();
     });
     setTimeout(() => {
-      this.appProgressBarRef.nativeElement.done();
+      this.appProgressBarRef.nativeElement?.done();
     }, 5000);
   }
 }

@@ -4,20 +4,20 @@ import '@htmlplus/ui/stack.js';
 import './style.css';
 
 $start.addEventListener('click', () => {
-  $appProgressBar.start();
+  $appProgressBar?.start();
 });
 $set.addEventListener('click', () => {
-  $appProgressBar.set(0.4);
+  $appProgressBar?.set(0.4);
 });
 $increase.addEventListener('click', () => {
-  $appProgressBar.increase();
+  $appProgressBar?.increase();
 });
 $trickle.addEventListener('click', () => {
-  $appProgressBar.trickle();
+  $appProgressBar?.trickle();
 });
 $done.addEventListener('click', () => {
-  $appProgressBar.done();
+  $appProgressBar?.done();
 });
 $forceDone.addEventListener('click', () => {
-  $appProgressBar.done(true);
+  $appProgressBar?.done(true);
 });

@@ -2140,7 +2140,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    console.log(event.detail);\n  }\n}\n",
-    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
+    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    (plus-change)=\"onPlusChange($event)\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
@@ -2151,7 +2151,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
-    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
+    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference1\" vertical></plus-scroll-detector>\n</div>\n"
   },
   {
@@ -2162,7 +2162,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference1\"\n        vertical\n        onPlusChange={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
+    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
   {
     "key": "svelte/scroll-detector/default",
@@ -2172,7 +2172,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
-    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
+    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n  </div>\n  <plus-scroll-detector reference=\".reference1\" vertical on:plus-change={onPlusChange}\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
@@ -2183,7 +2183,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
-    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
+    "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    @plus-change=\"onPlusChange\"\n  ></plus-scroll-detector>\n</div>\n"
   },
   {
@@ -7313,8 +7313,8 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+    "style": "plus-cropper.full-height {\n  height: 100%;\n}\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"full-height\"\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "javascript/cropper/shape",
@@ -7324,8 +7324,8 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+    "style": "plus-cropper.full-height {\n  height: 100%;\n}\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"full-height\"\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "react/cropper/shape",
@@ -7334,8 +7334,8 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          shape=\"rectangle\"\n          aspect-ratio=\"2\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid gutter=\"md\">\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"square\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"circle\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          class=\"full-height\"\n          shape=\"rectangle\"\n          aspect-ratio=\"2\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid gutter=\"md\">\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"square\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"circle\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
+    "style": "plus-cropper.full-height {\n  height: 100%;\n}\n"
   },
   {
     "key": "svelte/cropper/shape",
@@ -7345,8 +7345,8 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+    "style": "plus-cropper.full-height {\n  height: 100%;\n}\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"full-height\"\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "vue/cropper/shape",
@@ -7356,8 +7356,8 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+    "style": "plus-cropper.full-height {\n  height: 100%;\n}\n",
+    "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      class=\"full-height\"\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "angular/cropper/mode",
@@ -9093,7 +9093,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n}\n",
-    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
+    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging] {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable (plus-change)=\"onPlusChange($event)\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
   },
   {
@@ -9104,7 +9104,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/browse.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n});\n",
-    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
+    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging] {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse id=\"$browse\" droppable> Click or Drag & Drop a file(s) here </plus-browse>\n"
   },
   {
@@ -9115,7 +9115,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/browse.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  }\n  return (\n    <plus-browse droppable onPlusChange={onPlusChange}>\n      {' '}\n      Click or Drag & Drop a file(s) here{' '}\n    </plus-browse>\n  );\n}\nexport default App;\n",
-    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n"
+    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging] {\n  border-color: darkgray;\n}\n"
   },
   {
     "key": "svelte/browse/droppable",
@@ -9125,7 +9125,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/browse.js';\n\nfunction onPlusChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
-    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
+    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging] {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable on:plus-change={onPlusChange}>\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
   },
   {
@@ -9136,7 +9136,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/browse.js';\n\nfunction onPlusChange(event) {\n  const name = event.detail.files[0].file.name;\n  alert(`File '${name}' selected.`);\n}\n",
-    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging]:not([dragging='false']) {\n  border-color: darkgray;\n}\n",
+    "style": "plus-browse {\n  background: white;\n  border: 2px dashed lightgray;\n  border-radius: 4px;\n  display: block;\n  padding: 3rem;\n  text-align: center;\n}\nplus-browse[dragging] {\n  border-color: darkgray;\n}\n",
     "template": "<plus-browse droppable @plus-change=\"onPlusChange\">\n  Click or Drag & Drop a file(s) here\n</plus-browse>\n"
   },
   {
@@ -10877,7 +10877,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar3')\n  appProgressBar3Ref!: ElementRef;\n  @ViewChild('appProgressBar2')\n  appProgressBar2Ref!: ElementRef;\n  @ViewChild('appProgressBar1')\n  appProgressBar1Ref!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBar1Ref.nativeElement.start();\n      this.appProgressBar2Ref.nativeElement.start();\n      this.appProgressBar3Ref.nativeElement.start();\n    });\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar3')\n  appProgressBar3Ref!: ElementRef;\n  @ViewChild('appProgressBar2')\n  appProgressBar2Ref!: ElementRef;\n  @ViewChild('appProgressBar1')\n  appProgressBar1Ref!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBar1Ref.nativeElement?.start();\n      this.appProgressBar2Ref.nativeElement?.start();\n      this.appProgressBar3Ref.nativeElement?.start();\n    });\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar\n  [trickle-rate]=\"0.075\"\n  [trickle-speed]=\"250\"\n  #appProgressBar1\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  [trickle-rate]=\"0.05\"\n  [trickle-speed]=\"500\"\n  #appProgressBar2\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  [trickle-rate]=\"0.025\"\n  [trickle-speed]=\"750\"\n  #appProgressBar3\n></plus-app-progress-bar>\n"
   },
@@ -10888,7 +10888,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar1.start();\n  $appProgressBar2.start();\n  $appProgressBar3.start();\n});\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar1?.start();\n  $appProgressBar2?.start();\n  $appProgressBar3?.start();\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar\n  id=\"$appProgressBar1\"\n  trickle-rate=\"0.075\"\n  trickle-speed=\"250\"\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  id=\"$appProgressBar2\"\n  trickle-rate=\"0.05\"\n  trickle-speed=\"500\"\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  id=\"$appProgressBar3\"\n  trickle-rate=\"0.025\"\n  trickle-speed=\"750\"\n></plus-app-progress-bar>\n"
   },
@@ -10899,7 +10899,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBar3Ref = useRef();\n  const appProgressBar2Ref = useRef();\n  const appProgressBar1Ref = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBar1Ref.current.start();\n      appProgressBar2Ref.current.start();\n      appProgressBar3Ref.current.start();\n    });\n  }, []);\n  return (\n    <>\n      <plus-app-progress-bar\n        trickle-rate={0.075}\n        trickle-speed={250}\n        ref={appProgressBar1Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        trickle-rate={0.05}\n        trickle-speed={500}\n        ref={appProgressBar2Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        trickle-rate={0.025}\n        trickle-speed={750}\n        ref={appProgressBar3Ref}\n      ></plus-app-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBar3Ref = useRef();\n  const appProgressBar2Ref = useRef();\n  const appProgressBar1Ref = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBar1Ref.current?.start();\n      appProgressBar2Ref.current?.start();\n      appProgressBar3Ref.current?.start();\n    });\n  }, []);\n  return (\n    <>\n      <plus-app-progress-bar\n        trickle-rate={0.075}\n        trickle-speed={250}\n        ref={appProgressBar1Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        trickle-rate={0.05}\n        trickle-speed={500}\n        ref={appProgressBar2Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        trickle-rate={0.025}\n        trickle-speed={750}\n        ref={appProgressBar3Ref}\n      ></plus-app-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
   },
   {
@@ -10909,7 +10909,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBar3Ref;\nlet appProgressBar2Ref;\nlet appProgressBar1Ref;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.start();\n    appProgressBar2Ref.start();\n    appProgressBar3Ref.start();\n  });\n});\n",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBar3Ref;\nlet appProgressBar2Ref;\nlet appProgressBar1Ref;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref?.start();\n    appProgressBar2Ref?.start();\n    appProgressBar3Ref?.start();\n  });\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar trickle-rate={0.075} trickle-speed={250} bind:this={appProgressBar1Ref}\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar trickle-rate={0.05} trickle-speed={500} bind:this={appProgressBar2Ref}\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar trickle-rate={0.025} trickle-speed={750} bind:this={appProgressBar3Ref}\n></plus-app-progress-bar>\n"
   },
@@ -10920,7 +10920,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBar3Ref = ref();\nconst appProgressBar2Ref = ref();\nconst appProgressBar1Ref = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.value.start();\n    appProgressBar2Ref.value.start();\n    appProgressBar3Ref.value.start();\n  });\n});\n",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBar3Ref = ref();\nconst appProgressBar2Ref = ref();\nconst appProgressBar1Ref = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.value?.start();\n    appProgressBar2Ref.value?.start();\n    appProgressBar3Ref.value?.start();\n  });\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<div>\n  <plus-app-progress-bar\n    :trickle-rate=\"0.075\"\n    :trickle-speed=\"250\"\n    ref=\"appProgressBar1Ref\"\n  ></plus-app-progress-bar>\n  <br />\n  <plus-app-progress-bar\n    :trickle-rate=\"0.05\"\n    :trickle-speed=\"500\"\n    ref=\"appProgressBar2Ref\"\n  ></plus-app-progress-bar>\n  <br />\n  <plus-app-progress-bar\n    :trickle-rate=\"0.025\"\n    :trickle-speed=\"750\"\n    ref=\"appProgressBar3Ref\"\n  ></plus-app-progress-bar>\n</div>\n"
   },
@@ -10931,7 +10931,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar3')\n  appProgressBar3Ref!: ElementRef;\n  @ViewChild('appProgressBar2')\n  appProgressBar2Ref!: ElementRef;\n  @ViewChild('appProgressBar1')\n  appProgressBar1Ref!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBar1Ref.nativeElement.start();\n      this.appProgressBar2Ref.nativeElement.start();\n      this.appProgressBar3Ref.nativeElement.start();\n    });\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar3')\n  appProgressBar3Ref!: ElementRef;\n  @ViewChild('appProgressBar2')\n  appProgressBar2Ref!: ElementRef;\n  @ViewChild('appProgressBar1')\n  appProgressBar1Ref!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBar1Ref.nativeElement?.start();\n      this.appProgressBar2Ref.nativeElement?.start();\n      this.appProgressBar3Ref.nativeElement?.start();\n    });\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar [minimum]=\"0.25\" trickle-disabled #appProgressBar1></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar [minimum]=\"0.50\" trickle-disabled #appProgressBar2></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar [minimum]=\"0.75\" trickle-disabled #appProgressBar3></plus-app-progress-bar>\n"
   },
@@ -10942,7 +10942,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar1.start();\n  $appProgressBar2.start();\n  $appProgressBar3.start();\n});\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar1?.start();\n  $appProgressBar2?.start();\n  $appProgressBar3?.start();\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar\n  id=\"$appProgressBar1\"\n  minimum=\"0.25\"\n  trickle-disabled\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  id=\"$appProgressBar2\"\n  minimum=\"0.50\"\n  trickle-disabled\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar\n  id=\"$appProgressBar3\"\n  minimum=\"0.75\"\n  trickle-disabled\n></plus-app-progress-bar>\n"
   },
@@ -10953,7 +10953,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBar3Ref = useRef();\n  const appProgressBar2Ref = useRef();\n  const appProgressBar1Ref = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBar1Ref.current.start();\n      appProgressBar2Ref.current.start();\n      appProgressBar3Ref.current.start();\n    });\n  }, []);\n  return (\n    <>\n      <plus-app-progress-bar\n        minimum={0.25}\n        trickle-disabled\n        ref={appProgressBar1Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        minimum={0.5}\n        trickle-disabled\n        ref={appProgressBar2Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        minimum={0.75}\n        trickle-disabled\n        ref={appProgressBar3Ref}\n      ></plus-app-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBar3Ref = useRef();\n  const appProgressBar2Ref = useRef();\n  const appProgressBar1Ref = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBar1Ref.current?.start();\n      appProgressBar2Ref.current?.start();\n      appProgressBar3Ref.current?.start();\n    });\n  }, []);\n  return (\n    <>\n      <plus-app-progress-bar\n        minimum={0.25}\n        trickle-disabled\n        ref={appProgressBar1Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        minimum={0.5}\n        trickle-disabled\n        ref={appProgressBar2Ref}\n      ></plus-app-progress-bar>\n      <br />\n      <plus-app-progress-bar\n        minimum={0.75}\n        trickle-disabled\n        ref={appProgressBar3Ref}\n      ></plus-app-progress-bar>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
   },
   {
@@ -10963,7 +10963,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBar3Ref;\nlet appProgressBar2Ref;\nlet appProgressBar1Ref;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.start();\n    appProgressBar2Ref.start();\n    appProgressBar3Ref.start();\n  });\n});\n",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBar3Ref;\nlet appProgressBar2Ref;\nlet appProgressBar1Ref;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref?.start();\n    appProgressBar2Ref?.start();\n    appProgressBar3Ref?.start();\n  });\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar minimum={0.25} trickle-disabled bind:this={appProgressBar1Ref}\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar minimum={0.5} trickle-disabled bind:this={appProgressBar2Ref}\n></plus-app-progress-bar>\n<br />\n<plus-app-progress-bar minimum={0.75} trickle-disabled bind:this={appProgressBar3Ref}\n></plus-app-progress-bar>\n"
   },
@@ -10974,7 +10974,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBar3Ref = ref();\nconst appProgressBar2Ref = ref();\nconst appProgressBar1Ref = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.value.start();\n    appProgressBar2Ref.value.start();\n    appProgressBar3Ref.value.start();\n  });\n});\n",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBar3Ref = ref();\nconst appProgressBar2Ref = ref();\nconst appProgressBar1Ref = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBar1Ref.value?.start();\n    appProgressBar2Ref.value?.start();\n    appProgressBar3Ref.value?.start();\n  });\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<div>\n  <plus-app-progress-bar\n    :minimum=\"0.25\"\n    trickle-disabled\n    ref=\"appProgressBar1Ref\"\n  ></plus-app-progress-bar>\n  <br />\n  <plus-app-progress-bar\n    :minimum=\"0.50\"\n    trickle-disabled\n    ref=\"appProgressBar2Ref\"\n  ></plus-app-progress-bar>\n  <br />\n  <plus-app-progress-bar\n    :minimum=\"0.75\"\n    trickle-disabled\n    ref=\"appProgressBar3Ref\"\n  ></plus-app-progress-bar>\n</div>\n"
   },
@@ -10985,7 +10985,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  onClick1() {\n    this.appProgressBarRef.nativeElement.start();\n  }\n  onClick2() {\n    this.appProgressBarRef.nativeElement.set(0.4);\n  }\n  onClick3() {\n    this.appProgressBarRef.nativeElement.increase();\n  }\n  onClick4() {\n    this.appProgressBarRef.nativeElement.trickle();\n  }\n  onClick5() {\n    this.appProgressBarRef.nativeElement.done();\n  }\n  onClick6() {\n    this.appProgressBarRef.nativeElement.done(true);\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  onClick1() {\n    this.appProgressBarRef.nativeElement?.start();\n  }\n  onClick2() {\n    this.appProgressBarRef.nativeElement?.set(0.4);\n  }\n  onClick3() {\n    this.appProgressBarRef.nativeElement?.increase();\n  }\n  onClick4() {\n    this.appProgressBarRef.nativeElement?.trickle();\n  }\n  onClick5() {\n    this.appProgressBarRef.nativeElement?.done();\n  }\n  onClick6() {\n    this.appProgressBarRef.nativeElement?.done(true);\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button (click)=\"onClick1()\">Start</button>\n  <button (click)=\"onClick2()\">Set</button>\n  <button (click)=\"onClick3()\">Increase</button>\n  <button (click)=\"onClick4()\">Trickle</button>\n  <button (click)=\"onClick5()\">Done</button>\n  <button (click)=\"onClick6()\">Force Done</button>\n</plus-stack>\n"
   },
@@ -10996,7 +10996,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n$start.addEventListener('click', () => {\n  $appProgressBar.start();\n});\n$set.addEventListener('click', () => {\n  $appProgressBar.set(0.4);\n});\n$increase.addEventListener('click', () => {\n  $appProgressBar.increase();\n});\n$trickle.addEventListener('click', () => {\n  $appProgressBar.trickle();\n});\n$done.addEventListener('click', () => {\n  $appProgressBar.done();\n});\n$forceDone.addEventListener('click', () => {\n  $appProgressBar.done(true);\n});\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n$start.addEventListener('click', () => {\n  $appProgressBar?.start();\n});\n$set.addEventListener('click', () => {\n  $appProgressBar?.set(0.4);\n});\n$increase.addEventListener('click', () => {\n  $appProgressBar?.increase();\n});\n$trickle.addEventListener('click', () => {\n  $appProgressBar?.trickle();\n});\n$done.addEventListener('click', () => {\n  $appProgressBar?.done();\n});\n$forceDone.addEventListener('click', () => {\n  $appProgressBar?.done(true);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button id=\"$start\">Start</button>\n  <button id=\"$set\">Set</button>\n  <button id=\"$increase\">Increase</button>\n  <button id=\"$trickle\">Trickle</button>\n  <button id=\"$done\">Done</button>\n  <button id=\"$forceDone\">Force Done</button>\n</plus-stack>\n"
   },
@@ -11007,7 +11007,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  function onClick1() {\n    appProgressBarRef.current.start();\n  }\n  function onClick2() {\n    appProgressBarRef.current.set(0.4);\n  }\n  function onClick3() {\n    appProgressBarRef.current.increase();\n  }\n  function onClick4() {\n    appProgressBarRef.current.trickle();\n  }\n  function onClick5() {\n    appProgressBarRef.current.done();\n  }\n  function onClick6() {\n    appProgressBarRef.current.done(true);\n  }\n  return (\n    <>\n      <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button onClick={onClick1}>Start</button>\n        <button onClick={onClick2}>Set</button>\n        <button onClick={onClick3}>Increase</button>\n        <button onClick={onClick4}>Trickle</button>\n        <button onClick={onClick5}>Done</button>\n        <button onClick={onClick6}>Force Done</button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  function onClick1() {\n    appProgressBarRef.current?.start();\n  }\n  function onClick2() {\n    appProgressBarRef.current?.set(0.4);\n  }\n  function onClick3() {\n    appProgressBarRef.current?.increase();\n  }\n  function onClick4() {\n    appProgressBarRef.current?.trickle();\n  }\n  function onClick5() {\n    appProgressBarRef.current?.done();\n  }\n  function onClick6() {\n    appProgressBarRef.current?.done(true);\n  }\n  return (\n    <>\n      <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button onClick={onClick1}>Start</button>\n        <button onClick={onClick2}>Set</button>\n        <button onClick={onClick3}>Increase</button>\n        <button onClick={onClick4}>Trickle</button>\n        <button onClick={onClick5}>Done</button>\n        <button onClick={onClick6}>Force Done</button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
   },
   {
@@ -11017,7 +11017,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nlet appProgressBarRef;\nfunction onClick1() {\n  appProgressBarRef.start();\n}\nfunction onClick2() {\n  appProgressBarRef.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.done();\n}\nfunction onClick6() {\n  appProgressBarRef.done(true);\n}\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nlet appProgressBarRef;\nfunction onClick1() {\n  appProgressBarRef?.start();\n}\nfunction onClick2() {\n  appProgressBarRef?.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef?.increase();\n}\nfunction onClick4() {\n  appProgressBarRef?.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef?.done();\n}\nfunction onClick6() {\n  appProgressBarRef?.done(true);\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button on:click={onClick1}>Start</button>\n  <button on:click={onClick2}>Set</button>\n  <button on:click={onClick3}>Increase</button>\n  <button on:click={onClick4}>Trickle</button>\n  <button on:click={onClick5}>Done</button>\n  <button on:click={onClick6}>Force Done</button>\n</plus-stack>\n"
   },
@@ -11028,7 +11028,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nconst appProgressBarRef = ref();\nfunction onClick1() {\n  appProgressBarRef.value.start();\n}\nfunction onClick2() {\n  appProgressBarRef.value.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.value.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.value.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.value.done();\n}\nfunction onClick6() {\n  appProgressBarRef.value.done(true);\n}\n",
+    "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nconst appProgressBarRef = ref();\nfunction onClick1() {\n  appProgressBarRef.value?.start();\n}\nfunction onClick2() {\n  appProgressBarRef.value?.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.value?.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.value?.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.value?.done();\n}\nfunction onClick6() {\n  appProgressBarRef.value?.done(true);\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<div>\n  <plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n  <br />\n  <plus-stack gap=\"0.5rem\">\n    <button @click=\"onClick1\">Start</button>\n    <button @click=\"onClick2\">Set</button>\n    <button @click=\"onClick3\">Increase</button>\n    <button @click=\"onClick4\">Trickle</button>\n    <button @click=\"onClick5\">Done</button>\n    <button @click=\"onClick6\">Force Done</button>\n  </plus-stack>\n</div>\n"
   },
@@ -11039,7 +11039,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement.done();\n    }, 1500);\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement?.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement?.done();\n    }, 1500);\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n"
   },
@@ -11050,7 +11050,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar.start();\n});\nsetTimeout(() => {\n  $appProgressBar.done();\n}, 1500);\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar?.start();\n});\nsetTimeout(() => {\n  $appProgressBar?.done();\n}, 1500);\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n"
   },
@@ -11061,7 +11061,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current.done();\n    }, 1500);\n  }, []);\n  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current?.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current?.done();\n    }, 1500);\n  }, []);\n  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
   },
   {
@@ -11071,7 +11071,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.done();\n  }, 1500);\n});\n",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef?.done();\n  }, 1500);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n"
   },
@@ -11082,7 +11082,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value.done();\n  }, 1500);\n});\n",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value?.done();\n  }, 1500);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
     "template": "<plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n"
   },
@@ -11093,7 +11093,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement.done();\n    }, 5000);\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement?.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement?.done();\n    }, 5000);\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n"
   },
@@ -11104,7 +11104,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar.start();\n});\nsetTimeout(() => {\n  $appProgressBar.done();\n}, 5000);\n",
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar?.start();\n});\nsetTimeout(() => {\n  $appProgressBar?.done();\n}, 5000);\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n"
   },
@@ -11115,7 +11115,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current.done();\n    }, 5000);\n  }, []);\n  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current?.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current?.done();\n    }, 5000);\n  }, []);\n  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n"
   },
   {
@@ -11125,7 +11125,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.done();\n  }, 5000);\n});\n",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef?.done();\n  }, 5000);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n"
   },
@@ -11136,7 +11136,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value.done();\n  }, 5000);\n});\n",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value?.done();\n  }, 5000);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n"
   },

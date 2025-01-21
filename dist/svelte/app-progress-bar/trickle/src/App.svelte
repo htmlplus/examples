@@ -8,9 +8,9 @@
   let appProgressBar1Ref;
   onMount(() => {
     requestAnimationFrame(() => {
-      appProgressBar1Ref.start();
-      appProgressBar2Ref.start();
-      appProgressBar3Ref.start();
+      appProgressBar1Ref?.start();
+      appProgressBar2Ref?.start();
+      appProgressBar3Ref?.start();
     });
   });
 </script>

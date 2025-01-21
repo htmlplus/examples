@@ -22,7 +22,7 @@
     padding: 3rem;
     text-align: center;
   }
-  plus-browse[dragging]:not([dragging='false']) {
+  plus-browse[dragging] {
     border-color: darkgray;
   }
 </style>

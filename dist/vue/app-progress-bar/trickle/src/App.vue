@@ -30,9 +30,9 @@
   const appProgressBar1Ref = ref();
   onMounted(() => {
     requestAnimationFrame(() => {
-      appProgressBar1Ref.value.start();
-      appProgressBar2Ref.value.start();
-      appProgressBar3Ref.value.start();
+      appProgressBar1Ref.value?.start();
+      appProgressBar2Ref.value?.start();
+      appProgressBar3Ref.value?.start();
     });
   });
 </script>

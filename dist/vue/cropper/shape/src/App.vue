@@ -2,6 +2,7 @@
   <plus-grid gutter="md">
     <plus-grid-item xs="12" sm="6">
       <plus-cropper
+        class="full-height"
         shape="rectangle"
         aspect-ratio="2"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
@@ -33,7 +34,7 @@
 </script>
 
 <style scoped>
-  plus-cropper[shape='rectangle'] {
+  plus-cropper.full-height {
     height: 100%;
   }
 </style>

@@ -6,10 +6,10 @@
   let appProgressBarRef;
   onMount(() => {
     requestAnimationFrame(() => {
-      appProgressBarRef.start();
+      appProgressBarRef?.start();
     });
     setTimeout(() => {
-      appProgressBarRef.done();
+      appProgressBarRef?.done();
     }, 1500);
   });
 </script>

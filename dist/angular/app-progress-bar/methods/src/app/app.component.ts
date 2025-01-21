@@ -12,21 +12,21 @@ export class AppComponent {
   @ViewChild('appProgressBar')
   appProgressBarRef!: ElementRef;
   onClick1() {
-    this.appProgressBarRef.nativeElement.start();
+    this.appProgressBarRef.nativeElement?.start();
   }
   onClick2() {
-    this.appProgressBarRef.nativeElement.set(0.4);
+    this.appProgressBarRef.nativeElement?.set(0.4);
   }
   onClick3() {
-    this.appProgressBarRef.nativeElement.increase();
+    this.appProgressBarRef.nativeElement?.increase();
   }
   onClick4() {
-    this.appProgressBarRef.nativeElement.trickle();
+    this.appProgressBarRef.nativeElement?.trickle();
   }
   onClick5() {
-    this.appProgressBarRef.nativeElement.done();
+    this.appProgressBarRef.nativeElement?.done();
   }
   onClick6() {
-    this.appProgressBarRef.nativeElement.done(true);
+    this.appProgressBarRef.nativeElement?.done(true);
   }
 }

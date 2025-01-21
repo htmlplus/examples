@@ -16,9 +16,9 @@ export class AppComponent {
   appProgressBar1Ref!: ElementRef;
   ngAfterViewInit() {
     requestAnimationFrame(() => {
-      this.appProgressBar1Ref.nativeElement.start();
-      this.appProgressBar2Ref.nativeElement.start();
-      this.appProgressBar3Ref.nativeElement.start();
+      this.appProgressBar1Ref.nativeElement?.start();
+      this.appProgressBar2Ref.nativeElement?.start();
+      this.appProgressBar3Ref.nativeElement?.start();
     });
   }
 }

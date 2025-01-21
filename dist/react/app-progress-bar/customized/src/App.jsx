@@ -6,10 +6,10 @@ function App() {
   const appProgressBarRef = useRef();
   useEffect(() => {
     requestAnimationFrame(() => {
-      appProgressBarRef.current.start();
+      appProgressBarRef.current?.start();
     });
     setTimeout(() => {
-      appProgressBarRef.current.done();
+      appProgressBarRef.current?.done();
     }, 5000);
   }, []);
   return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;
