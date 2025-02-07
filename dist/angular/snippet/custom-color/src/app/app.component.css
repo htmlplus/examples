@@ -1,0 +1,9 @@
+plus-snippet[color='primary'] {
+  --plus-snippet-color: #ff5449;
+}
+plus-snippet[color='secondary'] {
+  --plus-snippet-color: #08dfc8;
+}
+plus-snippet[color='tertiary'] {
+  --plus-snippet-color: #5f9ee9;
+}

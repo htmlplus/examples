@@ -1427,6 +1427,207 @@
     "template": "<plus-stack gap=\"2rem\">\n  <plus-spinner class=\"spinner-1\"></plus-spinner>\n  <plus-spinner class=\"spinner-2\"></plus-spinner>\n  <plus-spinner class=\"spinner-3\"></plus-spinner>\n  <plus-spinner class=\"spinner-4\"></plus-spinner>\n  <plus-spinner class=\"spinner-5\"></plus-spinner>\n</plus-stack>\n"
   },
   {
+    "key": "angular/snippet/symbol",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/snippet.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-snippet symbol=\"#\">npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "javascript/snippet/symbol",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet symbol=\"#\">npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "react/snippet/symbol",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n\nfunction App() {\n  return <plus-snippet symbol=\"#\">npm i @htmlplus/ui</plus-snippet>;\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/snippet/symbol",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet symbol=\"#\">npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "vue/snippet/symbol",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet symbol=\"#\">npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "angular/snippet/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/snippet.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-snippet>npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "javascript/snippet/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet>npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "react/snippet/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n\nfunction App() {\n  return <plus-snippet>npm i @htmlplus/ui</plus-snippet>;\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/snippet/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet>npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "vue/snippet/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\n",
+    "template": "<plus-snippet>npm i @htmlplus/ui</plus-snippet>\n"
+  },
+  {
+    "key": "angular/snippet/custom-color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-snippet[color='primary'] {\n  --plus-snippet-color: #ff5449;\n}\nplus-snippet[color='secondary'] {\n  --plus-snippet-color: #08dfc8;\n}\nplus-snippet[color='tertiary'] {\n  --plus-snippet-color: #5f9ee9;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"primary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"secondary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"tertiary\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/snippet/custom-color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-snippet[color='primary'] {\n  --plus-snippet-color: #ff5449;\n}\nplus-snippet[color='secondary'] {\n  --plus-snippet-color: #08dfc8;\n}\nplus-snippet[color='tertiary'] {\n  --plus-snippet-color: #5f9ee9;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"primary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"secondary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"tertiary\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/snippet/custom-color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-snippet symbol=\"$\" color=\"primary\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"secondary\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"tertiary\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "style": "plus-snippet[color='primary'] {\n  --plus-snippet-color: #ff5449;\n}\nplus-snippet[color='secondary'] {\n  --plus-snippet-color: #08dfc8;\n}\nplus-snippet[color='tertiary'] {\n  --plus-snippet-color: #5f9ee9;\n}\n"
+  },
+  {
+    "key": "svelte/snippet/custom-color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-snippet[color='primary'] {\n  --plus-snippet-color: #ff5449;\n}\nplus-snippet[color='secondary'] {\n  --plus-snippet-color: #08dfc8;\n}\nplus-snippet[color='tertiary'] {\n  --plus-snippet-color: #5f9ee9;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"primary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"secondary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"tertiary\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/snippet/custom-color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-snippet[color='primary'] {\n  --plus-snippet-color: #ff5449;\n}\nplus-snippet[color='secondary'] {\n  --plus-snippet-color: #08dfc8;\n}\nplus-snippet[color='tertiary'] {\n  --plus-snippet-color: #5f9ee9;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"primary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"secondary\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"tertiary\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/snippet/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"#808080\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#2fb344\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#d63939\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#f59f00\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#206bc4\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/snippet/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"#808080\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#2fb344\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#d63939\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#f59f00\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#206bc4\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/snippet/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-snippet symbol=\"$\" color=\"#808080\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"#2fb344\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"#d63939\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"#f59f00\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n      <plus-snippet symbol=\"$\" color=\"#206bc4\">\n        npm i @htmlplus/ui\n      </plus-snippet>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/snippet/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"#808080\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#2fb344\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#d63939\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#f59f00\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#206bc4\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/snippet/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/snippet.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-snippet symbol=\"$\" color=\"#808080\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#2fb344\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#d63939\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#f59f00\">npm i @htmlplus/ui</plus-snippet>\n  <plus-snippet symbol=\"$\" color=\"#206bc4\">npm i @htmlplus/ui</plus-snippet>\n</plus-stack>\n"
+  },
+  {
     "key": "angular/signature/width",
     "settings": {
       "dock": false,
@@ -3182,6 +3383,418 @@
     "template": "<plus-progress-bar aria-label=\"With Label\" :value=\"100\"></plus-progress-bar>\n"
   },
   {
+    "key": "angular/prism/theme",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/prism/theme",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/prism/theme",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n      <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n      <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n      <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n      <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n      <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n      <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n      <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/theme",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/prism/theme",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/prism/sync",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('prism2')\n  prism2Ref!: ElementRef;\n  @ViewChild('prism1')\n  prism1Ref!: ElementRef;\n  onClick() {\n    this.prism1Ref.nativeElement.innerHTML = `const now = ${Date.now()};`;\n    this.prism2Ref.nativeElement.innerHTML = `const now = ${Date.now()};`;\n  }\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism #prism1>const now = 0;</plus-prism>\n  <plus-prism sync #prism2>const now = 0;</plus-prism>\n  <plus-center>\n    <button (click)=\"onClick()\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/prism/sync",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n$change.addEventListener('click', () => {\n  $prism1.innerHTML = `const now = ${Date.now()};`;\n  $prism2.innerHTML = `const now = ${Date.now()};`;\n});\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism id=\"$prism1\">const now = 0;</plus-prism>\n  <plus-prism id=\"$prism2\" sync>const now = 0;</plus-prism>\n  <plus-center>\n    <button id=\"$change\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/prism/sync",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const prism2Ref = useRef();\n  const prism1Ref = useRef();\n  function onClick() {\n    prism1Ref.current.innerHTML = `const now = ${Date.now()};`;\n    prism2Ref.current.innerHTML = `const now = ${Date.now()};`;\n  }\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism ref={prism1Ref}>const now = 0;</plus-prism>\n      <plus-prism sync ref={prism2Ref}>\n        const now = 0;\n      </plus-prism>\n      <plus-center>\n        <button onClick={onClick}>Change</button>\n      </plus-center>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/sync",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nlet prism2Ref;\nlet prism1Ref;\nfunction onClick() {\n  prism1Ref.innerHTML = `const now = ${Date.now()};`;\n  prism2Ref.innerHTML = `const now = ${Date.now()};`;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism bind:this={prism1Ref}>const now = 0;</plus-prism>\n  <plus-prism sync bind:this={prism2Ref}>const now = 0;</plus-prism>\n  <plus-center>\n    <button on:click={onClick}>Change</button>\n  </plus-center>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/prism/sync",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nconst prism2Ref = ref();\nconst prism1Ref = ref();\nfunction onClick() {\n  prism1Ref.value.innerHTML = `const now = ${Date.now()};`;\n  prism2Ref.value.innerHTML = `const now = ${Date.now()};`;\n}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism ref=\"prism1Ref\">const now = 0;</plus-prism>\n  <plus-prism sync ref=\"prism2Ref\">const now = 0;</plus-prism>\n  <plus-center>\n    <button @click=\"onClick\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/prism/resolver",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" [plugins]='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
+  },
+  {
+    "key": "javascript/prism/resolver",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
+  },
+  {
+    "key": "react/prism/resolver",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism\n      language=\"python\"\n      theme=\"solarizedlight\"\n      plugins={{\n        'line-numbers': true\n      }}\n    >\n      print(\"Hello, World!\")\n    </plus-prism>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/resolver",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism\n  language=\"python\"\n  theme=\"solarizedlight\"\n  plugins={{\n    'line-numbers': true\n  }}>print(\"Hello, World!\")</plus-prism\n>\n"
+  },
+  {
+    "key": "vue/prism/resolver",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" :plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
+  },
+  {
+    "key": "angular/prism/plugins",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism [plugins]='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism [plugins]='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/prism/plugins",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/prism/plugins",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism\n        plugins={{\n          'line-numbers': true\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n      <plus-prism\n        plugins={{\n          'line-numbers': {\n            start: 5\n          }\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/plugins",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism\n    plugins={{\n      'line-numbers': true\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n  <plus-prism\n    plugins={{\n      'line-numbers': {\n        start: 5\n      }\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/prism/plugins",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism :plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism :plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/prism/multiline",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('prism')\n  prismRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.prismRef.nativeElement.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n    });\n  }\n}\n",
+    "template": "<plus-prism sync #prism></plus-prism>\n"
+  },
+  {
+    "key": "javascript/prism/multiline",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n\nrequestAnimationFrame(() => {\n  $prism.innerHTML =\n    'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n});\n",
+    "template": "<plus-prism id=\"$prism\" sync></plus-prism>\n"
+  },
+  {
+    "key": "react/prism/multiline",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/prism.js';\n\nfunction App() {\n  const prismRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      prismRef.current.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n    });\n  }, []);\n  return <plus-prism sync ref={prismRef}></plus-prism>;\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/multiline",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/prism.js';\n\nlet prismRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    prismRef.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n  });\n});\n",
+    "template": "<plus-prism sync bind:this={prismRef}></plus-prism>\n"
+  },
+  {
+    "key": "vue/prism/multiline",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/prism.js';\n\nconst prismRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    prismRef.value.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n  });\n});\n",
+    "template": "<plus-prism sync ref=\"prismRef\"></plus-prism>\n"
+  },
+  {
+    "key": "angular/prism/language",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/prism/language",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/prism/language",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n      <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n      <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/language",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/prism/language",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
+  },
+  {
+    "key": "angular/prism/default",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';</plus-prism>\n"
+  },
+  {
+    "key": "javascript/prism/default",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';</plus-prism>\n"
+  },
+  {
+    "key": "react/prism/default",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return <plus-prism>const name = '@htmlplus/ui';</plus-prism>;\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/default",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';</plus-prism>\n"
+  },
+  {
+    "key": "vue/prism/default",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';</plus-prism>\n"
+  },
+  {
+    "key": "angular/prism/copy-slot",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+  },
+  {
+    "key": "javascript/prism/copy-slot",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+  },
+  {
+    "key": "react/prism/copy-slot",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism>\n      const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button>\n    </plus-prism>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/prism/copy-slot",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+  },
+  {
+    "key": "vue/prism/copy-slot",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/prism.js';\n",
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+  },
+  {
     "key": "angular/intersection/lazy-image",
     "settings": {
       "dock": true,
@@ -3497,7 +4110,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -3508,7 +4121,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -3519,7 +4132,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"heart\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3529,7 +4142,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -3540,7 +4153,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -3654,7 +4267,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3665,7 +4278,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3676,7 +4289,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"carbon/user\"></plus-icon>\n      <plus-icon name=\"lucide/user\"></plus-icon>\n      <plus-icon name=\"tabler/user\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3686,7 +4299,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3697,7 +4310,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3708,7 +4321,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3719,7 +4332,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3730,7 +4343,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3740,7 +4353,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3751,7 +4364,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3811,7 +4424,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3822,7 +4435,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3833,7 +4446,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"far-user\"></plus-icon>\n      <plus-icon name=\"fas-user\"></plus-icon>\n      <plus-icon name=\"fab-apple\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3843,7 +4456,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -3854,7 +4467,7 @@
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
