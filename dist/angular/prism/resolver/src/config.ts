@@ -7,11 +7,11 @@ setConfig({
         async resolver({ key, value }) {
           switch (key) {
             case 'language': {
-              await import(`https://esm.run/prismjs/components/prism-${value}`);
+              await import(`https://esm.run/prismjs/components/prism-${value}.js`);
               break;
             }
             case 'plugin': {
-              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}`);
+              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);
               try {
                 const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
                 const styles = await fetch(url).then((response) => response.text());

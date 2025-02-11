@@ -6,7 +6,7 @@ setConfig({
       property: {
         async resolver({ key, value }) {
           if (key == 'language') {
-            await import(`https://esm.run/prismjs/components/prism-${value}`);
+            await import(`https://esm.run/prismjs/components/prism-${value}.js`);
           }
         }
       }
