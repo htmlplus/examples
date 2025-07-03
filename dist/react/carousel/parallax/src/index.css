@@ -1,0 +1,13 @@
+plus-carousel-slide {
+  flex-basis: 80% !important;
+  overflow: hidden;
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  flex: 0 0 calc(115% + (1rem * 2));
+  object-fit: cover;
+  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));
+}

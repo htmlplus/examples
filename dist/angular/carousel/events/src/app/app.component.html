@@ -1,0 +1,29 @@
+<plus-carousel
+  variant="presentation"
+  draggable="free"
+  focusable
+  resizable
+  (plus-destroy)="console.log('destroy')"
+  (plus-init)="console.log('init')"
+  (plus-pointer-down)="console.log('pointer-down')"
+  (plus-pointer-up)="console.log('pointer-up')"
+  (plus-re-init)="console.log('re-init')"
+  (plus-resize)="console.log('resize')"
+  (plus-scroll)="console.log('scroll')"
+  (plus-select)="console.log('select')"
+  (plus-settle)="console.log('settle')"
+  (plus-slide-focus)="console.log('slide-focus')"
+  (plus-slide-focus-start)="console.log('slide-focus-start')"
+  (plus-slides-changed)="console.log('slides-changed')"
+  (plus-slides-in-view)="console.log('slides-in-view')"
+>
+  <plus-carousel-slides>
+    <plus-carousel-slide>1</plus-carousel-slide>
+    <plus-carousel-slide>2</plus-carousel-slide>
+    <plus-carousel-slide>3</plus-carousel-slide>
+    <plus-carousel-slide>4</plus-carousel-slide>
+    <plus-carousel-slide>5</plus-carousel-slide>
+  </plus-carousel-slides>
+  <plus-carousel-button type="previous"></plus-carousel-button>
+  <plus-carousel-button type="next"></plus-carousel-button>
+</plus-carousel>

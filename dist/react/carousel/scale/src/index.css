@@ -1,0 +1,14 @@
+plus-carousel-slide {
+  flex-basis: 55% !important;
+  background-color: transparent !important;
+}
+plus-carousel-slide div {
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transform: scale(var(--plus-carousel-factor-2));
+}

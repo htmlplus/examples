@@ -1,0 +1,4 @@
+plus-carousel-slide {
+  flex-basis: 70% !important;
+  opacity: var(--plus-carousel-factor-2);
+}

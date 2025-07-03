@@ -381,7 +381,9 @@ export const react: IPlugin<IReactOptions> = (options) => {
               parameters.pattern.node.value = value;
             },
             id(parameters) {
-              parameters.pattern.remove();
+              if (parameters.value?.value.startsWith('$')) {
+                parameters.pattern.remove();
+              }
             },
             style(parameters) {
               if (!parameters.value) return;
@@ -399,9 +401,9 @@ export const react: IPlugin<IReactOptions> = (options) => {
               );
             }
           },
-          default() {}
+          default() { }
         },
-        fragment() {}
+        fragment() { }
       }
     });
 

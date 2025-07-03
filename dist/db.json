@@ -9120,6 +9120,1394 @@
     "template": "<plus-center>All elements are centered</plus-center>\n"
   },
   {
+    "key": "angular/carousel/y-axis",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/y-axis",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/y-axis",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" axis=\"y\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/y-axis",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/y-axis",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/variable-widths",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/variable-widths",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/variable-widths",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '60%'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '40%'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '30%'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '90%'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '55%'\n          }}\n        >\n          6\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '85%'\n          }}\n        >\n          7\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '50%'\n          }}\n        >\n          8\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          9\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/variable-widths",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%;\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%;\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%;\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%;\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%;\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%;\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%;\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/variable-widths",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/thumbnails",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/thumbnails",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/thumbnails",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel variant=\"presentation\" id=\"my-carousel\">\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n          <plus-carousel-slide>6</plus-carousel-slide>\n          <plus-carousel-slide>7</plus-carousel-slide>\n          <plus-carousel-slide>8</plus-carousel-slide>\n          <plus-carousel-slide>9</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel\n        variant=\"presentation\"\n        class=\"mirror\"\n        draggable=\"free\"\n        mirror=\"my-carousel\"\n        mirror-type=\"click-smooth\"\n      >\n        <plus-carousel-slides>\n          <plus-carousel-slide clickable>1</plus-carousel-slide>\n          <plus-carousel-slide clickable>2</plus-carousel-slide>\n          <plus-carousel-slide clickable>3</plus-carousel-slide>\n          <plus-carousel-slide clickable>4</plus-carousel-slide>\n          <plus-carousel-slide clickable>5</plus-carousel-slide>\n          <plus-carousel-slide clickable>6</plus-carousel-slide>\n          <plus-carousel-slide clickable>7</plus-carousel-slide>\n          <plus-carousel-slide clickable>8</plus-carousel-slide>\n          <plus-carousel-slide clickable>9</plus-carousel-slide>\n        </plus-carousel-slides>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/thumbnails",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/thumbnails",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
+    "template": "<div>\n  <plus-carousel variant=\"presentation\" id=\"my-carousel\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n      <plus-carousel-slide>6</plus-carousel-slide>\n      <plus-carousel-slide>7</plus-carousel-slide>\n      <plus-carousel-slide>8</plus-carousel-slide>\n      <plus-carousel-slide>9</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel\n    variant=\"presentation\"\n    class=\"mirror\"\n    draggable=\"free\"\n    mirror=\"my-carousel\"\n    mirror-type=\"click-smooth\"\n  >\n    <plus-carousel-slides>\n      <plus-carousel-slide clickable>1</plus-carousel-slide>\n      <plus-carousel-slide clickable>2</plus-carousel-slide>\n      <plus-carousel-slide clickable>3</plus-carousel-slide>\n      <plus-carousel-slide clickable>4</plus-carousel-slide>\n      <plus-carousel-slide clickable>5</plus-carousel-slide>\n      <plus-carousel-slide clickable>6</plus-carousel-slide>\n      <plus-carousel-slide clickable>7</plus-carousel-slide>\n      <plus-carousel-slide clickable>8</plus-carousel-slide>\n      <plus-carousel-slide clickable>9</plus-carousel-slide>\n    </plus-carousel-slides>\n  </plus-carousel>\n</div>\n"
+  },
+  {
+    "key": "angular/carousel/start-index",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/start-index",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/start-index",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" start-index={2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/start-index",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/start-index",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" :start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/slides-per-view",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/slides-per-view",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/slides-per-view",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n"
+  },
+  {
+    "key": "svelte/carousel/slides-per-view",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/slides-per-view",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/scale",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop [tween-factor-base]=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/scale",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/scale",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <div>1</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>2</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>3</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>4</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>5</div>\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n"
+  },
+  {
+    "key": "svelte/carousel/scale",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/scale",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop :tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/resizable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/resizable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/resizable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/resizable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/resizable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/progress",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/progress",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/progress",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/progress",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/progress",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/parallax",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop [tween-factor-base]=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/parallax",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/parallax",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/319/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/755/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/203/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/743/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/212/600/350\" />\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n"
+  },
+  {
+    "key": "svelte/carousel/parallax",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/parallax",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop :tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/opacity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" [tween-factor-base]=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/opacity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/opacity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n"
+  },
+  {
+    "key": "svelte/carousel/opacity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/opacity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" :tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/loop",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/loop",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/loop",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/loop",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/loop",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/indicators",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/indicators",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/indicators",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/indicators",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/indicators",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/indicators-numbers",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/indicators-numbers",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/indicators-numbers",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/indicators-numbers",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/indicators-numbers",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/indicators-infinity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/indicators-infinity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/indicators-infinity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators infinity></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/indicators-infinity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/indicators-infinity",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/indicators-clickable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/indicators-clickable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/indicators-clickable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/indicators-clickable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/indicators-clickable",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/indicators-clickable-jump",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/indicators-clickable-jump",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/indicators-clickable-jump",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/indicators-clickable-jump",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/indicators-clickable-jump",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/events",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  (plus-destroy)=\"console.log('destroy')\"\n  (plus-init)=\"console.log('init')\"\n  (plus-pointer-down)=\"console.log('pointer-down')\"\n  (plus-pointer-up)=\"console.log('pointer-up')\"\n  (plus-re-init)=\"console.log('re-init')\"\n  (plus-resize)=\"console.log('resize')\"\n  (plus-scroll)=\"console.log('scroll')\"\n  (plus-select)=\"console.log('select')\"\n  (plus-settle)=\"console.log('settle')\"\n  (plus-slide-focus)=\"console.log('slide-focus')\"\n  (plus-slide-focus-start)=\"console.log('slide-focus-start')\"\n  (plus-slides-changed)=\"console.log('slides-changed')\"\n  (plus-slides-in-view)=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/events",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n$carousel.addEventListener('plus-destroy', () => console.log('destroy'));\n$carousel.addEventListener('plus-init', () => console.log('init'));\n$carousel.addEventListener('plus-pointer-down', () => console.log('pointer-down'));\n$carousel.addEventListener('plus-pointer-up', () => console.log('pointer-up'));\n$carousel.addEventListener('plus-re-init', () => console.log('re-init'));\n$carousel.addEventListener('plus-resize', () => console.log('resize'));\n$carousel.addEventListener('plus-scroll', () => console.log('scroll'));\n$carousel.addEventListener('plus-select', () => console.log('select'));\n$carousel.addEventListener('plus-settle', () => console.log('settle'));\n$carousel.addEventListener('plus-slide-focus', () => console.log('slide-focus'));\n$carousel.addEventListener('plus-slide-focus-start', () => console.log('slide-focus-start'));\n$carousel.addEventListener('plus-slides-changed', () => console.log('slides-changed'));\n$carousel.addEventListener('plus-slides-in-view', () => console.log('slides-in-view'));\n",
+    "template": "<plus-carousel id=\"$carousel\" variant=\"presentation\" draggable=\"free\" focusable resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/events",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel\n      variant=\"presentation\"\n      draggable=\"free\"\n      focusable\n      resizable\n      onPlusDestroy={() => console.log('destroy')}\n      onPlusInit={() => console.log('init')}\n      onPlusPointerDown={() => console.log('pointer-down')}\n      onPlusPointerUp={() => console.log('pointer-up')}\n      onPlusReInit={() => console.log('re-init')}\n      onPlusResize={() => console.log('resize')}\n      onPlusScroll={() => console.log('scroll')}\n      onPlusSelect={() => console.log('select')}\n      onPlusSettle={() => console.log('settle')}\n      onPlusSlideFocus={() => console.log('slide-focus')}\n      onPlusSlideFocusStart={() => console.log('slide-focus-start')}\n      onPlusSlidesChanged={() => console.log('slides-changed')}\n      onPlusSlidesInView={() => console.log('slides-in-view')}\n    >\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/events",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  on:plus-destroy={() => console.log('destroy')}\n  on:plus-init={() => console.log('init')}\n  on:plus-pointer-down={() => console.log('pointer-down')}\n  on:plus-pointer-up={() => console.log('pointer-up')}\n  on:plus-re-init={() => console.log('re-init')}\n  on:plus-resize={() => console.log('resize')}\n  on:plus-scroll={() => console.log('scroll')}\n  on:plus-select={() => console.log('select')}\n  on:plus-settle={() => console.log('settle')}\n  on:plus-slide-focus={() => console.log('slide-focus')}\n  on:plus-slide-focus-start={() => console.log('slide-focus-start')}\n  on:plus-slides-changed={() => console.log('slides-changed')}\n  on:plus-slides-in-view={() => console.log('slides-in-view')}\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/events",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  @plus-destroy=\"console.log('destroy')\"\n  @plus-init=\"console.log('init')\"\n  @plus-pointer-down=\"console.log('pointer-down')\"\n  @plus-pointer-up=\"console.log('pointer-up')\"\n  @plus-re-init=\"console.log('re-init')\"\n  @plus-resize=\"console.log('resize')\"\n  @plus-scroll=\"console.log('scroll')\"\n  @plus-select=\"console.log('select')\"\n  @plus-settle=\"console.log('settle')\"\n  @plus-slide-focus=\"console.log('slide-focus')\"\n  @plus-slide-focus-start=\"console.log('slide-focus-start')\"\n  @plus-slides-changed=\"console.log('slides-changed')\"\n  @plus-slides-in-view=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/duration",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\" [duration]=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/duration",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/duration",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" duration={75}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/duration",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" duration={75}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/duration",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" :duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/draggable-snap",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/draggable-snap",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/draggable-snap",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"snap\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/draggable-snap",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/draggable-snap",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/draggable-free",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/draggable-free",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/draggable-free",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/draggable-free",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/draggable-free",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/direction",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/direction",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/direction",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" dir=\"rtl\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/direction",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/direction",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/default",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/counter-template",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/counter-template",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/counter-template",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/counter-template",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/counter-template",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/complex",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" [start-index]=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/complex",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/complex",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\" start-index={2} resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter></plus-carousel-counter>\n      <plus-carousel-indicators></plus-carousel-indicators>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/complex",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" start-index={2} resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/complex",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" :start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/classes",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/classes",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/classes",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" classes>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/classes",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/classes",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/auto-height",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/auto-height",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/auto-height",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" auto-height>\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '15rem'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '10rem'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '14rem'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/carousel/auto-height",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/auto-height",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "angular/carousel/align",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" align=\"start\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "javascript/carousel/align",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" align=\"start\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "react/carousel/align",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel variant=\"presentation\" align=\"start\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel variant=\"presentation\" align=\"center\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel variant=\"presentation\" align=\"end\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
+  },
+  {
+    "key": "svelte/carousel/align",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<plus-carousel variant=\"presentation\" align=\"start\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+  },
+  {
+    "key": "vue/carousel/align",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
+    "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
+    "template": "<div>\n  <plus-carousel variant=\"presentation\" align=\"start\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel variant=\"presentation\" align=\"center\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel variant=\"presentation\" align=\"end\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n</div>\n"
+  },
+  {
     "key": "angular/card/tile",
     "settings": {
       "dock": true,
