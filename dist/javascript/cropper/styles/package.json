@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@htmlplus/ui": "latest",
-    "cropperjs": "latest",
     "vite": "^4.4.8"
   }
 }

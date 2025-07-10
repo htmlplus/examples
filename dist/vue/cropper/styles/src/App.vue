@@ -8,7 +8,7 @@
         shape="circle"
         resizer="main"
         resizer-shape="line"
-        src="/assets/images/penguin.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="7">
@@ -18,7 +18,7 @@
         mode="crop"
         resizer="both"
         resizer-shape="line"
-        src="/assets/images/penguin.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="6">
@@ -30,7 +30,7 @@
         resizer="main"
         resizer-shape="circle"
         shape="circle"
-        src="/assets/images/cat.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="6">
@@ -40,7 +40,7 @@
         mode="crop"
         resizer="edge"
         resizer-shape="line"
-        src="/assets/images/cat.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="7">
@@ -51,11 +51,14 @@
         mode="crop"
         resizer="edge"
         resizer-shape="line"
-        src="/assets/images/ladybug.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
     </plus-grid-item>
     <plus-grid-item xs="12" sm="5">
-      <plus-cropper class="style-6" src="/assets/images/bear.jpg"></plus-cropper>
+      <plus-cropper
+        class="style-6"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+      ></plus-cropper>
     </plus-grid-item>
   </plus-grid>
 </template>

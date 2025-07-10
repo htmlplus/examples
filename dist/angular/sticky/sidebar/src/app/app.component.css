@@ -1,15 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 .container {
   height: 20rem;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-aside,
-header {
+header,
+plus-sticky {
   background: lightgray;
   text-align: center;
   padding: 1rem;
 }
-plus-faker {
-  display: block;
+header {
+  flex: 0 0 100%;
+}
+main {
+  flex: 0 0 60%;
   padding: 1rem;
   text-align: justify;
+}
+aside {
+  flex: 0 0 40%;
+  margin-top: 1rem;
 }

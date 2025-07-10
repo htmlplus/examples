@@ -1,23 +1,14 @@
 <template>
-  <div class="container">
-    <plus-grid justify-content="evenly" gutter="md">
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card tile></plus-card>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card tile outlined></plus-card>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card tile :elevation="5"></plus-card>
-      </plus-grid-item>
-    </plus-grid>
-  </div>
+  <plus-stack gap="1rem" justify="evenly" wrap>
+    <plus-card tile></plus-card>
+    <plus-card tile outlined></plus-card>
+    <plus-card tile :elevation="5"></plus-card>
+  </plus-stack>
 </template>
 
 <script setup>
   import '@htmlplus/ui/card.js';
-  import '@htmlplus/ui/grid-item.js';
-  import '@htmlplus/ui/grid.js';
+  import '@htmlplus/ui/stack.js';
 </script>
 
 <style scoped>
@@ -28,6 +19,5 @@
   plus-card {
     height: 8rem;
     width: 8rem;
-    margin: auto;
   }
 </style>

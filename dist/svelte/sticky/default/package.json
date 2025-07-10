@@ -8,7 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@faker-js/faker": "latest",
     "@htmlplus/ui": "latest",
     "svelte": "^3.32.3"
   },
