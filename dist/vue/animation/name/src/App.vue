@@ -2,7 +2,7 @@
   <plus-stack
     gap="1rem"
     justify="evenly"
-    :override="{ 'sm-down': { vertical: true }, 'sm-and-up': { vertical: false } }"
+    :override="{ 'sm-before': { vertical: true }, 'sm-up': { vertical: false } }"
   >
     <plus-animation :iterations="Infinity" name="flip-in-x" run></plus-animation>
     <plus-animation :iterations="Infinity" name="flip-in-y" run></plus-animation>

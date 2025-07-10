@@ -12900,7 +12900,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "javascript/animation/name",
@@ -12911,7 +12911,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "react/animation/name",
@@ -12920,7 +12920,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack\n      gap=\"1rem\"\n      justify=\"evenly\"\n      override={{\n        'sm-down': {\n          vertical: true\n        },\n        'sm-and-up': {\n          vertical: false\n        }\n      }}\n    >\n      <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n      <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack\n      gap=\"1rem\"\n      justify=\"evenly\"\n      override={{\n        'sm-before': {\n          vertical: true\n        },\n        'sm-up': {\n          vertical: false\n        }\n      }}\n    >\n      <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n      <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -12932,7 +12932,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-down': {\n      vertical: true\n    },\n    'sm-and-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "vue/animation/name",
@@ -12943,7 +12943,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :override='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "angular/animation/methods",
@@ -13116,7 +13116,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" [iterations]=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"ease-in\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" [iterations]=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"ease-in\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "javascript/animation/easing",
@@ -13127,7 +13127,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "react/animation/easing",
@@ -13136,7 +13136,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-stack\n        gap=\"1rem\"\n        justify=\"evenly\"\n        override={{\n          'sm-down': {\n            vertical: true\n          },\n          'sm-and-up': {\n            vertical: false\n          }\n        }}\n      >\n        <plus-animation\n          easing=\"linear\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"ease-in\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n      </plus-stack>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-stack\n        gap=\"1rem\"\n        justify=\"evenly\"\n        override={{\n          'sm-before': {\n            vertical: true\n          },\n          'sm-up': {\n            vertical: false\n          }\n        }}\n      >\n        <plus-animation\n          easing=\"linear\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"ease-in\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n      </plus-stack>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -13148,7 +13148,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-down': {\n      vertical: true\n    },\n    'sm-and-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation easing=\"linear\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations={Infinity}\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation easing=\"linear\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations={Infinity}\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "vue/animation/easing",
@@ -13159,7 +13159,7 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<div>\n  <plus-stack\n    gap=\"1rem\"\n    justify=\"evenly\"\n    :override='{\"sm-down\":{\"vertical\":true},\"sm-and-up\":{\"vertical\":false}}'\n  >\n    <plus-animation\n      easing=\"linear\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"ease-in\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-stack>\n  <br />\n  <br />\n  <br />\n</div>\n"
+    "template": "<div>\n  <plus-stack\n    gap=\"1rem\"\n    justify=\"evenly\"\n    :override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n  >\n    <plus-animation\n      easing=\"linear\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"ease-in\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-stack>\n  <br />\n  <br />\n  <br />\n</div>\n"
   },
   {
     "key": "angular/animation/duration",

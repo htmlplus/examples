@@ -8,10 +8,10 @@
   gap="1rem"
   justify="evenly"
   override={{
-    'sm-down': {
+    'sm-before': {
       vertical: true
     },
-    'sm-and-up': {
+    'sm-up': {
       vertical: false
     }
   }}
