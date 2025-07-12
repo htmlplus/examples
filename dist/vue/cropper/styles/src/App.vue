@@ -1,6 +1,6 @@
 <template>
-  <plus-grid gutter="md">
-    <plus-grid-item xs="12" sm="5">
+  <div class="container">
+    <div class="grid">
       <plus-cropper
         class="style-1"
         indicator
@@ -10,8 +10,6 @@
         resizer-shape="line"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="7">
       <plus-cropper
         class="style-2"
         indicator
@@ -20,8 +18,6 @@
         resizer-shape="line"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="6">
       <plus-cropper
         class="style-3"
         guides
@@ -32,8 +28,6 @@
         shape="circle"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="6">
       <plus-cropper
         class="style-4"
         guides
@@ -42,8 +36,6 @@
         resizer-shape="line"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="7">
       <plus-cropper
         class="style-5"
         backdrop
@@ -53,14 +45,12 @@
         resizer-shape="line"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="5">
       <plus-cropper
         class="style-6"
         src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-  </plus-grid>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -70,9 +60,27 @@
 </script>
 
 <style scoped>
-  plus-cropper {
-    height: 250px;
+  .container {
+    container-type: inline-size;
   }
+
+  .grid {
+    display: grid;
+    align-items: start;
+    grid-template: auto / 1fr 1fr;
+    gap: 1rem;
+  }
+
+  plus-cropper {
+    min-width: 0;
+  }
+
+  @container (max-width: 500px) {
+    .grid {
+      grid-template: auto auto / 1fr;
+    }
+  }
+
   plus-cropper.style-1 {
     --plus-cropper-resizer-size: 20px;
     --plus-cropper-viewport-opacity: 0;

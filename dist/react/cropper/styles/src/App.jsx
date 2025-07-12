@@ -4,8 +4,8 @@ import '@htmlplus/ui/grid.js';
 
 function App() {
   return (
-    <plus-grid gutter="md">
-      <plus-grid-item xs="12" sm="5">
+    <div className="container">
+      <div className="grid">
         <plus-cropper
           class="style-1"
           indicator
@@ -15,8 +15,6 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="7">
         <plus-cropper
           class="style-2"
           indicator
@@ -25,8 +23,6 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           class="style-3"
           guides
@@ -37,8 +33,6 @@ function App() {
           shape="circle"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           class="style-4"
           guides
@@ -47,8 +41,6 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="7">
         <plus-cropper
           class="style-5"
           backdrop
@@ -58,14 +50,12 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="5">
         <plus-cropper
           class="style-6"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-    </plus-grid>
+      </div>
+    </div>
   );
 }
 export default App;

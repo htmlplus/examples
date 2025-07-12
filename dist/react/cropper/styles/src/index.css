@@ -1,6 +1,24 @@
-plus-cropper {
-  height: 250px;
+.container {
+  container-type: inline-size;
 }
+
+.grid {
+  display: grid;
+  align-items: start;
+  grid-template: auto / 1fr 1fr;
+  gap: 1rem;
+}
+
+plus-cropper {
+  min-width: 0;
+}
+
+@container (max-width: 500px) {
+  .grid {
+    grid-template: auto auto / 1fr;
+  }
+}
+
 plus-cropper.style-1 {
   --plus-cropper-resizer-size: 20px;
   --plus-cropper-viewport-opacity: 0;
