@@ -1,9 +1,9 @@
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-prism': {
-      property: {
+      properties: {
         async resolver({ key, value }) {
           switch (key) {
             case 'language': {

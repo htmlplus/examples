@@ -1,8 +1,8 @@
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  asset: {
-    animation: {
+  assets: {
+    animations: {
       'custom-pulse': [
         {
           offset: 0,

@@ -5,7 +5,7 @@ import '@htmlplus/ui/grid.js';
 function App() {
   return (
     <div className="container">
-      <div className="grid">
+      <div className="container">
         <plus-cropper
           class="style-1"
           indicator
@@ -23,6 +23,8 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
+      </div>
+      <div className="container">
         <plus-cropper
           class="style-3"
           guides
@@ -41,6 +43,8 @@ function App() {
           resizer-shape="line"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
+      </div>
+      <div className="container">
         <plus-cropper
           class="style-5"
           backdrop

@@ -1,16 +1,14 @@
 <template>
   <div class="container">
-    <div class="grid">
-      <plus-cropper
-        view="none"
-        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      ></plus-cropper>
-      <plus-cropper
-        background
-        view="none"
-        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      ></plus-cropper>
-    </div>
+    <plus-cropper
+      view="none"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></plus-cropper>
+    <plus-cropper
+      background
+      view="none"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></plus-cropper>
   </div>
 </template>
 
@@ -20,23 +18,13 @@
 
 <style scoped>
   .container {
-    container-type: inline-size;
-  }
-
-  .grid {
-    display: grid;
-    align-items: start;
-    grid-template: auto / 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
   }
-
   plus-cropper {
-    min-width: 0;
-  }
-
-  @container (max-width: 500px) {
-    .grid {
-      grid-template: auto auto / 1fr;
-    }
+    flex: 1;
+    min-width: 15rem;
   }
 </style>

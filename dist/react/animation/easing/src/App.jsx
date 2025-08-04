@@ -8,7 +8,7 @@ function App() {
       <plus-stack
         gap="1rem"
         justify="evenly"
-        override={{
+        overrides={{
           'sm-before': {
             vertical: true
           },

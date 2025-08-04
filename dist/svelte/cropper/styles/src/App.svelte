@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-  <div class="grid">
+  <div class="container">
     <plus-cropper
       class="style-1"
       indicator
@@ -23,6 +23,8 @@
       resizer-shape="line"
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
+  </div>
+  <div class="container">
     <plus-cropper
       class="style-3"
       guides
@@ -41,6 +43,8 @@
       resizer-shape="line"
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></plus-cropper>
+  </div>
+  <div class="container">
     <plus-cropper
       class="style-5"
       backdrop
@@ -57,24 +61,16 @@
 
 <style>
   .container {
-    container-type: inline-size;
-  }
-
-  .grid {
-    display: grid;
-    align-items: start;
-    grid-template: auto / 1fr 1fr;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
   }
 
   plus-cropper {
-    min-width: 0;
-  }
-
-  @container (max-width: 500px) {
-    .grid {
-      grid-template: auto auto / 1fr;
-    }
+    flex: 1;
+    min-width: 15rem;
   }
 
   plus-cropper.style-1 {
@@ -82,6 +78,7 @@
     --plus-cropper-viewport-opacity: 0;
     --plus-cropper-viewport-style: dashed;
   }
+
   plus-cropper.style-2 {
     --plus-cropper-indicator-color: #e6f018;
     --plus-cropper-indicator-size: 15px;
@@ -91,6 +88,7 @@
     --plus-cropper-resizer-size: 21px;
     --plus-cropper-viewport-color: #e6f018;
   }
+
   plus-cropper.style-3 {
     --plus-cropper-indicator-color: #5499c7;
     --plus-cropper-guides-color: black;
@@ -99,6 +97,7 @@
     --plus-cropper-viewport-color: #5499c7;
     --plus-cropper-viewport-weight: 2px;
   }
+
   plus-cropper.style-4 {
     --plus-cropper-guides-weight: 2px;
     --plus-cropper-resizer-size: 22px;
@@ -106,6 +105,7 @@
     --plus-cropper-viewport-style: dashed;
     --plus-cropper-viewport-weight: 2px;
   }
+
   plus-cropper.style-5 {
     --plus-cropper-backdrop-color: white;
     --plus-cropper-backdrop-opacity: 0.7;
@@ -113,6 +113,7 @@
     --plus-cropper-resizer-size: 20px;
     --plus-cropper-resizer-weight: 3px;
   }
+
   plus-cropper.style-6 {
     --plus-cropper-viewport-opacity: 0;
     --plus-cropper-viewport-style: dashed;

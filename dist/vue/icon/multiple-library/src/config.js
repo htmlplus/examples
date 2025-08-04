@@ -1,9 +1,9 @@
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-icon': {
-      property: {
+      properties: {
         resolver: ({ name }) => {
           const [library, icon] = name.split('/');
           const references = {
