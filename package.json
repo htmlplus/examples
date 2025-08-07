@@ -20,6 +20,7 @@
     "@types/prettier": "^2.7.3",
     "@vue/compiler-sfc": "^3.5.12",
     "change-case": "^5.4.4",
+    "cheerio": "^1.1.2",
     "deepmerge": "^4.3.1",
     "glob": "^11.0.0",
     "handlebars": "^4.7.8",

@@ -34,7 +34,8 @@ export const json: IPlugin<IJsonOptions> = (options) => {
                 dock: context.settingsDock,
                 isolate: context.settingsIsolate,
                 rtl: context.settingsRTL
-              }
+              },
+              description: context.description
             },
             context.output?.[plugin] || {}
           );
