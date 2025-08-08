@@ -3,9 +3,12 @@ import traverse from '@babel/traverse';
 import * as cheerio from 'cheerio';
 import fs from 'node:fs';
 import path from 'node:path';
+import TurndownService from 'turndown';
 
 import { IContext, IContextDependency, IPlugin } from '@/types';
 import { format } from '@/utils';
+
+const turndownService = new TurndownService();
 
 export interface IInitializeOptions {
   cache: string;
@@ -62,7 +65,7 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
 
       if (!content) return;
 
-      context.description = content;
+      context.description = turndownService.turndown(content);
     })();
 
     await (async () => {
