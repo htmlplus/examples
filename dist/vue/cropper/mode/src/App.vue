@@ -1,29 +1,30 @@
 <template>
-  <plus-grid gutter="md">
-    <plus-grid-item xs="12" sm="6">
-      <plus-cropper
-        mode="move"
-        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        view="none"
-      ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="6">
-      <plus-cropper
-        mode="crop"
-        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      ></plus-cropper>
-    </plus-grid-item>
-  </plus-grid>
+  <div class="container">
+    <plus-cropper
+      mode="move"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+      view="none"
+    ></plus-cropper>
+    <plus-cropper
+      mode="crop"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></plus-cropper>
+  </div>
 </template>
 
 <script setup>
   import '@htmlplus/ui/cropper.js';
-  import '@htmlplus/ui/grid-item.js';
-  import '@htmlplus/ui/grid.js';
 </script>
 
 <style scoped>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
   plus-cropper {
-    height: 18rem;
+    flex: 1;
+    min-width: 15rem;
   }
 </style>

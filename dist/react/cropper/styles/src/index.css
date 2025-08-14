@@ -1,11 +1,22 @@
-plus-cropper {
-  height: 250px;
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
+
+plus-cropper {
+  flex: 1;
+  min-width: 15rem;
+}
+
 plus-cropper.style-1 {
   --plus-cropper-resizer-size: 20px;
   --plus-cropper-viewport-opacity: 0;
   --plus-cropper-viewport-style: dashed;
 }
+
 plus-cropper.style-2 {
   --plus-cropper-indicator-color: #e6f018;
   --plus-cropper-indicator-size: 15px;
@@ -15,6 +26,7 @@ plus-cropper.style-2 {
   --plus-cropper-resizer-size: 21px;
   --plus-cropper-viewport-color: #e6f018;
 }
+
 plus-cropper.style-3 {
   --plus-cropper-indicator-color: #5499c7;
   --plus-cropper-guides-color: black;
@@ -23,6 +35,7 @@ plus-cropper.style-3 {
   --plus-cropper-viewport-color: #5499c7;
   --plus-cropper-viewport-weight: 2px;
 }
+
 plus-cropper.style-4 {
   --plus-cropper-guides-weight: 2px;
   --plus-cropper-resizer-size: 22px;
@@ -30,6 +43,7 @@ plus-cropper.style-4 {
   --plus-cropper-viewport-style: dashed;
   --plus-cropper-viewport-weight: 2px;
 }
+
 plus-cropper.style-5 {
   --plus-cropper-backdrop-color: white;
   --plus-cropper-backdrop-opacity: 0.7;
@@ -37,6 +51,7 @@ plus-cropper.style-5 {
   --plus-cropper-resizer-size: 20px;
   --plus-cropper-resizer-weight: 3px;
 }
+
 plus-cropper.style-6 {
   --plus-cropper-viewport-opacity: 0;
   --plus-cropper-viewport-style: dashed;

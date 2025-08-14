@@ -357,7 +357,6 @@ export const react: IPlugin<IReactOptions> = (options) => {
         element: {
           attribute: {
             class(parameters) {
-              if (isCustomElement(parameters.element)) return;
               parameters.name.name = 'className';
             },
             default(parameters) {

@@ -24,7 +24,7 @@ function App() {
       <br />
       <plus-carousel
         variant="presentation"
-        class="mirror"
+        className="mirror"
         draggable="free"
         mirror="my-carousel"
         mirror-type="click-smooth"

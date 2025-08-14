@@ -6,14 +6,14 @@
     <title>Animation | Name</title>
   </head>
   <body>
-    <plus-grid justify-content="evenly" gutter="md">
-      <plus-grid-item xs="12" sm="auto">
-        <plus-animation iterations="Infinity" name="flip-in-x" run></plus-animation>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="auto">
-        <plus-animation iterations="Infinity" name="flip-in-y" run></plus-animation>
-      </plus-grid-item>
-    </plus-grid>
+    <plus-stack
+      gap="1rem"
+      justify="evenly"
+      overrides='{"@xs":{"vertical":true},"@sm":{"vertical":false}}'
+    >
+      <plus-animation iterations="Infinity" name="flip-in-x" run></plus-animation>
+      <plus-animation iterations="Infinity" name="flip-in-y" run></plus-animation>
+    </plus-stack>
 
     <script type="module" src="/main.js"></script>
   </body>

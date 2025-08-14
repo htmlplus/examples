@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@htmlplus/ui": "latest",
-    "cropperjs": "latest",
     "svelte": "^3.32.3"
   },
   "devDependencies": {

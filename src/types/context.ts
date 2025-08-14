@@ -31,6 +31,7 @@ export interface IContext {
   templateWrapped?: boolean;
 
   title: string;
+  description: string;
 
   skip: boolean;
 }

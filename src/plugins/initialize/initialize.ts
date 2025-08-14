@@ -1,10 +1,14 @@
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
+import * as cheerio from 'cheerio';
 import fs from 'node:fs';
 import path from 'node:path';
+import TurndownService from 'turndown';
 
 import { IContext, IContextDependency, IPlugin } from '@/types';
 import { format } from '@/utils';
+
+const turndownService = new TurndownService();
 
 export interface IInitializeOptions {
   cache: string;
@@ -16,28 +20,6 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
   const name = 'initialize';
 
   const cache = fs.existsSync(options.cache) ? JSON.parse(fs.readFileSync(options.cache)) : {};
-
-  const extract = (tag: string, input: string, ignores?: string[]) => {
-    const inner = (tag: string) => {
-      return new RegExp(`<${tag}[^>]*>|</${tag}>`, 'gi');
-    };
-
-    const outer = (tag: string) => {
-      return new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, 'gi');
-    };
-
-    const matches = input.match(outer(tag)) || [];
-
-    return matches.map((match) => {
-      let content = match.replace(inner(tag), '');
-
-      ignores?.forEach((ignore) => {
-        content = content.replace(outer(ignore), '');
-      });
-
-      return content.trim();
-    });
-  };
 
   const run = async (context: IContext) => {
     context.output = {};
@@ -61,14 +43,40 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
       return;
     }
 
-    context.settingsDock = /<body[^>]*\sdock(?:\s|>)/i.test(context.fileContent);
+    const $ = cheerio.load(context.fileContent);
 
-    context.settingsIsolate = /<body[^>]*\sisolate(?:\s|>)/i.test(context.fileContent);
+    context.settingsDock = !!$('body[dock]').length;
 
-    context.settingsRTL = /<body[^>]*\srtl(?:\s|>)/i.test(context.fileContent);
+    context.settingsIsolate = !!$('body[isolate]').length;
+
+    context.settingsRTL = !!$('body[rtl]').length;
+
+    (() => {
+      const elements = $('[data-doc]');
+
+      elements.removeAttr('data-doc');
+
+      const content = elements
+        .map((index, element) => $.html(element).trim())
+        .get()
+        .join('\n');
+
+      elements.remove();
+
+      if (!content) return;
+
+      context.description = turndownService.turndown(content);
+    })();
 
     await (async () => {
-      const [content] = extract('style', context.fileContent);
+      const styles = $('style');
+
+      const content = styles
+        .map((index, element) => $(element).html()!.trim())
+        .get()
+        .join('\n');
+
+      styles.remove();
 
       if (!content) return;
 
@@ -76,9 +84,13 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
     })();
 
     (() => {
-      const [one, two] = extract('script', context.fileContent);
+      const script = $('script')
+        .filter((index, element) => $(element).html()!.includes('setConfig'))
+        .first();
 
-      const content = two ? one : undefined;
+      const content = script.html();
+
+      script.remove();
 
       if (!content) return;
 
@@ -86,9 +98,30 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
     })();
 
     (() => {
-      const [content] = extract('body', context.fileContent, ['script', 'style']);
+      const script = $('script').first();
+
+      const content = script.html();
+
+      script.remove();
 
       if (!content) return;
+
+      context.scriptAST = parse(content, { sourceType: 'module' });
+    })();
+
+    (() => {
+      const body = $('body');
+
+      let content = body.html();
+
+      body.remove();
+
+      if (!content) return;
+
+      content = content
+        .replace(/<(\s*(img|input|br|hr|meta|link|area|base|col|embed|source|track|wbr)\b[^>]*?)(?<!\/)>/g, '<$1 />')
+        .replace(/\b([a-zA-Z_][\w-]*)=""/g, '$1')
+        .replaceAll('&amp;', '&');
 
       const input = `<>${content}</>`;
 
@@ -110,16 +143,6 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
       context.templateAST = ast;
 
       context.templateWrapped = element == fragment;
-    })();
-
-    (() => {
-      const [one, two] = extract('script', context.fileContent);
-
-      const content = two || one;
-
-      if (!content) return;
-
-      context.scriptAST = parse(content, { sourceType: 'module' });
     })();
 
     context.dependencies = (() => {

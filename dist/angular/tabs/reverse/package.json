@@ -9,7 +9,6 @@
     "test": "ng test"
   },
   "dependencies": {
-    "@faker-js/faker": "latest",
     "@htmlplus/ui": "latest",
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",

@@ -1,6 +1,6 @@
 <template>
-  <plus-grid gutter="md">
-    <plus-grid-item xs="12" sm="5">
+  <div class="container">
+    <div class="container">
       <plus-cropper
         class="style-1"
         indicator
@@ -8,20 +8,18 @@
         shape="circle"
         resizer="main"
         resizer-shape="line"
-        src="/assets/images/penguin.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="7">
       <plus-cropper
         class="style-2"
         indicator
         mode="crop"
         resizer="both"
         resizer-shape="line"
-        src="/assets/images/penguin.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="6">
+    </div>
+    <div class="container">
       <plus-cropper
         class="style-3"
         guides
@@ -30,20 +28,18 @@
         resizer="main"
         resizer-shape="circle"
         shape="circle"
-        src="/assets/images/cat.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="6">
       <plus-cropper
         class="style-4"
         guides
         mode="crop"
         resizer="edge"
         resizer-shape="line"
-        src="/assets/images/cat.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="7">
+    </div>
+    <div class="container">
       <plus-cropper
         class="style-5"
         backdrop
@@ -51,13 +47,14 @@
         mode="crop"
         resizer="edge"
         resizer-shape="line"
-        src="/assets/images/ladybug.jpg"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
       ></plus-cropper>
-    </plus-grid-item>
-    <plus-grid-item xs="12" sm="5">
-      <plus-cropper class="style-6" src="/assets/images/bear.jpg"></plus-cropper>
-    </plus-grid-item>
-  </plus-grid>
+      <plus-cropper
+        class="style-6"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+      ></plus-cropper>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -67,14 +64,25 @@
 </script>
 
 <style scoped>
-  plus-cropper {
-    height: 250px;
+  .container {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
   }
+
+  plus-cropper {
+    flex: 1;
+    min-width: 15rem;
+  }
+
   plus-cropper.style-1 {
     --plus-cropper-resizer-size: 20px;
     --plus-cropper-viewport-opacity: 0;
     --plus-cropper-viewport-style: dashed;
   }
+
   plus-cropper.style-2 {
     --plus-cropper-indicator-color: #e6f018;
     --plus-cropper-indicator-size: 15px;
@@ -84,6 +92,7 @@
     --plus-cropper-resizer-size: 21px;
     --plus-cropper-viewport-color: #e6f018;
   }
+
   plus-cropper.style-3 {
     --plus-cropper-indicator-color: #5499c7;
     --plus-cropper-guides-color: black;
@@ -92,6 +101,7 @@
     --plus-cropper-viewport-color: #5499c7;
     --plus-cropper-viewport-weight: 2px;
   }
+
   plus-cropper.style-4 {
     --plus-cropper-guides-weight: 2px;
     --plus-cropper-resizer-size: 22px;
@@ -99,6 +109,7 @@
     --plus-cropper-viewport-style: dashed;
     --plus-cropper-viewport-weight: 2px;
   }
+
   plus-cropper.style-5 {
     --plus-cropper-backdrop-color: white;
     --plus-cropper-backdrop-opacity: 0.7;
@@ -106,6 +117,7 @@
     --plus-cropper-resizer-size: 20px;
     --plus-cropper-resizer-weight: 3px;
   }
+
   plus-cropper.style-6 {
     --plus-cropper-viewport-opacity: 0;
     --plus-cropper-viewport-style: dashed;

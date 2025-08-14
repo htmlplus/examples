@@ -1,7 +1,11 @@
+div {
+  display: flex;
+}
 plus-card {
   --plus-card-background-color: lightgray;
   padding: 10rem 0;
   text-align: center;
+  flex-grow: 1;
 }
 plus-drawer plus-card {
   --plus-card-background-color: lightblue;
