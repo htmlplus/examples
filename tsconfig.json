@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "module": "NodeNext",
-    "esModuleInterop": true,
-    "moduleResolution": "NodeNext",
-    "strict": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"]
-    }
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"module": "NodeNext",
+		"esModuleInterop": true,
+		"moduleResolution": "NodeNext",
+		"strict": true,
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["*"]
+		}
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
 }

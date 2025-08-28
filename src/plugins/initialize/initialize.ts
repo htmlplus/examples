@@ -1,189 +1,195 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
 import * as cheerio from 'cheerio';
-import fs from 'node:fs';
-import path from 'node:path';
 import TurndownService from 'turndown';
 
-import { IContext, IContextDependency, IPlugin } from '@/types';
+import type { IContext, IContextDependency, IPlugin } from '@/types';
 import { format } from '@/utils';
 
 const turndownService = new TurndownService();
 
 export interface IInitializeOptions {
-  cache: string;
-  dependencyResolver: (source: string) => IContextDependency;
-  getTitle: (context: IContext) => string;
+	cache: string;
+	dependencyResolver: (source: string) => IContextDependency;
+	getTitle: (context: IContext) => string;
 }
 
 export const initialize: IPlugin<IInitializeOptions> = (options) => {
-  const name = 'initialize';
+	const name = 'initialize';
 
-  const cache = fs.existsSync(options.cache) ? JSON.parse(fs.readFileSync(options.cache)) : {};
+	const cache = fs.existsSync(options.cache)
+		? JSON.parse(fs.readFileSync(options.cache, 'utf8'))
+		: {};
 
-  const run = async (context: IContext) => {
-    context.output = {};
+	const run = async (context: IContext) => {
+		context.output = {};
 
-    context.directoryPath = path.dirname(context.filePath);
+		context.directoryPath = path.dirname(context.filePath);
 
-    context.directoryName = path.basename(context.directoryPath);
+		context.directoryName = path.basename(context.directoryPath);
 
-    context.fileContent = fs.readFileSync(context.filePath, 'utf8');
+		context.fileContent = fs.readFileSync(context.filePath, 'utf8');
 
-    context.fileExtension = path.extname(context.filePath);
+		context.fileExtension = path.extname(context.filePath);
 
-    context.fileName = path.basename(context.filePath, context.fileExtension);
+		context.fileName = path.basename(context.filePath, context.fileExtension);
 
-    context.fileUpdatedTime = fs.statSync(context.filePath).mtime.toISOString();
+		context.fileUpdatedTime = fs.statSync(context.filePath).mtime.toISOString();
 
-    context.title = options.getTitle(context) || '';
+		context.title = options.getTitle(context) || '';
 
-    if (cache[context.filePath] == context.fileUpdatedTime) {
-      context.skip = true;
-      return;
-    }
+		if (cache[context.filePath] === context.fileUpdatedTime) {
+			context.skip = true;
+			return;
+		}
 
-    const $ = cheerio.load(context.fileContent);
+		const $ = cheerio.load(context.fileContent);
 
-    context.settingsDock = !!$('body[dock]').length;
+		context.settingsDock = !!$('body[dock]').length;
 
-    context.settingsIsolate = !!$('body[isolate]').length;
+		context.settingsIsolate = !!$('body[isolate]').length;
 
-    context.settingsRTL = !!$('body[rtl]').length;
+		context.settingsRTL = !!$('body[rtl]').length;
 
-    (() => {
-      const elements = $('[data-doc]');
+		(() => {
+			const elements = $('[data-doc]');
 
-      elements.removeAttr('data-doc');
+			elements.removeAttr('data-doc');
 
-      const content = elements
-        .map((index, element) => $.html(element).trim())
-        .get()
-        .join('\n');
+			const content = elements
+				.map((_index, element) => $.html(element).trim())
+				.get()
+				.join('\n');
 
-      elements.remove();
+			elements.remove();
 
-      if (!content) return;
+			if (!content) return;
 
-      context.description = turndownService.turndown(content);
-    })();
+			context.description = turndownService.turndown(content);
+		})();
 
-    await (async () => {
-      const styles = $('style');
+		await (async () => {
+			const styles = $('style');
 
-      const content = styles
-        .map((index, element) => $(element).html()!.trim())
-        .get()
-        .join('\n');
+			const content = styles
+				.map((_index, element) => $(element).html()?.trim())
+				.get()
+				.join('\n');
 
-      styles.remove();
+			styles.remove();
 
-      if (!content) return;
+			if (!content) return;
 
-      context.styleContent = await format(content, { parser: 'css' });
-    })();
+			context.styleContent = await format(content, { parser: 'css' });
+		})();
 
-    (() => {
-      const script = $('script')
-        .filter((index, element) => $(element).html()!.includes('setConfig'))
-        .first();
+		(() => {
+			const script = $('script')
+				.filter((_index, element) => !!$(element).html()?.includes('setConfig'))
+				.first();
 
-      const content = script.html();
+			const content = script.html();
 
-      script.remove();
+			script.remove();
 
-      if (!content) return;
+			if (!content) return;
 
-      context.configAST = parse(content, { sourceType: 'module' });
-    })();
+			context.configAST = parse(content, { sourceType: 'module' });
+		})();
 
-    (() => {
-      const script = $('script').first();
+		(() => {
+			const script = $('script').first();
 
-      const content = script.html();
+			const content = script.html();
 
-      script.remove();
+			script.remove();
 
-      if (!content) return;
+			if (!content) return;
 
-      context.scriptAST = parse(content, { sourceType: 'module' });
-    })();
+			context.scriptAST = parse(content, { sourceType: 'module' });
+		})();
 
-    (() => {
-      const body = $('body');
+		(() => {
+			const body = $('body');
 
-      let content = body.html();
+			let content = body.html();
 
-      body.remove();
+			body.remove();
 
-      if (!content) return;
+			if (!content) return;
 
-      content = content
-        .replace(/<(\s*(img|input|br|hr|meta|link|area|base|col|embed|source|track|wbr)\b[^>]*?)(?<!\/)>/g, '<$1 />')
-        .replace(/\b([a-zA-Z_][\w-]*)=""/g, '$1')
-        .replaceAll('&amp;', '&');
+			content = content
+				.replace(
+					/<(\s*(img|input|br|hr|meta|link|area|base|col|embed|source|track|wbr)\b[^>]*?)(?<!\/)>/g,
+					'<$1 />'
+				)
+				.replace(/\b([a-zA-Z_][\w-]*)=""/g, '$1')
+				.replaceAll('&amp;', '&');
 
-      const input = `<>${content}</>`;
+			const input = `<>${content}</>`;
 
-      const ast = parse(input, {
-        sourceType: 'module',
-        plugins: ['jsx']
-      });
+			const ast = parse(input, {
+				sourceType: 'module',
+				plugins: ['jsx']
+			});
 
-      const fragment = (ast.program.body.at(0) as any).expression;
+			const fragment = (ast.program.body.at(0) as any).expression;
 
-      const children = fragment.children.filter((child: any) => {
-        return child.type != 'JSXText' || child.value.trim();
-      });
+			const children = fragment.children.filter((child: any) => {
+				return child.type !== 'JSXText' || child.value.trim();
+			});
 
-      const element = children.length == 1 ? children.at(0) : fragment;
+			const element = children.length === 1 ? children.at(0) : fragment;
 
-      ast.program.body = [element];
+			ast.program.body = [element];
 
-      context.templateAST = ast;
+			context.templateAST = ast;
 
-      context.templateWrapped = element == fragment;
-    })();
+			context.templateWrapped = element === fragment;
+		})();
 
-    context.dependencies = (() => {
-      if (!context.scriptAST) return [];
+		context.dependencies = (() => {
+			if (!context.scriptAST) return [];
 
-      const dependencies: IContextDependency[] = [];
+			const dependencies: IContextDependency[] = [];
 
-      const ImportDeclaration = (path: any) => {
-        const defaults = {
-          name: path.node.source.value,
-          version: 'latest'
-        };
+			const ImportDeclaration = (path: any) => {
+				const defaults = {
+					name: path.node.source.value,
+					version: 'latest'
+				};
 
-        const dependency = options.dependencyResolver(path.node.source.value) || defaults;
+				const dependency = options.dependencyResolver(path.node.source.value) || defaults;
 
-        const has = dependencies.some((item) => item.name == dependency.name);
+				const has = dependencies.some((item) => item.name === dependency.name);
 
-        if (has) return;
+				if (has) return;
 
-        dependencies.push(dependency);
-      };
+				dependencies.push(dependency);
+			};
 
-      if (context.configAST) {
-        traverse(context.configAST, { ImportDeclaration });
-      }
+			if (context.configAST) {
+				traverse(context.configAST, { ImportDeclaration });
+			}
 
-      if (context.scriptAST) {
-        traverse(context.scriptAST, { ImportDeclaration });
-      }
+			if (context.scriptAST) {
+				traverse(context.scriptAST, { ImportDeclaration });
+			}
 
-      return dependencies.sort();
-    })();
-  };
+			return dependencies.sort();
+		})();
+	};
 
-  const finish = async (contexts: IContext[]) => {
-    for (const context of contexts) {
-      cache[context.filePath] = context.fileUpdatedTime;
-    }
+	const finish = async (contexts: IContext[]) => {
+		for (const context of contexts) {
+			cache[context.filePath] = context.fileUpdatedTime;
+		}
 
-    fs.writeFileSync(options.cache, JSON.stringify(cache));
-  };
+		fs.writeFileSync(options.cache, JSON.stringify(cache));
+	};
 
-  return { name, run, finish };
+	return { name, run, finish };
 };

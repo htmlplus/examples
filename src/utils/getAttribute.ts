@@ -2,40 +2,41 @@ import { parse } from '@babel/parser';
 import * as t from '@babel/types';
 
 export const getAttribute = (
-  element: t.JSXElement,
-  name: string
+	element: t.JSXElement,
+	name: string
 ): t.JSXElement | t.JSXFragment | t.StringLiteral | t.JSXExpressionContainer | null | undefined => {
-  const attribute = element.openingElement.attributes.find((node) => {
-    return t.isJSXAttribute(node) && node.name.name == name;
-  });
+	const attribute = element.openingElement.attributes.find((node) => {
+		return t.isJSXAttribute(node) && node.name.name === name;
+	});
 
-  if (!attribute) return;
+	if (!attribute) return;
 
-  if (!t.isJSXAttribute(attribute)) return;
+	if (!t.isJSXAttribute(attribute)) return;
 
-  if (attribute.value === null) return null;
+	if (attribute.value === null) return null;
 
-  if (t.isJSXExpressionContainer(attribute.value)) return attribute.value;
+	if (t.isJSXExpressionContainer(attribute.value)) return attribute.value;
 
-  const value = (attribute.value as any)?.value;
+	const value = (attribute.value as any)?.value;
 
-  if (value === undefined) return;
+	if (value === undefined) return;
 
-  if (!!`${value}`.trim() && !isNaN(`${value}` as any)) {
-    return t.jsxExpressionContainer(t.numericLiteral(parseFloat(value)));
-  }
+	// biome-ignore lint: TODO
+	if (!!`${value}`.trim() && !isNaN(`${value}` as any)) {
+		return t.jsxExpressionContainer(t.numericLiteral(parseFloat(value)));
+	}
 
-  if (['false', 'true'].includes(value)) {
-    return t.jsxExpressionContainer(t.booleanLiteral(value === 'true'));
-  }
+	if (['false', 'true'].includes(value)) {
+		return t.jsxExpressionContainer(t.booleanLiteral(value === 'true'));
+	}
 
-  try {
-    JSON.parse(value);
+	try {
+		JSON.parse(value);
 
-    const parsed = parse(`export default ${value}`, { sourceType: 'module' });
+		const parsed = parse(`export default ${value}`, { sourceType: 'module' });
 
-    return t.jsxExpressionContainer((parsed.program.body[0] as any).declaration);
-  } catch {}
+		return t.jsxExpressionContainer((parsed.program.body[0] as any).declaration);
+	} catch {}
 
-  return attribute.value;
+	return attribute.value;
 };

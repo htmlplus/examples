@@ -1,13 +1,13 @@
-import * as t from '@babel/types';
+import type * as t from '@babel/types';
 
 export const replace = (parent: t.Node, source: t.Node, target: t.Node) => {
-  for (const key in parent) {
-    if (!Object.prototype.hasOwnProperty.call(parent, key)) continue;
+	for (const key in parent) {
+		if (!Object.hasOwn(parent, key)) continue;
 
-    if ((parent as any)[key] != source) continue;
+		if ((parent as any)[key] !== source) continue;
 
-    (parent as any)[key] = target;
+		(parent as any)[key] = target;
 
-    break;
-  }
+		break;
+	}
 };
