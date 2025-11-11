@@ -1,7 +1,5 @@
 <script>
   import '@htmlplus/ui/cropper.js';
-  import '@htmlplus/ui/grid-item.js';
-  import '@htmlplus/ui/grid.js';
 </script>
 
 <div class="container">

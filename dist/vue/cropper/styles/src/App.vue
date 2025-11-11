@@ -59,8 +59,6 @@
 
 <script setup>
   import '@htmlplus/ui/cropper.js';
-  import '@htmlplus/ui/grid-item.js';
-  import '@htmlplus/ui/grid.js';
 </script>
 
 <style scoped>

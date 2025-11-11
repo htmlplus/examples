@@ -3945,7 +3945,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1em\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "javascript/icon/wildcard-size",
@@ -3955,7 +3955,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1em\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "react/icon/wildcard-size",
@@ -3964,7 +3964,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"16\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"1em\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/wildcard-size",
@@ -3974,7 +3974,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1em\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "vue/icon/wildcard-size",
@@ -3984,7 +3984,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1em\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "angular/icon/size",
@@ -4775,816 +4775,6 @@
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/pulse.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/swing.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-animation :duration=\"1000\" :iterations=\"Infinity\" name=\"pulse\" run>\n    <plus-icon name=\"heart\"></plus-icon>\n  </plus-animation>\n  <plus-animation :duration=\"1000\" :iterations=\"Infinity\" name=\"swing\" run>\n    <plus-icon name=\"telephone\"></plus-icon>\n  </plus-animation>\n  <plus-animation :duration=\"2000\" :iterations=\"Infinity\" name=\"tada\" run>\n    <plus-icon name=\"bell\"></plus-icon>\n  </plus-animation>\n</plus-stack>\n"
-  },
-  {
-    "key": "angular/grid/wrap",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/wrap",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/wrap",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid wrap=\"off\">\n      <plus-grid-item xs=\"6\">\n        <div>xs=6</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>xs=2</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"6\">\n        <div>xs=6</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>xs=2</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/wrap",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/wrap",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid wrap=\"off\">\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <div>xs=6</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>xs=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/vertical",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\" vertical>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/vertical",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\" vertical>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/vertical",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid align-items=\"center\" vertical>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/vertical",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\" vertical>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/vertical",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  height: 12rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  height: 100%;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\" vertical>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/reverse",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid reverse>\n  <plus-grid-item xs=\"2\">\n    <div>Item 1</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/reverse",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid reverse>\n  <plus-grid-item xs=\"2\">\n    <div>Item 1</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/reverse",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid reverse>\n      <plus-grid-item xs=\"2\">\n        <div>Item 1</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item 2</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item 3</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/reverse",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid reverse>\n  <plus-grid-item xs=\"2\">\n    <div>Item 1</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/reverse",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid reverse>\n  <plus-grid-item xs=\"2\">\n    <div>Item 1</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item 3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/order",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item order-xs=\"3\" xs=\"grow\">\n    <div>order=3</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"2\" xs=\"grow\">\n    <div>order=2</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"1\" xs=\"grow\">\n    <div>order=1</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/order",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item order-xs=\"3\" xs=\"grow\">\n    <div>order=3</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"2\" xs=\"grow\">\n    <div>order=2</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"1\" xs=\"grow\">\n    <div>order=1</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/order",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item order-xs=\"3\" xs=\"grow\">\n        <div>order=3</div>\n      </plus-grid-item>\n      <plus-grid-item order-xs=\"2\" xs=\"grow\">\n        <div>order=2</div>\n      </plus-grid-item>\n      <plus-grid-item order-xs=\"1\" xs=\"grow\">\n        <div>order=1</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/order",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item order-xs=\"3\" xs=\"grow\">\n    <div>order=3</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"2\" xs=\"grow\">\n    <div>order=2</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"1\" xs=\"grow\">\n    <div>order=1</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/order",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item order-xs=\"3\" xs=\"grow\">\n    <div>order=3</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"2\" xs=\"grow\">\n    <div>order=2</div>\n  </plus-grid-item>\n  <plus-grid-item order-xs=\"1\" xs=\"grow\">\n    <div>order=1</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/offset",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item offset-xs=\"3\" xs=\"3\">\n    <div>offset-xs=\"3\", xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/offset",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item offset-xs=\"3\" xs=\"3\">\n    <div>offset-xs=\"3\", xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/offset",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"3\">\n        <div>xs=3</div>\n      </plus-grid-item>\n      <plus-grid-item offset-xs=\"3\" xs=\"3\">\n        <div>offset-xs=\"3\", xs=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>xs=3</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/offset",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item offset-xs=\"3\" xs=\"3\">\n    <div>offset-xs=\"3\", xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/offset",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item offset-xs=\"3\" xs=\"3\">\n    <div>offset-xs=\"3\", xs=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>xs=3</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/justify-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid justify-content=\"center\">\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/justify-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid justify-content=\"center\">\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/justify-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid justify-content=\"center\">\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/justify-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid justify-content=\"center\">\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/justify-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid justify-content=\"center\">\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"2\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/hide",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item hide-sm xs=\"3\">\n    <div>xs=3, hide-sm</div>\n  </plus-grid-item>\n  <plus-grid-item hide-md xs=\"4\">\n    <div>xs=4, hide-md</div>\n  </plus-grid-item>\n  <plus-grid-item hide-lg xs=\"5\">\n    <div>xs=5, hide-lg</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/hide",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item hide-sm xs=\"3\">\n    <div>xs=3, hide-sm</div>\n  </plus-grid-item>\n  <plus-grid-item hide-md xs=\"4\">\n    <div>xs=4, hide-md</div>\n  </plus-grid-item>\n  <plus-grid-item hide-lg xs=\"5\">\n    <div>xs=5, hide-lg</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/hide",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item hide-sm xs=\"3\">\n        <div>xs=3, hide-sm</div>\n      </plus-grid-item>\n      <plus-grid-item hide-md xs=\"4\">\n        <div>xs=4, hide-md</div>\n      </plus-grid-item>\n      <plus-grid-item hide-lg xs=\"5\">\n        <div>xs=5, hide-lg</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/hide",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item hide-sm xs=\"3\">\n    <div>xs=3, hide-sm</div>\n  </plus-grid-item>\n  <plus-grid-item hide-md xs=\"4\">\n    <div>xs=4, hide-md</div>\n  </plus-grid-item>\n  <plus-grid-item hide-lg xs=\"5\">\n    <div>xs=5, hide-lg</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/hide",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item hide-sm xs=\"3\">\n    <div>xs=3, hide-sm</div>\n  </plus-grid-item>\n  <plus-grid-item hide-md xs=\"4\">\n    <div>xs=4, hide-md</div>\n  </plus-grid-item>\n  <plus-grid-item hide-lg xs=\"5\">\n    <div>xs=5, hide-lg</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/gutter",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter=\"lg\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/gutter",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter=\"lg\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/gutter",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter=\"lg\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/gutter",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter=\"lg\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/gutter",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter=\"lg\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/gutter-y",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-y=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/gutter-y",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-y=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/gutter-y",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter-y=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/gutter-y",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-y=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/gutter-y",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-y=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/gutter-x",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-x=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/gutter-x",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-x=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/gutter-x",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid gutter-x=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/gutter-x",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-x=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/gutter-x",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid gutter-x=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n    <div>xs=12, sm=6, lg=5</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n    <div>xs=12, sm=6, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n    <div>xs=12, sm=7, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n    <div>xs=12, sm=5, lg=3</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n    <div>xs=12, sm=5, lg=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n    <div>xs=12, sm=7, lg=5</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"4\">\n    <div>xs=12, md=4</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/auto-sizing",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n</plus-grid>\n<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/auto-sizing",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n</plus-grid>\n<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/auto-sizing",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-grid>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n      </plus-grid>\n      <plus-grid>\n        <plus-grid-item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </plus-grid-item>\n      </plus-grid>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/auto-sizing",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n</plus-grid>\n<plus-grid>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>xs=grow</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" md=\"2\">\n    <div>xs=12, md=2</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/auto-sizing",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<div>\n  <plus-grid>\n    <plus-grid-item xs=\"grow\">\n      <div>xs=grow</div>\n    </plus-grid-item>\n    <plus-grid-item xs=\"grow\">\n      <div>xs=grow</div>\n    </plus-grid-item>\n    <plus-grid-item xs=\"grow\">\n      <div>xs=grow</div>\n    </plus-grid-item>\n  </plus-grid>\n  <plus-grid>\n    <plus-grid-item xs=\"12\" md=\"2\">\n      <div>xs=12, md=2</div>\n    </plus-grid-item>\n    <plus-grid-item xs=\"grow\">\n      <div>xs=grow</div>\n    </plus-grid-item>\n    <plus-grid-item xs=\"12\" md=\"2\">\n      <div>xs=12, md=2</div>\n    </plus-grid-item>\n  </plus-grid>\n</div>\n"
-  },
-  {
-    "key": "angular/grid/align-self",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"grow\" align-self=\"start\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\" align-self=\"end\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/align-self",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"grow\" align-self=\"start\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\" align-self=\"end\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/align-self",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid align-items=\"center\">\n      <plus-grid-item xs=\"grow\" align-self=\"start\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\" align-self=\"end\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/align-self",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"grow\" align-self=\"start\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\" align-self=\"end\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/align-self",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"grow\" align-self=\"start\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\" align-self=\"end\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/align-items",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/align-items",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/align-items",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid align-items=\"center\">\n      <plus-grid-item xs=\"6\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/align-items",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/align-items",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-items=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "angular/grid/align-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-content=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "javascript/grid/align-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-content=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "react/grid/align-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <plus-grid align-content=\"center\">\n      <plus-grid-item xs=\"6\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n}\nexport default App;\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n"
-  },
-  {
-    "key": "svelte/grid/align-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-content=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
-  },
-  {
-    "key": "vue/grid/align-content",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": "plus-grid {\n  background-color: whitesmoke;\n  height: 8rem;\n}\nplus-grid div {\n  color: #00bcd4;\n  border: 1px solid #ffffff;\n  background-color: #e0f7fa;\n  padding: 0.5em;\n  text-align: center;\n}\n",
-    "template": "<plus-grid align-content=\"center\">\n  <plus-grid-item xs=\"6\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"3\">\n    <div>Item</div>\n  </plus-grid-item>\n  <plus-grid-item xs=\"grow\">\n    <div>Item</div>\n  </plus-grid-item>\n</plus-grid>\n"
   },
   {
     "key": "angular/format-bytes/unit",
@@ -7956,7 +7146,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
@@ -7967,7 +7157,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
+    "script": "import '@htmlplus/ui/cropper.js';\n",
     "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
@@ -7978,7 +7168,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizer-shape=\"circle\"\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-6\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizer-shape=\"circle\"\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          className=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          className=\"style-6\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n"
   },
   {
@@ -7988,7 +7178,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
+    "script": "import '@htmlplus/ui/cropper.js';\n",
     "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper class=\"style-6\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
@@ -7999,7 +7189,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
+    "script": "import '@htmlplus/ui/cropper.js';\n",
     "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
@@ -11857,7 +11047,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"48\">48px</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"3em\">3em</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/wildcard-size",
@@ -11867,7 +11057,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"48\">48px</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"3em\">3em</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/wildcard-size",
@@ -11876,7 +11066,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"48\">48px</plus-avatar>\n        <plus-avatar size=\"64px\">64px</plus-avatar>\n        <plus-avatar size=\"5rem\">5rem</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"3em\">3em</plus-avatar>\n        <plus-avatar size=\"64px\">64px</plus-avatar>\n        <plus-avatar size=\"5rem\">5rem</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/wildcard-size",
@@ -11886,7 +11076,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"48\">48px</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"3em\">3em</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/wildcard-size",
@@ -11896,7 +11086,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"48\">48px</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"3em\">3em</plus-avatar>\n    <plus-avatar size=\"64px\">64px</plus-avatar>\n    <plus-avatar size=\"5rem\">5rem</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/text",
@@ -12696,261 +11886,6 @@
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"1rem\">\n  <plus-avatar color=\"#808080\">AB</plus-avatar>\n  <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n  <plus-avatar color=\"#d63939\">EF</plus-avatar>\n  <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n  <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n</plus-stack>\n"
-  },
-  {
-    "key": "angular/aspect-ratio/video",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/aspect-ratio.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "javascript/aspect-ratio/video",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "react/aspect-ratio/video",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/aspect-ratio/video",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "vue/aspect-ratio/video",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "angular/aspect-ratio/map",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/aspect-ratio.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "javascript/aspect-ratio/map",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "react/aspect-ratio/map",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/aspect-ratio/map",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "vue/aspect-ratio/map",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "angular/aspect-ratio/image",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/aspect-ratio.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "javascript/aspect-ratio/image",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "react/aspect-ratio/image",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img\n        src=\"https://picsum.photos/id/95/640/640\"\n        style={{\n          objectFit: 'cover'\n        }}\n      />\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/aspect-ratio/image",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "vue/aspect-ratio/image",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\n",
-    "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"https://picsum.photos/id/95/640/640\" style=\"object-fit: cover\" />\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "angular/aspect-ratio/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "javascript/aspect-ratio/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\n",
-    "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "react/aspect-ratio/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\n\nfunction App() {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <plus-card tile>\n        <plus-card-body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </plus-card-body>\n      </plus-card>\n    </plus-aspect-ratio>\n  );\n}\nexport default App;\n",
-    "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n"
-  },
-  {
-    "key": "svelte/aspect-ratio/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\n",
-    "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "vue/aspect-ratio/default",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\n",
-    "style": "plus-card {\n  --plus-card-background-color: lightgray;\n}\n",
-    "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
-  },
-  {
-    "key": "angular/aspect-ratio/card",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
-    "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/aspect-ratio/card",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
-    "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
-  },
-  {
-    "key": "react/aspect-ratio/card",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-card outlined>\n        <plus-card-body>\n          <plus-aspect-ratio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </plus-aspect-ratio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </plus-card-body>\n      </plus-card>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n"
-  },
-  {
-    "key": "svelte/aspect-ratio/card",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
-    "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/aspect-ratio/card",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/aspect-ratio.js';\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-card {\n  width: 300px;\n}\n.placeholder {\n  background-color: lightgray;\n  border-radius: 4px;\n}\n",
-    "template": "<plus-center>\n  <plus-card outlined>\n    <plus-card-body>\n      <plus-aspect-ratio value=\"16/9\">\n        <div class=\"placeholder\"></div>\n      </plus-aspect-ratio>\n      <h3>Title</h3>\n      <p>Description of the card.</p>\n    </plus-card-body>\n  </plus-card>\n</plus-center>\n"
   },
   {
     "key": "angular/app-progress-bar/trickle",
