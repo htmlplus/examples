@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <plus-faker></plus-faker>
-      <plus-divider>OR</plus-divider>
+      <plus-divider orientation="horizontal">OR</plus-divider>
       <plus-faker></plus-faker>
     </>
   );

@@ -1,0 +1,6 @@
+plus-relative-time::part(integer) {
+  font-weight: bold;
+}
+plus-relative-time::part(literal) {
+  color: gray;
+}

@@ -1027,7 +1027,7 @@
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card [elevation]=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
   },
   {
     "key": "javascript/stack/divider",
@@ -1037,7 +1037,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
   },
   {
     "key": "react/stack/divider",
@@ -1046,7 +1046,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-divider vertical></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-card elevation={5}>\n        <plus-card-body>Item 1</plus-card-body>\n      </plus-card>\n      <plus-divider orientation=\"vertical\"></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 2</plus-card-body>\n      </plus-card>\n      <plus-divider orientation=\"vertical\"></plus-divider>\n      <plus-card elevation={5}>\n        <plus-card-body>Item 3</plus-card-body>\n      </plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/stack/divider",
@@ -1056,7 +1056,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation={5}>\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card elevation={5}>\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card elevation={5}>\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
   },
   {
     "key": "vue/stack/divider",
@@ -1066,7 +1066,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider vertical></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 1</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 2</plus-card-body>\n  </plus-card>\n  <plus-divider orientation=\"vertical\"></plus-divider>\n  <plus-card :elevation=\"5\">\n    <plus-card-body>Item 3</plus-card-body>\n  </plus-card>\n</plus-stack>\n"
   },
   {
     "key": "angular/stack/default",
@@ -2489,6 +2489,60 @@
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
     "template": "<plus-center>\n  <plus-relative-time sync></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/relative-time/parts",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-relative-time::part(integer) {\n  font-weight: bold;\n}\nplus-relative-time::part(literal) {\n  color: gray;\n}\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/relative-time/parts",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "style": "plus-relative-time::part(integer) {\n  font-weight: bold;\n}\nplus-relative-time::part(literal) {\n  color: gray;\n}\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "react/relative-time/parts",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-relative-time::part(integer) {\n  font-weight: bold;\n}\nplus-relative-time::part(literal) {\n  color: gray;\n}\n"
+  },
+  {
+    "key": "svelte/relative-time/parts",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "style": "plus-relative-time::part(integer) {\n  font-weight: bold;\n}\nplus-relative-time::part(literal) {\n  color: gray;\n}\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/relative-time/parts",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/relative-time.js';\n",
+    "style": "plus-relative-time::part(integer) {\n  font-weight: bold;\n}\nplus-relative-time::part(literal) {\n  color: gray;\n}\n",
+    "template": "<plus-center>\n  <plus-relative-time value=\"2020-01-01T00:00:00\"></plus-relative-time>\n</plus-center>\n"
   },
   {
     "key": "angular/relative-time/numeric",
@@ -5581,55 +5635,6 @@
     "template": "<div>\n  <plus-drawer animation size=\"200px\" connector=\"drawer-default\">\n    <plus-card>Drawer Content</plus-card>\n  </plus-drawer>\n  <plus-card>\n    <plus-drawer-toggler connector=\"drawer-default\">Toggle</plus-drawer-toggler>\n  </plus-card>\n</div>\n"
   },
   {
-    "key": "angular/divider/width",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-divider width=\"xs\"></plus-divider>\n<br />\n<plus-divider width=\"sm\"></plus-divider>\n<br />\n<plus-divider width=\"md\"></plus-divider>\n<br />\n<plus-divider width=\"lg\"></plus-divider>\n<br />\n<plus-divider width=\"xl\"></plus-divider>\n"
-  },
-  {
-    "key": "javascript/divider/width",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider width=\"xs\"></plus-divider>\n<br />\n<plus-divider width=\"sm\"></plus-divider>\n<br />\n<plus-divider width=\"md\"></plus-divider>\n<br />\n<plus-divider width=\"lg\"></plus-divider>\n<br />\n<plus-divider width=\"xl\"></plus-divider>\n"
-  },
-  {
-    "key": "react/divider/width",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider width=\"xs\"></plus-divider>\n      <br />\n      <plus-divider width=\"sm\"></plus-divider>\n      <br />\n      <plus-divider width=\"md\"></plus-divider>\n      <br />\n      <plus-divider width=\"lg\"></plus-divider>\n      <br />\n      <plus-divider width=\"xl\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/divider/width",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider width=\"xs\"></plus-divider>\n<br />\n<plus-divider width=\"sm\"></plus-divider>\n<br />\n<plus-divider width=\"md\"></plus-divider>\n<br />\n<plus-divider width=\"lg\"></plus-divider>\n<br />\n<plus-divider width=\"xl\"></plus-divider>\n"
-  },
-  {
-    "key": "vue/divider/width",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<div>\n  <plus-divider width=\"xs\"></plus-divider>\n  <br />\n  <plus-divider width=\"sm\"></plus-divider>\n  <br />\n  <plus-divider width=\"md\"></plus-divider>\n  <br />\n  <plus-divider width=\"lg\"></plus-divider>\n  <br />\n  <plus-divider width=\"xl\"></plus-divider>\n</div>\n"
-  },
-  {
     "key": "angular/divider/vertical",
     "settings": {
       "dock": false,
@@ -5638,7 +5643,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
-    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
+    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider orientation=\"vertical\">OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
   {
     "key": "javascript/divider/vertical",
@@ -5649,7 +5654,7 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
-    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
+    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider orientation=\"vertical\">OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
   {
     "key": "react/divider/vertical",
@@ -5658,7 +5663,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack>\n      <plus-faker></plus-faker>\n      <plus-divider vertical>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack>\n      <plus-faker></plus-faker>\n      <plus-divider orientation=\"vertical\">OR</plus-divider>\n      <plus-faker></plus-faker>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n"
   },
   {
@@ -5670,7 +5675,7 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
-    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
+    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider orientation=\"vertical\">OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
   {
     "key": "vue/divider/vertical",
@@ -5681,105 +5686,56 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-divider {\n  margin: 0 1rem;\n}\n",
-    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider vertical>OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
+    "template": "<plus-stack>\n  <plus-faker></plus-faker>\n  <plus-divider orientation=\"vertical\">OR</plus-divider>\n  <plus-faker></plus-faker>\n</plus-stack>\n"
   },
   {
-    "key": "angular/divider/variant",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": true
-    },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
-  },
-  {
-    "key": "javascript/divider/variant",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": true
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
-  },
-  {
-    "key": "react/divider/variant",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": true
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider variant=\"middle\"></plus-divider>\n      <br />\n      <plus-divider variant=\"inset\"></plus-divider>\n      <br />\n      <plus-divider variant=\"full\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/divider/variant",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": true
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
-  },
-  {
-    "key": "vue/divider/variant",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": true
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
-  },
-  {
-    "key": "angular/divider/type",
+    "key": "angular/divider/stroke",
     "settings": {
       "dock": false,
       "isolate": false,
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n<br />\n<plus-divider type=\"double\"></plus-divider>\n<br />\n<plus-divider type=\"groove\"></plus-divider>\n<br />\n<plus-divider type=\"inset\"></plus-divider>\n<br />\n<plus-divider type=\"outset\"></plus-divider>\n<br />\n<plus-divider type=\"ridge\"></plus-divider>\n<br />\n<plus-divider type=\"solid\"></plus-divider>\n"
+    "template": "<plus-divider stroke=\"dashed\"></plus-divider>\n<br />\n<plus-divider stroke=\"dotted\"></plus-divider>\n<br />\n<plus-divider stroke=\"double\"></plus-divider>\n<br />\n<plus-divider stroke=\"groove\"></plus-divider>\n<br />\n<plus-divider stroke=\"inset\"></plus-divider>\n<br />\n<plus-divider stroke=\"outset\"></plus-divider>\n<br />\n<plus-divider stroke=\"ridge\"></plus-divider>\n<br />\n<plus-divider stroke=\"solid\"></plus-divider>\n"
   },
   {
-    "key": "javascript/divider/type",
+    "key": "javascript/divider/stroke",
     "settings": {
       "dock": false,
       "isolate": false,
       "rtl": false
     },
     "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n<br />\n<plus-divider type=\"double\"></plus-divider>\n<br />\n<plus-divider type=\"groove\"></plus-divider>\n<br />\n<plus-divider type=\"inset\"></plus-divider>\n<br />\n<plus-divider type=\"outset\"></plus-divider>\n<br />\n<plus-divider type=\"ridge\"></plus-divider>\n<br />\n<plus-divider type=\"solid\"></plus-divider>\n"
+    "template": "<plus-divider stroke=\"dashed\"></plus-divider>\n<br />\n<plus-divider stroke=\"dotted\"></plus-divider>\n<br />\n<plus-divider stroke=\"double\"></plus-divider>\n<br />\n<plus-divider stroke=\"groove\"></plus-divider>\n<br />\n<plus-divider stroke=\"inset\"></plus-divider>\n<br />\n<plus-divider stroke=\"outset\"></plus-divider>\n<br />\n<plus-divider stroke=\"ridge\"></plus-divider>\n<br />\n<plus-divider stroke=\"solid\"></plus-divider>\n"
   },
   {
-    "key": "react/divider/type",
+    "key": "react/divider/stroke",
     "settings": {
       "dock": false,
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider type=\"dashed\"></plus-divider>\n      <br />\n      <plus-divider type=\"dotted\"></plus-divider>\n      <br />\n      <plus-divider type=\"double\"></plus-divider>\n      <br />\n      <plus-divider type=\"groove\"></plus-divider>\n      <br />\n      <plus-divider type=\"inset\"></plus-divider>\n      <br />\n      <plus-divider type=\"outset\"></plus-divider>\n      <br />\n      <plus-divider type=\"ridge\"></plus-divider>\n      <br />\n      <plus-divider type=\"solid\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider stroke=\"dashed\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"dotted\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"double\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"groove\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"inset\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"outset\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"ridge\"></plus-divider>\n      <br />\n      <plus-divider stroke=\"solid\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
-    "key": "svelte/divider/type",
-    "settings": {
-      "dock": false,
-      "isolate": false,
-      "rtl": false
-    },
-    "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n<br />\n<plus-divider type=\"double\"></plus-divider>\n<br />\n<plus-divider type=\"groove\"></plus-divider>\n<br />\n<plus-divider type=\"inset\"></plus-divider>\n<br />\n<plus-divider type=\"outset\"></plus-divider>\n<br />\n<plus-divider type=\"ridge\"></plus-divider>\n<br />\n<plus-divider type=\"solid\"></plus-divider>\n"
-  },
-  {
-    "key": "vue/divider/type",
+    "key": "svelte/divider/stroke",
     "settings": {
       "dock": false,
       "isolate": false,
       "rtl": false
     },
     "script": "import '@htmlplus/ui/divider.js';\n",
-    "template": "<div>\n  <plus-divider type=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider type=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider type=\"double\"></plus-divider>\n  <br />\n  <plus-divider type=\"groove\"></plus-divider>\n  <br />\n  <plus-divider type=\"inset\"></plus-divider>\n  <br />\n  <plus-divider type=\"outset\"></plus-divider>\n  <br />\n  <plus-divider type=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider type=\"solid\"></plus-divider>\n</div>\n"
+    "template": "<plus-divider stroke=\"dashed\"></plus-divider>\n<br />\n<plus-divider stroke=\"dotted\"></plus-divider>\n<br />\n<plus-divider stroke=\"double\"></plus-divider>\n<br />\n<plus-divider stroke=\"groove\"></plus-divider>\n<br />\n<plus-divider stroke=\"inset\"></plus-divider>\n<br />\n<plus-divider stroke=\"outset\"></plus-divider>\n<br />\n<plus-divider stroke=\"ridge\"></plus-divider>\n<br />\n<plus-divider stroke=\"solid\"></plus-divider>\n"
+  },
+  {
+    "key": "vue/divider/stroke",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<div>\n  <plus-divider stroke=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"double\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"groove\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"inset\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"outset\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider stroke=\"solid\"></plus-divider>\n</div>\n"
   },
   {
     "key": "angular/divider/sticky",
@@ -5836,6 +5792,55 @@
     "template": "<div class=\"container\">\n  <plus-sticky>\n    <plus-divider>\n      <span>Today</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>Yesterday</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>5 Days Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>2 Weeks Ago</span>\n    </plus-divider>\n  </plus-sticky>\n  <plus-sticky>\n    <plus-divider>\n      <span>1 Month Ago</span>\n    </plus-divider>\n  </plus-sticky>\n</div>\n"
   },
   {
+    "key": "angular/divider/size",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-divider size=\"xs\"></plus-divider>\n<br />\n<plus-divider size=\"sm\"></plus-divider>\n<br />\n<plus-divider size=\"md\"></plus-divider>\n<br />\n<plus-divider size=\"lg\"></plus-divider>\n<br />\n<plus-divider size=\"xl\"></plus-divider>\n"
+  },
+  {
+    "key": "javascript/divider/size",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider size=\"xs\"></plus-divider>\n<br />\n<plus-divider size=\"sm\"></plus-divider>\n<br />\n<plus-divider size=\"md\"></plus-divider>\n<br />\n<plus-divider size=\"lg\"></plus-divider>\n<br />\n<plus-divider size=\"xl\"></plus-divider>\n"
+  },
+  {
+    "key": "react/divider/size",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider size=\"xs\"></plus-divider>\n      <br />\n      <plus-divider size=\"sm\"></plus-divider>\n      <br />\n      <plus-divider size=\"md\"></plus-divider>\n      <br />\n      <plus-divider size=\"lg\"></plus-divider>\n      <br />\n      <plus-divider size=\"xl\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/divider/size",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider size=\"xs\"></plus-divider>\n<br />\n<plus-divider size=\"sm\"></plus-divider>\n<br />\n<plus-divider size=\"md\"></plus-divider>\n<br />\n<plus-divider size=\"lg\"></plus-divider>\n<br />\n<plus-divider size=\"xl\"></plus-divider>\n"
+  },
+  {
+    "key": "vue/divider/size",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<div>\n  <plus-divider size=\"xs\"></plus-divider>\n  <br />\n  <plus-divider size=\"sm\"></plus-divider>\n  <br />\n  <plus-divider size=\"md\"></plus-divider>\n  <br />\n  <plus-divider size=\"lg\"></plus-divider>\n  <br />\n  <plus-divider size=\"xl\"></plus-divider>\n</div>\n"
+  },
+  {
     "key": "angular/divider/placement",
     "settings": {
       "dock": false,
@@ -5883,6 +5888,55 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\n",
     "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
+  },
+  {
+    "key": "angular/divider/inset",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-divider inset=\"none\"></plus-divider>\n<br />\n<plus-divider inset=\"start\"></plus-divider>\n<br />\n<plus-divider inset=\"end\"></plus-divider>\n<br />\n<plus-divider inset=\"both\"></plus-divider>\n"
+  },
+  {
+    "key": "javascript/divider/inset",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider inset=\"none\"></plus-divider>\n<br />\n<plus-divider inset=\"start\"></plus-divider>\n<br />\n<plus-divider inset=\"end\"></plus-divider>\n<br />\n<plus-divider inset=\"both\"></plus-divider>\n"
+  },
+  {
+    "key": "react/divider/inset",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider inset=\"none\"></plus-divider>\n      <br />\n      <plus-divider inset=\"start\"></plus-divider>\n      <br />\n      <plus-divider inset=\"end\"></plus-divider>\n      <br />\n      <plus-divider inset=\"both\"></plus-divider>\n    </>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/divider/inset",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<plus-divider inset=\"none\"></plus-divider>\n<br />\n<plus-divider inset=\"start\"></plus-divider>\n<br />\n<plus-divider inset=\"end\"></plus-divider>\n<br />\n<plus-divider inset=\"both\"></plus-divider>\n"
+  },
+  {
+    "key": "vue/divider/inset",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": true
+    },
+    "script": "import '@htmlplus/ui/divider.js';\n",
+    "template": "<div>\n  <plus-divider inset=\"none\"></plus-divider>\n  <br />\n  <plus-divider inset=\"start\"></plus-divider>\n  <br />\n  <plus-divider inset=\"end\"></plus-divider>\n  <br />\n  <plus-divider inset=\"both\"></plus-divider>\n</div>\n"
   },
   {
     "key": "angular/divider/icon",
@@ -5942,7 +5996,7 @@
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-faker></plus-faker>\n<plus-divider orientation=\"horizontal\">OR</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "javascript/divider/horizontal",
@@ -5953,7 +6007,7 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-faker></plus-faker>\n<plus-divider orientation=\"horizontal\">OR</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "react/divider/horizontal",
@@ -5962,7 +6016,7 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-faker></plus-faker>\n      <plus-divider>OR</plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-faker></plus-faker>\n      <plus-divider orientation=\"horizontal\">OR</plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n"
   },
   {
@@ -5974,7 +6028,7 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-    "template": "<plus-faker></plus-faker>\n<plus-divider>OR</plus-divider>\n<plus-faker></plus-faker>\n"
+    "template": "<plus-faker></plus-faker>\n<plus-divider orientation=\"horizontal\">OR</plus-divider>\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "vue/divider/horizontal",
@@ -5985,7 +6039,7 @@
     },
     "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-    "template": "<div>\n  <plus-faker></plus-faker>\n  <plus-divider>OR</plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
+    "template": "<div>\n  <plus-faker></plus-faker>\n  <plus-divider orientation=\"horizontal\">OR</plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/divider/default",
@@ -6043,9 +6097,9 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-divider {\n  gap: 1rem;\n}\nplus-divider::part(prefix) {\n  border-image: linear-gradient(90deg, #00000000, hsl(from var(--plus-divider-color) h s 85%)) 1;\n}\nplus-divider::part(suffix) {\n  border-image: linear-gradient(90deg, hsl(from var(--plus-divider-color) h s 85%), #00000000) 1;\n}\n",
+    "template": "<plus-divider color=\"rgb(238, 110, 115)\">\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<br />\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "javascript/divider/customized",
@@ -6054,9 +6108,9 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "style": "plus-divider {\n  gap: 1rem;\n}\nplus-divider::part(prefix) {\n  border-image: linear-gradient(90deg, #00000000, hsl(from var(--plus-divider-color) h s 85%)) 1;\n}\nplus-divider::part(suffix) {\n  border-image: linear-gradient(90deg, hsl(from var(--plus-divider-color) h s 85%), #00000000) 1;\n}\n",
+    "template": "<plus-divider color=\"rgb(238, 110, 115)\">\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<br />\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "react/divider/customized",
@@ -6065,8 +6119,8 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider>\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n"
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-divider color=\"rgb(238, 110, 115)\">\n        <span>\n          <plus-icon name=\"tag\"></plus-icon>\n          &nbsp; Description\n        </span>\n      </plus-divider>\n      <br />\n      <plus-faker></plus-faker>\n    </>\n  );\n}\nexport default App;\n",
+    "style": "plus-divider {\n  gap: 1rem;\n}\nplus-divider::part(prefix) {\n  border-image: linear-gradient(90deg, #00000000, hsl(from var(--plus-divider-color) h s 85%)) 1;\n}\nplus-divider::part(suffix) {\n  border-image: linear-gradient(90deg, hsl(from var(--plus-divider-color) h s 85%), #00000000) 1;\n}\n"
   },
   {
     "key": "svelte/divider/customized",
@@ -6075,9 +6129,9 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<plus-divider>\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<plus-faker></plus-faker>\n"
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "style": "plus-divider {\n  gap: 1rem;\n}\nplus-divider::part(prefix) {\n  border-image: linear-gradient(90deg, #00000000, hsl(from var(--plus-divider-color) h s 85%)) 1;\n}\nplus-divider::part(suffix) {\n  border-image: linear-gradient(90deg, hsl(from var(--plus-divider-color) h s 85%), #00000000) 1;\n}\n",
+    "template": "<plus-divider color=\"rgb(238, 110, 115)\">\n  <span>\n    <plus-icon name=\"tag\"></plus-icon>\n    &nbsp; Description\n  </span>\n</plus-divider>\n<br />\n<plus-faker></plus-faker>\n"
   },
   {
     "key": "vue/divider/customized",
@@ -6086,9 +6140,9 @@
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "style": "plus-divider {\n  gap: 1rem;\n  color: rgb(238, 110, 115);\n  margin-bottom: 1rem;\n}\nplus-divider::part(line) {\n  border-color: rgba(238, 110, 115, 0.25);\n}\n",
-    "template": "<div>\n  <plus-divider>\n    <span>\n      <plus-icon name=\"tag\"></plus-icon>\n      &nbsp; Description\n    </span>\n  </plus-divider>\n  <plus-faker></plus-faker>\n</div>\n"
+    "script": "import '@htmlplus/ui/divider.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "style": "plus-divider {\n  gap: 1rem;\n}\nplus-divider::part(prefix) {\n  border-image: linear-gradient(90deg, #00000000, hsl(from var(--plus-divider-color) h s 85%)) 1;\n}\nplus-divider::part(suffix) {\n  border-image: linear-gradient(90deg, hsl(from var(--plus-divider-color) h s 85%), #00000000) 1;\n}\n",
+    "template": "<div>\n  <plus-divider color=\"rgb(238, 110, 115)\">\n    <span>\n      <plus-icon name=\"tag\"></plus-icon>\n      &nbsp; Description\n    </span>\n  </plus-divider>\n  <br />\n  <plus-faker></plus-faker>\n</div>\n"
   },
   {
     "key": "angular/divider/color",
