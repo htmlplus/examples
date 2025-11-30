@@ -12165,7 +12165,7 @@
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement?.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement?.done();\n    }, 5000);\n  }\n}\n",
-    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n"
   },
   {
@@ -12176,7 +12176,7 @@
       "rtl": false
     },
     "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar?.start();\n});\nsetTimeout(() => {\n  $appProgressBar?.done();\n}, 5000);\n",
-    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n"
   },
   {
@@ -12187,7 +12187,7 @@
       "rtl": false
     },
     "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current?.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current?.done();\n    }, 5000);\n  }, []);\n  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
-    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n"
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  transition: 500ms ease-in-out;\n}\n"
   },
   {
     "key": "svelte/app-progress-bar/customized",
@@ -12197,7 +12197,7 @@
       "rtl": false
     },
     "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef?.done();\n  }, 5000);\n});\n",
-    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n"
   },
   {
@@ -12208,8 +12208,62 @@
       "rtl": false
     },
     "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value?.done();\n  }, 5000);\n});\n",
-    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  background-color: #d63939;\n  transition: 500ms ease-in-out;\n}\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n\n  height: 4px;\n  transition: 2500ms ease;\n  z-index: 1500;\n}\nplus-app-progress-bar::part(bar) {\n  transition: 500ms ease-in-out;\n}\n",
     "template": "<plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n"
+  },
+  {
+    "key": "angular/app-progress-bar/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.appProgressBarRef.nativeElement?.start();\n    });\n    setTimeout(() => {\n      this.appProgressBarRef.nativeElement?.done();\n    }, 5000);\n  }\n}\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
+    "template": "<plus-app-progress-bar color=\"#d63939\" #appProgressBar></plus-app-progress-bar>\n"
+  },
+  {
+    "key": "javascript/app-progress-bar/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import '@htmlplus/ui/app-progress-bar.js';\n\nrequestAnimationFrame(() => {\n  $appProgressBar?.start();\n});\nsetTimeout(() => {\n  $appProgressBar?.done();\n}, 5000);\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
+    "template": "<plus-app-progress-bar color=\"#d63939\" id=\"$appProgressBar\"></plus-app-progress-bar>\n"
+  },
+  {
+    "key": "react/app-progress-bar/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      appProgressBarRef.current?.start();\n    });\n    setTimeout(() => {\n      appProgressBarRef.current?.done();\n    }, 5000);\n  }, []);\n  return <plus-app-progress-bar color=\"#d63939\" ref={appProgressBarRef}></plus-app-progress-bar>;\n}\nexport default App;\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
+  },
+  {
+    "key": "svelte/app-progress-bar/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nlet appProgressBarRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef?.done();\n  }, 5000);\n});\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
+    "template": "<plus-app-progress-bar color=\"#d63939\" bind:this={appProgressBarRef}></plus-app-progress-bar>\n"
+  },
+  {
+    "key": "vue/app-progress-bar/color",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\n\nconst appProgressBarRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    appProgressBarRef.value?.start();\n  });\n  setTimeout(() => {\n    appProgressBarRef.value?.done();\n  }, 5000);\n});\n",
+    "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
+    "template": "<plus-app-progress-bar color=\"#d63939\" ref=\"appProgressBarRef\"></plus-app-progress-bar>\n"
   },
   {
     "key": "angular/animation/register-a-custom-name",

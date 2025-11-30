@@ -14,18 +14,11 @@
   });
 </script>
 
-<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>
+<plus-app-progress-bar color="#d63939" bind:this={appProgressBarRef}></plus-app-progress-bar>
 
 <style>
   plus-app-progress-bar {
     /* This style is for demonstration purposes only and not for actual projects */
     position: static;
-
-    height: 4px;
-    transition: 2500ms ease;
-    z-index: 1500;
-  }
-  plus-app-progress-bar::part(bar) {
-    transition: 500ms ease-in-out;
   }
 </style>

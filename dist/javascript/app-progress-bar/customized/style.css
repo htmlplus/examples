@@ -7,6 +7,5 @@ plus-app-progress-bar {
   z-index: 1500;
 }
 plus-app-progress-bar::part(bar) {
-  background-color: #d63939;
   transition: 500ms ease-in-out;
 }
