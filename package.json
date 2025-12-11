@@ -1,14 +1,14 @@
 {
 	"name": "@htmlplus/examples",
 	"version": "0.0.0",
+	"description": "Collection of examples for @htmlplus/ui.",
 	"license": "MIT",
 	"author": "Masood Abdolian <m.abdolian@gmail.com>",
-	"description": "Collection of examples for @htmlplus/ui.",
 	"scripts": {
 		"clean": "rimraf dist",
-		"lint": "biome check --write",
 		"generate": "tsx src/generate.ts",
 		"generate:watch": "tsx watch src/generate.ts",
+		"lint": "biome check --write",
 		"prepare": "husky",
 		"type-check": "tsc --noEmit"
 	},
