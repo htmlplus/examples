@@ -18,6 +18,6 @@
 
   const signatureRef = ref();
   function onClick() {
-    signatureRef.value.value = '';
+    signatureRef.value.clear();
   }
 </script>

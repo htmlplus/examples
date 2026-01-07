@@ -1,9 +1,13 @@
 import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/signature.js';
+import '@htmlplus/ui/stack.js';
 
-$save.addEventListener('click', () => {
-  const tab = open('', '_blank');
-  setTimeout(() => {
-    tab.document.write($signature.value);
-  }, 250);
+$toDataURL.addEventListener('click', () => {
+  console.log($signature.toDataURL());
+});
+$toSVG.addEventListener('click', () => {
+  console.log($signature.toSVG());
+});
+$getValue.addEventListener('click', () => {
+  console.log($signature.value);
 });
