@@ -420,6 +420,16 @@ export const react: IPlugin<IReactOptions> = (options) => {
 			return formatted;
 		})();
 
+		const declaration = await (async () => {
+			if (!context.declarationAST) return;
+
+			const { code } = generator(context.declarationAST);
+
+			const formatted = await format(code, { parser: 'typescript' });
+
+			return formatted;
+		})();
+
 		const script = await (async () => {
 			if (!context.scriptAST) return;
 
@@ -434,6 +444,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
 
 		const model = merge(context, {
 			configContent: config,
+			declarationContent: declaration,
 			scriptContent: script
 		});
 
@@ -441,6 +452,10 @@ export const react: IPlugin<IReactOptions> = (options) => {
 
 		if (!context.configAST) {
 			patterns.push('!templates/src/config.js.*');
+		}
+
+		if (!context.declarationAST) {
+			patterns.push('!templates/src/plus.d.ts.*');
 		}
 
 		if (!context.styleContent) {
@@ -451,6 +466,7 @@ export const react: IPlugin<IReactOptions> = (options) => {
 
 		context.output[name] = {
 			config,
+			declaration,
 			script,
 			style: context.styleContent
 		};

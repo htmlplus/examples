@@ -301,6 +301,16 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
 			return formatted;
 		})();
 
+		const declaration = await (async () => {
+			if (!context.declarationAST) return;
+
+			const { code } = generator(context.declarationAST);
+
+			const formatted = await format(code, { parser: 'typescript' });
+
+			return formatted;
+		})();
+
 		const script = await (async () => {
 			if (!context.scriptAST) return;
 
@@ -327,6 +337,7 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
 
 		const model = merge(context, {
 			configContent: config,
+			declarationContent: declaration,
 			scriptContent: script,
 			templateContent: template
 		});
@@ -337,10 +348,15 @@ export const svelte: IPlugin<ISvelteOptions> = (options) => {
 			patterns.push('!templates/src/config.js.*');
 		}
 
+		if (!context.declarationAST) {
+			patterns.push('!templates/src/plus.d.ts.*');
+		}
+
 		await write(__dirname, patterns, destination)(model);
 
 		context.output[name] = {
 			config,
+			declaration,
 			script,
 			style: context.styleContent,
 			template

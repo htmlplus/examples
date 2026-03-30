@@ -12492,6 +12492,65 @@
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :overrides='{\"@xs\":{\"vertical\":true},\"@sm\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
+    "key": "angular/animation/name-type-safe",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+    "template": "<plus-center>\n  <plus-animation [iterations]=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/animation/name-type-safe",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+    "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
+  },
+  {
+    "key": "react/animation/name-type-safe",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-animation iterations={Infinity} name=\"fade-in\" run></plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
+  },
+  {
+    "key": "svelte/animation/name-type-safe",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+    "template": "<plus-center>\n  <plus-animation iterations={Infinity} name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/animation/name-type-safe",
+    "settings": {
+      "dock": false,
+      "isolate": false,
+      "rtl": false
+    },
+    "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+    "template": "<plus-center>\n  <plus-animation :iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
+  },
+  {
     "key": "angular/animation/methods",
     "settings": {
       "dock": false,

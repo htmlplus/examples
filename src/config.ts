@@ -17,24 +17,12 @@ const CDN = 'https://esm.run/';
 
 const CUSTOM_ELEMENTS_ATTRIBUTE_VALUE_STRING = [
 	{
-		element: 'plus-aspect-ratio',
-		attributes: ['value']
-	},
-	{
 		element: 'plus-avatar',
 		attributes: ['size']
 	},
 	{
 		element: 'plus-cropper',
 		attributes: ['aspect-ratio']
-	},
-	{
-		element: 'plus-grid',
-		attributes: ['*']
-	},
-	{
-		element: 'plus-grid-item',
-		attributes: ['*']
 	},
 	{
 		element: 'plus-icon',

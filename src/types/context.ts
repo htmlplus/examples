@@ -4,6 +4,9 @@ export interface IContext {
 	configAST?: t.File;
 	configContent?: string;
 
+	declarationAST?: t.File;
+	declarationContent?: string;
+
 	dependencies: IContextDependency[];
 
 	directoryName: string;

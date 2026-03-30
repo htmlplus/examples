@@ -85,6 +85,16 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
 			return formatted;
 		})();
 
+		const declaration = await (async () => {
+			if (!context.declarationAST) return;
+
+			const { code } = generator(context.declarationAST);
+
+			const formatted = await format(code, { parser: 'typescript' });
+
+			return formatted;
+		})();
+
 		const script = await (async () => {
 			if (!context.scriptAST) return;
 
@@ -111,6 +121,7 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
 
 		const model = merge(context, {
 			configContent: config,
+			declarationContent: declaration,
 			scriptContent: script,
 			templateContent: template
 		});
@@ -121,6 +132,10 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
 			patterns.push('!templates/config.js.*');
 		}
 
+		if (!context.declarationAST) {
+			patterns.push('!templates/plus.d.ts.*');
+		}
+
 		if (!context.styleContent) {
 			patterns.push('!templates/style.css.*');
 		}
@@ -129,6 +144,7 @@ export const javascript: IPlugin<IJavascriptOptions> = (options) => {
 
 		context.output[name] = {
 			config,
+			declaration,
 			script,
 			style: context.styleContent,
 			template

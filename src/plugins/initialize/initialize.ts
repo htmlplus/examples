@@ -101,6 +101,20 @@ export const initialize: IPlugin<IInitializeOptions> = (options) => {
 		})();
 
 		(() => {
+			const script = $('script')
+				.filter((_index, element) => !!$(element).html()?.includes('declare module'))
+				.first();
+
+			const content = script.html();
+
+			script.remove();
+
+			if (!content) return;
+
+			context.declarationAST = parse(content, { sourceType: 'module', plugins: ['typescript'] });
+		})();
+
+		(() => {
 			const script = $('script').first();
 
 			const content = script.html();
