@@ -467,6 +467,7 @@ export class Resolver {
 
 				if (!t.isIdentifier(path.parent.property, { name: 'addEventListener' })) return;
 
+				// biome-ignore lint: TODO
 				const wrapper = path.parentPath?.parentPath?.parentPath!;
 
 				if (this.resolved(wrapper.node)) return;
@@ -556,6 +557,7 @@ export class Resolver {
 
 				if (!t.isVariableDeclaration(path.parentPath.parent, { kind: 'const' })) return;
 
+				// biome-ignore lint: TODO
 				if (this.resolved(path.parentPath?.parentPath?.node!)) return;
 
 				const id = path.parent.id.name;
@@ -584,6 +586,7 @@ export class Resolver {
 
 				if (!t.isVariableDeclaration(path.parentPath.parent, { kind: 'const' })) return;
 
+				// biome-ignore lint: TODO
 				if (this.resolved(path.parentPath?.parentPath?.node!)) return;
 
 				const id = path.parent.id.name;

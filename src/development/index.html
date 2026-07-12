@@ -13,8 +13,8 @@
     </plus-intersection>
 
     <plus-center>
-      <button id="$cancel">Cancel</button>
-      <button id="$finish">Finish</button>
+      <button type="button" id="$cancel">Cancel</button>
+      <button type="button" id="$finish">Finish</button>
     </plus-center>
 
     <plus-card id="$card" elevation="12"></plus-card>
@@ -22,10 +22,10 @@
 
     <plus-signature id="$signature"> &nbsp; Menu </plus-signature>
 
-    <button id="$with">Save With Background</button>
-    <button id="$without">Save Without Background</button>
+    <button type="button" id="$with">Save With Background</button>
+    <button type="button" id="$without">Save Without Background</button>
 
-    <button id="$button">Test</button>
+    <button type="button" id="$button">Test</button>
 
     <p id="$el1" property>1</p>
     <p id="$el2" property>2</p>
@@ -74,7 +74,7 @@
         $animation2.keyframes = [];
       });
 
-      const intersectionChange = function (event) {
+      const intersectionChange = (event) => {
         $animation.run = event.detail.isIntersecting;
       };
 
@@ -91,10 +91,10 @@
 
       function updateCard() {
         counter++;
-        $card.innerHTML = 'Elevation' + shadow;
+        $card.innerHTML = `Elevation${shadow}`;
       }
 
-      $input.addEventListener('change', function (event) {
+      $input.addEventListener('change', (event) => {
         $card.elevation = event.target.value;
         $card.elevation = event.target.value;
 
@@ -119,7 +119,7 @@
 
       $without.addEventListener('click', (event) => save(false, event));
 
-      function test(p1) {
+      function test(_p1) {
         return (event) => {
           $el1.property = false;
           $el2.property = false;
@@ -128,18 +128,18 @@
 
       $button.addEventListener('click', test('p1'));
 
-      Array.from($accordions.children).forEach((accordion, index, accordions) => {
+      Array.from($accordions.children).forEach((accordion, _index, accordions) => {
         accordion.addEventListener('plus-expand', (event) => {
           accordions.forEach((accordion) => {
-            accordion.open = event.target == accordion;
+            accordion.open = event.target === accordion;
           });
         });
       });
 
-      Array.from($accordions.children).forEach((accordion, index, accordions) => {
+      Array.from($accordions.children).forEach((accordion, _index, accordions) => {
         accordion.addEventListener('plus-expand', (event) => {
           accordions.forEach((accordion) => {
-            accordion.open = event.target == accordion;
+            accordion.open = event.target === accordion;
           });
         });
       });

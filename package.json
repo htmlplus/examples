@@ -1,14 +1,14 @@
 {
 	"name": "@htmlplus/examples",
 	"version": "0.0.0",
+	"description": "Collection of examples for @htmlplus/ui.",
 	"license": "MIT",
 	"author": "Masood Abdolian <m.abdolian@gmail.com>",
-	"description": "Collection of examples for @htmlplus/ui.",
 	"scripts": {
 		"clean": "rimraf dist",
-		"lint": "biome check --write",
 		"generate": "tsx src/generate.ts",
 		"generate:watch": "tsx watch src/generate.ts",
+		"lint": "biome check --write",
 		"prepare": "husky",
 		"type-check": "tsc --noEmit"
 	},
@@ -16,7 +16,7 @@
 		"@babel/generator": "^7.28.3",
 		"@babel/traverse": "^7.28.3",
 		"@babel/types": "^7.28.2",
-		"@biomejs/biome": "2.2.2",
+		"@biomejs/biome": "2.5.3",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.2",
 		"@types/babel__generator": "^7.27.0",
 		"@types/babel__traverse": "^7.28.0",
