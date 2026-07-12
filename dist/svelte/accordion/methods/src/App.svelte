@@ -16,9 +16,9 @@
 </script>
 
 <plus-stack gap="1rem">
-  <button on:click={onClick1}>Collapse</button>
-  <button on:click={onClick2}>Expand</button>
-  <button on:click={onClick3}>Toggle</button>
+  <button type="button" on:click={onClick1}>Collapse</button>
+  <button type="button" on:click={onClick2}>Expand</button>
+  <button type="button" on:click={onClick3}>Toggle</button>
 </plus-stack>
 <br />
 <plus-accordion summary="Summary" bind:this={accordionRef}>

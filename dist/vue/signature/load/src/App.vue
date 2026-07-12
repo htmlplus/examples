@@ -5,7 +5,7 @@
     </plus-center>
     <br />
     <plus-center>
-      <button @click="onClick">Load</button>
+      <button type="button" @click="onClick">Load</button>
     </plus-center>
   </div>
 </template>

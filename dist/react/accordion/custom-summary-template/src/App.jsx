@@ -7,7 +7,7 @@ function App() {
     <plus-accordion>
       <plus-stack slot="summary" justify="between">
         <b>Summary</b>
-        <button>Action</button>
+        <button type="button">Action</button>
       </plus-stack>
       <plus-faker></plus-faker>
     </plus-accordion>

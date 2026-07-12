@@ -12,7 +12,9 @@ function App() {
   return (
     <plus-center>
       <plus-animation name="tada" ref={animationRef}>
-        <button onClick={onClick}>Click Me</button>
+        <button type="button" onClick={onClick}>
+          Click Me
+        </button>
       </plus-animation>
     </plus-center>
   );

@@ -28,6 +28,6 @@
 </plus-center>
 <br />
 <plus-stack gap="1rem">
-  <button disabled={disabled1} on:click={onClick1}>Undo</button>
-  <button disabled={disabled2} on:click={onClick2}>Redo</button>
+  <button type="button" disabled={disabled1} on:click={onClick1}>Undo</button>
+  <button type="button" disabled={disabled2} on:click={onClick2}>Redo</button>
 </plus-stack>

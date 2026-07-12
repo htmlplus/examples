@@ -18,5 +18,5 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick}>To URL</button>
+  <button type="button" on:click={onClick}>To URL</button>
 </plus-center>

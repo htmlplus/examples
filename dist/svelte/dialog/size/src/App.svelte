@@ -16,10 +16,10 @@
 </script>
 
 <plus-stack gap="1rem">
-  <button on:click={() => show('sm')}>Small</button>
-  <button on:click={() => show('md')}>Medium</button>
-  <button on:click={() => show('lg')}>Large</button>
-  <button on:click={() => show('xl')}>Extra Large</button>
+  <button type="button" on:click={() => show('sm')}>Small</button>
+  <button type="button" on:click={() => show('md')}>Medium</button>
+  <button type="button" on:click={() => show('lg')}>Large</button>
+  <button type="button" on:click={() => show('xl')}>Extra Large</button>
 </plus-stack>
 <plus-dialog animation connector="dialog-size" bind:this={dialogRef}>
   <plus-dialog-content>

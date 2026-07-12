@@ -3,12 +3,12 @@
     <plus-app-progress-bar ref="appProgressBarRef"></plus-app-progress-bar>
     <br />
     <plus-stack gap="0.5rem">
-      <button @click="onClick1">Start</button>
-      <button @click="onClick2">Set</button>
-      <button @click="onClick3">Increase</button>
-      <button @click="onClick4">Trickle</button>
-      <button @click="onClick5">Done</button>
-      <button @click="onClick6">Force Done</button>
+      <button type="button" @click="onClick1">Start</button>
+      <button type="button" @click="onClick2">Set</button>
+      <button type="button" @click="onClick3">Increase</button>
+      <button type="button" @click="onClick4">Trickle</button>
+      <button type="button" @click="onClick5">Done</button>
+      <button type="button" @click="onClick6">Force Done</button>
     </plus-stack>
   </div>
 </template>

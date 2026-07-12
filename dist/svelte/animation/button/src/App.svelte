@@ -11,7 +11,7 @@
 
 <plus-center>
   <plus-animation name="tada" bind:this={animationRef}>
-    <button on:click={onClick}>Click Me</button>
+    <button type="button" on:click={onClick}>Click Me</button>
   </plus-animation>
 </plus-center>
 

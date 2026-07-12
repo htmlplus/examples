@@ -21,5 +21,5 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick}>To Base64</button>
+  <button type="button" on:click={onClick}>To Base64</button>
 </plus-center>

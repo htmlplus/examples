@@ -8,7 +8,7 @@
     </plus-center>
     <br />
     <plus-center>
-      <button @click="onClick">To URL</button>
+      <button type="button" @click="onClick">To URL</button>
     </plus-center>
   </div>
 </template>

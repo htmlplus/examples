@@ -1,7 +1,7 @@
 <template>
   <plus-center>
     <plus-animation name="tada" ref="animationRef">
-      <button @click="onClick">Click Me</button>
+      <button type="button" @click="onClick">Click Me</button>
     </plus-animation>
   </plus-center>
 </template>

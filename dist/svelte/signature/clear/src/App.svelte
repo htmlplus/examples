@@ -13,5 +13,5 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick}>Clear</button>
+  <button type="button" on:click={onClick}>Clear</button>
 </plus-center>

@@ -18,9 +18,15 @@ function App() {
   return (
     <>
       <plus-stack gap="1rem">
-        <button onClick={onClick1}>Collapse</button>
-        <button onClick={onClick2}>Expand</button>
-        <button onClick={onClick3}>Toggle</button>
+        <button type="button" onClick={onClick1}>
+          Collapse
+        </button>
+        <button type="button" onClick={onClick2}>
+          Expand
+        </button>
+        <button type="button" onClick={onClick3}>
+          Toggle
+        </button>
       </plus-stack>
       <br />
       <plus-accordion summary="Summary" ref={accordionRef}>

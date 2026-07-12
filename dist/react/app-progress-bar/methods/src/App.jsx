@@ -28,12 +28,24 @@ function App() {
       <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>
       <br />
       <plus-stack gap="0.5rem">
-        <button onClick={onClick1}>Start</button>
-        <button onClick={onClick2}>Set</button>
-        <button onClick={onClick3}>Increase</button>
-        <button onClick={onClick4}>Trickle</button>
-        <button onClick={onClick5}>Done</button>
-        <button onClick={onClick6}>Force Done</button>
+        <button type="button" onClick={onClick1}>
+          Start
+        </button>
+        <button type="button" onClick={onClick2}>
+          Set
+        </button>
+        <button type="button" onClick={onClick3}>
+          Increase
+        </button>
+        <button type="button" onClick={onClick4}>
+          Trickle
+        </button>
+        <button type="button" onClick={onClick5}>
+          Done
+        </button>
+        <button type="button" onClick={onClick6}>
+          Force Done
+        </button>
       </plus-stack>
     </>
   );

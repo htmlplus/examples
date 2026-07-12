@@ -66,5 +66,5 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick}>Load</button>
+  <button type="button" on:click={onClick}>Load</button>
 </plus-center>

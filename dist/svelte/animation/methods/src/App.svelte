@@ -22,10 +22,10 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick1}>Cancel</button>
-  <button on:click={onClick2}>Finish</button>
-  <button on:click={onClick3}>Pause</button>
-  <button on:click={onClick4}>Play</button>
+  <button type="button" on:click={onClick1}>Cancel</button>
+  <button type="button" on:click={onClick2}>Finish</button>
+  <button type="button" on:click={onClick3}>Pause</button>
+  <button type="button" on:click={onClick4}>Play</button>
 </plus-center>
 
 <style>

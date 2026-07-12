@@ -18,7 +18,9 @@ function App() {
         const now = 0;
       </plus-prism>
       <plus-center>
-        <button onClick={onClick}>Change</button>
+        <button type="button" onClick={onClick}>
+          Change
+        </button>
       </plus-center>
     </plus-stack>
   );

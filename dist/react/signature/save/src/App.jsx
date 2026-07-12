@@ -22,9 +22,15 @@ function App() {
       </plus-center>
       <br />
       <plus-stack gap="0.5rem">
-        <button onClick={onClick1}>To Data URL</button>
-        <button onClick={onClick2}>To SVG</button>
-        <button onClick={onClick3}>Get Value</button>
+        <button type="button" onClick={onClick1}>
+          To Data URL
+        </button>
+        <button type="button" onClick={onClick2}>
+          To SVG
+        </button>
+        <button type="button" onClick={onClick3}>
+          Get Value
+        </button>
       </plus-stack>
     </>
   );

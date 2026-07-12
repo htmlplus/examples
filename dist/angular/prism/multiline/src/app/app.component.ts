@@ -13,7 +13,7 @@ export class AppComponent {
   ngAfterViewInit() {
     requestAnimationFrame(() => {
       this.prismRef.nativeElement.innerHTML =
-        'class Person {\n  constructor(name) {\n    this.name = name;\n  }\n  sayHello() {\n    console.log(`Hello, my name is ${this.name}`);\n  }\n}';
+        'class Person {\n  constructor(name) {\n    this.name = name;\n  }\n  sayHello() {\n    console.log(`Hello, my name is ` + this.name);\n  }\n}';
     });
   }
 }

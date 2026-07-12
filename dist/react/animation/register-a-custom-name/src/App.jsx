@@ -20,7 +20,7 @@ function App() {
           name="custom-pulse"
           run
         ></plus-animation>
-        <img src="https://picsum.photos/id/64/90/90" />
+        <img alt src="https://picsum.photos/id/64/90/90" />
       </plus-avatar>
     </plus-center>
   );

@@ -1,9 +1,9 @@
 <template>
   <div>
     <plus-stack gap="1rem">
-      <button @click="onClick1">Collapse</button>
-      <button @click="onClick2">Expand</button>
-      <button @click="onClick3">Toggle</button>
+      <button type="button" @click="onClick1">Collapse</button>
+      <button type="button" @click="onClick2">Expand</button>
+      <button type="button" @click="onClick3">Toggle</button>
     </plus-stack>
     <br />
     <plus-accordion summary="Summary" ref="accordionRef">

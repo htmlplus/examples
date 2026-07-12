@@ -26,12 +26,12 @@
 <plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>
 <br />
 <plus-stack gap="0.5rem">
-  <button on:click={onClick1}>Start</button>
-  <button on:click={onClick2}>Set</button>
-  <button on:click={onClick3}>Increase</button>
-  <button on:click={onClick4}>Trickle</button>
-  <button on:click={onClick5}>Done</button>
-  <button on:click={onClick6}>Force Done</button>
+  <button type="button" on:click={onClick1}>Start</button>
+  <button type="button" on:click={onClick2}>Set</button>
+  <button type="button" on:click={onClick3}>Increase</button>
+  <button type="button" on:click={onClick4}>Trickle</button>
+  <button type="button" on:click={onClick5}>Done</button>
+  <button type="button" on:click={onClick6}>Force Done</button>
 </plus-stack>
 
 <style>

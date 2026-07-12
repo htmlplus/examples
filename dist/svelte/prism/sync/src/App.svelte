@@ -15,6 +15,6 @@
   <plus-prism bind:this={prism1Ref}>const now = 0;</plus-prism>
   <plus-prism sync bind:this={prism2Ref}>const now = 0;</plus-prism>
   <plus-center>
-    <button on:click={onClick}>Change</button>
+    <button type="button" on:click={onClick}>Change</button>
   </plus-center>
 </plus-stack>

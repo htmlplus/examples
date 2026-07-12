@@ -1,7 +1,7 @@
 <template>
   <plus-center>
     <plus-click-outside @plus-click-outside="onPlusClickOutside">
-      <button @click="onClick">Open Menu Dropdown</button>
+      <button type="button" @click="onClick">Open Menu Dropdown</button>
       <plus-card :elevation="10" outlined :hidden="hidden">
         <plus-card-body>It will stay visible until you click outside.</plus-card-body>
       </plus-card>

@@ -18,5 +18,5 @@
 </plus-center>
 <br />
 <plus-center>
-  <button on:click={onClick}>To Blob</button>
+  <button type="button" on:click={onClick}>To Blob</button>
 </plus-center>

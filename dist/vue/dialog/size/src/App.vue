@@ -1,10 +1,10 @@
 <template>
   <div>
     <plus-stack gap="1rem">
-      <button @click="show('sm')">Small</button>
-      <button @click="show('md')">Medium</button>
-      <button @click="show('lg')">Large</button>
-      <button @click="show('xl')">Extra Large</button>
+      <button type="button" @click="show('sm')">Small</button>
+      <button type="button" @click="show('md')">Medium</button>
+      <button type="button" @click="show('lg')">Large</button>
+      <button type="button" @click="show('xl')">Extra Large</button>
     </plus-stack>
     <plus-dialog animation connector="dialog-size" ref="dialogRef">
       <plus-dialog-content>

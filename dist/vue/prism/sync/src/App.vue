@@ -3,7 +3,7 @@
     <plus-prism ref="prism1Ref">const now = 0;</plus-prism>
     <plus-prism sync ref="prism2Ref">const now = 0;</plus-prism>
     <plus-center>
-      <button @click="onClick">Change</button>
+      <button type="button" @click="onClick">Change</button>
     </plus-center>
   </plus-stack>
 </template>

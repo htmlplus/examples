@@ -8,7 +8,7 @@
     </plus-center>
     <br />
     <plus-center>
-      <button @click="onClick">To Blob</button>
+      <button type="button" @click="onClick">To Blob</button>
     </plus-center>
   </div>
 </template>

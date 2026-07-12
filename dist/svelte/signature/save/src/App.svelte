@@ -20,7 +20,7 @@
 </plus-center>
 <br />
 <plus-stack gap="0.5rem">
-  <button on:click={onClick1}>To Data URL</button>
-  <button on:click={onClick2}>To SVG</button>
-  <button on:click={onClick3}>Get Value</button>
+  <button type="button" on:click={onClick1}>To Data URL</button>
+  <button type="button" on:click={onClick2}>To SVG</button>
+  <button type="button" on:click={onClick3}>Get Value</button>
 </plus-stack>

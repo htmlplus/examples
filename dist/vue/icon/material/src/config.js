@@ -6,7 +6,7 @@ setConfig({
       properties: {
         resolver: {
           default: ({ name }) => {
-            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);
+            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);
             const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;
             return fetch(url).then(async (response) => {
               const body = await response.text();

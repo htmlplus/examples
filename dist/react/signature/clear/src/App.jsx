@@ -15,7 +15,9 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onClick={onClick}>Clear</button>
+        <button type="button" onClick={onClick}>
+          Clear
+        </button>
       </plus-center>
     </>
   );

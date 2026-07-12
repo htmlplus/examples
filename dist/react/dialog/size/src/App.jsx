@@ -18,10 +18,18 @@ function App() {
   return (
     <>
       <plus-stack gap="1rem">
-        <button onClick={() => show('sm')}>Small</button>
-        <button onClick={() => show('md')}>Medium</button>
-        <button onClick={() => show('lg')}>Large</button>
-        <button onClick={() => show('xl')}>Extra Large</button>
+        <button type="button" onClick={() => show('sm')}>
+          Small
+        </button>
+        <button type="button" onClick={() => show('md')}>
+          Medium
+        </button>
+        <button type="button" onClick={() => show('lg')}>
+          Large
+        </button>
+        <button type="button" onClick={() => show('xl')}>
+          Extra Large
+        </button>
       </plus-stack>
       <plus-dialog animation connector="dialog-size" ref={dialogRef}>
         <plus-dialog-content>
