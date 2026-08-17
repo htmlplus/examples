@@ -5,7 +5,7 @@ import '@htmlplus/ui/carousel.js';
 
 function App() {
   return (
-    <plus-carousel variant="presentation" loop tween-factor-base={0.52} draggable="free">
+    <plus-carousel preset="presentation" loop tween-factor-base={0.52} draggable="free">
       <plus-carousel-slides>
         <plus-carousel-slide>
           <div>1</div>

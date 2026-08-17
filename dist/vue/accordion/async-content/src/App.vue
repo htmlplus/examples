@@ -1,7 +1,7 @@
 <template>
   <plus-accordion summary="Summary" @plus-expand="onPlusExpand" ref="accordionRef">
     <plus-progress-bar
-      variant="indeterminate"
+      indeterminate
       slot="top"
       style="height: 2px"
       :hidden="hidden"

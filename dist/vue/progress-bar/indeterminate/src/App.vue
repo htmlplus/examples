@@ -1,5 +1,5 @@
 <template>
-  <plus-progress-bar variant="indeterminate"></plus-progress-bar>
+  <plus-progress-bar indeterminate></plus-progress-bar>
 </template>
 
 <script setup>

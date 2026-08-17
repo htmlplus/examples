@@ -6,7 +6,7 @@ import '@htmlplus/ui/carousel.js';
 function App() {
   return (
     <>
-      <plus-carousel variant="presentation" id="my-carousel">
+      <plus-carousel preset="presentation" id="my-carousel">
         <plus-carousel-slides>
           <plus-carousel-slide>1</plus-carousel-slide>
           <plus-carousel-slide>2</plus-carousel-slide>
@@ -23,7 +23,7 @@ function App() {
       </plus-carousel>
       <br />
       <plus-carousel
-        variant="presentation"
+        preset="presentation"
         className="mirror"
         draggable="free"
         mirror="my-carousel"

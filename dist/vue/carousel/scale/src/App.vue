@@ -1,5 +1,5 @@
 <template>
-  <plus-carousel variant="presentation" loop :tween-factor-base="0.52" draggable="free">
+  <plus-carousel preset="presentation" loop :tween-factor-base="0.52" draggable="free">
     <plus-carousel-slides>
       <plus-carousel-slide><div>1</div></plus-carousel-slide>
       <plus-carousel-slide><div>2</div></plus-carousel-slide>

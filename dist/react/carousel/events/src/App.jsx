@@ -6,7 +6,7 @@ import '@htmlplus/ui/carousel.js';
 function App() {
   return (
     <plus-carousel
-      variant="presentation"
+      preset="presentation"
       draggable="free"
       focusable
       resizable

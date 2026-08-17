@@ -5,7 +5,7 @@ import '@htmlplus/ui/carousel.js';
 
 function App() {
   return (
-    <plus-carousel variant="presentation" start-index={2}>
+    <plus-carousel preset="presentation" start-index={2}>
       <plus-carousel-slides>
         <plus-carousel-slide>1</plus-carousel-slide>
         <plus-carousel-slide>2</plus-carousel-slide>

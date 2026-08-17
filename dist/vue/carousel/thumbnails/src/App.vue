@@ -1,6 +1,6 @@
 <template>
   <div>
-    <plus-carousel variant="presentation" id="my-carousel">
+    <plus-carousel preset="presentation" id="my-carousel">
       <plus-carousel-slides>
         <plus-carousel-slide>1</plus-carousel-slide>
         <plus-carousel-slide>2</plus-carousel-slide>
@@ -17,7 +17,7 @@
     </plus-carousel>
     <br />
     <plus-carousel
-      variant="presentation"
+      preset="presentation"
       class="mirror"
       draggable="free"
       mirror="my-carousel"

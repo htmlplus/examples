@@ -5,7 +5,7 @@ import '@htmlplus/ui/carousel.js';
 
 function App() {
   return (
-    <plus-carousel variant="presentation">
+    <plus-carousel preset="presentation">
       <plus-carousel-slides>
         <plus-carousel-slide
           style={{

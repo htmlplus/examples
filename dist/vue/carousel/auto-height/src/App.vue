@@ -1,5 +1,5 @@
 <template>
-  <plus-carousel variant="presentation" auto-height>
+  <plus-carousel preset="presentation" auto-height>
     <plus-carousel-slides>
       <plus-carousel-slide style="height: 12rem">1</plus-carousel-slide>
       <plus-carousel-slide style="height: 15rem">2</plus-carousel-slide>

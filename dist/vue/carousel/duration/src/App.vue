@@ -1,5 +1,5 @@
 <template>
-  <plus-carousel variant="presentation" :duration="75">
+  <plus-carousel preset="presentation" :duration="75">
     <plus-carousel-slides>
       <plus-carousel-slide>1</plus-carousel-slide>
       <plus-carousel-slide>2</plus-carousel-slide>

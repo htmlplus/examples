@@ -1,6 +1,6 @@
 <template>
   <plus-carousel
-    variant="presentation"
+    preset="presentation"
     draggable="free"
     focusable
     resizable

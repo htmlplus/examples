@@ -5,7 +5,7 @@
   import '@htmlplus/ui/carousel.js';
 </script>
 
-<plus-carousel variant="presentation" align="start" start-index={2}>
+<plus-carousel preset="presentation" align="start" start-index={2}>
   <plus-carousel-slides>
     <plus-carousel-slide>1</plus-carousel-slide>
     <plus-carousel-slide>2</plus-carousel-slide>
@@ -17,7 +17,7 @@
   <plus-carousel-button type="next"></plus-carousel-button>
 </plus-carousel>
 <br />
-<plus-carousel variant="presentation" align="center" start-index={2}>
+<plus-carousel preset="presentation" align="center" start-index={2}>
   <plus-carousel-slides>
     <plus-carousel-slide>1</plus-carousel-slide>
     <plus-carousel-slide>2</plus-carousel-slide>
@@ -29,7 +29,7 @@
   <plus-carousel-button type="next"></plus-carousel-button>
 </plus-carousel>
 <br />
-<plus-carousel variant="presentation" align="end" start-index={2}>
+<plus-carousel preset="presentation" align="end" start-index={2}>
   <plus-carousel-slides>
     <plus-carousel-slide>1</plus-carousel-slide>
     <plus-carousel-slide>2</plus-carousel-slide>

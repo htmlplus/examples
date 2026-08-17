@@ -1,5 +1,5 @@
 <template>
-  <plus-carousel variant="presentation">
+  <plus-carousel preset="presentation">
     <plus-carousel-slides>
       <plus-carousel-slide style="flex-basis: 60%">1</plus-carousel-slide>
       <plus-carousel-slide style="flex-basis: 40%">2</plus-carousel-slide>
